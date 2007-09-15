@@ -26,8 +26,9 @@ It is a little more complicated than that, but that is in essence some of the te
 = Also see (jruby / hibernate source) =
 
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/BaseStatisticTest.rb Base Statistics Test (ruby source)]
-[http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/TestWithStatistics.rb Use of Statistics Test (ruby source)]
+  * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/TestWithStatistics.rb Use of Statistics Test (ruby source)]
 
+ 
  
  
  
