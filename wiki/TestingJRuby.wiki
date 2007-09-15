@@ -20,14 +20,15 @@ def test()
   end
 }}}
 
+It is a little more complicated than that, but that is in essence some of the tests used.  In the future, I will go over the page request driven tests that actually request a page from from the server.
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Also see (jruby / hibernate source) =
 
+  * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/BaseStatisticTest.rb Base Statistics Test (ruby source)]
+[http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/TestWithStatistics.rb Use of Statistics Test (ruby source)]
+
+ 
  
  
  
