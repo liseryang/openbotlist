@@ -1,0 +1,130 @@
+/**
+ * Berlin Brown
+ *
+ * 4/29/2006
+ *
+ * CSS Associated with newspirit Styles
+ * some style classes are used from scaffold and bot_general as well
+ */
+
+#body_content_center {
+	border-bottom: 1px solid #816943;
+	padding: 0px 0px 0px 0px;
+	width: 840px;
+	border: 1px solid #DDD;
+	margin-left: 80px;
+	margin-top: 6px;
+}
+
+h1.bot_titlelogo {
+	color: #816943;
+	font-size: 16pt;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-weight: bold;
+	background-color: #F5EDE2;
+	padding: 6px 6px 6px 6px;
+	border-bottom: 2px solid #816943;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+/**
+ * Section Console Links
+ */
+#bot_console_link_group {
+	background-color: #FEFBF8;
+	width: 100%;
+	border-bottom: 1px dotted #DDD;
+}
+
+/** Link Styles */
+A.console:link {
+	color: #858B23;
+	font-size: 10pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.console:visited {
+	color: #858B23;
+	font-size: 10pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.console:active {
+	color: #858B23;
+	font-size: 10pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.console:hover {
+	color: #A54702;
+	font-size: 10pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+
+/**
+ * Default Footer Section with Copyright information
+ */
+#bot_footer_group {
+	background-color: #FEFBF8;
+	width: 100%;
+	border-top: 1px solid #816943;
+	color: #666;
+	font-size: 9pt;
+}
+
+/** Link Styles */
+A.footer:link {
+	color: #075007;
+	font-size: 8pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.footer:visited {
+	color: #075007;
+	font-size: 8pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.footer:active {
+	color: #075007;
+	font-size: 8pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+A.footer:hover {
+	color: #A54702;
+	font-size: 8pt;
+	padding: 4px 4px 4px 4px;
+	text-decoration: none;
+}
+
+/**
+ * INDEX Orange Header Data
+ */
+.index_orange_background_header {
+	background-color: #F3E08A;
+	padding: 6px 6px 6px 6px;
+	color: #5370C5;
+}
+.index_orange_background_data {
+	background-color: #FEF6D1;
+	color: #AE910A;
+	font-size: 12pt;
+}
+
+#index_column_logo_box {
+	border: 1px solid #DDD;
+	margin: 8px 8px 8px 8px;
+	width: 520;
+
+}
+
+#index_column_info_group {
+	margin-top: 16px;
+	margin-left: 10px;
+	color: #555;
+}
+
+/** End of the File */
