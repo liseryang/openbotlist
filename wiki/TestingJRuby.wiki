@@ -1,0 +1,45 @@
+=Behaviour testing with JRuby/Spring and Hibernate=
+
+= Introduction =
+
+Botlist wouldn't have been possible if it weren't for the "creative" testing used.  Most of the tests aren't low-level, component tests like unit tests (there are some but not many), but the majority of the tests are "behaviour-driven" tests.  "By asking questions such as "What should this application do?" or "What should this part do?" For example, the Botverse section of Botlist lists a collection of links that are submitted by the user.  Here is a simple test that tests this particular functionality.  We only focus on the query needed to display the links.
+
+{{{
+def test()	
+
+    c = @ac.getBean("radController")    
+
+    # Run the standard botverse, entity links query
+
+    dao = c.entityLinksDao
+
+    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"    
+
+    links = dao.pageEntityLinks(query, 0, 4)
+
+    links.each { |eLink|
+
+		puts eLink.urlTitle
+
+	}
+
+    sessFact = dao.sessionFactory
+
+    logStatistics(sessFact)
+
+	logQueryStatistics(sessFact, query)
+
+  end
+}}}
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+ 
+ 
+ 
