@@ -40,9 +40,26 @@ http://openbotlist.googlecode.com/svn/
 
  * Container:
  
- Tested with Tomcat 
+ Tested with Tomcat
+
+===================
+ URGENT!!! Major Security Issues
+=================== 
+
+ You may find some major security issues when working with this project.  These
+ bad practices were followed for speed of development.  Before deploying this 
+ project on a production server.  Make sure do the following and this list is incomplete:
  
+ 1. Currently, the botlist project (directory) can be copied as is to the J2EE servers
+ webapps directory.  This is a bad practice and should be avoided.  Ideally, you would not
+ copy the entire project to a webapps directory.  You should create a project separate from
+ the deployment directory; this can be accomplished by changes to the ant scripts.
+ 
+ (All of these issues will be resolved in future source releases)
+
+===================
  Contact:
+===================
  
  berlin.brown at gmail.com
  
