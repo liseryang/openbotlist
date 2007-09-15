@@ -18,10 +18,10 @@
 			<value>jdbc:mysql:///openbotlist_development</value>
 		</property>
 		<property name="username">
-			<value>USER</value>
+			<value>botlistfriend</value>
 		</property>
 		<property name="password">
-			<value>PASSWORD</value>			
+			<value>b80t1st</value>			
 		</property>
 	</bean>
 
