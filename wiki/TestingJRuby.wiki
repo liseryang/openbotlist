@@ -1,3 +1,4 @@
+#summary Testing with JRuby/Spring and Hibernate
 #labels jruby,testing,hibernate,Featured
 =Behavior testing with JRuby/Spring and Hibernate=
 
@@ -29,6 +30,7 @@ It is a little more complicated than that, but that is in essence some of the te
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/BaseStatisticTest.rb Base Statistics Test (ruby source)]
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/TestWithStatistics.rb Use of Statistics Test (ruby source)]
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ Full package with spring/hibernate configuration]
+ 
  
  
  
