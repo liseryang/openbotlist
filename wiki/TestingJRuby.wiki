@@ -1,9 +1,9 @@
 #labels jruby,testing,hibernate,Featured
-=Behaviour testing with JRuby/Spring and Hibernate=
+=Behavior testing with JRuby/Spring and Hibernate=
 
 = Introduction =
 
-Botlist wouldn't have been possible if it weren't for the "creative" testing used.  Most of the tests aren't low-level, component tests like unit tests (there are some but not many), but the majority of the tests are "behaviour-driven" tests.  "By asking questions such as "What should this application do?" or "What should this part do?" For example, the Botverse section of Botlist lists a collection of links that are submitted by the user.  Here is a simple test that tests this particular functionality.  We only focus on the query needed to display the links.
+Botlist wouldn't have been possible if it weren't for the "creative" testing used.  Most of the tests aren't low-level, component tests like unit tests (there are some but not many), but the majority of the tests are "behavior-driven" tests.  "By asking questions such as "What should this application do?" or "What should this part do?" For example, the Botverse section of Botlist lists a collection of links that are submitted by the user.  Here is a simple test that tests this particular functionality.  We only focus on the query needed to display the links.
 
 {{{
 def test()
@@ -29,6 +29,7 @@ It is a little more complicated than that, but that is in essence some of the te
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/BaseStatisticTest.rb Base Statistics Test (ruby source)]
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ruby/TestWithStatistics.rb Use of Statistics Test (ruby source)]
   * [http://openbotlist.googlecode.com/svn/trunk/openbotlist/tests/unit/ Full package with spring/hibernate configuration]
+ 
  
  
  
