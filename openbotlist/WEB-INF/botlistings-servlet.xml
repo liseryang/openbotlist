@@ -2,9 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <!--
 	** Application context definition for "springapp" DispatcherServlet **
-	
+	Application: openbotlist
 	Berlin Brown
-	Date: 11/6/2006
+	Date: 9/6/2007
 -->
 <beans>	
 	<!-- *************************** -->
@@ -39,11 +39,12 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				
 				<!-- Botlist default for show_sql should be 'false' -->
+				<!-- You may also have to disable the "FORMAT SQL" in the log4j settings -->
 				<!-- ============================================= -->
-				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.show_sql">true</prop>
 				<!-- Botlist default for format_sql should be 'false' -->
 				<prop key="hibernate.format_sql">false</prop>
-				<prop key="hibernate.generate_statistics">false</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
 				<!-- ============================================= -->
 				
 				<!-- Caching Properties -->
