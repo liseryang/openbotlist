@@ -42,7 +42,7 @@ class ListingsController
     cur_session = request.getSession(false)
     citybean = cur_session.getAttribute(BotListSessionManager::CURRENT_CITY_SETTING)    
     cityId = citybean.get_id
-    query = "from org.spirit.bean.impl.BotListPostListing as posts where posts.cityId = #{cityId} and posts.sectionId = '#{sectId}' order by posts.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListPostListing as posts where posts.cityId = #{cityId} and posts.sectionId = '#{sectId}' order by posts.id desc"
     postListings = @daohelper.listPostListings(query)
     
     # Audit the request

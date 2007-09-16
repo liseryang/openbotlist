@@ -13,7 +13,7 @@ class ListingsController
   
   def getModel(request)
    
-    query = "from org.spirit.bean.impl.BotListPostListing as posts order by posts.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListPostListing as posts order by posts.id desc"
     postListings = @daohelper.listPostListings(query)
     
     # Audit the request

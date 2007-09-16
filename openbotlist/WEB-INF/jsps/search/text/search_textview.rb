@@ -33,7 +33,7 @@ class ViewListingController
     searchTermForm = cur_session.getAttribute(BotListSessionManager::CURRENT_SEARCH_TERM)
     searchTerm = searchTermForm.searchEntry
 
-    query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.urlTitle like '%#{searchTerm}%') order by links.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.urlTitle like '%#{searchTerm}%') order by links.id desc"
     postListings = @daohelper.pageEntityLinks(query, 0, 40)    
     totalLinks = @daohelper.linkCount    
     totalPages = totalLinks / BotListConsts::MAX_RESULTS_PAGE

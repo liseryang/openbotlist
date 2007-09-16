@@ -62,9 +62,9 @@ class BotverseController
     BotListSessionManager.safeCreateSession(request)
     
     if mostrecent_mode
-      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"
+      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     else
-      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.rating desc, links.createdOn desc, links.views desc"
+      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.rating desc, links.id desc, links.views desc"
     end
     
     # Override any existing query for keytag search

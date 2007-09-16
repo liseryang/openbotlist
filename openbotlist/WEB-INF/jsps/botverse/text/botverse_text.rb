@@ -15,7 +15,7 @@ class TextViewController
   def getModel(request)
     # Audit the request
     @controller.auditLogPage(request, "botverse.html")        
-    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     links = @daohelper.pageEntityLinks(query, 0, 40)
     return {
       'listings' => links
