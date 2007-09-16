@@ -27,7 +27,7 @@ class ViewListingControllerRSS
     # Audit the request
     @controller.auditLogPage(request, "botverse_rss.html")
         
-    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     postListings = @daohelper.pageEntityLinks(query, 0, 24)
     return {
       'listings' => postListings

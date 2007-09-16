@@ -18,7 +18,7 @@ class PipeControllerText
     
     @controller.auditLogPage(request, "botverse_pipes.html")
         
-    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     postListings = @daohelper.pageEntityLinks(query, 0, 40)
     return {
       'listings' => postListings

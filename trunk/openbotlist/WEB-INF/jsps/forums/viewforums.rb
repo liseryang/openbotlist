@@ -45,7 +45,7 @@ class ViewForumsController
     forum = getForum(request)
     forumId = forum.get_id
     
-    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.forumId = '#{forumId}' and comments.commentId is null order by comments.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.forumId = '#{forumId}' and comments.commentId is null order by comments.id desc"
     comments = @daohelpercomments.listComments(query)    
     
     # Extract the banner headline to display

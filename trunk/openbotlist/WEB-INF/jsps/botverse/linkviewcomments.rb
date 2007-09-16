@@ -54,7 +54,7 @@ class ViewCommentsController
     
     link = getViewLink(request)
     linkId = link.get_id
-    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.linkId = '#{linkId}' order by comments.createdOn"
+    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.linkId = '#{linkId}' order by comments.id"
     comments = @daohelper.listComments(query)
     
     # Update the link views for later filtering

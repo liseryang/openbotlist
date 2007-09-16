@@ -37,7 +37,7 @@ class ViewCommentsController
   end
   
   def getModel(request)        
-    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.linkId is NOT NULL order by comments.createdOn desc"
+    query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.linkId is NOT NULL order by comments.id desc"
     comments = @daohelper.listLinkComments(query, 40)
     nonLazyLoadLinks(comments)
     userInfo = BotListContractManager::getUserInfo(request)
