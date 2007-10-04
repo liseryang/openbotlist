@@ -18,9 +18,9 @@ Source is provided (see LoadTestManager.java) and totals only 2000 lines of java
 = Usage =
 
 Create a script to launch  
-(include the following libraries in your classpath,  
- botlistloadtest.jar, ibatis-2.3.0.677.jar, jruby.jar, lucene-core-2.1.0.jar)
-org.spirit.loadtest.LoadTestManager -f -f testclient.properties  
+(include the following libraries in your classpath, botlistloadtest.jar, ibatis-2.3.0.677.jar, jruby.jar, lucene-core-2.1.0.jar)
+
+*org.spirit.loadtest.LoadTestManager -f testclient.properties *
 
 See the Win32 example:  
 Launch load_test.bat   
