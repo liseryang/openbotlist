@@ -28,3 +28,7 @@ See the Win32 example:
 Launch load_test.bat   
 
 Or, you change directory to the 'bin' directory to see a JRuby based load test example.   
+
+= Download =
+
+http://openbotlist.googlecode.com/files/botloadtest_v01.zip
