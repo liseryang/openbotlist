@@ -1,7 +1,20 @@
 ##
 ## Berlin Brown - CHANGELOG.txt
 ##
-
+  + 10/5/2007:
+  
+  Added for profiling.  
+  "-Dcom.sun.management.jmxremote" to java command line or $JAVA_OPTS environment
+  
+  Using tomcat probe for profiling.
+  http://www.lambdaprobe.org/d/installation.shtml
+ ----------------------------
+ 
+  + 9/20/2007:
+ ----------------------------
+ Removing instances order by on "createdOn", createdOn is not
+ indexed
+ 
  + 8/20/2007:
  ----------------------------
  (also, see TODO for recent changes)
