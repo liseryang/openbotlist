@@ -1,4 +1,5 @@
 #summary Project Diary on Open Botlist Projects.
+#labels Featured
 
 = Project Diary =
 
@@ -11,6 +12,4 @@
   *Resources*
   [1] http://blogs.igalia.com (blog by efortunes creator, good yaws/mnesia example)
   [2] http://erlang.org/documentation/doc-5.0.1/lib/mnesia-3.9.2/doc/index.html
-
-
 
