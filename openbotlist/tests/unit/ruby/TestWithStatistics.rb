@@ -11,10 +11,8 @@ require File.join(File.dirname(__FILE__), 'ruby', 'BaseStatisticTest') unless de
 
 class LinkTestWithStatistics < BaseTestWithStatistics
   
-  def test()
-	
-    c = @ac.getBean("radController")
-    
+  def test()	
+    c = @ac.getBean("radController")    
     # Run the standard botverse, entity links query
     dao = c.entityLinksDao
     query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.createdOn desc"    
@@ -22,7 +20,6 @@ class LinkTestWithStatistics < BaseTestWithStatistics
     links.each { |eLink|
 		puts eLink.urlTitle
 	}
-    
     sessFact = dao.sessionFactory
     logStatistics(sessFact)
 	logQueryStatistics(sessFact, query)
