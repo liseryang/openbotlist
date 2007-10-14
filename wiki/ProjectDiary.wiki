@@ -9,6 +9,7 @@
 
   Look for project updates associated with the project (ebotlist, erlang botlist).
 
-  *Resources*
+*Resources*
+
    * http://blogs.igalia.com (blog by efortunes creator, good yaws/mnesia example)
    * http://erlang.org/documentation/doc-5.0.1/lib/mnesia-3.9.2/doc/index.html
