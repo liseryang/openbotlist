@@ -1,0 +1,16 @@
+#summary Project Diary on Open Botlist Projects.
+
+= Project Diary =
+
+10/13/2007
+  I am making good progress on converting parts of the botlist project to erlang through yaws and mnesia.  Both projects are amazing in terms of the features they; redundancy, truly concurrent and fast.  The buzz online about Mnesia has remarked that Mnesia doesn't handle large datasets over tens of millions of records.  My response to that is that future mnesia and erlang releases may resolve issue.  Plus, some would argue that MySQL doesn't handle large datasets.
+  Here is in essence a simple "find" call with Mnsesia
+
+  Look for project updates associated with the project (ebotlist, erlang botlist).
+
+  *Resources*
+  [1] http://blogs.igalia.com (blog by efortunes creator, good yaws/mnesia example)
+  [2] http://erlang.org/documentation/doc-5.0.1/lib/mnesia-3.9.2/doc/index.html
+
+
+
