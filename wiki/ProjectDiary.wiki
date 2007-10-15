@@ -20,16 +20,14 @@ out(Args) ->
   If you are interested, you can view the full source from the subversion repository.
 http://octaned.googlecode.com/svn/trunk/octaned/apps/ebotlist/
 
-  *Launching Yaws for local development*
+  =Launching Yaws for local development=
 
   It isn't critical, but I had trouble working with the yaws interactive environment.  I would much prefer to launch yaws in daemon code and I am lazy.  Here are a set of alias definitions you can place in your bashrc file (note: you would have to copy exactly)
    {{{
-
 alias yaws='yaws --daemon --id myserver --mnesiadir '\''"/usr/local/var/yaws/db/Mnesia_botlist_nonode"'\'''
 
 alias ykill='yaws --daemon --id myserver --stop'
 alias ylogs='tail -n 800 -f /usr/local/var/log/yaws/report.log'
-
 }}}
 
 10/13/2007
