@@ -22,7 +22,7 @@ http://octaned.googlecode.com/svn/trunk/octaned/apps/ebotlist/
 
   *Launching Yaws for local development*
 
-  It isn't critical, but I had trouble working with the yaws interactive environment.  I would much prefer to launch yaws in *daemon* code and I am lazy.  Here are a set of alias definitions you can place in your .bashrc file (note: you would have to copy exactly).
+  It isn't critical, but I had trouble working with the yaws interactive environment.  I would much prefer to launch yaws in daemon code and I am lazy.  Here are a set of alias definitions you can place in your bashrc file (note: you would have to copy exactly)
    {{{
 
 # Yaws easy commands == note embedding the single quote
