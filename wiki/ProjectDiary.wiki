@@ -25,12 +25,10 @@ http://octaned.googlecode.com/svn/trunk/octaned/apps/ebotlist/
   It isn't critical, but I had trouble working with the yaws interactive environment.  I would much prefer to launch yaws in daemon code and I am lazy.  Here are a set of alias definitions you can place in your bashrc file (note: you would have to copy exactly)
    {{{
 
-# Yaws easy commands == note embedding the single quote
 alias yaws='yaws --daemon --id myserver --mnesiadir '\''"/usr/local/var/yaws/db/Mnesia_botlist_nonode"'\'''
 
 alias ykill='yaws --daemon --id myserver --stop'
 alias ylogs='tail -n 800 -f /usr/local/var/log/yaws/report.log'
-# End of yaws commands ==
 
 }}}
 
