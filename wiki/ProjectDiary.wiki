@@ -31,7 +31,24 @@ Snippet of Factor Source:
 MAIN: parse-document ;
   }}}
   
-  I know that looks basic, but there are a couple of things going on with that startup script.  First, it assumes that you have a directory structure as I described above.
+  I know that looks basic, but there are a couple of things going on with that startup script.  First, it assumes that you have a directory structure as I described above.  The "-e" command line switch allows you to run a snippet of factor code at the command-line.  In our example; we want to run a module that has a "MAIN:" definition.  And so there is no confusion are some useful snippets (quoted directly from the Factor source):
+
+*  foo/bar/bar.factor - the source file, defines words in the foo.bar vocabulary 
+*  foo/bar/bar-docs.factor - documentation, see Writing documentation 
+*  foo/bar/bar-tests.factor - unit tests, see Unit testing modules 
+*  foo/bar/summary.txt - a one-line description 
+*  foo/bar/tags.txt - a whitespace-separated list of tags which classify the vocabulary 
+
+Here is the documentation on Factor command-line usage:
+
+{{{
+-e=code This specifies a code snippet to evaluate. If you want Factor to exit immediately after, also specify -run=none. 
+-run=vocab vocab is the name of a vocabulary with a MAIN: hook to run on startup, for example listener, ui or none. 
+-no-user-init Inhibits the running of the .factor-rc file in the user&apos;s home directory on startup. 
+-quiet If set, run-file and require will not print load messages. 
+-script Equivalent to -quiet -run=none.
+}}}
+
 
 = Factor Resources =
   * http://factorcode.org/
