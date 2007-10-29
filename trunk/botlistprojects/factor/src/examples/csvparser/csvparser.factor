@@ -3,7 +3,7 @@
 ! Copyright to Phil Dawes
 ! ======================================
 
-USING: kernel sequences io io.files namespaces combinators ;
+USING: kernel sequences io io.files namespaces combinators prettyprint ;
 IN: csvparser
 DEFER: quoted-field
 
@@ -49,8 +49,9 @@ DEFER: quoted-field
 
 : csv ( stream -- rows )
   [ [ (csv) ] { } make ] with-stream ;
-
+	
 : parse-document ( -- )
-  "botlist_datadump.dat" <file-reader> csv
+   ! "testcsv.txt" <file-reader> csv [ . ] each
+   "testcsv.txt" <file-reader> csv length
 
 MAIN: parse-document ;
