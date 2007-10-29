@@ -3,6 +3,18 @@
 
 = Project Diary =
 
+10/29/2007
+= Using Factor Language for Botlist Analysis =
+  The Botlist data repository is pretty large right now.  There are over 400 thousand links.  I added 50 thousand over the weekend I will try to get to half a million by the end of the week and a million by the end of November.  It doesn't make sense to use some of the mainstream languages that are out there.  The Factor programming language is designed to be fast with speed and reliability in mind, so it would make an ideal tool to analyze the botlist URL data.  I want to look at basic utilities like map-reduce algorithms, fuzzy algorithms, decision tree analysis, and other statistics.  I have only a little code now, but here are some useful Factor notes that I had relearn:  (currently using Factor 0.90+ [from the GIT repository]).
+  {{{
+Launching Factor source with a bash script (0.90+ code):
+
+#!/bin/sh
+# 'factor' executable name changed from to 'f' to avoid conflicts
+/home/downloads9/factor/f -e='"csvparser" run' -quiet -run=none
+
+  }}}
+
 10/14/2007
   Made some more progress with the ebotlist, yaws, mnesia application including creating a make build file and deployment scripts for deploying the needed files to the yaws ebin, include, and view directories.  These are simple tasks but vital to being able to work with yaws.  In some respects, yaws has some similar traits with a J2EE application.  Especially in terms of separating the application objects (emulator beam files) away from the script server pages (yaws files).
   {{{
