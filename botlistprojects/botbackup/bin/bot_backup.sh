@@ -21,7 +21,7 @@ case $0 in
 		ABS_APP_PATH=`pwd`
 		ABS_CONF=$ABS_APP_PATH
 		;;
-	*) 
+	*)
 		ABS_APP_PATH=`pwd`
 		ABS_CONF=`dirname $ABS_APP_PATH`		
 		;; 
@@ -38,7 +38,7 @@ echo "SCRIPT: running in directory=${TOP_DIR} operation=$1"
 echo "-----------------------"
 echo 
 
-python $APP_MAIN $1 $DIR_PROPERTIES $2 $3 &
+python $APP_MAIN $1 $DIR_PROPERTIES -i $DIR_PROPERTIES/conf/botbackup.ini &
 # Write the process id after application launched
 echo $! > $TOP_DIR/bin/bot_backup.pid
 
