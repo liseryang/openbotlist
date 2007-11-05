@@ -28,9 +28,13 @@ class BotbackupBean:
 		self.priv_key_file = "/home/USER/sys/backup/FILE_KY"
 		self.username = "user"
 		self.hostname = "austin"
+		self.working_dir = "/home/USER/sys/backup/tmp"
+		self.target_dir = "/home/USER/BACKUP"
 		
 	def __str__(self):
 		return ''.join([ "\nBeanGen Definition:",
+						 "\n\tworking directory=", self.working_dir,
+						 "\n\tremote directory=", self.target_dir,
 						 "\n\tapplication_name=", self.application_name,
 						 "\n\thostname=", self.hostname ])
 	
@@ -96,19 +100,26 @@ def process_config(ini):
 	'''
 	bean = BotbackupBean()
 	try:
-		if ini.RsyncConfig:
+		if ini.RsyncConfig and ini.Global:
 			print "INFO: Valid configuration, continue"
-			a1 = ini.RsyncConfig[0][1]
-			a2 = ini.RsyncConfig[1][1]
-			a3 = ini.RsyncConfig[2][1]
-			a4 = ini.RsyncConfig[3][1]
-			a5 = ini.RsyncConfig[4][1]
-						
-			bean.application_name = a1.strip()
-			bean.default_args = a2.strip()
-			bean.priv_key_file = a3.strip()
-			bean.username = a4.strip()
-			bean.hostname = a5.strip()
+			a = []
+			b = []
+			a.append(ini.RsyncConfig[0][1])
+			a.append(ini.RsyncConfig[1][1])
+			a.append(ini.RsyncConfig[2][1])
+			a.append(ini.RsyncConfig[3][1])
+			a.append(ini.RsyncConfig[4][1])
+			a.append(ini.RsyncConfig[5][1])
+			
+			b.append(ini.Global[0][1])
+			
+			bean.application_name = a[0].strip()
+			bean.default_args = a[1].strip()
+			bean.priv_key_file = a[2].strip()
+			bean.username = a[3].strip()
+			bean.hostname = a[4].strip()
+			bean.target_dir = a[5].strip()
+			bean.working_dir = b[0].strip()
 		else:
 			print "** ERR: Invalid configuration, current ini="
 			print ini
