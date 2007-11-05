@@ -4,6 +4,7 @@
 = Project Diary =
 
 11/5/2007    
+
 This falls in the category of off-topic, but this is a bash script that actually works to count lines of source code (tested with cygwin); In this example, I am trying to find the number of TOTAL lines of C code.
 {{{
 find . -name '*.c' -exec cat {} \; | wc -l
