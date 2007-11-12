@@ -36,7 +36,7 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>${botlist.db.ur}</value>
+			<value>${botlist.db.url}</value>
 		</property>
 		<property name="username">
 			<value>${botlist.username}</value>
