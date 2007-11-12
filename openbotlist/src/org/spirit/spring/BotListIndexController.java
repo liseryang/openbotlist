@@ -189,6 +189,10 @@ public class BotListIndexController extends SimpleFormController {
 		return defaultIndexSearch(request, response, command, errors);		
 	}
 	
+	/**
+	 * @deprecated
+	 * @return
+	 */
 	private Collection findCityListings() {
 		if (this.getCityListingDao() != null) {
 			Collection cities = this.getCityListingDao().findCityListings();
@@ -238,9 +242,33 @@ public class BotListIndexController extends SimpleFormController {
 	
 	
 	/**
+	 * Routine to free memory to avoid out of memory errors
+	 * 
+	 * (note, bad practice)
+	 */
+	private void cheapFreeHeapMemory() {
+		long totalMemory = Runtime.getRuntime().totalMemory();
+		long freeMemory = Runtime.getRuntime().freeMemory();
+		long maxMemory = Runtime.getRuntime().maxMemory();
+		
+		float existMemoryPer = ((totalMemory - freeMemory) / (totalMemory * 1.0f)) * 100.0f;
+		
+		if (existMemoryPer > 60) {
+			log.info("free memory=" + freeMemory + " totalMemory=" + totalMemory + " maxMemory=" + maxMemory);
+			log.info("memory usage=" + existMemoryPer + " %");
+			if (existMemoryPer > 70) {
+				Runtime.getRuntime().gc();
+			}
+		}
+		 
+	}
+	
+	/**
 	 * @see org.springframework.web.servlet.mvc.AbstractController#handleRequestInternal(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	protected ModelAndView showForm(HttpServletRequest request, HttpServletResponse response, BindException errors) { 
+		
+		cheapFreeHeapMemory();
 		
 		ModelAndView mvc = new ModelAndView("index");
 		String headline = null;

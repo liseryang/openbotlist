@@ -147,7 +147,7 @@ public class BotListRubyController
 	}
 
 	public String getDefaultViewNameFromRequest(HttpServletRequest request) {
-		log.info(CLASS_IDENTIFIER() + "getDefaultViewNameFromRequest() - From Request: " + request.getRequestURL());
+		//log.info(CLASS_IDENTIFIER() + "getDefaultViewNameFromRequest() - From Request: " + request.getRequestURL());
 		// TODO: to be fixed
 		return getViewNameFromServletPath(request.getRequestURI().substring(1),
 				request.getRequestURI(), request.getContextPath());
@@ -186,7 +186,7 @@ public class BotListRubyController
 	 * Print Request Information
 	 */
 	private void printRequestInfo(HttpServletRequest request) {					
-		log.info(CLASS_IDENTIFIER() + " showForm() uri=" + request.getRequestURI());		
+		//log.info(CLASS_IDENTIFIER() + " showForm() uri=" + request.getRequestURI());		
 	}
 
 	/**
