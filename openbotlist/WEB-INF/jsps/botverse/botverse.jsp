@@ -91,7 +91,7 @@
  <div style="border-bottom: 1px solid #816943;">
 	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
  </div>
-<h1 class="bot_titlelogo">Botverse - find interesting things online | Post popular links</h1>
+<h1 class="bot_titlelogo">Botverse - find interesting things online</h1>
 			
 			<%-- Navigation Header --%>
 			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			

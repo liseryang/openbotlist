@@ -25,13 +25,13 @@
  <div style="border-bottom: 1px solid #816943;">
 	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
  </div>
-<h1 class="bot_titlelogo">Botverse - About</h1>
+ <h1 class="bot_titlelogo">[ Botverse - About ]</h1>
 			
 			<%-- Navigation Header --%>
 			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			
 			<%-- End of Navigation Header --%>
 
-<div style="margin: 10px;">
+ <div style="margin: 10px;">
 
 	<%-- Add Welcome user message and login content (above content border line) --%>
 	<%@include file="/WEB-INF/jsps/general/botverse_profile_nav.jsp" %>

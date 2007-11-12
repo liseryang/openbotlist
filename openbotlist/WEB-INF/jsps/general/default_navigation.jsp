@@ -12,7 +12,6 @@
 				<li><a href="<c:url value="/spring/forums/comments/topics.html" />">Comments</a></li>
 				<li><a href="<c:url value="/spring/forums/forums.html" />">Discussion Forums</a></li>
 				<li><a href="<c:url value="/spring/help/about.html" />">About</a></li>
-				<li><a href="<c:url value="/spring/help/contact.html" />">Contact</a></li>
 				<li><a href="<c:url value="/spring/help/help.html" />">Help</a></li>				
 			</ul>			
 			</div>

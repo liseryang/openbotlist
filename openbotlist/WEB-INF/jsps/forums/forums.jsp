@@ -20,7 +20,7 @@
 				<img src="<c:url value="/company/images/building_orange_roof.jpg" />" >
  			</div>
 			<h1 class="bot_titlelogo">
-				BotList - Forums
+				[ BotList - Forums ]
 			</h1>
 			<%-- Navigation Header --%>
 			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			

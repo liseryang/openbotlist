@@ -25,7 +25,7 @@
  <div style="border-bottom: 1px solid #816943;">
 	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
  </div>
-<h1 class="bot_titlelogo">Botverse - Interesting things online | Post Popular Links, it is ok!</h1>
+<h1 class="bot_titlelogo">Botverse - Interesting things online</h1>
 			
 			<%-- Navigation Header --%>
 			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			
