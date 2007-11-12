@@ -6,7 +6,7 @@
 <!-- Description: Testing ruby with with spring web application -->
 <!-- Date: 11/1/2006 -->
 <!-- ****************************************************** -->
-<project name="BotList Main Build File" default="package" basedir=".">
+<project name="OpenBotlist Main Build File" default="package" basedir=".">
 
 	<property file="build.properties" />
 	
