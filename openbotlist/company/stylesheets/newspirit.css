@@ -17,12 +17,12 @@
 }
 
 h1.bot_titlelogo {
-	color: #816943;
-	font-size: 16pt;
+	color: #666;
+	font-size: 18pt;
 	font-family: Arial, Helvetica, Sans-Serif;
 	font-weight: bold;
-	background-color: #F5EDE2;
-	padding: 6px 6px 6px 6px;
+	background-color: #F5F5F5;
+	padding: 12px 12px 12px 12px;
 	border-bottom: 2px solid #816943;
 	margin-bottom: 0px;
 	margin-top: 0px;

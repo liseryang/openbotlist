@@ -52,7 +52,7 @@ h1.bot_forumposttitle {
 	height: 2.2em;
 	line-height: 2.2em;
 	margin: 0px;
-	background-color: #F4EFE9;
+	background-color: #F4F4F4;
 	color: #5F4927;
 }
 
@@ -70,11 +70,11 @@ h1.bot_forumposttitle {
 #navigation li a {
 	display: block;
 	padding:0 10px;
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: normal;
 	text-decoration:none;
 	background-color:inherit;
-	color: #5F4927;
+	color: #444;
 }
 
 #navigation .selected,#navigation a:hover {
