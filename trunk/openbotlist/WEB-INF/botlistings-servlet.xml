@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <!--
-	** Application context definition for "springapp" DispatcherServlet **
+    *******************************************************
+	** Application context definition for "botlist" DispatcherServlet **
+	** 
+	** Copyright 2006-2007 Newspiritcompany.com
+	** 
+	** This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
+	** otherwise stated, use or distribution of this program 
+	** for commercial purpose is prohibited.
+	** 
+	** [License modified], See LICENSE.BOTLIST for more information.
+    *******************************************************
 	Application: botlist
 	Berlin Brown
 	Date: 11/6/2006
 -->
 <beans>	
+	<!-- *************************** -->
+	<!-- Include the following spring property settings -->
+	<!-- Default location: /WEB-INF/botlist_config.properties -->
+	<!-- *************************** -->
+	<bean id="propertyConfigurer" 
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/botlist_config.properties</value>
+		</property>
+	</bean>
+
 	<!-- *************************** -->
 	<!-- Datasource Bean Definitions -->
 	<!-- *************************** -->
@@ -15,13 +36,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql:///botlist_development</value>
+			<value>${botlist.db.ur}</value>
 		</property>
 		<property name="username">
-			<value>USER</value>
+			<value>${botlist.username}</value>
 		</property>
 		<property name="password">
-			<value>PASSWORD</value>			
+			<value>${botlist.password}</value>			
 		</property>
 	</bean>
 
