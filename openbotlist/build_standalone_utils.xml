@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ****************************************************** -->
 <!-- Copyright (c) 2006 - Berlin Brown -->
 <!-- Date: 11/1/2006 -->
+<!-- ****************************************************** -->
 <project name="BotList Standalone Utility Applications" default="init" basedir=".">
 
 	<property file="build.properties" />
