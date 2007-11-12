@@ -1,5 +1,22 @@
+##*** Notice Update: 8/14/2007
+##*** Copyright 2007 Berlin Brown
+##*** Copyright 2006-2007 Newspiritcompany.com
+##*** 
+##*** This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
+##*** otherwise stated, use or distribution of this program 
+##*** for commercial purpose is prohibited.
+##*** 
+##*** See LICENSE.BOTLIST for more information.
+##***
+##*** The SOFTWARE PRODUCT and CODE are protected by copyright and 
+##*** other intellectual property laws and treaties. 
+##***  
+##*** Unless required by applicable law or agreed to in writing, software
+##*** distributed  under the  License is distributed on an "AS IS" BASIS,
+##*** WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
+##*** implied.
+
 ##
-## Berlin Brown
 ## 11/4/2006
 ## botverse.rb
 ## botverse - view link listings
