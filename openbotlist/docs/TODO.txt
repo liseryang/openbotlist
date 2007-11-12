@@ -1,6 +1,14 @@
 ##
 ##
-
+ 
+  11/10/2007:
+  --------------
+  + Add Statistic application as a profile application;
+  	simple application to store general statistics, ajax based:
+  	
+    Description :: Value :: unit type :: source
+    Number of people in use :: 320 million :: people :: http://www.google.com
+  
   9/4/2007:
   --------------
   Code cleanup, change "one-to-many" unidirectional relationships to
