@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ****************************************************** -->
 <!-- Copyright (c) 2006 - Berlin Brown -->
 <!-- Ant script that is located in the Tomcat webapp directory and -->
 <!-- writes classes to this particular directory -->
 <!-- Description: Testing ruby with with spring web application -->
 <!-- Date: 11/1/2006 -->
+<!-- ****************************************************** -->
 <project name="BotList Main Build File" default="package" basedir=".">
 
 	<property file="build.properties" />
