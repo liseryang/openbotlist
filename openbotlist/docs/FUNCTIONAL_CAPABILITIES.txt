@@ -10,7 +10,7 @@
 1. Cookie based anonymous posting and profile. (complete y/n)
 2. Profile experience system based on number of clicks throughout the system. (complete y/n)
 3. Add search (with tagging system) (complete y/n)
-4. Add ‘edit‘ and ‘preview‘ for all topics and then comments (complete y/n)
+4. Add 'edit' and 'preview' for all topics and then comments (complete y/n)
 5. Future, alpha test of text based advertising. (complete y/n)
 6. Add profiles (complete y/n)
 7. Add paging (spring / hibernate?) (complete y/n)
@@ -25,7 +25,7 @@
 15b. Add List of Links
 15c. Add the ability to submit a list of links from a CSV file
 
-Botlist – Christmas Alpha Release for Dec, 25.
+Botlist ï¿½ Christmas Alpha Release for Dec, 25.
 ---------------------
 
 * Add markdown type language for comments and ad postings.
