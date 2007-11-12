@@ -1,7 +1,13 @@
-##
-## Berlin Brown
-## Updated: 9/10/2007
-##
+*******************************************************
+** Copyright 2006-2007 Newspiritcompany.com
+** 
+** This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
+** otherwise stated, use or distribution of this program 
+** for commercial purpose is prohibited.
+** 
+** [License modified], See LICENSE.BOTLIST for more information.
+** Updated: 11/10/2007
+*******************************************************
  
 Overview
 ===================
