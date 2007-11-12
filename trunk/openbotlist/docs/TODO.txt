@@ -9,6 +9,8 @@
     Description :: Value :: unit type :: source
     Number of people in use :: 320 million :: people :: http://www.google.com
   
+  + Build a simple search help tool for developers with lucene.
+  
   9/4/2007:
   --------------
   Code cleanup, change "one-to-many" unidirectional relationships to
