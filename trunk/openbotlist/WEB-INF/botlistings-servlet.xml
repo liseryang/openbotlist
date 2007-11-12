@@ -2,9 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <!--
 	** Application context definition for "springapp" DispatcherServlet **
-	Application: openbotlist
+	Application: botlist
 	Berlin Brown
-	Date: 9/6/2007
+	Date: 11/6/2006
 -->
 <beans>	
 	<!-- *************************** -->
@@ -15,13 +15,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql:///openbotlist_development</value>
+			<value>jdbc:mysql:///botlist_development</value>
 		</property>
 		<property name="username">
-			<value>botlistfriend</value>
+			<value>USER</value>
 		</property>
 		<property name="password">
-			<value>b80t1st</value>			
+			<value>PASSWORD</value>			
 		</property>
 	</bean>
 
@@ -41,10 +41,10 @@
 				<!-- Botlist default for show_sql should be 'false' -->
 				<!-- You may also have to disable the "FORMAT SQL" in the log4j settings -->
 				<!-- ============================================= -->
-				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.show_sql">false</prop>
 				<!-- Botlist default for format_sql should be 'false' -->
 				<prop key="hibernate.format_sql">false</prop>
-				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
 				<!-- ============================================= -->
 				
 				<!-- Caching Properties -->
