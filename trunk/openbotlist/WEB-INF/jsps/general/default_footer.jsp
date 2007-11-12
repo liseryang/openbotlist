@@ -11,6 +11,8 @@
 			| <a href="<c:url value="/spring/search/global.html" />">global search</a>
 			| <a href="<c:url value="/spring/pipes/pipes.html" />">for developers</a>
 			| <a href="<c:url value="/spring/help/source.html" />">botlist source</a>
+			| <a href="<c:url value="http://code.google.com/p/openbotlist/" />">at googlecode</a>
+			| <a href="<c:url value="http://www.newspiritcompany.com/tracbotlist" />">project management</a>
 			| <a href="<c:url value="/company/botlist_faq.htm" />">faq</a>
 			| <a href="http://newspiritcompany.blogspot.com">blog</a>
 		</td>

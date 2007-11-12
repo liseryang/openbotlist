@@ -57,30 +57,8 @@ class ViewStatsController
 
   #
   # Generate the view
-  def getModel(request)    
-    # Audit the request
-    @controller.auditLogPage(request, "stats.html")
-    
-    # Get user statistics; registered/loggedin/online
-    totalRegUsers = @dao_coreusers.getCoreUsersCount
-    
-    # Get totals on logged in and active users/sessions
-    totalActiveSessions = @dao_coresettings.getActiveSessions()
-    totalLoggedInUsers = @dao_coresettings.getLoggedInUsers()    
-    
-    totalvisits = @daohelper.getVisitAuditCount()
-    uniquevisits = @daohelper.getUniqueVisitAuditCount()
-    timeFirstVisit = @daohelper.getFirstVisit()
-    stats = weekStats()
-    return {
-      'totalvisits' => totalvisits,
-      'uniquevisits' => uniquevisits,
-      'stats' => stats,
-      'timeFirstVisit' => timeFirstVisit,
-      'totalregusers' => totalRegUsers,
-      'totalsessions' => totalActiveSessions,
-      'totalloggedin' => totalLoggedInUsers
-    }    
+  def getModel(request)      
+    return { }    
   end
   
   # Processed when the form is submitted, 

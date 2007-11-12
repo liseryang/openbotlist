@@ -181,6 +181,15 @@
  <%-- Debug, how long to process page --%>
  <div style="font-size: 10px; color: #888;text-align: right">
  <i>(process in <c:out value="${processingtime}" />s)</i>
- </div>  
+ </div>
+  
+  
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-286501-2";
+urchinTracker();
+</script>  
+  
 </body>
 </html>

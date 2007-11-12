@@ -87,7 +87,7 @@
 											<a class="linklist_objlinks" href="<c:url value="${listing.mainUrl}" />" >
 												<c:out value='${botlistutil:getMaxWord(listing.urlTitle, 48)}' />
 											</a>
-											(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">#</a>)
+											(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)
 									</td>
 								</tr>
 								<tr>
@@ -269,6 +269,16 @@
 				</div>
 			</div>								
 			<%@include file="/WEB-INF/jsps/general/default_footer.jsp" %>
-		</div> 		
+		</div>  
+
+<div>		
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-286501-2";
+urchinTracker();
+</script>
+</div>
+		
 </body>
 </html>

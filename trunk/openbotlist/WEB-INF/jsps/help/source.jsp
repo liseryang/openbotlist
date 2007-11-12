@@ -55,8 +55,10 @@
 			 				
 			 				<div style="margin-top: 10px">
 			 				 <b>
-			 				 	Download <a href="/botdata/botlist_src.zip">botlist released on 9/9/2007 [24mb]</a>			 				 
+			 				 	Download <a href="http://code.google.com/p/openbotlist/downloads/list">botlist source [around 18mb]</a>
 			 				 </b>
+			 				 <br />
+			 				 <a href="http://openbotlist.googlecode.com/">Also, visit Open Botlist hosted googlecode.com</a>
 			 				</div>
 			 				
 			 			</td>
