@@ -174,7 +174,15 @@
 			</div>
 			<%@include file="/WEB-INF/jsps/general/default_footer.jsp" %>
 		</div> 
-	
+		
+<div>
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-286501-2";
+	urchinTracker();
+	</script>		
+</div>
 		
 </body>
 </html>
