@@ -51,7 +51,7 @@
 				<table cellspacing="0" cellpadding="20">
 					<tr>
 						<td style="background-color: #e7f0f1;">
-			 				<img src="/botlist/company/images/photo_berlin1.jpeg">			 
+			 				<img src="/botlist/company/images/help/help_botlistmain.jpg">			 
 			 			</td>
 			 		</tr>
 			 		<tr>
