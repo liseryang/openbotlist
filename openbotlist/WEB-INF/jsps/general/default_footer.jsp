@@ -12,7 +12,7 @@
 			| <a href="<c:url value="/spring/pipes/pipes.html" />">for developers</a>
 			| <a href="<c:url value="/spring/help/source.html" />">botlist source</a>
 			| <a href="<c:url value="http://code.google.com/p/openbotlist/" />">at googlecode</a>
-			| <a href="<c:url value="http://www.newspiritcompany.com/tracbotlist" />">project management</a>
+			| <a href="<c:url value="http://www.ronpaul2008.com/" />">ron paul</a>
 			| <a href="<c:url value="/company/botlist_faq.htm" />">faq</a>
 			| <a href="http://newspiritcompany.blogspot.com">blog</a>
 		</td>
@@ -35,7 +35,7 @@
 				<br>				
 				<!-- Print the Bot List Version -->
 				<div style="font-size: 8pt;">
-				Botlist <spring:message code="versMajor" />.<spring:message code="versMinor" />.b<spring:message code="versBuild" />
+				OpenBotlist <spring:message code="versMajor" />.<spring:message code="versMinor" />.b<spring:message code="versBuild" />
 				r<spring:message code="versRev" /> - <spring:message code="versMilestone" />
 				</div>
 				<!-- End of Version -->
