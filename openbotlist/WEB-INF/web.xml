@@ -84,10 +84,12 @@
 		<servlet-name>botlistings</servlet-name>
 		<url-pattern>/index.jsp</url-pattern>
 	</servlet-mapping>
+	<!-- Removed Stat Chart 
 	<servlet-mapping>
 		<servlet-name>DayStatChart</servlet-name>
 		<url-pattern>/dayStatChart.png</url-pattern>
 	</servlet-mapping>	
+	 -->
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
