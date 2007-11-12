@@ -45,7 +45,6 @@ public class BotListMarkUtil {
 
 			stripLinkDefinitions(text);
 			text = runBlockGamut(text);
-
 			text.append("\n");
 		} catch(Exception ex) {
 			return text.toString();
@@ -181,9 +180,11 @@ public class BotListMarkUtil {
 		encodeAmpsAndAngles(text);
 		doItalicsAndBold(text);
 
+		// Changes '9/10/2007'
 		// Manual line breaks
 		//text.replaceAll(" {1,}\n", " <br />\n");
-		text.trim();
+		text.replaceAll(" ", "&nbsp;");
+		text.trim();		
 		text.replaceAll("\n", " <br />\n");		
 		return text;
 	}	
