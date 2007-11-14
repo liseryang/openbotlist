@@ -3,6 +3,32 @@
 
 = Project Diary =
 
+11/14/2007    
+
+Useful idiom in Scala for walking a directory tree, searching for a particular file.  This  code will get added to my botlist help document search system:
+
+{{{
+//
+  // Utility for recursively walking directory tree
+  // See:
+  // override final def flatMap  [B](f : (A) => Iterable[B]) : List[B]
+  class DocWalkFile(file: File) {  
+	def children = new Iterable[File] {
+    def elements = 
+      if (file.isDirectory) file.listFiles.elements else Iterator.empty;
+	}
+	def andTree : Iterable[File] = (
+      Seq.single(file) ++ children.flatMap(child => new DocWalkFile(child).andTree))
+  }
+  def listDocuments(dir: File): List[File] =
+	(new DocWalkFile(dir)).andTree.toList filter (f => (f.isFile && f.getName.endsWith(".txt")))
+	  
+}}}
+
+Based on code from here:
+
+http://www.rosettacode.org/rosettacode/w/index.php?title=Walk_Directory_Tree
+
 11/5/2007    
 
 This falls in the category of off-topic, but this is a bash script that actually works to count lines of source code (tested with cygwin); In this example, I am trying to find the number of TOTAL lines of C code.
