@@ -1,0 +1,40 @@
+##
+## Berlin Brown - CHANGELOG.txt
+##
+  + 10/5/2007:
+  
+  Added for profiling.  
+  "-Dcom.sun.management.jmxremote" to java command line or $JAVA_OPTS environment
+  
+  Using tomcat probe for profiling.
+  http://www.lambdaprobe.org/d/installation.shtml
+ ----------------------------
+ 
+  + 9/20/2007:
+ ----------------------------
+ Removing instances order by on "createdOn", createdOn is not
+ indexed
+ 
+ + 8/20/2007:
+ ----------------------------
+ (also, see TODO for recent changes)
+ 
+ Added jquery support (1.1.4)
+ 
+ Added city type category (major or minor)
+
+ + 4/20/2007:
+ ----------------------------
+ 	- Add a possible option for '444444' for link color
+			'12129D' dark blue link color
+			'3838E5' for light blue link
+ 	
+ + 3/30/2007:
+ ----------------------------
+ 	- Add calendar view, to display links for a certain set of dates
+
+ + 12/2/2006:
+ ----------------------------
+	- Adding commons validator - email validation
+ 	- Adding support for sending email, 
+ 		simple system to protect.
