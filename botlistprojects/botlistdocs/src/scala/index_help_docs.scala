@@ -146,7 +146,8 @@ object BotlistIndexDocuments {
   def listDocuments(dir: File): List[File] =
 	(new DocWalkFile(dir)).andTree.toList filter (f => (f.getName.endsWith(".java") 
 														|| f.getName.endsWith(".rb") 
-														|| f.getName.endsWith(".py") 
+														|| f.getName.endsWith(".py")
+														|| f.getName.endsWith(".jsp")
 														|| f.getName.endsWith(".xml") 
 														|| f.getName.endsWith(".txt")))
 	  
