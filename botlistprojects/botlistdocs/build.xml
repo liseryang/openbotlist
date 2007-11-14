@@ -74,6 +74,13 @@
 			<arg path="${basedir}/runtime/input_docs" />
 		</java>
 	</target>
+	<target name="run.search">
+		<java classname="SearchHelpDocs" fork="false">
+				<classpath refid="classpath"/>
+				<classpath refid="runtime.classpath"/>
+				<arg path="${basedir}/runtime/index_home/index" />
+		</java>
+	</target>	
 		
 	<!-- Zip the development code base -->
 	<target name="zip.codebase" depends="clean,package">
