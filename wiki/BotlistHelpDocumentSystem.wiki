@@ -29,6 +29,12 @@ Query>>>  ===================
 Query>>>String
 }}}
 
+= Source =
+
+The full source code can be found in this subversion repository:
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/
+
 = Demo Screenshots of typical usage =
 
 http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help3.PNG
