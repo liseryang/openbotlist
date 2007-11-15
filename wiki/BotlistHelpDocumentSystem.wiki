@@ -21,6 +21,10 @@ http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/he
 
 http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help5.PNG
 
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help6.PNG
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help7.PNG
+
 = Source =
 
 The full source code can be found in this subversion repository:
