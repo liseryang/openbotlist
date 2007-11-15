@@ -1,4 +1,5 @@
 #summary Botlist help document system
+#labels Featured
 
 = Introduction =
 
@@ -29,7 +30,9 @@ Query>>>  ===================
 Query>>>String
 }}}
 
-= Source =
+= Source and Application =
+
+http://openbotlist.googlecode.com/files/botlistdocs.zip
 
 The full source code can be found in this subversion repository:
 
