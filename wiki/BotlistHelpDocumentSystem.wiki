@@ -10,3 +10,19 @@ This is a small utility for indexing developer help documents with Lucene.  And 
    based on a search query term.
 
 = Details =
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help1.PNG
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help2.PNG
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help3.PNG
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help4.PNG
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help5.PNG
+
+= Source =
+
+The full source code can be found in this subversion repository:
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/
