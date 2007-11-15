@@ -11,6 +11,21 @@ This is a small utility for indexing developer help documents with Lucene.  And 
   * Developer should be able to query documents through command-line interface
   * Shall be able to load text help document in the command-line interface based on a search query term.
 
+= Purpose =
+
+Typically, a developer will put documentation last on their list of things to do.  They may have attempted to document their source, but they probably have neglected building external documentation to help users or aid other developers that may maintain their project in the future.  This is especially true for open source projects.  I developed this very simple approach.  For example, I can create simple 5-10 line text documents to describe a particular piece of functionality:
+
+{{{
+Whatisbotlist.txt:
+
+What is the purpose of botlist?
+
+Botlist is an online news aggregation application.
+}}}
+
+Put this file in the input_docs directory, re-index the directory and then I am able to search for fuzzy terms associated with documents as they are added.  (E.g. I might search 'purpose' in the example above.  This application and example were put together over the course of about 12 hours, only skimming the surface of how useful this approach can be to your project.  You may build this small utility around a web application or some other document management system.
+
+
 = Usage =
 
 Ideally, this tool is used for those interested in the botlist application that would like help information.  At present, most of the help documents center around source code (E.g. a developer may want to search for "String")
@@ -30,7 +45,7 @@ Query>>>  ===================
 Query>>>String
 }}}
 
-= Source and Application =
+= Source and Application Download =
 
 http://openbotlist.googlecode.com/files/botlistdocs.zip
 
