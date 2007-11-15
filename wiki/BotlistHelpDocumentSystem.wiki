@@ -6,8 +6,24 @@ This is a small utility for indexing developer help documents with Lucene.  And 
 
   * Index simple text based help documents, loaded from a input directory
   * Developer should be able to query documents through command-line interface
-  * Shall be able to load text help document in the command-line interface
-   based on a search query term.
+  * Shall be able to load text help document in the command-line interface based on a search query term.
+
+Ideally, this tool is used for those interested in the botlist application that would like help information.  At present, most of the help documents center around source code (E.g. a developer may want to search for "String")
+ 
+There are two scripts, bothelp.sh and helpindex.sh for using the help tool.
+
+Use 'bothelp.sh' to actually search for a particular term:
+
+{{{ 
+ $ bin/bothelp.sh
+ 
+Query>>>  Search Help System (Botlist Help Documents)
+Query>>>  v0.1 [Nov14.2007]
+Query>>>  At the prompt, enter search help term
+Query>>>  Use :quit to exit command loop.
+Query>>>  ===================
+Query>>>String
+}}}
 
 = Demo Screenshots of typical usage =
 
