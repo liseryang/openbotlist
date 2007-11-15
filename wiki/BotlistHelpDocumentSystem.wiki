@@ -60,7 +60,7 @@ The scala object's purpose is only to walk a particular directory finding help d
       Seq.single(file) ++ children.flatMap(child => new DocWalkFile(child).andTree))
   }
   def listDocuments(dir: File): List[File] =
-	(new DocWalkFile(dir)).andTree.toList filter (f => (f.getName.endsWith(".java") 		      || f.getName.endsWith(".txt")))
+	(new DocWalkFile(dir)).andTree.toList filter (f => (f.getName.endsWith(".java")))
 
 }}}
 
