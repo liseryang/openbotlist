@@ -9,11 +9,7 @@ This is a small utility for indexing developer help documents with Lucene.  And 
   * Shall be able to load text help document in the command-line interface
    based on a search query term.
 
-= Details =
-
-http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help1.PNG
-
-http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help2.PNG
+= Demo Screenshots of typical usage =
 
 http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botlistdocs/media/help3.PNG
 
