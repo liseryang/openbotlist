@@ -1,0 +1,12 @@
+#summary Botlist help document system
+
+= Introduction =
+
+This is a small utility for indexing developer help documents with Lucene.  And because some botlist documents have already been indexed, you can use it to search for Botlist documentation.
+
+  * Index simple text based help documents, loaded from a input directory
+  * Developer should be able to query documents through command-line interface
+  * Shall be able to load text help document in the command-line interface
+   based on a search query term.
+
+= Details =
