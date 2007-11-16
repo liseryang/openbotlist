@@ -125,6 +125,17 @@
 							
 							</td>
 						</tr>
+						
+						<%-- ==== Print Map Reduce Top Terms ====  --%>
+						<tr>
+							<td>
+								 <c:forEach items="${popularwordmap}" var="curWord" varStatus="status">
+								 	<c:out value="${curWord}" />
+								</c:forEach>
+							</td>
+						</tr>
+						<%-- ==== End of Top Terms ==== ---%>
+						
 						</table>
 					</div>
 					<%-- ==== End Next Set of Data, Recent Links ==== --%>
