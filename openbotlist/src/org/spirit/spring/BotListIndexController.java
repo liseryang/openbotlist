@@ -29,6 +29,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.spirit.bean.impl.BotListAdminMainBanner;
+import org.spirit.business.EntityLinkManager;
 import org.spirit.contract.BotListContractManager;
 import org.spirit.dao.BotListActiveMediaFeedsDAO;
 import org.spirit.dao.BotListAdminMainBannerDAO;
@@ -297,7 +298,10 @@ public class BotListIndexController extends SimpleFormController {
 		// Display the video media list section
 		mvc.addObject("mediaListEnabled", new Boolean(this.getCoreSettings().isMediaEnabled()));
 		mvc.addObject("mediaList", this.getMediaList());
+				
+		mvc.addObject("popularwordmap", EntityLinkManager.mapReduceLinkKeywords(this.getEntityLinksDao()));
 		
+		// Set the form object (search form)
 		mvc.addObject("command", new BotListUserSearchForm());
 		
 		// Perform an audit of this page.
