@@ -37,5 +37,5 @@ public class TextUtils {
 		} catch (MalformedURLException e) {
 			return "invalid-hostname";
 		}
-	}	
+	}
 }
