@@ -24,12 +24,23 @@ public class MapReduceTest extends TestCase {
 	
 	public void testMapReduce() {
 		List allterms = new ArrayList();
-		allterms.add("dog");
+		String key1 = "dog";
+		String key2 = "to";
+		
+		allterms.add(key1);
 		allterms.add("cat");
 		allterms.add("chicken");
 		allterms.add("dog");
-		final Set set = BotListGenericUtils.mapReduce(allterms, 8);
-		System.out.println(set);
+		if (BotListGenericUtils.STOP_WORDS_MAP.get(key2) == null) {
+			allterms.add(key2);
+		}
+		if (BotListGenericUtils.STOP_WORDS_MAP.get("doggie") == null) {
+			allterms.add("doggie");
+		}
+		
+		allterms.remove("dog");
+		final Set set = BotListGenericUtils.mapReduce(allterms, 8);		
+		System.out.println(set);				
 	}
 
 }
