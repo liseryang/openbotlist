@@ -25,6 +25,7 @@ public interface BotListEntityLinksDAO  {
 	public List pageEntityLinksUsers(final String queryStr, final int page, final int pageSize);
 	
 	public List readListingOnDate(final Calendar calendar);
+	public List readListingUpToCurrentDate(final Calendar calendar);
 	
 	public BotListEntityLinks readLinkListing(final int id) throws DataAccessException;
 	public BotListEntityLinks readLinkListing(final String id) throws DataAccessException;
