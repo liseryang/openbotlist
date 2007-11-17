@@ -18,7 +18,56 @@ import java.util.TreeMap;
  * @author bbrown
  */
 public class BotListGenericUtils {
-
+		
+	public static final String STOP_WORDS [] = {
+		"to",
+		"the",
+		"in",
+		"of",
+		"am",
+		"add",
+		"is",
+		"for",
+		"a",
+		"on",
+		"by",
+		"for",
+		"us",
+		"we",
+		"be",
+		"going",
+		"way",
+		"from",
+		"cool",
+		"sometimes",
+		"too",
+		"man",
+		"bad",
+		"and",
+		"new",
+		"i",
+		"with",
+		"it",
+		"all",
+		"up",
+		"at",
+		"over",
+		"says",
+		"more",
+		"2007",
+		"your",
+		"no",
+		"call",
+		"race"
+	};
+	public static final Map STOP_WORDS_MAP;
+	static {
+		STOP_WORDS_MAP = new HashMap();
+		for (int ix = 0; ix < STOP_WORDS.length; ix++) {
+			STOP_WORDS_MAP.put(STOP_WORDS[ix], "0");
+		}
+	}
+	
 	/** inner class to sort map **/
 	private static final class ValueComparator implements Comparator {
 		private Map data = null;

@@ -32,8 +32,9 @@ public class BotListEntityLinksDAOImpl
 	extends HibernateDaoSupport implements BotListEntityLinksDAO {
 	
 	public static final int MAX_DAO_RESULTS = 400; 
+	public static final int MAX_MAX_RESULTS = 2000;
 	public static final int MAX_RESULTS_DAY = 12;
-	
+		
 	private BotListCoreUsersDAO userDao;
 	
 	/**
@@ -130,8 +131,7 @@ public class BotListEntityLinksDAOImpl
 					}
 				});		
 	}
-	
-	
+		
 	/**
 	 * @see org.spirit.dao.BotListCityListingDAO#readCityListing(int)
 	 */
@@ -167,7 +167,20 @@ public class BotListEntityLinksDAOImpl
 					}
 				});		
 	}
-	
+
+	public List readListingUpToCurrentDate(final Calendar calendar) {			
+		return getHibernateTemplate().executeFind(
+				new HibernateCallback() {
+					public Object doInHibernate(Session session) throws HibernateException {
+						Query query = 							
+							session.createQuery("from org.spirit.bean.impl.BotListEntityLinks links where (date(links.createdOn) > date(:curDate)) AND (links.createdOn < NOW())");						
+						query.setMaxResults(MAX_MAX_RESULTS);
+						query.setCalendar("curDate", calendar); 
+						return query.list();
+					}
+				});		
+	}
+
 	
 	public long getLinkCommentCount(final int id) {
 		ArrayList list = (ArrayList) getHibernateTemplate().find("select count(id) from org.spirit.bean.impl.BotListUserComments where linkId = " + id);
