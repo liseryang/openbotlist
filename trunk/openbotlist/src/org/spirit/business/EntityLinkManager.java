@@ -40,10 +40,14 @@ public class EntityLinkManager {
 		for (Iterator it = list.iterator(); it.hasNext();) {
 			BotListEntityLinks link = (BotListEntityLinks) it.next();
 			final String keywords = link.getKeywords();
-			final String[] words = keywords.split(" ");
-			for (int i = 0; i < words.length; i++) {
-				allterms.add(words[i]);
-			}
+			if (keywords != null) {
+				final String[] words = keywords.split(" ");
+				if (words != null) {
+					for (int i = 0; i < words.length; i++) {
+						allterms.add(words[i]);
+					}
+				} // End of if - words null
+			} // End of if
 		} // End of For				
 		Map map = new HashMap();
 		for (Iterator x2it = allterms.iterator(); x2it.hasNext();) {
