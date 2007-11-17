@@ -48,19 +48,7 @@ public class EntityLinkManager {
 					}
 				} // End of if - words null
 			} // End of if
-		} // End of For				
-		Map map = new HashMap();
-		for (Iterator x2it = allterms.iterator(); x2it.hasNext();) {
-			final String term = (String) x2it.next();
-			if (term.length() == 0) continue;
-			Integer ct = (Integer) map.get(term);
-			if (ct == null) {
-				map.put(term, new Integer(0));
-			} else {
-				map.put(term, new Integer(ct.intValue() + 1));
-			} // End of if - else			
-		} // End of the for						
-		Map sortedMap = BotListGenericUtils.sortMapByValue(map);	
-		return BotListGenericUtils.keyValueSet(sortedMap, 8);
+		} // End of For		
+		return BotListGenericUtils.mapReduce(allterms, 8);
 	}
 }

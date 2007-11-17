@@ -5,8 +5,10 @@
 package org.spirit.util;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.SortedMap;
@@ -54,5 +56,28 @@ public class BotListGenericUtils {
 			if (i >= (maxnum - 1)) break;
 		}
 		return newset;
+	}
+	
+	/**
+	 * Simple Map Reduce; given a list of keywords, map the terms to a count of how
+	 * many times the term occurs in the list.
+	 *  
+	 * @param allterms
+	 * @return
+	 */
+	public static final Set mapReduce(final List allterms, final int maxnum) {
+		Map map = new HashMap();
+		for (Iterator x2it = allterms.iterator(); x2it.hasNext();) {
+			final String term = (String) x2it.next();
+			if (term.length() == 0) continue;
+			Integer ct = (Integer) map.get(term);
+			if (ct == null) {
+				map.put(term, new Integer(0));
+			} else {
+				map.put(term, new Integer(ct.intValue() + 1));
+			} // End of if - else			
+		} // End of the for						
+		Map sortedMap = BotListGenericUtils.sortMapByValue(map);	
+		return BotListGenericUtils.keyValueSet(sortedMap, maxnum);
 	}
 }
