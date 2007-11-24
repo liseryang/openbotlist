@@ -3,7 +3,7 @@
 <!-- Copyright (c) 2006 - Berlin Brown -->
 <!-- Date: 11/1/2006 -->
 <!-- ****************************************************** -->
-<project name="BotList Standalone Utility Applications" default="init" basedir=".">
+<project name="Open Botlist Standalone Utility Applications" default="init" basedir=".">
 
 	<property file="build.properties" />
 	
