@@ -299,7 +299,7 @@ public class BotListIndexController extends SimpleFormController {
 		mvc.addObject("mediaListEnabled", new Boolean(this.getCoreSettings().isMediaEnabled()));
 		mvc.addObject("mediaList", this.getMediaList());
 				
-		mvc.addObject("popularwordmap", EntityLinkManager.mapReduceLinkKeywords(this.getEntityLinksDao()));
+		//mvc.addObject("popularwordmap", EntityLinkManager.mapReduceLinkKeywords(this.getEntityLinksDao()));
 		
 		// Set the form object (search form)
 		mvc.addObject("command", new BotListUserSearchForm());
