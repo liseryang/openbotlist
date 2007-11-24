@@ -136,8 +136,7 @@
 							</td>
 						</tr>
 						--%>
-						<%-- ==== End of Top Terms ==== ---%>
-						
+						<%-- ==== End of Top Terms ==== ---%>						
 						</table>
 					</div>
 					<%-- ==== End Next Set of Data, Recent Links ==== --%>
