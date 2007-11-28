@@ -15,7 +15,7 @@ a.linklist_objlinks:link {
 	  color: <c:out value='#${command.userInfo.linkColor};' />
 	 </c:when>
 	 <c:otherwise>
-	  color: #558;
+	  color: #447;
      </c:otherwise> 
 	</c:choose>
 }
@@ -37,7 +37,7 @@ a.linklist_objlinks:hover {
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #558;
+	color: #447;
 	background-color: transparent;
 }
 a.linklist_objlinks:active {
@@ -46,7 +46,7 @@ a.linklist_objlinks:active {
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #558;
+	color: #447;
 	background-color: transparent;
 }
 
