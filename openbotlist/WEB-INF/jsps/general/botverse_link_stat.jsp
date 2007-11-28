@@ -9,7 +9,7 @@ a.linklist_objlinks:link {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	background-color: transparent;
-	color: #558; 
+	color: #447;
 	text-decoration:none;
 }
 
@@ -31,7 +31,7 @@ a.linklist_objlinks:hover {
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #558;
+	color: #447;
 	background-color: transparent;
 	text-decoration:none;
 }
@@ -41,7 +41,7 @@ a.linklist_objlinks:active {
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #558;
+	color: #447;
 	background-color: transparent;
 	text-decoration:none;
 }
