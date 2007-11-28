@@ -5,7 +5,7 @@
 /** =============================================== */
 a.linklist_objlinks:link {
 	font-family: "arial", verdana, helvetica, sans-serif;
-	font-size: 11pt;
+	font-size: 10pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
@@ -15,15 +15,15 @@ a.linklist_objlinks:link {
 	  color: <c:out value='#${command.userInfo.linkColor};' />
 	 </c:when>
 	 <c:otherwise>
-	  color: #3838E5;
+	  color: #558;
      </c:otherwise> 
 	</c:choose>
 }
 
 /** Leave the visited link as darker than others */
 a.linklist_objlinks:visited {
-	font-family: "arial", verdana, helvetica, sans-serif;
-	font-size: 11pt;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
+	font-size: 10pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
@@ -32,21 +32,21 @@ a.linklist_objlinks:visited {
 }
 
 a.linklist_objlinks:hover {
-	font-family: "arial", verdana, helvetica, sans-serif;
-	font-size: 11pt;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
+	font-size: 10pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #3838E5;
+	color: #558;
 	background-color: transparent;
 }
 a.linklist_objlinks:active {
-	font-family: "arial", verdana, helvetica, sans-serif;
-	font-size: 11pt;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
+	font-size: 10pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	color: #3838E5;
+	color: #558;
 	background-color: transparent;
 }
 
