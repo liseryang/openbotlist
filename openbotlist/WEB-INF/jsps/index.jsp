@@ -56,7 +56,7 @@
 								<span style="background-color: #e8e8e8; padding: 4px;">
 								&nbsp;most recent updates:
 								</span>
-								&nbsp;/ <a href="<c:url value="/spring/botverse/botverse.html" />" class="linklist_botnav">view more</a> 
+								&nbsp;/ <a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
 									/ <a href="<c:url value="/spring/botverse/botverse_submit.html" />" class="linklist_botnav">submit</a>									
 								
 								&nbsp;&nbsp;<span style="color: #555;"><i>(<c:out value="${linkCount}" /> entries)</i></span>
@@ -71,8 +71,7 @@
 									 </div>
 									</c:when>
 								</c:choose>
-								<%-- End of Banner Section --%>	
-																	
+								<%-- End of Banner Section --%>																		
 							</td>
 						</tr>
 						<tr>
@@ -120,12 +119,11 @@
 							</table>
 							<%-- End of table for botverse links --%>
 							<div style="margin-top: 6px; background-color: #f3f3f3; padding: 6px; width: 30%">
-								<a href="<c:url value="/spring/botverse/botverse.html" />" class="linklist_botnav">view more</a> 
+								<a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
 							</div>
 							
 							</td>
-						</tr>
-						
+						</tr>						
 						<%-- ==== Print Map Reduce Top Terms ====  --%>
 						<%-- 
 						<tr>
