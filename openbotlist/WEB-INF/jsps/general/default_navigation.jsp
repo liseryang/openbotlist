@@ -6,7 +6,7 @@
 			<ul style="margin-top: 0px;">
 				<li><a href="#"></a></li>
 				<li><a href="<c:url value="/" />">Home</a></li>				
-				<li><a href="<c:url value="/spring/botverse/botverse.html" />">Botverse (popular links)</a></li>
+				<li><a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />">Botverse (popular links)</a></li>
 				<li><a href="<c:url value="/spring/citylist.html" />">Botlist (community listings)</a></li>
 				<li><a href="<c:url value="/spring/search/search.html?querymode=enabled&query=" />">Search</a></li>
 				<li><a href="<c:url value="/spring/forums/comments/topics.html" />">Comments</a></li>
