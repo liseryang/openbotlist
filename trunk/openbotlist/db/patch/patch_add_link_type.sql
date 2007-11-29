@@ -33,7 +33,6 @@ CREATE TABLE cat_group_terms (
 insert into cat_link_groups(category_name, category_descr, category_color, created_on)
 	VALUES('tech', 'tech', 'BFFFBF', NOW());
 
-
 insert into cat_link_groups(category_name, category_descr, category_color, created_on)
 	VALUES('politics', 'politics', 'FFE6BF', NOW());
 	
@@ -75,7 +74,7 @@ insert into cat_group_terms(category_name, category_term, created_on)
 	VALUES('finance', 'wallstreet', NOW());
 insert into cat_group_terms(category_name, category_term, created_on)	
 	VALUES('finance', 'economy', NOW());
-
+	
 insert into cat_group_terms(category_name, category_term, created_on)
 	VALUES('health', 'health', NOW());
 insert into cat_group_terms(category_name, category_term, created_on)	
@@ -84,7 +83,7 @@ insert into cat_group_terms(category_name, category_term, created_on)
 	VALUES('health', 'lungs', NOW());
 insert into cat_group_terms(category_name, category_term, created_on)	
 	VALUES('health', 'cancer', NOW());
-
+		
 insert into cat_group_terms(category_name, category_term, created_on)
 	VALUES('international', 'international', NOW());
 insert into cat_group_terms(category_name, category_term, created_on)	
