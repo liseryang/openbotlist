@@ -4,8 +4,8 @@
 /** == Bold and Dark Blue / Purple == */
 /** =============================================== */
 a.linklist_objlinks:link {
-	font-family: "arial", verdana, helvetica, sans-serif;
-	font-size: 10pt;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
+	font-size: 11pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
@@ -23,7 +23,7 @@ a.linklist_objlinks:link {
 /** Leave the visited link as darker than others */
 a.linklist_objlinks:visited {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
-	font-size: 10pt;
+	font-size: 11pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
@@ -33,7 +33,7 @@ a.linklist_objlinks:visited {
 
 a.linklist_objlinks:hover {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
-	font-size: 10pt;
+	font-size: 11pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
@@ -42,7 +42,7 @@ a.linklist_objlinks:hover {
 }
 a.linklist_objlinks:active {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, geneva, sans-serif;
-	font-size: 10pt;
+	font-size: 11pt;
 	font-weight: bold;
 	margin-bottom: 0px;
 	margin-top: 0px;
