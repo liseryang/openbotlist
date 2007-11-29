@@ -1,6 +1,21 @@
-/**
- * Berlin Brown
- * Nov 9, 2006
+/* 
+ *** Notice Update: 8/14/2007
+ *** Copyright 2007 Berlin Brown
+ *** Copyright 2006-2007 Newspiritcompany.com
+ *** 
+ *** This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
+ *** otherwise stated, use or distribution of this program 
+ *** for commercial purpose is prohibited.
+ *** 
+ *** See LICENSE.BOTLIST for more information.
+ ***
+ *** The SOFTWARE PRODUCT and CODE are protected by copyright and 
+ *** other intellectual property laws and treaties. 
+ ***  
+ *** Unless required by applicable law or agreed to in writing, software
+ *** distributed  under the  License is distributed on an "AS IS" BASIS,
+ *** WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
+ *** implied.
  */
 
 package org.spirit.bean.impl;
@@ -46,12 +61,12 @@ public class BotListEntityLinks extends BotListBeanBase
 	private String hostnameDisplay;
 	private String hostnameDisplayUrl;
 
-	private String searchScore;
-	
-	private String coreUsername;
-	
+	private String searchScore;	
+	private String coreUsername;	
 	private String linkType;
 	private BotListCatLinkGroups linkCategory;
+	
+	private String generatedUniqueId;
 
 	/**
 	 * @return the views
@@ -283,6 +298,12 @@ public class BotListEntityLinks extends BotListBeanBase
 	}
 	public void setLinkType(String linkType) {
 		this.linkType = linkType;
+	}
+	public String getGeneratedUniqueId() {
+		return generatedUniqueId;
+	}
+	public void setGeneratedUniqueId(String generatedUniqueId) {
+		this.generatedUniqueId = generatedUniqueId;
 	}	
 
 }
