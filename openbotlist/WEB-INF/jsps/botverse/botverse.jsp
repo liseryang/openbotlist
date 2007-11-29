@@ -265,7 +265,7 @@
 					</td>
 					<td>
 					  <span class="linklist_comments">
-					  <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">comments (<c:out value="${fn:length(listing.listings)}" />)</a>
+					     <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">*comments (<c:out value="${fn:length(listing.listings)}" />)</a>
 					  </span>						
 					  | <span class="linklist_comments"><a class="linklist_comments" href="<c:url value="/spring/botverse/linkaddcomment.html?viewid=${listing.id}" />">add comment</a></span>
 					  <%-- Print the UserName --%>
