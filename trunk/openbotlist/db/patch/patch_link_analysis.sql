@@ -34,6 +34,9 @@ alter table entity_links ADD COLUMN geo_locations_found varchar(128);
 alter table entity_links ADD COLUMN document_size int(11) DEFAULT 0;
 alter table entity_links ADD COLUMN request_time int(11) DEFAULT 0;
 
+-- The object id status ensures that the object id value is static
+alter table entity_links ADD COLUMN object_id_status TINYINT DEFAULT 0;
+
 ---
 --- Additional keywords to link as a type.
 
