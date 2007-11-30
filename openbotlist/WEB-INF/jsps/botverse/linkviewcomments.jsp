@@ -56,12 +56,19 @@
 						 </span>
 					</div>
 					<div>
-							<!-- == Keywords == -->
+							<%-- == Keywords == --%>
 							<span class="linklist_keywords">							 
 							 <span style="background-color: white">
-							 link keywords / <c:out value="${botlistutil:tagViewKeywords(command.link.keywords, 'linklist_keywords_lnk', '/botlist/spring/search/search.html?querymode=enabled&query=', ' ')}" escapeXml="false" />
-							 </span>							 
+							  link keywords / <c:out value="${botlistutil:tagViewKeywords(command.link.keywords, 'linklist_keywords_lnk', '/botlist/spring/search/search.html?querymode=enabled&query=', ' ')}" escapeXml="false" />
+							 </span>
 							</span>
+							
+							<%-- ==== Section with misc web analytical data ==== --%>
+							<div style="margin-left: 20px; font-size: 8pt; color: #999;">
+						 	 analytics: linktype: (<c:out value="${command.link.linkType}" />)
+						 	 objid:<c:out value="${command.link.generatedUniqueId}" />
+						 	 
+							</div>
 					</div>
 					
 					<p />
