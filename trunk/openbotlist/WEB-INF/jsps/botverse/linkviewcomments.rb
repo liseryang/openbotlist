@@ -2,6 +2,17 @@
 ## Berlin Brown
 ## 11/4/2006
 ##
+## THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+## "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+## LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+## A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+## CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+## EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+## PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+## PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+## LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+## NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+## SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
 include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
@@ -42,9 +53,12 @@ class ViewCommentsController
     sessionFactory = @daohelperlink.getSessionFactory()
     hbm_session = sessionFactory.openSession()
     tx = hbm_session.beginTransaction()
-    if link.views
+    if !link.views.nil?
       link.views = link.views + 1
+    else
+	  link.views = 0
     end
+    
     hbm_session.saveOrUpdate(link)
     tx.commit()
     hbm_session.close()
@@ -59,7 +73,7 @@ class ViewCommentsController
     
     # Update the link views for later filtering
     # Removed 7/6/2007
-    #updateLinkViews(link)
+    updateLinkViews(link)
     
     # Audit the request
     @controller.auditLogPage(request, "linkviewcomments.html?viewid=#{linkId}")

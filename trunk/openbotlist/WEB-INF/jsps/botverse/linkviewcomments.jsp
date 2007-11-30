@@ -63,11 +63,13 @@
 							 </span>
 							</span>
 							
-							<%-- ==== Section with misc web analytical data ==== --%>
+							<%-- *************************** --%>
+							<%-- ==== Section with misc web analytical data (views, objectid) ==== --%>
+							<%-- *************************** --%>
 							<div style="margin-left: 20px; font-size: 8pt; color: #999;">
 						 	 analytics: linktype: (<c:out value="${command.link.linkType}" />)
 						 	 objid:<c:out value="${command.link.generatedUniqueId}" />
-						 	 
+							 rq: <c:out value="${command.link.views}" /> 						 	 
 							</div>
 					</div>
 					
