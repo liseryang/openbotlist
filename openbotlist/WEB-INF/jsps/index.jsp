@@ -4,8 +4,8 @@
 <head>
  	<title>Botlist - Interesting Things Online</title>
  
-  	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.">
- 	<META NAME="keywords" CONTENT="listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg">
+  	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings.">
+ 	<META NAME="keywords" CONTENT="articles, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg">
     <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" />
    
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
@@ -87,6 +87,10 @@
 												<c:out value='${botlistutil:getMaxWord(listing.urlTitle, 48)}' />
 											</a>
 											(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)
+											<%-- Next line, hostname information --%>
+											<div style="font-size: 8px: color: #777; margin-left: 6px;">
+											 source: <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
+											</div>
 									</td>
 								</tr>
 								<tr>
@@ -255,10 +259,8 @@
 						</td>
 						</tr>
 						<%-- Table containg media feeds / botlist image --%>
-					</table>
-					
-					<%-- Right Section for media feeds / rss link, etc --%>
-					
+					</table>			
+					<%-- Right Section for media feeds / rss link, etc --%>					
 				</td>
 				</tr>
 				
