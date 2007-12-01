@@ -66,10 +66,20 @@
 							<%-- *************************** --%>
 							<%-- ==== Section with misc web analytical data (views, objectid) ==== --%>
 							<%-- *************************** --%>
-							<div style="margin-left: 20px; font-size: 8pt; color: #999;">
-						 	 analytics: linktype: (<c:out value="${command.link.linkType}" />)
-						 	 objid:<c:out value="${command.link.generatedUniqueId}" />
-							 rq: <c:out value="${command.link.views}" /> 						 	 
+							<div style="margin-left: 20px; font-size: 8pt; color: #000; padding: 0px 0px 0px 0px;">
+								 <div style="width: 60%;">
+									 <span style="background-color: #000; color: #FFF; padding: 2px 2px 2px 2px; margin-right: 2px;">
+								 	 analytics: 
+								 	 </span>						 	 
+								 	 linktype: (<c:out value="${command.link.linkType}" />)
+									 rq: <c:out value="${command.link.views}" />
+									 lct: <c:out value="${command.link.linksCt}" />
+									 ict: <c:out value="${command.link.imageCt}" />
+									 ptct: <c:out value="${command.link.paraTagCt}" />
+			                         doc: <c:out value="${command.link.documentSize}" />
+			                         rqt: <c:out value="${command.link.requestTime}" />
+			                         objid:<c:out value="${command.link.generatedUniqueId}" />
+		                         </div>
 							</div>
 					</div>
 					
