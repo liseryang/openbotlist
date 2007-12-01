@@ -5,6 +5,10 @@
 <hibernate-mapping>
 	<!--
 	 ============================================
+	 Main Mapping File the Botlist Hibernate Object Relational Mapping
+	 
+	 See the org.spirit.bean.impl package for the POJO objects.
+	 
 	 For additional documentation on hibernate mappings, see:
 	 	http://www.hibernate.org/hib_docs/reference/en/html/mapping.html
 	 	Collections documentation, eg information on 'map':
@@ -127,6 +131,7 @@
 		<property name="userId" column="user_id" not-null="false" />
 		<property name="hostname" column="hostname" not-null="false" />
 		<property name="linkType" column="link_type" not-null="false" />
+		<property name="generatedUniqueId" column="generated_obj_id" not-null="false" />
 		<bag
             name="listings" 
             inverse="true" 
