@@ -3,9 +3,14 @@
 
 = Project Diary =
 
-11/14/2007    
+12/1/2007
+
+Added web analytics, statistics page content analysis
+
+11/14/2007
 
 Useful idiom in Scala for walking a directory tree, searching for a particular file.  This  code will get added to my botlist help document search system:
+
 
 {{{
 //
