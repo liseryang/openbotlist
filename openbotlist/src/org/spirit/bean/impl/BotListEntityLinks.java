@@ -67,6 +67,14 @@ public class BotListEntityLinks extends BotListBeanBase
 	private BotListCatLinkGroups linkCategory;
 	
 	private String generatedUniqueId;
+		
+	private Long linksCt;
+	private Long imageCt;
+	private Long metaDescrLen;
+	private Long metaKeywordsLen;		
+	private Long paraTagCt;
+	private Long documentSize;
+	private Long requestTime;
 
 	/**
 	 * @return the views
@@ -304,6 +312,48 @@ public class BotListEntityLinks extends BotListBeanBase
 	}
 	public void setGeneratedUniqueId(String generatedUniqueId) {
 		this.generatedUniqueId = generatedUniqueId;
+	}
+	public Long getImageCt() {
+		return imageCt;
+	}
+	public void setImageCt(Long imageCt) {
+		this.imageCt = imageCt;
+	}
+	public Long getLinksCt() {
+		return linksCt;
+	}
+	public void setLinksCt(Long linksCt) {
+		this.linksCt = linksCt;
+	}
+	public Long getMetaDescrLen() {
+		return metaDescrLen;
+	}
+	public void setMetaDescrLen(Long metaDescrLen) {
+		this.metaDescrLen = metaDescrLen;
+	}
+	public Long getParaTagCt() {
+		return paraTagCt;
+	}
+	public void setParaTagCt(Long paraTagCt) {
+		this.paraTagCt = paraTagCt;
+	}
+	public Long getRequestTime() {
+		return requestTime;
+	}
+	public void setRequestTime(Long requestTime) {
+		this.requestTime = requestTime;
+	}
+	public Long getDocumentSize() {
+		return documentSize;
+	}
+	public void setDocumentSize(Long documentSize) {
+		this.documentSize = documentSize;
+	}
+	public Long getMetaKeywordsLen() {
+		return metaKeywordsLen;
+	}
+	public void setMetaKeywordsLen(Long metaKeywordsLen) {
+		this.metaKeywordsLen = metaKeywordsLen;
 	}	
 
 }
