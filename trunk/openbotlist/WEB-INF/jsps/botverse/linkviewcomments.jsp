@@ -68,9 +68,10 @@
 							<%-- *************************** --%>
 							<div style="margin-left: 20px; font-size: 8pt; color: #000; padding: 0px 0px 0px 0px;">
 								 <div style="width: 60%;">
-									 <span style="background-color: #000; color: #FFF; padding: 2px 2px 2px 2px; margin-right: 2px;">
-								 	 analytics: 
-								 	 </span>						 	 
+									 <span style="background-color: #000; color: #FFF; padding: 2px 8px 14px 2px; margin-right: 2px;">
+								 	  <b>analytics:</b>
+								 	 </span>
+								 	 <div style="margin-top: 12px;">
 								 	 linktype: (<c:out value="${command.link.linkType}" />)
 									 rq: <c:out value="${command.link.views}" />
 									 lct: <c:out value="${command.link.linksCt}" />
@@ -79,6 +80,7 @@
 			                         doc: <c:out value="${command.link.documentSize}" />
 			                         rqt: <c:out value="${command.link.requestTime}" />
 			                         objid:<c:out value="${command.link.generatedUniqueId}" />
+			                         </div>
 		                         </div>
 							</div>
 					</div>
