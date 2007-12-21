@@ -38,6 +38,7 @@ include_class 'org.spirit.form.ext.BotListMapEntityLink' unless defined? BotList
 
 include_class 'org.apache.commons.logging.Log' unless defined? Log
 include_class 'org.apache.commons.logging.LogFactory' unless defined? LogFactory
+include_class('java.util.Calendar') { 'JCalendar' } unless defined? JCalendar
 
 class BotverseController
 		
@@ -78,10 +79,15 @@ class BotverseController
     # Create the session if not available
     BotListSessionManager.safeCreateSession(request)
     
+    curCal = JCalendar::getInstance()
+    curCal.add(JCalendar::DATE, -7)
+    
     if mostrecent_mode
-      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
+	  # For MySQL specific date filter: where (links.createdOn > DATE_SUB(CURRENT_DATE, INTERVAL 100 DAY))
+	  # Or hybernate specific approach: from ApplData data where (day(current_date()) - day(links.createdOn)) > 200)
+      query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.createdOn > (current_date() - 120)) order by links.id desc"
     else
-      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.rating desc, links.id desc, links.views desc"
+      query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.createdOn > (current_date() - 120)) order by links.rating desc, links.id desc, links.views desc"
     end
     
     # Override any existing query for keytag search
