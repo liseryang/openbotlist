@@ -77,9 +77,13 @@ h1.bot_forumposttitle {
 	color: #444;
 }
 
+/**
+ * Over navigation links
+ */
 #navigation .selected,#navigation a:hover {
-	background-color: #E8DBC8;
-	color:#5F4927;
+	border-bottom: 2px solid #000045;
+	background-color: #DEDEDF;
+	color:#000033;
 	text-decoration: none;
 }
 
@@ -109,12 +113,12 @@ table.viewlisting td {
 }
 
 a.linklist_sample {
-	COLOR: #076d07;	
+	COLOR: #686;
 	font-size: 8pt;
 	text-decoration: none;
 }
 a.linklist_botnav {
-	COLOR: #076d07;	
+	COLOR: #686;
 	font-size: 9pt;
 	text-decoration: none;
 }
@@ -204,7 +208,7 @@ a.linklist_comments_host  {
 span.linklist_keywords a {
 	font-size: 10px;
 	text-decoration: none;
-	color: #00A55E;
+	color: #7A7;
 }
 
 /**
