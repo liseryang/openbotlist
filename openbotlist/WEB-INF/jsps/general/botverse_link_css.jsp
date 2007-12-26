@@ -10,7 +10,7 @@ a.linklist_objlinks:link {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	background-color: transparent;
-	text-decoration: underline;
+	text-decoration: none;
 	<c:choose>
    	 <c:when test="${command.userInfo != null}" >														  
 	  color: <c:out value='#${command.userInfo.linkColor};' />
@@ -29,7 +29,7 @@ a.linklist_objlinks:visited {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	color: #460C7B;
-	text-decoration: underline;
+	text-decoration: none;
 	background-color: transparent;
 }
 
