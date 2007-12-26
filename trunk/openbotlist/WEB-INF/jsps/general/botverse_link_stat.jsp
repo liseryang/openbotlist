@@ -10,7 +10,7 @@ a.linklist_objlinks:link {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	background-color: transparent;
-	color: #447;
+	color: #333;
 	text-decoration: underline;
 }
 
