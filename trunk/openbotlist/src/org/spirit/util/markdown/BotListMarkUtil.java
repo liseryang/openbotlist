@@ -183,7 +183,8 @@ public class BotListMarkUtil {
 		// Changes '9/10/2007'
 		// Manual line breaks
 		//text.replaceAll(" {1,}\n", " <br />\n");
-		text.replaceAll(" ", "&nbsp;");
+		// Replace two spaces with nbsp
+		text.replaceAll("  ", "&nbsp;&nbsp;");
 		text.trim();		
 		text.replaceAll("\n", " <br />\n");		
 		return text;

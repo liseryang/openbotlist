@@ -142,9 +142,8 @@ class ForumCommentsController
     end
     return comment
   end
-
-  #
-  # Processed when the form is submitted, 
+  
+  # Process when the form is submitted, 
   # see the controller 'processFormSubmission()' method
   def onSubmit(request, response, form, errors)
 
