@@ -28,7 +28,6 @@ class ViewStatsController
   #
   # Generate Stats for the current week
   def weekStats()
-    #
     # Get the first day
     curCal = JCalendar::getInstance()
     curCal.add(JCalendar::DATE, -7)

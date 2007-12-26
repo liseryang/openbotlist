@@ -16,7 +16,7 @@ a.linklist_objlinks:link {
 	  color: <c:out value='#${command.userInfo.linkColor};' />
 	 </c:when>
 	 <c:otherwise>
-	  color: #447;
+		color: #333;
      </c:otherwise> 
 	</c:choose>
 }
