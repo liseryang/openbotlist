@@ -37,6 +37,9 @@ alter table entity_links ADD COLUMN request_time int(11) DEFAULT 0;
 -- The object id status ensures that the object id value is static
 alter table entity_links ADD COLUMN object_id_status TINYINT DEFAULT 0;
 
+-- Add another web data collection item; number of 'p' tags
+alter table entity_links ADD COLUMN para_tag_ct int(11) DEFAULT 0;
+
 ---
 --- Additional keywords to link as a type.
 
