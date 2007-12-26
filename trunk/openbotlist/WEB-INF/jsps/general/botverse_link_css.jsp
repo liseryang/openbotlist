@@ -10,6 +10,7 @@ a.linklist_objlinks:link {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	background-color: transparent;
+	text-decoration: underline;
 	<c:choose>
    	 <c:when test="${command.userInfo != null}" >														  
 	  color: <c:out value='#${command.userInfo.linkColor};' />
@@ -28,6 +29,7 @@ a.linklist_objlinks:visited {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	color: #460C7B;
+	text-decoration: underline;
 	background-color: transparent;
 }
 
@@ -38,6 +40,7 @@ a.linklist_objlinks:hover {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	color: #447;
+	text-decoration: underline;
 	background-color: transparent;
 }
 a.linklist_objlinks:active {
@@ -47,6 +50,7 @@ a.linklist_objlinks:active {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	color: #447;
+	text-decoration: underline;
 	background-color: transparent;
 }
 

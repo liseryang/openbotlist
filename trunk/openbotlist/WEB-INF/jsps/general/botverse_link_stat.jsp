@@ -1,6 +1,7 @@
 /** =============================================== */
 /** == Link List Data, Only for the Link Section == */
-/** == Bold and Dark Blue / Purple == */
+/** == Bold and Dark Blue / Purple               == */
+/** == This may also be used for the 'index' style  */
 /** =============================================== */
 a.linklist_objlinks:link {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -10,7 +11,7 @@ a.linklist_objlinks:link {
 	margin-top: 0px;
 	background-color: transparent;
 	color: #447;
-	text-decoration:none;
+	text-decoration: underline;
 }
 
 /** Leave the visited link as darker than others */
@@ -22,7 +23,7 @@ a.linklist_objlinks:visited {
 	margin-top: 0px;
 	color: #460C7B;
 	background-color: transparent;
-	text-decoration:none;
+	text-decoration: underline;
 }
 
 a.linklist_objlinks:hover {
@@ -33,7 +34,7 @@ a.linklist_objlinks:hover {
 	margin-top: 0px;
 	color: #447;
 	background-color: transparent;
-	text-decoration:none;
+	text-decoration: underline;
 }
 a.linklist_objlinks:active {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -43,7 +44,7 @@ a.linklist_objlinks:active {
 	margin-top: 0px;
 	color: #447;
 	background-color: transparent;
-	text-decoration:none;
+	text-decoration: underline;
 }
 
 /** =============================================== */
