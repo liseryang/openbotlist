@@ -1,26 +1,27 @@
-##*** Notice Update: 8/14/2007
-##*** Copyright 2007 Berlin Brown
-##*** Copyright 2006-2007 Newspiritcompany.com
-##*** 
-##*** This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
-##*** otherwise stated, use or distribution of this program 
-##*** for commercial purpose is prohibited.
-##*** 
-##*** See LICENSE.BOTLIST for more information.
-##***
-##*** The SOFTWARE PRODUCT and CODE are protected by copyright and 
-##*** other intellectual property laws and treaties. 
-##***  
-##*** Unless required by applicable law or agreed to in writing, software
-##*** distributed  under the  License is distributed on an "AS IS" BASIS,
-##*** WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
-##*** implied.
+##################################################
+### Notice Update: 8/14/2007
+### Copyright 2007 Berlin Brown
+### Copyright 2006-2007 Newspiritcompany.com
+### 
+### This SOURCE FILE is licensed to NEWSPIRITCOMPANY.COM.  Unless
+### otherwise stated, use or distribution of this program 
+### for commercial purpose is prohibited.
+### 
+### See LICENSE.BOTLIST for more information.
+###
+### The SOFTWARE PRODUCT and CODE are protected by copyright and 
+### other intellectual property laws and treaties. 
+###  
+### Unless required by applicable law or agreed to in writing, software
+### distributed  under the  License is distributed on an "AS IS" BASIS,
+### WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
+### implied.
+##################################################
 
-##
-## 11/4/2006
-## botverse.rb
-## botverse - view link listings
-##
+### Created: 11/4/2006
+### botverse.rb
+### botverse - view link listings
+
 
 include_class 'org.spirit.form.BotListPostListingForm' unless defined? BotListPostListingForm
 include_class 'org.spirit.form.BotListGenericPagingForm' unless defined? BotListGenericPagingForm
@@ -85,7 +86,7 @@ class BotverseController
     if mostrecent_mode
 	  # For MySQL specific date filter: where (links.createdOn > DATE_SUB(CURRENT_DATE, INTERVAL 100 DAY))
 	  # Or hybernate specific approach: from ApplData data where (day(current_date()) - day(links.createdOn)) > 200)
-      query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.createdOn > (current_date() - 120)) order by links.id desc"
+      query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     else
       query = "from org.spirit.bean.impl.BotListEntityLinks as links where (links.createdOn > (current_date() - 120)) order by links.rating desc, links.id desc, links.views desc"
     end
