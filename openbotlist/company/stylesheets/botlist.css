@@ -81,9 +81,9 @@ h1.bot_forumposttitle {
  * Over navigation links
  */
 #navigation .selected,#navigation a:hover {
-	border-bottom: 2px solid #000045;
+	border-bottom: 1px solid #000045;
 	background-color: #DEDEDF;
-	color:#990000;
+	color:#000;
 	text-decoration: none;
 }
 
