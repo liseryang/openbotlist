@@ -32,7 +32,7 @@
 				<div style="border: 1px solid #DDD; padding: 10px;">					
 					<a class="linklist_sample" href="<c:url value="/spring/forums/forums.html" />" >Forums/Home</a>
 					| <a href="<c:url value="/spring/forums/forumaddtopic.html?curaction=replytopic&actionid=${command.listing.id}" />" class="linklist_sample">Reply Topic</a>
-					<div style="width: 75%;">
+					<div style="width: 80%;">
 						<table class="linklist_data" width="100%">
 						<tr>					
 								<td>																	
@@ -76,7 +76,7 @@
 								</tr>
 								<tr>							
 									<td>
-										<div class="single_view_forum">					
+										<div class="single_view_forum">
 											<c:out value="${childComments.message}" escapeXml="false" />
 										</div>
 									</td>
@@ -93,8 +93,7 @@
 							<%-- End of table with comment replies --%>
 						</table>					
 						<%-- Begin new table/section with list of comments --%>
-					</div>
-					
+					</div>					
 					<%-- End of section with border --%>			
 				</div>
 			</div>
