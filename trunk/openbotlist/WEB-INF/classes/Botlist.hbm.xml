@@ -112,7 +112,9 @@
 		<property name="requestUri" column="request_uri" not-null="false" />
 	</class>
 
-	<!-- Main Link Entity (see botverse) -->	
+	<!-- ***************************************************** -->
+	<!-- Main Link Entity (see botverse) used for link database -->
+	<!-- ***************************************************** -->
 	<class name="org.spirit.bean.impl.BotListEntityLinks" 
 				table="entity_links"
 				dynamic-update="true">
@@ -132,6 +134,14 @@
 		<property name="hostname" column="hostname" not-null="false" />
 		<property name="linkType" column="link_type" not-null="false" />
 		<property name="generatedUniqueId" column="generated_obj_id" not-null="false" />
+				
+		<property name="linksCt" column="links_ct" not-null="false" />
+		<property name="imageCt" column="image_ct" not-null="false" />
+		<property name="metaDescrLen" column="meta_descr_len" not-null="false" />
+		<property name="metaKeywordsLen" column="meta_keywords_len" not-null="false" />		
+		<property name="paraTagCt" column="para_tag_ct" not-null="false" />
+		<property name="documentSize" column="document_size" not-null="false" />
+		<property name="requestTime" column="request_time" not-null="false" />
 		<bag
             name="listings" 
             inverse="true" 
