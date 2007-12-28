@@ -46,6 +46,25 @@
 				<arg value="../output/patch_more_feeds_99.sql" />
 			</exec>		
 	</target>
+		
+	<!-- **************************************** -->
+	<!-- Build Antlr Based Grammars (meta language) -->
+	<!-- **************************************** -->
+    <taskdef name="botantlr"
+        classname="org.spirit.ant.taskdef.ANTLR"
+		classpath="${basedir}/WEB-INF/classes" />
+	<target name="antlr.javac.remotedef">
+		<botantlr
+	    	target="${basedir}/WEB-INF/tools/antlr/remotedef/RemoteDef.g"
+	    		outputdirectory="${basedir}/src/org/spirit/parse/remotedef">
+			<classpath>
+				<pathelement location="${basedir}/WEB-INF/lib/antlr-2.7.7.jar" />
+				<pathelement location="${basedir}/WEB-INF/lib/antlr-3.0.1.jar" />
+				<pathelement location="${basedir}/WEB-INF/lib/antlr-runtime-3.0.1.jar" />
+				<pathelement location="${basedir}/WEB-INF/lib/stringtemplate-3.1b1.jar" />
+			</classpath>
+		</botantlr>
+	</target>
 	
 </project>
 <!-- End of the File -->

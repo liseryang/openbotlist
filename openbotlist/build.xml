@@ -42,6 +42,9 @@
 	<property name="bsf.jar"		value="${lib.dir}/bsf.jar" />
 	<property name="lucene.jar"		value="${lib.dir}/lucene-core-2.1.0.jar" />
 	
+	<property name="antlr.jar"		value="${lib.dir}/antlr-3.0.1.jar" />
+	<property name="antlr-runtime.jar" value="${lib.dir}/antlr-runtime-3.0.1.jar" />
+	
 	<target name="init" description="Initialization">
 		<tstamp/>
 		<echo message="Running with Tomcat Home=${tomcat.home}" />
@@ -69,7 +72,9 @@
 		<pathelement location="${jsp-api.jar}" />
 		<pathelement location="${standard.jar}" />
 		<pathelement location="${lucene.jar}" />
-
+		<pathelement location="${antlr.jar}" />
+		<pathelement location="${antlr-runtime.jar}" />
+		
 		<!-- Include the CLASSes directory -->
 		<pathelement location="${build.classes.dir}" />
 	</path>
