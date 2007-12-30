@@ -37,6 +37,7 @@ from soup.BeautifulSoup import *
 import urllib2
 from urlparse import urlparse
 
+NO_COLS_SERVICE = 9
 URL_LINK_SERVICE = "http://localhost:8080/botlist/spring/pipes/botverse_pipes.html"
 FF_USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
 
@@ -44,12 +45,19 @@ def connectLinkService(requrl):
 	opener = urllib2.build_opener()
 	req = urllib2.Request(requrl)
 	req.add_header('user-agent', FF_USER_AGENT)
-	data = opener.open(req).read()
-	return data
+	link_data = opener.open(req).read()
+	link_data = [ line.strip() for line in link_data.split('\n') ]
+	link_data = filter(lambda (line):
+					   (len(line) > 0) and (len(line.split('::|')) == NO_COLS_SERVICE),
+					   link_data)
+	content = [ col.split('::|') for col in link_data ]
+	return content
 
 if __name__ == '__main__':
 	print "***"
 	print "*** Spider Bot"
 	data = connectLinkService(URL_LINK_SERVICE)
-	print data
+	link_lst = [ line_set[0] for line_set in data ]
+	for n in link_lst:
+		print n		
 	print "*** Done"
