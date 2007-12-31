@@ -10,7 +10,7 @@
 				<li><a href="<c:url value="/spring/citylist.html" />">Botlist (community listings)</a></li>
 				<li><a href="<c:url value="/spring/search/search.html?querymode=enabled&query=" />">Search</a></li>
 				<li><a href="<c:url value="/spring/forums/comments/topics.html" />">Comments</a></li>
-				<li><a href="<c:url value="/spring/forums/forums.html" />">Discussion Forums</a></li>
+				<li><a href="<c:url value="/spring/forums/forums.html" />">Forums</a></li>
 				<li><a href="<c:url value="/spring/help/about.html" />">About</a></li>
 				<li><a href="<c:url value="/spring/help/help.html" />">Help</a></li>				
 			</ul>			
