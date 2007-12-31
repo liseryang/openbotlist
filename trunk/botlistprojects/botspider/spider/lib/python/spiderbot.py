@@ -32,6 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 __author__ = "Berlin Brown"
 __version__ = "0.1"
+__copyright__ = "Copyright (c) 2006-2008 Berlin Brown"
+__license__ = "New BSD"
 
 from soup.BeautifulSoup import *
 import urllib2
@@ -41,8 +43,19 @@ NO_COLS_SERVICE = 9
 URL_LINK_SERVICE = "http://localhost:8080/botlist/spring/pipes/botverse_pipes.html"
 FF_USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
 
+opener = None
+
+def buildOpener():
+	global opener
+	if opener is None:
+		opener = urllib2.build_opener()
+	return opener
+
 def connectLinkService(requrl):
-	opener = urllib2.build_opener()
+	""" First, connect to the botlist URL service and extract
+	the most recent list of links.  This will seed the
+	botlist spider crawler."""
+	opener = buildOpener()	
 	req = urllib2.Request(requrl)
 	req.add_header('user-agent', FF_USER_AGENT)
 	link_data = opener.open(req).read()
@@ -53,11 +66,33 @@ def connectLinkService(requrl):
 	content = [ col.split('::|') for col in link_data ]
 	return content
 
+def crawlBuildLinks(link_list):
+	opener = buildOpener()
+	""" Iterate through the list of links and collect links found
+	on each page through the use of the beautiful soup lib."""
+	total_links = 0
+	total_links_tag = 0
+	for link in link_list:
+		try:
+			data = opener.open(link).read()
+			soup = BeautifulSoup(data)
+			sub_links_tag = soup.findAll('a')
+			total_links_tag = total_links_tag + len(sub_links_tag)
+			
+			sub_links = [el['href'] for el in sub_links_tag]
+			total_links = total_links + len(sub_links)
+			#for n in sub_links:
+			#	print n
+		except Exception, e:
+			print "ERR: %s" % e
+			
+	print total_links
+	print total_links_tag
+	
 if __name__ == '__main__':
 	print "***"
 	print "*** Spider Bot"
 	data = connectLinkService(URL_LINK_SERVICE)
-	link_lst = [ line_set[0] for line_set in data ]
-	for n in link_lst:
-		print n		
+	link_list = [ line_set[0] for line_set in data ]
+	crawlBuildLinks(link_list)
 	print "*** Done"
