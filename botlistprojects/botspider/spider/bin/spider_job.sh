@@ -20,11 +20,11 @@ esac
 
 BOTBERT_HOME=$ABS_CONF
 TOPDIR=$BOTBERT_HOME
-DIR_PROPERTIES=$BOTBERT_HOME
+DIR_DB=$BOTBERT_HOME
 
 if [ $(uname -s | grep -c CYGWIN) -gt 0 ]; then
 	echo "WARN: running in CYGWIN environment"
-	DIR_PROPERTIES=`cygpath -wp $BOTBERT_HOME`
+	DIR_DB=`cygpath -wp $BOTBERT_HOME`
 else
 	CPBOTBERT=$LIN_CPBOTBERT
 fi
@@ -37,8 +37,10 @@ echo "running in directory=${BOTBERT_HOME} operation=$1"
 echo "-----------------------"
 echo
 
+DIR_DB=$DIR_DB/var/lib/spiderdb/spider
+
 # Use the first arg, for example 'sweep' 'findcategory'
-python $APP_MAIN $1 $DIR_PROPERTIES $2 $3
+python $APP_MAIN $DIR_DB
 
 # Write the process id
 # echo $! > $BOTBERT_HOME/bin/botgems.pid
