@@ -32,6 +32,11 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Description:
+
+Save spider database format in big endian format (network format).
+
 """
 
 import sys
@@ -40,14 +45,14 @@ from struct import *
 
 # Ideally, Spider Bot Database Magic Format [05D4 B0DB]
 # Saved as little-endian format
-MAGIC_NUMBER_U2A = 0xD405
-MAGIC_NUMBER_U2B = 0xDBB0
+MAGIC_NUMBER_U2A = 0x05D4
+MAGIC_NUMBER_U2B = 0xB0DB
 
-MAJOR_NUMBER = 0x0100
+MAJOR_NUMBER = 0x0001
 MINOR_NUMBER = 0x0000
 
-HEADER_DELIM = 0x07FF
-URL_POOL_DELIM = 0x09FF
+HEADER_DELIM = 0xFF07
+URL_POOL_DELIM = 0xFF09
 
 END_FILE_DELIM = 0x6666
 
@@ -60,7 +65,7 @@ KEYWORDS_TAG = 0x78
 (NOTE:'u' is associated with an unsigned byte
 <code>
 DatabaseFile {
-  unsigned short [2] (u4) magic_number = 05 D4 B0 DB
+  unsigned short [2] (u4) magic_number = MAGIC NUMBER
   unsigned short (u2) major_number
   unsigned short (u2) minor_number
 
@@ -76,7 +81,7 @@ Data structure for url pool data:
 
 <code>
 URLInfo [] {
-  unsigned char (u1) pool_tag = 0xFF09
+  unsigned char (u1) pool_tag = TAG
   URL url
   TITLE title
   DESCRIPTION descr
@@ -107,48 +112,48 @@ KEYWORDS {
 """
 
 def create_database(dbdir, pool):
-	url_dbfile = "%s/12325.sdb" % dbdir
+	url_dbfile = "%s/spiderdb_7.sdb" % dbdir
 	fobj = open(url_dbfile, "wb")
 	try:
 		# Two short values, save as little endian
-		magic_number = pack('<HH', MAGIC_NUMBER_U2A, MAGIC_NUMBER_U2B)
+		magic_number = pack('>HH', MAGIC_NUMBER_U2A, MAGIC_NUMBER_U2B)
 		fobj.write(magic_number)
 
 		# Write the version
-		version = pack('<HH', MAJOR_NUMBER, MINOR_NUMBER)
+		version = pack('>HH', MAJOR_NUMBER, MINOR_NUMBER)
 		fobj.write(version)
 
 		# Write the header delimiter
-		header_delim = pack('<H', HEADER_DELIM)
+		header_delim = pack('>H', HEADER_DELIM)
 		fobj.write(header_delim)
 
-		pool_count = pack('<H', len(pool.url_pool))
+		pool_count = pack('>H', len(pool.url_pool))
 		fobj.write(pool_count)
 		
 		for index, field_info in enumerate(pool.url_pool):
 			try:
-				url = pack('<s', field_info.url)
-				title = pack('<s', field_info.title)				
-				descr = pack('<s', str(field_info.descr))				
-				keywords = pack('<s', field_info.keywords)
+				url = pack('>s', field_info.url)
+				title = pack('>s', field_info.title)				
+				descr = pack('>s', str(field_info.descr))				
+				keywords = pack('>s', field_info.keywords)
 				
-				url_l = pack('<H', field_info.url_len_u2)
-				title_l = pack('<H', field_info.title_len_u2)
-				descr_l = pack('<H', field_info.descr_len_u2)
-				keywords_l = pack('<H', field_info.keywords_len_u2)
+				url_l = pack('>H', field_info.url_len_u2)
+				title_l = pack('>H', field_info.title_len_u2)
+				descr_l = pack('>H', field_info.descr_len_u2)
+				keywords_l = pack('>H', field_info.keywords_len_u2)
 
 				# Ensure that string is UTF-8, unicode encoded				
-				fobj.write(pack('<H', URL_TAG))
-				fobj.write(pack('<H', index))
+				fobj.write(pack('>H', URL_TAG))
+				fobj.write(pack('>H', index))
 				fobj.write(url_l)
 				fobj.write(url)
-				fobj.write(pack('<H', TITLE_TAG))
+				fobj.write(pack('>H', TITLE_TAG))
 				fobj.write(title_l)
 				fobj.write(title)
-				fobj.write(pack('<H', DESCR_TAG))
+				fobj.write(pack('>H', DESCR_TAG))
 				fobj.write(descr_l)
 				fobj.write(descr)
-				fobj.write(pack('<H', KEYWORDS_TAG))
+				fobj.write(pack('>H', KEYWORDS_TAG))
 				fobj.write(keywords_l)
 				fobj.write(keywords)
 				
@@ -157,5 +162,5 @@ def create_database(dbdir, pool):
 				
 	finally:
 		print "INFO [spiderdb]: closing database file"
-		fobj.write(pack('<H', END_FILE_DELIM))
+		fobj.write(pack('>H', END_FILE_DELIM))
 		fobj.close()
