@@ -142,18 +142,19 @@ def create_database(dbdir, pool):
 				descr_l = pack('>H', field_info.descr_len_u2)
 				keywords_l = pack('>H', field_info.keywords_len_u2)
 
-				# Ensure that string is UTF-8, unicode encoded				
-				fobj.write(pack('>H', URL_TAG))
+				# Ensure that string is UTF-8, unicode encoded
+				# BYTE, SHORT(Idx),  SHORT, STRING(UNICODE,UTF-8)
+				fobj.write(pack('>B', URL_TAG))
 				fobj.write(pack('>H', index))
 				fobj.write(url_l)
 				fobj.write(url)
-				fobj.write(pack('>H', TITLE_TAG))
+				fobj.write(pack('>B', TITLE_TAG))
 				fobj.write(title_l)
 				fobj.write(title)
-				fobj.write(pack('>H', DESCR_TAG))
+				fobj.write(pack('>B', DESCR_TAG))
 				fobj.write(descr_l)
 				fobj.write(descr)
-				fobj.write(pack('>H', KEYWORDS_TAG))
+				fobj.write(pack('>B', KEYWORDS_TAG))
 				fobj.write(keywords_l)
 				fobj.write(keywords)
 				
