@@ -29,16 +29,35 @@ data SpiderDatabase =  SpiderDatabase {
       minorVers :: Word16,
       headerTag :: Word16,
       poolLen :: Word16,
-      spiderpool :: [URLInfo]
+      spiderpool :: [URLSet]
     }
-
+data URLSet = URLSet {
+      urlinfo :: URLInfo,
+      titleinfo :: TitleInfo,
+      descrinfo :: DescrInfo,
+      keywordsinfo :: KeywordsInfo
+}
 data URLInfo = URLInfo {
       tag :: Word8,
       urlid :: Word16,
       urllen :: Word16,
       url :: ByteString
 }
-
+data TitleInfo = TitleInfo {
+      titletag :: Word8,      
+      titlelen :: Word16,
+      title :: ByteString
+}
+data DescrInfo = DescrInfo {
+      descrtag :: Word8,      
+      descrlen :: Word16,
+      descr :: ByteString
+}
+data KeywordsInfo = KeywordsInfo {
+      keywordstag :: Word8,      
+      keywordslen :: Word16,
+      keywords :: ByteString
+}
 instance Show SpiderDatabase where
     show db = let magicb = (magicNumberB db)
                   header = (headerTag db)
@@ -57,6 +76,33 @@ instance Binary URLInfo where
       strdata <- BinaryGet.getLazyByteString (fromIntegral len)
       return (URLInfo {tag=urltag, urlid=idx, 
                        urllen=len, url=strdata})
+instance Binary DescrInfo where
+    put _ = do BinaryPut.putWord8 0
+    get = do
+      tag <- getWord8
+      len <- getWord16be
+      strdata <- BinaryGet.getLazyByteString (fromIntegral len)
+      return (DescrInfo {descrtag=tag,
+                         descrlen=len, 
+                         descr=strdata})
+instance Binary TitleInfo where
+    put _ = do BinaryPut.putWord8 0
+    get = do
+      tag <- getWord8
+      len <- getWord16be
+      strdata <- BinaryGet.getLazyByteString (fromIntegral len)
+      return (TitleInfo {titletag=tag,
+                         titlelen=len, 
+                         title=strdata})
+instance Binary KeywordsInfo where
+    put _ = do BinaryPut.putWord8 0
+    get = do
+      tag <- getWord8
+      len <- getWord16be
+      strdata <- BinaryGet.getLazyByteString (fromIntegral len)
+      return (KeywordsInfo {keywordstag=tag,
+                         keywordslen=len, 
+                         keywords=strdata})
 
 instance Binary SpiderDatabase where
     put _ = do BinaryPut.putWord8 0
