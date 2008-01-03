@@ -22,6 +22,11 @@ import IO
 import Text.Printf
 import System.Environment
 
+{- *********************************************************
+     Define the Database Data Types
+     SpiderDatabase represents a singleton wrapper for an
+     entire database.
+   ********************************************************* -}
 data SpiderDatabase =  SpiderDatabase { 
       magicNumberA :: Word16,
       magicNumberB :: Word16,
@@ -58,6 +63,9 @@ data KeywordsInfo = KeywordsInfo {
       keywordslen :: Word16,
       keywords :: ByteString
 }
+{- *********************************************************
+     Class instances
+   ********************************************************* -}
 instance Show SpiderDatabase where
     show db = let magicb = (magicNumberB db)
                   header = (headerTag db)
