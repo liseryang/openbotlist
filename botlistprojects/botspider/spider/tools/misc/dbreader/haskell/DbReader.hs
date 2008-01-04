@@ -5,7 +5,9 @@
 -- Also see: 
 -- (1) http://www.zvon.org/other/haskell/Outputio/index.html
 -- (2) http://hackage.haskell.org/packages/archive/binary/0.4.1/doc/html/Data-Binary.html
---
+-- (3) http://blog.kfish.org/2007/10/survey-haskell-unicode-support.html
+-- (4) http://hackage.haskell.org/cgi-bin/hackage-scripts/package/utf8-string-0.2
+-- (5) http://hackage.haskell.org/packages/archive/bytestring/0.9.0.1/doc/html/Data-ByteString.html
 -- Useful endian loading functions:
 -- getWord8, getWord16be, getWord32be
 --
@@ -14,8 +16,10 @@ module Main where
 
 import Data.Word
 import Data.Binary
-import qualified Data.ByteString.Lazy.Char8 as BSLC8
-import Data.ByteString.Lazy (ByteString)
+--import qualified Data.ByteString.Lazy.Char8 as BSLC8
+import Data.ByteString.Lazy as Lazy (ByteString, unpack)
+import Data.ByteString (unpack)
+import Codec.Binary.UTF8.String as Unicode
 import Data.Binary.Get as BinaryGet
 import Data.Binary.Put as BinaryPut
 import IO
@@ -75,12 +79,16 @@ instance Show SpiderDatabase where
                  (((printf "Magic: %X %X\n") (magicNumberA db)) (magicNumberB db)) ++
                  printf "URL Pool Count: %d\n" poolct ++
                  printf "Header Tag: %X\n" header ++
-                 printf "URL id %X\n" a ++
+                 printf "URL Tag %X\n" a ++
+                 printf "URL Idx %X\n" b ++
+                             "URL: \n" ++ c ++
                  "<<<End>>>"
               where x = (spiderpool db)
                     y = (x !! 0)
                     z = (urlinfo y)
                     a = (tag z)
+                    b = (urlid z)
+                    c = (Unicode.decode (Lazy.unpack (url z)))
 
 instance Binary URLInfo where
     put _ = do BinaryPut.putWord8 0
@@ -153,7 +161,7 @@ instance Binary SpiderDatabase where
                               minorVers=minor,
                               headerTag=header,
                               poolLen=poolct,
-                              spiderpool=(pool1 : pool1 : [])
+                              spiderpool=(pool1 : [])
                              })
 main = do
   putStrLn "Running Spider Database Reader"

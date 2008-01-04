@@ -14,8 +14,9 @@ all: ${APP}
 ### Target Build
 ### binary package is required.
 ### http://hackage.haskell.org/cgi-bin/hackage-scripts/package/binary-0.4.1
+### http://hackage.haskell.org/cgi-bin/hackage-scripts/package/utf8-string-0.2
 ${APP}: ${APP_SRC}
-	ghc --make -fglasgow-exts -package binary DbReader.hs -o $@
+	ghc --make -fglasgow-exts -package binary -package utf8-string DbReader.hs -o $@
 
 ###
 ### Target Clean
