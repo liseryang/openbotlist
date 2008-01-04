@@ -30,7 +30,7 @@ echo "running in directory=${BOTBERT_HOME} operation=$1"
 echo "-----------------------"
 echo
 
-SPIDER_DB=$DIR_DB/../../../../var/lib/spiderdb/spider/spiderdb_7.sdb
+SPIDER_DB=example/spiderdb_7.sdb
 CONTENT_DB=$DIR_DB/../../../../var/lib/spiderdb/contentdb
 
 ls $SPIDER_DB

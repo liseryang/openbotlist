@@ -21,6 +21,7 @@ import Data.Binary.Put as BinaryPut
 import IO
 import Text.Printf
 import System.Environment
+import Control.Monad (replicateM, liftM)
 
 {- *********************************************************
      Define the Database Data Types
@@ -73,7 +74,13 @@ instance Show SpiderDatabase where
               in "<<<Database Content>>>\n" ++
                  (((printf "Magic: %X %X\n") (magicNumberA db)) (magicNumberB db)) ++
                  printf "URL Pool Count: %d\n" poolct ++
+                 printf "Header Tag: %X\n" header ++
+                 printf "URL id %X\n" a ++
                  "<<<End>>>"
+              where x = (spiderpool db)
+                    y = (x !! 0)
+                    z = (urlinfo y)
+                    a = (tag z)
 
 instance Binary URLInfo where
     put _ = do BinaryPut.putWord8 0
@@ -109,8 +116,21 @@ instance Binary KeywordsInfo where
       len <- getWord16be
       strdata <- BinaryGet.getLazyByteString (fromIntegral len)
       return (KeywordsInfo {keywordstag=tag,
-                         keywordslen=len, 
-                         keywords=strdata})
+                            keywordslen=len, 
+                            keywords=strdata})
+
+instance Binary URLSet where
+    put _ = do BinaryPut.putWord8 0
+    get = do
+      i :: URLInfo <- get :: Get URLInfo
+      j :: TitleInfo <- get :: Get TitleInfo
+      k :: DescrInfo <- get :: Get DescrInfo
+      x :: KeywordsInfo <- get :: Get KeywordsInfo
+      return (URLSet {urlinfo=i, titleinfo=j, 
+                      descrinfo=k, keywordsinfo=x})
+
+getURLSet :: Get URLSet
+getURLSet = get :: Get URLSet
 
 instance Binary SpiderDatabase where
     put _ = do BinaryPut.putWord8 0
@@ -121,17 +141,23 @@ instance Binary SpiderDatabase where
       minor <- BinaryGet.getWord16be
       header <- BinaryGet.getWord16be
       poolct <- BinaryGet.getWord16be
+      -- *******************************
+      -- Get the remaining byte string data,
+      -- So that we can use lazy bytestring to load to load the
+      -- the data types.
+      -- *******************************
+      pool1 <- getURLSet
       return (SpiderDatabase {magicNumberA=magicnumbera,
                               magicNumberB=magicnumberb,
                               majorVers=major,
                               minorVers=minor,
                               headerTag=header,
-                              poolLen=poolct                         
+                              poolLen=poolct,
+                              spiderpool=(pool1 : pool1 : [])
                              })
-
 main = do
   putStrLn "Running Spider Database Reader"
   args <- getArgs
-  db :: SpiderDatabase <- decodeFile (args !! 0)
+  db :: SpiderDatabase  <- decodeFile (args !! 0)  
   putStrLn $ show db
   putStrLn "Done"
