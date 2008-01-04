@@ -16,10 +16,10 @@ module Main where
 
 import Data.Word
 import Data.Binary
---import qualified Data.ByteString.Lazy.Char8 as BSLC8
+import qualified Data.ByteString.Lazy.Char8 as LazyChar8 (unpack)
 import Data.ByteString.Lazy as Lazy (ByteString, unpack)
 import Data.ByteString (unpack)
-import Codec.Binary.UTF8.String as Unicode
+--import Codec.Binary.UTF8.String as Unicode
 import Data.Binary.Get as BinaryGet
 import Data.Binary.Put as BinaryPut
 import IO
@@ -81,14 +81,17 @@ instance Show SpiderDatabase where
                  printf "Header Tag: %X\n" header ++
                  printf "URL Tag %X\n" a ++
                  printf "URL Idx %X\n" b ++
-                             "URL: \n" ++ c ++
+                 printf "URL: %s\n" c ++
+                 printf "Title: %s\n" e ++
                  "<<<End>>>"
               where x = (spiderpool db)
                     y = (x !! 0)
                     z = (urlinfo y)
                     a = (tag z)
                     b = (urlid z)
-                    c = (Unicode.decode (Lazy.unpack (url z)))
+                    c = (LazyChar8.unpack (url z))
+                    d = (titleinfo y)
+                    e = (LazyChar8.unpack (title d))
 
 instance Binary URLInfo where
     put _ = do BinaryPut.putWord8 0
