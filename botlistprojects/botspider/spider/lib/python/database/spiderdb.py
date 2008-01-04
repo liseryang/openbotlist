@@ -1,9 +1,6 @@
 """
 File: spiderdb.py
 
-Also see:
-(1) http://docs.python.org/lib/module-struct.html
-
 Copyright (c) 2007, Botnode.com (Berlin Brown)
 http://www.opensource.org/licenses/bsd-license.php
 
@@ -36,6 +33,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Description:
 
 Save spider database format in big endian format (network format).
+
+Also see:
+(1) http://docs.python.org/lib/module-struct.html
 
 """
 
@@ -147,16 +147,16 @@ def create_database(dbdir, pool):
 				fobj.write(pack('>B', URL_TAG))
 				fobj.write(pack('>H', index))
 				fobj.write(url_l)
-				fobj.write(url)
+				fobj.write(pack('>s', url))
 				fobj.write(pack('>B', TITLE_TAG))
 				fobj.write(title_l)
-				fobj.write(title)
+				fobj.write(pack('>s', title))
 				fobj.write(pack('>B', DESCR_TAG))
 				fobj.write(descr_l)
-				fobj.write(descr)
+				fobj.write(pack('>s', descr))
 				fobj.write(pack('>B', KEYWORDS_TAG))
 				fobj.write(keywords_l)
-				fobj.write(keywords)
+				fobj.write(pack('>s', keywords))
 				
 			except Exception, db_err:
 				print "ERR: writing database record=%s" % db_err
