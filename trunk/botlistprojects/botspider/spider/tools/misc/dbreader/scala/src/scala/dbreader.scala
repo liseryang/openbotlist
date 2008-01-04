@@ -89,9 +89,23 @@ object DbReader {
 	Console.printf("URL Info: 0x{0}, {1}, {2}\n", 
 				   Integer.toHexString(tag),
 				   urlid, urllen)
-	
-	val urlstr = DataInputStream.readUTF(inputstream)
+	val bytestrdata = new Array[byte](urllen)
+	inputstream.readFully(bytestrdata)
+	val urlstr = new String(bytestrdata)
+	Console.printf("URL: [{0}]\n", urlstr)
 
+	// Read the title info struct
+	val titletag = inputstream.readUnsignedByte()
+	val titlelen = inputstream.readUnsignedShort()
+	Console.printf("Title Info: 0x{0}, {1}\n",
+				   Integer.toHexString(titletag), titlelen)
+	
+	// Print the title string data
+	val bytestrdata2 = new Array[byte](titlelen)
+	inputstream.readFully(bytestrdata2)
+	val titlestr = new String(bytestrdata2)
+	Console.printf("Title: [{0}]\n", titlestr)
+	
 	inputstream.close()
     val timeEnd = System.currentTimeMillis()
     Console.println("Done...")
