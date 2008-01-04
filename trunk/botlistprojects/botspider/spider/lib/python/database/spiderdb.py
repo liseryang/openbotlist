@@ -132,11 +132,15 @@ def create_database(dbdir, pool):
 		
 		for index, field_info in enumerate(pool.url_pool):
 			try:
-				url = pack('>s', field_info.url)
-				title = pack('>s', field_info.title)				
-				descr = pack('>s', str(field_info.descr))				
-				keywords = pack('>s', field_info.keywords)
-				
+				#url = unpack('>s', field_info.url)
+				#title = pack('>s', field_info.title)
+				#descr = pack('>s', str(field_info.descr))
+				#keywords = pack('>s', field_info.keywords)
+				url = field_info.url
+				title = field_info.title
+				descr = field_info.descr
+				keywords = field_info.keywords
+			
 				url_l = pack('>H', field_info.url_len_u2)
 				title_l = pack('>H', field_info.title_len_u2)
 				descr_l = pack('>H', field_info.descr_len_u2)
@@ -147,16 +151,16 @@ def create_database(dbdir, pool):
 				fobj.write(pack('>B', URL_TAG))
 				fobj.write(pack('>H', index))
 				fobj.write(url_l)
-				fobj.write(pack('>s', url))
+				fobj.write(url)
 				fobj.write(pack('>B', TITLE_TAG))
 				fobj.write(title_l)
-				fobj.write(pack('>s', title))
+				fobj.write(title)
 				fobj.write(pack('>B', DESCR_TAG))
 				fobj.write(descr_l)
-				fobj.write(pack('>s', descr))
+				fobj.write(descr)
 				fobj.write(pack('>B', KEYWORDS_TAG))
 				fobj.write(keywords_l)
-				fobj.write(pack('>s', keywords))
+				fobj.write(keywords)
 				
 			except Exception, db_err:
 				print "ERR: writing database record=%s" % db_err
