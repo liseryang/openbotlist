@@ -4,5 +4,7 @@
    *********************************************** -}
 module Tests.AMQP.TestQueueClient where
 
+import Data.AMQP.QueueClient
+
 libVers :: String
-libVers = "Test"
+libVers = "Vers: " ++ ampqClientVers
