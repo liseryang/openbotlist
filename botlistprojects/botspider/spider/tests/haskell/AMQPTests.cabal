@@ -14,12 +14,12 @@ Homepage:       http://code.google.com/p/openbotlist/
 Build-Depends:  base, haskell98
 
 Library
-  Hs-Source-Dirs:        ../../lib/haskell/src
+  Hs-Source-Dirs:        src
   Ghc-Options:           -O2
   Build-Depends:         base, haskell98
-  Exposed-modules:       AMQP.QueueClient
+  Exposed-modules:       Tests.AMQP.TestQueueClient
 
 Executable testq
-  Hs-Source-Dirs:     src/Tests/AMQP
-  Main-is:            TestQueueClient.hs
-  Other-Modules:      AMQP.QueueClient
+  Hs-Source-Dirs:     src/Tests
+  Main-is:            Main.hs
+  Other-Modules:      Tests.AMQP.TestQueueClient
