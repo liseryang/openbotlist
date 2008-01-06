@@ -1,6 +1,6 @@
---
+--**************************************
 -- Cabal build system for AMQP
---
+--**************************************
 Name:           AMQP
 Version:        0.0.1
 Cabal-Version:  >= 1.2
@@ -15,6 +15,12 @@ Build-Depends:  base, haskell98
 
 Library
   Hs-Source-Dirs:        src
-  ghc-options:           -O2
-  build-depends:         base, haskell98
-  exposed-modules:       AMQP.QueueClient
+  Ghc-Options:           -O2
+  Build-Depends:         base, haskell98
+  Exposed-modules:       Data.AMQP.QueueClient
+
+Executable testq
+  Hs-Source-Dirs:     src/Data
+  Main-is:            Main.hs
+  Other-Modules:      Data.AMQP.QueueClient
+
