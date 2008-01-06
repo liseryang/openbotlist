@@ -2,7 +2,9 @@
    File: QueueClient.hs 
    Author: Berlin Brown
    *********************************************** -}
-module Tests.AMQP.TestQueueClient where
+module Main where
 
-libVers :: String
-libVers = "Test"
+main = do
+  putStrLn "Running TestMain"
+  putStrLn "Done"
+
