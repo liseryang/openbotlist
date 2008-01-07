@@ -19,8 +19,3 @@ Library
   Build-Depends:         base, haskell98
   Exposed-modules:       Data.AMQP.QueueClient
 
-Executable testq
-  Hs-Source-Dirs:     src/Data
-  Main-is:            Main.hs
-  Other-Modules:      Data.AMQP.QueueClient
-
