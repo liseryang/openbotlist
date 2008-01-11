@@ -10,12 +10,11 @@ all: build
 build-all:
 	runhaskell Setup.hs configure
 	runhaskell Setup.hs build --verbose
-	./dist/build/testq/testq
 
 build:
 	runhaskell Setup.hs build --verbose
 	./dist/build/testq/testq
-
+	
 clean:
 	rm -Rf dist
 

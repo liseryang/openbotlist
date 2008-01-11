@@ -8,3 +8,6 @@ import Data.AMQP.QueueClient
 
 libVers :: String
 libVers = "Vers: " ++ ampqClientVers
+
+connectServerTest = do
+  connectSimpleServer
