@@ -55,9 +55,9 @@ data AQMPStartOk = AMQPStartOk {
          longstr = Write a string up to 2 ^ 32 bytes after encoding (len:long)
        -}
       -- *****************************************        
-      write_longstr :: ByteString
-      write_shortstr:: ByteString
-      response :: ByteString
+      write_longstr :: ByteString,
+      write_shortstr :: ByteString,
+      response :: ByteString,
       locale :: ByteString
 }
 
