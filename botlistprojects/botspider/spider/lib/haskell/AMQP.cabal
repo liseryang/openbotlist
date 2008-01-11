@@ -16,6 +16,6 @@ Build-Depends:  base, haskell98
 Library
   Hs-Source-Dirs:        src
   Ghc-Options:           -O2
-  Build-Depends:         base, haskell98
+  Build-Depends:         base, haskell98, network, bytestring, binary
   Exposed-modules:       Data.AMQP.QueueClient
 
