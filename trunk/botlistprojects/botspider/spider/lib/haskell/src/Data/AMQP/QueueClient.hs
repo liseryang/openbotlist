@@ -1,14 +1,16 @@
 {- ***********************************************
    File: QueueClient.hs
    Module: Data.AMQP.QueueClient
+   Date: 1/10/2008
+
+   Description: 
+   Simple connection to AMQP Server (like RabbitMQ).
 
    See the following reference links:
    (1) http://www.haskell.org/ghc/docs/6.8.2/html/libraries/network/Network.html
    (2) http://hackage.haskell.org/packages/archive/binary/0.4.1/doc/html/Data-Binary.html
    (3) http://hackage.haskell.org/packages/archive/bytestring/0.9.0.1/doc/html/Data-ByteString.html
-   
-   Simple connection to AMQP Server (like RabbitMQ).
-
+ 
    Based on python AMQP Client Library
    from Barry Pederson.
    (4) http://barryp.org/software/py-amqplib/   
@@ -22,12 +24,16 @@ import Data.Word
 import Data.Binary
 import Data.Binary.Get as BinaryGet
 import Data.Binary.Put as BinaryPut
-
-import Data.ByteString as Eager (unpack, pack)
-import qualified Data.ByteString.Char8 as C
-import qualified Data.ByteString.Lazy.Char8 as LazyC
-import Data.ByteString.Lazy as Lazy (ByteString, unpack)
 import Text.Printf
+
+--
+-- Used qualified names for the different bytestring manipulation
+-- modules; using 'Import Qualified' to ensure we are using the correct function.
+import qualified Data.ByteString as Eager (ByteString, unpack, pack)
+import qualified Data.ByteString.Char8 as CharBS (pack, unpack)
+import qualified Data.ByteString.Lazy.Char8 as LazyC (hPut, hGetContents, unpack, pack)
+import qualified Data.ByteString.Lazy as Lazy (ByteString, unpack)
+import qualified Codec.Binary.UTF8.String as UTF (encode, decode)
 
 import Data.AMQP.AMQPOperations (methodNameMap)
 
@@ -41,6 +47,36 @@ amqpHeadB = 0x01010901
 
 localeEnUs = "en_US"
 
+-- *********************************************************
+{-
+  AMQP Utility Functions
+-}
+-- *********************************************************
+
+--
+-- Convert Lazy(file loaded) ByteString data to 
+-- regular UTF-8 string and then to Eager ByteString.  We do this
+-- so that we can easily read or write data to the network.
+{-
+  Eager.pack :: [Word8] -> ByteString
+  CharBS.pack :: String -> ByteString
+  Lazy.unpack :: ByteString -> [Word8]
+ -}
+convertUTFByteString :: Lazy.ByteString -> Eager.ByteString
+convertUTFByteString bs = CharBS.pack . convertUTFString $ bs
+
+convertUTFString :: Lazy.ByteString -> String
+convertUTFString bs = UTF.decode . Lazy.unpack $ bs
+
+-- Convert a normal string to UTF8 (encode) and then to an Eager ByteString
+stringToByteString :: String -> Eager.ByteString
+stringToByteString str = Eager.pack . UTF.encode $ str
+
+-- *********************************************************
+{-
+  AMQP Data Types.
+-}
+-- *********************************************************
 type Octet = Word8
 
 data AMQPData = AMQPData {
@@ -55,10 +91,10 @@ data AQMPStartOk = AMQPStartOk {
          longstr = Write a string up to 2 ^ 32 bytes after encoding (len:long)
        -}
       -- *****************************************        
-      write_longstr :: ByteString,
-      write_shortstr :: ByteString,
-      response :: ByteString,
-      locale :: ByteString
+      write_longstr :: Eager.ByteString,
+      write_shortstr :: Eager.ByteString,
+      response :: Eager.ByteString,
+      locale :: Eager.ByteString
 }
 
 -- *********************************************************
@@ -75,7 +111,7 @@ data AMQPFrame = AMQPFrame {
       frameType :: Octet,
       channel :: Word16,
       size :: Word32,
-      payload :: ByteString,
+      payload :: Lazy.ByteString,
       ch :: Octet
 }
 
@@ -124,14 +160,18 @@ instance Binary AMQPData where
         use-connection      = *channel
         close-connection    = C:CLOSE S:CLOSE-OK
                             / S:CLOSE C:CLOSE-OK
+
+     Additional Notes:
+     BinaryPut.putByteString :: Eager.ByteString -> Put
+     Usage: (convert regular string to BS): BinaryPut.putByteString (Eager.pack theStr)
      -}
      -- *******************************************************
     put amq = do
-      BinaryPut.putByteString (pack (amqpHeaderA amq))
+      BinaryPut.putByteString (Eager.pack (amqpHeaderA amq))
       BinaryPut.putWord32be (amqpHeaderB amq)
 
 amqInstance :: IO AMQPData
-amqInstance = return (AMQPData { amqpHeaderA = (Eager.unpack (C.pack amqpHeadA)),
+amqInstance = return (AMQPData { amqpHeaderA = (Eager.unpack (CharBS.pack amqpHeadA)),
                                  amqpHeaderB = amqpHeadB
                                })
 
