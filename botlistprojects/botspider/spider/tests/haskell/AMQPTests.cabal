@@ -11,12 +11,11 @@ Author:         Berlin Brown
 Maintainer:		berlin.brown@gmail.com
 Copyright:      Copyright (C) 2008 Berlin Brown
 Homepage:       http://code.google.com/p/openbotlist/
-Build-Depends:  base, haskell98
 
 Library
   Hs-Source-Dirs:        ../../lib/haskell/src src
   Ghc-Options:           -O2
-  Build-Depends:         base, haskell98, network, binary, bytestring
+  Build-Depends:         base, haskell98, network, binary, bytestring, utf8-string
   Exposed-modules:       Data.AMQP.QueueClient Tests.AMQP.TestQueueClient
 
 Executable testq
