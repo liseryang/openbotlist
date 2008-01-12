@@ -1,7 +1,8 @@
 {- ***********************************************
-   File: QueueClient.hs
-   Module: Data.AMQP.QueueClient
-   Date: 1/10/2008
+   File:    QueueClient.hs
+   Module:  Data.AMQP.QueueClient
+   Date:    1/10/2008
+   Author:  Berlin Brown
 
    Description: 
    Simple connection to AMQP Server (like RabbitMQ).
@@ -31,8 +32,8 @@ import Text.Printf
 -- modules; using 'Import Qualified' to ensure we are using the correct function.
 import qualified Data.ByteString as Eager (ByteString, unpack, pack)
 import qualified Data.ByteString.Char8 as CharBS (pack, unpack)
-import qualified Data.ByteString.Lazy.Char8 as LazyC (hPut, hGetContents, unpack, pack)
-import qualified Data.ByteString.Lazy as Lazy (ByteString, unpack)
+import qualified Data.ByteString.Lazy.Char8 as LazyC (unpack, pack)
+import qualified Data.ByteString.Lazy as Lazy (ByteString, unpack, hPut, hGetContents)
 import qualified Codec.Binary.UTF8.String as UTF (encode, decode)
 
 import Data.AMQP.AMQPOperations (methodNameMap)
@@ -45,7 +46,9 @@ port = 5672
 amqpHeadA = "AMQP"
 amqpHeadB = 0x01010901
 
+amqPlainMethod = "AMQPlain"
 localeEnUs = "en_US"
+
 
 -- *********************************************************
 {-
@@ -54,7 +57,7 @@ localeEnUs = "en_US"
 -- *********************************************************
 
 --
--- Convert Lazy(file loaded) ByteString data to 
+-- | Convert Lazy(file loaded) ByteString data to 
 -- regular UTF-8 string and then to Eager ByteString.  We do this
 -- so that we can easily read or write data to the network.
 {-
@@ -62,15 +65,25 @@ localeEnUs = "en_US"
   CharBS.pack :: String -> ByteString
   Lazy.unpack :: ByteString -> [Word8]
  -}
-convertUTFByteString :: Lazy.ByteString -> Eager.ByteString
-convertUTFByteString bs = CharBS.pack . convertUTFString $ bs
+convertToByteString :: Lazy.ByteString -> Eager.ByteString
+convertToByteString bs = CharBS.pack . convertToString $ bs
 
-convertUTFString :: Lazy.ByteString -> String
-convertUTFString bs = UTF.decode . Lazy.unpack $ bs
+convertToString :: Lazy.ByteString -> String
+convertToString bs = UTF.decode . Lazy.unpack $ bs
 
--- Convert a normal string to UTF8 (encode) and then to an Eager ByteString
+-- | Convert a normal string to UTF8 (encode) and then to an Eager ByteString
 stringToByteString :: String -> Eager.ByteString
 stringToByteString str = Eager.pack . UTF.encode $ str
+
+-- | Convert a ByteString to AMQP String
+stringToAMQPls :: String -> AMQPLongStr
+stringToAMQPls str = (lenbs, bsdata)
+    where bsdata = (stringToByteString str) 
+          lenbs  = (fromIntegral (length (Eager.unpack bsdata)))
+stringToAMQPss :: String -> AMQPShortStr
+stringToAMQPss str = (lenbs, bsdata)
+    where bsdata = (stringToByteString str)
+          lenbs  = (fromIntegral (length (Eager.unpack bsdata)))
 
 -- *********************************************************
 {-
@@ -79,23 +92,34 @@ stringToByteString str = Eager.pack . UTF.encode $ str
 -- *********************************************************
 type Octet = Word8
 
+-- | Note, a AMQP String type consists of a length value (after encoding)
+-- and the bytestring data tuple.
+type AMQPLongStr = (Word32, Eager.ByteString)
+type AMQPShortStr = (Word16, Eager.ByteString)
+
 data AMQPData = AMQPData {
       amqpHeaderA :: [Octet],
       amqpHeaderB :: Word32
 }
 
-data AQMPStartOk = AMQPStartOk {
+data AMQPStartOk = AMQPStartOk {
       -- *****************************************
       {- 
          shortstr = Up to 255 bytes, after encoding (len:byte)
          longstr = Write a string up to 2 ^ 32 bytes after encoding (len:long)
        -}
-      -- *****************************************        
-      write_longstr :: Eager.ByteString,
-      write_shortstr :: Eager.ByteString,
-      response :: Eager.ByteString,
-      locale :: Eager.ByteString
+      -- *****************************************
+      mechanism :: AMQPShortStr,
+      response :: AMQPLongStr,
+      locale :: AMQPShortStr
 }
+
+initStartOk :: AMQPStartOk
+initStartOk = AMQPStartOk {
+                mechanism = (stringToAMQPss amqPlainMethod),
+                response = (stringToAMQPls ""),
+                locale = (stringToAMQPss localeEnUs)
+              }
 
 -- *********************************************************
 {-
@@ -118,6 +142,21 @@ data AMQPFrame = AMQPFrame {
 {- *********************************************************
      Class instances
    ********************************************************* -}
+
+--
+-- | Write the AMQP String to the network
+-- The AMQP String tuple contains the following (length, data).
+-- First, output the length value and then the bytestring content.
+-- @see type Put = PutM ()
+putAMQPStringLs :: (Word32, Eager.ByteString) -> Put
+putAMQPStringLs amqstr =
+    writeStrLen >> BinaryPut.putByteString (snd amqstr) 
+    where writeStrLen = BinaryPut.putWord32be (fromIntegral (fst amqstr))
+putAMQPStringSs :: (Word16, Eager.ByteString) -> Put
+putAMQPStringSs amqstr =
+    writeStrLen >> BinaryPut.putByteString (snd amqstr) 
+    where writeStrLen = BinaryPut.putWord16be (fromIntegral (fst amqstr))
+
 instance Show AMQPFrame where
     show amq = let frame_type = (frameType amq)
               in "<<<AMQP Reader>>>\n" ++
@@ -125,6 +164,12 @@ instance Show AMQPFrame where
                printf "Channel: %X\n" (channel amq) ++
                printf "Size: %d\n" (size amq) ++
                printf "Ch: %X\n" (ch amq)
+
+instance Binary AMQPStartOk where
+    put amqStartOk = do
+      putAMQPStringSs (mechanism amqStartOk)
+      putAMQPStringLs (response amqStartOk)
+      putAMQPStringSs (locale amqStartOk)
                
 instance Binary AMQPFrame where
     get = do
@@ -133,12 +178,13 @@ instance Binary AMQPFrame where
       sz <- getWord32be
       bytes <- BinaryGet.getLazyByteString (fromIntegral sz)
       chw <- getWord8
-      return (AMQPFrame { frameType=frameType,
-                           channel=chan,
-                           size=sz,
-                           payload=bytes,
-                           ch=chw
-                         })
+      return (AMQPFrame { 
+                frameType=frameType,
+                channel=chan,
+                size=sz,
+                payload=bytes,
+                ch=chw
+              })
 
 instance Binary AMQPData where
 
@@ -171,9 +217,10 @@ instance Binary AMQPData where
       BinaryPut.putWord32be (amqpHeaderB amq)
 
 amqInstance :: IO AMQPData
-amqInstance = return (AMQPData { amqpHeaderA = (Eager.unpack (CharBS.pack amqpHeadA)),
-                                 amqpHeaderB = amqpHeadB
-                               })
+amqInstance = return (AMQPData { 
+                        amqpHeaderA = (Eager.unpack (CharBS.pack amqpHeadA)),
+                        amqpHeaderB = amqpHeadB
+                      })
 
 connectSimpleServer = do
   -- Create an instance of the AMQ data to send
@@ -187,11 +234,11 @@ connectSimpleServer = do
   -- Convert the instance of the data into a lazy bytestring type
   let bs_amq = encode amq
   -- Through the use of lazy hPut, write out the data to the socket handle
-  LazyC.hPut h bs_amq
+  Lazy.hPut h bs_amq
   hFlush h
 
   -- Wait for frame
-  bs_reader <- LazyC.hGetContents h
+  bs_reader <- Lazy.hGetContents h
   let amqFrame = decode bs_reader :: AMQPFrame
   putStrLn $ show(amqFrame)
   
@@ -204,5 +251,9 @@ connectSimpleServer = do
                (methodSig !! 0) (methodSig !! 1)
                (methodSig !! 2) (methodSig !! 3)
   putStrLn $ methodNameMap (10, 10)
+
+  -- Write the startok binary string data
+  --let bs_startok = encode initStartOk
+  
   t <- hGetContents h
   print t
