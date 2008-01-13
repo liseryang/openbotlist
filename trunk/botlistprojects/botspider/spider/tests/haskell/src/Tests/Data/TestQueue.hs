@@ -1,8 +1,20 @@
 --
---
+-- Test Queue
 
 module Tests.Data.TestQueue where 
 
-buildTestQueue = do
+import Time
+import Data.Time.Clock.POSIX
+import Data.SpiderQueue.Queue 
+import Data.Binary (encodeFile, decodeFile)
+
+runQueueTest = do
   putStrLn "Build Simple Queue"
+  pt <- getPOSIXTime
+  let row = initQueueObject "12354343" (round pt)
+      q   = initSpiderQueue (row : [])      
+  putStrLn $ show(q) ++ show(row)
+  encodeFile "test.db" (q :: SpiderQueue)
+  -- Now read the database
+  newq  <- decodeFile "test.db"
   putStrLn "Done"
