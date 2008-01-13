@@ -5,6 +5,7 @@
 module Main where
 
 import Tests.AMQP.TestQueueClient
+import Tests.Data.TestQueue
 
 import Time
 import Data.Time.Clock.POSIX
@@ -17,4 +18,5 @@ main = do
   putStrLn $ "AMQP Queue Client=" ++ libVers
   --connectServerTest
   putStrLn "Test Build Queue"
+  runQueueTest
   putStrLn "Done"
