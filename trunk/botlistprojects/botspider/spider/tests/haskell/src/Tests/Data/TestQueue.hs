@@ -15,6 +15,7 @@ runQueueTest = do
       q   = initSpiderQueue (row : [])      
   putStrLn $ show(q) ++ show(row)
   encodeFile "test.db" (q :: SpiderQueue)
-  -- Now read the database
-  newq  <- decodeFile "test.db"
+  -- Now read the database and print
+  newq <- decodeFile "test.db" :: IO SpiderQueue
+  putStrLn $ show(newq)
   putStrLn "Done"
