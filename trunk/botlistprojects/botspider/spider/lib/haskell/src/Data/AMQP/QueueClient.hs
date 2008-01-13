@@ -33,7 +33,7 @@ import Text.Printf
 import qualified Data.ByteString as Eager (ByteString, unpack, pack)
 import qualified Data.ByteString.Char8 as CharBS (pack, unpack)
 import qualified Data.ByteString.Lazy.Char8 as LazyC (unpack, pack)
-import qualified Data.ByteString.Lazy as Lazy (ByteString, unpack, hPut, hGetContents)
+import qualified Data.ByteString.Lazy as Lazy (ByteString, unpack, pack, hPut, hGetContents)
 import qualified Codec.Binary.UTF8.String as UTF (encode, decode)
 
 import Data.AMQP.AMQPOperations (methodNameMap)
@@ -84,6 +84,14 @@ stringToAMQPss :: String -> AMQPShortStr
 stringToAMQPss str = (lenbs, bsdata)
     where bsdata = (stringToByteString str)
           lenbs  = (fromIntegral (length (Eager.unpack bsdata)))
+
+--
+-- Take and Drop for ByteStrings; take N Word8 elements and then rebuild
+-- the bytestring.
+-- This will be used to build data structures from parts of bytestring
+-- data.
+takeByteString :: Int -> Lazy.ByteString -> Lazy.ByteString
+takeByteString n lazybs = (Lazy.pack (take n (Lazy.unpack lazybs)))
 
 -- *********************************************************
 {-
@@ -139,6 +147,11 @@ data AMQPFrame = AMQPFrame {
       ch :: Octet
 }
 
+data AMQPClassMethod = AMQPClassMethod {
+      classId :: Word16,
+      methodId :: Word16
+}
+
 {- *********************************************************
      Class instances
    ********************************************************* -}
@@ -158,12 +171,15 @@ putAMQPStringSs amqstr =
     where writeStrLen = BinaryPut.putWord16be (fromIntegral (fst amqstr))
 
 instance Show AMQPFrame where
-    show amq = let frame_type = (frameType amq)
-              in "<<<AMQP Reader>>>\n" ++
+    show amq = "<<<AMQP Reader>>>\n" ++
                printf "FrameType: %X\n" (frameType amq) ++
                printf "Channel: %X\n" (channel amq) ++
                printf "Size: %d\n" (size amq) ++
                printf "Ch: %X\n" (ch amq)
+
+instance Show AMQPClassMethod where
+    show amqclass = printf "operation={ Class Id:%d, Method Id:%d }" 
+                    (classId amqclass) (methodId amqclass)
 
 instance Binary AMQPStartOk where
     put amqStartOk = do
@@ -184,6 +200,15 @@ instance Binary AMQPFrame where
                 size=sz,
                 payload=bytes,
                 ch=chw
+              })
+
+instance Binary AMQPClassMethod where
+    get = do
+      sigclass <- getWord16be
+      sigmethod <- getWord16be
+      return (AMQPClassMethod {
+                classId = sigclass,
+                methodId = sigmethod
               })
 
 instance Binary AMQPData where
@@ -244,16 +269,15 @@ connectSimpleServer = do
   
   -- Extract the payload, checking the method signature
   let framePayload = (payload amqFrame)
-      methodSig = (take 4 (LazyC.unpack framePayload))
+      operationSig = decode (takeByteString 4 framePayload) :: AMQPClassMethod
 
   -- Get the method signature values, we expect 10,10
-  putStrLn $ printf "#[%x %x %x %x] method_name="
-               (methodSig !! 0) (methodSig !! 1)
-               (methodSig !! 2) (methodSig !! 3)
-  putStrLn $ methodNameMap (10, 10)
+  putStrLn $ show(operationSig)
+  putStrLn $ methodNameMap ((fromIntegral (classId operationSig)), 
+                            (fromIntegral (methodId operationSig)))
 
   -- Write the startok binary string data
-  --let bs_startok = encode initStartOk
+  let bs_startok = encode initStartOk
   
   t <- hGetContents h
   print t
