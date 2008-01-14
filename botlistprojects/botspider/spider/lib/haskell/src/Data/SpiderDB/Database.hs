@@ -27,6 +27,14 @@ import Text.Printf
 import System.Environment
 import Control.Monad (replicateM, liftM)
 
+magicNUMBER_U2A = 0x05D4
+magicNUMBER_U2B = 0xB0DB
+
+majorNUMBER = 0x0001
+minorNUMBER = 0x0000
+
+headerDELIM = 0xFF07
+
 {- *********************************************************
      Define the Database Data Types
      SpiderDatabase represents a singleton wrapper for an
@@ -79,19 +87,8 @@ instance Show SpiderDatabase where
                  (((printf "Magic: %X %X\n") (magicNumberA db)) (magicNumberB db)) ++
                  printf "URL Pool Count: %d\n" poolct ++
                  printf "Header Tag: %X\n" header ++
-                 printf "URL Tag %X\n" a ++
-                 printf "URL Idx %X\n" b ++
-                 printf "URL: %s\n" c ++
-                 printf "Title: %s\n" e ++
                  "<<<End>>>"
               where x = (spiderPool db)
-                    y = (x !! 0)
-                    z = (urlinfo y)
-                    a = (tag z)
-                    b = (urlid z)
-                    c = (LazyChar8.unpack (url z))
-                    d = (titleinfo y)
-                    e = (LazyChar8.unpack (title d))
 
 instance Binary URLInfo where
     put ui = do      
@@ -160,7 +157,7 @@ instance Binary URLSet where
 instance Binary SpiderDatabase where
     put db = do
       BinaryPut.putWord16be (magicNumberA db)
-      BinaryPut.putWord16be (magicNumberA db)
+      BinaryPut.putWord16be (magicNumberB db)
       BinaryPut.putWord16be (majorVers db)
       BinaryPut.putWord16be (minorVers db)
       BinaryPut.putWord16be (headerTag db)
@@ -188,4 +185,21 @@ instance Binary SpiderDatabase where
                               poolSize=poolct,
                               spiderPool=pool1
                              })
+
+-- *********************************************************
+{-
+  Utility Functions
+ -}
+-- *********************************************************
+
+initSpiderDatabase :: [URLSet] -> SpiderDatabase
+initSpiderDatabase urllist = SpiderDatabase {
+                               magicNumberA=magicNUMBER_U2A,
+                               magicNumberB=magicNUMBER_U2B,
+                               majorVers=majorNUMBER,
+                               minorVers=minorNUMBER,
+                               headerTag=headerDELIM,
+                               poolSize=(fromIntegral (length urllist)),
+                               spiderPool=urllist
+                             }
 
