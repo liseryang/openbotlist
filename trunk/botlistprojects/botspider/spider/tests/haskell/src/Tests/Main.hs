@@ -6,6 +6,7 @@ module Main where
 
 import Tests.AMQP.TestQueueClient
 import Tests.Data.TestQueue
+import Tests.Data.TestSpiderDatabase
 
 import Time
 import Data.Time.Clock.POSIX
@@ -13,10 +14,12 @@ import Data.Time.Clock.POSIX
 main = do
   ct <- getClockTime
   pt <- getPOSIXTime
-  putStrLn $ "Running TestMain"
+  putStrLn $ "Running Test AMQP (1)"
   putStrLn $ "At: " ++ (show ct) ++ " t:" ++ (show (round pt))
   putStrLn $ "AMQP Queue Client=" ++ libVers
   --connectServerTest
-  putStrLn "Test Build Queue"
+  putStrLn "Test Build Queue (2)"
   runQueueTest
+  putStrLn "Test Spider Database (3)"
+  runDatabaseTest
   putStrLn "Done"
