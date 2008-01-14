@@ -16,7 +16,7 @@ module Data.SpiderDB.Database where
 
 import Data.Word
 import Data.Binary
-import qualified Data.ByteString.Lazy.Char8 as LazyChar8 (unpack)
+import qualified Data.ByteString.Lazy.Char8 as LazyC (unpack)
 import Data.ByteString.Lazy as Lazy (ByteString, unpack)
 import Data.ByteString (unpack)
 --import Codec.Binary.UTF8.String as Unicode
@@ -56,7 +56,7 @@ data URLSet = URLSet {
       keywordsinfo :: KeywordsInfo
 }
 data URLInfo = URLInfo {
-      tag :: Word8,
+      urltag :: Word8,
       urlid :: Word16,
       urllen :: Word16,
       url :: ByteString
@@ -90,18 +90,30 @@ instance Show SpiderDatabase where
                  "<<<End>>>"
               where x = (spiderPool db)
 
+instance Show URLSet where
+    show urlset = printf "!URLSet@\n%s" (show (urlinfo urlset))
+
+instance Show URLInfo where
+    show urlinfo = printf "#URLInfo@%x, %d, %s"
+                   (urltag urlinfo) (urlid urlinfo)
+                   (LazyC.unpack (url urlinfo))
+instance Show TitleInfo where
+    show info = printf "#TitleInfo@%x, %s"
+                (titletag info)
+                (LazyC.unpack (title info))
+
 instance Binary URLInfo where
     put ui = do      
-      BinaryPut.putWord8 (tag ui)
+      BinaryPut.putWord8 (urltag ui)
       BinaryPut.putWord16be (urlid ui)
       BinaryPut.putWord16be (urllen ui)
       BinaryPut.putLazyByteString (url ui)
     get = do
-      urltag <- getWord8
+      utag <- getWord8
       idx <- getWord16be
       len <- getWord16be
       strdata <- BinaryGet.getLazyByteString (fromIntegral len)
-      return (URLInfo {tag=urltag, urlid=idx, 
+      return (URLInfo {urltag=utag, urlid=idx, 
                        urllen=len, url=strdata})
 instance Binary DescrInfo where
     put di = do

@@ -1,10 +1,9 @@
 -- ***********************************************
 -- Author: Berlin Brown
--- File: WebMining.hs
+-- File: ContentMining.hs
 --
 -- Also see: 
 -- ***********************************************
 
-module Data.SpiderNet.WebMining where
-
+module Data.SpiderNet.ContentMining where
 
