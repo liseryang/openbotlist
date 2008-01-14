@@ -1,6 +1,6 @@
 -- ***********************************************
 -- Author: Berlin Brown
--- File: DbReader.hs
+-- File: Database.hs
 --
 -- Also see: 
 -- (1) http://www.zvon.org/other/haskell/Outputio/index.html
@@ -12,7 +12,7 @@
 -- getWord8, getWord16be, getWord32be
 -- ***********************************************
 
-module Main where
+module Data.SpiderDB.Database where
 
 import Data.Word
 import Data.Binary
@@ -38,8 +38,8 @@ data SpiderDatabase =  SpiderDatabase {
       majorVers :: Word16,
       minorVers :: Word16,
       headerTag :: Word16,
-      poolLen :: Word16,
-      spiderpool :: [URLSet]
+      poolSize :: Word16,
+      spiderPool :: [URLSet]
     }
 data URLSet = URLSet {
       urlinfo :: URLInfo,
@@ -74,7 +74,7 @@ data KeywordsInfo = KeywordsInfo {
 instance Show SpiderDatabase where
     show db = let magicb = (magicNumberB db)
                   header = (headerTag db)
-                  poolct = (poolLen db)
+                  poolct = (poolSize db)
               in "<<<Database Content>>>\n" ++
                  (((printf "Magic: %X %X\n") (magicNumberA db)) (magicNumberB db)) ++
                  printf "URL Pool Count: %d\n" poolct ++
@@ -84,7 +84,7 @@ instance Show SpiderDatabase where
                  printf "URL: %s\n" c ++
                  printf "Title: %s\n" e ++
                  "<<<End>>>"
-              where x = (spiderpool db)
+              where x = (spiderPool db)
                     y = (x !! 0)
                     z = (urlinfo y)
                     a = (tag z)
@@ -94,7 +94,11 @@ instance Show SpiderDatabase where
                     e = (LazyChar8.unpack (title d))
 
 instance Binary URLInfo where
-    put _ = do BinaryPut.putWord8 0
+    put ui = do      
+      BinaryPut.putWord8 (tag ui)
+      BinaryPut.putWord16be (urlid ui)
+      BinaryPut.putWord16be (urllen ui)
+      BinaryPut.putLazyByteString (url ui)
     get = do
       urltag <- getWord8
       idx <- getWord16be
@@ -103,7 +107,10 @@ instance Binary URLInfo where
       return (URLInfo {tag=urltag, urlid=idx, 
                        urllen=len, url=strdata})
 instance Binary DescrInfo where
-    put _ = do BinaryPut.putWord8 0
+    put di = do
+      BinaryPut.putWord8 (descrtag di)
+      BinaryPut.putWord16be (descrlen di)      
+      BinaryPut.putLazyByteString (descr di)
     get = do
       tag <- getWord8
       len <- getWord16be
@@ -112,7 +119,10 @@ instance Binary DescrInfo where
                          descrlen=len, 
                          descr=strdata})
 instance Binary TitleInfo where
-    put _ = do BinaryPut.putWord8 0
+    put ti = do
+      BinaryPut.putWord8 (titletag ti)
+      BinaryPut.putWord16be (titlelen ti)      
+      BinaryPut.putLazyByteString (title ti)
     get = do
       tag <- getWord8
       len <- getWord16be
@@ -121,7 +131,10 @@ instance Binary TitleInfo where
                          titlelen=len, 
                          title=strdata})
 instance Binary KeywordsInfo where
-    put _ = do BinaryPut.putWord8 0
+    put ki = do
+      BinaryPut.putWord8 (keywordstag ki)
+      BinaryPut.putWord16be (keywordslen ki)      
+      BinaryPut.putLazyByteString (keywords ki)
     get = do
       tag <- getWord8
       len <- getWord16be
@@ -131,21 +144,30 @@ instance Binary KeywordsInfo where
                             keywords=strdata})
 
 instance Binary URLSet where
-    put _ = do BinaryPut.putWord8 0
+    put urlset = do
+      put (urlinfo urlset)
+      put (titleinfo urlset)
+      put (descrinfo urlset)
+      put (keywordsinfo urlset)
     get = do
-      i :: URLInfo <- get :: Get URLInfo
-      j :: TitleInfo <- get :: Get TitleInfo
-      k :: DescrInfo <- get :: Get DescrInfo
-      x :: KeywordsInfo <- get :: Get KeywordsInfo
+      i <- (get :: Get URLInfo)
+      j <- (get :: Get TitleInfo)
+      k <- (get :: Get DescrInfo)
+      x <- (get :: Get KeywordsInfo)
       return (URLSet {urlinfo=i, titleinfo=j, 
                       descrinfo=k, keywordsinfo=x})
 
-getURLSet :: Get URLSet
-getURLSet = get :: Get URLSet
-
 instance Binary SpiderDatabase where
-    put _ = do BinaryPut.putWord8 0
-    get = do 
+    put db = do
+      BinaryPut.putWord16be (magicNumberA db)
+      BinaryPut.putWord16be (magicNumberA db)
+      BinaryPut.putWord16be (majorVers db)
+      BinaryPut.putWord16be (minorVers db)
+      BinaryPut.putWord16be (headerTag db)
+      BinaryPut.putWord16be (poolSize db)
+      -- @see mapM: Monad m => (a -> m b) -> [a] -> m [b]
+      (mapM_ put (spiderPool db))
+    get = do
       magicnumbera <- BinaryGet.getWord16be
       magicnumberb <- BinaryGet.getWord16be
       major <- BinaryGet.getWord16be
@@ -157,18 +179,13 @@ instance Binary SpiderDatabase where
       -- So that we can use lazy bytestring to load to load the
       -- the data types.
       -- *******************************
-      pool1 <- getURLSet
+      pool1 <- replicateM (fromIntegral poolct) (get :: Get URLSet)
       return (SpiderDatabase {magicNumberA=magicnumbera,
                               magicNumberB=magicnumberb,
                               majorVers=major,
                               minorVers=minor,
                               headerTag=header,
-                              poolLen=poolct,
-                              spiderpool=(pool1 : [])
+                              poolSize=poolct,
+                              spiderPool=pool1
                              })
-main = do
-  putStrLn "Running Spider Database Reader"
-  args <- getArgs
-  db :: SpiderDatabase  <- decodeFile (args !! 0)  
-  putStrLn $ show db
-  putStrLn "Done"
+
