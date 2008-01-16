@@ -26,8 +26,9 @@ cd $BOTBERT_HOME
 
 APP_MAIN=${BOTBERT_HOME}/lib/python/spiderbot.py
 SEED_DB=$DIR_DB/var/lib/spiderdb/seed
+DUMP_DB=$DIR_DB/var/lib/spiderdb/dump
 DIR_DB=$DIR_DB/var/lib/spiderdb/spider
 
-python $APP_MAIN -s $SEED_DB $DIR_DB $1 $2 $3 $4 $5
+python $APP_MAIN dump -s $SEED_DB -d $DUMP_DB $DIR_DB $1 $2 $3 $4 $5
 
-# End of Script
+# End of Script --
