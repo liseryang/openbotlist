@@ -60,5 +60,6 @@ def doc_ignore_content(soup):
 	txt_lst = [ convertStrAscii(n) \
 				for n in txt_lst if len(n.strip()) > 1 ]
 	doc_str = '\n'.join(txt_lst)
+	print doc_str
 	return doc_str
 
