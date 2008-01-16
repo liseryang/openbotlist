@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="robots" content="index, follow"><META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"><META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<script language="javascript">
+//-- These colors are used in design templates
+
+var col_primary="#272d5d";
+var col_secondary="#6d7ca7";
+var col_tertiary="#e5e5cc";
+var col_background="#ffffff";
+
+</script>
+
+
+<script language="JavaScript" src="scripts/user.js"></script>
+<title>GOOGE.com</title>
+<link rel="stylesheet" media="screen" href="scripts/template.css"><link rel="stylesheet" media="all" href="scripts/website.css"><link rel="stylesheet" media="print" href="scripts/print.css"><link rel="stylesheet" media="all" href="scripts/1custom.css">
+</head>
+<body class="background" id="wide" onload="processMenus();sizeColumns();">
+<script language="javascript">
+
+var hexValues="0123456789ABCDEF";
+var hexValuesComp=hexValues.toLowerCase();
+function decimalHex(decimal) {
+var hexv = hexValues.substr(decimal&15,1);
+while(decimal>15) {
+	decimal>>=4;
+	hexv=hexValues.substr(decimal&15,1)+hexv;
+	}
+
+if(hexv.length==1) hexv="0" +hexv;
+
+return hexv;
+}
+
+function hexDecimal(hexv) {
+return parseInt(hexv,16);
+}
+
+
+var grad=new Array();
+var colarr1=new Array();
+var colarr2=new Array();
+function getGradient(size,a,b) {
+size-=1;
+
+ ud=1;
+ rng=256;
+
+  if (b>a) rng=b-a;
+  if (a==b) rng=0;
+  if (b<a) {
+	rng=a-b;
+	ud=-1;
+	}
+
+  grad=new Array();
+  z=rng/size;
+
+  c=a;
+	for (g=0; g<size+1; g++) {
+	ge=Math.round(c);
+	grad[g]=ge;
+	c+=z*ud;
+
+	}
+}
+
+function getDecimal(hex,pos) {
+hof=0;
+if(hex.indexOf("#")!=-1) hof=1;
+z=hex.substr(hof + pos,2);
+return (hexDecimal(z));
+}
+
+function getGradientArrays(col1,col2,sz,arr) {
+
+r1=getDecimal(col1,0);
+r2=getDecimal(col2,0);
+getGradient(sz,r1,r2);
+grad1r=grad;
+
+g1=getDecimal(col1,2);
+g2=getDecimal(col2,2);
+getGradient(sz,g1,g2);
+grad1g=grad;
+
+b1=getDecimal(col1,4);
+b2=getDecimal(col2,4);
+getGradient(sz,b1,b2);
+grad1b=grad;
+
+  for (j=0; j<grad1r.length; j++) {
+    arr[j]="#" + decimalHex(grad1r[j]) + decimalHex(grad1g[j]) + decimalHex(grad1b[j]);
+  }
+
+}
+
+getGradientArrays(col_tertiary,col_secondary,25,colarr1);
+getGradientArrays(col_secondary,col_tertiary,50,colarr2);
+
+var wzone1='';
+
+op=100;
+for (j=0; j<25; j++) {
+  
+  op-=4;
+ 
+  if(op<0) op=0;
+  op1=op/100;
+	wzone1+='<table id="printfade1" cellspacing=0 cellpadding=0 border=0 width=129><tr>';
+	wzone1+='<td style="height: 1px; opacity: ' + op1 + '; filter: alpha(opacity=' + op + '); background-color: ' + colarr1[j] + '; font-size: 1px;" >';
+	//wzone1+='<td style="height: 1px;" class="tertiary">';
+	
+	wzone1+='</td>';
+	wzone1+='</tr></table>';
+
+}
+
+
+
+wzone1+='<table cellspacing=0 cellpadding=0 border=0 width=129><tr>';
+wzone1+='<td style="height: 173px;">';
+wzone1+='</td>';
+wzone1+='</tr></table>';
+
+
+op=0;
+for (j=0; j<50; j++) {
+  
+  op+=2;
+ 
+  if(op>100) op=100;
+  op1=op/100;
+	wzone1+='<table id="printfade2" cellspacing=0 cellpadding=0 border=0 width="100%"><tr>';
+	wzone1+='<td style="height: 1px; opacity: ' + op1 + '; filter: alpha(opacity=' + op + '); background-color: ' + colarr2[j] + '; font-size: 1px;">';
+	wzone1+='</td>';
+	wzone1+='</tr></table>';
+  
+}
+
+wzone1+='<table id="printfade3" cellspacing=0 cellpadding=0 border=0 width=129><tr>';
+wzone1+='<td style="height: 100%; background-color: ' + col_tertiary + ';">';
+wzone1+='</td>';
+wzone1+='</tr></table>';
+
+</script>
+<div id="printwrap">
+<div id="nav-left">
+	<div id="headertop">
+		<h1 id="website-title" class="primary">GOOGE.com</h1>
+		<h2 id="website-slogan" class="secondary"></h2>
+	</div>
+	<div id="inner">
+		<div id="navcontainer" class="tertiary">
+			<div id="nav-wrapper" class="tertiary">
+				<div><a href="home.html" class="tertiary" target="_self"><h3>Home</h3></a></div>
+
+			</div>
+			<div id="accent-container-alt" class="accent">
+				<script language="javascript">
+					document.writeln(wzone1);
+				</script>
+			</div>
+		</div>
+		<div id="content" class="background">
+		<div id="accent-container-navtop" class="tertiary">
+			<div id="accent-container" class="accent">
+				<script language="javascript">
+					document.writeln(wzone1);
+				</script>
+			</div>
+		</div>	
+			<table id="content-table" cellpadding="0" cellspacing="0">
+				<tr>
+					<td id="content-table-main" align="left" valign="top">
+						<!-- Start content section --><div id="pagecols">
+<div id="column1">
+<div id="colbody1" class="colbody">
+<div class="building_block" id="pgbldblk3">
+<div class="blockbody" id="body_pgbldblk3">
+<table border="0" name="" width="100%" cellpadding="5" cellspacing="0">
+<tr align="" valign="">
+<td colspan="" rowspan="" width="50%" align="" valign="top">
+					<P align=center><A href="http://www.housewares.com/"><IMG height=260 src="http://www.kitchenstoday.com/images/hwbanner2.JPG" width=750 border=0></A></P>
+
+<TABLE class=mceVisualAid align=center>
+<TBODY>
+<TR>
+<TD class=mceVisualAid align=middle><FONT size=+2><B>BARNABY (BARNABE) GOOGE</B></FONT><BR><FONT size=+1>English poet and translator<BR>(c. 1538 - 1594)</FONT> </TD>
+</TR>
+</TBODY></TABLE>
+				</td><td colspan="" rowspan="" width="50%" align="center" valign="top">
+					<table summary="image table" cellpadding="0" cellspacing="0" border="0" width="NaN" style=""><tr>
+<td align="center" valign="top">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td align="center"><img width="50%" src="images/spacer.gif" alt="" style="" border="0"></td>
+</tr>
+<tr>
+<td align="center"></td>
+</tr>
+</table>
+</td>
+</tr></table>
+				</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="building_block" id="pgbldblk9">
+<div class="blockbody" id="body_pgbldblk9">
+<table border="0" name="" width="100%" cellpadding="5" cellspacing="0">
+<tr align="" valign="">
+<td colspan="" rowspan="" width="100%" align="" valign="top">
+					<STRONG editor_id="mce_editor_0">On Sight<BR><BR></STRONG>"The rarer sene, the lesse in mynde, The lesse in mynde, the lesser payne."<BR><BR><STRONG>On Money<BR><BR></STRONG>"Give money me, take friendship who so list,<BR>For friends are gone come once adversity,<BR>When money yet remaineth safe in chest,<BR>That quickly can thee bring from misery.<BR>Fair faces show friends when riches do abound; <BR>Come time of proof, farewell, they must away;<BR>Believe me well, they are not to be found<BR>If God but send thee once a lowering day.<BR>Gold never starts aside, but in distress,<BR>Finds ways enough to ease thine heaviness."<BR><BR><B>Barnaby Googe</B> (1540-1594)
+				</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="building_block" id="pgbldblk13">
+<div class="blockbody" id="body_pgbldblk13">
+<table border="0" name="" width="100%" cellpadding="5" cellspacing="0">
+<tr align="" valign="">
+<td colspan="" rowspan="" width="100%" align="" valign="top">
+					More Info:<BR><A href="http://en.wikipedia.org/wiki/Barnabe_Googe">http://en.wikipedia.org/wiki/Barnabe_Googe</A><BR><A href="http://www.questia.com/library/encyclopedia/googe-barnabe.jsp">http://www.questia.com/library/encyclopedia/googe-barnabe.jsp</A>
+				</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="building_block" id="pgbldblk17">
+<div class="blockbody" id="body_pgbldblk17">
+<table border="0" name="" width="100%" cellpadding="5" cellspacing="0">
+<tr align="" valign="">
+<td colspan="" rowspan="" width="100%" align="" valign="top">
+					
+				</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="column2">
+<div id="colbody2" class="colbody"></div>
+</div>
+<div id="column3">
+<div id="colbody3" class="colbody"></div>
+</div>
+</div><div id="measurescroll" style="clear:both;"></div><table border="0" width="100%" cellpadding="0" cellspacing="0" id="other_footer">
+<tr>
+<td align="left" valign="middle"></td>
+</tr>
+<tr>
+<td align="left" valign="middle"></td>
+</tr>
+</table>
+<!-- End content section -->
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="footer" class="primary"></div>	
+</div>
+</div>
+<script language="javaScript">
+// Column Height Script
+function pngHeight() {
+	if (document.getElementById('nav-left') || document.getElementById('nav-right')) {
+				
+		var pngH = document.getElementById('content').clientHeight;
+                var nH = document.getElementById('nav-wrapper').clientHeight;
+                var aH = document.getElementById('accent-container-alt').clientHeight;
+                if(pngH < (nH+aH)) pngH = nH+ aH ;
+
+		if (document.all) {
+			document.getElementById('navcontainer').style.height=pngH;
+		}
+		else {
+			document.getElementById('navcontainer').style.height=pngH + "px";
+		}
+	}
+	
+	if (document.getElementById('nav-top')) {
+		var pngH = document.getElementById('other_footer').offsetTop + document.getElementById('other_footer').clientHeight;
+
+		//var pngH = document.getElementById('content-table').clientHeight - 129;
+		if (document.all) {
+			document.getElementById('accent-container-navtop').style.height=pngH;
+		//	document.getElementById('content-table').style.height=pngH;
+		}
+		else {
+			document.getElementById('accent-container').style.height=pngH + "px";
+		//	document.getElementById('content-table').style.height=pngH + "px";
+		}
+	}
+}
+var oldhandler = window.onload;
+window.onload = (typeof oldhandler == "function")
+    ? function() { oldhandler(); pngHeight(); } : pngHeight;
+</script>
+</body>
+</html>

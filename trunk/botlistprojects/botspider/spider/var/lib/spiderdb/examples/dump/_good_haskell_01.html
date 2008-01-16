@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta name="keywords" content="Haskell (programming language),Articles with unsourced statements since February 2007,ANSI C,APL (programming language),Algebraic data type,Association for Computing Machinery,Audrey Tang,Bluespec, Inc.,Bytecode,C-- (intermediate language),CAL (Quark Framework)" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (English)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:Recentchanges&amp;feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:Recentchanges&amp;feed=atom" />
+		<title>Haskell (programming language) - Wikipedia, the free encyclopedia</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?104";
+			@import "/skins-1.5/monobook/main.css?104";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/skins-1.5/common/commonPrint.css?104" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?104";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?104";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?104";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?104";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?104"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgServer = "http://en.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Haskell_(programming_language)";
+var wgTitle = "Haskell (programming language)";
+var wgAction = "view";
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgArticleId = "13630";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "184140797";
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="/skins-1.5/common/wikibits.js?104"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins-1.5/common/ajax.js?104"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400";
+/*]]>*/</style>
+	</head>
+<body class="mediawiki ns-0 ltr page-Haskell_programming_language">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Haskell (programming language)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table class="infobox" cellspacing="5" style="width: 21em; font-size: 90%; text-align: left;">
+<tr>
+<th colspan="2" style="text-align: center; font-size: 130%;">Haskell</th>
+</tr>
+<tr>
+<th colspan="2" style="text-align: center;"><a href="/wiki/Image:Haskell_Logo.jpg" class="image" title="Image:Haskell Logo.jpg"><img alt="Image:Haskell Logo.jpg" src="http://upload.wikimedia.org/wikipedia/en/0/0f/Haskell_Logo.jpg" width="185" height="176" border="0" /></a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th>
+<td><a href="/wiki/Functional_programming" title="Functional programming">functional</a>, non-strict, modular</td>
+</tr>
+<tr>
+<th>Appeared in</th>
+<td>1990</td>
+</tr>
+<tr>
+<th>Designed by</th>
+<td><a href="/wiki/Simon_Peyton-Jones" title="Simon Peyton-Jones">Simon Peyton-Jones</a>, <a href="/w/index.php?title=Paul_Hudak&amp;action=edit" class="new" title="Paul Hudak">Paul Hudak</a><sup id="_ref-0" class="reference"><a href="#_note-0" title="">[1]</a></sup>, <a href="/wiki/Philip_Wadler" title="Philip Wadler">Philip Wadler</a>, et al</td>
+</tr>
+<tr>
+<th><a href="/wiki/Type_system" title="Type system">Typing discipline</a></th>
+<td><a href="/wiki/Static_typing" title="Static typing">static</a>, <a href="/wiki/Strong_typing" title="Strong typing">strong</a>, <a href="/wiki/Type_inference" title="Type inference">inferred</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Implementation" title="Implementation">Major implementations</a></th>
+<td><a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a>, <a href="/wiki/Hugs" title="Hugs">Hugs</a>, <a href="http://www.cs.york.ac.uk/fp/nhc98/" class="external text" title="http://www.cs.york.ac.uk/fp/nhc98/" rel="nofollow">NHC</a>, <a href="http://repetae.net/john/computer/jhc/" class="external text" title="http://repetae.net/john/computer/jhc/" rel="nofollow">JHC</a>, <a href="/wiki/Yhc" title="Yhc">Yhc</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Programming_language_dialect" title="Programming language dialect">Dialects</a></th>
+<td><a href="/wiki/Helium_%28Haskell%29" title="Helium (Haskell)">Helium</a>, <a href="/wiki/Gofer_%28software%29" title="Gofer (software)">Gofer</a></td>
+</tr>
+<tr>
+<th>Influenced by</th>
+<td><a href="/wiki/Lisp_%28programming_language%29" title="Lisp (programming language)">Lisp</a> and <a href="/wiki/Scheme_%28programming_language%29" title="Scheme (programming language)">Scheme</a>, <a href="/wiki/ISWIM" title="ISWIM">ISWIM</a>, <a href="/wiki/FP_%28programming_language%29" title="FP (programming language)">FP</a>, <a href="/wiki/APL_%28programming_language%29" title="APL (programming language)">APL</a>, <a href="/wiki/Hope_%28programming_language%29" title="Hope (programming language)">Hope and Hope+</a>, <a href="/wiki/SISAL" title="SISAL">SISAL</a>, <a href="/wiki/Miranda_programming_language" title="Miranda programming language">Miranda</a>, <a href="/wiki/ML_programming_language" title="ML programming language">ML and Standard ML</a>, <a href="/wiki/Lazy_ML" title="Lazy ML">Lazy ML</a>, <a href="/wiki/Orwell_%28programming_language%29" title="Orwell (programming language)">Orwell</a>, <a href="/w/index.php?title=Alfl&amp;action=edit" class="new" title="Alfl">Alfl</a>, <a href="/wiki/Id_%28programming_language%29" title="Id (programming language)">Id</a>, <a href="/w/index.php?title=Ponder_%28programming_language%29&amp;action=edit" class="new" title="Ponder (programming language)">Ponder</a></td>
+</tr>
+<tr>
+<th>Influenced</th>
+<td><a href="/wiki/Hardware_description_language" title="Hardware description language">Bluespec</a>, <a href="/wiki/C_Sharp_%28programming_language%29" title="C Sharp (programming language)">C#</a>, <a href="/wiki/CAL_%28Quark_Framework%29" title="CAL (Quark Framework)">CAL</a>, <a href="/wiki/Cat_%28programming_language%29" title="Cat (programming language)">Cat</a>, <a href="/wiki/Cayenne_%28programming_language%29" title="Cayenne (programming language)">Cayenne</a>, <a href="/wiki/Clean_%28programming_language%29" title="Clean (programming language)">Clean</a>, <a href="/wiki/Curry_%28programming_language%29" title="Curry (programming language)">Curry</a>, <a href="/wiki/Epigram_%28programming_language%29" title="Epigram (programming language)">Epigram</a>, <a href="/wiki/Escher_%28programming_language%29" title="Escher (programming language)">Escher</a>, <a href="/wiki/F_Sharp_%28programming_language%29" title="F Sharp (programming language)">F#</a>, <a href="/wiki/Factor_%28programming_language%29" title="Factor (programming language)">Factor</a>, <a href="/wiki/Isabelle_theorem_prover" title="Isabelle theorem prover">Isabelle</a>, <a href="/wiki/Mercury_%28programming_language%29" title="Mercury (programming language)">Mercury</a>, <a href="/wiki/Perl_6" title="Perl 6">Perl 6</a>, <a href="/wiki/Python_%28programming_language%29" title="Python (programming language)">Python</a>, <a href="/wiki/Scala_%28programming_language%29" title="Scala (programming language)">Scala</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Operating_system" title="Operating system">OS</a></th>
+<td>portable</td>
+</tr>
+<tr>
+<th><a href="/wiki/Website" title="Website">Website</a></th>
+<td><a href="http://haskell.org/" class="external text" title="http://haskell.org/" rel="nofollow">haskell.org</a></td>
+</tr>
+</table>
+<p><b>Haskell</b> is a standardized <a href="/wiki/Purely_functional" title="Purely functional">purely functional</a> <a href="/wiki/Programming_language" title="Programming language">programming language</a> with <a href="/wiki/Non-strict_programming_language" title="Non-strict programming language">non-strict semantics</a>, named after the <a href="/wiki/Logician" title="Logician">logician</a> <a href="/wiki/Haskell_Curry" title="Haskell Curry">Haskell Curry</a>.</p>
+<table id="toc" class="toc" summary="Contents">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1"><a href="#Features_and_extensions"><span class="tocnumber">2</span> <span class="toctext">Features and extensions</span></a></li>
+<li class="toclevel-1"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1"><a href="#Examples"><span class="tocnumber">4</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2"><a href="#More_complex_examples"><span class="tocnumber">4.1</span> <span class="toctext">More complex examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Criticism"><span class="tocnumber">5</span> <span class="toctext">Criticism</span></a></li>
+<li class="toclevel-1"><a href="#Implementations"><span class="tocnumber">6</span> <span class="toctext">Implementations</span></a></li>
+<li class="toclevel-1"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Tutorials"><span class="tocnumber">9.1</span> <span class="toctext">Tutorials</span></a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="History" id="History"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=1" title="Edit section: History">edit</a>]</span> <span class="mw-headline">History</span></h2>
+<p>Following the release of <a href="/wiki/Miranda_programming_language" title="Miranda programming language">Miranda</a>, in 1985, functional languages proliferated. By 1987, there existed more than a dozen non-strict, purely functional programming languages. Of these <a href="/wiki/Miranda_programming_language" title="Miranda programming language">Miranda</a> was the most widely used, but was proprietary. At the conference on Functional Programming Languages and Computer Architecture (FPCA '87) in <a href="/wiki/Portland%2C_Oregon" title="Portland, Oregon">Portland, Oregon</a>, a meeting was held during which strong consensus was found among the participants that a committee should be formed to define an <a href="/wiki/Open_standard" title="Open standard">open standard</a> for such languages. This would have the express purpose of consolidating the existing languages into a common one that would serve as a basis for future research in language design.<sup id="_ref-1" class="reference"><a href="#_note-1" title="">[2]</a></sup> The first version of Haskell ("Haskell 1.0") was defined in 1990.<sup id="_ref-2" class="reference"><a href="#_note-2" title="">[3]</a></sup> The committee's efforts resulted in a series of language definitions, which in late 1997, culminated in <b>Haskell 98</b>, intended to specify a stable, minimal, portable version of the language and an accompanying standard <a href="/wiki/Library_%28computer_science%29" title="Library (computer science)">library</a> for teaching, and as a base for future extensions. The committee expressly welcomed the creation of extensions and variants of Haskell 98 via adding and incorporating experimental features.</p>
+<p>In January 1999, the Haskell 98 language standard was originally published as "The Haskell 98 Report". In January 2003, a revised version was published as "Haskell 98 Language and Libraries: The Revised Report".<sup id="_ref-Revised_report_0" class="reference"><a href="#_note-Revised_report" title="">[4]</a></sup> The language continues to evolve rapidly, with the <a href="/wiki/Hugs" title="Hugs">Hugs</a> and <a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">GHC</a> implementation (see below) representing the current <i>de facto</i> standard. In early 2006, the process of defining a successor to the Haskell 98 standard, informally named <b>Haskell′</b> ("Haskell Prime"), was begun.<sup id="_ref-3" class="reference"><a href="#_note-3" title="">[5]</a></sup> This process is intended to produce a minor revision of Haskell 98.<sup id="_ref-4" class="reference"><a href="#_note-4" title="">[6]</a></sup></p>
+<p><a name="Features_and_extensions" id="Features_and_extensions"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=2" title="Edit section: Features and extensions">edit</a>]</span> <span class="mw-headline">Features and extensions</span></h2>
+<p>Characteristic features of Haskell include <a href="/wiki/Pattern_matching" title="Pattern matching">pattern matching</a>, <a href="/wiki/Currying" title="Currying">currying</a>, <a href="/wiki/List_comprehension" title="List comprehension">list comprehensions</a> <sup id="_ref-5" class="reference"><a href="#_note-5" title="">[7]</a></sup>, <a href="/wiki/Guard_%28computing%29" title="Guard (computing)">guards</a>, definable <a href="/wiki/Operator_%28programming%29" title="Operator (programming)">operators</a>, and <a href="/wiki/Single_assignment" title="Single assignment">single assignment</a>. The language also supports <a href="/wiki/Recursion" title="Recursion">recursive</a> functions and <a href="/wiki/Algebraic_data_type" title="Algebraic data type">algebraic data types</a>, as well as <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a>. Unique concepts include <a href="/wiki/Monads_in_functional_programming" title="Monads in functional programming">monads</a>, and <a href="/wiki/Type_class" title="Type class">type classes</a>. The combination of such features can make <a href="/wiki/Function_%28programming%29" title="Function (programming)">functions</a> which would be difficult to write in a <a href="/wiki/Procedural_programming_language" title="Procedural programming language">procedural programming language</a> almost trivial to implement in Haskell.</p>
+<p>Several variants have been developed: parallelizable versions from <a href="/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">MIT</a> and <a href="/wiki/Glasgow_University" title="Glasgow University">Glasgow</a>, both called Parallel Haskell; more parallel and distributed versions called <a href="/w/index.php?title=Distributed_Haskell&amp;action=edit" class="new" title="Distributed Haskell">Distributed Haskell</a> (formerly Goffin) and <a href="/w/index.php?title=Eden_programming_language&amp;action=edit" class="new" title="Eden programming language">Eden</a>; a <a href="/wiki/Speculative_execution" title="Speculative execution">speculatively evaluating</a> version called <a href="/wiki/Eager_Haskell" title="Eager Haskell">Eager Haskell</a> and several <a href="/wiki/Object_orientation" title="Object orientation">object oriented</a> versions: Haskell++, <a href="/wiki/O%27Haskell" title="O'Haskell">O'Haskell</a> and <a href="/wiki/Mondrian_programming_language" title="Mondrian programming language">Mondrian</a>.</p>
+<p>There is also a Haskell-like language that offers a new method of support for <a href="/wiki/GUI" title="GUI">GUI</a> development called <a href="/wiki/Clean_%28programming_language%29" title="Clean (programming language)">Concurrent Clean</a>. Its biggest deviations from Haskell are use of <a href="/wiki/Uniqueness_type" title="Uniqueness type">uniqueness types</a> for input instead of <a href="/wiki/Monads_in_functional_programming" title="Monads in functional programming">monads</a>.</p>
+<p><a name="Applications" id="Applications"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=3" title="Edit section: Applications">edit</a>]</span> <span class="mw-headline">Applications</span></h2>
+<p>Although Haskell has a comparatively small user community, its strengths have been well applied to a few projects. <a href="/wiki/Audrey_Tang" title="Audrey Tang">Audrey Tang</a>'s <a href="/wiki/Pugs" title="Pugs">Pugs</a> is an implementation for the long-term forthcoming <a href="/wiki/Perl_6" title="Perl 6">Perl 6</a> language with an interpreter and compilers that proved useful already after just a few months of its writing; similarly, GHC is often a testbed for advanced functional programming features and optimizations. <a href="/wiki/Darcs" title="Darcs">Darcs</a> is a revision control system, with several innovative features. <a href="/wiki/Linspire" title="Linspire">Linspire</a> GNU/Linux chose Haskell for system tools development.<sup id="_ref-6" class="reference"><a href="#_note-6" title="">[8]</a></sup> <a href="/wiki/Xmonad" title="Xmonad">Xmonad</a> is a <a href="/wiki/Window_manager" title="Window manager">window manager</a> for the <a href="/wiki/X_Window_System" title="X Window System">X Window System</a>, written entirely in Haskell. <a href="/w/index.php?title=Bluespec_SystemVerilog&amp;action=edit" class="new" title="Bluespec SystemVerilog">Bluespec SystemVerilog</a> is a language for semiconductor design that is an extension of Haskell. Additionally, <a href="/wiki/Bluespec%2C_Inc." title="Bluespec, Inc.">Bluespec, Inc.</a>'s tools are implemented in Haskell.</p>
+<p><a name="Examples" id="Examples"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=4" title="Edit section: Examples">edit</a>]</span> <span class="mw-headline">Examples</span></h2>
+<p>A simple example that is often used to demonstrate the syntax of <a href="/wiki/Functional_language" title="Functional language">functional languages</a> is the <a href="/wiki/Factorial" title="Factorial">factorial</a> function for positive integers, shown in Haskell:</p>
+<pre>
+fac :: Integer -&gt; Integer
+fac 0 = 1
+fac n | n &gt; 0 = n * fac (n-1)
+</pre>
+<p>Or in one line:</p>
+<pre>
+fac n = if n &gt; 0 then n * fac (n-1) else 1
+</pre>
+<p>This describes the factorial as a recursive function, with one terminating base case. It is similar to the descriptions of factorials found in mathematics textbooks. Much of Haskell code is similar to standard mathematical notation in facility and syntax.</p>
+<p>The first line of the factorial function describes the <i>types</i> of this function; while it is optional, it is considered to be good style<a href="http://www.haskell.org/haskellwiki/Type_signatures_as_good_style" class="external autonumber" title="http://www.haskell.org/haskellwiki/Type_signatures_as_good_style" rel="nofollow">[2]</a> to include it. It can be read as <i>the function fac</i> (<tt>fac</tt>) <i>has type</i> (<tt>::</tt>) <i>from integer to integer</i> (<tt>Integer -&gt; Integer</tt>). That is, it takes an integer as an argument, and returns another integer. The type of a definition is inferred automatically if the programmer didn't supply a type annotation.</p>
+<p>The second line relies on <a href="/wiki/Pattern_matching" title="Pattern matching">pattern matching</a>, an important feature of Haskell. Note that parameters of a function are not in parentheses but separated by spaces. When the function's argument is 0 (zero) it will return the integer 1 (one). For all other cases the third line is tried. This is the <a href="/wiki/Recursion" title="Recursion">recursion</a>, and executes the function again until the base case is reached.</p>
+<p>A <a href="/wiki/Guard_%28computing%29" title="Guard (computing)">guard</a> protects the third line from negative numbers for which a factorial is undefined. Without the guard this function would recurse through all negative numbers without ever reaching the base case of 0. As it is, the pattern matching is not complete: if a negative integer is passed to the fac function as an argument, the program will fail with a runtime error. A final case could check for this error condition and print an appropriate error message instead.</p>
+<p>The "Prelude" is a number of small functions analogous to <a href="/wiki/C_%28programming_language%29" title="C (programming language)">C</a>'s <a href="/wiki/C_standard_library" title="C standard library">standard library</a>. Using the Prelude and writing in the point-free style<a href="http://haskell.org/haskellwiki/Pointfree" class="external autonumber" title="http://haskell.org/haskellwiki/Pointfree" rel="nofollow">[3]</a> of unspecified arguments, it becomes:</p>
+<pre>
+fac = product . enumFromTo 1
+</pre>
+<p>The above is close to mathematical definitions such as <img class="tex" alt="f = g \circ h" src="http://upload.wikimedia.org/math/9/4/3/943418c96ee6e370d6d5ff2594cdb9fb.png" /> (see <a href="/wiki/Function_composition" title="Function composition">function composition</a>) with the dot acting as the <a href="/wiki/Function_composition_operator" title="Function composition operator">function composition operator</a>, and indeed, it is <i>not</i> an assignment of a numeric value to a variable.</p>
+<p>In the Hugs interpreter, you often need to define the function and use it on the same line separated by a <tt>where</tt> or <tt>let</tt>..<tt>in</tt>, meaning you need to enter this to test the above examples and see the output <tt>120</tt>:</p>
+<pre>
+let { fac 0 = 1; fac n | n &gt; 0 = n * fac (n-1) } in fac 5
+</pre>
+<p>or</p>
+<pre>
+fac 5 where fac = product . enumFromTo 1
+</pre>
+<p>The GHCi interpreter doesn't have this restriction and function definitions can be entered on one line and referenced later.</p>
+<p><a name="More_complex_examples" id="More_complex_examples"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=5" title="Edit section: More complex examples">edit</a>]</span> <span class="mw-headline">More complex examples</span></h3>
+<p>A simple <a href="/wiki/Reverse_Polish_Notation" title="Reverse Polish Notation">Reverse Polish Notation</a> calculator expressed with the <a href="/wiki/Higher-order_function" title="Higher-order function">higher-order function</a> <code><a href="/wiki/Foldl" title="Foldl">foldl</a></code> whose argument <i>f</i> is defined in a <i>where</i> clause using <a href="/wiki/Pattern_matching" title="Pattern matching">pattern matching</a> and the <a href="/wiki/Type_class" title="Type class">type class</a> <i>Read</i>:</p>
+<pre>
+calc :: String -&gt; [Float]
+calc = foldl f [] . words
+  where 
+    f (x:y:zs) "+" = y+x:zs
+    f (x:y:zs) "-" = y-x:zs
+    f (x:y:zs) "*" = y*x:zs
+    f (x:y:zs) "/" = y/x:zs
+    f xs y = read y : xs
+</pre>
+<p>The empty list is the initial state, and <i>f</i> <a href="/wiki/Interpreter_%28computing%29" title="Interpreter (computing)">interprets</a> one word at a time, either matching two numbers from the head of the list and pushing the result back in, or parsing the word as a <a href="/wiki/Floating-point_number" title="Floating-point number">floating-point number</a> and prepending it to the list.</p>
+<p>The following definition produces the list of <a href="/wiki/Fibonacci_numbers" title="Fibonacci numbers">Fibonacci numbers</a> in linear time:</p>
+<pre>
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+</pre>
+<p>The infinite list is produced by <a href="/wiki/Corecursion" title="Corecursion">corecursion</a> — the latter values of the list are computed on demand starting from the initial two items 0 and 1. This kind of a definition is an instance of <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a> and an important part of Haskell programming. For an example of how the evaluation evolves, the following illustrates the values of <i>fibs</i> and <i>tail fibs</i> after the computation of six items and shows how <i>zipWith (+)</i> has produced four items and proceeds to produce the next item:</p>
+<pre>
+fibs         = 0 : 1 : 1 : 2 : 3 : 5 : ...
+               +   +   +   +   +   +
+tail fibs    = 1 : 1 : 2 : 3 : 5 : ...
+               =   =   =   =   =   =
+zipWith ...  = 1 : 2 : 3 : 5 : <b>8</b> : ...
+fibs = 0 : 1 : 1 : 2 : 3 : 5 : <b>8</b> : ...
+</pre>
+<p>The same function, written using GHC's <a href="/wiki/Parallel_list_comprehension" title="Parallel list comprehension">parallel list comprehension</a> syntax (GHC extensions must be enabled using a special command-line flag '-fglasgow-exts'; see GHC's manual for more):</p>
+<pre>
+fibs = 0 : 1 : [ a+b | a &lt;- fibs | b &lt;- tail fibs ]
+</pre>
+<p>The factorial we saw previously can be written as a sequence of functions:</p>
+<pre>
+fac n = (foldl (.) id [\x -&gt; x*k | k &lt;- [1..n]]) 1
+</pre>
+<p>A remarkably concise function that returns the list of <a href="/wiki/Hamming_numbers" title="Hamming numbers">Hamming numbers</a> in order:</p>
+<pre>
+hamming = 1 : map (2*) hamming `merge` map (3*) hamming `merge` map (5*) hamming
+     where merge (x:xs) (y:ys) 
+            | x &lt; y = x : xs `merge` (y:ys)
+            | x &gt; y = y : (x:xs) `merge` ys
+            | otherwise = x : xs `merge` ys
+</pre>
+<p>Like the various <code>fibs</code> solutions displayed above, this uses corecursion to produce a list of numbers on demand, starting from the base case of 1 and building new items based on the preceding part of the list.</p>
+<p>In this case the producer <code>merge</code> is defined in a <code>where</code> clause and used as an operator by enclosing it in back-quotes. The branches of the guards define how <code>merge</code> merges two ascending lists into one ascending list without duplicate items.</p>
+<dl>
+<dd><i>See also <a href="http://en.wikibooks.org/wiki/Transwiki:List_of_hello_world_programs#Haskell" class="extiw" title="wikibooks:Transwiki:List_of_hello_world_programs">wikibooks:Transwiki:List of hello world programs#Haskell</a> for an example that prints text.</i></dd>
+</dl>
+<p><a name="Criticism" id="Criticism"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=6" title="Edit section: Criticism">edit</a>]</span> <span class="mw-headline">Criticism</span></h2>
+<p>While Haskell has many advanced features not found in many other programming languages, some of these features have been criticized as making the language too complex or difficult to understand. In addition, there are complaints stemming from the purity of Haskell and its theoretical roots.<sup class="noprint Template-Fact"><span title="This claim needs references to reliable sources&#160;since February 2007" style="white-space: nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</span></sup></p>
+<p>Jan-Willem Maessen, in 2002, and <a href="/wiki/Simon_Peyton_Jones" title="Simon Peyton Jones">Simon Peyton Jones</a>, in 2003, discussed problems associated with lazy evaluation while also acknowledging the theoretical motivation for it<sup id="_ref-7" class="reference"><a href="#_note-7" title="">[9]</a></sup><sup id="_ref-8" class="reference"><a href="#_note-8" title="">[10]</a></sup>, in addition to purely practical considerations such as improved performance.<sup id="_ref-9" class="reference"><a href="#_note-9" title="">[11]</a></sup> They note that, in addition to adding some performance overhead, laziness makes it more difficult for programmers to reason about the performance of their code (specifically with regard to space usage).</p>
+<p><a href="/w/index.php?title=Bastiaan_Heeren&amp;action=edit" class="new" title="Bastiaan Heeren">Bastiaan Heeren</a>, <a href="/w/index.php?title=Daan_Leijen&amp;action=edit" class="new" title="Daan Leijen">Daan Leijen</a>, and <a href="/w/index.php?title=Arjan_van_IJzendoorn&amp;action=edit" class="new" title="Arjan van IJzendoorn">Arjan van IJzendoorn</a> in 2003 also observed some stumbling blocks for Haskell learners, "<i>The subtle syntax and sophisticated type system of Haskell are a double edged sword -- highly appreciated by experienced programmers but also a source of frustration among beginners, since the generality of Haskell often leads to cryptic error messages.</i>" <sup id="_ref-10" class="reference"><a href="#_note-10" title="">[12]</a></sup> To address these, they developed an advanced interpreter called <a href="/wiki/Helium_%28Haskell%29" title="Helium (Haskell)">Helium</a> which improved the user-friendliness of error messages by limiting the generality of some Haskell features, and in particular removing support for type classes.</p>
+<p><a name="Implementations" id="Implementations"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=7" title="Edit section: Implementations">edit</a>]</span> <span class="mw-headline">Implementations</span></h2>
+<p>The following all comply fully, or very nearly, with the Haskell 98 standard, and are distributed under <a href="/wiki/Open_source" title="Open source">open source</a> licenses. There are currently no proprietary Haskell implementations.</p>
+<ul>
+<li>The <b><a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">Glasgow Haskell Compiler</a></b> compiles to native code on a number of different architectures—as well as to <a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>—using <a href="/wiki/C--_%28intermediate_language%29" title="C-- (intermediate language)">C--</a> as an <a href="/wiki/Intermediate_language" title="Intermediate language">intermediate language</a>. GHC is probably the most popular Haskell compiler, and there are quite a few useful libraries (e.g. bindings to <a href="/wiki/OpenGL" title="OpenGL">OpenGL</a>) that will work only with GHC.</li>
+<li><b><a href="/wiki/Gofer_%28software%29" title="Gofer (software)">Gofer</a></b> was an educational dialect of Haskell, with a feature called "constructor classes", developed by Mark Jones. It was supplanted by Hugs (see below).</li>
+<li><b><a href="http://www.cs.chalmers.se/~augustss/hbc/hbc.html" class="external text" title="http://www.cs.chalmers.se/~augustss/hbc/hbc.html" rel="nofollow">HBC</a></b> is another native-code Haskell compiler. It has not been actively developed for some time but is still usable.</li>
+<li><b><a href="/wiki/Helium_%28Haskell%29" title="Helium (Haskell)">Helium</a></b> is a newer dialect of Haskell. The focus is on making it easy to learn by providing clearer error messages. It currently lacks typeclasses, rendering it incompatible with many Haskell programs.</li>
+<li><b><a href="/wiki/Hugs" title="Hugs">Hugs</a></b>, the <b>Haskell User's Gofer System</b>, is a <a href="/wiki/Bytecode" title="Bytecode">bytecode</a> interpreter. It offers fast compilation of programs and reasonable execution speed. It also comes with a simple graphics library. Hugs is good for people learning the basics of Haskell, but is by no means a "toy" implementation. It is the most portable and lightweight of the Haskell implementations.</li>
+<li><b><a href="http://repetae.net/john/computer/jhc/" class="external text" title="http://repetae.net/john/computer/jhc/" rel="nofollow">Jhc</a></b> is a Haskell compiler written by <a href="/w/index.php?title=John_Meacham&amp;action=edit" class="new" title="John Meacham">John Meacham</a> emphasising speed and efficiency of generated programs as well as exploration of new program transformations.</li>
+<li><b><a href="http://www.cs.york.ac.uk/fp/nhc98/" class="external text" title="http://www.cs.york.ac.uk/fp/nhc98/" rel="nofollow">nhc98</a></b> is another bytecode compiler, but the bytecode runs significantly faster than with Hugs. Nhc98 focuses on minimizing memory usage, and is a particularly good choice for older, slower machines.</li>
+<li><b><a href="/wiki/Yhc" title="Yhc">Yhc</a></b>, the <b>York Haskell Compiler</b> is a fork of nhc98, with the goals of being simpler, more portable, more efficient, and integrating support for <a href="http://www.haskell.org/hat/" class="external text" title="http://www.haskell.org/hat/" rel="nofollow">Hat</a>, the Haskell tracer.</li>
+</ul>
+<p><a name="See_also" id="See_also"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a>]</span> <span class="mw-headline">See also</span></h2>
+<div class="infobox sisterproject">
+<div style="float: left;">
+<div class="floatnone"><span><a href="/wiki/Image:Wikibooks-logo-en.svg" class="image" title="Wikibooks"><img alt="Wikibooks" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Wikibooks-logo-en.svg/50px-Wikibooks-logo-en.svg.png" width="50" height="57" border="0" /></a></span></div>
+</div>
+<div style="margin-left: 60px;"><a href="/wiki/Wikibooks" title="Wikibooks">Wikibooks</a> has a book on the topic of
+<div style="margin-left:10px;"><i><b><a href="http://en.wikibooks.org/wiki/Haskell" class="extiw" title="wikibooks:Haskell">Haskell</a></b></i></div>
+</div>
+</div>
+<ul>
+<li><a href="/wiki/O%27Haskell" title="O'Haskell">O'Haskell</a> — an extension of Haskell adding <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-orientation</a> and <a href="/wiki/Concurrent_programming" title="Concurrent programming">concurrent programming</a> support.</li>
+<li><a href="/wiki/Pugs" title="Pugs">Pugs</a> — a compiler and interpreter for the <a href="/wiki/Perl_6" title="Perl 6">Perl 6</a> programming language</li>
+<li><a href="/wiki/LOLITA" title="LOLITA">LOLITA</a> and <a href="/wiki/Darcs" title="Darcs">Darcs</a> — large applications written in Haskell</li>
+<li><a href="/wiki/Xmonad" title="Xmonad">Xmonad</a> — a window manager written in Haskell (under 500 lines)</li>
+<li><a href="/w/index.php?title=Jaskell&amp;action=edit" class="new" title="Jaskell">Jaskell</a> — a functional scripting programming language that runs in Java VM</li>
+<li><a href="/wiki/Curry_%28programming_language%29" title="Curry (programming language)">Curry</a> — a language based on Haskell</li>
+</ul>
+<p><a name="References" id="References"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=9" title="Edit section: References">edit</a>]</span> <span class="mw-headline">References</span></h2>
+<div class="references-small">
+<ol class="references">
+<li id="_note-0"><b><a href="#_ref-0" title="">^</a></b> <a href="http://www.cs.yale.edu/homes/hudak-paul/" class="external free" title="http://www.cs.yale.edu/homes/hudak-paul/" rel="nofollow">http://www.cs.yale.edu/homes/hudak-paul/</a></li>
+<li id="_note-1"><b><a href="#_ref-1" title="">^</a></b> <a href="http://haskell.org/onlinereport/preface-jfp.html" class="external text" title="http://haskell.org/onlinereport/preface-jfp.html" rel="nofollow">Preface</a>. <i>Haskell 98 Language and Libraries: The Revised Report</i> (December 2002).</li>
+<li id="_note-2"><b><a href="#_ref-2" title="">^</a></b> <a href="http://www.haskell.org/haskell-history.html" class="external text" title="http://www.haskell.org/haskell-history.html" rel="nofollow">The History of Haskell</a>.</li>
+<li id="_note-Revised_report"><b><a href="#_ref-Revised_report_0" title="">^</a></b> <a href="/wiki/Simon_Peyton_Jones" title="Simon Peyton Jones">Simon Peyton Jones (editor)</a> (December 2002). <a href="http://haskell.org/onlinereport/" class="external text" title="http://haskell.org/onlinereport/" rel="nofollow">Haskell 98 Language and Libraries: The Revised Report</a>.</li>
+<li id="_note-3"><b><a href="#_ref-3" title="">^</a></b> <a href="http://haskell.org/haskellwiki/Future" class="external text" title="http://haskell.org/haskellwiki/Future" rel="nofollow">Future development of Haskell</a>.</li>
+<li id="_note-4"><b><a href="#_ref-4" title="">^</a></b> <a href="http://hackage.haskell.org/trac/haskell-prime" class="external text" title="http://hackage.haskell.org/trac/haskell-prime" rel="nofollow">Welcome to Haskell'</a>. <i>The Haskell' Wiki</i>.</li>
+<li id="_note-5"><b><a href="#_ref-5" title="">^</a></b> list comprehension has been adopted by <a href="/wiki/Python_%28programming_language%29" title="Python (programming language)">Python (programming language)</a></li>
+<li id="_note-6"><b><a href="#_ref-6" title="">^</a></b> <a href="http://urchin.earth.li/pipermail/debian-haskell/2006-May/000169.html" class="external text" title="http://urchin.earth.li/pipermail/debian-haskell/2006-May/000169.html" rel="nofollow">Linspire/Freespire Core OS Team and Haskell</a>. <i>Debian Haskell mailing list</i> (May 2006).</li>
+<li id="_note-7"><b><a href="#_ref-7" title="">^</a></b> Jan-Willem Maessen. <i>Eager Haskell: Resource-bounded execution yields efficient iteration</i>. Proceedings of the 2002 <a href="/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">ACM</a> SIGPLAN workshop on Haskell.</li>
+<li id="_note-8"><b><a href="#_ref-8" title="">^</a></b> Simon Peyton Jones. <a href="http://research.microsoft.com/~simonpj/papers/haskell-retrospective" class="external text" title="http://research.microsoft.com/~simonpj/papers/haskell-retrospective" rel="nofollow"><i>Wearing the hair shirt: a retrospective on Haskell</i></a>. Invited talk at <a href="/wiki/POPL" title="POPL">POPL</a> 2003.</li>
+<li id="_note-9"><b><a href="#_ref-9" title="">^</a></b> Lazy evaluation can lead to excellent performance, such as in The Computer Language Benchmarks Game<a href="http://www.mail-archive.com/haskell@haskell.org/msg18863.html" class="external autonumber" title="http://www.mail-archive.com/haskell@haskell.org/msg18863.html" rel="nofollow">[1]</a></li>
+<li id="_note-10"><b><a href="#_ref-10" title="">^</a></b> Bastiaan Heeren, Daan Leijen, Arjan van IJzendoorn. <a href="http://www.cs.uu.nl/~bastiaan/heeren-helium.pdf" class="external text" title="http://www.cs.uu.nl/~bastiaan/heeren-helium.pdf" rel="nofollow"><i>Helium, for learning Haskell</i></a>. Proceedings of the 2003 ACM SIGPLAN workshop on Haskell.</li>
+</ol>
+</div>
+<p><a name="External_links" id="External_links"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a>]</span> <span class="mw-headline">External links</span></h2>
+<ul>
+<li><a href="http://haskell.org/" class="external text" title="http://haskell.org/" rel="nofollow">HaskellWiki</a> - The Haskell Home Page</li>
+<li><a href="http://research.microsoft.com/~simonpj/papers/history-of-haskell/history.pdf" class="external text" title="http://research.microsoft.com/~simonpj/papers/history-of-haskell/history.pdf" rel="nofollow">A History of Haskell: being lazy with class</a> - History of Haskell</li>
+<li><a href="http://haskell.org/haskellwiki/Humor" class="external text" title="http://haskell.org/haskellwiki/Humor" rel="nofollow">Haskell Humor</a></li>
+<li><a href="http://haskell.org/papers/NSWC/jfp.ps" class="external text" title="http://haskell.org/papers/NSWC/jfp.ps" rel="nofollow">Haskell vs. Ada vs. C++ vs. Awk vs. ... An Experiment in Software Prototyping Productivity</a> (a PostScript file)</li>
+<li><a href="http://www.willamette.edu/~fruehr/haskell/evolution.html" class="external text" title="http://www.willamette.edu/~fruehr/haskell/evolution.html" rel="nofollow">The Evolution of a Haskell Programmer</a> - a slightly humorous overview of different programming styles available in Haskell</li>
+<li><a href="http://haskell.readscheme.org" class="external text" title="http://haskell.readscheme.org" rel="nofollow">An Online Bibliography of Haskell Research</a></li>
+<li><a href="http://epolyglot.sourceforge.net/" class="external text" title="http://epolyglot.sourceforge.net/" rel="nofollow">ePolyglot - combining Haskell, Python and Eiffel</a></li>
+</ul>
+<p><a name="Tutorials" id="Tutorials"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit&amp;section=11" title="Edit section: Tutorials">edit</a>]</span> <span class="mw-headline">Tutorials</span></h3>
+<div class="infobox sisterproject">
+<div style="float: left;">
+<div class="floatnone"><span><a href="/wiki/Image:Wikibooks-logo-en.svg" class="image" title="Wikibooks"><img alt="Wikibooks" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Wikibooks-logo-en.svg/50px-Wikibooks-logo-en.svg.png" width="50" height="57" border="0" /></a></span></div>
+</div>
+<div style="margin-left: 60px;"><a href="/wiki/Wikibooks" title="Wikibooks">Wikibooks</a> has a book on the topic of
+<div style="margin-left:10px;"><i><b><a href="http://en.wikibooks.org/wiki/Haskell" class="extiw" title="wikibooks:Haskell">Haskell</a></b></i></div>
+</div>
+</div>
+<ul>
+<li><a href="http://www.cs.nott.ac.uk/~gmh/book.html" class="external text" title="http://www.cs.nott.ac.uk/~gmh/book.html" rel="nofollow">Programming in Haskell</a> by Graham Hutton</li>
+<li><a href="http://darcs.haskell.org/yaht/yaht.pdf" class="external text" title="http://darcs.haskell.org/yaht/yaht.pdf" rel="nofollow">Yet Another Haskell Tutorial</a> - a good Haskell tutorial by Hal Daume III; assumes much less prior knowledge than the official tutorial</li>
+<li><a href="http://haskell.org/tutorial/" class="external text" title="http://haskell.org/tutorial/" rel="nofollow">A Gentle Introduction to Haskell 98</a> (a more advanced tutorial, also available as <a href="http://www.haskell.org/tutorial/haskell-98-tutorial.pdf" class="external text" title="http://www.haskell.org/tutorial/haskell-98-tutorial.pdf" rel="nofollow">pdf file</a>)</li>
+<li><a href="http://www.haskell.org/~pairwise/intro/intro.html" class="external text" title="http://www.haskell.org/~pairwise/intro/intro.html" rel="nofollow">Haskell Tutorial for C Programmers</a> by Eric Etheridge</li>
+<li><a href="http://www.haskell.org/haskellwiki/Category:Tutorials" class="external text" title="http://www.haskell.org/haskellwiki/Category:Tutorials" rel="nofollow">List of Tutorials at Haskell.org</a></li>
+<li><a href="http://www.haskell.org/haskellwiki/Category:Idioms" class="external text" title="http://www.haskell.org/haskellwiki/Category:Idioms" rel="nofollow">Haskell Idioms</a></li>
+<li><a href="http://www.edusoft.ro/detalii.php?id=81" class="external text" title="http://www.edusoft.ro/detalii.php?id=81" rel="nofollow">Introducere in Haskell 98 prin exemple - Dan Popa, Editura EduSoft, Bacau</a></li>
+</ul>
+
+<!-- 
+Pre-expand include size: 30647/2048000 bytes
+Post-expand include size: 11745/2048000 bytes
+Template argument size: 9272/2048000 bytes
+#ifexist count: 1/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:13630-0!1!0!default!!en!2 and timestamp 20080113231613 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/Haskell_%28programming_language%29">http://en.wikipedia.org/wiki/Haskell_%28programming_language%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></span> | <span dir='ltr'><a href="/wiki/Category:Articles_with_unsourced_statements_since_February_2007" title="Category:Articles with unsourced statements since February 2007">Articles with unsourced statements since February 2007</a></span> | <span dir='ltr'><a href="/wiki/Category:Haskell_programming_language_family" title="Category:Haskell programming language family">Haskell programming language family</a></span> | <span dir='ltr'><a href="/wiki/Category:Functional_languages" title="Category:Functional languages">Functional languages</a></span> | <span dir='ltr'><a href="/wiki/Category:Declarative_programming_languages" title="Category:Declarative programming languages">Declarative programming languages</a></span> | <span dir='ltr'><a href="/wiki/Category:Articles_with_example_Haskell_code" title="Category:Articles with example Haskell code">Articles with example Haskell code</a></span></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="/wiki/Haskell_%28programming_language%29" title="View the content page [c]" accesskey="c">Article</a></li>
+					 <li id="ca-talk"><a href="/wiki/Talk:Haskell_%28programming_language%29" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+					 <li id="ca-edit"><a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=edit" title="You can edit this page. Please use the preview button before saving. [e]" accesskey="e">Edit this page</a></li>
+					 <li id="ca-history"><a href="/w/index.php?title=Haskell_%28programming_language%29&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/w/index.php?title=Special:Userlogin&amp;returnto=Haskell_(programming_language)" title="You are encouraged to log in; however, it is not mandatory. [o]" accesskey="o">Sign in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/images/wiki-en.png);" href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-Contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content">Featured content</a></li>
+				<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-interaction'>
+		<h5>interaction</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-About-Wikipedia"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+				<li id="n-portal"><a href="/wiki/Wikipedia:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:Recentchanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Wikipedia [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if one exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the wiki for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:Whatlinkshere/Haskell_%28programming_language%29" title="List of all English Wikipedia pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:Recentchangeslinked/Haskell_%28programming_language%29" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="/wiki/Wikipedia:Upload" title="Upload images or media files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:Specialpages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Haskell_%28programming_language%29&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/w/index.php?title=Haskell_%28programming_language%29&amp;oldid=184140797" title="Permanent link to this version of the page">Permanent link</a></li><li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Haskell_%28programming_language%29&amp;id=184140797">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Languages</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Haskell">Български</a></li>
+				<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Haskell">Česky</a></li>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Haskell_%28Programmiersprache%29">Deutsch</a></li>
+				<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Haskell">Español</a></li>
+				<li class="interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Haskell">Esperanto</a></li>
+				<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C_%D9%87%D8%B3%DA%A9%D9%84">فارسی</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Haskell">Français</a></li>
+				<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%ED%95%98%EC%8A%A4%EC%BC%88">한국어</a></li>
+				<li class="interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Haskell_%28programski_jezik%29">Hrvatski</a></li>
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Haskell">Italiano</a></li>
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/Haskell">עברית</a></li>
+				<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Haskell">Magyar</a></li>
+				<li class="interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Haskell">Bahasa Melayu</a></li>
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Haskell">Nederlands</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Haskell">日本語</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Haskell">Polski</a></li>
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Haskell_%28linguagem_de_programa%C3%A7%C3%A3o%29">Português</a></li>
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Haskell">Română</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Haskell">Русский</a></li>
+				<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Haskell_%28programovac%C3%AD_jazyk%29">Slovenčina</a></li>
+				<li class="interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Haskell">Slovenščina</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Haskell">Suomi</a></li>
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Haskell">Svenska</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Haskell">Türkçe</a></li>
+				<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Haskell">Українська</a></li>
+				<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/Haskell">中文</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins-1.5/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 23:16, 13 January 2008.</li>
+				<li id="copyright">All text is available under the terms of the <a class='internal' href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License" title="Wikipedia:Text of the GNU Free Documentation License">GNU Free Documentation License</a>. (See <b><a class='internal' href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights" title="Wikipedia:Copyrights">Copyrights</a></b> for details.) <br /> Wikipedia&reg; is a registered trademark of the <a href="http://www.wikimediafoundation.org">Wikimedia Foundation, Inc</a>., a U.S. registered <a class='internal' href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29" title="501(c)(3)">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> <a class='internal' href="http://en.wikipedia.org/wiki/Non-profit_organization" title="Non-profit organization">nonprofit</a> <a href="http://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charity</a>.<br /></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+				<li id="disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv112 in 0.066 secs. --></body></html>
