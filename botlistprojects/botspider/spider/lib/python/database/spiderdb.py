@@ -111,6 +111,7 @@ KEYWORDS {
 """
 
 def create_database(dbdir, pool):
+	print "Database pool size=%s" % len(pool.url_pool)
 	url_dbfile = "%s/spiderdb_7.sdb" % dbdir
 	fobj = open(url_dbfile, "wb")
 	try:
