@@ -66,11 +66,20 @@ def buildOpener():
 		opener = urllib2.build_opener()
 	return opener
 
-def convertStrAscii(strval):
+def convertStrAscii(val):
+	""" Filter and encode the line in the html documents
+	@see crawlSingleURLForContent
+	"""
+	#TODO: analyze prev code.
+	#return strval.decode('ascii', 'replace').encode('ascii', 'replace') 
 	try:
-		return strval.decode('ascii', 'replace').encode('ascii', 'replace') 
-	except UnicodeError:
+		val = val.decode('utf8', 'replace')
+		val = val.encode('ascii', 'replace') 		
+		return val
+	except UnicodeError, e:
 		pass
+	# Always return a value
+	return ""
 
 def validateSubLink(link_tag):
 	if link_tag.has_key('href'):
@@ -130,15 +139,14 @@ class URLField:
 		# Convert unicode to ascii string
 		# TODO: add unicode support
 		#*********************************
-                #>>> a.encode('ascii', 'strict')  # the default, raise exception
+        #>>> a.encode('ascii', 'strict')  # the default, raise exception
 		#>>> a.encode('ascii', 'ignore')  # turn to zero and continue 
-                #>>> a.encode('ascii', 'replace') # replace with a readable error character
+        #>>> a.encode('ascii', 'replace') # replace with a readable error character
 		#*********************************
-		# TODO: use convertStrAscii
-		self.url = self.url.encode('ascii', 'replace')
-		self.title = self.title.encode('ascii', 'replace')
-		self.descr = self.descr.encode('ascii', 'replace')
-		self.keywords = self.keywords.encode('ascii', 'replace')
+		self.url = convertStrAscii(self.url)
+		self.title = convertStrAscii(self.title)
+		self.descr = convertStrAscii(self.descr)
+		self.keywords = convertStrAscii(self.keywords)
 		
 		self.url_len_u2 = len(self.url)
 		self.title_len_u2 = len(self.title)

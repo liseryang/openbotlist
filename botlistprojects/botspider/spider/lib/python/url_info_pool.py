@@ -40,7 +40,6 @@ __author__ = "Berlin Brown"
 __copyright__ = "Copyright (c) 2006-2008 Berlin Brown"
 __license__ = "New BSD"
 
-
 import sys
 import time, datetime
 import socket
@@ -54,6 +53,7 @@ import glob
 from database.spiderdb import create_database
 from spiderbot_util import DEFAULT_REQUEST_TIMEOUT, FF_USER_AGENT, \
     LINK_SET_INDICATOR, URLField, buildOpener, validateSubLink, convertStrAscii
+from content.spiderbot_content import doc_ignore_content
 
 def processSubLink(link_tag):
 	"""Process each link, ensure that a 'href' value is available,
@@ -118,6 +118,8 @@ def crawlSingleURL(link, idx, total_links):
 		pass
 
 def crawlSingleURLForContent(link, idx, total_links):
+	""" Crawl this URL but only extract the content for content
+	analysis.  A more extensive model than crawlSingleURL"""
 	try:
 		opener = buildOpener()
 		start = time.time()
@@ -127,9 +129,6 @@ def crawlSingleURLForContent(link, idx, total_links):
 		meta_data_descr = soup.findAll('meta', {'name':'description'})
 		keywords = get_meta_content(meta_data_keywords)
 		descr = get_meta_content(meta_data_descr)
-		
-		d = soup.findAll('p')
-		print d
 
 		# Extract the title tag
 		titleTag = None
@@ -137,7 +136,11 @@ def crawlSingleURLForContent(link, idx, total_links):
 			titleTag = soup.html.head.title
 			titleTag = str(titleTag.string)
 		except:
-			titleTag = ""			
+			titleTag = ""
+
+		# Ignore content we aren't concerned with
+		doc_ignore_content(soup)
+		
 		end = time.time()
 		# Return the basic URL data structure
 		field = URLField(link, titleTag, descr, keywords)
