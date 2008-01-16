@@ -59,12 +59,22 @@ LINK_SET_INDICATOR = 20
 URL_LINK_SERVICE="http://127.0.0.1:9080/testwebapp/data/data.jsp"
 FF_USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
 
+from spiderbot_const import ENTITY_IGNORE_LIST
+
 opener = None
 def buildOpener():
 	global opener
 	if opener is None:
 		opener = urllib2.build_opener()
 	return opener
+
+def ignoreHtmlEntity(self, line):
+	""" Find all of the html entities and remove them"""
+	res = []
+	line_list = line.lower().split()
+	res = list(set(keywords_list).difference(set(ENTITY_IGNORE_LIST)))
+	# Return the new keyword string
+	return " ".join(res)
 
 def convertStrAscii(val):
 	""" Filter and encode the line in the html documents
