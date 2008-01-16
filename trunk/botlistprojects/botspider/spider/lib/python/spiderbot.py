@@ -2,6 +2,8 @@
 Copyright (c) 2007, Botnode.com (Berlin Brown)
 http://www.opensource.org/licenses/bsd-license.php
 
+Date: 1/1/2008
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, 
@@ -38,30 +40,48 @@ import sys
 import time, datetime
 import socket
 
-from soup.BeautifulSoup import *
 import urllib2
 from urlparse import urlparse
-from database.spiderdb import *
+from optparse import OptionParser
+import glob
 
-# Socket timeout in seconds
-DEFAULT_REQUEST_TIMEOUT = 2
-NO_COLS_SERVICE = 9
-LINK_SET_INDICATOR = 20
-URL_LINK_SERVICE = "http://localhost:8080/botlist/spring/pipes/botverse_pipes.html"
-FF_USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
+from database.spiderdb import create_database
+from database.content_db import create_content_db
+from spiderbot_util import DEFAULT_REQUEST_TIMEOUT, FF_USER_AGENT, buildOpener
+from url_info_pool import URLInfoPool, crawlForURLContentDump
 
-opener = None
+ARG_SUB_COMMAND = 1
+APP_SUB_COMMANDS = {
+	"seed": "Crawl based on seed crawl",
+	"dump": "Dump html content based on data from seed directory"
+}
+MAIN_USAGE_STR = "usage: %prog <subcommand> <database dir> [options]"
+ERROR_MESSAGES = {
+	"err_sub": "ERR: Invalid subcommand"
+}
 
-def buildOpener():
-	global opener
-	if opener is None:
-		opener = urllib2.build_opener()
-	return opener
+def validate_cmd_invalid(options, cmd_key):
+	return False
+
+def validate_cmd_dump(options, cmd_key):
+	""" Validate dump options"""
+	if cmd_key == 'dump':
+		if options.seed_dir is not None \
+			    and options.dump_dir is not None:
+			return True
+	return False
+
+# Use of method dispatch to validate
+# arguments.
+ARG_METHOD_VALIDATORS = {
+    "dump": validate_cmd_dump,
+    "seed": validate_cmd_invalid
+}
 
 def connectLinkService(requrl):
 	""" First, connect to the botlist URL service and extract
 	the most recent list of links.  This will seed the
-	botlist spider crawler."""
+	botlist spider crawler."""	
 	opener = buildOpener()	
 	req = urllib2.Request(requrl)
 	req.add_header('user-agent', FF_USER_AGENT)
@@ -72,182 +92,91 @@ def connectLinkService(requrl):
 					   link_data)
 	content = [ col.split('::|') for col in link_data ]
 	return content
-
-def processSubLink(link_tag):
-	"""Process each link, ensure that a 'href' value is available,
-	also convert relative URIs to full URLs"""
-	# TODO: BUG, currently ignoring all internal links (don't have http)
-	link_val = link_tag['href']
-	link = None
-	# If URL found, ignore; if relative than attempt to build URL
-	if link_val.lower().startswith('http'):
-		link = link_val
-	else:
-		link = link_val
-	return link
-
-def validateSubLink(link_tag):
-	if link_tag.has_key('href'):
-		link_val = link_tag['href']
-		if link_val.lower().startswith('http'):
-			return 1
-	else:
-		return 0
 	
-def get_meta_content(meta_data_arr):
-	""" Use with soup, in the following manner:
-	<code>meta_data_keywords = soup.findAll('meta', {'name':'keywords'})
-	meta_data_descr = soup.findAll('meta', {'name':'description'})</code>
-	keywords = get_meta_content(meta_data_keywords)"""
+def runServiceURLPool():
 	try:
-		content_content = None
-		if meta_data_arr and len(meta_data_arr) > 0:
-			content_data = [el['content'] for el in meta_data_arr]
-			if content_data and len(content_data) > 0:
-				return content_data[0]			
-	except:
-		pass	
-	return ""
+		data = connectLinkService(URL_LINK_SERVICE)
+	except urllib2.URLError, urlerr:
+		print "FATAL ERR: could not connect to link seed service"
+		print urlerr
+		sys.exit(-1)
 
-def crawlSingleURL(link, idx, total_links):
-	try:
-		start = time.time()
-		data = opener.open(link).read()
-		soup = BeautifulSoup(data)
-		meta_data_keywords = soup.findAll('meta', {'name':'keywords'})
-		meta_data_descr = soup.findAll('meta', {'name':'description'})
-		keywords = get_meta_content(meta_data_keywords)
-		descr = get_meta_content(meta_data_descr)
+	link_list = [ line_set[0] for line_set in data ]
+	# The URL Pool contains a collection of the url field data structures
+	infoPool = URLInfoPool()
+	infoPool.buildURLPool(link_list)
+	create_database(sys.argv[1], infoPool)
 
-		# Extract the title tag
-		titleTag = None
-		try:
-			titleTag = soup.html.head.title
-			titleTag = str(titleTag.string)
-		except:
-			titleTag = ""
-			
-		end = time.time()
+def runSeedDir(seed_dir):
+	""" Return all lines in file of type extension tdb in this directory"""
+	print "*** Processing seed directory (all files of *.tdb): %s" % seed_dir
+	tdb_files = glob.glob('%s/*.tdb' % seed_dir)
+	content_lines = []
+	for fline in tdb_files:
+		fline = open(fline, 'r')
+		content = fline.readlines()
+		urllines = [line.strip() for line in content]
+		for line in urllines:
+			content_lines.append(line)
+		fline.close()
+	return content_lines
 
-		# Return the basic URL data structure
-		field = URLField(link, titleTag, descr, keywords)
-		field.populate()
-		
-		if ((idx % LINK_SET_INDICATOR) == 0):			
-			sys.stdout.write("[%s/%s] " % (idx, total_links))
-
-		# Exit crawl single URL with url field.
-		# @return URLField
-		return field
-	except socket.timeout:
-		print "ERR: timeout [%s/%s] " % (idx, total_links)
-	except urllib2.URLError:
-		print "ERR: timeout [%s/%s] " % (idx, total_links)
-	except Exception, e:
-		pass
-	
-def crawlBuildLinks(link_list):
-	opener = buildOpener()
-	""" Iterate through the list of links and collect links found
-	on each page through the use of the beautiful soup lib."""
-	total_links = 0
-	total_links_tag = 0
-	sub_links = None
-	for link in link_list:
-		try:
-			data = opener.open(link).read()
-			soup = BeautifulSoup(data)
-			sub_links_tag = soup.findAll('a')
-			total_links_tag = total_links_tag + len(sub_links_tag)			
-			sub_links = [processSubLink(el) for el in sub_links_tag if validateSubLink(el)]
-			
-			# Filter out duplicates with set
-			sub_links = set(sub_links)		
-			total_links = total_links + len(sub_links)
-		except Exception, e:
-			print "ERR: %s" % e
-
-	if total_links_tag != 0:
-		valid_ratio =  float(total_links) / total_links_tag
-		print "INFO: valid links ratio: %s, max=%s/%s" % (valid_ratio,
-														  total_links,
-														  total_links_tag)
-
-	# Return an empty list or valid content
-	if sub_links is None:
-		return ([], total_links)
-	else:
-		return (sub_links, total_links)
-
-class URLField:
-	def __init__(self, url, title, descr, keywords):
-		self.url = url
-		self.title = title
-		self.descr = descr
-		self.keywords = keywords
-
-		# Structure values for writing to data file
-		self.url_len_u2 = 0
-		self.title_len_u2 = 0
-		self.descr_len_u2 = 0
-		self.keywords_len_u2 = 0
-		
-	def populate(self):
-		"""After fields have been set, populate rest of data"""
-		if self.title is None: self.title = "" ;
-		if self.descr is None: self.descr = "" ;
-		if self.keywords is None: self.keywords = "" ;
-
-		# Convert unicode to string
-		self.url = self.url.encode('UTF-8')
-		self.title = self.title.encode('UTF-8')
-		self.descr = self.descr.encode('UTF-8')
-		self.keywords = self.keywords.encode('UTF-8')
-		
-		self.url_len_u2 = len(self.url)
-		self.title_len_u2 = len(self.title)
-		self.descr_len_u2 = len(self.descr)
-		self.keywords_len_u2 = len(self.keywords)
-		
-	def __str__(self):
-		return "%s#%s %s" % (self.url, self.descr, self.title_len_u2)
-
-class URLInfoPool:
-	
-	def __init__(self):
-		self.url_pool = []
-		
-	def buildURLPool(self, link_list):
-		links, total_links = crawlBuildLinks(link_list)
-		for index, link_proc in enumerate(links):
-			# DEBUG
-			if index > 10:
-				break			
-			url_info = crawlSingleURL(link_proc, index, total_links)
-			if url_info:
-				self.url_pool.append(url_info)
-	
-if __name__ == '__main__':
+def main():		
 	print "***"
 	print "*** Spider Bot v%s" % __version__
-	if len(sys.argv) != 2:
-		print "usage: python spiritbot.py <database dir>"
-		sys.exit(-1)
-	
+
+	parser = OptionParser(usage=MAIN_USAGE_STR)
+	if len(sys.argv) < 3:
+		print MAIN_USAGE_STR
+		sys.exit(1)		
+	parser.add_option('-s', '--seed_dir', dest='seed_dir',
+			  help='Simple text seed directory path (default: %default)',
+			  default=None)
+	parser.add_option('-d', '--dump_dir', dest='dump_dir',
+			  help='Output content dump directory path (default: %default)',
+			  default=None)
+	options, args = parser.parse_args()
+	if not args:
+		parser.print_help()
+		sys.exit(1)
+
+	# Access the options with 'options.seed_dir', for example
 	now = time.localtime(time.time())
 	print "*** database directory=%s" % sys.argv[1]
 	print "*** %s" % time.asctime(now)
 	start = time.time()
 	socket.setdefaulttimeout(DEFAULT_REQUEST_TIMEOUT)
 	
-	data = connectLinkService(URL_LINK_SERVICE)
-	link_list = [ line_set[0] for line_set in data ]
+	if sys.argv[ARG_SUB_COMMAND] is not None:
+		cmd_key = sys.argv[ARG_SUB_COMMAND].lower()
+		if APP_SUB_COMMANDS.has_key(cmd_key):
+			bot_method = ARG_METHOD_VALIDATORS.get(cmd_key, None)
+			if (bot_method(options, "seed")):
+				link_list = runSeedDir(options.seed_dir)
+				# The URL Pool contains a collection of the url field data structures
+				infoPool = URLInfoPool()
+				infoPool.buildURLPool(link_list)
+				create_database(sys.argv[:-1], infoPool)
+			if (bot_method(options, "dump")):
+				link_list = runSeedDir(options.seed_dir)
+				dump_list = crawlForURLContentDump(link_list)
+				create_content_db(options.dump_dir, dump_list)
+			else:
+				# APP_EXIT_POINT (invalid sub command)
+				print ERROR_MESSAGES['err_sub']
+				print MAIN_USAGE_STR
+				print "ERR with subcommand, COMMAND-LINE ARGS:\n<<<%s>>>" % sys.argv
+				sys.exit(1)
+		else:
+			# APP_EXIT_POINT (invalid sub command)
+			print ERROR_MESSAGES['err_sub']
+			print MAIN_USAGE_STR
+			sys.exit(1)
 
-	# The URL Pool contains a collection of the url field data structures
-	infoPool = URLInfoPool()
-	infoPool.buildURLPool(link_list)
-	create_database(sys.argv[1], infoPool)
 	end = time.time()
 	diff = end - start
 	print "\n*** Done"
 	print "*** spider bot processing time=%s" % diff
+
+if __name__ == '__main__':
+	main()
