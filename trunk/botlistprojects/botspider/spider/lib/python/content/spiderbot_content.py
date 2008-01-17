@@ -42,6 +42,7 @@ __license__ = "New BSD"
 
 from soup.BeautifulSoup import *
 from spiderbot_util import convertStrAscii
+from spiderbot_util import ignoreHtmlEntity
 
 def doc_ignore_content(soup):
 	""" With beautiful soup's api, ignore content
@@ -60,6 +61,20 @@ def doc_ignore_content(soup):
 	txt_lst = [ convertStrAscii(n) \
 				for n in txt_lst if len(n.strip()) > 1 ]
 	doc_str = '\n'.join(txt_lst)
-	print doc_str
 	return doc_str
 
+def clean_content(content):
+	
+	#*****************************************
+	# Additional filters and cleanups
+	#*****************************************		
+	if content is not None:
+		# Encode to simple ascii format.
+		try:
+			content = convertStrAscii(content)
+			content = ignoreHtmlEntity(content)
+			return content
+		except UnicodeError, e:
+			print e
+			
+	return ""
