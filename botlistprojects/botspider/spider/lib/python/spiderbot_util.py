@@ -68,13 +68,10 @@ def buildOpener():
 		opener = urllib2.build_opener()
 	return opener
 
-def ignoreHtmlEntity(self, line):
+def ignoreHtmlEntity(line):
 	""" Find all of the html entities and remove them"""
-	res = []
-	line_list = line.lower().split()
-	res = list(set(keywords_list).difference(set(ENTITY_IGNORE_LIST)))
-	# Return the new keyword string
-	return " ".join(res)
+	res = re.sub("|".join(re.escape(word) for word in ENTITY_IGNORE_LIST)," ", line)
+	return res
 
 def convertStrAscii(val):
 	""" Filter and encode the line in the html documents
@@ -134,6 +131,7 @@ class URLField:
 		self.descr = descr
 		self.keywords = keywords		
 		self.full_content = None
+		self.extract_content = None
 		# Structure values for writing to data file
 		self.url_len_u2 = 0
 		self.title_len_u2 = 0

@@ -157,7 +157,7 @@ def main():
 				infoPool = URLInfoPool()
 				infoPool.buildURLPool(link_list)
 				create_database(sys.argv[:-1], infoPool)
-			if (bot_method(options, "dump")):
+			elif (bot_method(options, "dump")):
 				link_list = runSeedDir(options.seed_dir)
 				dump_list = crawlForURLContentDump(link_list)
 				create_content_db(options.dump_dir, dump_list)

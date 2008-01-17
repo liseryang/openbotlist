@@ -50,5 +50,12 @@ def create_content_db(dir_name, content_list):
 			f = open(filename, "w")
 			f.write(field.full_content)
 			f.close()
+
+			# Write the partial feature extract file
+			extract_filename = "%s/_dump_file_%s.extract" % (dir_name, i)
+			f = open(extract_filename, "w")
+			f.write(field.extract_content)
+			f.close()
+			
 		except Exception, e:
 			print e

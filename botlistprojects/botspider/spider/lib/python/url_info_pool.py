@@ -53,7 +53,7 @@ import glob
 from database.spiderdb import create_database
 from spiderbot_util import DEFAULT_REQUEST_TIMEOUT, FF_USER_AGENT, \
     LINK_SET_INDICATOR, URLField, buildOpener, validateSubLink, convertStrAscii
-from content.spiderbot_content import doc_ignore_content
+from content.spiderbot_content import doc_ignore_content, clean_content
 
 def processSubLink(link_tag):
 	"""Process each link, ensure that a 'href' value is available,
@@ -124,6 +124,7 @@ def crawlSingleURLForContent(link, idx, total_links):
 		opener = buildOpener()
 		start = time.time()
 		data = opener.open(link).read()
+		data = clean_content(data)
 		soup = BeautifulSoup(data)
 		meta_data_keywords = soup.findAll('meta', {'name':'keywords'})
 		meta_data_descr = soup.findAll('meta', {'name':'description'})
@@ -137,24 +138,18 @@ def crawlSingleURLForContent(link, idx, total_links):
 			titleTag = str(titleTag.string)
 		except:
 			titleTag = ""
-
 		# Ignore content we aren't concerned with
-		doc_ignore_content(soup)
+		partial_content = doc_ignore_content(soup)
 		
 		end = time.time()
 		# Return the basic URL data structure
 		field = URLField(link, titleTag, descr, keywords)
 		field.full_content = data
+		field.extract_content = partial_content
 		field.populate()
-		if ((idx % LINK_SET_INDICATOR) == 0):			
+		if ((idx % LINK_SET_INDICATOR) == 0):
 			sys.stdout.write("[%s/%s] " % (idx, total_links))
-		if field.full_content is not None:
-			# Encode to simple ascii format.
-			try:
-				field.full_content = convertStrAscii(field.full_content)
-			except UnicodeError, e:
-				print e
-
+	   		
 		# Exit crawl single URL with url field.
 		# @return URLField
 		return field
