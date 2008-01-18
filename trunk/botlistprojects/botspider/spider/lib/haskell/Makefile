@@ -5,11 +5,15 @@
 
 TOP_DIR := $(shell pwd)
 
-all: TestQueueClient
+all: content
 
-TestQueueClient:
+build-all:
 	runhaskell Setup.hs configure
 	runhaskell Setup.hs build --verbose
+
+content:
+	runhaskell Setup.hs build --verbose
+	./dist/build/content/content
 
 clean:
 	rm -Rf dist

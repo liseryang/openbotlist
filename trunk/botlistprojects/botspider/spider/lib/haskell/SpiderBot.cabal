@@ -13,9 +13,8 @@ Copyright:      Copyright (C) 2008 Berlin Brown
 Homepage:       http://code.google.com/p/openbotlist/
 Build-Depends:  base, haskell98
 
-Library
-  Hs-Source-Dirs:        src
-  Ghc-Options:           -O2
-  Build-Depends:         base, haskell98, network, bytestring, binary, utf8-string
-  Exposed-modules:       Data.AMQP.QueueClient
-
+Executable content
+    Hs-Source-Dirs:     src src/Data/Clients
+    Main-is:			ContentMain.hs
+    Build-Depends:		base, haskell98, network, time, regex-compat
+    Other-Modules:      Data.SpiderNet.ContentMining
