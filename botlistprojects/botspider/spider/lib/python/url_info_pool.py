@@ -53,7 +53,8 @@ import glob
 from database.spiderdb import create_database
 from spiderbot_util import DEFAULT_REQUEST_TIMEOUT, FF_USER_AGENT, \
     LINK_SET_INDICATOR, URLField, buildOpener, validateSubLink, convertStrAscii
-from content.spiderbot_content import doc_ignore_content, clean_content
+from content.spiderbot_content import doc_ignore_content, \
+    clean_content, build_page_info
 
 def processSubLink(link_tag):
 	"""Process each link, ensure that a 'href' value is available,
@@ -114,7 +115,7 @@ def crawlSingleURL(link, idx, total_links):
 		print "ERR: timeout [%s/%s] " % (idx, total_links)
 	except urllib2.URLError:
 		print "ERR: timeout [%s/%s] " % (idx, total_links)
-	except Exception, e:		
+	except Exception, e:
 		pass
 
 def crawlSingleURLForContent(link, idx, total_links):
@@ -124,6 +125,7 @@ def crawlSingleURLForContent(link, idx, total_links):
 		opener = buildOpener()
 		start = time.time()
 		data = opener.open(link).read()
+		istats = build_page_info(link, data)
 		data = clean_content(data)
 		soup = BeautifulSoup(data)
 		meta_data_keywords = soup.findAll('meta', {'name':'keywords'})
@@ -146,6 +148,7 @@ def crawlSingleURLForContent(link, idx, total_links):
 		field = URLField(link, titleTag, descr, keywords)
 		field.full_content = data
 		field.extract_content = partial_content
+		field.info_stats = istats
 		field.populate()
 		if ((idx % LINK_SET_INDICATOR) == 0):
 			sys.stdout.write("[%s/%s] " % (idx, total_links))
@@ -191,9 +194,11 @@ def crawlBuildLinks(link_list):
 
 	if total_links_tag != 0:
 		valid_ratio =  float(total_links) / total_links_tag
-		print "INFO: valid links ratio: %s, max=%s/%s" % (valid_ratio,
-								  total_links,
-								  total_links_tag)
+		print "INFO: valid links ratio: %s, max=%s/%s" % \
+		(valid_ratio,
+		 total_links,
+		 total_links_tag)
+
 	# Return an empty list or valid content
 	if sub_links is None:
 		return ([], total_links)
