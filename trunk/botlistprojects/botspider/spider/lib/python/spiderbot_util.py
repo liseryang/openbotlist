@@ -59,7 +59,7 @@ LINK_SET_INDICATOR = 20
 URL_LINK_SERVICE="http://127.0.0.1:9080/testwebapp/data/data.jsp"
 FF_USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
 
-from spiderbot_const import ENTITY_IGNORE_LIST
+from spiderbot_const import ENTITY_IGNORE_LIST, SPIDER_CSV_DELIM
 
 opener = None
 def buildOpener():
@@ -124,20 +124,58 @@ def get_meta_content(meta_data_arr):
 		pass	
 	return ""
 
+class PageInfoStats:
+	def __init__(self, page_url):
+		self.page_url = page_url
+		self.anchor_ct = 0
+		self.bold_ct = 0
+		self.block_ct = 0
+		self.div_ct = 0
+		self.h1_ct = 0
+		self.h2_ct = 0
+		self.italic_ct = 0
+		self.img_ct = 0
+		self.para_ct = 0
+		self.span_ct = 0
+		self.strong_ct = 0
+		self.table_ct = 0
+	def __str__(self):
+		d = SPIDER_CSV_DELIM
+		str_templ = "%s%s"
+		str_templ += ("%d%s" * 11)
+		str_templ += "%d\n"
+		return str_templ % \
+		(self.page_url, d,
+		 self.anchor_ct, d,
+		 self.bold_ct, d,
+		 self.block_ct, d,
+		 self.div_ct, d,
+		 self.h1_ct, d,
+		 self.h2_ct, d,
+		 self.italic_ct, d,
+		 self.img_ct, d,
+		 self.para_ct, d,
+		 self.span_ct, d,
+		 self.strong_ct, d,
+		 self.table_ct)
+		
 class URLField:
 	def __init__(self, url, title, descr, keywords):
 		self.url = url
 		self.title = title
 		self.descr = descr
-		self.keywords = keywords		
-		self.full_content = None
-		self.extract_content = None
+		self.keywords = keywords
 		# Structure values for writing to data file
 		self.url_len_u2 = 0
 		self.title_len_u2 = 0
 		self.descr_len_u2 = 0
 		self.keywords_len_u2 = 0
-		
+
+		# Partial extract content values
+		self.full_content = None
+		self.extract_content = None		
+		self.info_stats = None
+
 	def populate(self):
 		"""After fields have been set, populate rest of data"""
 		if self.title is None: self.title = "" ;

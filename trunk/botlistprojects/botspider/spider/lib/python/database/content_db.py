@@ -40,6 +40,18 @@ Also see:
 """
 
 import sys
+from spiderbot_const import KEY_HTML_TAGS
+
+def _write_info_headers(dir_name):
+	""" Write headers for page stats content"""
+	filename = "%s/_dump_file.info_headers" % (dir_name)
+	#hdrs = [ "%s::|" % n for n in KEY_HTML_TAGS[:-1]]
+	str = '::|'.join(KEY_HTML_TAGS)
+	f = open(filename, "w")
+	# Write the first item; URL column
+	f.write("URL::|")
+	f.write(str + '\n')	
+	f.close()
 
 def create_content_db(dir_name, content_list):
 	""" Save the content to plain text files"""
@@ -56,6 +68,14 @@ def create_content_db(dir_name, content_list):
 			f = open(extract_filename, "w")
 			f.write(field.extract_content)
 			f.close()
-			
+
+			# Write the page content info stats
+			_write_info_headers(dir_name)
+			stats_filename = "%s/_dump_file_%s.info" % (dir_name, i)
+			f = open(stats_filename, "w")
+			page_info_stats = "%s" % field.info_stats
+			if field.info_stats is not None:
+				f.write(page_info_stats)
+			f.close()			
 		except Exception, e:
-			print e
+			print "ERR <create_content_db> %s", e

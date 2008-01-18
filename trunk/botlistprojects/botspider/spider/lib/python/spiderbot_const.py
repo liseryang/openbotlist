@@ -40,6 +40,37 @@ __author__ = "Berlin Brown"
 __copyright__ = "Copyright (c) 2006-2008 Berlin Brown"
 __license__ = "New BSD"
 
+SPIDER_CSV_DELIM = "::|"
+
+KEY_HTML_TAGS = [
+	"a",
+	"b",
+	"blockquote",
+	"div",
+	"h1",
+	"h2",
+	"i",
+	"img",
+	"p",
+	"span",
+	"strong",
+	"table"
+]
+HTML_TAG_MAP =  {
+    	"a": "Anchor Tag",
+	"b": "Bold Tag",
+	"blockquote": "Block Quote",
+	"div": "Div Tag",
+	"h1": "Header1 Tag",
+	"h2": "Header2 Tag",
+	"i": "Italic Tag",
+	"img": "Image Tag",
+	"p": "Paragraph Tag",
+	"span": "Span Tag",
+	"strong": "Strong Tag",
+	"table": "Table Tag"
+}
+
 ENTITY_IGNORE_LIST = [
  "&#160;" , # no-break space
  "&#161;" , # inverted exclamation mark 

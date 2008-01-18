@@ -41,8 +41,66 @@ __copyright__ = "Copyright (c) 2006-2008 Berlin Brown"
 __license__ = "New BSD"
 
 from soup.BeautifulSoup import *
-from spiderbot_util import convertStrAscii
-from spiderbot_util import ignoreHtmlEntity
+from spiderbot_util import convertStrAscii, ignoreHtmlEntity, PageInfoStats
+from spiderbot_const import KEY_HTML_TAGS, HTML_TAG_MAP
+
+TAG_a = 0
+TAG_b = 1
+TAG_bq = 2
+TAG_div = 3
+TAG_h1 = 4
+TAG_h2 = 5
+TAG_i = 6
+TAG_img = 7
+TAG_p = 8
+TAG_span = 9
+TAG_strong = 10
+TAG_table = 11
+
+KEY_HTML_TAGS = [
+	"a",
+	"b",
+	"blockquote",
+	"div",
+	"h1",
+	"h2",
+	"i",
+	"img",
+	"p",
+	"span",
+	"strong",
+	"table",
+];
+
+def set_stats_prop(stats_class, prop_attr, val):
+	stats_class.__dict__[prop_attr] = val
+
+def build_page_info(page_url, data):
+	""" Build page statistics based on beautiful soup invoke,
+	note: this may reload the data content again in order have a fresh start.
+	See http://www.w3schools.com/tags/default.asp 
+	for HTML tag references."""
+	soup = BeautifulSoup(data)
+	stats = PageInfoStats(page_url)
+	for info_tag in KEY_HTML_TAGS:
+		tag_arr = soup.findAll(info_tag)
+		n = len(tag_arr)
+		# Simple switch statement, change handler depending on tag type
+		page_info_switch = {
+			KEY_HTML_TAGS[TAG_a]: lambda x: set_stats_prop(stats, 'anchor_ct', x),
+			KEY_HTML_TAGS[TAG_b]: lambda x: set_stats_prop(stats, 'bold_ct', x), 
+			KEY_HTML_TAGS[TAG_bq]: lambda x: set_stats_prop(stats, 'block_ct', x), 
+			KEY_HTML_TAGS[TAG_div]: lambda x: set_stats_prop(stats, 'div_ct', x), 
+			KEY_HTML_TAGS[TAG_h1]: lambda x: set_stats_prop(stats, 'h1_ct', x), 
+			KEY_HTML_TAGS[TAG_h2]: lambda x: set_stats_prop(stats, 'h2_ct', x), 
+			KEY_HTML_TAGS[TAG_i]: lambda x: set_stats_prop(stats, 'italic_ct', x), 
+			KEY_HTML_TAGS[TAG_img]: lambda x: set_stats_prop(stats, 'img_ct', x), 
+			KEY_HTML_TAGS[TAG_p]: lambda x: set_stats_prop(stats, 'para_ct', x), 
+			KEY_HTML_TAGS[TAG_span]: lambda x: set_stats_prop(stats, 'span_ct', x), 
+			KEY_HTML_TAGS[TAG_strong]: lambda x: set_stats_prop(stats, 'strong_ct', x), 
+			KEY_HTML_TAGS[TAG_table]: lambda x: set_stats_prop(stats, 'table_ct', x)
+			} [info_tag](n)
+	return stats
 
 def doc_ignore_content(soup):
 	""" With beautiful soup's api, ignore content
