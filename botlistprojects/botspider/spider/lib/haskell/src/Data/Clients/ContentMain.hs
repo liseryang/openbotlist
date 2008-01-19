@@ -48,7 +48,8 @@ import Text.Regex (splitRegex, mkRegex)
 main :: IO ()
 main = do
   putStrLn "*** Content Analysis"
-  content <- readFile "Makefile" 
-  let z = splitRegex (mkRegex "\\s*[,]\\s*") "eggs,ham, whatever, dogs, dogs, cats"
-  mapM_ (putStrLn) z
+  content <- readFile "../../var/lib/spiderdb/dump/_dump_file_4.extract" 
+  let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
+  mapM_ (\x -> (putStrLn $ "Token:[" ++ x ++ "] Len:" ++ (show $ length $ x))) tokens
+  putStrLn $ "Number of tokens found: " ++ (show . length $ tokens)
   putStrLn "*** Done"
