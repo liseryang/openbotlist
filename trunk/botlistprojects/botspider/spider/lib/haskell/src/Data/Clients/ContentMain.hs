@@ -68,7 +68,7 @@ wordFreq inlst = Map.toList $ foldl' updateMap (Map.empty :: Map.Map String Int)
 --
 -- | Word Category Frequency, modified version of wordFreq to 
 -- handle Word Category type.
-wordCatFreq :: [WordCat] -> [(WordCat, Int)]
+wordCatFreq :: [WordCat] -> [WordCatInfo]
 wordCatFreq inlst = Map.toList $ foldl' 
                     updateMap (Map.empty :: Map.Map WordCat Int) inlst
     where updateMap freqmap wordcat = case (Map.lookup wordcat freqmap) of
@@ -91,6 +91,13 @@ freqSort (w1, c1) (w2, c2) = if c1 == c2
 -- sortBy :: (a -> a -> Ordering) -> [a] -> [a]
 wordFreqSort :: [String] -> [(String, Int)]
 wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
+
+--
+-- | bayes classification train 
+trainClassify :: String -> String -> [WordCatInfo]
+trainClassify content cat = let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
+                            wordcats = [ (tok, cat) | tok <- tokens] 
+                        in wordCatFreq wordcats
 
 goodfile = "../../var/lib/spiderdb/dump/_dump_file_4.extract"
 badfile = "../../var/lib/spiderdb/dump/_dump_file_2.extract"
