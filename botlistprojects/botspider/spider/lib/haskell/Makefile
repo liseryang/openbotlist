@@ -13,7 +13,7 @@ build-all:
 
 content:
 	runhaskell Setup.hs build --verbose
-	./dist/build/content/content
+	time ./dist/build/content/content
 
 clean:
 	rm -Rf dist
