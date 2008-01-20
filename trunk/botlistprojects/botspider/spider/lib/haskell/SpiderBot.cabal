@@ -16,5 +16,5 @@ Build-Depends:  base, haskell98
 Executable content
     Hs-Source-Dirs:     src src/Data/Clients
     Main-is:			ContentMain.hs
-    Build-Depends:		base, haskell98, network, time, regex-compat
+    Build-Depends:		base, haskell98, network, time, regex-compat, containers
     Other-Modules:      Data.SpiderNet.ContentMining
