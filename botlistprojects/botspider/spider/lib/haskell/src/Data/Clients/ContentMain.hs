@@ -96,7 +96,7 @@ wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
 -- | bayes classification train 
 trainClassify :: String -> String -> [WordCatInfo]
 trainClassify content cat = let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
-                            wordcats = [ (tok, cat) | tok <- tokens] 
+                                wordcats = [ (tok, cat) | tok <- tokens] 
                         in wordCatFreq wordcats
 
 goodfile = "../../var/lib/spiderdb/dump/_dump_file_4.extract"
@@ -113,7 +113,6 @@ simpleTest1 = do
 main :: IO ()
 main = do
   putStrLn "*** Content Analysis"
-  let example = [("Fox", "Good"), ("Sex", "Bad")]
-      wordcatfreq = wordCatFreq example
+  let wordcatfreq = trainClassify "viagra is bad cialis is good" "bad"
   mapM_ (\x -> (putStrLn $ formatWordCat x)) wordcatfreq
   putStrLn "*** Done"
