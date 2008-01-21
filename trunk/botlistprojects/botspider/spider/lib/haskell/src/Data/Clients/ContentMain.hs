@@ -35,6 +35,9 @@ Description:
 
 Save spider database format in big endian format (network format).
 
+Note: I use the term feature and token interchangably, most documents
+when talking about bayesian filters use the term feature.
+
 Also see:
  (1) http://www.haskell.org/ghc/docs/latest/html/libraries/containers/Data-Map.html
 
@@ -45,6 +48,7 @@ module Main where
 
 import System.Environment
 import qualified Data.Map as Map
+import qualified Data.Set as Set
 import Data.List
 import Text.Regex (splitRegex, mkRegex)
 
@@ -96,8 +100,52 @@ wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
 -- | bayes classification train 
 trainClassify :: String -> String -> [WordCatInfo]
 trainClassify content cat = let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
-                                wordcats = [ (tok, cat) | tok <- tokens] 
+                                wordcats = [(tok, cat) | tok <- tokens] 
                         in wordCatFreq wordcats
+
+--
+-- | Return only the tokens in a category.
+tokensCat :: [WordCatInfo] -> String -> [WordCatInfo]
+tokensCat tokens cat = let getTokCat row = snd (fst row)
+                           tokbycat = filter (\x -> ((getTokCat x) == cat)) tokens
+                       in tokbycat
+
+tokensByFeature :: [WordCatInfo] -> String -> String -> [WordCatInfo]
+tokensByFeature tokens tok cat = filter (\x -> ((fst x) == (tok, cat))) tokens
+
+--
+-- | Count of number of features in a particular category
+-- Extract the first tuple to get the WordCat type and then the
+-- second tuple to get the category.
+catCount :: [WordCatInfo] -> String -> Integer
+catCount tokens cat = genericLength $ tokensCat tokens cat
+
+-- Find the distinct categories
+categories :: [WordCatInfo] -> [String]
+categories tokens = let getTokCat row = snd (fst row)                     
+                        allcats = Set.toList . Set.fromList $ [ getTokCat x | x <- tokens ]
+                    in allcats
+
+featureCount :: [WordCatInfo] -> String -> String -> Integer
+featureCount tokens tok cat = genericLength $ tokensByFeature tokens tok cat
+
+--
+-- | Feature probality, count in this category over total in category
+featureProb :: [WordCatInfo] -> String -> String -> Double
+featureProb features tok cat = let fct = featureCount features tok cat
+                                   catct = catCount features cat
+                               in (fromIntegral fct) / (fromIntegral catct)
+
+--
+-- | Calcuate the category probability
+categoryProb :: [WordCatInfo] -> String -> String -> Double
+categoryProb features tok cat = initfprob / freqsum
+    where initfprob = featureProb features tok cat
+          freqsum = sum [ (featureProb features tok x) | x <- categories features ]
+
+-- **********************************************
+-- Tests
+-- **********************************************
 
 goodfile = "../../var/lib/spiderdb/dump/_dump_file_4.extract"
 badfile = "../../var/lib/spiderdb/dump/_dump_file_2.extract"
@@ -110,9 +158,37 @@ simpleTest1 = do
   mapM_ (\x -> (putStrLn $ formatWordFreq x)) wordfreq
   putStrLn $ "Number of tokens found: " ++ (show . length $ wordfreq)
 
+simpleTest2 :: IO ()
+simpleTest2 = do
+  let badfreq = trainClassify "viagra is bad cialis is good" "bad"
+      goodfreq = trainClassify "I like to run with foxes they cool" "good"
+      allfreq = badfreq ++ goodfreq
+  mapM_ (\x -> (putStrLn $ formatWordCat x)) allfreq
+
+simpleTest3 :: IO ()
+simpleTest3 = do
+  let aa = [(("1", "aa") :: (String, String), -1), (("2", "aa"), -1), (("3", "bb"), -1)]
+      tokensAA = tokensCat aa "aa"
+      countAA = catCount aa "aa"
+      c = featureProb aa "1" "aa"
+  putStrLn $ "-->" ++ (show countAA) ++ " // " ++ (show tokensAA) ++ " // " ++ (show c)
+
+simpleTest4 :: IO ()
+simpleTest4 = do
+  let aa = [(("dogs dogs", "good") :: (String, String), 3), 
+            (("viagra", "bad") :: (String, String), 5), 
+            (("fox", "good") :: (String, String), 2), 
+            (("dogs", "good"), 4), 
+            (("3", "bad"), 5)]
+      bb = categories aa
+      tokensAA = tokensByFeature aa "dogs" "good"
+      c = featureProb aa "dogs" "good"
+      d = catCount aa "good"
+      x = categoryProb aa "xdogs" "good"
+  putStrLn $ "-->" ++ (show d) ++ "//" ++ (show bb) ++ "//" ++ (show x)
+
 main :: IO ()
 main = do
   putStrLn "*** Content Analysis"
-  let wordcatfreq = trainClassify "viagra is bad cialis is good" "bad"
-  mapM_ (\x -> (putStrLn $ formatWordCat x)) wordcatfreq
+  simpleTest4
   putStrLn "*** Done"
