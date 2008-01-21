@@ -143,6 +143,29 @@ categoryProb features tok cat = initfprob / freqsum
     where initfprob = featureProb features tok cat
           freqsum = sum [ (featureProb features tok x) | x <- categories features ]
 
+weightedProb :: [WordCatInfo] -> String -> String -> Double -> Double
+weightedProb features tok cat weight = ((weight*ap)+(totals*initprob))/(weight+totals)
+    where initprob = categoryProb features tok cat
+          ap = 0.5
+          totals = fromIntegral $ sum [ (featureCount features tok x) | x <- categories features ]
+
+-- Inverted Chi2 formula
+invChi2 :: Double -> Double -> Double
+invChi2 chi df = minimum([snd newsum, 1.0])
+    where m = chi / 2.0
+          initsum = exp (-m)
+          trm = exp (-m)
+          maxrg = fromIntegral (floor (df / 2.0)) :: Double
+          -- Return a tuple with current sum and term, given these inputs
+          newsum = foldl (\(trm,sm) elm -> ((trm*(m/elm)), sm+trm)) 
+                   (trm,initsum) [1..maxrg]
+
+fisherProb :: [WordCatInfo] -> [String] -> String -> Double
+fisherProb features tokens cat = p
+    where p = foldl (\prb f -> (prb * (weightedProb features f cat 1.0))) () tokens
+          fscore = (-2) * (log p)
+          invchi = invChi2 fscore ((genericLength features) * 2)
+
 -- **********************************************
 -- Tests
 -- **********************************************
@@ -185,7 +208,8 @@ simpleTest4 = do
       c = featureProb aa "dogs" "good"
       d = catCount aa "good"
       x = categoryProb aa "xdogs" "good"
-  putStrLn $ "-->" ++ (show d) ++ "//" ++ (show bb) ++ "//" ++ (show x)
+      z = weightedProb aa "dogs" "good" 1.0
+  putStrLn $ "-->" ++ (show d) ++ "//" ++ (show bb) ++ "//" ++ (show z) 
 
 main :: IO ()
 main = do
