@@ -44,75 +44,7 @@ Also see:
 
 module Main where
 
-import System.Environment
-import qualified Data.Map as Map
-import qualified Data.Set as Set
-import Data.List
-import Text.Regex (splitRegex, mkRegex)
-import Data.SpiderNet.Bayes
-
-type WordCat = (String, String)
-type WordCatInfo = (WordCat, Int)
-type WordInfo = (String, Int)
-
--- **********************************************
--- Tests
--- **********************************************
-
-goodfile = "../../var/lib/spiderdb/dump/_dump_file_4.extract"
-badfile = "../../var/lib/spiderdb/dump/_dump_file_2.extract"
-
-simpleTest1 :: IO ()
-simpleTest1 = do
-  content <- readFile badfile
-  let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
-      wordfreq = wordFreqSort tokens
-  mapM_ (\x -> (putStrLn $ formatWordFreq x)) wordfreq
-  putStrLn $ "Number of tokens found: " ++ (show . length $ wordfreq)
-
-simpleTest2 :: IO ()
-simpleTest2 = do
-  let badfreq = trainClassify "viagra is bad cialis is good" "bad"
-      goodfreq = trainClassify "I like to run with foxes they cool" "good"
-      allfreq = badfreq ++ goodfreq
-  mapM_ (\x -> (putStrLn $ formatWordCat x)) allfreq
-
-simpleTest3 :: IO ()
-simpleTest3 = do
-  let aa = [(("1", "aa") :: (String, String), -1), (("2", "aa"), -1), (("3", "bb"), -1)]
-      tokensAA = tokensCat aa "aa"
-      countAA = catCount aa "aa"
-      c = featureProb aa "1" "aa"
-  putStrLn $ "-->" ++ (show countAA) ++ " // " ++ (show tokensAA) ++ " // " ++ (show c)
-
-simpleTest4 :: IO ()
-simpleTest4 = do
-  let aa = [(("dogs dogs", "good") :: (String, String), 3), 
-            (("viagra", "bad") :: (String, String), 5), 
-            (("fox", "good") :: (String, String), 2), 
-            (("dogs", "good"), 4), 
-            (("3", "bad"), 5)]
-      bb = categories aa
-      tokensAA = tokensByFeature aa "dogs" "good"
-      c = featureProb aa "dogs" "good"
-      d = catCount aa "good"
-      x = categoryProb aa "xdogs" "good"
-      z = weightedProb aa "dogs" "good" 1.0
-  putStrLn $ "-->" ++ (show d) ++ "//" ++ (show bb) ++ "//" ++ (show z) 
-
-simpleTest5 :: IO ()
-simpleTest5 = do
-  let aa = [(("dogs dogs", "good") :: (String, String), 3), 
-            (("viagra", "bad") :: (String, String), 5), 
-            (("fox", "good") :: (String, String), 2), 
-            (("dogs", "good"), 4), 
-            (("3", "bad"), 5)]
-      testdata = [ "xdog" ]
-      bb = fisherProb aa testdata "bad"
-  putStrLn $ "-->" ++ show bb
-
 main :: IO ()
 main = do
   putStrLn "*** Content Analysis"
-  simpleTest5
   putStrLn "*** Done"
