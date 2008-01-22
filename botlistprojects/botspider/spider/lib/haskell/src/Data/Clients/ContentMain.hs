@@ -217,7 +217,7 @@ simpleTest5 = do
             (("fox", "good") :: (String, String), 2), 
             (("dogs", "good"), 4), 
             (("3", "bad"), 5)]
-      testdata = [ "this", "is", "dog" ]
+      testdata = [ "dog" ]
       bb = fisherProb aa testdata "bad"
   putStrLn $ "-->" ++ show bb
 
