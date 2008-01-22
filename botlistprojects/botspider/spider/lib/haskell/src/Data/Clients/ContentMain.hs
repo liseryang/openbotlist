@@ -33,8 +33,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Description:
 
-Save spider database format in big endian format (network format).
-
 Note: I use the term feature and token interchangably, most documents
 when talking about bayesian filters use the term feature.
 
