@@ -161,8 +161,9 @@ invChi2 chi df = minimum([snd newsum, 1.0])
                    (trm,initsum) [1..maxrg]
 
 fisherProb :: [WordCatInfo] -> [String] -> String -> Double
-fisherProb features tokens cat = p
-    where p = foldl (\prb f -> (prb * (weightedProb features f cat 1.0))) () tokens
+fisherProb features tokens cat = invchi
+    where initw = 1.0
+          p = foldl (\prb f -> (prb * (weightedProb features f cat initw))) 1.0 tokens
           fscore = (-2) * (log p)
           invchi = invChi2 fscore ((genericLength features) * 2)
 
@@ -211,8 +212,19 @@ simpleTest4 = do
       z = weightedProb aa "dogs" "good" 1.0
   putStrLn $ "-->" ++ (show d) ++ "//" ++ (show bb) ++ "//" ++ (show z) 
 
+simpleTest5 :: IO ()
+simpleTest5 = do
+  let aa = [(("dogs dogs", "good") :: (String, String), 3), 
+            (("viagra", "bad") :: (String, String), 5), 
+            (("fox", "good") :: (String, String), 2), 
+            (("dogs", "good"), 4), 
+            (("3", "bad"), 5)]
+      testdata = [ "this", "is", "dog" ]
+      bb = fisherProb aa testdata "bad"
+  putStrLn $ "-->" ++ show bb
+
 main :: IO ()
 main = do
   putStrLn "*** Content Analysis"
-  simpleTest4
+  simpleTest5
   putStrLn "*** Done"
