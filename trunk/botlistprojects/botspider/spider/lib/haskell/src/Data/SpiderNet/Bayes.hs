@@ -137,14 +137,20 @@ featureCount tokens tok cat = genericLength $ tokensByFeature tokens tok cat
 featureProb :: [WordCatInfo] -> String -> String -> Double
 featureProb features tok cat = let fct = featureCount features tok cat
                                    catct = catCount features cat
-                               in (fromIntegral fct) / (fromIntegral catct)
+                                   res | (catct == 0) = 0
+                                       | (fct == 0)   = 0
+                                       | otherwise    = (fromIntegral fct) / (fromIntegral catct)
+                               in res
 
 --
 -- | Calcuate the category probability
 categoryProb :: [WordCatInfo] -> String -> String -> Double
-categoryProb features tok cat = initfprob / freqsum
+categoryProb features tok cat = res
     where initfprob = featureProb features tok cat
-          freqsum = sum [ (featureProb features tok x) | x <- categories features ]
+          freqsum | initfprob == 0 = 0
+                  | otherwise      = sum [ (featureProb features tok x) | x <- categories features ]
+          res     | freqsum == 0   = 0
+                  | otherwise      = initfprob / freqsum
 
 weightedProb :: [WordCatInfo] -> String -> String -> Double -> Double
 weightedProb features tok cat weight = ((weight*ap)+(totals*initprob))/(weight+totals)
