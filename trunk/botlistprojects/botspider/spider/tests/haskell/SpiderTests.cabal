@@ -20,11 +20,14 @@ Library
                          regex-compat, containers
   Exposed-modules:       Data.AMQP.QueueClient
                          Data.SpiderQueue.Queue
-                         Data.SpiderNet.Bayes						 
+                         Data.SpiderNet.Bayes
                          Tests.AMQP.TestQueueClient 
                          Tests.Data.TestQueue
+                         Tests.Data.TestBayesInvChi
+                         Tests.Data.TestBayesProb
 
 Executable test1
   Hs-Source-Dirs:     ../../lib/haskell/src src/Tests src
   Main-is:            Main.hs
   Other-Modules:      Tests.AMQP.TestQueueClient
+                      Tests.Data.TestBayesInvChi
