@@ -14,12 +14,12 @@ import Data.Time.Clock.POSIX
 main = do
   ct <- getClockTime
   pt <- getPOSIXTime
-  putStrLn $ "Running Test AMQP (1)"
+  putStrLn $ "Running Tests"
   putStrLn $ "At: " ++ (show ct) ++ " t:" ++ (show (round pt))
-  putStrLn $ "AMQP Queue Client=" ++ libVers
+  --putStrLn $ "AMQP Queue Client=" ++ libVers
   --connectServerTest
-  putStrLn "Test Build Queue (2)"
-  runQueueTest
-  putStrLn "Test Spider Database (3)"
-  runDatabaseTest
+  --putStrLn "Test Build Queue (2)"
+  --runQueueTest
+  --putStrLn "Test Spider Database (3)"
+  --runDatabaseTest
   putStrLn "Done"
