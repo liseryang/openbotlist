@@ -13,8 +13,8 @@ build-all:
 
 build:
 	runhaskell Setup.hs build --verbose
-	./dist/build/testq/testq
-	
+	./dist/build/test1/test1
+
 clean:
 	rm -Rf dist
 
