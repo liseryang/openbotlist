@@ -159,9 +159,9 @@ weightedProb features tok cat weight = ((weight*ap)+(totals*initprob))/(weight+t
           totals = fromIntegral $ sum [ (featureCount features tok x) | x <- categories features ]
 
 -- Inverted Chi2 formula
+{-
 invChi2 :: Double -> Double -> Double
--- minimum([snd newsum, 1.0])
-invChi2 chi df    = fst newsum
+invChi2 chi df    = minimum([snd newsum, 1.0])
     where m       = chi / 2.0
           initsum = exp (-m)
           inittrm = exp (-m)
@@ -169,10 +169,18 @@ invChi2 chi df    = fst newsum
           -- Return a tuple with current sum and term, given these inputs
           newsum  = foldl (\(trm, sm) elm -> ((trm * (m/elm)), sm+trm)) 
                     (inittrm, initsum) [1..1]
+-}
+invChi2 :: Double -> Double -> Double
+invChi2 chi df = min (sum termsList + exp (negate m)) 1.0
+    where m = chi / 2.0
+          terms :: Int -> Double
+          terms 0 = exp (negate m)
+          terms i = terms (i - 1) * m / fromIntegral i
+          termsList = map terms [1..truncate df `div` 2 - 1]
 
 fisherProb :: [WordCatInfo] -> [String] -> String -> Double
 fisherProb features tokens cat = invchi
     where initw = 1.0
           p = foldl (\prb f -> (prb * (weightedProb features f cat initw))) 1.0 tokens
-          fscore = (-2) * (log p)
+          fscore = (negate 2) * (log p)
           invchi = invChi2 fscore ((genericLength tokens) * 2)
