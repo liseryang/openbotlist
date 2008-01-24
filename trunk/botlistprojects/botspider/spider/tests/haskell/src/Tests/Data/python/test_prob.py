@@ -199,11 +199,12 @@ def sampletrain(cl):
 if __name__ == '__main__':
   print "Probability Tests"
   cl =  fisherclassifier(getwords)
-  cl.train('my dog likes chicken yes', 'good')
-  cl.train('viagra', 'bad')
+  #cl.train('my dog likes chicken yes', 'good')
+  #cl.train('viagra', 'bad')
+  sampletrain(cl)
   print "Cat Count=%s" % cl.catcount('good')
   print "prob1=%s" % cl.fprob('dog', 'good')
   print "prob2=%s" % cl.cprob('dog', 'good')
   print "prob3=%s" % cl.weightedprob('dog', 'good',cl.cprob, weight=0.3)
-  print "prob4=%s" % cl.fisherprob('sex dog cat', 'good')
+  print "prob4=%s" % cl.fisherprob('sss bbb ddd', 'good')
   print "Done"
