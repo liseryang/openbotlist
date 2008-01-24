@@ -43,7 +43,8 @@ Also see:
 -- *********************************************************
 
 module Data.SpiderNet.Bayes 
-    (wordFreq, wordCatFreq, formatWordFreq, 
+    (WordCat, WordCatInfo, WordInfo,
+     wordFreq, wordCatFreq, formatWordFreq, 
      formatWordCat, wordFreqSort, trainClassify, 
      tokensCat, tokensByFeature, catCount, 
      categories, featureCount, featureProb, 
