@@ -22,7 +22,8 @@ runCatProbTest = do
   putStrLn $ "Number in Category=" ++ (show $ catCount exampleData cat)
   putStrLn $ "Feature Probability=" ++ (show $ featureProb exampleData feature cat)
   putStrLn $ "Category Probability=" ++ (show $ categoryProb exampleData feature cat)
-  putStrLn $ "Weighted Probability=" ++ (show $ weightedProb exampleData feature cat 1.0)
+  putStrLn $ "Weighted Probability=" ++ (show $ weightedProb exampleData feature cat 0.3)
+  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb exampleData ["sex", "dog", "cat"] "good")
   putStrLn "Done Bayes"
 
 runProbTests = do
