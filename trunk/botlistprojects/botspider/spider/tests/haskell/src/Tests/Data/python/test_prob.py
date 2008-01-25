@@ -87,17 +87,23 @@ class naivebayes(classifier):
     classifier.__init__(self,getfeatures)
     self.thresholds={}
   
-  def docprob(self,item,cat):
-    features=self.getfeatures(item)   
-
+  def docprob(self, item, cat):
+    features = self.getfeatures(item)
+    print "docprob: len features=%s" % len(features)
     # Multiply the probabilities of all the features together
     p=1
-    for f in features: p*=self.weightedprob(f,cat,self.fprob)
+    for f in features:
+      p*=self.weightedprob(f,cat,self.fprob)
     return p
 
   def prob(self,item,cat):
+    print "prob: total count=%s" % self.totalcount()
     catprob=self.catcount(cat)/self.totalcount()
+    print "prob: catct=%s" % self.catcount(cat)
     docprob=self.docprob(item,cat)
+    print "prob: docprob=%s" % docprob
+    print "Cat Prob: %s" % catprob
+    print "Doc Prob: %s" % docprob
     return docprob*catprob
   
   def setthreshold(self,cat,t):
@@ -207,4 +213,11 @@ if __name__ == '__main__':
   print "prob2=%s" % cl.cprob('dog', 'good')
   print "prob3=%s" % cl.weightedprob('dog', 'good',cl.cprob, weight=0.3)
   print "prob4=%s" % cl.fisherprob('sss bbb ddd', 'good')
+  
+  # --------------------------------
+  cl = naivebayes(getwords)
+  sampletrain(cl)
+  print "Cat Count=%s" % cl.catcount('good')
+  print "prob1b=%s" % cl.fprob('dog', 'good')
+  print "prob4b=%s" % cl.prob('fox dog', 'good')
   print "Done"

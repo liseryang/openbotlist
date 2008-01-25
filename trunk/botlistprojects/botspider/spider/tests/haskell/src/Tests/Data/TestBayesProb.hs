@@ -35,14 +35,22 @@ runCatProbTest = do
   --printFeatureInfo exampleDataDef feature cat
   --putStrLn $ "Fisher Probability=" ++ (show $ fisherProb exampleDataDef ["sss", "dog" ] "bad")
 
-  let cl = (trainClassify "Nobody owns the water." "good") ++
+  let cl = (trainClassify "Nobody owns the water" "good") ++
            (trainClassify "the quick rabbit jumps fences" "good") ++
            (trainClassify "buy pharmaceuticals now" "bad") ++
            (trainClassify "make quick money at the online casino" "bad") ++
            (trainClassify "the quick brown fox jumps" "good")
   printFeatureInfo cl "fox" "good"
   printFeatureInfo cl "fox" "bad"
-  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl ["fox", "dog" ] "good")
+  let t1 = [ "pharmaceuticals", "online", "casino", "sexxxx", "sex" ]
+      t2 = [ "quick", "fox", "brown", "sexxxx", "sex" ]
+      t3 = [ "poo" ]
+  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl t1 "good")
+  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl t1 "bad")
+  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl t3 "good")
+  putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl t3 "bad")
+  putStrLn $ "Bayes Probability=" ++ (show ((bayesProb cl t3 "good" 1.0) * 1.0))
+  putStrLn $ "Bayes Probability=" ++ (show ((bayesProb cl t3 "bad" 1.0) * 1.0))
   putStrLn "Done Bayes"
 
 runProbTests = do
