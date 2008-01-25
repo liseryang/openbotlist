@@ -43,7 +43,7 @@ Also see:
 -- *********************************************************
 
 module Data.SpiderNet.Bayes 
-    (WordCat, WordCatInfo, WordInfo,
+    (WordCat, WordCatInfo, WordInfo, bayesProb,
      wordFreq, wordCatFreq, formatWordFreq, 
      formatWordCat, wordFreqSort, trainClassify, 
      tokensCat, tokensByFeature, catCount, 
@@ -185,3 +185,6 @@ fisherProb features tokens cat = invchi
           p = foldl (\prb f -> (prb * (weightedProb features f cat initw))) 1.0 tokens
           fscore = (negate 2) * (log p)
           invchi = invChi2 fscore ((genericLength tokens) * 2)
+
+bayesProb :: [WordCatInfo] -> [String] -> String -> Double -> Double
+bayesProb features tokens cat weight = fisherProb features tokens cat
