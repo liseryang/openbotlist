@@ -43,11 +43,11 @@ Also see:
 -- *********************************************************
 
 module Data.SpiderNet.Bayes 
-    (WordCat, WordCatInfo, WordInfo, bayesProb,
+    (WordCat, WordCatInfo, WordInfo,
      wordFreq, wordCatFreq, formatWordFreq, 
      formatWordCat, wordFreqSort, trainClassify, 
      tokensCat, tokensByFeature, catCount, 
-     categories, featureCount, featureProb, 
+     categories, featureCount, featureProb, bayesProb,
      categoryProb, weightedProb, invChi2, fisherProb) where
 
 import System.Environment
@@ -133,6 +133,9 @@ categories tokens = let getTokCat row = snd (fst row)
 featureCount :: [WordCatInfo] -> String -> String -> Integer
 featureCount tokens tok cat = genericLength $ tokensByFeature tokens tok cat
 
+totalCount :: [WordCatInfo] -> Integer
+totalCount features = genericLength features
+
 --
 -- | Feature probality, count in this category over total in category
 featureProb :: [WordCatInfo] -> String -> String -> Double
@@ -159,8 +162,17 @@ weightedProb features tok cat weight = ((weight*ap)+(totals*initprob))/(weight+t
           ap = 0.5
           totals = fromIntegral $ sum [ (featureCount features tok x) | x <- categories features ]
 
+--
+-- Weight Probablity function with probability function argument.
+weightedProbFunc :: ([WordCatInfo] -> String -> String -> Double) -> [WordCatInfo] -> String -> String -> Double -> Double
+weightedProbFunc funcProb features tok cat weight = ((weight*ap)+(totals*initprob))/(weight+totals)
+    where initprob = funcProb features tok cat
+          ap = 0.5
+          totals = fromIntegral $ sum [ (featureCount features tok x) | x <- categories features ]
+
 -- Inverted Chi2 formula
 {-
+Prev Version:
 invChi2 :: Double -> Double -> Double
 invChi2 chi df    = minimum([snd newsum, 1.0])
     where m       = chi / 2.0
@@ -181,10 +193,26 @@ invChi2 chi df = min (sum termsList + exp (negate m)) 1.0
 
 fisherProb :: [WordCatInfo] -> [String] -> String -> Double
 fisherProb features tokens cat = invchi
-    where initw = 1.0
-          p = foldl (\prb f -> (prb * (weightedProb features f cat initw))) 1.0 tokens
+    where initp = 1.0
+          weight = 1.0
+          p = foldl (\prb f -> (prb * (weightedProb features f cat weight))) initp tokens
           fscore = (negate 2) * (log p)
           invchi = invChi2 fscore ((genericLength tokens) * 2)
 
+--
+-- Calculate all probabilities in the content document
+-- Used with bayes probability.
+contentProb :: [WordCatInfo] -> [String] -> String -> Double -> Double
+contentProb features tokens cat weight = p
+    where initp = 1.0
+          p = foldl (\prb f -> (prb * (weightedProbFunc featureProb features f cat weight))) initp tokens
+
+--
+-- Bayes probability calculaion
 bayesProb :: [WordCatInfo] -> [String] -> String -> Double -> Double
-bayesProb features tokens cat weight = fisherProb features tokens cat
+bayesProb features tokens cat weight = p
+    where
+      catprob = fromIntegral (catCount features cat) / fromIntegral (totalCount features)
+      prob = contentProb features tokens cat weight
+      p = prob * catprob
+          
