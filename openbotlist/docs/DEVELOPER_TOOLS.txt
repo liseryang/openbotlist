@@ -1,0 +1,25 @@
+##
+## Berlin Brown
+## Updated: 1/27/2008
+##
+ 
+ Overview:
+ ===================
+ 
+ Useful fools for the developer
+ 
+ Misc Tools:
+ ===================
+ 
+	Data browser from kirix
+ 	http://www.kirix.com/
+ 
+ Development:
+ ===================
+  
+ 	Eclipse IDE 3.2+ - Java development, project management
+ 	Emacs - Text editor for all source (haskell, scala, python, ruby, etc) 
+ 
+
+ 
+ 
