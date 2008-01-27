@@ -9,6 +9,7 @@ import Tests.Data.TestQueue
 import Tests.Data.TestSpiderDatabase
 import Tests.Data.TestBayesInvChi
 import Tests.Data.TestBayesProb
+import Tests.Data.TestTrainBayes
 
 import Time
 import Data.Time.Clock.POSIX
@@ -24,7 +25,8 @@ main = do
   --runQueueTest
   --putStrLn "Test Spider Database (3)"
   --runDatabaseTest
-  runBayesTest
-  runProbTests
+  --runBayesTest
+  --runProbTests
+  runTestTrainBayes
   putStrLn "Done"
 
