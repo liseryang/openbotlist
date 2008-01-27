@@ -42,3 +42,5 @@ Also see:
 -- *********************************************************
 module Data.SpiderNet.Document where
 
+import Data.Char
+import Text.Regex (splitRegex, mkRegex)
