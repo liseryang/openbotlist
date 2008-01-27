@@ -44,9 +44,9 @@ Also see:
 
 module Data.SpiderNet.Bayes 
     (WordCat, WordCatInfo, WordInfo,
-     wordFreq, wordCatFreq, formatWordFreq, 
+     wordFreq, wordCatFreq, formatWordFreq, buildTrainSet,
      formatWordCat, wordFreqSort, trainClassify, 
-     tokensCat, tokensByFeature, catCount, 
+     tokensCat, tokensByFeature, catCount, wordTokens,
      categories, featureCount, featureProb, bayesProb,
      categoryProb, weightedProb, invChi2, fisherProb) where
 
@@ -54,11 +54,19 @@ import System.Environment
 import qualified Data.Map as Map
 import qualified Data.Set as Set
 import Data.List
+import Data.Char
 import Text.Regex (splitRegex, mkRegex)
 
 type WordCat = (String, String)
 type WordCatInfo = (WordCat, Int)
 type WordInfo = (String, Int)
+
+wordTokens :: String -> [String]
+wordTokens content = tokens
+    where maxwordlen = 100
+          lowercase str = map toLower str
+          alltokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") (lowercase content)
+          tokens = filter (\x -> length x > 1 && length x < maxwordlen) alltokens
 
 --
 -- | Find word frequency given an input list using "Data.Map" utilities.
@@ -103,9 +111,18 @@ wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
 --
 -- | bayes classification train 
 trainClassify :: String -> String -> [WordCatInfo]
-trainClassify content cat = let tokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") content
+trainClassify content cat = let tokens = wordTokens content
                                 wordcats = [(tok, cat) | tok <- tokens] 
                         in wordCatFreq wordcats
+
+--
+-- Build a set of training data from input content/category information.
+-- Inputs:
+-- List of content/category tuple rows
+-- List of WordCatInfo rows
+buildTrainSet :: [(String, String)] -> [WordCatInfo] -> [WordCatInfo]
+buildTrainSet []     info = info
+buildTrainSet (x:xs) info = info ++ buildTrainSet xs (trainClassify (snd x) (fst x))
 
 --
 -- | Return only the tokens in a category.
