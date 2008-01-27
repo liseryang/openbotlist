@@ -43,9 +43,9 @@ Also see:
 -- *********************************************************
 
 module Data.SpiderNet.Bayes 
-    (WordCat, WordCatInfo, WordInfo,
+    (WordCat, WordCatInfo, WordInfo, documentDensity,
      wordFreq, wordCatFreq, formatWordFreq, buildTrainSet,
-     formatWordCat, wordFreqSort, trainClassify, 
+     formatWordCat, wordFreqSort, trainClassify, contentFeatProb,
      tokensCat, tokensByFeature, catCount, wordTokens,
      categories, featureCount, featureProb, bayesProb,
      categoryProb, weightedProb, invChi2, fisherProb) where
@@ -224,6 +224,14 @@ contentProb features tokens cat weight = p
     where initp = 1.0
           p = foldl (\prb f -> (prb * (weightedProbFunc featureProb features f cat weight))) initp tokens
 
+bayesAvgUtil xs = sum xs / fromIntegral (length xs)
+
+--
+-- Public function, calculate feature probablity for each feature
+contentFeatProb :: [WordCatInfo] -> [String] -> String -> Double
+contentFeatProb features tokens cat = bayesAvgUtil p
+    where p = map (\f -> featureProb features f cat) tokens
+
 --
 -- Bayes probability calculaion
 bayesProb :: [WordCatInfo] -> [String] -> String -> Double -> Double
@@ -233,3 +241,12 @@ bayesProb features tokens cat weight = p
       prob = contentProb features tokens cat weight
       p = prob * catprob
           
+
+--
+-- Document Word Density, how many terms are used through out the document.
+documentDensity :: String -> Double
+documentDensity content = unqct / ct
+    where tokens = wordTokens content
+          ct = fromIntegral (length tokens)
+          unqct = fromIntegral (length (Set.toList . Set.fromList $ tokens))
+                            
