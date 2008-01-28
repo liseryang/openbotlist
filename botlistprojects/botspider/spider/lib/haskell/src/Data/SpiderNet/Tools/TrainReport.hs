@@ -50,6 +50,7 @@ import List (isPrefixOf, isSuffixOf, genericLength)
 import Data.SpiderNet.Bayes
 import IO
 import Data.SpiderNet.Document
+import Data.SpiderNet.Util (timeDiff)
 
 reportOutputFile = "trainreport.csv"
 trainDir = "../../var/lib/spiderdb/train"
@@ -70,8 +71,8 @@ getCatTrainInfo traininfo cat wordtokens = do
                     trainFeatureProb = cfp
                   }
 
-main :: IO ()
-main = do
+runTrainReport :: IO ()
+runTrainReport = do
   putStrLn "Train Report"
   stopwords <- readStopWords stopWordsDb
   -- Process only files with 'train' extension
@@ -98,6 +99,18 @@ main = do
                     ) contentinf
   -- Print the report to file
   h <- openFile reportOutputFile WriteMode
-  mapM_ (\inf -> hPutStr h (show inf)) docreport
+  mapM_ (\inf -> hPutDocumentInfo h inf) docreport
   hClose h  
+
+hPutDocumentInfo :: Handle -> DocumentInfo -> IO ()
+hPutDocumentInfo h info = do
+  hPutStr h (show info) >> hFlush h
+  hPutStr h (formatTrainInfo (docTrainInfo info))
+  hFlush h >> hPutStr h "\n"
+  putStrLn $ " logged info=" ++ (docName info)
+
+main :: IO ()
+main = do
+  timeDiff $ runTrainReport
+
 -- End of File

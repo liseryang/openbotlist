@@ -48,7 +48,7 @@ module Data.SpiderNet.Bayes
      DocTrainInfo(DocTrainInfo), docName, docCharLen, docTokenLen, docWordDensity, docTrainInfo, docStopWordDensity,
      documentDensity,
      wordFreq, wordCatFreq, formatWordFreq, buildTrainSet, wordTokensClean,
-     formatWordCat, wordFreqSort, trainClassify, contentFeatProb,
+     formatWordCat, wordFreqSort, trainClassify, contentFeatProb,formatTrainInfo,
      tokensCat, tokensByFeature, catCount, wordTokens, readStopWords,
      categories, featureCount, featureProb, bayesProb, stopWordDensity,
      categoryProb, weightedProb, invChi2, fisherProb) where
@@ -81,15 +81,14 @@ data DocumentInfo = DocumentInfo {
       docTrainInfo :: [DocTrainInfo]
 }
 
+formatTrainInfo :: [DocTrainInfo] -> String
+formatTrainInfo []     = ""
+formatTrainInfo (x:xs) = (show x) ++ formatTrainInfo xs
+
 instance Show DocumentInfo where
     show info = (printf "%s,%d,%d,%f,%f,"
                  (docName info) (docCharLen info) (docTokenLen info)
                  (docWordDensity info) (docStopWordDensity info))
-                ++ trninfo (docTrainInfo info) ++ "\n"
-        where 
-          trninfo :: [DocTrainInfo] -> String
-          trninfo []     = ""
-          trninfo (x:xs) = (show x) ++ trninfo xs
 
 instance Show DocTrainInfo where
     show info = (printf "%s,%f,%f,%f,"
@@ -312,4 +311,5 @@ stopWordDensity content stop_words = (ct - nostop_ct) / ct
     where tokens = wordTokens content
           ct = fromIntegral (length tokens)
           nostop_ct = fromIntegral $ length (tokens \\ stop_words)
-       
+
+-- End of File
