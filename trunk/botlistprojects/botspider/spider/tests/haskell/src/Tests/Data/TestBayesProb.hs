@@ -51,6 +51,16 @@ runCatProbTest = do
   putStrLn $ "Fisher Probability=" ++ (show $ fisherProb cl t3 "bad")
   putStrLn $ "Bayes Probability=" ++ (show ((bayesProb cl t3 "good" 1.0) * 1.0))
   putStrLn $ "Bayes Probability=" ++ (show ((bayesProb cl t3 "bad" 1.0) * 1.0))
+           
+  -- Test feature count bug
+  putStrLn $ "-- Feature Count Test"
+  let cl = (trainClassify "the the the the the" "good")
+  -- Train classify passes
+  putStrLn $ (show cl)
+  putStrLn $ (show (featureCount cl "the" "good"))
+  -- Train fails, should be 5 (python version also has one)
+  putStrLn $ "Document density=" ++ (show (documentDensity "the the the the the"))
+  putStrLn $ "Document density=" ++ (show (documentDensity "the cat went home"))
   putStrLn "Done Bayes"
 
 runProbTests = do
