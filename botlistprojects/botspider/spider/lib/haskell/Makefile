@@ -5,15 +5,20 @@
 
 TOP_DIR := $(shell pwd)
 
-all: content
+all: trainreport
 
 build-all:
 	runhaskell Setup.hs configure
 	runhaskell Setup.hs build --verbose
 
-content:
+trainreport:
 	runhaskell Setup.hs build --verbose
-	time -p ./dist/build/content/content
+	./dist/build/trainreport/trainreport
+
+tokenize:
+	runhaskell Setup.hs build --verbose
+	./dist/build/tokenize/tokenize -i ../../var/lib/spiderdb/lexicon/stopwords/stopwords.tdb \
+		-o ../../var/lib/spiderdb/lexicon/stopwords/stopwords.tdb.tmp
 
 clean:
 	rm -Rf dist
