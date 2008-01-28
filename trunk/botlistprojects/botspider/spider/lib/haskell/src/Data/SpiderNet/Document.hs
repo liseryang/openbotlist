@@ -40,7 +40,21 @@ Also see:
 
 -}
 -- *********************************************************
-module Data.SpiderNet.Document where
 
+module Data.SpiderNet.Document (readContentByExt) where
+
+import Monad (liftM)
+import System.Directory (getDirectoryContents)
 import Data.Char
+import List (isPrefixOf, isSuffixOf)
 import Text.Regex (splitRegex, mkRegex)
+
+type ContentFileInfo = (String, String)
+
+readContentByExt :: String -> String -> IO [ContentFileInfo]
+readContentByExt filepath ext = do 
+  files <- getDirectoryContents filepath        
+  let trainfiles = filter (isSuffixOf ext) files
+      trainpaths = map (\x -> filepath ++ "/" ++ x) trainfiles
+  lst_content <- liftM (zip trainpaths) $ mapM readFile trainpaths
+  return lst_content
