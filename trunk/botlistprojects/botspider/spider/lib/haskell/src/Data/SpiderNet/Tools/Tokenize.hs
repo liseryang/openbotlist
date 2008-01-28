@@ -1,6 +1,6 @@
 -- *********************************************************
 {-
-File: spiderdb.py
+File: Bayes.hs
 
 Copyright (c) 2007, Botnode.com (Berlin Brown)
 http://www.opensource.org/licenses/bsd-license.php
@@ -44,7 +44,59 @@ Also see:
 
 module Main where
 
+import System
+import System.Console.GetOpt
+import Data.Maybe( fromMaybe )
+
+import Data.SpiderNet.
+
+versTokenize = "0.0"
+
+data Options = Options  {
+      -- Usage: IO String >>= String -> IO ()
+      optInput  :: IO String,
+      optOutput :: String -> IO ()
+    }
+
+tokenizeInput :: String -> IO String
+tokenizeInput content = return "abc"
+
+printOutput :: String -> IO ()
+printOutput inval = do
+  putStrLn inval
+
+defaultOptions :: Options
+defaultOptions = Options {
+                   optInput  = return "",
+                   optOutput = printOutput
+                 }
+
+options :: [OptDescr (Options -> IO Options)]
+options = [
+    Option ['v'] ["version"] (NoArg showVersion)         "show version number",
+    Option ['i'] ["input"]   (ReqArg readInput "FILE")   "input file to read",
+    Option ['o'] ["output"]  (ReqArg writeOutput "FILE") "output file"
+  ]
+
+readInput arg opt = return opt { 
+                      optInput = readFile arg 
+                    }
+writeOutput arg opt = return opt { 
+                        optOutput = writeFile arg 
+                      }
+
+showVersion _ = do
+  putStrLn $ "Commandline example " ++ versTokenize
+  exitWith ExitSuccess
+
 main :: IO ()
 main = do
-  putStrLn "*** Content Analysis"
-  putStrLn "*** Done"
+  args <- getArgs
+  let (actions, nonOpts, msgs) = getOpt RequireOrder options args
+  opts <- foldl (>>=) (return defaultOptions) actions
+  let Options { 
+         optInput = input,
+         optOutput = output 
+       } = opts
+  -- infix: input: (IO String / m a), output: (String -> IO () / a -> m b)
+  input >>= tokenizeInput >>= output
