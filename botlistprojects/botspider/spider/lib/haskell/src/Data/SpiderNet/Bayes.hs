@@ -43,17 +43,21 @@ Also see:
 -- *********************************************************
 
 module Data.SpiderNet.Bayes 
-    (WordCat, WordCatInfo, WordInfo, documentDensity,
-     wordFreq, wordCatFreq, formatWordFreq, buildTrainSet,
+    (WordCat, WordCatInfo, WordInfo, 
+     DocumentInfo(DocumentInfo), trainCatName, trainBayesProb, trainFisherProb,trainFeatureProb, 
+     DocTrainInfo(DocTrainInfo), docName, docCharLen, docTokenLen, docWordDensity, docTrainInfo, docStopWordDensity,
+     documentDensity,
+     wordFreq, wordCatFreq, formatWordFreq, buildTrainSet, wordTokensClean,
      formatWordCat, wordFreqSort, trainClassify, contentFeatProb,
-     tokensCat, tokensByFeature, catCount, wordTokens,
-     categories, featureCount, featureProb, bayesProb,
+     tokensCat, tokensByFeature, catCount, wordTokens, readStopWords,
+     categories, featureCount, featureProb, bayesProb, stopWordDensity,
      categoryProb, weightedProb, invChi2, fisherProb) where
 
 import System.Environment
 import qualified Data.Map as Map
 import qualified Data.Set as Set
 import Data.List
+import Text.Printf
 import Data.Char
 import Text.Regex (splitRegex, mkRegex)
 
@@ -61,12 +65,48 @@ type WordCat = (String, String)
 type WordCatInfo = (WordCat, Int)
 type WordInfo = (String, Int)
 
+data DocTrainInfo = DocTrainInfo {
+      trainCatName :: String, 
+      trainBayesProb :: Double,
+      trainFisherProb :: Double,
+      trainFeatureProb :: Double
+}
+
+data DocumentInfo = DocumentInfo {
+      docName :: String,
+      docCharLen :: Integer,
+      docTokenLen :: Integer,
+      docWordDensity :: Double,
+      docStopWordDensity :: Double,
+      docTrainInfo :: [DocTrainInfo]
+}
+
+instance Show DocumentInfo where
+    show info = (printf "%s,%d,%d,%f,%f,"
+                 (docName info) (docCharLen info) (docTokenLen info)
+                 (docWordDensity info) (docStopWordDensity info))
+                ++ trninfo (docTrainInfo info) ++ "\n"
+        where 
+          trninfo :: [DocTrainInfo] -> String
+          trninfo []     = ""
+          trninfo (x:xs) = (show x) ++ trninfo xs
+
+instance Show DocTrainInfo where
+    show info = (printf "%s,%f,%f,%f,"
+                 (trainCatName info) (trainBayesProb info) (trainFisherProb info)
+                 (trainFeatureProb info))
+
 wordTokens :: String -> [String]
 wordTokens content = tokens
     where maxwordlen = 100
           lowercase str = map toLower str
           alltokens = splitRegex (mkRegex "\\s*[ \t\n]+\\s*") (lowercase content)
           tokens = filter (\x -> length x > 1 && length x < maxwordlen) alltokens
+
+--
+-- | Tokenize document, clean and remove any stop words.
+wordTokensClean :: String -> [String] -> [String]
+wordTokensClean content stopwords = (wordTokens content) \\ stopwords
 
 --
 -- | Find word frequency given an input list using "Data.Map" utilities.
@@ -110,19 +150,34 @@ wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
 
 --
 -- | bayes classification train 
+-- @see trainClassifyClean, clean filters top words
 trainClassify :: String -> String -> [WordCatInfo]
 trainClassify content cat = let tokens = wordTokens content
                                 wordcats = [(tok, cat) | tok <- tokens] 
-                        in wordCatFreq wordcats
+                            in wordCatFreq wordcats
+                         
+--
+-- | classification train and eliminate stop words from the training set.
+trainClassifyClean :: String -> String -> [String] -> [WordCatInfo]
+trainClassifyClean content cat stop_words = let tokens = (wordTokens content) \\ stop_words
+                                                wordcats = [(tok, cat) | tok <- tokens] 
+                                            in wordCatFreq wordcats
 
 --
--- Build a set of training data from input content/category information.
+-- | Read stop words from the file, return a list of strings.
+readStopWords :: FilePath -> IO [String]
+readStopWords path = readFile path >>= (\input -> return $ wordTokens input)
+
+--
+-- Build a set of training data from input content/category information; include
+-- support for ignoring stop words.
+--
 -- Inputs:
 -- List of content/category tuple rows
 -- List of WordCatInfo rows
-buildTrainSet :: [(String, String)] -> [WordCatInfo] -> [WordCatInfo]
-buildTrainSet []     info = info
-buildTrainSet (x:xs) info = info ++ buildTrainSet xs (trainClassify (snd x) (fst x))
+buildTrainSet :: [(String, String)] -> [String] -> [WordCatInfo] -> [WordCatInfo]
+buildTrainSet []     stop_words info = info
+buildTrainSet (x:xs) stop_words info = info ++ buildTrainSet xs stop_words (trainClassifyClean (snd x) (fst x) stop_words)
 
 --
 -- | Return only the tokens in a category.
@@ -250,3 +305,11 @@ documentDensity content = unqct / ct
           ct = fromIntegral (length tokens)
           unqct = fromIntegral (length (Set.toList . Set.fromList $ tokens))
                             
+--
+-- | What percentage of the document is made up of stop words.
+stopWordDensity :: String -> [String] -> Double
+stopWordDensity content stop_words = (ct - nostop_ct) / ct
+    where tokens = wordTokens content
+          ct = fromIntegral (length tokens)
+          nostop_ct = fromIntegral $ length (tokens \\ stop_words)
+       

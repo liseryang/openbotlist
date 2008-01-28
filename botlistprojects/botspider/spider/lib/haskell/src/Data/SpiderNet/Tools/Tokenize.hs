@@ -48,7 +48,10 @@ import System
 import System.Console.GetOpt
 import Data.Maybe( fromMaybe )
 
-import Data.SpiderNet.
+import qualified Data.Set as Set
+import Data.List
+import Data.SpiderNet.Bayes
+
 
 versTokenize = "0.0"
 
@@ -58,8 +61,14 @@ data Options = Options  {
       optOutput :: String -> IO ()
     }
 
+--
+-- Given an unclean content set; tolower, filter by length, get unique tokens,
+-- tokenize, join the list back together with a token on each line.
+-- @see  intersperse ',' "abcde" == "a,b,c,d,e"
 tokenizeInput :: String -> IO String
-tokenizeInput content = return "abc"
+tokenizeInput content = return $ concat . intersperse "\n" $ unify
+    where tokens = wordTokens content
+          unify = Set.toList . Set.fromList $ tokens
 
 printOutput :: String -> IO ()
 printOutput inval = do
@@ -84,7 +93,6 @@ readInput arg opt = return opt {
 writeOutput arg opt = return opt { 
                         optOutput = writeFile arg 
                       }
-
 showVersion _ = do
   putStrLn $ "Commandline example " ++ versTokenize
   exitWith ExitSuccess
