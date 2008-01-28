@@ -10,6 +10,7 @@ import Tests.Data.TestSpiderDatabase
 import Tests.Data.TestBayesInvChi
 import Tests.Data.TestBayesProb
 import Tests.Data.TestTrainBayes
+import Tests.Data.TestStopWords
 
 import Time
 import Data.Time.Clock.POSIX
@@ -28,5 +29,6 @@ main = do
   --runBayesTest
   --runProbTests
   runTestTrainBayes
+  --runTestStopWords
   putStrLn "Done"
 

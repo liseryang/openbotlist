@@ -9,13 +9,12 @@ def getwords(doc):
   print doc
   # Split the words by non-alpha characters
   words=[s.lower() for s in splitter.split(doc) 
-          if len(s)>=2 and len(s)<20]
-  
+          if len(s)>=2 and len(s)<20]  
   # Return the unique set of words only
   return dict([(w,1) for w in words])
 
 class classifier:
-
+  
   def __init__(self,getfeatures,filename=None):
     # Counts of feature/category combinations
     self.fc={}
@@ -58,6 +57,7 @@ class classifier:
     features=self.getfeatures(item)
     # Increment the count for every feature with this category
     for f in features:
+      print "----> train=%s" % f
       self.incf(f,cat)
       # Increment the count for this category
       self.incc(cat)
@@ -220,4 +220,10 @@ if __name__ == '__main__':
   print "Cat Count=%s" % cl.catcount('good')
   print "prob1b=%s" % cl.fprob('dog', 'good')
   print "prob4b=%s" % cl.prob('fox dog', 'good')
+
+  # Test feature count bug
+  print "---- Feature count bug"
+  cl = naivebayes(getwords)
+  cl.train('the the the the the', 'good')
+  print cl.fc
   print "Done"
