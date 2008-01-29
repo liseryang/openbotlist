@@ -50,7 +50,7 @@ import List (isPrefixOf, isSuffixOf, genericLength)
 import Data.SpiderNet.Bayes
 import IO
 import Data.SpiderNet.Document
-import Data.SpiderNet.Util (timeDiff)
+import Data.SpiderNet.Util
 
 reportOutputFile = "trainreport.csv"
 trainDir = "../../var/lib/spiderdb/train"
@@ -100,6 +100,7 @@ runTrainReport = do
                     ) contentinf
   -- Print the report to file
   h <- openFile reportOutputFile WriteMode
+  hPutStr h (dbFieldList csvFieldNames) >> hPutStr h "\n"
   mapM_ (\inf -> hPutDocumentInfo h inf) docreport
   hClose h  
 
