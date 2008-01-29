@@ -40,6 +40,8 @@ __author__ = "Berlin Brown"
 __copyright__ = "Copyright (c) 2006-2008 Berlin Brown"
 __license__ = "New BSD"
 
+MAX_LEN_EXTRACT = 10000
+
 SPIDER_CSV_DELIM = "::|"
 
 KEY_HTML_TAGS = [

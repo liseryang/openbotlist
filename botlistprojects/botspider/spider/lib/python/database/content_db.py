@@ -40,7 +40,7 @@ Also see:
 """
 
 import sys
-from spiderbot_const import KEY_HTML_TAGS
+from spiderbot_const import KEY_HTML_TAGS, MAX_LEN_EXTRACT
 
 def _write_info_headers(dir_name):
 	""" Write headers for page stats content"""
@@ -70,6 +70,9 @@ def create_content_db(dir_name, content_list):
 			# Partial extraction file.
 			f.write(field.descr) ; f.write('\n')
 			f.write(field.keywords) ; f.write('\n')
+			# put a cap on the extract content, only write
+			# so much data.
+			field.extract_content = field.extract_content[:MAX_LEN_EXTRACT]
 			f.write(field.extract_content)
 			f.close()
 
