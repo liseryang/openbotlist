@@ -176,6 +176,12 @@ class URLField:
 		self.extract_content = None		
 		self.info_stats = None
 
+	def tokenizeTags(self, val):
+		""" Tokenize keyword and descriptions"""
+		if val is not None:
+			arr = val.split(',')	
+			return ' '.join(arr)
+
 	def populate(self):
 		"""After fields have been set, populate rest of data"""
 		if self.title is None: self.title = "" ;

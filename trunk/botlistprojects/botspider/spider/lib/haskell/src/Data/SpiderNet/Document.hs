@@ -41,13 +41,16 @@ Also see:
 -}
 -- *********************************************************
 
-module Data.SpiderNet.Document (readContentByExt) where
+module Data.SpiderNet.Document (readContentByExt, readInfoContentFile) where
 
 import Monad (liftM)
 import System.Directory (getDirectoryContents)
 import Data.Char
+import IO (try)
 import List (isPrefixOf, isSuffixOf)
 import Text.Regex (splitRegex, mkRegex)
+
+import Data.SpiderNet.PageInfo
 
 type ContentFileInfo = (String, String)
 
@@ -58,3 +61,33 @@ readContentByExt filepath ext = do
       trainpaths = map (\x -> filepath ++ "/" ++ x) trainfiles
   lst_content <- liftM (zip trainpaths) $ mapM readFile trainpaths
   return lst_content
+
+--
+-- The info content file contains html document information.
+-- It may not exist but should, also contains URL info.
+readInfoContentFile :: String -> IO PageURLFieldInfo
+readInfoContentFile extr_file = do
+  let extr_n = (length ".extract")
+      extr_path = take ((length extr_file) - extr_n) extr_file
+      info_file = extr_path ++ ".info"
+  -- Extract the file, in CSV format.
+  -- TYPE::|URL::|a::|b::|blockquote::|div::|h1::|h2::|i::|img::|p::|span::|strong::|table
+  -- (+1)   0     1   X2   3           4     5    X6   X7   8     9   X10   11      12    
+  csvtry <- try $ readFile info_file
+  -- Handler error
+  info <- case csvtry of
+            Left _ -> return defaultPageFieldInfo
+            Right csv -> do let csv_lst = splitRegex (mkRegex "\\s*[::|]+\\s*") csv
+                            return PageURLFieldInfo {
+                                         linkUrlField = (csv_lst !! 1),
+                                         aUrlField = read (csv_lst !! 2) :: Integer,
+                                         blockquoteUrlField = read (csv_lst !! 4) :: Integer,
+                                         divUrlField = read (csv_lst !! 5) :: Integer,
+                                         h1UrlField = read (csv_lst !! 6) :: Integer,
+                                         imgUrlField = read (csv_lst !! 7) :: Integer,
+                                         pUrlField = read (csv_lst !! 8) :: Integer,
+                                         strongUrlField = read (csv_lst !! 9) :: Integer,
+                                         tableUrlField = 0
+                                       }
+  return info
+-- End of File
