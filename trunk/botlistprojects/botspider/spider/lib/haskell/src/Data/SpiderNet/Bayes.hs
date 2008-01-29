@@ -64,7 +64,7 @@ import Text.Regex (splitRegex, mkRegex)
 import Data.SpiderNet.PageInfo
 
 -- Max number of word tokens to use as input to the training model.
-maxTokensDocTrain = 3000
+maxTokensDocTrain = 4000
 
 type WordCat = (String, String)
 type WordCatInfo = (WordCat, Int)
