@@ -64,8 +64,12 @@ def create_content_db(dir_name, content_list):
 			f.close()
 
 			# Write the partial feature extract file
-			extract_filename = "%s/_dump_file_%s.extract" % (dir_name, i)
+			extract_filename = "%s/_dump_file_%s.extract" % (dir_name, i)			
 			f = open(extract_filename, "w")
+			# Also write the keywords and description to the 
+			# Partial extraction file.
+			f.write(field.descr) ; f.write('\n')
+			f.write(field.keywords) ; f.write('\n')
 			f.write(field.extract_content)
 			f.close()
 

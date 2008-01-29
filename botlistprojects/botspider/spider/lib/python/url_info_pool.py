@@ -146,6 +146,10 @@ def crawlSingleURLForContent(link, idx, total_links):
 		end = time.time()
 		# Return the basic URL data structure
 		field = URLField(link, titleTag, descr, keywords)
+
+		field.descr = field.tokenizeTags(field.descr)
+		field.keywords = field.tokenizeTags(field.keywords)
+
 		field.full_content = data
 		field.extract_content = partial_content
 		field.info_stats = istats
@@ -160,7 +164,7 @@ def crawlSingleURLForContent(link, idx, total_links):
 		print "ERR: timeout [%s/%s] " % (idx, total_links)
 	except Exception, e:
 		# NOTE: if pass allowed, compile errors will be ignored.
-		print e
+		print "ERR<crawlSingleURLForContent>: %s" % e
 		pass
 
 def crawlForURLContentDump(link_list):

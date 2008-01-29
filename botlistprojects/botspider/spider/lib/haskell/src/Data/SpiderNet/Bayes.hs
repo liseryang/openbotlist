@@ -45,8 +45,8 @@ Also see:
 module Data.SpiderNet.Bayes 
     (WordCat, WordCatInfo, WordInfo, 
      DocumentInfo(DocumentInfo), trainCatName, trainBayesProb, trainFisherProb,trainFeatureProb, 
-     DocTrainInfo(DocTrainInfo), docName, docCharLen, docTokenLen, docWordDensity, docTrainInfo, docStopWordDensity,
-     documentDensity,
+     DocTrainInfo(DocTrainInfo), docName, docCharLen, docTokenLen, docWordDensity, docTrainInfo, docStopWordDensity, docPageInfo,
+     documentDensity, inputDocumentTokens,
      wordFreq, wordCatFreq, formatWordFreq, buildTrainSet, wordTokensClean,
      formatWordCat, wordFreqSort, trainClassify, contentFeatProb,formatTrainInfo,
      tokensCat, tokensByFeature, catCount, wordTokens, readStopWords,
@@ -60,6 +60,11 @@ import Data.List
 import Text.Printf
 import Data.Char
 import Text.Regex (splitRegex, mkRegex)
+
+import Data.SpiderNet.PageInfo
+
+-- Max number of word tokens to use as input to the training model.
+maxTokensDocTrain = 3000
 
 type WordCat = (String, String)
 type WordCatInfo = (WordCat, Int)
@@ -78,7 +83,8 @@ data DocumentInfo = DocumentInfo {
       docTokenLen :: Integer,
       docWordDensity :: Double,
       docStopWordDensity :: Double,
-      docTrainInfo :: [DocTrainInfo]
+      docTrainInfo :: [DocTrainInfo],
+      docPageInfo :: PageURLFieldInfo 
 }
 
 formatTrainInfo :: [DocTrainInfo] -> String
@@ -151,14 +157,24 @@ wordFreqSort inlst = sortBy freqSort . wordFreq $ inlst
 -- | bayes classification train 
 -- @see trainClassifyClean, clean filters top words
 trainClassify :: String -> String -> [WordCatInfo]
-trainClassify content cat = let tokens = wordTokens content
+trainClassify content cat = let tokens = (wordTokens content)
                                 wordcats = [(tok, cat) | tok <- tokens] 
                             in wordCatFreq wordcats
+
+--
+-- | Public function for filtering the raw input document and converting
+-- the data into a word token list.
+-- 1/24/2008: remove stop words.
+-- 1/24/2008: Added take function call to set a max number of words to process.
+inputDocumentTokens :: String -> [String] -> [String]
+inputDocumentTokens content stopwords = take maxTokensDocTrain ((wordTokens content) \\ stopwords)
                          
 --
 -- | classification train and eliminate stop words from the training set.
+-- == Modifications ==
+-- 1/24/2008: Added function for stop word support
 trainClassifyClean :: String -> String -> [String] -> [WordCatInfo]
-trainClassifyClean content cat stop_words = let tokens = (wordTokens content) \\ stop_words
+trainClassifyClean content cat stop_words = let tokens = ((wordTokens content) \\ stop_words)
                                                 wordcats = [(tok, cat) | tok <- tokens] 
                                             in wordCatFreq wordcats
 

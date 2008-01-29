@@ -59,8 +59,6 @@ stopWordsDb = "../../var/lib/spiderdb/lexicon/stopwords/stopwords.tdb"
 
 getCatTrainInfo :: [WordCatInfo] -> String -> [String] -> IO DocTrainInfo
 getCatTrainInfo traininfo cat wordtokens = do
-  putStrLn $ "---- " ++ cat ++ " ----"
-  putStrLn $ "--------------------------"
   let bp = bayesProb traininfo wordtokens cat 1.0
       fp = fisherProb traininfo wordtokens cat
       cfp = contentFeatProb traininfo wordtokens cat
@@ -77,6 +75,7 @@ runTrainReport = do
   stopwords <- readStopWords stopWordsDb
   -- Process only files with 'train' extension
   traininf <- readContentByExt trainDir ".train"
+  -- Train inf contains a collection of all data read from the training files.
   let traininfo = buildTrainSet traininf stopwords []
   contentinf <- readContentByExt inputExtractContent ".extract"
   putStrLn $ "Train Set Size=" ++ (show (length traininfo))
@@ -84,9 +83,10 @@ runTrainReport = do
   docreport <- mapM (\contentinfo -> do
                        let content = snd contentinfo
                            contentname = fst contentinfo
-                           wordtokens = wordTokens content
+                           wordtokens = inputDocumentTokens content stopwords
                            docdens = documentDensity content
-                           stopdens = stopWordDensity content stopwords
+                           stopdens = stopWordDensity content stopwords   
+                       readpageinfo <- readInfoContentFile contentname
                        doctrain <- mapM (\c -> getCatTrainInfo traininfo c wordtokens) (categories traininfo)
                        return DocumentInfo {
                                     docName = contentname,
@@ -94,7 +94,8 @@ runTrainReport = do
                                     docTokenLen = genericLength wordtokens, 
                                     docWordDensity = docdens,
                                     docStopWordDensity = stopdens,
-                                    docTrainInfo = doctrain
+                                    docTrainInfo = doctrain,
+                                    docPageInfo = readpageinfo
                                   }
                     ) contentinf
   -- Print the report to file
@@ -105,7 +106,8 @@ runTrainReport = do
 hPutDocumentInfo :: Handle -> DocumentInfo -> IO ()
 hPutDocumentInfo h info = do
   hPutStr h (show info) >> hFlush h
-  hPutStr h (formatTrainInfo (docTrainInfo info))
+  hPutStr h (show (docPageInfo info)) >> hFlush h
+  hPutStr h (formatTrainInfo (docTrainInfo info))  
   hFlush h >> hPutStr h "\n"
   putStrLn $ " logged info=" ++ (docName info)
 
