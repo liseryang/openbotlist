@@ -13,6 +13,11 @@
  
 	Data browser from kirix
  	http://www.kirix.com/
+ 	
+ 	Diagramming Tools:
+ 	
+ 	* Inkscape
+ 	* Dia
  
  Development:
  ===================
