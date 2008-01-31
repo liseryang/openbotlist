@@ -49,7 +49,9 @@ import System.Directory (getDirectoryContents)
 import List (isPrefixOf, isSuffixOf, genericLength)
 import Data.SpiderNet.Bayes
 import IO
+import Data.SpiderNet.DocumentInfo
 import Data.SpiderNet.Document
+import Data.SpiderNet.DocumentRules
 import Data.SpiderNet.Util
 
 reportOutputFile = "trainreport.csv"
@@ -85,9 +87,10 @@ runTrainReport = do
                            contentname = fst contentinfo
                            wordtokens = inputDocumentTokens content stopwords
                            docdens = documentDensity content
-                           stopdens = stopWordDensity content stopwords   
+                           stopdens = stopWordDensity content stopwords
                        readpageinfo <- readInfoContentFile contentname
                        doctrain <- mapM (\c -> getCatTrainInfo traininfo c wordtokens) (categories traininfo)
+                       let rules_lst = populateRulesInput (genericLength wordtokens) docdens stopdens readpageinfo
                        return DocumentInfo {
                                     docName = contentname,
                                     docCharLen = genericLength content,
@@ -95,7 +98,8 @@ runTrainReport = do
                                     docWordDensity = docdens,
                                     docStopWordDensity = stopdens,
                                     docTrainInfo = doctrain,
-                                    docPageInfo = readpageinfo
+                                    docPageInfo = readpageinfo,
+                                    docIsValidPage = checkDocRules rules_lst
                                   }
                     ) contentinf
   -- Print the report to file
