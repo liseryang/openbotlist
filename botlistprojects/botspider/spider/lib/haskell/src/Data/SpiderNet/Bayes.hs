@@ -44,8 +44,6 @@ Also see:
 
 module Data.SpiderNet.Bayes 
     (WordCat, WordCatInfo, WordInfo, 
-     DocumentInfo(DocumentInfo), trainCatName, trainBayesProb, trainFisherProb,trainFeatureProb, 
-     DocTrainInfo(DocTrainInfo), docName, docCharLen, docTokenLen, docWordDensity, docTrainInfo, docStopWordDensity, docPageInfo,
      documentDensity, inputDocumentTokens,
      wordFreq, wordCatFreq, formatWordFreq, buildTrainSet, wordTokensClean,
      formatWordCat, wordFreqSort, trainClassify, contentFeatProb,formatTrainInfo,
@@ -61,6 +59,7 @@ import Text.Printf
 import Data.Char
 import Text.Regex (splitRegex, mkRegex)
 
+import Data.SpiderNet.DocumentInfo
 import Data.SpiderNet.PageInfo
 
 -- Max number of word tokens to use as input to the training model.
@@ -69,37 +68,6 @@ maxTokensDocTrain = 4000
 type WordCat = (String, String)
 type WordCatInfo = (WordCat, Int)
 type WordInfo = (String, Int)
-
-data DocTrainInfo = DocTrainInfo {
-      trainCatName :: String, 
-      trainBayesProb :: Double,
-      trainFisherProb :: Double,
-      trainFeatureProb :: Double
-}
-
-data DocumentInfo = DocumentInfo {
-      docName :: String,
-      docCharLen :: Integer,
-      docTokenLen :: Integer,
-      docWordDensity :: Double,
-      docStopWordDensity :: Double,
-      docTrainInfo :: [DocTrainInfo],
-      docPageInfo :: PageURLFieldInfo 
-}
-
-formatTrainInfo :: [DocTrainInfo] -> String
-formatTrainInfo []     = ""
-formatTrainInfo (x:xs) = (show x) ++ formatTrainInfo xs
-
-instance Show DocumentInfo where
-    show info = (printf "%s,%d,%d,%f,%f,"
-                 (docName info) (docCharLen info) (docTokenLen info)
-                 (docWordDensity info) (docStopWordDensity info))
-
-instance Show DocTrainInfo where
-    show info = (printf "%s,%f,%f,%f,"
-                 (trainCatName info) (trainBayesProb info) (trainFisherProb info)
-                 (trainFeatureProb info))
 
 wordTokens :: String -> [String]
 wordTokens content = tokens
