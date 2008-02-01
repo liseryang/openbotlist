@@ -41,16 +41,21 @@ Also see:
 -}
 -- *********************************************************
 
-module Data.SpiderNet.Document (readContentByExt, readInfoContentFile) where
+module Data.SpiderNet.Document (readContentByExt, toDocumentInfoList,
+                                readInfoContentFile) where
 
 import Monad (liftM)
 import System.Directory (getDirectoryContents)
 import Data.Char
+import Data.List
 import IO (try)
 import List (isPrefixOf, isSuffixOf)
 import Text.Regex (splitRegex, mkRegex)
 
 import Data.SpiderNet.PageInfo
+import Data.SpiderNet.DocumentInfo
+import Data.SpiderNet.DocumentRules
+import Data.SpiderNet.Bayes
 
 type ContentFileInfo = (String, String)
 
@@ -90,4 +95,40 @@ readInfoContentFile extr_file = do
                                          tableUrlField = 0
                                        }
   return info
+
+getCatTrainInfo :: [WordCatInfo] -> String -> [String] -> IO DocTrainInfo
+getCatTrainInfo traininfo cat wordtokens = do
+  let bp = bayesProb traininfo wordtokens cat 1.0
+      fp = fisherProb traininfo wordtokens cat
+      cfp = contentFeatProb traininfo wordtokens cat
+  return DocTrainInfo {
+                    trainCatName = cat,
+                    trainBayesProb = bp,
+                    trainFisherProb = fp,
+                    trainFeatureProb = cfp
+                  }
+
+toDocumentInfoList :: [String] -> [WordCatInfo]  -> [(String, String)] -> IO [DocumentInfo]
+toDocumentInfoList stopwords traininfo contentinf =
+    mapM (\contentinfo -> do
+            let content = snd contentinfo
+                contentname = fst contentinfo
+                wordtokens = inputDocumentTokens content stopwords
+                docdens = documentDensity content
+                stopdens = stopWordDensity content stopwords
+            readpageinfo <- readInfoContentFile contentname
+            doctrain <- mapM (\c -> getCatTrainInfo traininfo c wordtokens) (categories traininfo)
+            let rules_lst = populateRulesInput (genericLength wordtokens) docdens stopdens readpageinfo
+            return DocumentInfo {
+                         docName = contentname,
+                         docCharLen = genericLength content,
+                         docTokenLen = genericLength wordtokens, 
+                         docWordDensity = docdens,
+                         docStopWordDensity = stopdens,
+                         docTrainInfo = doctrain,
+                         docPageInfo = readpageinfo,
+                         docIsValidPage = checkDocRules rules_lst
+                       }
+         ) contentinf
+
 -- End of File
