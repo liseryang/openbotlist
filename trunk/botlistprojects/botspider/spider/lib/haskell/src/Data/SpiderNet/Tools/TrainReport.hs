@@ -59,18 +59,6 @@ trainDir = "../../var/lib/spiderdb/train"
 inputExtractContent = "../../var/lib/spiderdb/dump"
 stopWordsDb = "../../var/lib/spiderdb/lexicon/stopwords/stopwords.tdb"
 
-getCatTrainInfo :: [WordCatInfo] -> String -> [String] -> IO DocTrainInfo
-getCatTrainInfo traininfo cat wordtokens = do
-  let bp = bayesProb traininfo wordtokens cat 1.0
-      fp = fisherProb traininfo wordtokens cat
-      cfp = contentFeatProb traininfo wordtokens cat
-  return DocTrainInfo {
-                    trainCatName = cat,
-                    trainBayesProb = bp,
-                    trainFisherProb = fp,
-                    trainFeatureProb = cfp
-                  }
-
 runTrainReport :: IO ()
 runTrainReport = do
   putStrLn "Train Report"
@@ -82,26 +70,7 @@ runTrainReport = do
   contentinf <- readContentByExt inputExtractContent ".extract"
   putStrLn $ "Train Set Size=" ++ (show (length traininfo))
   putStrLn $ "Content Extract Size=" ++ (show (length contentinf))
-  docreport <- mapM (\contentinfo -> do
-                       let content = snd contentinfo
-                           contentname = fst contentinfo
-                           wordtokens = inputDocumentTokens content stopwords
-                           docdens = documentDensity content
-                           stopdens = stopWordDensity content stopwords
-                       readpageinfo <- readInfoContentFile contentname
-                       doctrain <- mapM (\c -> getCatTrainInfo traininfo c wordtokens) (categories traininfo)
-                       let rules_lst = populateRulesInput (genericLength wordtokens) docdens stopdens readpageinfo
-                       return DocumentInfo {
-                                    docName = contentname,
-                                    docCharLen = genericLength content,
-                                    docTokenLen = genericLength wordtokens, 
-                                    docWordDensity = docdens,
-                                    docStopWordDensity = stopdens,
-                                    docTrainInfo = doctrain,
-                                    docPageInfo = readpageinfo,
-                                    docIsValidPage = checkDocRules rules_lst
-                                  }
-                    ) contentinf
+  docreport <- toDocumentInfoList stopwords traininfo contentinf
   -- Print the report to file
   h <- openFile reportOutputFile WriteMode
   hPutStr h (dbFieldList csvFieldNames) >> hPutStr h "\n"
