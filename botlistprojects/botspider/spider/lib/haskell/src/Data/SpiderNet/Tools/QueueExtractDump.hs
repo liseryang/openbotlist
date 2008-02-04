@@ -40,5 +40,85 @@ Also see:
 
 -}
 -- *********************************************************
-module Data.SpiderNet.Tools.QueueExtractDump where
+module Main where
 
+import Monad (liftM, when)
+import System.Directory (getDirectoryContents)
+import List (isPrefixOf, isSuffixOf, genericLength)
+import Data.SpiderNet.Bayes
+import IO
+import Data.SpiderNet.DocumentInfo
+import Data.SpiderNet.PageInfo
+import Data.SpiderNet.Document
+import Data.SpiderNet.DocumentRules
+import Data.SpiderNet.Util
+
+import IO
+import Database.HSQL as Hsql
+import Database.HSQL.SQLite3 as Hsql
+
+import Data.SpiderNet.Util
+
+spiderQueueDB  = "../../var/lib/spiderdb/contentdb/spider_queue.db"
+sqlCreateQueue = "create table if not exists remotequeue(url)"
+sqlQueueInsert = "insert into remotequeue values("
+sqlSelectUrl = "select url from remotequeue where url = "
+
+trainDir = "../../var/lib/spiderdb/train"
+inputExtractContentDir = "../../var/lib/spiderdb/dump"
+stopWordsDb = "../../var/lib/spiderdb/lexicon/stopwords/stopwords.tdb"
+
+runExtractQueue :: IO ()
+runExtractQueue = do
+  putStrLn "Adding to remote queue from extract dump"
+
+  stopwords <- readStopWords stopWordsDb
+  -- Process only files with 'train' extension
+  traininf <- readContentByExt trainDir ".train"
+  -- Train inf contains a collection of all data read from the training files.
+  let traininfo = buildTrainSet traininf stopwords []
+  contentinf <- readContentByExt inputExtractContentDir ".extract"
+  putStrLn $ "Train Set Size=" ++ (show (length traininfo))
+  putStrLn $ "Content Extract Size=" ++ (show (length contentinf))
+           
+  -- Based on data from stopwords, traininfo, content, generate
+  -- document report.
+  docreport <- toDocumentInfoList stopwords traininfo contentinf
+  
+  conn <- Hsql.connect spiderQueueDB ReadWriteMode
+  stmt <- Hsql.query conn sqlCreateQueue
+  Hsql.closeStatement stmt
+  mapM_ (\inf -> sqlPutDocumentInfo conn inf) docreport
+  Hsql.disconnect conn
+  putStrLn "Done"
+
+--
+-- Get Rows routine from David at davblog48
+getRows :: Statement -> IO [[String]]
+getRows stmt = do
+  let fieldtypes = map (\(a,b,c) -> a) $ getFieldsTypes stmt
+  rowdata <- collectRows (\s -> mapM (getFieldValue s) fieldtypes ) stmt
+  return rowdata
+
+sqlCheckExisting :: Connection -> DocumentInfo -> IO Bool
+sqlCheckExisting conn info = do 
+  let pageinfo = docPageInfo info
+      sql = (sqlSelectUrl ++ "'" ++ (linkUrlField pageinfo) ++ "'")
+  stmt <- Hsql.query conn sql
+  rows <- getRows stmt
+  Hsql.closeStatement stmt
+  return (length rows > 0)
+  
+sqlPutDocumentInfo :: Connection -> DocumentInfo -> IO ()
+sqlPutDocumentInfo conn info = do
+  exists <- sqlCheckExisting conn info
+  if not exists
+     then do let pageinfo = docPageInfo info
+                 sql = (sqlQueueInsert ++ "'" ++ (linkUrlField pageinfo) ++ "')")
+             stmt <- Hsql.query conn sql
+             Hsql.closeStatement stmt
+     else return ()
+
+main :: IO ()
+main = do
+  timeDiff $ runExtractQueue

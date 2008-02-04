@@ -70,13 +70,15 @@ runTrainReport = do
   contentinf <- readContentByExt inputExtractContent ".extract"
   putStrLn $ "Train Set Size=" ++ (show (length traininfo))
   putStrLn $ "Content Extract Size=" ++ (show (length contentinf))
+  -- Based on data from stopwords, traininfo, content, generate
+  -- document report.
   docreport <- toDocumentInfoList stopwords traininfo contentinf
   -- Print the report to file
   h <- openFile reportOutputFile WriteMode
   hPutStr h (dbFieldList csvFieldNames) >> hPutStr h "\n"
   mapM_ (\inf -> hPutDocumentInfo h inf) docreport
   hClose h  
-
+         
 hPutDocumentInfo :: Handle -> DocumentInfo -> IO ()
 hPutDocumentInfo h info = do
   hPutStr h (show info) >> hFlush h
