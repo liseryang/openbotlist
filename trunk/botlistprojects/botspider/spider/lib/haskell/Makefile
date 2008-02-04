@@ -5,7 +5,7 @@
 
 TOP_DIR := $(shell pwd)
 
-all: trainreport
+all: queuedump
 
 build-all:
 	runhaskell Setup.hs configure
@@ -14,6 +14,10 @@ build-all:
 trainreport:
 	runhaskell Setup.hs build --verbose
 	./dist/build/trainreport/trainreport
+
+queuedump:
+	runhaskell Setup.hs build --verbose
+	./dist/build/queuedump/queuedump
 
 tokenize:
 	runhaskell Setup.hs build --verbose

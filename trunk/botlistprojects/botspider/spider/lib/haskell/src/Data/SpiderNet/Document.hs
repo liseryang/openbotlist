@@ -79,19 +79,19 @@ readInfoContentFile extr_file = do
   -- TYPE::|URL::|a::|b::|blockquote::|div::|h1::|h2::|i::|img::|p::|span::|strong::|table
   -- (+1)   0     1   X2   3           4     5    X6   X7   8     9   X10   11      12    
   csvtry <- try $ readFile info_file
-  -- Handler error
+  -- Handle error
   info <- case csvtry of
             Left _ -> return defaultPageFieldInfo
-            Right csv -> do let csv_lst = splitRegex (mkRegex "\\s*[::|]+\\s*") csv
+            Right csv -> do let csv_lst = splitRegex (mkRegex "\\s*(::\\|)+\\s*") csv
                             return PageURLFieldInfo {
-                                         linkUrlField = (csv_lst !! 1),
-                                         aUrlField = read (csv_lst !! 2) :: Integer,
-                                         blockquoteUrlField = read (csv_lst !! 4) :: Integer,
-                                         divUrlField = read (csv_lst !! 5) :: Integer,
-                                         h1UrlField = read (csv_lst !! 6) :: Integer,
-                                         imgUrlField = read (csv_lst !! 7) :: Integer,
-                                         pUrlField = read (csv_lst !! 8) :: Integer,
-                                         strongUrlField = read (csv_lst !! 9) :: Integer,
+                                         linkUrlField = (csv_lst !! 0),
+                                         aUrlField = read (csv_lst !! 1) :: Integer,
+                                         blockquoteUrlField = read (csv_lst !! 3) :: Integer,
+                                         divUrlField = read (csv_lst !! 4) :: Integer,
+                                         h1UrlField = read (csv_lst !! 5) :: Integer,
+                                         imgUrlField = read (csv_lst !! 6) :: Integer,
+                                         pUrlField = read (csv_lst !! 7) :: Integer,
+                                         strongUrlField = read (csv_lst !! 8) :: Integer,
                                          tableUrlField = 0
                                        }
   return info
