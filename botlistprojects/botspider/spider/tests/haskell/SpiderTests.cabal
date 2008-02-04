@@ -17,7 +17,7 @@ Library
   Ghc-Options:           -O2
   Build-Depends:         base, haskell98, network, 
                          binary, bytestring, utf8-string, time,
-                         regex-compat, containers, directory
+                         regex-compat, containers, directory, hsql, hsql-sqlite3
   Exposed-modules:       Data.AMQP.QueueClient
                          Data.SpiderQueue.Queue
                          Data.SpiderNet.Bayes
