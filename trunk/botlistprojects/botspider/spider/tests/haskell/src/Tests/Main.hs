@@ -11,6 +11,7 @@ import Tests.Data.TestBayesInvChi
 import Tests.Data.TestBayesProb
 import Tests.Data.TestTrainBayes
 import Tests.Data.TestStopWords
+import Tests.Data.TestBasicHSQL
 
 import Time
 import Data.Time.Clock.POSIX
@@ -28,7 +29,8 @@ main = do
   --runDatabaseTest
   --runBayesTest
   --runProbTests
-  runTestTrainBayes
+  --runTestTrainBayes
   --runTestStopWords
+  runTestBasicHSQL
   putStrLn "Done"
 
