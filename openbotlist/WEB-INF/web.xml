@@ -16,6 +16,11 @@
 	<!-- ============= Filters ================= -->	
 	<!-- *************************************** -->
 	<filter>
+  		<filter-name>LiftFilter</filter-name>
+  		<filter-class>net.liftweb.http.LiftFilter</filter-class>
+	</filter>
+	
+	<filter>
         <filter-name>Acegi Filter Chain Proxy</filter-name>
         <filter-class>org.acegisecurity.util.FilterToBeanProxy</filter-class>
         <init-param>
@@ -37,6 +42,15 @@
       <filter-name>Acegi Filter Chain Proxy</filter-name>
       <url-pattern>/botlistadmin/*</url-pattern>
     </filter-mapping>
+    
+   	<!-- *************************************** -->
+	<!-- == LiftWeb Based Applications -->
+	<!-- == Date Created: 12/29/2007   -->
+	<!-- *************************************** -->
+    <filter-mapping>
+  		<filter-name>LiftFilter</filter-name>
+	  	<url-pattern>/lift/*</url-pattern>
+	</filter-mapping>
     
 	<filter-mapping>
       <filter-name>BotListSpringCleanFilter</filter-name>
@@ -84,7 +98,7 @@
 		<servlet-name>botlistings</servlet-name>
 		<url-pattern>/index.jsp</url-pattern>
 	</servlet-mapping>
-	<!-- Removed Stat Chart 
+	<!-- Removed Stat Chart due to performance issues
 	<servlet-mapping>
 		<servlet-name>DayStatChart</servlet-name>
 		<url-pattern>/dayStatChart.png</url-pattern>
@@ -108,5 +122,7 @@
 		<taglib-location>/WEB-INF/botlistutil.tld</taglib-location>
 	</taglib>
 	
+	<!-- *************************************** -->
+	<!--  End of Web.xml  -->
 	<!-- *************************************** -->
 </web-app>
