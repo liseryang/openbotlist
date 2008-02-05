@@ -50,13 +50,10 @@
 	<!-- **************************************** -->
 	<!-- Scala Jar Imports -->
 	<!-- **************************************** -->
-    <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.0.jar" />
-	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.0.jar" />
-	<property name="lift.jar"              value="${lib.dir}/lift-core-0.4-SNAPSHOT.jar" />
+    <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.1.jar" />
+	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.1.jar" />
+	<property name="lift.jar"              value="${lib.dir}/lift-core-0.5-SNAPSHOT.jar" />
 	    
-    <property name="rabbitmq-client.jar" value="${basedir}/misc_no_commit/rabbitmq-client.jar" />
-    <property name="rabbitmq-client-io.jar" value="${basedir}/misc_no_commit/commons-io-1.2.jar" />
-	
     <target name="init" description="Initialization">
         <tstamp/>
         <echo message="Running with Tomcat Home=${tomcat.home}" />
@@ -68,7 +65,7 @@
         <pathelement location="${hibernate.jar}"/>
         <pathelement location="${junit.jar}"/>
         <pathelement location="${log4j.jar}"/>
-        <pathelement location="${dom4j.jar}"/>
+        <pathelement location="${dom4j.jar}"/> 
         <pathelement location="${logging.jar}"/>
         <pathelement location="${collections.jar}"/>
         <pathelement location="${mysql.jar}" />
@@ -90,12 +87,17 @@
     	<pathelement location="${scala-compiler.jar}" />
         <pathelement location="${lift.jar}" />
         
-        <pathelement location="${rabbitmq-client.jar}" />
-        <pathelement location="${rabbitmq-client-io.jar}" />
-    	
         <!-- Include the CLASSES directory -->
         <pathelement location="${build.classes.dir}" />
     </path>
+	
+	<path id="classpath.scala">
+        <pathelement location="${scala.jar}" />
+    	<pathelement location="${scala-compiler.jar}" />
+        <pathelement location="${lift.jar}" />
+		<pathelement location="${servlet.jar}" />
+        <pathelement location="${jsp-api.jar}" />
+	</path>
 
     <!-- Target: Prepare -->
     <target name="prepare">
@@ -112,40 +114,22 @@
                 includes="**/*.java">
             <classpath refid="classpath"/>
             <compilerarg value="-Xlint" />
-        </javac>    	
+        </javac>
     </target>
 	
-	<!-- **** REMOVE !!! -->
-    <target name="misc.run.rabbitproduce" depends="prepare">
-		<java classname="org.spirit.misc_no_commit.TestProducer">
-	            <classpath refid="classpath" />
-	            <classpath>
-	                <pathelement location="${basedir}" />
-	            </classpath>	            
-		</java>
-	</target>
-    <target name="misc.run.rabbitconsume" depends="prepare">
-		<java classname="org.spirit.misc_no_commit.TestSimpleConsumer">
-	            <classpath refid="classpath" />
-	            <classpath>
-	                <pathelement location="${basedir}" />
-	            </classpath>	            
-		</java>
-	</target>
-
     <!-- **************************************** -->
     <!-- Add support for scala compiles, used with liftweb apps -->
     <!-- Date Created: 12/29/2007 -->
     <!-- **************************************** -->
     <taskdef resource="scala/tools/ant/antlib.xml">
-      <classpath refid="classpath" />
+      <classpath refid="classpath.scala" />
     </taskdef>
 	
 	<!-- Target: Compile Scala Source -->
 	<target name="scala.compile" depends="prepare">
 		<scalac srcdir="${scala.src.dir}" 
 				destdir="${build.classes.dir}" 
-		  		classpathref="classpath" force="never">
+		  		classpathref="classpath.scala" force="never">
 		    <include name="**/*.scala"/>
 		</scalac>
 	</target>
