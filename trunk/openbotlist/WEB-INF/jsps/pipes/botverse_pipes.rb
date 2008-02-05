@@ -6,20 +6,19 @@
 ##
 
 class PipeControllerText
-		
+  MAX_PIPE_LINKS = 3
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.entityLinksDao
   end    
   
-  #
   # Generate the view
   def getModel(request)
     
     @controller.auditLogPage(request, "botverse_pipes.html")
         
     query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
-    postListings = @daohelper.pageEntityLinks(query, 0, 40)
+    postListings = @daohelper.pageEntityLinks(query, 0, MAX_PIPE_LINKS)
     return {
       'listings' => postListings
     }
