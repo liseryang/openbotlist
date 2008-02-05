@@ -14,4 +14,3 @@ grant all on openbotlist_test.* to 'botlistfriend'@'*' identified by 'b80t1st';
 grant all on openbotlist_production.* to 'botlistfriend'@'*' identified by 'b80t1st';
 
 -- End of the File
-
