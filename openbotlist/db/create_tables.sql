@@ -1,13 +1,17 @@
+--*********************************************************
+-- Author: Berlin Brown
 --
--- Berlin Brown
+-- Description:
+-- Main sql script for creating the botlist database.
 --
 -- updated: 11/12/2006
 --
--- connect to the
--- databatase
---
 -- file: create_tables.sql
 -- see insert_tables.sql
+--
+-- Modifications: 
+-- 2/2/2008 - sql clean-ups, made sure script is up to date.
+--*********************************************************
 
 connect botlist_development;
 
@@ -64,10 +68,14 @@ CREATE TABLE user_visit_log (
 --
 -- City listings
 CREATE TABLE city_listing (
-	id 				int(11) NOT NULL auto_increment,
-	city_name		varchar(255) NOT NULL UNIQUE,
-	created_on		DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  	PRIMARY KEY (id)
+  id            int(11) NOT NULL auto_increment,
+  city_name     varchar(255) NOT NULL,
+  created_on    datetime NOT NULL default '0000-00-00 00:00:00',
+  city_category varchar(10) default 'MINOR',
+  state_abbr    varchar(10) default NULL,
+  PRIMARY KEY   (id),
+  UNIQUE KEY    city_name (city_name),
+  KEY city_listing_created_on_ndx (created_on)
 );
 
 --
@@ -118,7 +126,6 @@ CREATE TABLE post_image_metadata(
 		foreign key (adlist_id) references post_listing(id)
 );
 
-
 -- Create the simple user blog
 -- Users have user-links
 -- The foreign key is attached to the 'has-a'
@@ -126,17 +133,44 @@ CREATE TABLE post_image_metadata(
 -- entity_links is currently associated with
 --  'child_list_links' and 'user_comments'
 CREATE TABLE entity_links (
-  id 				int(11) NOT NULL auto_increment,
-  main_url			varchar(255) NOT NULL unique,
-  url_title			varchar(128) NOT NULL,
-  url_description 	varchar(255),
-  keywords			varchar(255),
-  views				int(11) DEFAULT 0,
-  rating 			int(11) NOT NULL DEFAULT 0,
-  user_id			int(11), 
-  full_name			varchar(128) NOT NULL,
-  created_on		DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (id)
+  id                     int(11) NOT NULL auto_increment,
+  main_url               varchar(255) NOT NULL,
+  url_title              varchar(128) NOT NULL,
+  url_description        varchar(255) default NULL,
+  keywords               varchar(255) default NULL,
+  views int(11)          default '0',
+  created_on datetime    NOT NULL default '0000-00-00 00:00:00',
+  rating int(11)         NOT NULL default '0',
+  user_id int(11)        default NULL,
+  full_name              varchar(128) NOT NULL,
+  hostname               varchar(128) default NULL,
+  process_count          int(11) NOT NULL default '0',
+  updated_on             datetime default '0000-00-00 00:00:00',
+  link_type              varchar(20) default NULL,
+  bot_rating             decimal(5,2) default '0.00',
+  generated_obj_id       varchar(60) default NULL,
+  user_up_votes          int(11) default '0',
+  user_down_votes        int(11) default '0',
+  links_ct               int(11) default '0',
+  inbound_link_ct        int(11) default '0',
+  outbound_links_ct      int(11) default '0',
+  image_ct               int(11) default '0',
+  meta_descr_len         int(11) default '0',
+  meta_keywords_len      int(11) default '0',
+  meta_descr_wct         int(11) default '0',
+  meta_keywords_wct      int(11) default '0',
+  geo_locations_ct       int(11) default '0',
+  geo_locations_found    varchar(128) default NULL,
+  document_size          int(11) default '0',
+  request_time           int(11) default '0',
+  object_id_status       tinyint(4) default '0',
+  para_tag_ct            int(11) default '0',
+  PRIMARY KEY  (id),
+  UNIQUE KEY main_url (main_url),
+  UNIQUE KEY generated_obj_id (generated_obj_id),
+  KEY entity_links_created_on_ndx (created_on),
+  KEY entity_links_rating_ndx (rating),
+  KEY entity_links_views_ndx (views)
 );
 
 -- 
@@ -166,7 +200,6 @@ CREATE TABLE forum_group (
 	PRIMARY KEY (id)
 );
 
-
 CREATE TABLE user_comments(
 	id			int(11) NOT NULL auto_increment,  
 	link_id		int(11),  
@@ -190,8 +223,6 @@ CREATE TABLE user_comments(
 	constraint fk_forum_group_comments
 		foreign key (forum_id) references forum_group(id)
 );
-
-
 
 --
 -- Group Links - Categorize links by group
@@ -223,37 +254,39 @@ CREATE TABLE group_links (
 -- Core User Table
 -- Added: 4/1/2007
 CREATE TABLE core_users (
-	id   			int(11) NOT NULL auto_increment,
-	user_name 		VARCHAR(50) NOT NULL UNIQUE,
-	user_password 	VARCHAR(128) NOT NULL,
-	user_email 		VARCHAR(255) NOT NULL,
-	user_url 		VARCHAR(255),
-	location		VARCHAR(255),
-	date_of_birth 	DATE NOT NULL DEFAULT '0000-00-00',
-	experience_points 	int(11) DEFAULT 0,
-	karma 				int(11)	DEFAULT 0,
-	secretques_code TINYINT DEFAULT 0 NOT NULL,
-	secret_answer 	VARCHAR(128),
-	account_number 	VARCHAR(128) NOT NULL,
-	active_code TINYINT DEFAULT 0,
-	failed_attempts	int(11) DEFAULT 0,
-	last_login_success DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-	last_login_failure DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-	created_on  DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-	updated_on  DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-	PRIMARY KEY (id)
+  id int(11)        NOT NULL auto_increment,
+  user_name          varchar(50) NOT NULL,
+  user_password      varchar(128) NOT NULL,
+  user_email         varchar(255) NOT NULL,
+  user_url           varchar(255) default NULL,
+  location           varchar(255) default NULL,
+  date_of_birth      date NOT NULL default '0000-00-00',
+  experience_points  int(11) default '0',
+  karma int(11)      default '0',
+  secretques_code    tinyint(4) NOT NULL default '0',
+  secret_answer      varchar(128) default NULL,
+  account_number     varchar(128) NOT NULL,
+  active_code        tinyint(4) default '0',
+  failed_attempts    int(11) default '0',
+  last_login_success datetime NOT NULL default '0000-00-00 00:00:00',
+  last_login_failure datetime NOT NULL default '0000-00-00 00:00:00',
+  created_on datetime NOT NULL default '0000-00-00 00:00:00',
+  updated_on datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY user_name (user_name),
+  KEY core_users_created_on_ndx (created_on)
 );
 
 --
 -- Access Control List - List of access levels
 CREATE TABLE acl_control (
- 	id				int(11) NOT NULL auto_increment,
- 	control_uid		VARCHAR(128) NOT NULL,
-   	control_name 	VARCHAR(50) NOT NULL,
-   	short_descr 	VARCHAR(50) NOT NULL,
-	long_descr 		VARCHAR(255),
-	created_on  	DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-	PRIMARY KEY (id)
+  id                int(11) NOT NULL auto_increment,
+  control_uid       varchar(128) NOT NULL,
+  control_name      varchar(50) NOT NULL,
+  short_descr       varchar(50) NOT NULL,
+  long_descr        varchar(255) default NULL,
+  created_on        datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
 );
 
 --
@@ -268,7 +301,7 @@ CREATE TABLE group_control (
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE acl_manager (
+CREATE TABLE acl_manager (  
 	id 			int(11) NOT NULL auto_increment,
 	acl_id  	int(11) NOT NULL,
 	user_id  	int(11) NOT NULL,       
@@ -300,12 +333,188 @@ CREATE TABLE profile_settings (
 	id 			int(11) NOT NULL auto_increment,
 	user_id		int(11) NOT NULL UNIQUE,
 	link_color	varchar(10) NOT NULL DEFAULT '3838E5',
-	PRIMARY KEY (id),
 	created_on  DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+	PRIMARY KEY (id),
 	constraint fk_profile_settings
 			foreign key (user_id) references core_users(id)
 );
 
 -- End of User Tables
+
+CREATE TABLE active_media_feeds (
+  id           int(11) NOT NULL auto_increment,
+  display_type char(1) NOT NULL default 'N',
+  created_on   datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY active_media_feeds_created_on_ndx (created_on)
+);
+
+CREATE TABLE media_feeds (
+  id int(11)       NOT NULL auto_increment,
+  image_filename   varchar(255) NOT NULL,
+  media_url        varchar(255) NOT NULL,
+  image_thumbnail  varchar(255) NOT NULL,
+  media_title      varchar(255) NOT NULL,
+  media_descr      text NOT NULL,
+  media_type       char(1) NOT NULL default 'N',
+  author           varchar(80) NOT NULL,
+  rating           decimal(11,5) default NULL,
+  rating_count     int(11) default '0',
+  views            int(11) default '0',
+  keywords         varchar(128) NOT NULL,
+  orginal_imgurl   varchar(255) NOT NULL,
+  process_count    int(11) default '0',
+  system_id        int(11) default NULL,
+  validity         int(11) default NULL,
+  created_on       datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY media_url (media_url),
+  KEY media_feeds_created_on_ndx (created_on)
+);
+
+CREATE TABLE admin_main_banner (
+  id           int(11) NOT NULL auto_increment,
+  headline     varchar(128) NOT NULL,
+  enabled      char(1) NOT NULL default 'N',
+  app_section  varchar(40) default NULL,
+  created_on   datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE cat_group_terms (
+  id             int(11) NOT NULL auto_increment,
+  category_name  varchar(20) NOT NULL,
+  category_term  varchar(40) NOT NULL,
+  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id, category_name)
+);
+
+CREATE TABLE cat_link_groups (
+  category_name    varchar(20) NOT NULL,
+  category_descr   varchar(80) NOT NULL,
+  category_color   varchar(10) NOT NULL,
+  created_on       datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (category_name),
+  UNIQUE KEY category_name (category_name)
+);
+
+
+CREATE TABLE developer_users (
+  id               int(11) NOT NULL auto_increment,
+  user_name        varchar(50) NOT NULL,
+  user_id          int(11) NOT NULL,
+  key_id           varchar(128) NOT NULL,
+  enabled          char(1) NOT NULL default 'N',
+  description      varchar(255) NOT NULL,
+  last_application varchar(30) NOT NULL,
+  last_login_success datetime NOT NULL default '0000-00-00 00:00:00',
+  last_login_failure datetime NOT NULL default '0000-00-00 00:00:00',
+  created_on datetime NOT NULL default '0000-00-00 00:00:00',
+  updated_on datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY user_name (user_name)
+);
+
+CREATE TABLE doc_file (
+  id              int(11) NOT NULL auto_increment,
+  child_id        int(11) default NULL,
+  full_name       varchar(128) NOT NULL,
+  title           varchar(255) NOT NULL,
+  filename        varchar(255) NOT NULL,
+  message         text NOT NULL,
+  created_on      datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE doc_file_metadata (
+  id int(11)      NOT NULL auto_increment,
+  document_id     int(11) NOT NULL,
+  doc_filename    varchar(255) NOT NULL,
+  doc_filesize    int(11) default NULL,
+  doc_originalname varchar(255) default NULL,
+  created_on datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY doc_filename (doc_filename),
+  KEY fk_file_document (document_id)
+);
+
+CREATE TABLE search_query_filters (
+  id            int(11) NOT NULL auto_increment,
+  search_term   varchar(60) NOT NULL,
+  description   varchar(128) NOT NULL,
+  rating        int(11) NOT NULL,
+  views         int(11) NOT NULL,
+  user_name     varchar(50) NOT NULL,
+  user_id       int(11) NOT NULL,
+  created_on    datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE system_audit_log (
+  id                int(11) NOT NULL auto_increment,
+  application_name  varchar(60) NOT NULL,
+  message_id        varchar(10) NOT NULL,
+  message           varchar(255) default NULL,
+  log_level         varchar(10) NOT NULL,
+  send_to           varchar(80) default NULL,
+  created_on        datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE system_feed_items (
+  id               int(11) NOT NULL auto_increment,
+  main_url         varchar(255) NOT NULL,
+  url_title        varchar(128) NOT NULL,
+  url_description  text,
+  url_source       varchar(255) NOT NULL,
+  process_count    int(11) NOT NULL default '0',
+  created_on       datetime NOT NULL default '1901-01-01 00:00:00',
+  hostname         varchar(128) default NULL,
+  PRIMARY KEY  (id),
+  UNIQUE KEY main_url (main_url)
+);
+
+CREATE TABLE system_scan_feeds (
+  id              int(11) NOT NULL auto_increment,
+  main_url        varchar(255) NOT NULL,
+  url_title       varchar(128) NOT NULL,
+  url_description varchar(255) default NULL,
+  url_source      varchar(255) NOT NULL,
+  created_on      datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY main_url (main_url)
+);
+
+CREATE TABLE system_web_files (
+  id             int(11) NOT NULL auto_increment,
+  filename       varchar(255) NOT NULL,
+  fsize          int(10) NOT NULL,
+  fmtime         int(10) NOT NULL,
+  fext           varchar(40) NOT NULL,
+  projectname    varchar(80) NOT NULL,
+  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE user_entity_links (
+  id             int(11) NOT NULL auto_increment,
+  user_id        int(11) NOT NULL,
+  link_id        int(11) NOT NULL,
+  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE user_visit_log (
+  id             int(11) NOT NULL auto_increment,
+  remote_host    varchar(30) default NULL,
+  host           varchar(30) default NULL,
+  referer        varchar(255) default NULL,
+  user_agent     varchar(255) default NULL,
+  request_uri    varchar(255) default NULL,
+  request_page   varchar(124) default NULL,
+  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY user_visit_log_created_on_ndx (created_on)
+);
 
 -- End of file
