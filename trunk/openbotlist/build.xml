@@ -53,7 +53,7 @@
     <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.1.jar" />
 	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.1.jar" />
 	<property name="lift.jar"              value="${lib.dir}/lift-core-0.5-SNAPSHOT.jar" />
-	    
+	
     <target name="init" description="Initialization">
         <tstamp/>
         <echo message="Running with Tomcat Home=${tomcat.home}" />
@@ -92,6 +92,9 @@
     </path>
 	
 	<path id="classpath.scala">
+		<pathelement location="${hibernate.jar}"/>
+		<pathelement location="${spring.jar}" />
+		<pathelement location="${logging.jar}" />
         <pathelement location="${scala.jar}" />
     	<pathelement location="${scala-compiler.jar}" />
         <pathelement location="${lift.jar}" />
@@ -198,8 +201,6 @@
     <!-- Main Clean -->
     <target name="clean">
         <delete dir="${build.dir}" />
-        <delete dir="${basedir}/bin" />
-
         <delete>
             <fileset dir="${basedir}/WEB-INF/classes">
                 <include name="**" />
