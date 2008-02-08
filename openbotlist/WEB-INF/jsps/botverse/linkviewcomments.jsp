@@ -69,16 +69,16 @@
 							<div style="margin-left: 20px; font-size: 8pt; color: #000; padding: 0px 0px 0px 0px;">
 								 <div style="width: 60%;">
 									 <span style="background-color: #000; color: #FFF; padding: 2px 8px 14px 2px; margin-right: 2px;">
-								 	  <b>analytics:</b>
+								 	  <b>page metadata:</b>
 								 	 </span>
-								 	 <div style="margin-top: 12px;">
+								 	 <div style="margin-top: 12px; border-top: 1px solid #000; border-right: 4px solid #000;">
 								 	 linktype: (<c:out value="${command.link.linkType}" />)
-									 rq: <c:out value="${command.link.views}" />
-									 lct: <c:out value="${command.link.linksCt}" />
-									 ict: <c:out value="${command.link.imageCt}" />
-									 ptct: <c:out value="${command.link.paraTagCt}" />
-			                         doc: <c:out value="${command.link.documentSize}" />
-			                         rqt: <c:out value="${command.link.requestTime}" />
+									 views: <c:out value="${command.link.views}" />
+									 links: <c:out value="${command.link.linksCt}" />
+									 images: <c:out value="${command.link.imageCt}" />
+									 para: <c:out value="${command.link.paraTagCt}" />
+			                         chars: <c:out value="${command.link.documentSize}" />
+			                         proctime: <c:out value="${command.link.requestTime}" />
 			                         objid:<c:out value="${command.link.generatedUniqueId}" />
 			                         </div>
 		                         </div>
