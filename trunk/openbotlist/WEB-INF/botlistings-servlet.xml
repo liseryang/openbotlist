@@ -175,6 +175,12 @@
         <property name="sessionFactory">
 			<ref local="sessionFactory" />
 		</property>
+	</bean>
+
+	<bean id="sessionRequestLogDaoBean" class="org.spirit.dao.impl.BotListSessionRequestLogDAOImpl">
+        <property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
 	</bean>	
 	
 	<bean id="entityLinksDaoBean" class="org.spirit.dao.impl.BotListEntityLinksDAOImpl">
@@ -363,7 +369,7 @@
 		</property>
 		<property name="developerUsersDao">
 			<ref bean="developerUsersDaoBean"/>
-		</property>
+		</property>	
 		<!-- User links dao -->
 		<property name="userLinksDao">
 			<ref bean="userLinksDaoBean"/>
