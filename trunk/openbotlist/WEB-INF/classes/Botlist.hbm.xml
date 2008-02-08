@@ -476,7 +476,6 @@
 	</class>
 	
 	<class name="org.spirit.bean.impl.BotListDeveloperUsers" table="developer_users" dynamic-update="true">
-
         <id name="id" column="id">
             <generator class="native"/>
         </id>
@@ -493,6 +492,20 @@
 		<property name="lastLoginFailure" column="last_login_failure" not-null="false" />
 	</class>
 	
+	<!-- Session Request Log for REST api -->	
+	<!-- Created: 2/2/2008 -->
+	<class name="org.spirit.bean.impl.BotListSessionRequestLog" table="session_request_log" dynamic-update="true">
+		<!-- The primary key is the request id -->
+		<id name="requestId" column="request_id" />
+		<property name="remoteHost" column="remote_host" not-null="true" />
+
+		<property name="msgValue" column="msg_value" not-null="true" />	
+		<property name="msgKey" column="msg_key" not-null="true" />
+		<property name="paramKey" column="param_key" not-null="false" />
+		<property name="paramValue" column="param_value" not-null="false" />
+		<property name="createdOn" column="created_on" not-null="true" />
+	</class>
+
 	<!-- User Link Ids (9/4/2007) -->
 	<!-- One user may have many links -->
 	<!-- Note: table 'user_links' is deprecated, in favor of 'user_entity_links' -->
