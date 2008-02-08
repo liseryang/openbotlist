@@ -203,7 +203,7 @@
         <delete dir="${build.dir}" />
         <delete>
             <fileset dir="${basedir}/WEB-INF/classes">
-                <include name="**" />
+                <include name="**/*.class" />
                 <exclude name="**/*.properties" />
                 <exclude name="**/*.xml" />
             </fileset>
