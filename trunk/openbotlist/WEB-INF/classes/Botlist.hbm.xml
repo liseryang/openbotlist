@@ -498,7 +498,6 @@
 		<!-- The primary key is the request id -->
 		<id name="requestId" column="request_id" />
 		<property name="remoteHost" column="remote_host" not-null="true" />
-
 		<property name="msgValue" column="msg_value" not-null="true" />	
 		<property name="msgKey" column="msg_key" not-null="true" />
 		<property name="paramKey" column="param_key" not-null="false" />

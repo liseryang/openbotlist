@@ -16,8 +16,10 @@ class Boot {
   def boot {
 	LiftServlet.addToPackages("org.spirit.lift.agents")
 	val dispatcher: LiftServlet.DispatchPf = {         
-      // if it's a web service, pass it to the web services invoker
-	  case RequestMatcher(r, ParsePath("lift" :: "pipes" :: "agents" :: c :: _, _,_),_, _) => invokeAgents(r, c)
+	  // In our pseudo REST architecture, 'types' is associated
+	  // the payload dumps and their types.  
+	  // In layman terms, a type is a article link and attributes.
+	  case RequestMatcher(r, ParsePath("lift" :: "pipes" :: "types" :: c :: _, _,_),_, _) => invokeAgents(r, c)
     }
 	LiftServlet.addDispatchBefore(dispatcher)
   }
