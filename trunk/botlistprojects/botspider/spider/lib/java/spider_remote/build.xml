@@ -67,7 +67,7 @@
     </taskdef>
 	
 	<!-- Target: Compile Scala Source -->
-	<target name="scala.compile" depends="prepare">
+	<target name="scala.compile" depends="compile">
 		<scalac srcdir="${scala.src.dir}" 
 				destdir="${build.classes.dir}" 
 		  		classpathref="classpath" force="never">

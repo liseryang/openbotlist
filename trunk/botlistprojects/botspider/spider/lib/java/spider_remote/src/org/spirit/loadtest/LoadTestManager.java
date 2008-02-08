@@ -70,7 +70,7 @@ import javax.net.ssl.X509TrustManager;
  */
 public class LoadTestManager {
 
-	public static String PROPERTY_FILE = "testclient.properties";
+	public static String PROPERTY_FILE = "remoteclient.properties";
 
 	public static final String SYSTEM_DIRS[] = { "data", "data/html", "data/logs", "cookies", "output" };
 
@@ -597,7 +597,7 @@ public class LoadTestManager {
 	 * Ensure that 'data' and 'data/log' directories are created and/or
 	 * validated.
 	 */
-	private static void verifySystemDirs() {
+	public static void verifySystemDirs() {
 		for (int i = 0; i < SYSTEM_DIRS.length; i++) {
 			File f = new File(SYSTEM_DIRS[i]);
 			System.out.print("  verifying system file=" + f.getName());
