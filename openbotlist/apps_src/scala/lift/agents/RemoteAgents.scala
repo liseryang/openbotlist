@@ -1,4 +1,5 @@
 //
+// Author: Berlin Brown
 // Remote Agents
 // Date: 2/2/2008
 
@@ -17,54 +18,15 @@ import scala.xml.{NodeSeq, Text, Group}
 import net.liftweb.util.Helpers._
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse, HttpSession}
 
+import org.spirit.lift.agents._
 
-object AgentUtil {
-  /**
-   * Create a unique string id based on; random number and client ip.
-   */
-  def uniqueMsgId (clientip: String) : String = {
-	val t = (System.currentTimeMillis) + 1
-	val r = new Random()
-	val rand_long = r.nextLong
-	hexEncode(md5( (clientip + rand_long).getBytes ))
-  }  
-  def auditLogPage (dao: LogDAO, request: HttpServletRequest, curPage: String) = {
-	val link = new Log()
-	link.setRequestUri(request.getRequestURI)
-	link.setRequestPage(curPage)
-	link.setHost(request.getHeader("host"))
-	link.setReferer(request.getHeader("referer"))
-	link.setRemoteHost(request.getRemoteAddr())
-	link.setUserAgent(request.getHeader("user-agent"))
-	dao.createVisitLog(link)
-  }
-  def buildRequestSession (dao: SessDAO, request: HttpServletRequest, key:String, value:String):String = {
-	val sess = new Sess()
-	val remote_host = request.getRemoteAddr
-	val u_id = uniqueMsgId(remote_host)
-	sess.setRemoteHost(remote_host)
-	sess.setMsgKey(key)
-	sess.setMsgValue(value)
-	sess.setRequestId(u_id)
-	dao.createSessionLog(sess)
-	u_id
-  }
-
-  def getAC(request: HttpServletRequest) = {
-	val sess = request.getSession
-	val sc = sess.getServletContext
-	
-	// Cast to the application context
-	val acobj = sc.getAttribute("org.springframework.web.servlet.FrameworkServlet.CONTEXT.botlistings")
-	acobj.asInstanceOf[AC]	
-  }
-}
 /**
  * Example request:
  * http://localhost:8080/botlist/lift/pipes/agents/remote_agent
  */
 class RemoteAgents (val request: RequestState, val httpRequest: HttpServletRequest) extends SimpleController {
-  def remote_agent: XmlResponse = {
+
+  def remote_agent_req : XmlResponse = {
 	// Cast to the user visit log bean (defined in the spring configuration)
 	val log_obj = AgentUtil.getAC(httpRequest).getBean("userVisitLogDaoBean")
 	val log_dao = log_obj.asInstanceOf[LogDAO]
@@ -85,5 +47,12 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
  		<botmsg:minorvers>0</botmsg:minorvers>
  	</botmsg:agentmsg>
 </rdf:RDF>)
-  } // End of Method
+  } // End of Method Request
+
+  
+  def remote_agent_send : XmlResponse = {
+	if (S.post_?) XmlResponse(<fuck></fuck>)
+    else AgentUtil.invalidXMLResponse
+  } // End of Method Send
+
 }
