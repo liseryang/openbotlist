@@ -40,7 +40,7 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
          xmlns:botmsg="http://xmlns.com/botmsg/0.1/" >
 	<botmsg:agentmsg>
  		<botmsg:botid>serverbot</botmsg:botid>
- 		<botmsg:message>Hello my name is serverbot, go ahead with your request</botmsg:message>
+ 		<botmsg:message>Hello my name is serverbot.  Would you like some cake?</botmsg:message>
  		<botmsg:status>200</botmsg:status>
  		<botmsg:requestid>{ Text(uniq_id) }</botmsg:requestid>
  		<botmsg:majorvers>0</botmsg:majorvers>
@@ -48,7 +48,6 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
  	</botmsg:agentmsg>
 </rdf:RDF>)
   } // End of Method Request
-
   
   def remote_agent_send : XmlResponse = {
 	if (S.post_?) XmlResponse(<fuck></fuck>)
