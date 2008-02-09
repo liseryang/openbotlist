@@ -213,7 +213,9 @@ public class LoadTestManager {
 				client.setSequencesEnabled(sequences_enabled);
 				// If sequence files are enabled, disable the url data file
 				if (client.isSequencesEnabled()) {
-					System.out.println("INFO: sequences enabled");
+				    if (debug) {
+				        System.out.println("INFO: sequences enabled");
+				    }
 					//client.setUseDataFile(false);
 				}
 				client.setProxyHost(proxy_host).setProxyPort(proxy_port).setEnableProxy(hasProxy);
@@ -243,7 +245,13 @@ public class LoadTestManager {
 		} else {
 			res = "";
 		}
-		System.out.println(res);
+		if (isDebug()) {
+		    System.out.println(res);
+		}
+	}
+	
+	public static boolean isDebug() {
+	    return getTestClient().isDebugEnabled();
 	}
 
 	public static void log(long diff, String[] responseTuple, String url) {
@@ -294,7 +302,9 @@ public class LoadTestManager {
 				String headerval = conn.getHeaderField(i);
 				if (headerval == null)
 					break;
-				System.out.println("    header# " + conn.getHeaderFieldKey(i) + " = " + conn.getHeaderField(i));
+				if (isDebug()) {
+				    System.out.println("    header# " + conn.getHeaderFieldKey(i) + " = " + conn.getHeaderField(i));
+				}
 			}
 		}
 	}
@@ -422,7 +432,9 @@ public class LoadTestManager {
 		// Also set the referer
 		String referer = cookieManager.getRefererUrl();
 		if ((referer != null) && (referer.length() > 0)) {
-			System.out.println("INFO!! Setting Referer for connection=" + referer);
+		    if (isDebug()) {		
+		        System.out.println("INFO!! Setting Referer for connection=" + referer);
+		    }
 			conn.setRequestProperty("Referer", referer);
 		}
 	}
@@ -453,7 +465,9 @@ public class LoadTestManager {
 
 			// Read all the text returned by the server
 			InputStream inStream = conn.getInputStream();
-			System.out.println("DEBUG: inputstream available=" + inStream.available());
+			if (isDebug()) {
+			    System.out.println("DEBUG: inputstream available=" + inStream.available());
+			}
 			// TODO: test, is this correct, changed getInputStream from open
 			// stream
 			BufferedReader in = new BufferedReader(new InputStreamReader(inStream));
@@ -468,7 +482,9 @@ public class LoadTestManager {
 			LoadTestWriteHtmlDoc.writeOutput("data/html/" 
 					+ LoadTestWriteHtmlDoc.generatedHtmlFilename(fullURL) + ".html", buf.toString());
 			in.close();
-			System.out.println("INFO: SSL content:");
+			if (isDebug()) {
+			    System.out.println("INFO: SSL content:");
+			}
 			prettyPrintTrimData(buf.toString(), 40);
 
 			// Also handle redirects outside of Java's implementation
@@ -476,7 +492,9 @@ public class LoadTestManager {
 			if (!followRedirects) {
 				if (statusCode == 302) {
 					String newLocation = conn.getHeaderField("Location");
-					System.out.println("INFO: following redirect to=" + newLocation);
+					if (isDebug()) {
+					    System.out.println("INFO: following redirect to=" + newLocation);
+					}
 					tuple = connectURLSSL(newLocation, loadExistingCookies);
 				}
 			}
@@ -518,7 +536,9 @@ public class LoadTestManager {
 
 			// Get the response
 			InputStream inStream = conn.getInputStream();
-			System.out.println("DEBUG: inputstream available=" + inStream.available());
+			if (isDebug()) {
+			    System.out.println("DEBUG: inputstream available=" + inStream.available());
+			}
 			rd = new BufferedReader(new InputStreamReader(inStream));
 			printHeaderInfo(conn);
 
@@ -550,7 +570,9 @@ public class LoadTestManager {
 			if (!followRedirects) {
 				if (statusCode == 302) {
 					String newLocation = conn.getHeaderField("Location");
-					System.out.println("INFO: following redirect to=" + newLocation);
+					if (isDebug()) {
+					    System.out.println("INFO: following redirect to=" + newLocation);
+					}
 					connectURLSSL(newLocation, loadExistingCookies);
 				}
 			}
@@ -599,16 +621,15 @@ public class LoadTestManager {
 	 */
 	public static void verifySystemDirs() {
 		for (int i = 0; i < SYSTEM_DIRS.length; i++) {
-			File f = new File(SYSTEM_DIRS[i]);
-			System.out.print("  verifying system file=" + f.getName());
+			File f = new File(SYSTEM_DIRS[i]);			
 			if (f.exists()) {
-				System.out.print(" [  exists ]");
-			} else {
-				System.out.print(" [  not found, creating ] ");
+			    if (isDebug()) {			
+			        System.out.println("system file=" + f.getName() + " [  exists ]");
+			    }
+			} else {			    
 				boolean res = f.mkdirs();
-				System.out.print(res);
-			}
-			System.out.println();
+				System.out.println("system file="  + f.getName() + " [  not found, creating ] " + res);				
+			}			
 		}
 	}
 
@@ -624,8 +645,7 @@ public class LoadTestManager {
 		return buf.toString();
 	}
 
-	public static void init() {
-		System.out.println("running...servlet log client");
+	public static void init() {		
 		getTestClient();
 	}
 

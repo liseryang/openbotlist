@@ -3,6 +3,7 @@
  */
 package org.spirit.spiderremote
 
+import scala.xml._
 import java.sql.{DriverManager}
 import org.spirit.loadtest.{LoadTestManager}
 
@@ -18,11 +19,11 @@ object SpiderRemote {
 	  Console.println("name = " + rs.getString("url"))
 	  Console.println("title = " + rs.getString("title"))
 	}
-
 	// Connect to the server
 	LoadTestManager.verifySystemDirs()
-	LoadTestManager.connectURL("http://127.0.0.1:8080/botlist/lift/pipes/types/remote_agent_req", false)
-
+	val res = LoadTestManager.connectURL("http://127.0.0.1:8080/botlist/lift/pipes/types/remote_agent_req", false)
+	Console.println("-->" + res(1))
+	Console.println("-->" + XML.load(res(1)))
 	System.out.println("done");
   }
 }
