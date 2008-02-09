@@ -24,16 +24,18 @@
     <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.1.jar" />
 	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.1.jar" />
 	<property name="sqlite.jar"            value="${lib.dir}/sqlitejdbc-v037-nested.jar" />
-	        
+	<property name="xml.jar"               value="${lib.runtime.dir}/xercesImpl.jar" />
+	
     <target name="init" description="Initialization">
         <tstamp/>
         <echo message="Running with Tomcat Home=${tomcat.home}" />
     </target>
-
+	
     <!-- Target: CLASSPATH -->
     <path id="classpath">        
         <pathelement location="${scala.jar}" />
     	<pathelement location="${scala-compiler.jar}" />
+    	<pathelement location="${xml.jar}" />
     	<pathelement location="${sqlite.jar}" />
     	
         <!-- Include the CLASSES directory -->

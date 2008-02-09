@@ -308,7 +308,13 @@ public class LoadTestManager {
 			}
 		}
 	}
-
+	
+	public static void forceProxySettings() {		
+		System.getProperties().put("proxySet", "" + getTestClient().isEnableProxy());
+		System.getProperties().put("proxyHost", getTestClient().getProxyHost());
+		System.getProperties().put("proxyPort", getTestClient().getProxyPort());
+	}
+	
 	public static String[] connectURL(final String fullURL, final boolean loadExistingCookies) {
 		String[] tuple = new String[3];
 		tuple[0] = "";
@@ -506,7 +512,15 @@ public class LoadTestManager {
 		}
 		return tuple;
 	}
-
+	
+	public static String [] postData(Map mapData, final String fullURL, final boolean loadExistingCookies) 
+				throws MalformedURLException, IOException, RuntimeException {	    
+		URL url = new URL(fullURL);
+		// Read all the text returned by the server
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		final boolean followRedirects = true;
+	    return postDataSSL(mapData, conn, url, fullURL, followRedirects, loadExistingCookies); 
+	}
 	public static String [] postDataSSL(Map mapData, HttpURLConnection conn, URL url, final String fullURL,
 			final boolean followRedirects, final boolean loadExistingCookies) {
 		OutputStreamWriter wr = null;
