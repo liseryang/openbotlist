@@ -36,21 +36,20 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
 	AgentUtil.auditLogPage(log_dao, httpRequest, "remote_agent")
 
     XmlResponse(
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:botmsg="http://xmlns.com/botmsg/0.1/" >
-	<botmsg:agentmsg>
- 		<botmsg:botid>serverbot</botmsg:botid>
- 		<botmsg:message>Hello my name is serverbot.  Would you like some cake?</botmsg:message>
- 		<botmsg:status>200</botmsg:status>
- 		<botmsg:requestid>{ Text(uniq_id) }</botmsg:requestid>
- 		<botmsg:majorvers>0</botmsg:majorvers>
- 		<botmsg:minorvers>0</botmsg:minorvers>
- 	</botmsg:agentmsg>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	<agentmsg>
+ 		<botid>serverbot</botid>
+ 		<message>Hello my name is serverbot.  Would you like some cake?</message>
+ 		<status>200</status>
+ 		<requestid>{ Text(uniq_id) }</requestid>
+ 		<majorvers>0</majorvers>
+ 		<minorvers>0</minorvers>
+ 	</agentmsg>
 </rdf:RDF>)
   } // End of Method Request
   
   def remote_agent_send : XmlResponse = {
-	if (S.post_?) XmlResponse(<fuck></fuck>)
+	if (S.post_?) XmlResponse(<f></f>)
     else AgentUtil.invalidXMLResponse
   } // End of Method Send
 
