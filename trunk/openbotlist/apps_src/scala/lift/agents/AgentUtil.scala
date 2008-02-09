@@ -61,13 +61,11 @@ object AgentUtil {
 	
   def invalidXMLResponse : XmlResponse = {
 	 XmlResponse(
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:botmsg="http://xmlns.com/botmsg/0.1/" >
-	   <botmsg:agentmsg>
-		 <botmsg:botid>serverbot</botmsg:botid>
- 		 <botmsg:message>Oops. Something went wrong.</botmsg:message>
- 		 <botmsg:status>500</botmsg:status>
-	   </botmsg:agentmsg>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	   <agentmsg>
+		 <botid>serverbot</botid>
+ 		 <message>Oops. Something went wrong.</message>
+ 		 <status>500</status>
+	   </agentmsg>
 </rdf:RDF>) }
 }
-
