@@ -20,10 +20,17 @@ object SpiderRemote {
 	  Console.println("title = " + rs.getString("title"))
 	}
 	// Connect to the server
-	LoadTestManager.verifySystemDirs()
-	val res = LoadTestManager.connectURL("http://127.0.0.1:8080/botlist/lift/pipes/types/remote_agent_req", false)
-	Console.println("-->" + res(1))
-	Console.println("-->" + XML.load(res(1)))
-	System.out.println("done");
+	LoadTestManager.verifySystemDirs
+	val res_from_req = LoadTestManager.connectURL("http://127.0.0.1:8080/botlist/lift/pipes/types/remote_agent_req", false)
+	val serv_agent_doc = XML.loadString(res_from_req(1))
+	val b = serv_agent_doc \\ "message"
+	Console.println(b)
+
+	// Post to server
+	val map = Map.empty[String, String]
+	val v = new java.util.HashMap
+	val res_from_snd = LoadTestManager.postData(v, "http://127.0.0.1:8080/botlist/lift/pipes/types/remote_agent_send", false)
+	Console.println(res_from_snd(1))
+	Console.println("done");
   }
 }
