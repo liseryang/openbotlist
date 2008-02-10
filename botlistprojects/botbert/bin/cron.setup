@@ -1,0 +1,2 @@
+MAILTO='bbrown@botspiritcompany.com'
+*/15 * * * * /home/bbrown/botlistprojects/botbert/bin/bot_scan_job.sh
