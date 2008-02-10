@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="FeedItems">
+
+  <!-- Use type aliases to avoid typing the full classname every time. -->
+  <typeAlias alias="FeedItem" type="org.spirit.bean.impl.BotListFeedItems" />
+
+  <!-- Result maps describe the mapping between the columns returned
+       from a query, and the class properties.  A result map isn't
+       necessary if the columns (or aliases) match to the properties 
+       exactly. -->
+  <resultMap id="FeedItemResult" class="FeedItem">
+    <result property="id" column="id" />
+    <result property="mainUrl" column="main_url" />
+    <result property="urlTitle" column="url_title" />
+    <result property="urlDescription" column="url_description" />
+    <result property="urlSource" column="url_source" />
+    <result property="hostname" column="hostname" />
+  </resultMap>
+
+  <!-- Select with no parameters using the result map for Account class. -->
+  <select id="selectAllFeedItems" resultMap="FeedItemResult">
+    select id, main_url, url_title, url_description, url_source, hostname 
+    	from system_feed_items where process_count = 0 order by RAND()
+    	LIMIT 0, 70
+  </select>
+  
+  <!-- Update feed items Feed parameter class -->
+  <update id="updateFeedItem" parameterClass="FeedItem">
+  	update system_feed_items 
+  		set process_count = 1 
+  		where id = #id#
+  </update>
+
+</sqlMap>
