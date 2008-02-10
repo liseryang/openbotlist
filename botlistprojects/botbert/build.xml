@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2006 - Berlin Brown -->
+<!-- Date: 4/1/2007 -->
+<project name="BotList BotBert" default="compile" basedir=".">
+	
+	<property file="build.properties" />
+	<property name="build.dir"	value="${basedir}/build" />
+	<property name="build.dir.classes"	value="${basedir}/build/classes" />
+	<property name="scala.src.dir"	value="${basedir}/scala" />
+	<property name="src.dir"  	value="${basedir}/src"/>
+	<property name="lib.dir"	value="${basedir}/lib" />
+	
+	<target name="init" description="Initialization">
+		<tstamp/>		
+	</target>
+
+	<!-- Target: Prepare -->
+	<target name="prepare">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.dir.classes}"/>
+	</target>
+	
+	<!-- Define the library files -->
+	<property name="jdom.jar"			value="${lib.dir}/jdom.jar" />
+	<property name="mysql.jar"			value="${lib.dir}/mysql-connector-java-5.0.3-bin.jar" />
+	<property name="sbaz-tests.jar"		value="${lib.dir}/sbaz-tests.jar" />
+	<property name="sbaz.jar" 			value="${lib.dir}/sbaz.jar" />
+	<property name="scala-actors.jar"	value="${lib.dir}/scala-actors.jar" />
+	<property name="scala-compiler.jar"	value="${lib.dir}/scala-compiler.jar" />
+	<property name="scala-dbc.jar"		value="${lib.dir}/scala-dbc.jar" />
+	<property name="scala-decoder.jar"	value="${lib.dir}/scala-decoder.jar" />
+	<property name="scala-library.jar"	value="${lib.dir}/scala-library.jar" />
+	
+	<property name="xerces.jar"			value="${lib.dir}/xercesImpl.jar" />
+	
+	<!-- Target: CLASSPATH -->
+	<path id="classpath">
+		<pathelement location="${sbaz-tests.jar}"/>
+		<pathelement location="${sbaz.jar}"/>
+		<pathelement location="${scala-actors.jar}"/>
+		<pathelement location="${scala-compiler.jar}"/>
+		<pathelement location="${scala-dbc.jar}"/>
+		<pathelement location="${scala-decoder.jar}"/>
+		<pathelement location="${scala-library.jar}"/>
+		<pathelement location="${mysql.jar}"/>
+		<pathelement location="${jdom.jar}" />
+		<pathelement location="${xerces.jar}" />
+	</path>
+	
+	<path id="runtime.classpath">
+		<pathelement location="${build.dir}/${appname.jar}.jar" />
+	</path>
+	
+	<taskdef resource="scala/tools/ant/antlib.xml">
+	  <classpath refid="classpath" />
+	</taskdef>
+	
+	<target name="compile" depends="prepare">
+	  <javac deprecation="true"
+				srcdir="${src.dir}"
+				destdir="${build.dir.classes}"
+				target="1.5"
+				includes="**/*.java">
+			<classpath refid="classpath"/>
+			<compilerarg value="-Xlint" />
+	  </javac>
+	  <scalac srcdir="${scala.src.dir}" destdir="${build.dir.classes}" 
+	  		classpathref="classpath" force="never">
+	    <include name="**/*.scala"/>
+	  </scalac>
+	</target>
+
+	<!-- Build jar -->
+	<target name="package" depends="compile">
+		<jar jarfile="${build.dir}/${appname.jar}.jar">
+			<fileset dir="${build.dir.classes}">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<!-- Run the application -->
+	<target name="run" depends="package">
+		<java classname="BotListScanFeeds" fork="false">
+			<classpath refid="classpath"/>
+			<classpath refid="runtime.classpath"/>
+			<arg value="-f" />
+			<arg path="${basedir}" />
+			<arg value="-s" />
+		</java>
+	</target>
+	
+	<!-- Zip the development code base -->
+	<!-- Added modification to exclude *.jar files (scala not needed) -->
+	<target name="zip.codebase" depends="clean,package">
+		<fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
+		<zip destfile="${basedir}/build/${appname.jar}.zip"
+				excludes="**/*.jar"
+				basedir="${basedir}" />
+	</target>
+	
+	<!-- Zip the PYTHON development code base -->
+	<target name="zip.python">
+		<fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
+		<zip destfile="${basedir}/build/${appname.jar}_python.zip"
+				excludes="**/*.jar" >
+			<zipfileset dir="${basedir}/lib/python" prefix="python" />
+		</zip>
+	</target>
+	
+	<!-- If deploy directory set, deploy to staging area -->
+	<target name="deploy" depends="package">
+		<fail unless="deploy.dir">DEPLOY.DIR must be set, see the build.properties file</fail>
+		<copy todir="${deploy.dir}/build">
+			<fileset dir="${basedir}/build">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="clean.python">
+			<delete>
+				<fileset dir="${basedir}/lib/python">
+					<include name="**/*.pyc"/>
+				</fileset>
+			</delete>
+	</target>
+	
+	<!-- Main Clean -->
+	<target name="clean">
+		<delete dir="${build.dir}" />		
+	</target>
+	<!-- End of Main Clean -->
+</project>
+<!-- End of the File -->
