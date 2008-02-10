@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="FeedItems">
+
+  <!-- Use type aliases to avoid typing the full classname every time. -->
+  <typeAlias alias="SystemAudit" type="org.spirit.bean.impl.BotListSystemAuditLog" />
+
+  <insert id="insertAuditLog" parameterClass="SystemAudit">
+    insert into system_audit_log (
+		application_name,
+		message,
+		log_level,
+		message_id,
+		send_to,
+		created_on)
+    values (
+      #applicationName#, #message#, #logLevel#, #messageId#, #sendTo#, NOW()
+    )
+  </insert>
+ 
+</sqlMap>
