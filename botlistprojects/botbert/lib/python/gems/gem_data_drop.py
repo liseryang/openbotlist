@@ -43,8 +43,7 @@ class EntityLinkDataDropJob:
 		try:
 			
 			# Open output data file
-			fout = open("/home/bbrown/botlist_datadump.dat", "w")
-			
+			fout = open("/home/bbrown/botlist_datadump.dat", "w")			
 			start_time = time.time()
 			entity_handler = EntityLinkHandler()
 			entity_handler.connect()
