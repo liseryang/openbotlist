@@ -5,6 +5,7 @@
 
 package org.spirit.lift.agents
 
+import scala.Console.{println}
 import java.util.Random
 import org.springframework.context.{ApplicationContext => AC}
 import org.spirit.dao.impl.{BotListUserVisitLogDAOImpl => LogDAO}
@@ -14,11 +15,12 @@ import org.spirit.bean.impl.{BotListSessionRequestLog => Sess}
 import net.liftweb.http._
 import net.liftweb.http.S._
 import net.liftweb.http.S
-import scala.xml.{NodeSeq, Text, Group}
+import scala.xml.{XML, NodeSeq, Text, Group}
 import net.liftweb.util.Helpers._
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse, HttpSession}
 
 import org.spirit.lift.agents._
+import org.spirit.lift.agents.model._
 
 /**
  * Example request:
@@ -49,7 +51,24 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
   } // End of Method Request
   
   def remote_agent_send : XmlResponse = {
-	if (S.post_?) XmlResponse(<f></f>)
+	try {
+	  var payload = ""
+	  S.param("types_payload").map { (u => payload = u) }
+	  val xml_payload = XML.loadString(payload)
+	  val client_agent_msg = MessageUtil.fromXML(xml_payload)
+	  MessageUtil.processPayload(xml_payload, httpRequest)
+	} catch {
+	  case e => {
+		// On error return invalid XML message
+		println("ERR: " + e)
+		return AgentUtil.invalidXMLResponse
+	  }
+	} // End of try - catch
+
+	if (S.post_?) XmlResponse { (
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <message>Enjoy your cake</message>
+</rdf:RDF>) }
     else AgentUtil.invalidXMLResponse
   } // End of Method Send
 
