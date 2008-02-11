@@ -46,12 +46,6 @@ DEFER: quoted-field
 
 : csv-row ( stream -- row )
   [ row drop ] with-stream ;
-
 : csv ( stream -- rows )
   [ [ (csv) ] { } make ] with-stream ;
 	
-: parse-document ( -- )
-   ! "testcsv.txt" <file-reader> csv [ . ] each
-   "testcsv.txt" <file-reader> csv length
-
-MAIN: parse-document ;
