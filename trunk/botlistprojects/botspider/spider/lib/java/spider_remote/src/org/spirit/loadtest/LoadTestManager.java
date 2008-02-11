@@ -514,7 +514,7 @@ public class LoadTestManager {
 	}
 	
 	public static String [] postData(Map mapData, final String fullURL, final boolean loadExistingCookies) 
-				throws MalformedURLException, IOException, RuntimeException {	    
+				throws MalformedURLException, IOException, RuntimeException {		
 		URL url = new URL(fullURL);
 		// Read all the text returned by the server
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
