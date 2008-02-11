@@ -93,6 +93,7 @@
 	
 	<path id="classpath.scala">
 		<pathelement location="${hibernate.jar}"/>
+		<pathelement location="${jta.jar}" />
 		<pathelement location="${spring.jar}" />
 		<pathelement location="${logging.jar}" />
         <pathelement location="${scala.jar}" />
@@ -186,8 +187,7 @@
     
     <!-- Generate Version -->
     <target name="generate.vers" depends="package">
-        <exec executable="${basedir}/getsvnversion.sh" spawn="false" failonerror="false">
-        </exec>
+        <exec executable="${basedir}/getsvnversion.sh" spawn="false" failonerror="false"></exec>
         <java classname="org.spirit.util.version.BotListVersionReader">
             <classpath refid="classpath" />
             <classpath>
