@@ -25,7 +25,6 @@ MAX_BOT_RATING = 0
  Bean Definitions for Object Mapping
 ------------------------------------------------
 """
-
 class ScanFeed:
 	def __init__(self):
 		self.mainUrl = None
@@ -71,12 +70,14 @@ class ScanFeedHandler(BotlistBusinessObject):
 			sql_set.append(SQL_PREFIX + "%s" + SQL_PREFIX)      # hostname
 			sql_set.append(")")
 			sql_str = ''.join(sql_set)            
-			cursor = self.conn.cursor()            
-			url_val = url.encode("utf-8").replace("'", "")
+			cursor = self.conn.cursor()
+			
+			url_val = url.encode("utf-8").replace("'", "")		
 			title_val = title.encode("utf-8").replace("'", "")
 			descr_val = descr.encode("utf-8").replace("'", "")
 			source_val = source.encode("utf-8").replace("'", "")
 			host_val = hostname.encode("utf-8").replace("'", "")
+			
 			cursor.execute(sql_str % (url_val, title_val, descr_val, source_val, host_val))
 			cursor.close()
 		except Exception, ex:
@@ -191,7 +192,7 @@ class ScanFeedHandler(BotlistBusinessObject):
 		try:
 			cursor = self.conn.cursor()
 			sql_set = []
-			sql_set.append("select main_url, url_title, url_description, url_source from system_scan_feeds")            
+			sql_set.append("select main_url, url_title, url_description, url_source from system_scan_feeds order by RAND()")
 			sql_str = ''.join(sql_set)
 			cursor.execute(sql_str)
 			data = cursor.fetchall() 
