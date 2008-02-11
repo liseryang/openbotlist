@@ -21,6 +21,7 @@
 import sys
 import urllib
 import urllib2
+import socket
 import datetime
 import time
 import cgi
@@ -39,6 +40,10 @@ __version__ = "0.1"
 # of article descriptions that are too long.
 # Generally, large article descriptions range from 5k to 15k
 MAX_DESCR_LEN = 3000
+
+MAX_FEEDS_SCAN = 30
+
+DEFAULT_REQUEST_TIMEOUT = 20
 
 #--------------------------------------
 class ItemBean:
@@ -216,8 +221,9 @@ class BotListScanFeeds:
         def scanFeedList(self):
                 """Stage Two, scan the feed list and get the URL to extract feed data."""        
                 data = self.feed_handler.listScanFeeds()
-                for feed in data:
-                        print "feeds... / (%s docs:%s passed)" % (self.feed_item_ctr, self.feed_passed)
+                data = data[:MAX_FEEDS_SCAN]
+                for idx, feed in enumerate(data):
+                        print "feeds ... / [%s/%s] (%s docs:%s passed)" % (idx, len(data),self.feed_item_ctr, self.feed_passed)
                         try:
                                 baseURL = feed.mainUrl
                                 self.processData(baseURL)	
@@ -247,6 +253,9 @@ def cleanup(home_dir):
 def main():        
         args = sys.argv        
         start = time.time()
+        # Set the default timeout.        
+        socket.setdefaulttimeout(DEFAULT_REQUEST_TIMEOUT)
+        
         feeds = BotListScanFeeds()
         
         # Check for args that might contain -s=scan feed list and -e=create entity links
