@@ -41,7 +41,8 @@ __version__ = "0.1"
 # Generally, large article descriptions range from 5k to 15k
 MAX_DESCR_LEN = 3000
 
-MAX_FEEDS_SCAN = 30
+# Modify the limit of seeding feeds to poll
+MAX_FEEDS_SCAN = 500
 
 DEFAULT_REQUEST_TIMEOUT = 20
 
