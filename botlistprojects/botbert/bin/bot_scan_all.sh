@@ -1,8 +1,9 @@
 #!/bin/sh
 
 while true ; do
-        ./bot_scan_job.sh
-        echo "Done"
-        sleep 5
+	# deprecated
+    #./bot_scan_job.sh -s -n 200
+	echo "Done"
+	sleep 5
 done
 
