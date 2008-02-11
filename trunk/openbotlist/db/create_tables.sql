@@ -667,6 +667,10 @@ INSERT INTO forum_group(forum_name,
 	forum_descr, keywords, created_on) 
 	VALUES ('Bugs and Feature Requests', 'Bugs and Feature Requests', 'bugs chat forums', NOW());
 	
+INSERT INTO forum_group(forum_name,
+	forum_descr, keywords, created_on) 
+	VALUES ('Bot Chat', 'Bot Chat', 'bot chat forums', NOW());
+	
 --
 -- Insert new users (apr pwd)
 
