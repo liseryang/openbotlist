@@ -43,10 +43,8 @@ class RemoteSyncController
     if requestKey.nil?
 	  linkListingRemote.viewName = "errorInvalidView"
 	  return linkListingRemote
-    end
-    
-    @controller.setValidator(BotListRemoteSyncValidator.new) 
-    
+    end    
+    @controller.setValidator(BotListRemoteSyncValidator.new)    
 	return linkListingRemote
   end
     
