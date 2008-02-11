@@ -2,34 +2,55 @@
 # Berlin Brown
 # jruby - bot_remote_sync
 #
+# Updated 2/10/2008 for new RDF remote process
+
 require 'java'
+require 'rexml/document'
+include REXML
+
 include_class 'java.net.HttpURLConnection' unless defined? HttpURLConnection
 include_class 'com.ibatis.sqlmap.client.SqlMapClient' unless defined? SqlMapClient
 include_class 'com.ibatis.sqlmap.client.SqlMapClientBuilder' unless defined? SqlMapClientBuilder
 include_class 'com.ibatis.common.resources.Resources' unless defined? Resources
 
 include_class 'org.spirit.loadtest.LoadTestManager' unless defined? LoadTestManager
-
 include_class 'org.spirit.bean.impl.BotListSystemAuditLog' unless defined? BotListSystemAuditLog
 
 MAX_LEN_FIELD = 120
 
+DEFAULT_RDF_MSG = <<EOF
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	   <agentmsg>
+		  <botid></botid>
+		  <message></message>
+		  <status></status>
+		  <typespayload>data</typespayload>
+	   </agentmsg>
+</rdf:RDF>  
+EOF
+
 class RemoteSync
-	attr_accessor :key_request_url, :remote_send_url, :sqlMapper
-    def initialize()		
-		@key_request_url = nil
-		@remote_send_url = nil
-		@send_data = nil
-		@sqlMapper = nil
-		@feed_items = nil
-    end
+  attr_accessor :key_request_url, :remote_send_url, :sqlMapper
+  def initialize()		
+    @key_request_url = nil
+    @remote_send_url = nil
+    @send_data = nil
+    @sqlMapper = nil
+    @feed_items = nil
     
-    def shortenField(str_val)
-		str = str_val[0, MAX_LEN_FIELD] if str_val.length > MAX_LEN_FIELD
-		return str if !str.nil?
-		return str_val
-    end
-    
+    # Init the payload message XML document
+    @payload_doc = nil
+    @payload_content = DEFAULT_RDF_MSG
+  end
+
+  def load_payload_doc()
+    @payload_doc = Document.new(@payload_content)
+  end
+  def shortenField(str_val)
+    str = str_val[0, MAX_LEN_FIELD] if str_val.length > MAX_LEN_FIELD
+    return str if !str.nil?
+    return str_val
+  end    
     def urlItemCleanup(item)
 		return if item.nil?		
 		# Cleanup url
@@ -130,31 +151,30 @@ def connect(key_url, send_url)
 		
 	remoteSync = RemoteSync.new
 	remoteSync.sqlMapper = sqlMapper
+    remoteSync.load_payload_doc
 	remoteSync.key_request_url = key_url
 	remoteSync.remote_send_url = send_url
 	remoteSync.scanFeeds
 	remoteSync.sendFeedItemData
 end
 
-def main()
-	
-	if ARGV.size != 2		
-		puts "usage: bot_remote_sync.rb <key url> <post to url>"
-		puts "args=#{ARGV}"
-		return 
-	end
-	
-	puts "running"
-	start_time = Time.now
-		
-	key_url = ARGV[0]
-	send_url = ARGV[1]
-	
-	connect(key_url, send_url)
-	end_time = Time.now
-	diff_time = end_time - start_time
-	printf "processing remote sync in %.5f s\n", diff_time
-	puts "done"	
+def main()	
+  if ARGV.size != 2		
+    puts "usage: bot_remote_sync.rb <key url> <post to url>"
+    puts "args=#{ARGV}"
+    return 
+  end  
+
+  puts "running"
+  start_time = Time.now
+  
+  key_url = ARGV[0]
+  send_url = ARGV[1]	
+  connect(key_url, send_url)
+  end_time = Time.now
+  diff_time = end_time - start_time
+  printf "processing remote sync in %.5f s\n", diff_time
+  puts "done"	
 end
 
 main()
