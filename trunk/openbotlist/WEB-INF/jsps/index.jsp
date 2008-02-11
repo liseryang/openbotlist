@@ -4,8 +4,8 @@
 <head>
  	<title>Botlist - Interesting Things Online</title>
  
-  	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings.">
- 	<META NAME="keywords" CONTENT="articles, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg">
+  	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
+ 	<META NAME="keywords" CONTENT="articles, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
     <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" />
    
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
