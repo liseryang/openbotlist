@@ -9,6 +9,10 @@ case $0 in
 		ABS_CONF=`dirname $ABS_APP_PATH`
 		ABS_CONF=`dirname $ABS_CONF`
 		;; 
+	bin*)
+		ABS_APP_PATH=`pwd`
+		ABS_CONF=$ABS_APP_PATH
+		;;
 	*) 
 		ABS_APP_PATH=`pwd`
 		ABS_CONF=`dirname $ABS_APP_PATH`
