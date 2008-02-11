@@ -461,8 +461,7 @@
         <property name="maxInMemorySize">
 	        <value>4096</value>
         </property>
-	</bean>
-	
+	</bean>	
 	<bean id="radDefaultHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
