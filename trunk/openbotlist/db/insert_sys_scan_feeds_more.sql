@@ -4,6 +4,5314 @@
 --
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.v12aml.net.ru/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/channel-08/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/earlywarning/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/securityfix/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/thefix/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/the-trail/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.washingtonpost.com/washbizblog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/27bstroke6/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/27bstroke6/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/business/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/business/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/games/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/games/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/monkeybites/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/monkeybites/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/wiredscience/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/wiredscience/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/wiredscience/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.wired.com/wiredscience/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blpwebzine.blogs.com/politicshow/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blpwebzine.blogs.com/politicshow/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blpwebzine.blogs.com/politicshow/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://board.linuxsouthamerica.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bobgeiger.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bob.pythonmac.org/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bob.pythonmac.org/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://booboolina.vox.com/library/posts/tags/dork/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bornagainhippies.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://brian.carnell.com/syndication/rss/Science/robotics.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bricas.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://calliecline.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://caminhantediurno.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://canadaonline.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://canimal.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://capescience.blogspot.com/rss/capescience.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://catherines-corner.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cbs2chicago.com/politics/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ceicher.homeunix.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cernigsnewshog.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ces.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cgi.nos.nl/data/cadpost/RSS/europa_deze_week.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chachajava.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chainsawblues.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cheapgadgets.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chickybaberules.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chikpeascience.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chinadigitaltimes.net/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chinese.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chocadelia.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chrisbensen.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://chrispederick.com/blog/feeds/posts/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ciencia.nasa.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cityroom.blogs.nytimes.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://clarkovsaturn.blip.tv/posts/?sort=date&skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cliffschecter.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cn.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cnn.com/cnn.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://coding.derkeiler.com/Archive/Java/comp.lang.java/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://coding.derkeiler.com/Archive/Java/comp.lang.java.softwaretools/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://coding.derkeiler.com/Archive/Python/comp.lang.python/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://coleman.senate.gov/index.cfm?FuseAction=RSS.Podcast', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://commonsensepoliticalthought.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://communities.canada.com/shareit/blogs/gamesnews/rss.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://community.livejournal.com/ru_javascript/data/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://community.livejournal.com/ru_python/data/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://conservativeoutpost.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://counter.li.org/linuxcounternews.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cranialcavity.net/archives/international_politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cranialcavity.net/archives/philippine_politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://crustythebiker.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://csobassblog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cuporobots.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://customtorque.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cyber.law.harvard.edu/blogs/static/crimson1/politics/nh/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://cz.christianpost.com/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://davidbrin.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dealbook.blogs.nytimes.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://debahblog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://del.icio.us/rss/tag/apple', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://del.icio.us/rss/tag/gadgets', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://delphidisciple.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://denilsodelima.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://design-se.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://desiretoinspire.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://deslumieres.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://desperatetimes.org/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://desperatetimes.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://de.trendmicro-europe.com/enterprise/security_info/rssinfo.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://developer.co.ua/posts/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://developer.co.ua/posts/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://developersoven.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dicasunix.com/?feed=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dirtpeddler.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://discountappleproducts.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://diverjeff.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dn-live.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/AirPort.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/garageband.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/iPhoto.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/iPod.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/itunes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/iTunes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/macosx.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/mail.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/PowerBook.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/QuickTime.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://docs.info.apple.com/rss/Safari.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://documentation.linux.com/documentation.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dor.mo.gov/news/2004/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dp.rastko.net/feeds/backend.php?content=posted&type=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://drhoomemphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://dwightgoins.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://eahsgovt.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://earthquake.usgs.gov/recenteqsww/eqs1day-M2.5.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://earthquake.usgs.gov/recenteqsww/eqs7day-M2.5.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://earthquake.usgs.gov/recenteqsww/eqs7day-M5.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://economicsofcities.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://economictimes.indiatimes.com/rssfeeds/1286551815.cms', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://edinburghnews.scotsman.com/politics.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://edinburghnews.scotsman.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://egov.cathexes.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://elearnews.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://enewsblog.com/gwaliortimes/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ep5il0n.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://erratasec.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://europeanhistory.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fakesteve.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fancyrobot.typepad.com/beta/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://farr.house.gov/rss/farrrss20.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.arstechnica.com/arstechnica/BAaf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.arstechnica.com/arstechnica/journals/apple', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.arstechnica.com/arstechnica/journals/apple', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.arstechnica.com/arstechnica/science', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.arstechnica.com/arstechnica/science', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.chooselaw.com/rss/legal-tips.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.earthtimes.org/earthtimes/technology/science', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.earthtimes.org/earthtimes/technology/science', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.engadget.com/weblogsinc/engadget', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gawker.com/gizmodo/full', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/ATOM/news.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/ATOM/sport.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/ATOM/topstories.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/RSS20/news.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/RSS20/sport.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.gooletimes.net/RSS20/topstories.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.huffingtonpost.com/FeaturedPosts', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.huffingtonpost.com/huffingtonpost/LatestNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.huffingtonpost.com/huffingtonpost/raw_feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.huffingtonpost.com/huffingtonpost/TheBlog', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.latimes.com/latimes/business', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.latimes.com/latimes/features/lifestyle', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.latimes.com/latimes/news', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.latimes.com/latimes/news/nationworld/world', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.latimes.com/latimes/news/opinion', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.lockergnome.com/rss/linux.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.lockergnome.com/rss/political.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.podplaza.nl/radioeurope', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/Cindy%20Sheehan', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/intel', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/ssloansjca', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/tag%20clouds', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.technorati.com/feed/posts/tag/transistr', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/gadgets/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/politics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/robo2/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/robopundit/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/rwpolitics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/uwpoliticalscience/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/uwpoliticalscience/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feedster.com/feedpapercache/wifigadgets/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.wired.com/columns/alttext', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.wired.com/WiredDangerRoom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.wired.com/wiredscience?format=xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.wired.com/wiredscience?format=xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://feeds.wired.com/wired/topheadlines', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fieldguidetomemphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://filmelog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fingerclickingood.com/rss/politics_government_culture_ebooks.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fingerclickingood.com/rss/politics_government_culture_ebooks.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fingerclickingood.com/rss/science_culture_ebooks.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://firstgov.gov/rss/FAQs.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://firstgov.gov/rss/updates.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://firstsynn.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://flooringtheconsumer.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://forcryingoutloudwhatnow.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://fraying.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gadget.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gamebudizm.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gamepolitics.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://garfeild-ubuntu.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gatewaypundit.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://geckonia.com/pixelpost/index.php?x=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ghr.nlm.nih.gov/ghr/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gils.utah.gov/secure/rss/ferret.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gils.utah.gov/secure/rss/libnews.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gizmodo.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gizmodo.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gnatworld.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gnodet.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gocanada.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://goeasteurope.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://goeurope.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://golemp.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://go.missouri.gov/press/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://goodwillstacy.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googleblog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googleblog.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://google-latlong.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googlenewsblog.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googlereader.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googletesting.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://googlewebmastercentral.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://govegas.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://governments-online.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://government.zdnet.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://graphics8.nytimes.com/services/xml/rss/nyt/Arts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://graphics8.nytimes.com/services/xml/rss/nyt/Books.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://graphics8.nytimes.com/services/xml/rss/nyt/Sports.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gtmcknight.com/log/rss/fullpostsandcomments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://guide.apple.com/rss/newarrivals.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://gui-yourself.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://guzzitech.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://halfthepolitics.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://handhelds.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hangry.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://harkin.senate.gov/rss/rss.cfm', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hellafrisch.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hilarymchone.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://homeless-girl.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://homepage.mac.com/ptorrone/philliptorrone_gadgets.opml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hotdeals.apple.com/newarrivals/rss/newarrivals.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hotwired.lycos.com/webmonkey/meta/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hrabal.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hungryforhunger.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://huslage.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://hyperword.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://iapodcast.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://icant.co.uk/csstablegallery/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ikeahacker.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://images.apple.com/downloads/macosx/automator/recent.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://images.apple.com/main/rss/hotnews/hotnews.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://imostcertainlyaskedforit.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://indexed.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://informit.com/guides/guide_rss.asp?g=java', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://informit.com/guides/guide_rss.asp?g=linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://initiativeeuropeenneetsociale.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://intrepidcommuter.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://iocollaboro.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://iportnov.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://irasnyd.homelinux.com:82/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://irregulartimes.com/irregularrss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://it.gizmodo.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://i-want-a-website.com/about-linux/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jabancroft.blip.tv/posts/?sort=date&skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jabber.linux.it/jogger/syndication.php?count=20&format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jabber.linux.it/jogger/syndication.php?count=20&format=rss&jid=ahkitj@greta.electric.gen.nz', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jabber.linux.it/jogger/syndication.php?count=20&format=rss&jid=xanharris@bravegnuworld.com', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jalias-espacio-vacio.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jamaicantimes.com/p.x/id/8fdef8065235cb7f/headlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://japan.linux.com/japanlinuxcom.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://japan.linux.com/news.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jaronmars.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jasonpettus.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://java2simple.blog-city.com/rss/default.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://java.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javaboutique.internet.com/applets.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javaboutique.internet.com/applets.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javaboutique.internet.com/articles.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javageek.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javaprog.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javarm.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javascript.about.com/library/mpreviss_recent_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javascript.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://javaswamy.blogspot.com/rss/javaswamy.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jayk.vox.com/library/posts/tags/catalyst/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jeremy.linuxquestions.org/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jeroboam.net/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jesuspolitics.typepad.com/jesus_politics/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jla.linux.or.jp/events/events.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jshirley.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://jsopinion.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://junkfoodscience.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://junkfoodscience.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://justintvcast.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://justintvguide.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://karen-bee.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://kjrig.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://kks.gwaliortimes.com/wp-feed.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://knjserver.homelinux.net/~kenji/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://kunterbunti.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://kurgman.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lavorodafilosofo.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lawandpolitics.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://leahy.senate.gov/MFTF/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lea-linux.org/pho/phorss.php?11', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lefarkins.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://legaltheorylexicon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://legalxxx.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://leoville.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lesjourspassentmaisneseressemblentpas.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://le.utah.gov/rss/utleg.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://libertonia.escomposlinux.org/backend09.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://libraryweb.pnl.gov/newsbridge/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxart.com/log/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxathome.net/linuxathome.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux-bg.exco.net/linux-bg.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux.bloground.ru/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxbrit.co.uk/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxbrit.co.uk/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxcentral.com/backend/lcbestns.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxcentral.com/backend/lcnew.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxcentral.com/backend/lcspecialns.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxcentral.com/backend/lcspecial.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux.com/linuxcom.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux.dell.com/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxfrench.net/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxfr.org/backend/news/rss20.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxfr.org/backend.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxgames.com/bin/mynetscape.pl', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxintegrators.com/blog/acoliver/?flavor=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux.jobmart.com/Resumes/JobOpennings/RssFeed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxjournal.com/news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxlobby.org/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxlog.de/rssql.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxlog.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxman.blogsome.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxondesktop.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxpr.com/backend/my-netscape.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxquestions.org/questions/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux.quicksurf.com/?cat=78&feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux-ru.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux-ru.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxtoday.com/backend/biglt.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxtoday.com/backend/my-netscape10.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxtoday.com/backend/my-netscape.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxtracker.org/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxuanl.org/~vox/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linux-universe.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://linuxuser.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lockergnome.com/rss/applecore.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lockergnome.com/rss/linux.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://log-cabins-uk.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lottalinuxlinks.com/podcast/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lresende.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://luebue.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://lyziwyg.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://macnn.com/macnn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://madbean.com/blog/java.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mak-sim.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://marielaina.vox.com/library/posts/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://marketingusabile.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://marusin.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://masiguy.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mastersfitness.royergovernance.com/fitlog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://max.kanat.us/tag-syndicate/?user=avatraxiom&tag=debian&tag=linux&tag=freebsd', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://max.kanat.us/tag-syndicate/?user=fagaaa&tag=linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://max.kanat.us/tag-syndicate/?user=kastaneda&tag=linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://max.kanat.us/tag-syndicate/?user=polachok&tag=freebsd&tag=linux&tag=openbox&tag=opensource', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://max.kanat.us/tag-syndicate/?user=yelloweyedwolf&tag=linux&tag=soft&tag=*nix', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://maynake.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mcwetboy.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mediaverse-memphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://members.capmac.org/~orb/blog.cgi/tech/java/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://members.capmac.org/~orb/blog.cgi/tech/ruby/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://memphisetc.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://memphislightrail.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://memphissoul50.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://memphisunknown.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://microsoftgadgets.com/blogs/gadgetnews/rss.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mischief-maker.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://missionarygeek.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mofocratesjournal.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://morestuff4less.com/categories/gadgets/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://motardesintra.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://motoress.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mp3-player.gadget-review.net/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mplictechtrain.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://music.for-robots.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://my.abcnews.go.com/rsspublic/politics_rss20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mymemphislawyer.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mymidtownmemphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://myrss.com/f/s/e/seattletimesYd0c9n0.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://mysticalheartdesigns-mhd.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://myworldofocd.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nathaniaapple.typepad.com/knit_quilt_stitch/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nathaniaapple.typepad.com/knit_quilt_stitch/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nbnjlug.linuxorbit.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://need-money-in-the-bank.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://neil.chrisfleming.org/entimes/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://net-dinheiro.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://new.linuxjournal.com/node/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/business/europe/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/in_depth/europe/2001/yugoslavia_after_milosevic/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/in_depth/europe/2003/inside_europe/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/programmes/politics_show/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/country_profiles/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/guernsey/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/jersey/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_world_edition/business/europe/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_world_edition/europe/country_profiles/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_world_edition/europe/guernsey/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.bbc.co.uk/rss/newsonline_world_edition/europe/jersey/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.borland.com/bdn_java.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.gc.ca/cfmx/ccnews/xml/rss/Non-governmentalorganizations_en.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.openflows.org/geopolitics.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.postnuke.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://newsrss.bbc.co.uk/rss/newsonline_world_edition/science/nature/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.saugus.net/Group/saugus.soc.politics/RSS', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.scotsman.com/politics.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.scotsman.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://news.search.yahoo.com/news/rss?p=gadgetfamily', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://newsweaver.ie/gerrymcgovern/e_rss.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nextwave.sciencemag.org/rss/nextwave_ca.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nl.linux.org/nllinux.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nntp.x.perl.org/rss/perl.javascript.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://note-to-cmo.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://nvd.nist.gov/download/nvd-rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://onlyinmemphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://on-ruby.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://on-ruby.tumblr.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://osoznanie.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ourobouros.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://pan-dan.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://parallelelements.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://partners.userland.com/nytRss/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://partners.userland.com/nytRss/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://performancing.com/rss/www.gadgetautopsy.com', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://performancing.com/rss/www.gadgetfamily.org', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://phobos.apple.com/WebObjects/MZStore.woa/wpa/MRSS/topsongs/limit=25/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://physicspost.com/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://planetruby.0x42.net/rss20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://podcasts.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://poeticinvention.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://poisonkitchen.typepad.com/politics/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalcritic.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalstaples.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalwire.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalwire.com/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalwire.com/headlines.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://politicalwire.com/headlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://popeye.linuxo.org/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://postcardsfromprison.com/xmlsrv/rss.php?blog=2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://posthumanblues.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/wisconsin.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/full2.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/full2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/full.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/full.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/index2.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rtaylor.co.uk/c/apple_laptop.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rtaylor.co.uk/c/gadget.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rtaylor.co.uk/c/ibook_apple.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rubyan.com/politics/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rubyan.com/politics/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rubydc.org/feed/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rubyinside.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ruby-lang.org/raa/raa-rdf.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rubyxml.com/index.rb/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rules.utah.gov/rss/emergencyrules.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rules.utah.gov/rss/filings-govt.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rules.utah.gov/rss/filings.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rules.utah.gov/rss/hearings.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sbesdogumevi.gov.tr/modules/rss/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceandsociety.net/podcasts/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/sciencebase.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/astronomy/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/bio/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/bird-flu/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/cancer/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/chemistry/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/education/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/environment/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/geek/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/health/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/physics/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/science/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/sex/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencebase.com/science-blog/category/spectroscopy/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceblog.com/cms/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceblog.com/cms/taxonomy/term/16/all/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceblog.com/cms/taxonomy/term/9/all/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceblog.com/community/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceblog.com/community/newsrss10.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/newsfeed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/earth_climate-atom.atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/earth_climate-rss1.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/earth_climate-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/fossils_ruins.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/fossils_ruins-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/health_medicine-rss1.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/health_medicine-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/matter_energy-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/mind_brain-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/mind_brain.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/plants_animals-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/space_time-rss1.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/space_time-rss2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencedaily.com/rss/space_time.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencefictionbuzz.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencefictionbuzz.com/science-fiction.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceforpeople.com/sfp_feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencefriday.com/audio/scifriaudio.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencefriday.com/scifri.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencemeetsart.com/emese/blog/index2.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sciencenewsblog.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.science-projects-resources.com/science-fair-projects.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scienceworld.cz/sw.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scotlandonsunday.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scrappleface.com/?feed=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.scrappleface.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.seltekconsultants.co.uk/rss/sciencejobs.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.seminolecountyfl.gov/misc/rss/announcements/index.asp?code=ps', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.servlets.com/blog/index-java.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Albania.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/BiH.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Bulgaria.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Croatia.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Greece.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Macedonia.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Romania.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Serbia-Montenegro.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/country/Turkey.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/setimes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Economic_development.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Foreign_Relations.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Integration.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Justice_and_law_enforcement.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Peacekeeping.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Politics.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/Society.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.setimes.com/cocoon/setimes/rss/tr/subject/War_on_terrorism.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sfposterart.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.shauninman.com/post/feeds/plus?expired', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.simplyhired.com/r/q_python/l_washington%2Cdc/cy_WASHINGTON/st_DC/z_20435/mi_25/mr_10/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.simplyhired.com/r/q_ruby%2520rails/l_washington%252Cdc/cy_WASHINGTON/st_DC/z_20435/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.simplyukgadgets.co.uk/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sitepoint.com/forums/recentposts.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sosig.ac.uk/roads/cgi-bin/new2rss.pl?channel=govt', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sosig.ac.uk/roads/cgi-bin/new2rss.pl?channel=politics', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sos.mo.gov/xml/newsfeed.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.spaceshipnofuture.org/grueyorktimes/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.spankalishous.com/postscomments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.speaker.gov/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.sport.scotsman.com/football_european.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.state.gov/rss/channels/briefings.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.state.gov/rss/channels/sremarks.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.statelocalgov.net/notes/slgn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.statistics.gov.uk/includes/nsheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.stocksandmutualfunds.com/investing/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.stylegala.com/feeds/almost.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.stylegala.com/feeds/gallery.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.stylegala.com/feeds/news.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tabletpcpost.com/mostpopularrss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tabletpcpost.com/newreleasesrss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.taipeitimes.com/News/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.talkgadgets.com/rss.rhtm', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.techno-science.net/include/news.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.teledyn.com/news/linuxhrdc.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.thegadgetbox.com/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.the-gadgeteer.com/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.thelinuxpimp.com/main/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.thenewtimes.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.theregister.co.uk/internet/egovernment/headlines.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.theregister.co.uk/science/headlines.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.theregister.co.uk/science/space/headlines.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.therockalltimes.co.uk/feed/rockall.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.thescotsman.co.uk/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.theshiftedlibrarian.com/categories/gadgets/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.theunwired.net/xml/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.thingsstufftimes.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tight-science.com/podcast/podcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.timesandseasons.org/?feed=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.timescape.us/feeds/AMApodcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tnl.net/channels/rss/0.90/apple.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tnl.net/channels/rss/0.91/apple.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tnl.net/channels/rss/1.00/apple.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.todopolitica.com/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.tomacagovan.com/keep/feeds/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.travelbanter.com/fps_external.php?forumids=9&postlen=350&qty=20&type=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ubergizmo.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.uklug.co.uk/cgi-bin/getjobs.rss?C=8&D=2592000&K=java&L=20&M=1&npo=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.uklug.co.uk/cgi-bin/getjobs.rss?C=8&D=2592000&K=linux&L=20&M=1&npo=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.uklug.co.uk/cgi-bin/getjobs.rss?C=8&D=2592000&K=london+perl+java&L=20&M=1&npo=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.uklug.co.uk/cgi-bin/getjobs.rss?C=8&D=2592000&K=unix&L=20&M=1&npo=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.underwatertimes.com/rss/uwtimes.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.unix-girl.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.unixmexico.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.unixtech.be/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/alerts.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/bulletins.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/cas.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/techalerts.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/techdocs.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/tips.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.us-cert.gov/channels/userdocs.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.uscert.gov/channels/userdocs.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.utah.gov/governor/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vacationposters.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vanityfair.com/politics/blogs/wolcott/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.virginia.gov/cmsportal/services_869/notifications_1097/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vivelecanada.ca/backend/melhurtig.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vivelecanada.ca/backend/privatisation.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vivelecanada.ca/backend/pulpit.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vivelecanada.ca/backend/sovereignty.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vivelecanada.ca/backend/vivelecanada.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vmunix.com/mark/blog/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.vogliaditerra.com/vogliadilinux/comments/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.voxpolitics.com/weblog/voxlatest/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.voznuestra.com/politicalwires/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/business/government/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/business/government/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/business/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/03/24/LI2005032400102.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/03/24/LI2005032402329.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/03/24/LI2005032402865.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/05/30/LI2005053000331.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/nation/science/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/nation/science/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/print/asection/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-dyn/rss/sports/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/columns/autos/brownwarren/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/columns/economy/pearlstein/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/columns/economy/regulators/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/columns/investing/cashflow/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/columns/investing/investing/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/economy/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/latestap/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/localbusiness/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/markets/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/personalfinance/investing/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/business/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/education/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/chronicdiseases/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/columns/leanplateclub/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/columns/quickstudy/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/fitness/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/healthcare/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/latestap/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/men/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/mentalhealth/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/nutrition/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/seniors/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/health/women/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/liveonline/education/teachersays/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/liveonline/entertainment/gotplans/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/liveonline/entertainment/gotplanswithkids/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/liveonline/food/asktom/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/metro/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/nation/courts/crimeandjustice/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/nation/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/opinion/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/politics/elections/2004/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/politics/elections/2004/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/politics/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/politics/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/style/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/ap/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/askthecomputerguy/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/dotcom/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/fastforward/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/filter/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/thedownload/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/columns/webwatch/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/jobs/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/jobs/techworking/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/markets/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/personaltech/connected/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/personaltech/games/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/personaltech/wireless/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/specials/techthursday/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/copyright/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/fcc/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/icann/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/security/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/techpolicy/tax/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/washtech/companies/startup/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/technology/washtech/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/topnews/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/washtech/columns/techworking/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/washtech/techthursday/columns/dotcom/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/world/mideast/neareast/turkey/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/world/mideast/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.washingtonpost.com/wp-srv/world/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.webpak.net/~drmeier/categories/scienceClubKids/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wetwired.org/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.whitehouse.gov/rss/radioaddress.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.whiterabbits.com/macnetjournal/politics.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.windley.com/categories/egovernment/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired4games.com/archive/?rss=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news_drop/netcenter/netcenter.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,10,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,1,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,12,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,2,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,24,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,3,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/news/feeds/rss2/0,2610,35,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/rss//index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wired.com/rss/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.wiredtom.com/mt-blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.woking.gov.uk/news/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.xslf.com/archives/linux.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.yellowtimes.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.yorkshirepost.co.uk/template/viewarticle.aspx?sectionid=89&articleid=3115600&format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.zaralinux.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://xcentrix.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://xhab.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://xml.feedroom.com/public_rss/reuters_rss.xml?channel_id=357fa357beaac8b6076c0aef8f2267f109d61572', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://xul.sourceforge.net/post/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://yoigo.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://alllinuxdevices.com/backend/biglt.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://althouse.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://american-european.net/properties/rss/costa_rica_listings_RSS.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://amnestyusa.org/rss/en/news/europe_recent.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://amysrobot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://amysrobot.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://analytics.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://andyhot.di.uoa.gr/blojsom/blog/default/java/?flavor=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apairofrubyslippers.wordpress.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apostolicinternet.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://appearancemode.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://applematters.com/index.php/section/rss_2.0/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://applenewsnow.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apple.quicksurf.com/?cat=10&feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apple.slashdot.org/apple.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apple.slashdot.org/apple.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apple.timgermer.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://appleturns.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://apple.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://aquandaryofsorts.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://archeriostichaos.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://archive.midrange.com/java101/maillist.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://archive.midrange.com/linux400/maillist.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://armstrongonsoftware.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/etc/rdf/ars.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/index.ars/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/index.rssx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/journals.rssx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/news/rss0.94.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/news/rss2.0.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://arstechnica.com/staff.rssx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://aspoitalia.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ax.phobos.apple.com.edgesuite.net/WebObjects/MZStore.woa/wpa/MRSS/topsongs/limit=10/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://barcepundit-english.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://barf.jcowboy.org/trendsinpharmacologicalsciences.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://barf.jcowboy.org/trendsinplantscience.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://beta.blogger.com/feeds/6944677924404501744/posts/full', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://bits.blogs.nytimes.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blip.tv/?1=1&bookmarked_by=dontmiss;cmd=view;subview=recent;s=posts&skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blip.tv/posts/view/?sort=date&bookmarked_by=12964&skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.gadgetgurutech.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.gadgetgurutech.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.gurock.com/postings/category/delphi/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogg.zeit.de/fundsachen/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.inf.by/rss/linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.killerbees.co.uk/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.linux.it/rss.php?blogId=23&profile=rss20', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.linux.org.tw/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.linux.org.tw/~moto/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.livedoor.jp/canadadada/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.ryanrahn.com/rss/2.0/full_post.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.abcnews.com/legalities/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.abcnews.com/politicalpunch/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.abcnews.com/politicalradar/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.business2.com/apple/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.seattletimes.nwsource.com/iraq/tombrown/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.slf.homelinux.net/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.mediapost.com/spin/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.msdn.com/microsoft_robotics_studio/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.s60.com/browser/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.s60.com/creatingcarbidecpp/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.s60.com/s60userexperience/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.s60.com/tommi/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.salon.com/0001455/categories/govIt/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.salon.com/0001455/categories/linux/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.salon.com/0001888/categories/politics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.salon.com/0002750/categories/politics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.zdnet.com/mobile-gadgeteer/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blogs.zdnet.com/mobile-gadgeteer/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://blog.v12aml.net.ru/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://postneo.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://postsecret.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://poynter.blogs.com/politics/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ppstech.teacherhosting.com/blog/archives/gadgets.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://prague.tv/rss/1.0/bbposts.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://prague.tv/rss/1.0/forumposts.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://premier.fgov.be/nl/podcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://prepena.sciencespobordeaux.fr/backend.php3', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://pritchettblog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://professionalacademy.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://projects.washingtonpost.com/congress/rss/members/p000583/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://pseudopost.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://publicijobs.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://publiusleuropeen.typepad.com/publius/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://pwoz.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://python.jobmart.com/Resumes/JobOpennings/RssFeed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://qliphoth.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://quehariayosinti.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://quimera.homelinux.com/html/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://qwurky.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.javaranch.com/channel/frank/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.javaranch.com/val/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0001018/categories/appleComputer/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0001134/categories/linux/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0102677/categories/pythoncard/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0102677/categories/python/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0102813/categories/politicalPoliticalHumor/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0103705/categories/legalTechStandards/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0106123/categories/python/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0109157/categories/politics/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0110120/categories/egovernment/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0112083/categories/science/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0125761/categories/europe/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0127118/categories/europe/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://radio.weblogs.com/0127118/categories/scienceTechnology/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ragandbonebuffet.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://raibensblog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://raisingfundsonline.com/blog/engineering-jobs/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://raisingfundsonline.com/blog/relocating/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ranchero.com/xml/rss.xml?q=java', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rc3.org/rss/?fullposts=yes', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://redlegsrides.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://redruby.info/xml/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://remioudinot.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://resources.survivorphoenix.com/postnuke/html/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://revolutiononrails.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rob.crabapples.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robotarium.com/weblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robot.endtas.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robots.astrobio.net/news/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robots.hackaday.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robots.net/rss/articles.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://robotsrobotsrobots.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rodrigo33.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rogers-rants.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_health.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_law.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_offbeat.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_politicalticker.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_politicalticker.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_showbiz.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_space.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_tech.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_topstories.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/cnn_travel.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/money_latest.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.cnn.com/rss/money_topstories.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/buscience-etkinlik/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/linux-istanbul/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/linux-tr/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/robotik/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/turkishmilitary/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.groups.yahoo.com/group/turk-linux/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.lists.apple.com/applescript-users.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.lists.apple.com/firewire.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.lists.apple.com/macos-x-server.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.miaminewtimes.com/php/rss/xml_music.php?src=music_rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rssnewsapps.ziffdavis.com/eweeklinux.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/applecomputer', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/politics', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/realclearpolitics', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/science', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.news.yahoo.com/rss/usmilitary', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.orf.at/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.phoenixnewtimes.com/php/rss/xml_music.php?src=music_rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/bandeapart/bandeapart_podcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/caameric.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/cadireto.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/catdayru.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/catdayuk.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/postcard.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/postcard.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/slimite.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/tamtam.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/thelink.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/rci/voicen.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.radio-canada.ca/revuetechno.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.riverfronttimes.com/php/rss/xml_music.php?src=music_rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.slashdot.org/linux/KhmQ', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.sufferingfools.net/feeds/cnn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.sufferingfools.net/feeds/reuters_world.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.tailrank.com/posts', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.tumbleside.com/feeds/applemovietrailers.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rss.xinhuanet.com/rss/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rubyforge.org/export/rss_sfnews.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rubyfruit.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rubythis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rubythis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rulesnews.utah.gov/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rulinux.net.ru/fdbrnr', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rusmafia.org/linux/blog/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rusmafia.org/linux/node/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rusmafia.org/linux/quotes/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://rusmafia.org/linux/taxonomy/term/30/0/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sassymolassy.blogspot.com/feeds/posts/full', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://savelibertyland.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scienceandart.de/calendar/rss/rss.php?cal=HOU&rssview=month', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scienceblogs.com/deltoid/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scienceblogs.com/pharyngula/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scienceblogs.com/sample/combined.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sciencemadefun.podbean.com/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sciencematters.berkeley.edu/sciencematters.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://science.nasa.gov/podcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://science.nasa.gov/podcast.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://science.nasa.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://science.nasa.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://science.slashdot.org/science.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sciencesstepnewz.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sci.tech-archive.net/Archive/sci.military.moderated/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scotlandonsunday.scotsman.com/politics.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scotlandonsunday.scotsman.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scottwalter.com/ys/site/java/entries.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://scriptingnews.blip.tv/posts/?sort=date&skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sean.chittenden.org/postgresql/news.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://search.msn.com/results.aspx?q=gadgetfamily&format=rss&FORM=ZZRE', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://search.news.yahoo.com/usns/ynsearch/categories/47/index.html?p=java', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://search.themoscowtimes.com/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/boeingaerospace.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/businesstechnology.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/collegesports.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/dannywestneat.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/eastsidenews.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/homerealestate.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/microsoft.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/movies.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/nicolebrodeur.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/paulandrews.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/personaltechnology.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://seattletimes.nwsource.com/rss/wine.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servers.linux.com/servers.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://services.devx.com/outgoing/javafeed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-newsknowledge-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-oreilly-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-PARTNER-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-syndic8-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_solaris-oreilly-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_solaris-PARTNER-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_wireless_highlights-oreilly-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_wireless_highlights-PARTNER-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_wireless_highlights-syndic8-20.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://servlet.java.sun.com/syndication/rss_wireless_highlights-xyz-5.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sexychanellegaldefensefund.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sfbay.craigslist.org/search/sad/sfc?query=linux&format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://shannonk.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://shelbywatchdog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://silverwinger.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://simplicityitk.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://siracusa.linux.it/feeder.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sixaparteurope.typepad.com/typepad_astuces_fr/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sketchwork.blogspot.com/feeds/posts/full', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://skootershooter.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://skutergruven.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://slashdot.org/apple.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://slashdot.org/apple.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://slashdot.org/science.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://slashdot.org/science.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://smlav.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://soccer-europe.com/RSS/News.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sojournerrides.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://soloride.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sometimessilent.blogsome.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sotoscience.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://soundpolitics.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://spaceresearch.nasa.gov/news/obprnews.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://spaces.msn.com/members/gwaliortimes/feed.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://speakingofashes.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://spitzscience.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sport.scotsman.com/football_european.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://sport.scotsman.com/football_european.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://squirrel-squad.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://standardmedia.net/projects/gizmo/s9y/index.php?/feeds/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://statbel.fgov.be/news_fr.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://stevesworld.typepad.com/politics/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://steve-yegge.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://stoneposts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://stress-management-magic.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://surlyascats.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://susanmernit.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://swnesbitt.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tantek.com/log/posts.atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tdelphihobbyist.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://technology.updates.com/rss/linux_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://terramac.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thecaucus.blogs.nytimes.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://the-gadgeteer.com/feed/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thejavajive.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thepoliticalteen.net/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thesartorialist.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thescotsman.scotsman.com/politics.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thescotsman.scotsman.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thetimesink.net/Blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thomasscovell.vox.com/explore/neighborhood/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://thoughtfix.blogspot.com/feeds/posts/summary?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tiltedhorizons.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://timesofindia.indiatimes.com/rssfeeds/1769582659.cms', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://timesonline.typepad.com/david_aaronovitch/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://times.usefulinc.com/atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://timmy.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tlanvar.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=78', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=79', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=8', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=80', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=81', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=82', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=87', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=88', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=9', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=90', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=94', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=95', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/29?cs_rid=99', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/articles_rss?x-ver=1.0', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/pub/q/weblogs_rss?x-ver=1.0', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/rss/11.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/rss/24.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/rss/28.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/rss/43.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.java.net/rss/56.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://today.reuters.com/rss/worldNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tomcopeland.blogs.com/juniordeveloper/index-ruby.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tomecat.com/madtimes/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/evaluating_government/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/java_blogger/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/linux/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/montreal_quebec_canada/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/politics/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://topicexchange.com/t/python_community_server/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tperl.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://travelingpriest.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://travolution.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://tricksatobi.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://trinidadtimes.com/p.x/id/f7da47955ef03229/headlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://turner.mikomi.org/mail.cgi/postfix-announce', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://twistedmatrix.com/users/jh.twistd/python/moin.cgi/RecentChanges?action=rss_rc&unique=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ubuntizm.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ubuntu-ru.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://udn.com/udnrss/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://uk.trendmicro-europe.com/enterprise/security_info/rssinfo.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ulmencave.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://uncledirtae.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unixcode.org/atlantik/news/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unixcode.org/monopd/news/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/AIX-L/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/announce/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/arch/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/current/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/hackers/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/isp/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/net/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/newbies/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/performance/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/questions/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/FreeBSD/stable/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/HP-UX-Admin/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/SunManagers/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Mailing-Lists/Tru64-UNIX-Managers/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.os.vms/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.dec/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.hp.hpux/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sgi.admin/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sgi.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sun.admin/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sun.apps/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sun.hardware/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.sys.sun.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.admin/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.aix/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.bsd.freebsd.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.bsd.netbsd.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.bsd.openbsd.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.programmer/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.questions/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.sco.misc/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.shell/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.solaris/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unix.derkeiler.com/Newsgroups/comp.unix.tru64/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://unixpunx.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://usgovinfo.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://usmilitary.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://valeholinux.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://valeholinux.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vespagang.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vexcom.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vidasbinarias.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vidman.ca/profiles/rss.php?poster_id=2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vidman.ca/profiles/rss.php?poster_id=479', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://vidman.ca/profiles/rss.php?poster_id=828', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://viewfromthemountain.typepad.com/applepeels/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://walkslowlylivewildly.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://watchismo.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wdirect.apple.com/home/2007/ticker.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/fl.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/ma.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/md.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/ny.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/tx.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/alerts/va.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weather.gov/nwsheadlines.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://web2.0maven.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://web20travel.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.cemper.com/a/c/gadgets.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.infoworld.com/udell/categories/python/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.isallineed.net/javagui/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.rubyonrails.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.rubyonrails.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.rubyonrails.com/xml/atom10/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblog.rubyonrails.org/xml/atom10/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.asp.net/govind/rss.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/arnold/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/batate/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/emcmanus/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/iasandcb/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/kellyohair/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/kgh/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/marklittle/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/paranoiabla/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/tball/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weblogs.java.net/blog/tomwhite/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://webreflection.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://welcome-to-pottersville.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://weldingrodinjuryclaims.blogs.com/kirk_bernards_vioxx_legal/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://whatisaw.wiredweirdness.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wheres-luke.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wiki.java.net/bin/view/Javapedia/WebRss?skin=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wine-by-benito.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wiredblogs.tripod.com/cultofmac/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wiredblogs.tripod.com/monkeybites/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wiredblogs.tripod.com/sterling/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wiredblogs.tripod.com/tableofmalcontents/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,10,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,1,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,12,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,2,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,24,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,3,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,35,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,40,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,4,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/news/feeds/rss2/0,2610,50,00.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/wired/archive/gadgetlab/gadgetlab.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wired.com/wired/archive/gadgetlab/gadgetlab.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wireless.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://wordofmouthonthefly.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://writersua2007.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ww1.prweb.com/xml/americapost911.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ww1.prweb.com/xml/government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ww1.prweb.com/xml/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://ww1.prweb.com/xml/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24-7pressrelease.com/rss/government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24-7pressrelease.com/rss/hitech_public_sec._and_government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24-7pressrelease.com/rss/law_and_legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24-7pressrelease.com/rss/military_and_defense.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24-7pressrelease.com/rss/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.24dash.com/rss/centralgovernment.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www2a.cdc.gov/podcasts/createrss.asp?t=r&c=20', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www2.news.gov.bc.ca/nrm_rss_news/govwide.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www3.linuxjournal.com/news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.abc.net.au/rn/podcast/feeds/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.abc.net.au/science/k2/podcast/drk_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.aberdeencity.gov.uk/feeds/accnews.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfTopic/mda/mda-list-rss.cfm', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.acnnewswire.net/rss2/press_rss_20.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.adsposting.com/chicago/rental/apartment.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.aftenposten.no/eksport/rss-1_0/?seksjon=english&utvalg=siste', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.aftenposten.no/eksport/rss-1_0/?seksjon=nyheter_sport', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.afterapple.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ago.mo.gov/xml/newsfeed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.aiada.org/rss/track-government.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.aiada.org/rss/track-politics.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.allwired.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ama-assn.org/amednews/newsfeed/government.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.amishrobot.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.anime-europe.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apostle.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apostropher.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.appleblog.es/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/apple.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/development_tools.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/downloads.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/email_chat.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/games/kids_learning.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/games/role_strategy.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/hot_downloads.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/icons_screensavers.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/ipod_itunes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/downloads/system_disk_utilities.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/hotnews/hotnews.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple.com/main/rss/hotnews/pr.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.applegeeks.com/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.appleinsider.com/appleinsider.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.applematters.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.applereport.com/affiliate/rssLatest.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.applesfera.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.appleturns.com/rss/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.apple-x.net/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.archives.gov/historical-docs/todays-doc/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.archives.gov/news/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.arstechnica.com/etc/rdf/ars.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.articlewarehouse.com/rss/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.artima.com/buzz/feeds/ruby.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.artima.com/news/feeds/java.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.athenslegalnews.com/athenslegalnews.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.atimes.com/atimes/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.atmarkit.co.jp/rss/flinux/rss2dc.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.atsnn.com/rss/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.attitudetravel.com/lowcostairlines/europe/offers.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.babygadget.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.bart.gov/stations/status/advisories.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.bbc.co.uk/syndication/feeds/news/ukfs_news/uk_politics/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.bbc.co.uk/syndication/feeds/news/ukfs_news/world/europe/rss091.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.benefitslink.com/rdf/benefitslink-governmentplans.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.berts-linux.de/backend/news_rdf.php3', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogator.com/rss.php?ch=&kat=&q=linux', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogger.com/feeds/3157916/posts/default?alt=rss&orderby=published', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.bloglines.com/blog/gwaliortimes/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogscanada.ca/blog/blogxbrowsing.asmx/GetRss?', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogscanada.ca/egroup/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogscanada.com/blog/BlogxBrowsing.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogs.s60.com/s60multimedia/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blogthevote.net/gadgets/ve.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.blueskyonmars.com/java.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.bodybuilding.com/rss/writers/Mike+Fry+-+Grapplers+Gym', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.boston-legal.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.brainloaf.com/categories/java/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.brokenrobot.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.brokeroutpost.com/loans/rssfeed.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.businessweek.com/rss/europe.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.businessweek.com/technology/ByteOfTheApple/blog/byteoftheapple.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.caballe.com/categories/linux/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cannabislegal.de/cln/cln.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.capescience.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cbc.ca/podcasting/includes/maritimes.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cbsnews.com/common/includes/podcast/podcast_wired_1.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.census.gov/briefrm/indicator.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.channelcanada.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.chicagopride.com/unwired/cpnews.cfm', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.christianpost.com/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cite-sciences.fr/rss/sciences_actu_en_20.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cite-sciences.fr/rss/sciences_actu_fr_20.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.clientjava.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.climatesciencewatch.org/index.php/csw/rss_2.0/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cnn.com/rss/cnn_topstories.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.codestyle.org/servlets/ParseRSS?url=/java/FAQ.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.codestyle.org/servlets/ParseRSS?url=/javascript/FAQ.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.codestyle.org/servlets/ParseRSS?url=/java/servers/jserv-Win95.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.codestyle.org/servlets/ParseRSS?url=/java/servers/tomcat-Win95.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/2004/2004_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/2004/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/gwot/gwot_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/gwot/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/index2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/nk/nk_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/oped/index2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.command-post.org/oped/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.content4reprint.com/science/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.contest.ardapost.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.contracostatimes.com/mld/cctimes/entertainment/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.contracostatimes.com/mld/cctimes/news/columnists/the_eye/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.coolest-gadgets.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.copyright.gov/newsnet/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.copyright.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.corante.com/apple/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cornyn.senate.gov/press_feed.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cpsc.gov/cpscpub/prerel/prerel.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.crabapples.net/rob/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.crazyapplerumors.com/cars_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.crazyapplerumors.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cricava.com/java/channels/index.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.cybersystem.de/category/gadgets/nokia-770/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dailystar.com.lb/rss/leb/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dailystar.com.lb/rss/reg/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.danappleman.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.davidmeade.com/post/post_archive.php?tag=Blog&feed=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dca.gov.uk/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.derkeiler.com/Mailing-Lists/securityfocus/focus-linux/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.derkeiler.com/Newsgroups/comp.os.linux.security/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.derkeiler.com/Newsgroups/comp.security.unix/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.desktoplinux.com/backend/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.devnetwork.net/service/forum_lastposts.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.devnetwork.net/service/forum_lastposts.php?limit=10', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.diariolinux.com/tiki-articles_rss.php?ver=2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dmeurope.com/rss/c29.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dmeurope.com/rss/c44.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dmeurope.com/rss/c7.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dmeurope.com/rss/cWorld.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dnr.mo.gov/xml/news-release.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dnzh.com/rssfeeds/irs_gov.pl', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dragtimes.com/recent-drag-racing-times.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dslreports.com/forum/unixdsl.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.dss.mo.gov/xml/newsfeed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.earthtimes.org/rss.php?cat=games', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ecommercetimes.com/perl/syndication/rssfull.pl', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.e-dennis.net/postsonly.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ed.gov/rss/edgov.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.edifyingspectacle.org/usedbookdealer/fullposts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.edinburghnews.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.edtechpost.ca/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.edtechpost.ca/mt/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.eere.energy.gov/windandhydro/windpoweringamerica/wpa_rssfeed.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.eere.energy.gov/windandhydro/windpoweringamerica/wpa_rssfeed_events.asp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.egovlinks.com/govblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.egovmonitor.com/list/news/14/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.eksperten.dk/feed/q_last_post.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.elearningpost.com/blog/rss2/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.elearningpost.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/americapost911.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/edupostgrad.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govedu.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govlaw.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govlegislative.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govlocal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govnational.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govpublicsvc.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govstate.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/govtransport.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/lspastimes.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/scienceresearch.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/techgov.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.emediawire.com/xml/techrobotics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.endtas.com/robot/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.engadgethd.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.engadgetmobile.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.enterprise-linux-it.com/xml/rss2/syndication.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.esperanto.uklinux.net/feed-en.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.esperanto.uklinux.net/feed-eo.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.eurekalert.org/rss/earth_science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.european-democracy.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.evangelicaloutpost.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.evangelicaloutpost.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.excellenteuropeanadventure.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.expertforum.ru/rss/posts/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ezine-act-politics-business-and-love.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fda.gov/bbs/topics/news/rssPress.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.feedster.com/search.php?q=gadgetfamily&sort=&ie=UTF-8&hl=&content=full&type=rss&limit=15', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fiftyfoureleven.com/sandbox/weblog/posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.firstscience.com/site/rss/firstscience.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fox11az.com/newskiosk/rss/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=arcade', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=book', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=cakeshop', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=comedy', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=film', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=fringe', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=music', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=news', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=sports', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.frogger.uklinux.net/rss/index.xml?f=tv', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fundstreet.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/agenda/agenda10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/dossiers/dossier10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/forum/forum10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/actu10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_inf10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_mat10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_tec10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_ter10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_uni10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.futura-sciences.com/services/rss/sci_vie10.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fwicki.com/rss/science/Biology', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fwicki.com/rss/science/Global-Warming', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fwicki.com/rss/science/Paleontology', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.fwicki.com/rss/World-News/Bosnia-Herzegovina', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetboygenius.com/blogs/gadgetblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetguy.de/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetizer.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetmadness.com/gm/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetmadness.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetopia.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetopia.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gadgetspy.co.uk/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gamerseurope.com/newsfeed.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.game-times.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.com/excerpts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.com/gadgets/pdas/pocket-pc/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.com/gadgets/pdas/pocket-pc/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmodo.net/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmohighway.com/hotstuff.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmohighway.com/topgear.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gizmosforgeeks.com/?theme=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.glist.com/postnuke/html/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gov.ab.ca/ACN/RSS_FEEDS/RSS_AboriginalAffairsandNorthernDevelopment.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gov.ab.ca/ACN/RSS_FEEDS/RSS_AlbertaEconomicDevelopmentAuthority.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gov.ab.ca/ACN/RSS_FEEDS/RSS_AlbertaEnergyandUtilitiesBoard.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.gov.ab.ca/ACN/RSS_FEEDS/RSS_MunicipalAffairs.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.governet.de/feed.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.governmentchangeagents.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.governmentsecurity.org/forum/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.governmentsecurity.org/rss/governmentsecurity.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.governor.state.tx.us/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.govexec.com/rss/getoday.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.govexec.com/rss/outsourcing/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.guideline.gov/rss/ngc_whatsnew.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.habrahabr.ru/rss/blog/gadgets/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.hacknot.info/hacknot/action/postrss-2-0', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.harryandholly.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.hedgefunds-weblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.helpisathand.gov.uk/blog/generation-gap/rss100headline.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.helpisathand.gov.uk/blog/tech/rss100headline.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.helpisathand.gov.uk/news/rss100headline.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.heraldtimesonline.com/htorss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.holiveira.com/feeds/posts_completos.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.hostinato.net/category/linux/kde/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.hotandbarelylegal.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.house.gov/apps/list/press/ca15_honda/RSS.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.huffingtonpost.com/raw_feed_index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.huffingtonpost.com/theblog/full_atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ibiblio.org/javafaq/today.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ibiblio.org/java/today.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ifoapplestore.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.iht.com/rss/europe.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ilga-europe.org/rss/feed/europe', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.imls.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.intgovforum.org/igf_rss_feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.inthesetimes.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.inthesetimes.com/site/main/rss_1.0/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.inthesetimes.com/site/main/rss_firststone/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.inthesetimes.com/site/main/rss_ittlist/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.invention-europe.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ipsnews.net/rss/europe.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ipsnews.net/rss/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ipsnoticias.net/rss/politica_int.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.irregulartimes.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.itchyrobot.com/feeds/index2.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.itssonotaboutyou.com/postscomments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javablack.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javable.com/eng/rss.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javable.com/rus/rss.shtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javablogs.com/ViewDaysBlogs.jspa?view=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javablogs.com/ViewPopularBlogs.jspa?view=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javablogs.xyling.com/thisWeek.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javablogs.xyling.com/xjbatom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javaddicts.net/blog/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javageeks.com/Papers/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javahispano.com/noticias.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javalobby.org/rss/frontpage.jsp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javalobby.org/rss/global.jsp', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javalobby.org/rss/rssmessages.jspa?forumID=18111', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javalobby.org/rss/rssmessages.jspa?forumID=18150', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javanicus.com/blog2/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javaperformancetuning.com/newsletters.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javascript.com/jss.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javaspecialists.co.za/archive/tjsn.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.javaworld.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.jeckle.de/linuxKernelNews.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.jpost.com/servlet/Satellite?pagename=JPost/Page/RSS&cid=1123495333389', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.julieleung.com/postcomments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.killoggs.com/killoggs-posts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.kimpallister.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.kino-govno.com/news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.krisvdv.net/pixelpost/index.php?x=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.learninglinux.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.lebloggadget.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.leeunderwood.uklinux.net/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legaline.com/lawsites_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legaline.com/medialaw_rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalis.net/backend.php3', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalmemorandom.com/legalmemorandom/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalnewswatch.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalreader.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalreader.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legaltalknetwork.com/RSS/LTN_feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legaltorrents.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalunderground.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.legalunderground.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.lexisnexis.com/about/lnrssfeed/pr_legal.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.lib.umich.edu/govdocs/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.lifesciencesworld.com/biotech-jobs.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.lifesciencesworld.com/newsletter.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux101.org/RecentChanges/recentchanges.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux101.org/RecentlyCommented/recentcomments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxandmain.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxanswers.co.uk/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxathome.net/linuxathome.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxbcn.com/drupal/node/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxbeginner.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxboards.org/external.php?type=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxbrit.co.uk/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcenter.ru/trans/news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcenter.ru/trans/rss_news.phtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux.com/index.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux.com/mrn/front_page.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news1.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news3.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news4.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news5.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news6.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news8.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxcompatible.org/news9.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxde.org/backends/news.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxdevices.com/backend/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxdude.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxexposed.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxfocus.org/Nederlands/lfnews_channel.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxfr.org/backend.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxgazette.com/lg.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxgazette.com/node/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxhardware.org/linuxhardwareorg.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxheart.org/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxhispano.net/tira/feeds.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxinsider.com/perl/syndication/rssfull.pl', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxisp.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxjournal.com/blog/800285/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxjournal.com/news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-m68k.org/linux-m68k.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-mag.com/lm.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-malaga.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxmednews.com/rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxnet.com.tr/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxorbit.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux.org.ru/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxparatodos.net/geeklog/backend/backend.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-party.com/backendforums.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxplanet.com/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxquestions.org/questions/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxquestions.org/syndicate/lqatom.atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxsecurity.com/linuxsecurity_advisories.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxsecurity.com/linuxsecurity_articles.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxsecurity.com/linuxsecurity_features.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxsecurity.com/linuxsecurity_hybrid.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-sevenler.org/index.php?id=478&type=100', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxsoft.ru/rss/news.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux-sxs.org/sxs.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxtoday.com/backend/my-netscape.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linux.unn.ru/debian/taxonomy/term/4/0/feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxvoodoo.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxvoodoo.org/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.linuxzone.cz/export/rssexport.phtml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.livejournal.com/community/ru_linux/data/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.livejournal.com/users/robont/data/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.livejournal.com/users/robo_tom/data/rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.livingineurope.net/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.macnn.com/macnn.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.macnn.com/macnn.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.macnn.com/macnn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.macnn.com/rss/macnn.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.marketwatch.com/rss/mutualfunds', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.matrixmasters.com/rss/sciencehealth.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.mattberther.com/movableposter/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.medicalnewspodcast.com/cnn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.messagingtimes.com/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.mgc.dps.mo.gov/xml/newsfeed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/businessNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/domesticNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/ElectionCoverage', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/Entertainment', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/healthNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/lifeAndLeisureNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/oddlyEnoughNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/scienceNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/scienceNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/sportsNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/technologyNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/topNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.com/rss/worldNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/entertainmentNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/personalFinanceNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/scienceNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/scienceNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/topNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.microsite.reuters.co.uk/rss/uk/worldFootballNews', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.militaryavenue.com/other/ArticleRSSFeed.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,airforcenews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,armynews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,coastgnews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,dodnews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,iraq,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,marinenews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,navynews,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.military.com/rss/News/0,,topstories,,00.html', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.miscmum.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.moviemadness.uklinux.net/forum/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.myapplemenu.com/podcast/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.myapplemenu.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.myelin.co.nz/post/comments?c=summary&format=rss&u=2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.myelin.co.nz/post/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.mywebschool.org/postnuke/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/NASAcast_video.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/NASAEdge_vodcast.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/podcast_nasatv_twan.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/rtf_news.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/science_at_nasa.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nasa.gov/rss/science_at_nasa.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nature.com/naturejobs/jobs/biologicalsciences.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nature.com/naturejobs/jobs/physicalsciences.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.navigadget.com/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nctimes.com/?rss=/business/desk', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.networlddirectory.com/blogs/rss/science-blog.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newlegal.ru/Subscribe/RssAnswers.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newlegal.ru/Subscribe/RssQuestions.aspx', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newsfactor.com/feed/rss/linux-news.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newslookup.com/rss/europe/ireland/irishwire.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newslookup.com/rss/europe/russia/moscowtimes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.newslookup.com/rss/europe/russia/moscowtimes.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.news.scotsman.com/politics.cfm?format=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nhc.noaa.gov/index-at.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nhc.noaa.gov/index-ep.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.noweurope.com/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nscb.gov.ph/mobile/nscb.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/pages/technology/index.html?partner=rssnyt', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/ArtandDesign.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Arts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Books.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Business.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/DiningandWine.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Health.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/International.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Magazine.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Movies.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/National.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/NYRegion.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Opinion.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/pop_top.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Sports.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Technology.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/nyt/Washington.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/userland/Arts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/userland/HomePage.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/userland/Science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nytimes.com/services/xml/rss/userland/Technology.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.nzlinux.org.nz/blogs/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.obantimes.co.uk/news/rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.objectif-plume.net/indexPixelpost.php?x=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.olympos.org/backend/olylinux.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.operationgadget.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.orangeye.com/rss/en/science.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.orangeye.com/rss/en/unix_-_linux.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.orangeye.com/rss/en/unix_-_linux.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.oreillynet.com/ruby/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.oreillynet.com/ruby/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.ozpolitics.info/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.paologentiloni.it/blog_post.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pbs.org/wgbh/nova/sciencenow/rss/nsn-podcast-pb.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pclinuxonline.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.peskyapostrophe.com/index.php/weblog/rss_1.0/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pgdp.net/c/feeds/backend.php?content=posted&type=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.planetalinux.com.ar/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.plastic.com/politics.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pl-forum.de/backend/pro-linux.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.podshow.com/feeds/postit.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicalbrief.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicalgateway.com/elections/blogs/2004/57/3/0/0/38/38.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicalgateway.com/elections/press/2004/57/3/0/0/38/38.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicalgateway.com/members/news/xml/1.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicalgateway.com/members/news/xml/3.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicaljuice.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicaljuice.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politicaonline.it/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politics.be/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.politics.be/rdfbackend2.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.polyphonic-ringtones-ring-tones.co.uk/xml/javagames/java_games.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.popgadget.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.popgadget.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.popgadget.net/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.portrayer.co.uk/cache/www.apple.com6286.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.portrayer.co.uk/cache/www.apple.com81705.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=0&state=FL', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=125', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=37', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=45', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?catid=49', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?state=GU', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postaclassified.com/rss.cfm?state=NY', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postalnews.com/b2rss.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postcardsfromla.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postcardsfromla.com/leya/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.posterwire.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postmodernbarney.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postmodernclog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postmodernrock.com/podcast/index.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postneo.com/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postnuclearart.com/rss/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postnuke.it/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postnukethai.com/backend.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postpoppulp.org/rss/1_0/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.postronic.org/rssfeed.php', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pr-fundsachen.de/?feed=atom', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prnewsnow.com/firebase_xml/xml_feed.php?cat=Pastimes', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/americapost911.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/edupostgrad.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govedu.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govlaw.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govlegislative.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govlocal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govnational.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govpublicsvc.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/govtransport.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/lspastimes.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/scienceresearch.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/techgov.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.prweb.com/xml/techrobotics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.PUCO.ohio.gov/puco/rss/PucoMediaRelease.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.PUCO.ohio.gov/puco/rss/PucoNewContent.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pueblo.gsa.gov/rss/consumer.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pueblo.gsa.gov/rss/health.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pueblo.gsa.gov/rss/money.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.puneruby.com/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pyobject.ru/atomic/blog/posts', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.python.org/cgi-bin/moinmoin/RecentChanges?action=macro&do=rss_rc&macro=RecentChanges', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.python.org/channews.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.python.org/pypi?:action=rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.python.ru/rss-nn.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pythonware.com/daily/rss2.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.pythonware.com/daily/rss.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.qdnow.com/legal.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.qualitymeasures.ahrq.gov/rss/nqmc_whatsnew.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.redmonk.com/jgovernor/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.repubblica.it/rss/politica/rss2.0.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.reutershealth.com/eline.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.reutershealth.com/eline.rss', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.roboranch.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.robotcoop.com/?rss=1', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.robotcoop.com/xml/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.robotii.co.uk/feed/', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rollingstone.com/rssxml/politics.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rootsecure.net/?f=cnn_technology&p=feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rootsecure.net/?f=government_computer_news&p=feed', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/arkansas.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/canada.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/canada.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/courts.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/hawaii.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/illinois.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/local_governments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/military.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/military.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/netherlands.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/new_zealand.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/oregon.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/rhode_island.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/state_governments.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/texas.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/united_kingdom.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/us_federal_government.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/utah.xml', 'NONE','NONE', 'http://www.none.org');
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
+    VALUES('http://www.rssgov.com/archives/west_virginia.xml', 'NONE','NONE', 'http://www.none.org');
+
+--***********************************************
+-- Unfiltered Set Below
+--***********************************************
+
+insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://www.gourt.com/Health.xml', 'NONE','NONE', 'http://www.none.org');
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
@@ -404,384 +5712,6 @@ insert into system_scan_feeds(main_url, url_title, url_description, url_source)
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://nethique.info/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://nethut.pl/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netjack.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netjmc.typepad.com/globally_local/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netmarketingnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netmess.levillage.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://net.nana.co.il/RssService', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netnewmusic.net/netnewmusic.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netnewmusic.net/reblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netpublics.annenberg.edu/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netrn.net/spywareblog/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netsec.blogspot.com/rss/netsec.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netsecurity.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netslackers.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://net.typepad.com/maxthon_blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://networkmarketingmlm.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://networks.feedburner.com/Technozone/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://networks.org/news/rsstext.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://networld.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netzkind.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://netzwelt.gaming-hut.de/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neuerdings.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neural.ee.ncku.edu.tw/~ccy0927/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neuronal.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neutrina.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://nevasport.com/noticias/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://nevercamehome.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://nevereatalone.typepad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neverhappy.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://nevon.typepad.com/nevon/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newassignment.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newassignment.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newblackculturaldiet.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newcenturynotebook.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newclub.info/txt/export.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newdelhinews.net/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newdonkey.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newdonkey.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newflux.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newfocus.hu/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://new.itgarage.com/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newlifeemerging.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://new.linuxjournal.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newman814.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newmannahas.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newmarksdoor.typepad.com/mainblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://newmusictoday.net/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://neworleans.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news.163.com/special/r/00011K6L/rss_newstop.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news2.ru/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news2.ru/rss.php?order=new', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news.alpinezone.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news.ansible.co.uk/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news.architecture.sk/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://news.argentinatodo.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.w3reports.com/xml-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.w3sh.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wackattackbarrack.be/bootleg/files/page4.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wackattackbarrack.be/news_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wackylabs.net/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wa.democrats.org.au/html/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waitingfordorothy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wait-till-i.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wakingslow.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waleg.com/celebrities/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkering.com/walkerings/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkernewyork.com/eats/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkersmith.net/bl0g/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkerswarehouse.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkingaround.org.uk/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkingbuddies.com/home/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walkingpaper.org/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walksupright.com/categories/humor/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walterindenver.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.walterscamp.com/amateur-sex.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wam.umd.edu/~pbushmil/atomized_jr/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warchalking.org/backend.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warcry.com/scripts/news/rss/15.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wardriving.info/live/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wark.info/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warofwits.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warp2search.net/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warpcoresf.co.uk/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warpedsystems.sk.ca/backend/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warrenellis.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warrenkonkel.com/feed/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.warrinerlaw.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wasedalaw.com/nuffsaid/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonmonthly.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonpost.com/wp-dyn/rss/business/government/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonpost.com/wp-dyn/rss/business/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonpost.com/wp-srv/opinion/columns/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonpost.com/wp-srv/opinion/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonpost.com/wp-srv/politics/elections/2004/rssheadlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.washingtonspeechwriters.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchblog.com/democrats/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchdog.cz/rss/en.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchdog.cz/rss/ru.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchguard.com/rss/watchguardwire.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchmojo.com/web/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watchyourend.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watercoolergames.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waterlilies.org/photolog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waternotforsale.org/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.watkijkjenou.nl/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wats.ca/wats.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waveflux.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waxelastic.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waxy.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waxy.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waxy.org/links/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waycooljnr.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wayneklick.com/movie_blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wayneklick.com/movie_blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.way.nu/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waypath.com/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waypath.com/topic/rss/oil.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waypath.com/topic/rss/topic_badnarik.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.waypath.com/topic/rss/topic_howarddean.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://wwww.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wc.cc.va.us/news/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wcnews.com/news/wcnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wdr1.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wdr1.com/dave/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wdr.de/themen/_config_/bin/selrdf.jhtml?a=25&r=Forschung&r=Computer&r=Verkehr&r=Wirtschaft', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.wdr.de/themen/wartung.html', 'NONE','NONE', 'http://www.none.org');
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://www.wdr.de/xml/newsticker.rdf', 'NONE','NONE', 'http://www.none.org');
@@ -2037,485 +6967,6 @@ insert into system_scan_feeds(main_url, url_title, url_description, url_source)
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://offonatangent.blogspot.com/rss/offonatangent.xml', 'NONE','NONE', 'http://www.none.org');
 
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://offroadaccess.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://offtrack.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oficinas.idoneos.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oglobo.globo.com/rss/plantaorio.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ogre.nu/wp/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ogre.nu/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oguz-osman.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ohiolibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ohpinion.com/rss/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://Ohrfunk-Kompakt.podspot.de/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ohtasteandsee.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oh-the-horror.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ohuiginn.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oilbeseeingyou.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ojkar.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://okdork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://okiba.jugem.cc/?mode=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oktaysancak.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oktora03.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://okul.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://okumaguncesi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ola.rinta-koski.net/blog/english.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olaughlen.net/nucleus/xml-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldcountrypodcast.mypodcast.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldfashionedpatriot.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldies.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldies.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldputera.info/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldputera.info/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldputera.info/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldsmoky.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oldtimeradionostalgia.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oleg-bunin.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olifante.blogs.com/covil/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olivercard.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oliverkamm.typepad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olivierbonnet.canalblog.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olivierm.cigogne.org/atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oloveweb.de/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olpa.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://olympiablue.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omarsalah.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omelissokomos.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omersenol.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omidmemarian.blogspot.com/rss/omidmemarian.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omniorthogonal.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://omniture.com/blog/blog/2/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://on10.net/Blogs/News/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://on10.net/TheShow/feed/daily/ipod/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onclick.blogs.com/biometrics/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oneamericacommittee.com/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onedogsaid.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onefatherfordean.blogspot.com/rss/onefatherfordean.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onefinejay.com/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onegoodmove.org/1gm/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onehappydogspeaks.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onehouse.blogs.com/onehouse/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oneminutehowto.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onemore4theroad.com/onemore.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onepeople.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onepointzero.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onepotmeal.com/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://one.promoguy.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onereaction.net/blog/category/11.aspx/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onestepback.org/index.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onestopcreditreport.com/creditreportnews/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onethousandblogsbyduffyandbutler.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oneword.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onfusionism.dreamattack.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onion.cocolog-nifty.com/homemade/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onkasim.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlinechess.bravejournal.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online-discussion.com/Blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.effbot.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlinejournalist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.securityfocus.com/topnews?type=rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlineshopping.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlinetravelreview.typepad.com/online_travel_review/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.wsj.com/xml/rss/0,,3_7028,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.wsj.com/xml/rss/0,,3_7041,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.wsj.com/xml/rss/0,,3_7071,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://online.wsj.com/xml/rss/0,,3_7077,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlisareinsradar.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlisareinsradar.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onlyinmemphis.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onmyownpath.typepad.com/window_pain/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ono-tank.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://on-ruby.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://on-ruby.tumblr.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onthecommons.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ontherockscomics.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://onvertigo.ca/index.php?x=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oomph.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oops.twoday.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oosabryoo.spaces.live.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opcblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openbook.typepad.com/katey/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opencontent.org/oishii/oishii.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opengardensblog.futuretext.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openjsan.org/recent.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://open.neurosaudio.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openplanproductions.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openskills.info/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opensourceculture.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opensourceschools.org/backend/geeklog.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opensource.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openthought.org/blosxom.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://openwiki.com/?a=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://operabouffe.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opinion.wygk.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opml.podcast.com/2142', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opml.podcast.com/3161/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optics.org/rss/events.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optics.org/rss/events.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optics.org/rss/features.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optics.org/rss/features.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optics.org/rss/jobs.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optional-n.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://optional-n.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opus.bibliothek.uni-wuerzburg.de/opus/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opus.kobv.de/tuberlin/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://opus.kobv.de/ubp/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oracknows.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orange.cocolog-nifty.com/orange/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orangewallaby.net/wall/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orbital-mind-control-laser.net/leo/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orbitalrpm.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orbit.psi.edu/rss_main.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orbyn.com/cult/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orcun.mozilla.org.tr/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://order-horizon.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ordinaryeverydaychristian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ordinary-life.net/index.php/kubrick/rss_atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ordinarymorning.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://organic.com.au/news/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://organics.bc.ca/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://organicwarfare.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://organizam.blog.hr/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ori0n.altervista.org/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orioles.mostvaluablenetwork.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oriolesteljapo.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orlando.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orrin-woodward-team.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orsonstelescope.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orsye.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthact.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthodoxchristian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthodoxchristianreflections.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthodoxmonk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthodox-okie.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthodoxtidings.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://orthopedics.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://os2005.nokia770hacks.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://osadczuk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://osakanews.net/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oscamp.org/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://osdir.com/backend2.php?cat=207', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://osdir.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oseaestupenda.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://oshaughnessy.typepad.com/256/index.rdf', 'NONE','NONE', 'http://www.none.org');
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://oskarn.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
@@ -8225,573 +12676,6 @@ insert into system_scan_feeds(main_url, url_title, url_description, url_source)
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://funkly.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
 
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://funk.shacknet.nu/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://funky16corners.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://funnycute.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fuserinseyirdefteri.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futebol-jogadores.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futurecars.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futurefeedforward.com/futurefeed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futurefile.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futurehell.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://future.iftf.org/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://future.iftf.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futureofthebook.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://FuturePositive.synearth.net/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://futurewire.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fuzzyblog.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fuzzyblog.com/podcasts/?type=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fuzzypinkslippers.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fuzzze.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fwp.state.mt.us/news/newsfeed.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fx.crewtags.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://fyp.blogthing.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g1.globo.com/Rss2/0,,AS0-5597,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g1.globo.com/Rss2/0,,AS0-6091,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g1.globo.com/Rss2/0,,AS0-6174,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g1.globo.com/Rss2/0,,AS0-7086,00.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g33kv2.efamilynj.org/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://g33kv2.efamilynj.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gabcast.com/casts/5292/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gabriel4580.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gabrito.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gada.be/updates/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gadget.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gagarine.ouvaton.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaim.sourceforge.net/rss.php/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaito.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galadarling.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galbraiths.org/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galeb.etf.bg.ac.yu/~brdja/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galeb.etf.bg.ac.yu/~kalkulus/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galeb.etf.bg.ac.yu/~ptihomir/blog/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galgonian.gotdns.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gallery.bpaddock.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gallery.costaricainternational.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gallery.menalto.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galleryoftheabsurd.typepad.com/14/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gallery.totalcolombia.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gallery.totaluruguay.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://galvin.worshipsingapore.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamalielsdesk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gameboy.hackaday.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamebudizm.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamefreaks365.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamehippo.com/rss/gamehippo.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamepolitics.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://games.gourt.com/xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://games.slashdot.org/games.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamezoneradio.com/?feed=podcast', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaminghaven.com/headlines.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaming.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gammatron.novarese.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gamzeonstage.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gancao.net/weblogs/acublog.cgi?flav=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gangstasnob.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ganime.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garage.docsearls.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garage.docsearls.com/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garamnpepper.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garbaland.belfagor.net/feeds/index.rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garbaland.belfagor.net/rss.php?version=2.0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gardendjinn.typepad.com/garden/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gardenspot.typepad.com/gardenspot/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gardnercampbell.com/blog1/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garetgarrett.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gareth.drivelwarehouse.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garfeild-ubuntu.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gargantua1.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gargantua.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garret.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garrickvanburen.com/firstcrack/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://garrickvanburen.com/firstcrack/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gartholson.net/weblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gary-kramlich.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaspart.textamerica.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gassee.blog.20minutes.fr/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gatesofmemphis.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gatewaypundit.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gatlinburglogcabins.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gatorgrad.home.att.net/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gattostanco.diludovico.it/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gawker.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaydessert.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gayfriendfinder.com/blog/19121023/rss.xml?pid=g555005-pct', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaylife.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gayorbit.net/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gayparenting.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaypatriot.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gaystlouis.com/feeds/daily.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://G-Blog.net/user/Effendi/rss10.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gcoa.blogspot.com/rss/gcoa.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gdayworld.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gdc.cnrs.fr/blog/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gdiapers.typepad.com/earlyyears/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gear.gadling.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geb.uni-giessen.de/geb/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gecerken.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geckonia.com/pixelpost/index.php?x=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekable.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekable.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekandpoke.typepad.com/geekandpoke/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekandpoke.typepad.com/geekandpoke/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekaustin.org/geekaustin.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekbox.typepad.com/geekbox/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekbrief.podshow.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekbrief.podshow.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geek-chick.net/syndication.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geek.focalcurve.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekinator.quicksurf.com/?cat=2&feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geeknewscentral.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geeknews.ru.j-vista.ru/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekrandom.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geeksofhazzard.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekspeak.org/shows/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekswithblogs.com/asmith/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekswithblogs.net/ajames/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekswithblogs.net/andym/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekzone.co.nz/newsoftware.asp?platform=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekzone.co.nz/topplatform.asp?platform=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geekzone.co.nz/topplatform.asp?platform=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geffen.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ge-free.com/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geitstamme.tripod.com/abandon/dagbok/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geleiageral.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gelistirici.turkix.org/index.php/RecentEdits?format=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gelwan.com/follow_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gemal.dk/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gemssty.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/b2rdf.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/b2rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/b2rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genealogyblog.com/wp-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://generalfailure.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://generalhospital.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://generalspecialist.com/feed/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gen-eric.com/patents/xmlsrv/atom.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genetikayos.com/blog/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geneura.ugr.es/~jmerelo/atalaya/news-google-es-rdf.cgi?weblogs', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genliasmonitor.coret.org/forum/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://genomebiology.com/mostviewed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gentoo.nodecam.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geo47.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geocities.com/money_making_athome/.feed/blog/make_money_at_home_blog.html', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geocities.com/roomthinker/ThinkersRoom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geocities.yahoo.co.jp/gl/takuji_kawata/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geodog.thebishop.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geodog.thebishop.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geodub.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geoff.kleinman.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geography.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geology.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geomblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://george.hotelling.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://georgemustgo.blogspot.com/rss/georgemustgo.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geourl.org/news/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://german.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://germanamericanlaw.com/cgi-bin/amlaw.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getahead.ltd.uk/blog/joe/tags/blogging/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getfit.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getk2.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getluky.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://get-medieval.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getreal.corante.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://getvegan.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geveze.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gevkaffeegal.typepad.com/the_alliance/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://geyikli.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gflib.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gfmorris.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://gfoss.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ggth.typepad.com/givegettake_and_have/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghettoberry.typepad.com/gb/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghiraldelli.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghislain.thau.free.fr/blog/atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghostwire.com/rss20.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghr.nlm.nih.gov/ghr/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ghw.wordherders.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://giallodivino.blog.dada.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://giallodivino.clarence.com/index.xml', 'NONE','NONE', 'http://www.none.org');
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://gianlucasalvatori.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
@@ -10035,1164 +13919,6 @@ insert into system_scan_feeds(main_url, url_title, url_description, url_source)
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://home.hetnet.nl/~tieske/weblog/index.xml', 'NONE','NONE', 'http://www.none.org');
 
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homeinsurancehelp.info/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.kcore.de/~kiza/journal/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.kcore.de/~kiza/software/snownews/snowlog.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.kcore.de/~kiza/software/snownews/snowscripts/releases.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homeless-girl.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homelessinmoscow.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homeloansmortgagerefinancing.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.netcom.com/~luskr/weblog/radio/categories/kLogs/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homepage2.nifty.com/igat/igapyon/diary/rss/idxupdate.rss1.0.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homepage.mac.com/aanino/iblog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homepage.mac.com/andyi/cwop/cwop.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homepage.mac.com/bertisonline/blogwavestudio/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homepage.mac.com/brianganninger/adium/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.planet.nl/~broug007/writing/dvorak/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homerecipes.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.san.rr.com/lanois/perl/site.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homeschoolbuzz.com/RSS/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.swiftdsl.com.au/~ptyland/radio/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hometheater.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hometheaterview.typepad.com/hometheaterview/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homevideo.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.wangjianshuo.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.yole.ru/weblog/comments.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.yole.ru/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://home.yole.ru/weblog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homlib.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://homologation.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://honestpuck.com/cgi-bin/blosxom.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://honeymoons.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://honeysideup.bloggage.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hongkong.neuerordner.de/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hooahscottykid.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hoottatthedark.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hopepubs.home.comcast.net/writersnotes.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horaciosoares.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hori-uchi.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horn.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horowhoro.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horror.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horrortales.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horselogy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horseracing.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horseshoe.talkware.co.uk/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://horseshues.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hoss.blogg.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hosted.ap.org/lineups/TECHHEADS.rss?SECTION=HOME&SITE=DEWIL', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hosting.opml.org/jabancroft/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hosting.opml.org/thisislisa/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hostit1.connectria.com/twduff/home.nsf/stories.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotbuttereddeath.ubersportingpundit.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotdeals.apple.com/newarrivals/rss/newarrivals.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hot.ee/tehnokratt/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotels.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotels.ferium.de/rss/output/rss_abflug_nord_3_sterne.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotfrm.blogmatrix.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotguyphotosfromthestreet.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotrod.oops.jp/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hotwired.lycos.com/webmonkey/meta/headlines.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houseind.com/showandtell/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houseofhaug.net/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houseofwarwick.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houseofwaxpodcast.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://housetheatre.typepad.com/the_house_theatre_weblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://housing-bubble.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houston.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://houstonmirror.com/p.x/id/edcb1def3c80d2e6/headlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howadoor.wz.cz/howadoor.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howappealing.law.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howardlewisship.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howardsmusings.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hownow.brownpau.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howto.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howto.looselycoupled.com/blog/dy.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://howtoons.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hpadkisson.typepad.com/ia_think/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hpandjd.blogs.com/hp_and_jd/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hpc.ru/exp/hpcru_news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hrabal.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hrafn.ru/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htavs.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htc-cs.ru/modules/novosti_kompanii', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htciwanagrom.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htlcto.fizziebooks.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htmlcoder.visions.ru/Fresh/rss-0.91.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://htmldog.com/ptg/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://httpcode.com/blogs/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hubblesite.org/newscenter/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hughhewitt.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hughhollowell.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hugoboy.typepad.com/hugo_schwyzer/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hugo.muensterland.org/feed/rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hugorodgerbrown.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://humanbacon.blogs.com/human_bacon/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://humanresources.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huminf.uib.no/~jill/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huminf.uib.no/~jill/newmediatheory/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://humor.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://humphrey.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hungryforhunger.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huntlywyndblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hurones.net/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hurryupharry.bloghouse.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huseyinbaradan.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huskygutterbun.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huslage.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hustlerofculture.typepad.com/me_we/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hutspod.herejezus.nl/feed.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://huygun.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hwnslacker.audioblog.com/rss/hawaiian_music_world.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyalineskies.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hybernaut.com/bdv/wp-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hybernaut.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hybernaut.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hybridbuzz.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hybrid.tashcorp.net/rss/news/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hydrogenpowernews.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hypergeometric.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyperorg.com/blogger/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyperpics.blogs.com/beyond_the_ui/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyperreal.info/drugs/script/hyperRSS.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyperthink.net/blog/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hyperword.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hypweb.net/xoops/modules/pukiwiki/index.php?cmd=rss10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://hzcr.twoday.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iamacamera.org/default.aspx?feed=rss20', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iamadem.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iam.upsideclown.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iangela.typepad.com/meanmuse/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iangela.typepad.com/meanmuse/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ianmurdock.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ianmurdock.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ianolsen.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ianrhome.unl.edu/UNL_IANR_news.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iantanner.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ian.winprog.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iapodcast.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iar.spb.ru/feed.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iaslash.org/blog/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iaslash.org/blog/feed/1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iaslash.org/blog/feed/137', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ibalita.msuiit.edu.ph/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ibegtodiffer.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ibridazioni.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ibscrohns.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ican.editthispage.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icant.co.uk/csstablegallery/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icarus.med.utoronto.ca/lo/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icculus.org/tennix/news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icekalt4u.blogg.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icewalk.com/backend/netscape_channel.txt', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ichirou.tea-nifty.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icite.net/blog/?amp;smm=y&flavor=rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icite.net/blog/?flavor=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icite.net/blog/?flavor=rss2&smm=y', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iconeon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iconlogic.blogs.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icontemplate.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://icp.mednickonline.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ictroddels.nl//index2.php?option=com_podcast&feed=RSS2.0&no_html=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ictroddels.nl/index2.php?option=com_podcast&feed=RSS2.0&no_html=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iddybud.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideaexplore.net/news/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideajoy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idealisticpragmatist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idea.livedoor.biz/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideamatt.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideant.typepad.com/ideant/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideant.typepad.com/ideant/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideas.4brad.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideasandthoughts.org/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ideazione.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idenise.net/blog/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://identitytheftnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idgnow.uol.com.br/internet/RSS2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idleworship.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idly.org/side/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idntc.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ido.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idomyownstunts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://id-review.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://idt.lcc.gatech.edu/~osamanci/ozgescomics/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iecep.hostmatrix.org/WordPress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ieplists.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifalibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifantasyfootballradio.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifight.libsyn.com/rss/quicktime', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifindkarma.typepad.com/relax/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifindkarma.typepad.com/relax/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ifoughtthelaw.cementhorizon.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://igadfly.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://igargoyle.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iggy.fringehead.org/rfcs/new_rfcs.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iguanaexpeditions.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iguana.mabulle.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://i.hoder.com/linkdooni/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ihodet.no/blogg/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iit-iti.nrc-cnrc.gc.ca/new-neuf/news-nouvelles_e.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ijsm.org/archives/2004/07/26/yay-for-todd-and-sarah/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ikeahacker.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iknowcollegefootball.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ikuko0312.nikki-k.jp/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilber.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ileriseviye.org/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilforno.typepad.com/il_forno/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilkerender.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://illigal.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iltriomedusa.blog.deejay.it/il_mio_weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilustradanocinema.folha.rssblog.uol.com.br/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilyabirman.ru/meanwhile/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ilyabirman.ru/news/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imagemaker.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imagemen.hypermart.net/poolclinic/poolclinic.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imagenooks.com/blog/calliope/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://images.apple.com/downloads/macosx/automator/recent.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://images.apple.com/main/rss/hotnews/hotnews.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://images.thumblogger.com/thumblog/rss/5808.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imaginecontact.com/rss.html/123', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imaginecontact.com/rss.html/1238', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imagingexperts.typepad.com/imaging_experts/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://im-altkreis.de/news.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imbik.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://IMBYO.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imdl2004.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=4', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imedinews.ge/rss.php?lang=en&catid=6', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imfo.ru/export/imfo.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://img.marketwire.com/rss/mwAerospaceDefense.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://img.marketwire.com/rss/mwAgriculture.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imhelendt.spaces.live.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imhelendt.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imisspaper.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imminst.org/news/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imomblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imomus.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imostcertainlyaskedforit.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imo.txt-nifty.com/farm/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://impeller.net/magazine/rss2.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://impeller.net/magazine/rss2.asp?lgg=de', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imperfect-perfection.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imperialviolet.org/iv-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imprensamarrom.com.br/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imprisonbush.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://improveyourcredit.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://impserver.bournemouth.ac.uk/rss_xml_out.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://imunwrapped.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://i-my-me.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inagotable.dnsalias.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inamidst.com/changes/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incendiarious.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inclassable.typepad.com/inclassable/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inclassable.typepad.com/un_site_par_jour/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incoherentbabble.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incoherenteconomist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://income-property.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incommunion.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incontext.blogmosis.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://incsub.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indepcons.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://independentstream.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://independent.typepad.com/elindependent/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indeterminacy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indexed.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indeyets.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indianapolis4dean.com/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indianapolis-vacation.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indianblogtrick.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiefeedelectronicadance.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiefilm.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiekids.org/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiemoosic.com/allmediafeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiexposed.com/allmediafeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indiglow.org/b2rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://indytorrents.org/files/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inessential.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inews.berkeley.edu:7077/channels/iNews/main/rss091.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inews.berkeley.edu:7077/channels/newsCenter/rss100.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inews.berkeley.edu:7077/channels/security/rss100.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infernoxv.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://info.abril.com.br/aberto/infonews/rssnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://info.astreet.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infocult.typepad.com/infocult/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infocult.typepad.com/infocult/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infocult.typepad.com/infocult/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infojama.pl/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infolets.com/infolets.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infomexique.online.fr/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infomize.com/feed/3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://info-moto.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infontology.typepad.com/infontology/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infopunks.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inforizon.blogs.com/veille/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://information-bureau.com/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://informit.com/guides/guide_rss.asp?g=flash', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://informit.com/guides/guide_rss.asp?g=windowsserver', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://informit.com/guides/guide_rss.asp?g=xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://informitv.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://informl.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infosciphi.info/xmlsrv/atom.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infosecdaily.net/syndication/infosecdaily_news.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infosthetics.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infosthetics.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://InfoTechVI.com/news.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infotk.blogs.com/articulos/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://infotk.blogs.com/temas/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ingenue.buzznet.com/user/rss/rss10.xml?type=synd', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://iniaes.org/news/news.cdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://initiativeeuropeenneetsociale.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inkbot.livejournal.com/data/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inkhornterm.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://InkSlingersStellarDesigns.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inlineplanet.com/feed/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inluminent.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inmyexperience.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inna35.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://innerdaemon.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://innig.net/music/inthehands/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://innig.net/music/inthehands/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inoveryourhead.net/podcast/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inpassing.org/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inputplus.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inscrutable.news-portal.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inseasonchristianlibrarian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insideanalytics.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inside.growthtrac.com/inside/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insider.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insideshanghai.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insidesomaliland.blogtales.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insidetracks.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insightontheword.podomatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insolublog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insomnyuk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inspectorlohmann.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inspirationalquotations.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://instapundit.com/index_alt.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://instapundit.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://instapundit.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://instrumentos-musicales.idoneos.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://insureblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intarch.ac.uk/intarch.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inteldump.powerblogs.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intellectualpropriety.typepad.com/intellectual_propriety/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intel.luzcamaraenter.com/rss.php?blogId=1&profile=rss20', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intelperspective.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intensify.org/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interactiveu.Berkeley.EDU:8000/CA/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interactiveu.berkeley.edu:8000/cy/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interactiveu.Berkeley.EDU:8000/IM/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interactiveu.berkeley.edu:8000/PatD/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interactiveu.berkeley.edu:8000/rdhyee/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interbiz.ru/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interbridge.com/xml/lineups.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://intercepted.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interested-participant.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/alton_brown.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/diesel_sweeties_images.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/explodingdog.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/pbs_newshour.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/pbs_programs.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/rabbitblog.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/shabot6000.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://interglacial.com/rss/the_smoking_gun.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://inter-mezzo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetalchemy.org/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetalchemy.org/index.rss91', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetbrus.com/blog.php?flav=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetdemographics.blogspot.com/rss/internetdemographics.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetexperts.blogspot.com/rss/internetexperts.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetgames.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internethoaxes.blogspot.com/rss/internethoaxes.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetminiguides.blogspot.com/rss/internetminiguides.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://internetnews.com/icom_includes/feeds/inews/wr-wireless-10.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://carolyne-stuff.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://caropod.podspot.de/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://carrielauth.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://carriereonline.typepad.com/home/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://carriethienes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://motuspress.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://mountainbike.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://mountainhighway.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://mountainmailcountry.com/backend.php', 'NONE','NONE', 'http://www.none.org');
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://mouselounge.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
@@ -15260,7189 +17986,6 @@ insert into system_scan_feeds(main_url, url_title, url_description, url_source)
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)
     VALUES('http://reagle.org/joseph/blog?flav=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realbeer.com/rdf/realbeernews.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.argentinatodo.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.belizetotal.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.brasiltodo.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.classifieds1000.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.costaricainternational.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.malaysiatotal.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestatemarketingblog.com/?feed=podcast', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.mexicantotal.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.panamatotal.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalchile.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalcolombia.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalparaguay.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalperu.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalphilippines.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totaluruguay.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.totalvenezuela.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realestate.vietnamtotal.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reallybadmovies.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realpoetik.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realtime24.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://realwomen.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reasonofvoice.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reasonspace.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reasonsyouwillhateme.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rebeccabree.typepad.com/my_weblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rebecca.hitherby.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rebecca.hitherby.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rebelprince.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rebelution.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rec6.via6.com//rss.php?cat=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recepieforhate.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://receptionista.typepad.com/hammer_and_peg/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recherchenblog.ch/index.php/weblog/rss_atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recht.us/cgi-bin/amlaw.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recipes.gods-little-garden.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recordinggearnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recordings.talkshoe.com/rss1009.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recordings.talkshoe.com/rss10420.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://recordings.talkshoe.com/rss10785.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redcorundum.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redcouch.typepad.com/weblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redcouch.typepad.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reddeyez.com/blog/rss/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reddeyez.com/blog/rss/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reddomino.typepad.com/languor_management/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reddomino.typepad.com/languor_management/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redeyes.ru/forum/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redfanny.podomatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redhanded.hobix.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redlegnation.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redlegsrides.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redmondmag.com/rss/news/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redneckramblings.devineinnerbitchin.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redondowriter.typepad.com/sacredordinary/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redotheweb.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redruby.info/xml/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redsolo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://red-state.com/rss/manual.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://redwolf.pe.kr/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reelreviewsradio.com/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://refrederator1.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://regardsur.blogspirit.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://register.spectator.ru/txt/export.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://regularthoughts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rehii.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reidreport.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reilly.typepad.com/cameronreilly/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reinventioninc.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://relapsedcatholic.blogspot.com/rss/relapsedcatholic.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://relationshipimprover.com/relationship.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://relationshipmatters.typepad.com/relationship_matters/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://relativity.livingreviews.org/Articles/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://releases.usnewswire.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reliableanswers.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://religioesemportugal.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reluctantwriter.typepad.com/heregoes/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reluctantwriter.typepad.com/heregoes/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remanescente.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remioudinot.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remiss63.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remixtheory.net/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remixxworld.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remorselessapology.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remoteaccess.typepad.com/remote_access/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remouk.alt-tab.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://remylang.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://renfro.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://renkahenk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://renotahoe.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rentals.classifieds1000.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rentals.CostaRicaInternational.com/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rentzsch.com/rss.xml/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reporters.blogosfere.it/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reprocessed.org/blog/feeds/rss2/index_full.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reps.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://republicoft.typepad.com/republic_of_t/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://requiredreiding.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rescogitans.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rescomp.stanford.edu/~ejalbert/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://researchbuzz.com/researchbuzz.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://research.microsoft.com/rss/news.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://researchresources.blogspot.com/rss/researchresources.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://research.yale.edu/lawmeme/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reseaulib.org/?tpl=rss&lang=fr', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resellers.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reservoir.cent.uji.es/canals/octeto/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reshine.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://res-ipsa.the-blinding-white-light.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resistenteexistencial.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resist.twotoprecords.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resource.reh3.com/content/r3res.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resource.reh3.com/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resourceshelf.freepint.com/resourceshelf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resources.survivorphoenix.com/postnuke/html/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://resourcingstrategies.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://respectfulofotters.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://respiratory-research.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://restel.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://restertech.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://restodelmondo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://retailindustry.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://retrofittedlibrarian.blogspot.com/rss/retrofittedlibrarian.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://retrorocketdesign.com/weblog/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rett.org/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reubenshow.podbean.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://revcnote.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://revel.unice.fr/rss.php?type=article', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://revengepodcast.podomatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reveries.com/reveries.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://reviewofpodcasts.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rezwanul.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rfid.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rgable.typepad.com/aworks/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rgable.typepad.com/aworks/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rghsblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhapsody.bloguje.cz/rss.xml?PHPSESSID=b9e55d87429c26ab569796a8e21d1bf5', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhizome.org/net_art_news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhizome.org/syndicate/rhizome_news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhoads.org/blog/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhosgobel.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rhythtgh.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rianjs.net/arslounge/rss10.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ribbonsofhighway.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richalbert.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richardbarnet.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richardbarnet.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richardhallgren.com/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richardleggett.co.uk/blog/xmlsrv/rss2.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richardng.rewindcrew.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richhubbins.theclaussens.com/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richkilmer.blogs.com/ether/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://richmond.indymedia.org/features.1-0.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rickardsbiondi.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rickcooper.typepad.com/thepdapro/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ricshreves.net/index2.php?feed=ATOM0.3&no_html=1&option=com_rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ridiculousfish.com/blog/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ridingtwowheels.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://riehlworld.net/david/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://riesenmaschine.de/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ries.typepad.com/ries_blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rifers.org/blogs/feeds/rss/entry/gbevin', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://right-as-rain.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightmoment.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightonred.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightrainbow.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightreason.ektopos.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwingconspirator.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwinghowler.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwingnation.com/american-orthodox/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwingnews.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwingnuthouse.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rightwingsparkle.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rigonatti.com.br/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rigsville.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rijahstjovite.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rijama.blog.hr/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rikchik.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rikerdonegal.hipcast.com/rss/yet_another_tv_review_podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rimero.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rimproinsider.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rinaldi.blogautore.espresso.repubblica.it/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ringblog.typepad.com/corporatepr/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ringblog.typepad.com/ringblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rion.nu/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ripcurl.blogsome.com/feed/rdf/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ripples.typepad.com/ripples/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ripples.typepad.com/ripples/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://riseconverge.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rise.lewander.com/?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rising-hegemon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://risinghegemonxxx.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://riskman.typepad.com/perilocity/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rive.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://riverbendblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rivervision.com/blog/imtrying2/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rivervision.com/butthead/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rizbaimp.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rmacondo.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rmen.typepad.com/cyberworker/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rmfo-blogs.com/alisa/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rn7.net/b/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rndr4food.blogspot.com/rss/rndr4food.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ro5ie.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rob.crabapples.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robert.accettura.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robertbevandalton.typepad.com/roblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robertfernandez.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robertomoroni.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robertovannini.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robertreich.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robert-walikis.blogspot.com/rss/robert-walikis.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robichaux.net/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rob.infinitepigeons.org/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roblowe.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robotarium.com/weblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robot.endtas.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robots.astrobio.net/news/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robots.hackaday.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robots.net/rss/articles.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://robotsrobotsrobots.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rob.rnovak.net/content/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rob.thesnows.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockcastitalia.com/rockcastitalia.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockcriticsdaily.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockgrafia.com/rs/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockhaus.typepad.com/rock_haus/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockhaus.typepad.com/rock_haus/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockleybulletin.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rocknerd.org/rocknerd.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rocknrollplanet.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockychen21.blogsome.com/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rockyhorrorpodshow.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rocr.xepher.net/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodcorp.typepad.com/rodcorp/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodcorp.typepad.com/rodcorp/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodeworks.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodo.foo.cz/news.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodrigo33.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodrigo.typepad.com/english/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rodriguez.bloguje.cz/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rogerailes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rogerdarlington.co.uk/commswatch/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rogerlsimon.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rogerlsimon.com/weblog.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rogers-rants.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rohitbhargava.typepad.com/weblog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roj.as/entries/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roland.pege.org/news.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roleplaygames.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rollerweblogger.org/roller/feed/entries/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romancefiction.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romangerman.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romanians.bc.ca/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roman.khimov.ru/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romanticmovies.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romaryka.lunanina.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romecamp.pbwiki.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romero2008.hautetfort.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://romi.typepad.com/start/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ronbailey.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roningarou.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ronnibennett.typepad.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ronnys.bravejournal.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ronsilliman.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ronslog.typepad.com/ronslog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rooba.net/will/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://room19.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roon.yarinareth.net/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rootblog.net/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rootnode.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rootprompt.org/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rootprompt.org/rss/mac.php3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rootsblog.typepad.com/rootsblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roots-weblog.info/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ropa-shop.idoneos.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roportajmakinesi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rory.textamerica.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roselinasalemi.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rosita.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rossandkel.typepad.com/mccord/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rosse.ltalk.ru/feeds/rss20.cgi?topic_id=1714', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rossomachin.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ross.typepad.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ross.typepad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ross.typepad.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rotzoll.podspot.de/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roughdraft.typepad.com/dotmoms/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roughdraft.typepad.com/mominthemirror/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://routerx.dungeons.ca/moam/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rowen.air-nifty.com/rsm/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roxanne.typepad.com/rantrave/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roxanne.typepad.com/rantrave/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rox.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://roxettebunny.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://royalmusic.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://royalpoker.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://royby.com/pMachinePro2.2/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rozo4ka23.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rpc.blogrolling.com/rss.php?r=da551ec257eefbc7fec2e8f12dbaca51', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rpg.lockergnome.net/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rpj.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rrelos.net/techblog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rr.latenightpc.com/wp/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rsgblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss1.mediafed.com/feed/shiny/shinyshiny', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.advisor.com/rss/ZTMESS', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.alexa.com/search_movers.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.alexa.com/top_500.fr.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.alexa.com/top_500.pt.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.allaboutpalm.com/news/newsrss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.allaboutsymbian.com/news/rss2all.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.allrecipes.com/2/1.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.apolloduck.com/xc.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.arcanjo.org/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.arrivenet.com/banking.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.azstarnet.com/index.php?section=acc', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bnn.nl/fm.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bnn.nl/los.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bnn.nl/podcast.php?p=bnnunited', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bnn.nl/podcast.php?p=storing', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bnn.nl/podcast.php?p=wegmetbnn', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.businessweek.com/bw_rss/technology', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.bwirelezz.com/tt101.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.christiansunite.com/rss_faith.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.citypages.com/Articles.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.citypages.com/eventads.rss?SCID=602', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.citypages.com/promotions.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.citypages.com/restaurantads.rss?SCID=613', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.clevescene.com/php/rss/xml_music.php?src=music_rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.cnn.com/rss/cnn_health.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rss.cnn.com/rss/cnn_law.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ruyavi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rvb.roosterteeth.com/_rss/news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rvr.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rwor.org/en.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://rwor.org/es.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ryanedit.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ryanmeade.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ryan.thoughtlocker.net/crystal/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://s148343609.onlinehome.fr/ptitecocci/index.php?x=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://s89940423.onlinehome.us/index.php?title=Special:Recentchanges&feed=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://s93910365.onlinehome.us/wordpress/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php/blog/1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php/blog/3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php/blog/4', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php?blogid=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php?blogid=3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabatos.net/xml-rss2.php?blogid=4', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sabrinafaire.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://SacramentoConferenceELCA.org/news/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sacramento.craigslist.org/zip/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sadekahve.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sadettinpolat.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sadspud.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safari.oreilly.com/?noEnt=1&portal=rss&sortKey=insertDate&sortOrder=desc&srchText=BOOK&xml=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safari.oreilly.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safarisoftware.typepad.com/mlp_developer_news/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safersex.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safetobuy.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://safetyrisk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saga.jointhesaga.com/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sagbek.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sage.mozdev.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saginawcountyrealestate.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sahir-turkce.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saidsarah.blogspot.com/rss/saidsarah.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saint-andre.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saintherman.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saint-louis.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saintlukesmethodist.org.mn.sabren.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saints.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sajn.persilja.net/rss/traktor.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sakuracat.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sakuzuki.rocket3.net/htdocs/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saladwithsteve.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saladwithsteve.com/osx/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saleil.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://salimismail.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saliva.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sallincak.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://salsa.bbh.com/news/xmlindex.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saltandice.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saltaquarium.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saltfishing.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saltire.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://salvageship.dropcontrol.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samanth.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samgentile.com/blog/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sammoore.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samowoman.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sampsonshow.com/feed/podcast.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samratsharma.com/words/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samuel.kesterson.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://samuri.setuyaku.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sana0329.cocolog-nifty.com/silent_voices/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanarist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanciayang.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandbox.msn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandeep.weblogs.us/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandgroper14.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandhill.typepad.com/sandhill_trek/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandhill.typepad.com/sandhill_trek/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandiegoblog.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandiegobloggers.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandiego.craigslist.org/sss/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandimustdie.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandradee.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandronedazieri.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandwichgirl.livejournal.com/data/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandwichmonkey.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sandyhamilton.blogs.com/corporate_rss_applied/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanfrancisco.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.bizjournals.com/rss/feed/daily/milwaukee', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.bizjournals.com/rss/feed/vertical_subtopic/32', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.bizjournals.com/rss/feed/vertical_subtopic/41', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.bizjournals.com/rss/feed/vertical_subtopic/6', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.dbusinessnews.com/syndicate.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sanjose.dbusinessnews.com/syndicate-regions.php?region=BO', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sansz.ngo.hu/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://santacruz.indymedia.org/features.1-0.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://santamaradona.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saobentomusic.com/news/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sapodilla.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sapventures.typepad.com/main/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sapventures.typepad.com/main/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarahbu.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarahlane.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarah.macmanx.com/blog/comments/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarah.macmanx.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarah.macmanx.com/blog/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarahsharp.com/diary/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarahsthreads.com/journal/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saraibelote.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saranwarp.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saravanakumarmv.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarcasminabottle.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sareyblahg.typepad.com/sarah_the_other_other_whi/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarja.internetix.fi/fi/sisalto/etusivu/uutisia.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarkostique.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarongpartyfrens.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sarongpartygirl.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sartreinfo.blogspot.com/rss/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saske1.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sasser.skynetblogs.be/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sassymolassy.blogspot.com/feeds/posts/full', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sassystamps.com/tips/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sastools.com/b2/b2rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sastools.com/b2/b2rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sasukekuhn.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://satellitetvnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://satradio.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saturna.thinkhead.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saturna.thinkhead.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saturncast.com/rss2.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saturv.lynksee.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saucymag.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sauer-thompson.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sauer-thompson.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saul.typepad.com/dia/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sausage.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://savage.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://savagepencil.typepad.com/confessions/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://savelibertyland.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://savemandy.org/ipw-web/portal/cms/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sawadaspecial.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sayanythingblog.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sayingsome.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://saysuncle.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://s.billard.free.fr/referencement/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sbinformation.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sbp.teledyn.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scally.typepad.com/cest_moi_qui_lai_fait/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scandal-max.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scandaloitaliano.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scanlover.com/rss/index.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scarce.disconcerting.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scaryguy.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scarylibrarian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scattered.org/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scattered.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sccdcc.mn.sabren.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schaibly.com/podcast/sermons2005.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scheker.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schlagloch.20six.de/schlagloch/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schlax.org/toh/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schmeeve.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schmeeve.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schneider.blogspot.com/rss/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schoogle.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schoolof.info/infomancy/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schoolsmatter.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schreibbloga.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schuhfits.com/paul/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schwanger.twoday.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://schweitn.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scidok.sulb.uni-saarland.de/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scienceandart.de/calendar/rss/rss.php?cal=HOU&rssview=month', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scienceblogs.com/deltoid/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scienceblogs.com/pharyngula/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scienceblogs.com/sample/combined.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sciencemadefun.podbean.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sciencematters.berkeley.edu/sciencematters.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://science.nasa.gov/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://science.nasa.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://science.slashdot.org/science.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sciencesstepnewz.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scientificcomputing.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sci.esa.int/newssyndication/rss/sciweb.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scififriday.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifireplicas.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifiscoundrels.com/?feed=rss2&category_name=podcasts', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifistorm.org/articles.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifistorm.org/scifistorm.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifitalk.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifitalk.libsyn.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scifitheater.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scintilena.clarence.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sci.tech-archive.net/Archive/sci.agriculture.poultry/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sci.tech-archive.net/Archive/sci.answers/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.audioblog.com/rss/scoble.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.blip.tv/?1=1&&skin=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.com/linkblog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.textamerica.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.wordpress.com/2006/08/30/have-i-lost-my-blog-power/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scobleizer.wordpress.com/feed/rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scoble.weblogs.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scoon-the-crazy.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scoop.kuro5hin.org/backend.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scooters.spaces.live.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scootertales.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scorecard.typepad.com/crag_hills_poetry_score/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scorecard.typepad.com/crag_hills_poetry_score/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scotfl.ca/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scotlandonsunday.scotsman.com/aberdeen.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://screeniac.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://screenrant.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://screenspire.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriban.com/movabletype/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scribble.cocolog-nifty.com/orbium/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scribbleshere.com/bangerter/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scribbleshere.com/melissa/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scribbling.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scribeokc.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptavolant.net/blog/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptbuilders.net/scriptbuilders.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scripting.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptingnews.blip.tv/posts/?sort=date&skin=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptingnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scripting.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scripting.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptmafia.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptsandscruples.com/videos/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scripts.ign.com/rss/ign.all.2.0.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptus.technocosm.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scriptus.technocosm.org/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scubadiving.gadling.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://scum-editor.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sdb.suse.de/en/sdb/html/sdb.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://se7enet.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seahawks.mostvaluablenetwork.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sealnikki666.btblog.jp/rs/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seanbonner.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seancaptain.typepad.com/seantech/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sean.chittenden.org/postgresql/news.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sean.gleeson.us/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seanmcgrath.blogspot.com/rss/seanmcgrath.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://search.cpan.org/rss/search.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://search.cpan.org/uploads.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://searchengineshowdown.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://searchenginewatch.com/sew.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seaslugs.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seasonal.latestcoupons.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seasontwo.creotradio.net/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattle.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattle.craigslist.org/acc/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattle.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattlepi.nwsource.com/rss/ae.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattlepi.nwsource.com/rss/books.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattlepi.nwsource.com/rss/business_2.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattletimes.nwsource.com/rss/wine.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattlewireless.net/~casey/index.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seattlewireless.net/~mattw/index.cgi/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sebastiankippe.de/weblog/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://se.blogfodder.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seblogging.cognitivearchitects.com/rss/Pat%20Delaney', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seblogging.cognitivearchitects.com/rss/Sebastian%20Fiedler', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seblogging.cognitivearchitects.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondlife.blogs.com/nwn/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondlife.blogs.com/nwn/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondlifelibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondnegative.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondslog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secondwivescafe.com/cafe.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secretdiaryofstevejobs.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secretdubai.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secretgeek.net/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secretlifeofshoes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secrets.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secretsofawitch.blogthing.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secrets.pirotesse.de/feeds/atom03.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secrets.pirotesse.de/rss.php?version=2.0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secrets.scripting.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://section12.com/users/debrahyde/index.cfm?mode=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secunia.com/information_partner/anonymous/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secunia.com/information_partner/anonymous/o.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://securehome.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://secure.olemiss.edu/itflash/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://securitydigest.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://securityresources.blogspot.com/rss/securityresources.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://securitysauce.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sedagurel.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sedalina.dreamhost.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sedalina.dreamhost.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sedonamethodreleasers.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seedsofamadnessflower.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://see-sip-taste-hear.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seetheforest.blogspot.com/rss/seetheforest.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sefossi.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sehacan.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sehpferd.twoday.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sejmoat.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sektori.com/~kimmo/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seky.nahory.net/seky.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://selamvedua.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://selectmotorcompany.com/musclecars.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://select-motors.com/musclecars.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://select-motors.com/musclecars.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://selectmotors.net/musclecars.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://select-motors.net/musclecars.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://selfesteemtrainer.com/self_esteem.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://selinkesebir.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sellerslibraryteens.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sellingrenting.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sellsbrothers.com/news/rss2.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semanticnoise.com/rss/rss-091.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semantics-online.org/geek/geek.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sementi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semicharmedkat.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semiconductorjobs.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seminare.design.fh-aachen.de/imap/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semizotu.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semperegoauditor.typepad.com/ccc/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://semperegoauditor.typepad.com/ccc/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sem.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senarist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senaristim.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senchy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sendestra.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senecadoane.typepad.com/seneca_doane/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senerakturk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seniorhealth.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sensiblemom.typepad.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sensoryoverload.typepad.com/sensory_overload/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sentencing.typepad.com/sentencing_law_and_policy/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sentimentalpixels.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senveben.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://senyo.net/mt/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seoblackhat.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seoblackhat.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seoblog.intrapromote.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seo-marketing-blog.de/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seraphimsigrist.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://serge.matveenko.ru/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sergeybiryukov.ru/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sergiorebelo.com/twodotfive/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://serial.n6k.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://serials.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://serialtext.com/list.pl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sermons.unchainedradio.com/xml/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://serseri38.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servantofchaos.typepad.com/soc/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servers.linux.com/servers.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://services.devx.com/outgoing/cplusfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://services.devx.com/outgoing/databasefeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://services.devx.com/outgoing/xmlfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servicios.idoneos.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servis.idnes.cz/rss.asp?c=zpravodaj', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-newsknowledge-20.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://servlet.java.sun.com/syndication/rss_java_highlights-oreilly-20.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seshu.typepad.com/tiffinbox/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seshu.typepad.com/tiffinbox/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seside.net/rss.php?blogId=1&profile=rss20', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sethf.com/infothought/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sethgodin.typepad.com/seths_blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sethgodin.typepad.com/seths_blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sethgodin.typepad.com/seths_blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sethlevine.typepad.com/vc_adventure/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seti.astrobio.net/news/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://setsuna.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://settar.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://settlemoir.tv/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seven-c4.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seveninchesofsense.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sewingmama.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sextoys-1.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sexycat.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sexychanellegaldefensefund.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sexylosers.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://seyahatnane.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sfbay.craigslist.org/search/sad/sfc?query=linux&format=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sfbook.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sfens.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sf.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sfsic.org/portail/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sfweb.dang.se/a/atomfeed/span_atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sgi-usa.org/daily/encouragement/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sgi-usa.org/daily/wisdom/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sgthook.com/wp-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sgtstryker.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sgvlibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shades-of-gray.net/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shadesofgray.typepad.com/shades_of_gray/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shadowcruiser1978.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shadowfoot.com/xmlsrv/rdf.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shadowfoot.com/xmlsrv/rss.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shadowwar.joeuser.com/rss/shadowwar_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shahika.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shakib.net/test/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shaneandtom.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shaneblake.com/kudzu/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shane.fatalfuj.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shannonc.blogs.com/shannonsays/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shannonc.blogs.com/shannonsays/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shannonk.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://share.opml.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://share.skype.com/sites/fr/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://share.skype.com/sites/mac/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sharikou.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sharingthoughts.blogsome.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sharpmarbles.stufftoread.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shatteredpeace.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shauny.org/mess/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shawnsblog.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shazzerspeak.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sheanblog.tehillahproduction.co.uk/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shecomesfirst.typepad.com/ian_kerner/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sheffwed.betra.is/sheffwed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://she.geek.nz/feeds/index.rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sheila.inessential.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shekleton.com/journal/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shelbywatchdog.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sheldman.blogspot.com/rss/sheldman.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shellcity.net/citynews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shellfront.org/shellfront.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shellyl.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shellz78.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shelter.nu/shelter.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shepa.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shepherdaway.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sherie.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sherlockholmeslibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sherry.mizdos.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shes.aflightrisk.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sheshoots-shescores.typepad.com/she_shoots_she_scores/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shey.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shibuya.pm.org/blosxom/index.rss10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shiflett.org/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shiftingbaselines.org/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shiftinglight.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shiftspace.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shiftx.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shigami666.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shimizu.typepad.com/vietmenlover/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shipslog.info/first/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shirky.com/writings/rss.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shitecom.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shizheng.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shobon.net/rss/majorjp_rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shobon.net/rss/readmej_rss.php?d', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shobon.net/rss/readmej_rss.php?m', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shobon.net/rss/readmej_rss.php?n', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shobon.net/rss/sportsnavi_rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shochu.way-nifty.com/shochu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shockandblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shoelaces.typepad.com/laces/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shonk.self-degradation.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shop.blogs.com/blogging/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shopper.cnet.com/4925-3000_9-0.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shopper.cnet.com/4925-3513_9-0.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shore.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shorties.be/m/vragenrubriek/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://showsfromyusa.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shrinkette.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shryh.blogs.com/sspot/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shryh.blogs.com/sspot/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shtikla.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://shufflehacks.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sibainu.lomo.jp/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sickjokes.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siddhi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidebusiness.biz/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidehike.net/wp/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidekicksmartie.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidereus.org/main/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidesalad.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidesh0w.com/feed/rdf/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidesh0w.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidesh0w.com/xml/side_rdf.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sidewalk-chalk.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://SierraActivist.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sierravista.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sievx.com/RSS/sievx_com.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siftingfaith.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sigep.utm.edu/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sightoracle.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sig.levillage.org/feed/rdf/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://signalplusnoise.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sign.textamerica.com/rss.asp?imgtype=full', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sigt.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siirinsabri.buzznet.com/user/rss/rss10.xml?type=synd', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sikko2go.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silencemyheart.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silentbecoming.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silentbobspeaks.com/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silentrunning.tv/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sillyspot.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silpayamanant.indytron.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silveradocowboychurch.org/cowboy-church-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silver.balaton.to/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silverstr.ufies.org/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silverstr.ufies.org/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silverstr.ufies.org/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://silverwinger.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simbiosis.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simiole.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonandthelefties.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simon-chapman.com/bmbootlegs/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simone.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonegianni.it/index.php/category/technology/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonevb.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simon.incutio.com/blogmarks/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simon.incutio.com/comments/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simon.incutio.com/syndicate/rss1.0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonperry.org/dst/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonstl.com/dryden/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonwiddowson.typepad.com/teacher/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonwiddowson.typepad.com/teacher/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simonworld.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplebits.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplepilgrimage.org/daniel/wp-rdf.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplepilgrimage.org/daniel/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplesdados.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplicityitk.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplicity.media.mit.edu/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://simplyselena.com/Journal/Pakelekia/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sinaninyeri.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sindicatsps.com/xmlsps.php?Opcio=forum', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://singaporewatch.juznuts.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://singe.rucus.net/blog/rss.php?version=atom0.3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://singe.za.net/blog/feeds/categories/4-Security.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://singletrack.org/~randal/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sinistras.aranha.com.br/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sintagma.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siolli.cocolog-nifty.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siona.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sipler.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sippey.typepad.com/filtered/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siracusa.linux.it/feeder.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siriuscoffee.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sirpetermaxwell.joeuser.com/rss/sirpetermaxwell_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sistertoldjah.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sisu.typepad.com/sisu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://site-essential.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://site-essential.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sitefree.ru/modules/mydownloads/cache/downloads.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sitellite.org/index/news-rss-action', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sitemaps.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://site.missiondelrey.com/rss/rss-feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sitereview.org/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sites.bytemagick.net/ramblings/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sites.bytemagick.net/ramblings/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sites.krislyn.com/krislyn.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sites.nps.nl/jerome/templates/hetbureau/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sites.nps.nl/jerome/templates/kunststof/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sitfuso.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sithoughts.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sito262.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sixaparteurope.typepad.com/typepad_astuces_fr/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sixeyes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sixmeatbuffet.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sixtwothree.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://siyaset.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ska.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skaterstuff.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skazian.free.fr/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skematika.blogcindario.com/rss091.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skepticality.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sketchwork.blogspot.com/feeds/posts/full', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiddle.com/rss/Festivals.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiddle.com/rss/Music.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiddle.com/rss/Music.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiddle.com/rss/Nightlife.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiddle.com/rss/Nightlife.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiing.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skiing.gadling.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skillet.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skinnydaily.blogspot.com/rss/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skinnyonsports.podshow.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skippytpe.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skippytpe.tumblr.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skootershooter.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skpltba.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skriteks.bloguje.cz/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skunkeye.blogs.com/skunkeye/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skutergruven.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skvoznoy.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skycop150.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://skylady.trippy.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sky.prohosting.com/air2/myrss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slach.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slacktivist.typepad.com/slacktivist/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slappedstupid.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashcode.com/slashcode.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdemocracy.org/cgi-bin/search.cgi?isNew=Yes&query=&sb=ID&so=DESC&xml_feed=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdemocracy.org/gotzespace/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdemocracy.org/links/57.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdemocracy.org/links/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.jp/journal.pl?content_type=rss&op=display&uid=4', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.jp/journal.pl?content_type=rss&op=top', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.jp/journal.pl?content_type=rss&op=top&type=count', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.jp/journal.pl?content_type=rss&op=top&type=friends', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.jp/slashdot.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.org/apache.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.org/apple.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slashdot.org/apple.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sloeriesource.nl/?feed=rss2&cat=3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slovinskydrak.bloguje.cz/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slow-cooker-recipes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slowenough.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slower.net/index.rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slow.pbwiki.com/atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slumbering.lungfish.com/index.php?p=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slumbering.lungfish.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://slumberland.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smackedface.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallbusinessceo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallbusinesses.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallinitiatives.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallredsneakers.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallthought.com/avi/?feed=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smallthought.com/avi/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smarach.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smartapps.typepad.com/smartapps/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smartbusiness.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smartcitymemphis.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smart-education.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smarterdollar.hypermart.net/topsites/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://Smartpatrol.dudecheckthisout.com/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smartpei.typepad.com/robert_patersons_weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smartplaylists.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smashface.com/vlog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smgct.typepad.com/spinning/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smilissimo.free.fr/Nouvelles.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smilla.bloguje.cz/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smithhallalumni.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smlav.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smmg.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smogger.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smogzer.tripod.com/smog.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smokeonthewater.typepad.com/smokeonthewater/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smokersheadlines.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smsac.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smtv.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://smugcanadian.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snadsnad.feckov.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snap-o-mania.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snapthrow.com/rss_xml.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snarlydwarf.org/blox/index.rss10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sneazy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sngao.com/ipw-web/b2/b2rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snipsnap.org/exec/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sniptools.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sniptools.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snipurl.com/common/interesting.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snook.ca/jonathan/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snottylibrarian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowbabies.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snow.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowbrain.com/wordpress/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowbrain.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowdeal.org/syndication/conflux.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowdeal.org/syndication/informatics.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowdeal.org/syndication/machina.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snowdrop.air-nifty.com/kotori_blog_/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snurb.info/index.php?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://snurl.com/common/interesting.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soapenv.org/soapenv.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soapmaking.typepad.com/soapwire/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soaps.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soberjoy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socalpundit.com/blog/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soccer-europe.com/RSS/News.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soccergirlincorporated.com/SGINC.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soccernews.com.au/soccer.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soccershout.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sociablemedia.typepad.com/beyond_bullets/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socialcapitalist.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socialsoftware.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socialstudygames.com/index2.php?option=com_rssxt&type=RSS&no_html=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socialtwister.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://socialtwister.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sociedadlibre.blip.tv/?skin=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://societyslice.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sofiasideshow.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://softsearch.ru/pcgi/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://software.ericsink.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://softwaregarden.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://softwaremaniacs.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://softwaremaniacs.org/blog/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://SohoAttorney.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soho-lab.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sohosad.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sojournerrides.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sokurs.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solardreamstudios.com/rss/?section=archives', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solardreamstudios.com/rss/?section=learn', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solariscentral.org/backend/solariscentral.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solarphysics.livingreviews.org/Articles/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sol.blogia.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soldatforum.dnagames.net/rssfeed.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solere.blogs.com/boulogne/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solidair.sp.nl/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solidworks-info.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solitary-pagans.com/feed/rdf/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solitas.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solitude.vkps.co.uk/Code/ActoRss/?Name=Julia+Stiles', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solitude.vkps.co.uk/Syndication/Atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solitude.vkps.co.uk/Syndication/RSSnewsfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solmusic.org/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solo.infames.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solomonsrefuge.com/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/baseball/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/baseball/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/blogger.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/blogger.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/pepperkat/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/pepperkat/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solonor.com/whiny/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soloride.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://solutions.journaldunet.com/rss/breve/juridique/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://Solutions.synearth.net/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://somegreatreward.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://somegreatreward.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://somethingsimilar.com/?atom=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://somethingthathappened.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sometimessilent.blogsome.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://somni.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://songbytoad.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://songsillinoismp3.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://songz.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sonic.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sonofclick.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sonsoftherepublic.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sookhan.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sophie-g.net/info/e_feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sophie-g.net/info/f_feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sorcery.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soreeyes.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soreeyes.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sorrlo.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sortagolf.manilasites.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sorvegliatospeciale.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soso.twoday.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sotoscience.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soufron.typhon.net/spip.php?page=backend', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soulcanon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soulfood.dk/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soulforever.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soulministries.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soulprocessed.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundevidence.discoveryresources.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundofsiam.solidcasts.com/xml/podcast/368', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundpolitics.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundseeingtours.podshow.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundseeingtours.podshow.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soundwithvision.com/arl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soupnazi.org/soupnazi.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss2_projdocs.php?group_id=13216', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss2_projdocs.php?group_id=166901', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss2_sffiles.php?feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss2_sfnews.php?feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss2_sfnews.php?feed&rss_fulltext=1&rss_limit=100', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss_sfnewreleases.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourceforge.net/export/rss_sfnews.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sourcefrog.net/weblog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soused.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southafrica.indymedia.org/features.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southern-born-and-bred.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southernfood.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southern-gardening.com/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southern-orthodoxy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southkoreanews.net/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://southpaw.goodshow.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://soyotti.nikki-k.jp/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sozumuz-turkce-kitab.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sozumuz-turk-dovletler.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sp3lly.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://space.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://Space.dudecheckthisout.com/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://space.frot.org/news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaceheroes.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spacemusic.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spacenews.dancebeat.info/backend/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://space.phoenixtv.com/rss/xml/mainland.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://space.phoenixtv.com/rss/xml/society.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaceresearch.nasa.gov/news/obprnews.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaceshipsummer.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/adamwhite99/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/allaboutb/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/bandwagonbest/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/bryanstarbuck/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/cappca/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/emcee/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/inesvt/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/jay/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/johngossman/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/mailcall/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/members/aaaa1907/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/members/agreenspace/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/rayozzie/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/srdjan/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaces.msn.com/testmuse/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spacespin.org/backend/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spacing.ca/wire/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spada.dyndns.org/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spaghetti.nujus.net/artDirt/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spainnews.net/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spam.gunters.org/wp-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spamnet.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spamtoons.com/mambo/cache/rss20.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spamtown.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spamusement.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spanish.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spanish.about.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spanisharriba.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spap-oop.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sparky.b-crew.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speakingofashes.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speakshermind.redmonk.net/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speakshermind.redmonk.net/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://specialchildren.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speculativevision.com/scifi_news/news.cdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speed.insane.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speedreadingnow.com/speed_reading.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speedyb.co.uk/upd.php?page=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://speleo.waw.pl/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sperdvac.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sperxeios.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spesa.com.br/operations/feed/0842bb12a9709f5f2a40f30ee78710d00ee13572', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sphere.sourceforge.net/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spickler.blogs.com/walts_world/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spikenheimer.livejournal.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spikes-world.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spin.despair.com/vpodcast/vpodcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spindrop.us/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spineless.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spineradio.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spinink.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spinningdoula.spatterdash.org/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spinningwheel.net/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spinningwheel.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spinrise.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spipzine.free.fr/backend.php3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spiritvillage.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spitfire.cc/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spitzscience.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://splashpanel.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sploitcast.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sply.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spnstrlibrarian.blogspot.com/rss/spnstrlibrarian.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spoken-for.org/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spongeblog.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spore.cta.int/rss/english.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sporkful.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports-blankets.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sportsbloggerslive.podcast.aol.com/sportsbloggerslive_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sport.scotsman.com/athletics.cfm?format=atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/columnist?name=gammons_peter', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/columnist?name=lovinger_jay', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/columnist?name=schwarz_alan', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/columnist?name=sickels_john', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/mlb/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/nba/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/ncf/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/nfl/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.espn.go.com/espn/rss/nhl/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.gourt.com/xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports-law.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sportsmerchandise.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sportswrap.berecruited.com/category/swimming/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/cart/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/golf/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/mlb/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/mls/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nascar/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nba/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaabb/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaab/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaaf/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaaf/teams/ccd/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaaf/teams/hhe/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaaf/teams/ooc/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaah/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ncaaw/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nfl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nfl/teams/car/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nfl/teams/den/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nfl/teams/phi/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nhl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/nhl/teams/cgy/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/oly/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ski/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/sow/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/ten/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/top/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sports.yahoo.com/wnba/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sportznutz.com/feeds/sn/draft.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sprblck.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spreadin.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spreadshirtus.wordpress.com/comments/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spreadshirtus.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spreeblick.com/trackback/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sprezzatura.editthispage.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sprout.site.ne.jp/photo/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spruciesinthekitchen.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sps.rivil.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://s-pulse.moe-nifty.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spuriousplum.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sputnik.dudecheckthisout.com/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spweber.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spyriffsradio.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spy.typepad.com/design_and_society/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://spyware.skynetblogs.be/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sqldbatips.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squalor.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squarebrain.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squeakyweasel.net/syndicate.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squee.shmeee.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squirrelandmole.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squirrelsinmyattic.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squirrel-squad.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squishdot.org/rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squish.us/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squishy.goop.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://squizlog.keithpitty.org/softwaredev.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://srdad.com/SrDad/open/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://srle-stevic.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sroka.paulsfunhouse.com/bb.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sroka.paulsfunhouse.com/network.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sroka.paulsfunhouse.com/sbs.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sroka.paulsfunhouse.com/ss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://sroka.paulsfunhouse.com/up.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ssedro.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://SSM.celticgrove.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stack-style.org/CC/index.rss09.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stacyx.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stadyum.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.cocolog-nifty.com/room/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.develop.com/gehtland/weblog/blogxbrowsing.asmx/GetRss?', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.develop.com/jasonw/weblog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.develop.com/richardb/weblog/blogxbrowsing.asmx/GetRss?', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.infograph.net/blogs/agis/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.infograph.net/blogs/agis/SyndicationServiceExperimental.asmx/GetAtom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.newtelligence.net/clemensv/rss.ashx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.newtelligence.net/clemensv/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staff.washington.edu/oren/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stage.technorati.com/watchlists/rss.html?wid=3529', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stage.technorati.com/watchlists/rss.html?wid=3530', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standalone.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standardmedia.net/projects/gizmo/s9y/index.php?/feeds/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standblog.com/dotclear/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standblog.org/blog/feed/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standblog.org/dotclear/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://standingonthebox.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starbulletin.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starckting.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stardate.org/feeds/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starjewel.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starkcast.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starl1te.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starlocity.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starlocity.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsandbeyond.free.fr/weblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat10.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat11.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat12.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat14.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat15.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat3.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat5.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat6.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat7.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat8.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starsearchcasting.com/rss/cat9.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://star-shaped.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://startwithalead.blogs.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starvingarts.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/antihitlist.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/autoracing.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/barclay.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/cleanbreak.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/ellie.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://starweb.blogs.com/podcasts/special.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stasya.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://statbel.fgov.be/news_fr.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://stateless.geek.nz/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://statens-e-forum.nu/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://state-of-flux.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staticfree.info/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staticfree.info/blog/meat/life/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staticfree.info/blog/rss/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://static.userland.com/gems/almostperfect/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://static.userland.com/gems/backend/gratefulDead.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://static.userland.com/tomalak/links2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://static.userland.com/updatelogs/radio.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://staton.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://statues.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://status.blogger.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.d-42.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.d8uv.com/site/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dabcc.com/dabcc/dabccrss.aspx?downloads=new', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dabcc.com/dabcc/dabccrss.aspx?enumerator=13', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dabcc.com/dabcc/dabccrss.aspx?enumerator=52', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dabcc.com/dabcc/dabccrss.aspx?enumerator=62', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dacolian.com/en/news/feed/dacolian-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dacolian.com/nl/news/feed/dacolian-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daen.dk/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dagelinks.nl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daggerjag.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dagoddess.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dagoddess.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daich.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailycal.org/rss/headlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailydoodles.dk/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/gba/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/gc/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/general/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/mobile/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/ps2/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/news/archives/categories/xbox/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/previews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/reviews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailygame.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyhaha.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyhelmsman.com/articles.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailykos.com/atom/main/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailykos.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailymail.co.uk/pages/xml/index.html?in_page_id=1773', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailymotion.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailymotion.com/rss/Redchilly', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailynugget.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailynugget.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailypayload.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyprincetonian.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailypundit.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyroxette.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyslurp.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailysnap.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/editorial.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/leb/business.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/leb/localnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/leb/politics.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/leb/starscene.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/artsculture.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/business.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/interviews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/opinion.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/politics.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailystar.com.lb/rss/reg/specialreports.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailytargum.com/articles.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailytunes.com/dailytunes.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailyweightlosstips.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailywireless.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dailywordofgodgroup.com/christian/dwogg.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dairiki.org/rss1.0/hammondwiki.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daisydo.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daisyfest.com/news/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dajimmer.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dakkustudios.co.uk/forum/rss.php?f=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dakotaplanet.com/show/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dalefranks.com/review/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dalerankine.com/blog/feed/dalerankine.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dalkescientific.com/writings/diary/diary-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasbay.net/journal/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasnews.com/newskiosk/rss/dallasnewscowboys.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasnews.com/newskiosk/rss/dallasnewseditorials.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasnews.com/newskiosk/rss/dallasnewslatestnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasnews.com/newskiosk/rss/dallasnewslocalnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dallasnews.com/newskiosk/rss/dallasnewssports.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.damianpenny.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.damnforeigner.com/full.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.damnforeigner.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.damonbrinson.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.damonwright.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danappleman.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danavan.net/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danavan.net/weblog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danboss.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dancarlin.com/cswdc.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dancentury.com/cicada/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dancewithshadows.com/dance.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dancingwithkatrina.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dandelionwine.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dandelionwine.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerbetty.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangermouse.net/irregular/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerouslogic.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerousmeta.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerousmeta.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerous-thinking.com/categories/marketing/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerous-thinking.com/categories/webServices/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dangerous-thinking.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danglingpointer.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dango-itimi.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danhon.com/ec/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielcurran.com/rss_feed/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danieldrezner.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danieletombolini.com/tomblog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielevsilva.com/blog/index.php/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielleblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielleblog.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daniel-lemire.com/blog/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielmenjivar.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielphillip.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danielpipes.org/pipes_blog_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danilocesar.com/blog/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daniweb.com/blogs/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danizzo.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danmeister.net/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dannyayers.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dannyg.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danny.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dansdata.com/dansdata.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danshapiro.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dansherman.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.danwebb.net/feed/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dapcentral.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dapkus.com/weblog/categories/softwareIndustry/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darcynorman.net/2004/10/30/podcasting-for-education/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dare2share.org/feeds/boardsactive', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dare2share.org/feeds/boardsrecent', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dare2share.org/feeds/culturecommission', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dare2share.org/feeds/devotions', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dare2share.org/feeds/soulfuel', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dargonzine.org/dargonzine_rssfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darkestablishment.org/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darkhardware.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dark-i.com/xml/submissions.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darknet.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darkreading.com/rss_simple.asp?f_s=296&f_ln=Dark+Reading+News+Analysis', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darmstadtnews.de/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darnpc.com/wordpress/wp-rss2.php?cat=3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.daroca.org/lobby/modules/newbb/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darqbyte.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenbarefoot.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenbarefoot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenfriesen.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenhobbs.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenhobbs.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenlock.com/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darrenlutz.com/weblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.darthvob.us/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dartlog.net/index_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dartmouth.edu/~asg/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dartmouth.edu/~bbrawley/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dasblonde.net/SyndicationService.asmx/GetRss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dasgenie.com/scrap/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dashboardexposed.com/index/sitelinks-rss-action/display.newest', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dashes.com/anil/anil.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debabarrenaturismo.com/eu/agenda/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.de-baser.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debianadmin.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debianhelp.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debian.org.hk/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debian.org/security/dsa.en.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debian.org/security/dsa.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debian-tr.org/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debilarius.ru/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deblondeblogger.be/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debris.com/rss/rss091', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debtadvicebureau.org.uk/rss/dabnews.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debt-consolidation-guide.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/consolidate-debt/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/credit-cards/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/credit-counseling/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/credit-repair/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/debt-consolidation/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/debt-help/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/debt-management/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/debt-reduction/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debteliminationplan.info/free-credit-report/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.de-bug.de/blog/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.de-bug.de/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.de-bug.de/pod/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deburen.eu/rss/deBuren.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deburen.eu/rss/radioboeken.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deburen.eu/rss/sterren.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.debwire.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/blog/index.atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/deus_x/radio/RssDistillerChannels/webseitz.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/newslog.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decafbad.com/twiki/bin/view/Main/WebRss?contenttype=text/xml&skin=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decaffeinated.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.decennie.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deceptivemedia.co.uk/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dec.hi.is/?rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deebeedee.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deeden.co.uk/mms/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deejay-home.de/index.php?/weblog/rss_2.0/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deeknow.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deeko.com/RSSdeeko_reviews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deenda.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deeperblue.net/rss/articles.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deeperblue.net/rss/news.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deepfun.com/weblog/DeepFUN.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deepthought.org/~rmartin/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defamer.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defamer.com/excerpts.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defamer.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defamer.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defectiveyeti.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defencetalk.com/news/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.defend.net/deluxeforums/external.php?forumids=10&type=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deliriouscool.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dellah.com/orient/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dellgines.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.delphi-source.de/news/news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.delta-c.de/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deltanova.co.uk/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.deltaparkproject.com/abc.cfm', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dirtyflowergirl.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.disasternews.net/news/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dlss.org.au/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dlss.org.au/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.d.lycos.de/webhosting/freecontent/xml/boulevard.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmc-central.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dme.org/log/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmeurope.com/rss/c29.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmeurope.com/rss/c44.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmeurope.com/rss/c7.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmeurope.com/rss/cWorld.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dmiblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnalounge.com/backstage/log/latest.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnalounge.com/calendar/dnalounge.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnc.org/podcast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnr.mo.gov/xml/news-release.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dn-s5000.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dn.se/DNet/jsp/polopoly.jsp?d=1399', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dn.se/DNet/jsp/polopoly.jsp?d=1401', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dn.se/DNet/jsp/polopoly.jsp?d=1402', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dn.se/DNet/jsp/polopoly.jsp?d=1403', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnzh.com/rssfeeds/cardtechnology_com.pl', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dnzh.com/rssfeeds/irs_gov.pl', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.dobeyracing.net/rss/liveFeed.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doceshop.com.br/blog/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doc.ic.ac.uk/~dt10/public/gigs/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.docnotes.net/categories/medicine/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.docrpm.com/blogs/docrpm/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doctordeluca.com/wordpress/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doctorfloyd.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doctorfloyd.com/video/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doctorpundit.com/index/weblog/rss_2.0_podcasts/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.doctrain.com/index.php/site/rss_2.0/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.documentiq.com/rss/DocumentIQ-all.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.documentiq.com/rss/DocumentIQ-bp.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.documentiq.com/rss/DocumentIQ-news.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://www.documentiq.com/rss/DocumentIQ-tips.rss', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cartouch.joshrosenblum.com/~josh/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casacosmani.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casadelogo.typepad.com/factesque/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casagrande.blogs.com/frederic/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casario.blogs.com/mmworld/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casas-imoveis.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casbah.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casdra.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cashadvancecenter.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cashmerekitty.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casinogamblingblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://casinonewz.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://castlecops.com/backendforum26.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catallarchy.net/blog/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catallaxyfiles.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catalogablog.blogspot.com/rss/catalogablog.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catalog.multcolib.org/feeds/newgraphicnovelsrss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catalogue.bized.ac.uk/roads/cgi-bin/new2rss.pl?channel=bized&items=6', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catalyse.net/amnesty/newsfeed.php?cat=eng-recent&f=r', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catholickerrywatch.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catholiclight.stblogs.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catholicsforbush.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catholic-spectator.com/digest/gen/news.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catlas.libsyn.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catless.ncl.ac.uk/rdigest.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://catless.ncl.ac.uk/rivets.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cats.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cattek.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://caughtintheXfire.mu.nu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://caustictech.typepad.com/caustictech/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cavepainter.typepad.com/cavepainter/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cavlec.yarinareth.net/archives/category/ebooks/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cavlec.yarinareth.net/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cayankee.blogs.com/cayankee/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cayenne.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbears.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cblankens.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cboakes.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs11tv.com/topstories/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs2chicago.com/health/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs2chicago.com/investigations/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs2chicago.com/politics/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs2chicago.com/topstories/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs2.com/local/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs4.com/local/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cbs5.com/local/resources_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ccablog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cchaudoit-cigares.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cchaudoit-culture.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cchaudoit-societe.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ccinsider.comedycentral.com/cc_insider/atom.html', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ccpa.roosevelt.edu/news/RSS.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ccrux.corsarius.net/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cdeemer.blogspot.com/rss/cdeemer.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cdelasteyrie.typepad.com/sidiese/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cdevine.typepad.com/fiberstuff/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://CdnArmy.ca/ubb/ContentIslands/5/rss10.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cdrinfo.com/Sections/RSS/RSS_News.aspx?ArticleTypeId=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cebidae.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cedarseed.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cedpaustin.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ceejee.nl/xml-rss2.php?full=yes', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ceepee.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ceicher.homeunix.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://celebritiesguide.com/?q=node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://celestialdelights.info/cd.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://celibateinthecity.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cellar.org/external.php?forumids=10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cellbiol.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cellphones.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cellphones.hackaday.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cellularmagazine.leonardo.it/rss/ultimi.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cemurphy.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://censorware.net/articles.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://censorware.net/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://censorware.net/thecensorwareproject.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centerforthequilt.org/webblog/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centerforthequilt.org/webblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centericq.de/rss_feed.xml.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centime.typepad.com/centime/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centralstandards.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://centristcoalition.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ceo.poebeln.de/feeds/index.rss1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cerac.ltalk.ru/feeds/rss20.cgi?topic_id=5090', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cerbera.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cerblog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cernigsnewshog.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://certaindisaster.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://certcities.com/rss/forums/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://certcities.com/rss/news', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://certcities.com/rss/today', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://certifiedfit.com/podcast/familyfitness.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ces.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cesni.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ceviribilim.buzznet.com/user/rss/rss10.xml?type=synd', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cfotos.com/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgi.cse.unsw.edu.au/~ideas/?theme=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgi.cse.unsw.edu.au/~lambert/cgi-bin/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgi.no-ip.org/MT/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgi.nos.nl/data/cadpost/RSS/europa_deze_week.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgi.pbs.org/cgi-registry/cringely/cringelyrdf.pl', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgltech.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cgyopo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ch1.ciao.jp/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ch335c.chem.lsu.edu/resources/ms/msblog.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chachajava.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chackalsjc.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chacun-pour-soi.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chainsawblues.vox.com/library/posts/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chalkhills.org/recent.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chamandy.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cham-reo.com/blog/category/1.aspx/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chancecube.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chandlerpritchett.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://changlonet.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chanita.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://channel5.cocolog-nifty.com/channel5/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://channel9.msdn.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://channel9.msdn.com/rss.aspx?ForumID=14&Mode=0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://channel9.msdn.com/rss.aspx?UserID=46', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://channeledbymodem.com/movabletype/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chansurfwipe.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaosinmotion.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaosn.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaospirals.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaosradio.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaostar.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charges.uol.com.br/charges_arquivo.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charges.uol.com.br/charges_comentarios.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charityguide.org/editorial/charity-guide.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charlesbukowski.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charlesjo.bloki.com/feeds/?fid=36491&fmt=rdf1.0&t=forum', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charlesprogers.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charliestoo.com/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://charmantes-brunes.com/brunes-nues/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chatbiz.net/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chaussonfinance.blogs.com/mon_weblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheapcellphones.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheap-dvds.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheapelectronics.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheapgadgets.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheap-gifts.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheap-life-insurance.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheap-printer-store.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheek.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheerleader.yoz.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheerleading.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheesedog.typepad.com/cheesedog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chelle.sarahmarinara.org/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chelseaperetti.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chemistry.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chenu-j.net/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chenu-j.net/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chenu-j.net/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cherikoff.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cherlin.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cherot.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cherry.seesaa.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chertionok.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheryknits.typepad.com/knit/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cheryknits.typepad.com/knit/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chetan.ckunte.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chetan.ckunte.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chewie.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chezdiva.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chezpim.typepad.com/blogs/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chezpim.typepad.com/blogs/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chiaotsu2.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chibinyu.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicago.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicago.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicagoreadersucks.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicagostories.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicagouncommon.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicalert.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicalert.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chichaplanet.org/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicken-recipes.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chicksnbreasts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chickybabe.org/wp-recent-links-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chickybaberules.blogspot.com/feeds/posts/default?alt=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chieti.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chikpeascience.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://childadvocateblogger.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://childmodel.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://childrenofthegods.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://childrensbooks.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chilldrops.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chillidownloads.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinadigitaltimes.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinaera.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://china.notspecial.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://china.qoolio.org/spy/rss.php?version=2.0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinatea.cocolog-nifty.com/tea/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://china.wilert.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chine.blogs.liberation.fr/pekin/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chineseculture.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinese.engadget.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinesefood.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chinese.jobmart.com/Resumes/JobOpennings/RssFeed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chio.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chipsandcookies.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chiraag88.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chirpingoctopus.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chitika.com/blog/wp-rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ch.kitaguni.tv/u/4111/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocadelia.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chockley.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocnvodka.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocolateace.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocolateandzucchini.com/index_full.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocolateandzucchini.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chocolatedream.net/blog/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chopfayn.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://choplogicrock.com/thegame/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chorherr.twoday.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chortler.com/chortlerrss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisbensen.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisberg.org/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chriscochran.etumos.org/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris-cohen.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.gushue.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisherberte.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrishiller.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisholland.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.ivillage.cc/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisjdavis.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrislawson.net/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.lockergnome.net/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrismprice.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisnolan.ca/myblog.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisonstad.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrispederick.com/blog/feeds/posts/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.pirillo.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.pirillo.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.pirillo.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrispitality.com/hotel-bed-jumping/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris-richardson.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrisryan1987.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrissmari.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.socialenigma.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christagiles.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christdot.org/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christdot.org/syndicate_rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chris.theheacocks.com/myblog/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christiancollegeguy.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christian-dating-service-plus.com/category/christian-dating-podcasts/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christianity.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christianmusic.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christianteens.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christmasgiftsadvice.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://christopherhitchenswatch.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chromogenic.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronicle.com/jobs/300/200/3000/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronicle.com/news/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronicle.digitalwaves.net/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronicledlife.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chroniclepictures.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chroniquesmartiennes.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronochaser.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronochaser.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chronotope.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chrysalis1.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chuckcurrie.blogs.com/chuck_currie/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chuckgoetschel.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://chumby.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://churchmousescratchings.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://churchtechmatters.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://churrumaker.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cia.navi.cx/stats/project/adium/.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cia.navi.cx/stats/project/darwinports/.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ciberjornalismo.com/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ciceronianreview.typepad.com/ciceronian_review/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cicikator.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ciencia15.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ciencia.nasa.gov/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cigars.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cilin.dyndns.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cinebanter.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cinema-review.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cinemaspin.blog-city.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cinetribulations.blogs.com/tribulations/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cinicat.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cir.blogspot.com/rss/cir.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://circadianshift.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://circlesperfect.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://circulos.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cirofeitosa.com.br/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cities.whoo.net/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citizen.nfb.ca/podcasts/citizencast.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citizenx.org/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citmedia.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citoyendurable.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citycomfortsblog.typepad.com/cities/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citydoctor.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cityofnewalbany.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cityofsound.typepad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cityrag.blogs.com/main/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cityroom.blogs.nytimes.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citystories.com/cityfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://citystories.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://civpro.blogs.com/civil_procedure/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cje.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claimid.com/davidcrow?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claimid.com/pacificit?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claimid.com/paulhillsdon?rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clairedelalune.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clairemcay.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clanofthecats.com/comic.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claren44.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clarified.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clarkovsaturn.blip.tv/posts/?sort=date&skin=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clarkstooksbury.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicadventures.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicalmusic.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicalvalues.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicdrama.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classiclit.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicradiomovie.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classicrock.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://classictv.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claudia.vara.nl/podcast.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://claudiortodoxo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clay.digitalspam.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cleantech.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cleanupmemphis.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clearleadinc.com/site/automobiles.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clearstar.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cleolog.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clesnes.blog.lemonde.fr/etatsunis/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cleveland.craigslist.org/sub/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clevermedia.tv/gamespotter/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://click2k.net/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clickbench.com/rss/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clickcaster.com/federationsound', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clickfire.com/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://click-shannon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clicks.mikrut.net/pb/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clickstream.blogspot.com/rss/clickstream.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clicland.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clientandserver.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://clieuk.co.uk/RSS.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coba.tow.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cobb.typepad.com/cobb/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cocktails.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cocoadevcentral.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codare.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/brendan.tompkins/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/darrell.norton/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/jeff.lynch/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/jeff.lynch/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/MainFeed.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codebetter.com/blogs/paul.laudeman/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeconnection.squarespace.com/display/GetXMLFeed?format=atom&moduleId=5948', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeconnection.squarespace.com/display/GetXMLFeed?format=rdf&moduleId=5948', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeconnection.squarespace.com/display/GetXMLFeed?format=rss&moduleId=5948', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeconsult.ch/bertrand/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeconsult.ch/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codedsignal.com/serendipity/index.php?/feeds/categories/1-Podcasts.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codefluency.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://code.google.com/feeds/updates.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codepink.utne.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coder-ak.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://code.whytheluckystiff.net/camping/timeline?changeset=on&max=50&daysback=90&format=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://code.whytheluckystiff.net/hobix.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codewitch.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codeworks.gnomedia.com/comments/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coding.derkeiler.com/Archive/Ada/comp.lang.ada/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coding.derkeiler.com/Archive/Assembler/alt.lang.asm/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coding.derkeiler.com/Archive/Tcl/comp.lang.tcl/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codingmonkeys.de/mbo/xml/atom10/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codingstyle.com/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://codor.blogs.com/intro/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coenraets.org/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coffeeandteashow.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coffeegeek.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coffeegeek.textamerica.com/rss.asp?imgtype=full', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coffeemann.com/?feed=podcast', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coffeetea.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cogdogblog.com/category/blogging/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cogdogblog.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cogito.blogthing.com/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cognews.com/cognews.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coincidences.typepad.com/still_images_and_moving_o/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coincollector.org/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coincollector.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coins.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coinz.org/default.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://colaba.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coleman.senate.gov/index.cfm?FuseAction=RSS.Podcast', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collectdolls.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collectedmiscellany.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collections.lopolis.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://COLLEENGARCELON.COM/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://colleen.typepad.com/first/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collegeapps.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collegepoker.blogspot.com/rss/collegepoker.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collegerecruiter.com/podcast/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://collegewit.com/xmlsrv/atom.php?blog=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://colnochko.ltalk.ru/feeds/rss20.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coloradoconservative.blogs.com/colorado_conservative/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coloradostar.com/p.x/id/c5561a463525350d/headlines.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://colormefit.paradygma.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coltkwong.com/blogs/myblog/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://columbusoh.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comecampamattia.diludovico.it/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comedymovies.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cometogetheraustin.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comicfacts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comicreview.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comics212.net/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comics.kaboombros.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comic.truenuff.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commentsonnews.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commodus.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commoncontent.org/rss/newest.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://common-man.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commonsensej.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commonsensepoliticalthought.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commonsenserunswild.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://commons.ucalgary.ca/weblogs/dnorman/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communicationconfidence.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communicationnation.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communications.uwo.ca/weblogs/rss_channels/wi5.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communique.portland.or.us/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communities.canada.com/shareit/blogs/gamesnews/commentrss.aspx?PostID=104155', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communities.canada.com/shareit/blogs/gamesnews/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://communityadmin.thepodcastnetwork.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.animearchive.org/acrdf.html', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.livejournal.com/ad_fake/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.livejournal.com/advert_eyes/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.oceana.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.sjkhosting.com/external.php?type=RSS', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.sjkhosting.com/external.php?type=RSS2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.webshots.com/rss?contentType=rss&value=eyespytwo', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.webshots.com/rss?contentType=rss&value=narendra_singh_tomar', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://community.webshots.com/rss?contentType=rss&value=sarahp13', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comoediaurbe.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compactiongames.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://company.yandex.ru/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compayemamerto.blogcindario.com/rss091.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://complianceandprivacy.com/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compnetworking.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://componentry.com/blogs/phil/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compooter.org/?area=link&category=ingest&rss=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compooter.org/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compooter.org/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://composite.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compoundsemiconductor.net/rss/events.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compoundsemiconductor.net/rss/events.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://compoundsemiconductor.net/rss/jobs.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://computercops.biz/backend.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://computerguystechsupport.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://computersweden.idg.se/tjanster/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://computronics.com.au/rss/computronics_tools.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comrade.unwavering.net/33/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comster.textamerica.com/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comstor.rentalab.com/rss/catalog.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comstor.rentalab.com/rss/modified.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comstor.rentalab.com/rss/new.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comstor.rentalab.com/rss/special.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://comstor.rentalab.com/rss/top.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conceptexplore.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conceptjunkie.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://confessionsofadj.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://confrontacion.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://connectivism.ca/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conscious-living.blogspot.com/rss/conscious-living.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conseilvirtuel.blogware.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conservativecrust.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conservativefighter.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conservativemusings.typepad.com/blog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conservativeoutpost.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conservativeprincess.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://consolidationdebtnews.info/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conspiracypodcast.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://constantly.at/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://constantlyreadingfourquartets.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://consumerist.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://consumerworld.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contactsheet.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contactsheet.org/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contaxg.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conteandkenny.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contemplativechristian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contemporarylit.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://content.monster.com/rss/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contoenergia.blogspirit.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contosdaescola.rssblog.zip.net/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contrapositive.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contraweb.weblogs.us/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contraweb.weblogs.us/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://contraweb.weblogs.us/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://conversationsfamouspeople.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cookalmostanything.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cookingismypassion.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cookingontheradio.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cookrant.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolcatteacher.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolcosmos.ipac.caltech.edu/cosmic_classroom/ask_astronomer/video/podcast/askfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cooler-online.com/anons2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolest-kid-birthday-parties.com/party-tips.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coollame.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolmel.typepad.com/iblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolnoise.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coolstates.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cool-stuff.co.uk/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copa-mundo.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copensalud.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copsinkilts.com/wp/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copsncrooks.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copycommaright.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copygodd.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copyrightreadings.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copyriot.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://copywrong.org/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corelands.com/blog/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corinnelepage.hautetfort.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corneliusbear.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cornerhost.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corner.nationalreview.com/corner.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cornishpixel.com/sharon/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corqspy.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://correcteurs.blog.lemonde.fr/correcteurs/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://correira.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corrente.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corsarius.net/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://corsetry.freaksville.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cosimo.bloxus.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cosmopolity.typepad.com/cosmopolity/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://costarica.cs.northwestern.edu/bmd/blogs/nmh/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://costas-blog.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://costik.com/weblog/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://costumeshop.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cotillion.mu.nu/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://couchblog.de/webpropaganda/?atom=1', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://couch.blogg.de/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://couches.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://counsellingresource.com/counselling-forum.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://counsellingresource.com/counselling.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://counter202.blogspot.com/rss/counter202.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://counter.li.org/linuxcounternews.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://counterspin.tv/counterspin.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://countries.eea.eu.int/SERIS/rss?version=1.0', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://countrylibrarian.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://countrymusic.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://countylibrary.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://couperin.cines.fr/backend.php3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://couponing.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://courseinmiracles.com/a-course-in-miracles.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://courtingdestiny.com/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://courtneyblog.wordpress.com/comments/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://courtneyblog.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://courtney.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coverdrive.weblogs.us/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cover-letter-resume.info/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://covers.fwis.com/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coveryourasp.com/RSS.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://covonline.net/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cowpi.com/journal/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://coyotehighway.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cozum.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cpastuff.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cpa.typepad.com/cpa/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cplteen.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cplus.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cptduende.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://craftmemo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://craftster.org/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://craftypod.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://craigrandall.net/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://craigsnoeyink.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cramitwithwalnuts.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/blogs_distant_earth.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/diversions.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/international_politics.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/lifetime_war_terrorism.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/philippine_politics.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/shady_dealings.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/archives/the_soothsayer.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cranialcavity.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crankychaos.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crankyprofessor.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crankyscorner.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crave.cnet.com/8300-1_105-1-0.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crazedmonkey.com/blog/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crazyhappy.blogsome.com/feed/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crazyjohnsc.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crazytalk.typepad.com/bluegrassroots/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crazyuncle.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crdc.over-blog.com/rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creativecommons.org/weblog/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creativecriminal.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creativegeneralist.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creativemindandmusic.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creativesoul.typepad.com/adl/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://credit.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creditwrench.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://credomediagroup.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://creepus.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crescente.blogspot.com/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crime.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crimea.russian-women.net/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crimefighters.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crimsonja.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crisedanslesmedias.hautetfort.com/index.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cristinatagliabue.nova100.ilsole24ore.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://criticalfluff.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://criticalmastiff.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://critical-thinker.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://critpsy.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crm-recomenda-crm.blogspot.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crnano.typepad.com/crnblog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crnano.typepad.com/crnblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crofsblogs.typepad.com/ckbetas/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crookedtimber.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://croquet-bento.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crossdrivenpodcast.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crossfirewar.com/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crossroads.berkeleyblogs.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crossroads.berkeleyblogs.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crossstitch.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crouchingpanda.wordpress.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crowstoburnaby.com/xmlsrv/atom.php?blog=2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crueltobekind.org/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crustythebiker.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crypto-world.info/news/rss/rss.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crystaltips.typepad.com/wonderland/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://crystal.typepad.com/crystalclear/atom.xml', 'NONE','NONE', 'http://www.none.org');
-    
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cspodcast.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cssbeauty.com/rss/gallery/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://css-discuss.incutio.com/?action=rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://css.e-lusion.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cssgalaxy.com/pluxml/atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://csssmoothoperator.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cssthemes.weblogger.com/xml/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cssvault.com/gallery.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cssvault.com/resources.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://css.weblogsinc.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://csueunionwatch.blogspot.com/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cs.xn--hngematten-outlet-qqb.at/wordpress/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ctblme.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ctbmarketing-australia.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ctbmarketinghelp.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cthulhia.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cthulia.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ctl.idealog.info/feed.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ctrost.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cuarenta.blogalia.com/rdf.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cubanite.blog.dada.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cubiclemuses.com/cm/blog/index.atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cubs.mostvaluablenetwork.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cucino-in-giardino.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://culbert.net/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cultofmac.com/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://culturecat.net/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://culturekitchen.com/home/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://culturestrain.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cumartesi.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cuporobots.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cure.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curiouser.revise.org/feed/rss2/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curiouslee.typepad.com/weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curmudgeongamer.com/backend/geeklog.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://currencysource.com/RSS/AED.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curry.podshow.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cursed-juggler.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curtrosengren.typepad.com/occupationaladventure/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://curtrosengren.typepad.com/occupationaladventure/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://customerevangelists.typepad.com/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://customtorque.blogspot.com/feeds/posts/default', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cutnpaste.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cut-thecrap.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cvillalon.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cvs.php.net/viewvc.cgi/pear/Structures_DataGrid/package2-ds-rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cvuuf.org/media/sermons.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cw.dk/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cybaea.com/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cybc.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cybem.livejournal.com/data/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberdash.com/node/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberesque.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberfight.ru/rss/cyberfight-newsfeed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberforge.com/weblog/aniltj/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberie.qc.ca/jpc/xml/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyber.law.harvard.edu/blogs/audio/lydonRss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyber.law.harvard.edu/blogs/static/crimson1/politics/nh/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyber.law.harvard.edu/globalvoices/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyber.law.harvard.edu/home/home?func=viewRSS&wid=10', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberlaw.stanford.edu/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberlaw.stanford.edu/lessig/blog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberpunk.tribe.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cybersonique.org/rss.asp', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyberwriter.twoday.net/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://Cyblog.dudecheckthisout.com/Rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cycleforpush.net/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyncity.typepad.com/cyn_city/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyncity.typepad.com/cyn_city/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cynical-c.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cynicaldad.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cynicallytested.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cynthialeitichsmith.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cypa.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyprusnews.blogspot.com/rss/cyprusnews.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cyrille-chaudoit.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://cz.christianpost.com/rss/feed.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://d8me.blogharbor.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dabacon.org/pontiff/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daddyc.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daddytypes.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daen.ch/xml.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daghlian.net/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dagoddess.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailyablution.blogs.com/the_daily_ablution/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daily.daemonnews.org/ddn.rdf.php3', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daily.daemonnews.org/mall/mall.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailydale.musikinesis.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailydocket.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daily.greencine.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailyjackson.com/sam/uc/?cat=3&feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailykos.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailypanties.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailypics.blogfodder.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailysedative.com/wire/dailysedative.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailysourcecode.podshow.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailytechtalk.libsyn.com/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailywarnews.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dailyword.info/?feed=rss2', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daisers.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daisy.cocolog-nifty.com/lolita/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daisyknowsrock.typepad.com/glazed/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daisy.sovereignmagic.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dakotaroo.com/backblog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daktilo.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dalager.com/thesis/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dalecoffing.typepad.com/my_weblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dallas136.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dallas.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://damienkatz.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://damon.typepad.com/wu/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danbricklin.com/log_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danbri.org/words/feed/atom/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danbri.org/words/feed/rdf/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dancemusic.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dancingrach.blogcindario.com/rss091.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dancingstartao.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dancrista.byethost18.com/wp/comments/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dancrista.byethost18.com/wp/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danesecooper.blogs.com/divablog/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danfingerman.com/dtm/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dangerous-thinking.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dangillmor.typepad.com/dan_gillmor_on_grassroots/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dangillmor.typepad.com/dan_gillmor_on_grassroots/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dan.hersam.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dan.hersam.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danhon.com/ec/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielalenquer.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielbroche.typepad.com/daniel_broche/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielcurran.com/rss_feed/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danieldrezner.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daniell.net.nz/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielsan.org/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielsantos.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danielsparks.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danilo.segan.org/blog/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danja.typepad.com/fecho/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danja.typepad.com/fecho/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dan.langille.org/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dannryan.com/wp-atom.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dannybuysse.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dannyman.toldme.com/log/rss.cgi', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dannyreviews.com/rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dansays.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://danslagle.com/blog/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dantobindantobin.com/blog/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daphneisgood.livejournal.com/data/atom', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daphnemok.blog.com/rss/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daringfireball.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://daringyoungmom.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dariosalvelli.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darisnliz.hsbeads.com/wp-rss2.php', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkfantasy.podOmatic.com/rss2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkgate.net/comic/feed.php?adamhome&babyblues&bc&beetlebailey&bizarro&blondie&boondocks&bornloser&calvin&chickweed&closetohome&crankshaft&dilbert&fbow&foxtrot&frazz&fullfrontalnerdity&garfield&goats&gpf&hagar&helpdesk&hiandlois&insufficientmemory&marmaduke&mothergooseandgrimm&mutts&ninjaspelledwith4&nonseq&pearls&pennyarcade&roseisrose&sherman&shoe&sluggy&userf&wheredrunkmeetsgenius&wizardofid&zits', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkgate.net/comic/rss2.php?adamhome&babyblues&bc&beetlebailey&bizarro&blondie&boondocks&bornloser&calvin&chickweed&cidomlb&curtis&dilbert&fbow&foxtrot&fullfrontalnerdity&garfield&getfuzzy&goats&hagar&helpdesk&marmaduke&mutts&nonseq&pennyarcade&questionablecontent&redmeat&rhymeswithorange&sherman&shoe&sluggy&wheredrunkmeetsgenius&zits', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkglobe.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darknum.blogdrive.com/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkserj.livejournal.com/data/rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/%7Emharrsch/ancientgames.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/%7Emharrsch/blogger_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/%7Emharrsch/romanwonders.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/~mharrsch/academicpres.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/~mharrsch/ancientbooks.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/~mharrsch/journeys.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darkwing.uoregon.edu/~mharrsch/romanwonders.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://darrenking.com/uk/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dartlog.net/index_rss.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dasfilmfest.com/index.php?rss=1&section=videos&limit=12', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dashboardspy.wordpress.com/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dashes.com/anil/anil.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dc.metblogs.com/index2.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dcooney.com/rss.aspx', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dcsob.smorgasblog.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddll.sdf1.net/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddll.sdf1.net/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddo.typepad.com/ddo/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddrucker.blogspot.com/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://dd.t4ac.com/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddunleavy.typepad.com/the_big_picture/atom.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://ddunleavy.typepad.com/the_big_picture/index.rdf', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deaconbob.blogging.com/blog/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deadbrain.co.uk/synd/syndicate.rss', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deadserious.thepodcastnetwork.com/feed', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deafbiz.com/weblog/index.php/feed/', 'NONE','NONE', 'http://www.none.org');
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deafness.about.com/b/index.xml', 'NONE','NONE', 'http://www.none.org');
-
-
-insert into system_scan_feeds(main_url, url_title, url_description, url_source)
-    VALUES('http://deanguelo.blogs.com/blackblog/index.rdf', 'NONE','NONE', 'http://www.none.org');
 
 
 -- End of File
