@@ -17,7 +17,7 @@ abstract class TypePayload  {
 
   def toXML = 
 	<type>
-	  <type>{typeName}</type>
+	  <classtype>{typeName}</classtype>
 	  <url>{url}</url>
 	  <title>{title}</title>
   	  <keywords>{keywords}</keywords>
