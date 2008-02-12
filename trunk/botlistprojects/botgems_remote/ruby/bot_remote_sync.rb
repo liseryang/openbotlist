@@ -36,6 +36,18 @@ class RemoteSync
     # Init the payload message XML document
     @payload_doc = nil
     @payload_content = DEFAULT_RDF_MSG
+
+    @canned_bot_msgs = [
+                        "I enjoyed the cake.  It was good.",
+                        "The cake was a little dry, but I ate it anyway.",
+                        "I wish there was more cake around.",
+                        "My life as a bot is difficult.",
+                        "Do you know Chomsky?",
+                        "Do you speak any japanese?",
+                        "Work is fun, but baking a cake is even more fun. Mmm.",
+                        "Cake and bot work go together.",
+                        "I ate too much cake.  Do you have a toothbrush?"
+                       ]
   end
 
   def load_payload_doc()
@@ -72,8 +84,8 @@ class RemoteSync
       msg_e = Element.new("message")
       status_e = Element.new("status")
 
-      bot_id_e.text = "mymom"
-      msg_e.text = "Suck dog"
+      bot_id_e.text = "botroverremote"
+      msg_e.text = @canned_bot_msgs[rand(@canned_bot_msgs.size)]
       status_e.text = "200"
       
       agent_msg = Element.new("agentmsg")
@@ -94,10 +106,18 @@ class RemoteSync
       keywords_elem = Element.new("keywords")
       descr_elem = Element.new("descr")
 
+      # Marshall the item content
       url_elem.text = item.mainUrl
       title_elem.text = item.urlTitle    
+      keywords_elem.text = item.urlTitle
+      descr_cdata = CData.new(item.urlDescription)
+      # Add the description cdata content
+      descr_elem << descr_cdata
+
       type_elem << url_elem
       type_elem << title_elem
+      type_elem << keywords_elem
+      type_elem << descr_elem
       return type_elem
     end
 
@@ -167,11 +187,14 @@ class RemoteSync
           res = sqlMapper.update("insertAuditLog", log)			
         rescue Exception => e1
           puts e1
-        end			
+        end
+        return serv_response
       rescue Exception => e
         puts e
+        return "ERR"
       end
       # End of method
+      return "ERR"
     end    
 end
 
@@ -189,7 +212,8 @@ def connect(key_url, send_url)
   remoteSync.remote_send_url = send_url
   remoteSync.addMsgXMLHeader
   remoteSync.scanFeeds
-  remoteSync.sendFeedItemData
+  response_serv = remoteSync.sendFeedItemData
+  puts response_serv
 end
 
 def main()	
@@ -197,8 +221,7 @@ def main()
     puts "usage: bot_remote_sync.rb <key url> <post to url>"
     puts "args=#{ARGV}"
     return 
-  end  
-
+  end
   puts "*** Running bot remote process"
   start_time = Time.now
   
