@@ -10,6 +10,7 @@ package org.spirit.lift.agents.model
 import scala.Console.{println}
 import scala.xml._
 
+import org.spirit.lift.agents.util.{GlobalUtil}
 import org.spirit.lift.agents.{AgentUtil}
 import org.spirit.bean.impl.BotListEntityLinks
 import org.spirit.dao.impl.{BotListEntityLinksDAOImpl => LinkDAO}
@@ -44,26 +45,34 @@ object MessageUtil {
    * Iterate through all of the nodes and commit
    * the data to the database.
    */
-  def processPayload(rootNode: Node, httpRequest: HttpServletRequest) = {
-
+  def processPayload(payload_content: String, rootNode: Node, httpRequest: HttpServletRequest) = {
+	val stats_payload_sz = payload_content.length
 	val payload = (rootNode \\ "typespayload")
     val agent_msg = fromXML(rootNode)
 	var chat_forum_msg = agent_msg.message
 	var chat_forum_title = agent_msg.message
+	var success_count = 0
 	payload(0) match {
 	  case <typespayload>{elems @ _*}</typespayload> =>   
 		for (curtype @ <type>{_*}</type> <- elems) {
 		  try {
 			// Unmarshall the payload data
-			val link_type = new BotListEntityLinks		  
-			link_type.setUrlTitle( (curtype \ "title").text )
-			link_type.setMainUrl( (curtype \ "url").text )
-			link_type.setFullName( agent_msg.agentName )
-			link_type.setRating( new java.lang.Long(0) )
+			val link_type = new BotListEntityLinks
+			val model_title = GlobalUtil.formatTextAscii( (curtype \ "title").text )
+			val model_url =  GlobalUtil.formatTextAscii( (curtype \ "url").text )
+			val model_keywords = GlobalUtil.formatKeywords( (curtype \ "keywords").text )
+			val model_descr =  GlobalUtil.formatDescription( (curtype \ "descr").text )
+			link_type.setUrlTitle(model_title)
+			link_type.setMainUrl(model_url)
+			link_type.setKeywords(model_keywords)
+			link_type.setUrlDescription(model_descr)
+			link_type.setFullName(agent_msg.agentName)
+			link_type.setRating(new java.lang.Long(0))
 			
 			val bean_obj = AgentUtil.getAC(httpRequest).getBean("entityLinksDaoBean")
 			val link_dao = bean_obj.asInstanceOf[LinkDAO]
-			link_dao.createLink(link_type)		  
+			link_dao.createLink(link_type)
+			 success_count = success_count + 1
 		  } catch {
 			case e => {
 			  println("ERR: " + e)
@@ -71,15 +80,17 @@ object MessageUtil {
 			  chat_forum_title = "There was an issue with your payload"
 			}
 		  } // End of try - catch
-
 		} // End of for
 	}
 	// Also create a message telling us that the bot message
 	// was received.
-	AgentUtil.createBotForumMsg(httpRequest, agent_msg.agentName, 
-								chat_forum_msg, 
-								(chat_forum_title take 30) + "...")
-
+	val additional_chat_msg = GlobalUtil.msgFormatStr(
+"""<br />Server Agent: I had to do a lot of work, the payload was large with
+ a size of {0} characters. I was able to handle {1} of those widgets.""",
+ stats_payload_sz, success_count)
+	AgentUtil.createBotForumMsg(httpRequest, agent_msg.agentName,
+								(chat_forum_msg + additional_chat_msg), 
+								(chat_forum_title take 40) + "...")
   } // End of Method
 
 } // End of Object

@@ -56,7 +56,7 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
 	  S.param("types_payload").map { (u => payload = u) }
 	  val xml_payload = XML.loadString(payload)
 	  val client_agent_msg = MessageUtil.fromXML(xml_payload)
-	  MessageUtil.processPayload(xml_payload, httpRequest)
+	  MessageUtil.processPayload(payload, xml_payload, httpRequest)
 	} catch {
 	  case e => {
 		// On error return invalid XML message
@@ -64,7 +64,6 @@ class RemoteAgents (val request: RequestState, val httpRequest: HttpServletReque
 		return AgentUtil.invalidXMLResponse
 	  }
 	} // End of try - catch
-
 	if (S.post_?) XmlResponse { (
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 	  <message>Enjoy your cake</message>
