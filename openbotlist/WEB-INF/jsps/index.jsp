@@ -80,7 +80,9 @@
 							<table cellspacing="0" cellpadding="0">
 							<c:forEach items="${linklistings}"
 										var="listing" varStatus="status">
+								<%-- ********************** --%>
 								<%-- Begin row production for botverse links --%>
+								<%-- ********************** --%>
 								<tr>					
 									<td colspan="3">
 											<a class="linklist_objlinks" href="<c:url value="${listing.mainUrl}" />" >
@@ -93,6 +95,18 @@
 											</div>
 									</td>
 								</tr>
+								<c:if test="${not empty listing.urlDescription}">
+									<%-- ======================== --%>
+									<%-- == Updated: 2/2/2008; Add URL description text --%>
+									<%-- ======================== --%>
+									<tr>
+										<td>
+											<div style="margin-left: 6px; font-size: 10px; color: #888;">
+												<b>about:</b> <c:out value="${listing.urlDescription}" />
+											</div>
+										</td>
+									</tr>
+								</c:if>					
 								<tr>
 								<td>
 									<!-- Inner table for data/status information -->
@@ -105,7 +119,7 @@
 										 </span>
 										</div>
 									</td>
-									<td>					  
+									<td>
 									  <span style="margin-left: 0px; font-size: 10px">
 											<span class="linklist_comments_date"><strong>by
 												<c:out value="${listing.fullName}" /></strong>
@@ -117,7 +131,9 @@
 									<!-- End of inner table (loop) -->				
 								</td>
 								</tr>
-								<%-- End row production for botverse links --%>								
+								<%-- ********************** --%>
+								<%-- End row production for botverse links --%>
+								<%-- ********************** --%>
 												
 							</c:forEach>							
 							</table>
