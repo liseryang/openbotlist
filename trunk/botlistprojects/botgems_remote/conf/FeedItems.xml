@@ -26,7 +26,7 @@
   <select id="selectAllFeedItems" resultMap="FeedItemResult">
     select id, main_url, url_title, url_description, url_source, hostname 
     	from system_feed_items where process_count = 0 order by RAND()
-    	LIMIT 0, 70
+    	LIMIT 0, 120
   </select>
   
   <!-- Update feed items Feed parameter class -->
