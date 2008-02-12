@@ -296,7 +296,8 @@ def main():
                         
         feeds.closeConn()
         end = time.time()
-        print "processed in=%s s" % ((end-start)/1000.0)
+        diff = end - start
+        print "processed in=%s s" % diff
         
         # Perform any cleanups        
         if len(args) >= 4:
