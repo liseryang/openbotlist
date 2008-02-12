@@ -63,6 +63,17 @@
 							 </span>
 							</span>
 							
+							<c:if test="${not empty command.link.urlDescription}">
+								<div>								
+									<%-- ======================== --%>
+									<%-- == Updated: 2/2/2008; Add URL description text --%>
+									<%-- ======================== --%>
+									<div style="margin-left: 26px; font-size: 10px; color: #888;">
+										<b>about:</b> <c:out value="${command.link.urlDescription}" />
+									</div>
+								</div>
+							</c:if>
+							
 							<%-- *************************** --%>
 							<%-- ==== Section with misc web analytical data (views, objectid) ==== --%>
 							<%-- *************************** --%>
