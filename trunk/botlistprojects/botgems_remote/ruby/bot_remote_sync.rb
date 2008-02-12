@@ -20,17 +20,12 @@ MAX_LEN_FIELD = 120
 
 DEFAULT_RDF_MSG = <<EOF
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-	   <agentmsg>
-		  <botid></botid>
-		  <message></message>
-		  <status></status>
-		  <typespayload>data</typespayload>
-	   </agentmsg>
-</rdf:RDF>  
+</rdf:RDF>
 EOF
 
 class RemoteSync
   attr_accessor :key_request_url, :remote_send_url, :sqlMapper
+  attr_reader :payload_doc
   def initialize()		
     @key_request_url = nil
     @remote_send_url = nil
@@ -71,91 +66,130 @@ class RemoteSync
 		return true
 	end
     
+    def addMsgXMLHeader()
+      # Add the initial header
+      bot_id_e = Element.new("botid")
+      msg_e = Element.new("message")
+      status_e = Element.new("status")
+
+      bot_id_e.text = "mymom"
+      msg_e.text = "Suck dog"
+      status_e.text = "200"
+      
+      agent_msg = Element.new("agentmsg")
+      agent_msg << bot_id_e
+      agent_msg << msg_e
+      agent_msg << status_e
+
+      root = @payload_doc.root
+      root << agent_msg
+    end
+
+    def createMsgTypeElem(item)
+      # Take a feed item, convert to a XML eleent and 
+      # add to the existing XML document.
+      type_elem = Element.new("type")
+      url_elem = Element.new("url")
+      title_elem = Element.new("title")
+      keywords_elem = Element.new("keywords")
+      descr_elem = Element.new("descr")
+
+      url_elem.text = item.mainUrl
+      title_elem.text = item.urlTitle    
+      type_elem << url_elem
+      type_elem << title_elem
+      return type_elem
+    end
+
     def scanFeeds()
-		feedItems = @sqlMapper.queryForList("selectAllFeedItems")
-		buf = ""
-		feedItems.each { |item|			
-			urlItemCleanup(item)
-			if verifyItem(item)
-				formatted_data = "#{item.mainUrl},#{item.urlTitle},#{item.urlTitle}"
-				buf << formatted_data << "\n"
-			end
-		}		
-		# End of the method
-		@send_data = buf
-		@feed_items = feedItems
+      # Scan the feed items and buil
+      feedItems = @sqlMapper.queryForList("selectAllFeedItems")
+      buf = ""
+      payload_elem = Element.new("typespayload")
+      feedItems.each { |item|			
+        urlItemCleanup(item)
+        if verifyItem(item)
+          elem = createMsgTypeElem(item)
+          formatted_data = "#{item.mainUrl},#{item.urlTitle},#{item.urlTitle}"
+          buf << formatted_data << "\n"
+          # Also, append to the payload
+          payload_elem << elem
+        end
+      }
+      # End of the method
+      @send_data = buf
+      @feed_items = feedItems
+      # Append the payload data to the agent msg
+      @payload_doc.elements.each("//agentmsg") { |msg|
+        msg << payload_elem
+      }
     end
     
-    def sendFeedItemData()
-		#
-		# Connect for example: "http://localhost:8080/botlist/spring/pipes/remotesync.html"
-		# And then post to http://localhost:8080/botlist/spring/pipes/remotesync_send.html
-		connect_res = LoadTestManager.connectURL(@key_request_url, false)
-		requestKey = connect_res[1]
-	
-		if @send_data.empty?
-			puts "INFO: there are no feed items to send"
-			return nil
-		end
-	
-		# Submit key and other link data
-		reqestMap = {
-			"developerKey" => "none",
-			"remoteData" => @send_data,
-			"remoteSyncKey" => requestKey
-		}
-		begin
-			str_url = @remote_send_url
-			url = LoadTestManager.getSSLURL(str_url)
-			HttpURLConnection.setFollowRedirects(false)
-			conn = url.openConnection()	
-			post_res = LoadTestManager.postDataSSL(reqestMap, conn, url, str_url, false, true)
-							
-			# Update that we sent the content
-			# Very optmistic case, update all records regardless if they were actual saved
-			@feed_items.each { |item|
-				begin
-					res = sqlMapper.update("updateFeedItem", item)
-				rescue Exception => e1
-					puts e1
-				end
-			}			
-			# Update the audit table to inform that the remote sync has completed
-			serv_response = post_res[1]
-			log = BotListSystemAuditLog.new
-			log.applicationName = "client_remote_sync"
-			log.message = "remote sync client res=[#{serv_response}]"
-			log.logLevel = "INFO"
-			log.messageId = "000051"
-			log.sendTo = "botlist@botlist.com"
-			begin
-				res = sqlMapper.update("insertAuditLog", log)			
-			rescue Exception => e1
-				puts e1
-			end
-			
-		rescue Exception => e
-			puts e
-		end
-		# End of method
-    end
-    
+    def sendFeedItemData()      
+      # Connect for example: "http://localhost:8080/botlist/spring/pipes/remotesync.html"
+      # And then post to http://localhost:8080/botlist/spring/pipes/remotesync_send.html
+      connect_res = LoadTestManager.connectURL(@key_request_url, false)
+      requestKey = connect_res[1]
+            
+      if @send_data.empty?
+        puts "INFO: there are no feed items to send"
+        return nil
+      end	
+      # Submit key and other link data
+      reqestMap = {
+        "types_payload" => "#{@payload_doc}"
+      }      
+      begin
+        str_url = @remote_send_url
+        url = LoadTestManager.getSSLURL(str_url)
+        HttpURLConnection.setFollowRedirects(false)
+        conn = url.openConnection()	
+        post_res = LoadTestManager.postDataSSL(reqestMap, conn, url, str_url, false, true)
+
+        # Update that we sent the content
+        # Very optmistic case, update all records regardless if they were actual saved
+        @feed_items.each { |item|
+          begin
+            res = sqlMapper.update("updateFeedItem", item)
+          rescue Exception => e1
+            puts e1
+          end
+        }			
+        # Update the audit table to inform that the remote sync has completed
+        serv_response = post_res[1]
+        log = BotListSystemAuditLog.new
+        log.applicationName = "client_remote_sync"
+        log.message = "remote sync client res=[bad]"
+        log.logLevel = "INFO"
+        log.messageId = "000051"
+        log.sendTo = "botlist@botlist.com"
+        begin
+          res = sqlMapper.update("insertAuditLog", log)			
+        rescue Exception => e1
+          puts e1
+        end			
+      rescue Exception => e
+        puts e
+      end
+      # End of method
+    end    
 end
 
 def connect(key_url, send_url)
-	puts "INFO: keyurl=#{key_url}"
-	puts "INFO: syncurl=#{send_url}"
-	reader = Resources.getResourceAsReader("conf/SqlMapConfig.xml")
-	sqlMapper = SqlMapClientBuilder.buildSqlMapClient(reader)
-	reader.close()
-		
-	remoteSync = RemoteSync.new
-	remoteSync.sqlMapper = sqlMapper
-    remoteSync.load_payload_doc
-	remoteSync.key_request_url = key_url
-	remoteSync.remote_send_url = send_url
-	remoteSync.scanFeeds
-	remoteSync.sendFeedItemData
+  puts "INFO: keyurl=#{key_url}"
+  puts "INFO: syncurl=#{send_url}"
+  reader = Resources.getResourceAsReader("conf/SqlMapConfig.xml")
+  sqlMapper = SqlMapClientBuilder.buildSqlMapClient(reader)
+  reader.close()
+  
+  remoteSync = RemoteSync.new
+  remoteSync.sqlMapper = sqlMapper
+  remoteSync.load_payload_doc
+  remoteSync.key_request_url = key_url
+  remoteSync.remote_send_url = send_url
+  remoteSync.addMsgXMLHeader
+  remoteSync.scanFeeds
+  remoteSync.sendFeedItemData
 end
 
 def main()	
@@ -165,7 +199,7 @@ def main()
     return 
   end  
 
-  puts "running"
+  puts "*** Running bot remote process"
   start_time = Time.now
   
   key_url = ARGV[0]
@@ -174,7 +208,7 @@ def main()
   end_time = Time.now
   diff_time = end_time - start_time
   printf "processing remote sync in %.5f s\n", diff_time
-  puts "done"	
+  puts "** Done"	
 end
 
 main()
