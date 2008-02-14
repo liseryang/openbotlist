@@ -10,8 +10,9 @@ __version__ = "0.1"
 import MySQLdb
 import cgi
 import random
-import util.keyword_processor as textutils
 
+import util.keyword_processor as textutils
+from util.text_utils import formatStrAscii, formatDescrWithSoup
 from botlist_business_object import BotlistBusinessObject
 
 SQL_PREFIX = "'"
@@ -57,8 +58,7 @@ class CountFeedItems:
 		self.count = None
 
 #--------------------------------------
-class ScanFeedHandler(BotlistBusinessObject):    
-	
+class ScanFeedHandler(BotlistBusinessObject):	
 	def createItem(self, url, title, descr, source, hostname):
 		try:
 			sql_set = []
@@ -73,8 +73,8 @@ class ScanFeedHandler(BotlistBusinessObject):
 			cursor = self.conn.cursor()
 			
 			url_val = url.encode("utf-8").replace("'", "")		
-			title_val = title.encode("utf-8").replace("'", "")
-			descr_val = descr.encode("utf-8").replace("'", "")
+			title_val =  formatStrAscii(title).replace("'", "")
+			descr_val =  formatDescrWithSoup(formatStrAscii(descr)).replace("'", "")
 			source_val = source.encode("utf-8").replace("'", "")
 			host_val = hostname.encode("utf-8").replace("'", "")
 			
