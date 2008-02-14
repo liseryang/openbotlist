@@ -51,8 +51,8 @@ echo "-----------------------"
 
 # Append '&' to run in background
 # Append -Xmx32M heap settings if needed
-URL1="http://botspiritcompany.com/botlist/spring/pipes/remotesync.html"
-URL2="http://botspiritcompany.com/botlist/spring/pipes/remotesync_send.html"
+URL1="http://botspiritcompany.com/botlist/lift/pipes/types/remote_agent_req"
+URL2="http://botspiritcompany.com/botlist/lift/pipes/types/remote_agent_send"
 "$JAVA" -classpath $LIN_CPBOTBERT $APP_MAIN ruby/bot_remote_sync.rb ${URL1} ${URL2} $@
 
 # Write the process id
