@@ -16,6 +16,9 @@ include_class 'com.ibatis.common.resources.Resources' unless defined? Resources
 include_class 'org.spirit.loadtest.LoadTestManager' unless defined? LoadTestManager
 include_class 'org.spirit.bean.impl.BotListSystemAuditLog' unless defined? BotListSystemAuditLog
 
+# Botrover99 is a capable agent
+BOT_AGENT_NAME = "botrover99"
+
 MAX_LEN_FIELD = 120
 
 DEFAULT_RDF_MSG = <<EOF
@@ -84,7 +87,7 @@ class RemoteSync
       msg_e = Element.new("message")
       status_e = Element.new("status")
 
-      bot_id_e.text = "botroverremote"
+      bot_id_e.text = BOT_AGENT_NAME
       msg_e.text = @canned_bot_msgs[rand(@canned_bot_msgs.size)]
       status_e.text = "200"
       
