@@ -22,10 +22,9 @@
 		
 	<!-- Zip the development code base -->
 	<!-- Added modification to exclude *.jar files (scala not needed) -->
-	<target name="zip.codebase" depends="clean">
+	<target name="zip.codebase" depends="clean, prepare">
 		<fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
 		<zip destfile="${basedir}/build/${appname.jar}.zip"
-				excludes="**/*.jar"
 				basedir="${basedir}" />
 	</target>	
 	<!-- Zip the PYTHON development code base -->
