@@ -3,6 +3,16 @@
 
 = Project Diary =
 
+2/16/2008
+
+*New task list and priorities*
+
+  # Change feed item system to postgres / RabbitMQ
+  # Create self links with source as RDF document
+  # Clear older links
+  # Build social (reddit) stat system
+  # Possible crawler with erlang
+
 12/1/2007
 
 Added web analytics, statistics page content analysis
