@@ -4,7 +4,7 @@
 = Project Diary =
 
 *2/18/2008*
-*MoreNew task list and priorities*
+*More New task list and priorities*
   # Build a simple botlist IRC bot, entering new URLs, possibly seed items
   # RDF specifications for messaging, URL types, foaf, social stats
   # FOAF indexer
