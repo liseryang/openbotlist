@@ -3,14 +3,14 @@
 
 = Project Diary =
 
-*2/18/2008*
+*2/18/2008*  
 *More New task list and priorities*
   # Build a simple botlist IRC bot, entering new URLs, possibly seed items
   # RDF specifications for messaging, URL types, foaf, social stats
   # FOAF indexer
   # Focus on search and archived dumps - there are two parts to a botlist UI, the front-end and the archived content.  The archived content could contain millions or billions of items.  Should be searchable.
 
-*2/16/2008*
+*2/16/2008*  
 *New task list and priorities*
 
   # Change feed item system to postgres / RabbitMQ
@@ -19,10 +19,10 @@
   # Build social (reddit) stat system
   # Possible crawler with erlang
 
-*12/1/2007*
+*12/1/2007*   
 Added web analytics, statistics page content analysis
 
-*11/14/2007*
+*11/14/2007*  
 Useful idiom in Scala for walking a directory tree, searching for a particular file.  This  code will get added to my botlist help document search system:
 
 
