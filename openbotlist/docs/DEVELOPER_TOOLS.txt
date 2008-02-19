@@ -22,7 +22,7 @@
  Development:
  ===================
   
- 	Eclipse IDE 3.2+ - Java development, project management
+ 	Eclipse IDE 3.3+ - Java development, project management
  	Emacs - Text editor for all source (haskell, scala, python, ruby, etc) 
  
 
