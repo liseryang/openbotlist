@@ -16,6 +16,9 @@
  *** distributed  under the  License is distributed on an "AS IS" BASIS,
  *** WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
  *** implied.
+ *** 
+ * Updates: 2/2/2008
+ * Valetine release - major cleanups
  */
 package org.spirit.spring;
 
@@ -191,7 +194,7 @@ public class BotListIndexController extends SimpleFormController {
 	}
 	
 	/**
-	 * @deprecated
+	 * @Deprecated   Deprecated
 	 * @return
 	 */
 	private Collection findCityListings() {
@@ -206,6 +209,10 @@ public class BotListIndexController extends SimpleFormController {
 	/**
 	 * Get the home link list
 	 */
+	private List getHomeLinkList(final int current_page) {
+		String queryStr = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc";
+		return this.getEntityLinksDao().pageEntityLinksUsers(queryStr, current_page, MAX_HOME_LINKS);
+	}
 	private List getHomeLinkList() {
 		String queryStr = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc";
 		return this.getEntityLinksDao().pageEntityLinksUsers(queryStr, 0, MAX_HOME_LINKS);
@@ -257,7 +264,7 @@ public class BotListIndexController extends SimpleFormController {
 		if (existMemoryPer > 60) {
 			log.info("free memory=" + freeMemory + " totalMemory=" + totalMemory + " maxMemory=" + maxMemory);
 			log.info("memory usage=" + existMemoryPer + " %");
-			if (existMemoryPer > 70) {
+			if (existMemoryPer > 75) {
 				Runtime.getRuntime().gc();
 			}
 		}
@@ -292,8 +299,14 @@ public class BotListIndexController extends SimpleFormController {
 		mvc.addObject("linkCount", new Long(this.getEntityLinksDao().getLinkCount()));		
 		mvc.addObject("userInfo", BotListContractManager.getUserInfo(request));
 					
+		//*******************
+		// Display entity links for output to the user on the main page, set one on the left
+		// and set two on the right side of the screen
+		//*******************
 		mvc.addObject("linklistings", this.getHomeLinkList());
-		mvc.addObject("hotTopics", this.getHotTopics());
+		mvc.addObject("linklistings_set2", this.getHomeLinkList(1));
+		// Updated: 2/2/2008; removed search hot topics
+		//mvc.addObject("hotTopics", this.getHotTopics());
 		
 		// Display the video media list section
 		mvc.addObject("mediaListEnabled", new Boolean(this.getCoreSettings().isMediaEnabled()));
