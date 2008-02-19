@@ -10,10 +10,22 @@
 #body_content_center {
 	border-bottom: 1px solid #816943;
 	padding: 0px 0px 0px 0px;
-	width: 840px;
 	border: 1px solid #DDD;
-	margin-left: 80px;
+	margin-left: 40px;
+	margin-right: 40px;
 	margin-top: 6px;
+}
+
+/**
+ * Add two column layout for main page
+ */
+#two_col_left_links {
+	float: left;
+	width: 60%;
+}
+#two_col_right_links {
+	float: right;
+	width: 40%;
 }
 
 h1.bot_titlelogo {
