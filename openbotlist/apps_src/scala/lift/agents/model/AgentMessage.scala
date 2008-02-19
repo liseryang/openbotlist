@@ -77,7 +77,7 @@ object MessageUtil {
 			case e => {
 			  println("ERR: " + e)
 			  chat_forum_msg = "There was an issue with your payload<br />Msg: " + agent_msg.message
-			  chat_forum_title = "There was an issue with your payload"
+			  //chat_forum_title = "There was an issue with your payload"
 			}
 		  } // End of try - catch
 		} // End of for
