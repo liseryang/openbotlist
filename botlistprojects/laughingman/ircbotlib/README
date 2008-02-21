@@ -1,3 +1,8 @@
+#*************************************
+# Modified for laughingman botlist projects.
+# Date: 2/12/2008
+#*************************************
+
 This is manderlbot, an attempt to write an irc bot in erlang, with a XML
 based configuration.
 
