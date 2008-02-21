@@ -1,7 +1,7 @@
 #**********************************************************
 # Build the .beam erlang VM files
-# Makefile for irc bot (based on manderlbrot)
-# Based on manderlbot - 0.9.2
+# Makefile for irc bot (based on orbitz bot)
+# Based on orbitz
 #**********************************************************
 
 OPT   = -W
@@ -17,8 +17,8 @@ DESTDIR=.
 RAW_INSTALL_DIR = .
 ERLANG_INSTALL_DIR = $(DESTDIR)/$(RAW_INSTALL_DIR)/lib
 
-# (formerly manderlbot)
-APPLICATION = ircbot
+# (formerly orbitz)
+APPLICATION = orb
 VERSION     = 0.0.1
 
 BINDIR      = $(DESTDIR)/usr/bin
@@ -51,12 +51,9 @@ ${APPLICATION}: $(TARGET)
 all: clean ${APPLICATION}
 
 clean:
-	-cd priv && rm -f $(shell ls priv | grep -v builder\.erl) && cd ..
-	-rm -f $(TARGET) $(TMP) $(BUILD_OPTIONS_FILE) builder.beam
+	-rm -f $(TARGET) $(TMP) $(BUILD_OPTIONS_FILE)
 	-rm -f $(TGT_APPFILES)
-	-rm -f ebin/*
-	-rm -f ${APPLICATION}.sh
-	-make -C doc clean
+	-rm -f ebin/*.beam
 
 build: ${APPLICATION} builder.beam $(SRC_APPFILES)
 # Use builder to make boot file
@@ -80,9 +77,6 @@ release:
 	tar zvcf  $(APPLICATION)-$(VERSION).tar.gz $(APPLICATION)-$(VERSION)
 	rm -fr $(APPLICATION)-$(VERSION)
 	rm -fr tmp.tgz
-
-builder.beam: priv/builder.erl 
-	$(ERLC) $(OPT) -I $(INC) $<
 
 ebin/%.beam: src/%.erl 
 	$(ERLC) $(OPT) -I $(INC) -o ebin $<
