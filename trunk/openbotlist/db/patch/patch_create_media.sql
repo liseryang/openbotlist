@@ -3,7 +3,6 @@
 --
 -- patch_create_media.sql
 --
-connect botlist_development;
 
 --
 -- Media Feed Object

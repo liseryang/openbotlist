@@ -1,8 +1,6 @@
 -- 
 -- 9/4/2007
 
-connect botlist_development;
-
 -- ==========================
 -- Link groups to their terms
 -- ==========================

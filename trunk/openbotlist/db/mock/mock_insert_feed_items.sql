@@ -2,8 +2,6 @@
 --
 -- 2/2/2008
 
-connect botlist_development;
-
 INSERT INTO system_feed_items(main_url, url_title, url_description, url_source, process_count, created_on) 
 		VALUES('http://www.reddit.com', 'The Reddit', 'The Reddit is Cool', 'http://www.google.com', 0, NOW());
 

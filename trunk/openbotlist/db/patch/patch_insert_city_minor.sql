@@ -2,8 +2,6 @@
 --
 -- 8/20/2007
 
-connect botlist_development;
-
 ------
 -- City oriented changes (add city category, MINOR)
 ------

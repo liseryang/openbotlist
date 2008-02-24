@@ -4,8 +4,6 @@
 
 -- Insert the data for the group link sections
 
-connect botlist_development;
-
 patch_users_groups.sql
 
 -- Cleanup invalid titles.
