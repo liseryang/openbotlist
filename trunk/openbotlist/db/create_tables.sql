@@ -13,8 +13,6 @@
 -- 2/2/2008 - sql clean-ups, made sure script is up to date.
 --*********************************************************
 
-connect botlist_development;
-
 ---------------------------------
 -- Create the user admin tables
 ---------------------------------

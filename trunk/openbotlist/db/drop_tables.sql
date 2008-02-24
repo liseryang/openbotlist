@@ -4,8 +4,6 @@
 -- updated: 3/24/2006
 --
 
-connect botlist_development;
-
 --
 -- Drop constraints first
 --
