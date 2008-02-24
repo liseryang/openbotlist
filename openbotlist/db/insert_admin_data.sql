@@ -1,6 +1,5 @@
 --
 -- Admin Settings
-connect botlist_development;
 
 -- Insert example users
 -- To encode the password, see the ViewMD5Encoding class

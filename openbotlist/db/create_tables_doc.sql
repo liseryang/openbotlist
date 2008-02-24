@@ -4,8 +4,6 @@
 -- updated: 11/12/2006
 --
 
-connect botlist_development;
-
 CREATE TABLE doc_file (
 	id			int(11) NOT NULL auto_increment,
 	child_id	int(11),
