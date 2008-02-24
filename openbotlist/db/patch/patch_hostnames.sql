@@ -3,8 +3,6 @@
 -- Simple changes related to add hostname to entity links
 -- 8/20/2007
 
-connect botlist_development;
-
 alter table entity_links ADD COLUMN hostname varchar(128);
 
 alter table system_feed_items ADD COLUMN hostname varchar(128);

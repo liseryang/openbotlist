@@ -2,8 +2,6 @@
 -- Patch for admin tools
 --
 
-connect botlist_development;
-
 --
 -- Created: 6/29/2007
 CREATE TABLE admin_main_banner (

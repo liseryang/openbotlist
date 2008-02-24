@@ -3,7 +3,6 @@
 -- 11/28/2007
 -- patch_link_analysis.sql
 --
-connect botlist_development;
 
 --
 -- Update the entity links table

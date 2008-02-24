@@ -3,8 +3,6 @@
 
 -- 4/20/2007
 
-connect botlist_development;
-
 ALTER TABLE entity_links ADD COLUMN user_id INT(11);
 ALTER TABLE entity_links ADD COLUMN full_name VARCHAR(128) NOT NULL;
 

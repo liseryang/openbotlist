@@ -4,8 +4,6 @@
 
 -- Insert the data for the group link sections
 
-connect botlist_development;
-
 --
 -- Create the system feed table to read
 -- the feed list

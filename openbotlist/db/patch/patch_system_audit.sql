@@ -5,8 +5,6 @@
 --
 -- 8/5/2007
 
-connect botlist_development;
-
 --
 -- Log Level values (SEVERE, MED, HIGH, ERR, INFO, DEBUG)
 -- Need to check length in send_to

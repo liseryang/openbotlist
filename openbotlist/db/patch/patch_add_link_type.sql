@@ -1,7 +1,6 @@
 -- 
 -- 9/4/2007
 
-connect botlist_development;
 
 -- link type can include a type for the particular link, eg, politics, finance, etc.
 ALTER TABLE entity_links ADD COLUMN link_type varchar(20);

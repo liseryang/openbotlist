@@ -1,8 +1,6 @@
 -- 
 -- 2/2/2008
 
-connect botlist_development;
-
 CREATE TABLE session_request_log (
 	request_id  varchar(50) NOT NULL UNIQUE,
 	remote_host varchar(20) NOT NULL,

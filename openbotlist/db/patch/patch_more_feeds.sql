@@ -4,8 +4,6 @@
 
 -- Insert the data for the group link sections
 
-connect botlist_development;
-
 -- New Feeds
 
 insert into system_scan_feeds(main_url, url_title, url_description, url_source)	

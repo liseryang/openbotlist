@@ -3,8 +3,6 @@
 
 -- 4/20/2007
 
-connect botlist_development;
-
 -- Create created_on indices on main tables
 
 CREATE INDEX entity_links_created_on_ndx ON entity_links(created_on);

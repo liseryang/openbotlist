@@ -1,8 +1,6 @@
 -- 
 -- 9/4/2007
 
-connect botlist_development;
-
 CREATE TABLE user_entity_links (
 	id 				int(11) NOT NULL auto_increment,
 	user_id			int(11) NOT NULL,
