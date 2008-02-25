@@ -144,8 +144,7 @@
 		</div>
 		<!-- End of Form -->		
 	</td>
-	</tr>
-	
+	</tr>	
 	<tr>
 		<td colspan="2">
 					<%-- ============================== --%>
@@ -222,6 +221,18 @@
 							</span>
 					</td>
 				</tr>
+								<c:if test="${not empty listing.urlDescription}">
+									<%-- ======================== --%>
+									<%-- == Updated: 2/2/2008; Add URL description text --%>
+									<%-- ======================== --%>
+									<tr>
+										<td>
+											<div style="margin-left: 6px; font-size: 10px; color: #555;">
+												<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${listing.urlDescription}" />
+											</div>
+										</td>
+									</tr>
+								</c:if>
 				<tr>
 				<td>
 					<!-- Inner table for data/status information -->

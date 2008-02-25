@@ -234,7 +234,6 @@ class CreateListingController
     # Navigate to the confirmation page
     form.viewName = "createconfirm"
     return form
-
   end
 end
 

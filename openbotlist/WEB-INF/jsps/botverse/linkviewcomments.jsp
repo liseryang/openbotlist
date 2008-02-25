@@ -68,8 +68,8 @@
 									<%-- ======================== --%>
 									<%-- == Updated: 2/2/2008; Add URL description text --%>
 									<%-- ======================== --%>
-									<div style="margin-left: 26px; font-size: 10px; color: #888;">
-										<b>about:</b> <c:out value="${command.link.urlDescription}" />
+									<div style="margin-left: 26px; font-size: 10px; color: #555;">
+										<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${command.link.urlDescription}" />
 									</div>
 								</div>
 							</c:if>
