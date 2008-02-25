@@ -17,7 +17,7 @@ Library
   Ghc-Options:           -O2
   Build-Depends:         base, haskell98, network, 
                          binary, bytestring, utf8-string, time,
-                         regex-compat, containers, directory, hsql, hsql-sqlite3
+                         regex-compat, containers, directory, hsql, hsql-sqlite3, HUnit
   Exposed-modules:       Data.AMQP.QueueClient
                          Data.SpiderQueue.Queue
                          Data.SpiderNet.Bayes
@@ -25,7 +25,13 @@ Library
                          Tests.Data.TestQueue
                          Tests.Data.TestBayesInvChi
                          Tests.Data.TestBayesProb
+                         Tests.Unit.TestExample
+                         Tests.Unit.TestStopWords
 
 Executable test1
   Hs-Source-Dirs:     ../../lib/haskell/src src/Tests src
   Main-is:            Main.hs
+
+Executable spider_unit_tests
+  Hs-Source-Dirs:     ../../lib/haskell/src src/Tests src
+  Main-is:            UnitMain.hs
