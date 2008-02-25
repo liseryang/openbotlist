@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2006 - Berlin Brown -->
+<!-- Date: 11/1/2006 -->
+<project name="BotList Test Framework (Integration Tests)" default="init" basedir=".">
+	
+	<property file="build.properties" />	
+	
+	<property name="home.base.dir"     	value="${basedir}/../.." />
+	<property name="build.dir"          value="${basedir}/build"/>
+	<property name="build.classes.dir"	value="${basedir}/build/classes"/>
+	<property name="home.build.classes.dir"	value="${home.base.dir}/build/classes"/>
+	<property name="lib.dir"          	value="${home.base.dir}/WEB-INF/lib" />		
+	<property name="scala.src.dir"      value="${home.base.dir}/apps_src/scala"/>
+	<property name="scala.test_src.dir" value="${basedir}/scala"/>
+	<property name="lib.runtime.dir"    value="${home.base.dir}/runtime-lib" />
+	
+	<!-- **************************************** -->
+	<!-- Define the library files -->
+	<!-- **************************************** -->
+	<property name="acegi.jar"  	value="${lib.dir}/acegi-security-1.0.3.jar" />
+	<property name="hibernate.jar"  value="${lib.dir}/hibernate3.jar" />
+	<property name="log4j.jar"    	value="${lib.dir}/log4j-1.2.14.jar" />
+	<property name="dom4j.jar"     	value="${lib.dir}/dom4j-1.6.1.jar" />
+	<property name="logging.jar"    value="${lib.dir}/commons-logging-1.0.4.jar" />
+	<property name="collections.jar"	value="${lib.dir}/commons-collections-2.1.1.jar" />
+	<property name="cglib.jar"          value="${lib.dir}/cglib-nodep-2.1_3.jar" />
+	<property name="jta.jar"            value="${lib.dir}/jta.jar" />
+	<property name="mysql.jar"          value="${lib.dir}/mysql-connector-java-5.0.3-bin.jar" />
+	<property name="antlr.jar"          value="${lib.dir}/antlr-2.7.6rc1.jar" />
+	<property name="validator.jar" 		value="${lib.dir}/commons-validator-1.3.1.jar" />	
+	<property name="servlet.jar"		value="${home.base.dir}/runtime-lib/servlet-api.jar" />
+	<property name="spring.jar"		    value="${lib.dir}/spring.jar" />
+	<property name="jruby.jar"		    value="${lib.dir}/jruby.jar" />
+	<property name="bsf.jar"		    value="${lib.dir}/bsf.jar" />	
+	<property name="jfreechart.jar"		value="${lib.dir}/jfreechart-1.0.5.jar" />
+	<property name="jcommon.jar"		value="${lib.dir}/jcommon-1.0.9.jar" />
+	<property name="junit.jar"		    value="${home.base.dir}/runtime-lib/junit-4.1.jar" />
+
+	<!-- client runtime classpath properties -->
+	<property name="xerces.jar"				value="${home.base.dir}/runtime-lib/xercesImpl.jar" />
+	<property name="jython.jar"				value="${home.base.dir}/runtime-lib/jython.jar" />
+	<property name="httpunit.jar"			value="${home.base.dir}/runtime-lib/httpunit.jar" />
+	<property name="tidy.jar"				value="${home.base.dir}/runtime-lib/Tidy.jar" />
+	
+	<property name="commons-dbcp.jar"		value="${lib.dir}/commons-dbcp.jar" />
+	<property name="commons-pool.jar"		value="${lib.dir}/commons-pool.jar" />
+	<property name="commons-upload.jar" 	value="${lib.dir}/commons-fileupload.jar" />
+	<property name="commons-codec.jar" 		value="${lib.dir}/commons-codec-1.3.jar" />	
+	
+	<property name="ehcache.jar"			value="${lib.dir}/ehcache-1.2.3.jar" />
+	<property name="cglib.jar"				value="${lib.dir}/cglib-2.1.3.jar" />
+	<property name="asm.jar"				value="${lib.dir}/asm.jar" />
+	<property name="asm-attrs.jar"			value="${lib.dir}/asm-attrs.jar" />
+	<property name="jta.jar"				value="${lib.dir}/jta.jar" />
+	<property name="c3p0.jar"				value="${lib.dir}/c3p0-0.9.0.jar" />
+		
+	<property name="servlet.jar"			value="${home.base.dir}/servlet-lib/servlet-api.jar" />    
+	<property name="jsp-api.jar"			value="${home.base.dir}/servlet-lib/jsp-api.jar" />    
+		
+	<!-- **************************************** -->
+	<!-- Scala Jar Imports -->
+	<!-- **************************************** -->
+    <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.1.jar" />
+	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.1.jar" />
+	<property name="scalacheck.jar"        value="${lib.runtime.dir}/ScalaCheck-1.2.jar" />
+	<property name="lift.jar"              value="${lib.dir}/lift-core-0.5-SNAPSHOT.jar" />
+	
+	<!-- **************************************** -->
+	<!-- Target: CLASSPATH -->
+	<!-- **************************************** -->
+	<path id="classpath">
+		<pathelement location="${acegi.jar}"/>
+		<pathelement location="${hibernate.jar}"/>
+		<pathelement location="${junit.jar}"/>
+		<pathelement location="${log4j.jar}"/>
+		<pathelement location="${dom4j.jar}"/>
+		<pathelement location="${logging.jar}"/>
+		<pathelement location="${collections.jar}"/>
+		<pathelement location="${mysql.jar}" />
+		<pathelement location="${cglib.jar}" />
+		<pathelement location="${jta.jar}" />
+		<pathelement location="${antlr.jar}" />
+		<pathelement location="${spring.jar}" />
+		<pathelement location="${servlet.jar}" />
+		<pathelement location="${jruby.jar}" />
+		<pathelement location="${bsf.jar}" />
+		<pathelement location="${validator.jar}" />
+		<pathelement location="${junit.jar}" />
+		<pathelement location="${httpunit.jar}" />
+	
+		<pathelement location="${jfreechart.jar}" />
+		<pathelement location="${jcommon.jar}" />
+		
+		<!-- Include the CLASSES directory -->
+		<pathelement location="${build.classes.dir}" />
+		<pathelement location="${home.build.classes.dir}" />
+	</path>
+	
+	<path id="runtime.classpath">
+		<pathelement location="${xerces.jar}" />
+		<pathelement location="${servlet.jar}" />
+		<pathelement location="${commons-dbcp.jar}" />
+		<pathelement location="${commons-pool.jar}" />
+		<pathelement location="${commons-codec.jar}" />
+		<pathelement location="${ehcache.jar}" />
+		<pathelement location="${cglib.jar}" />
+		<pathelement location="${mysql.jar}" />
+		<pathelement location="${asm.jar}" />
+		<pathelement location="${asm-attrs.jar}" />
+		<pathelement location="${jta.jar}" />
+		<pathelement location="${c3p0.jar}" />
+		<pathelement location="${jython.jar}" />
+		<pathelement location="${tidy.jar}" />
+		
+		<pathelement location="${commons-upload.jar}" />
+		<pathelement location="${jsp-api.jar}" />
+		<pathelement location="${standard.jar}" />
+	</path>
+	
+	<path id="classpath.scala">
+		<pathelement location="${hibernate.jar}"/>
+		<pathelement location="${jta.jar}" />
+		<pathelement location="${spring.jar}" />
+		<pathelement location="${logging.jar}" />
+        <pathelement location="${scala.jar}" />
+    	<pathelement location="${scala-compiler.jar}" />
+        <pathelement location="${lift.jar}" />
+		<pathelement location="${scalacheck.jar}" />
+		<pathelement location="${servlet.jar}" />
+        <pathelement location="${jsp-api.jar}" />
+		<pathelement location="${build.classes.dir}" />
+		<pathelement location="${home.build.classes.dir}" />
+	</path>
+	
+	<target name="init" description="Initialization">
+		<tstamp/>		
+	</target>
+	
+	<!-- Target: Prepare -->
+	<target name="prepare">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.classes.dir}"/>
+	</target>
+			
+	<!-- Target: Build -->
+	<target name="package" >
+		<copy file="${home.base.dir}/WEB-INF/classes/Botlist.hbm.xml" 
+						todir="${build.classes.dir}" />
+		<copy file="${basedir}/resources/log4j.properties" 
+						todir="${build.classes.dir}" />
+	</target>
+	
+	<!-- **************************************** -->
+	<!-- Add support for scala compiles, used with liftweb apps -->
+	<!-- Date Created: 12/29/2007 -->
+	<!-- **************************************** -->
+	<taskdef resource="scala/tools/ant/antlib.xml">
+	      <classpath refid="classpath.scala" />
+	</taskdef>
+		
+	<!-- Target: Compile Scala Source -->
+	<target name="scala.compile" depends="prepare">
+			<!-- Build the actual botlist scala source -->
+			<!-- and then the test suite -->
+			<scalac srcdir="${scala.src.dir}" 
+					destdir="${build.classes.dir}" 
+			  		classpathref="classpath.scala" force="never">
+			    <include name="**/*.scala"/>
+			</scalac>
+	</target>	
+	<!-- Target: Compile Scala Test Suite -->
+	<target name="scala.compile.tests" depends="scala.compile">
+			<!-- Build the actual botlist scala source -->
+			<!-- and then the test suite -->
+			<scalac srcdir="${scala.test_src.dir}" 
+					destdir="${build.classes.dir}" 
+			  		classpathref="classpath.scala" force="never">
+			    <include name="**/*.scala"/>
+			</scalac>
+	</target>
+		
+	<target name="tests.ruby.rspec" depends="package">
+		<java classname="org.jruby.Main" >	         
+			<classpath refid="classpath" />
+			<classpath refid="runtime.classpath" />
+			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
+			<arg value="${basedir}/ruby/rspec" />
+			<arg value="--require" />
+			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
+		</java>
+	</target>
+	
+	<target name="tests.scala.suite" depends="scala.compile.tests">
+			<java classname="org.spirit.check.testsuite.CheckTestSuite" >	         
+				<classpath refid="classpath" />
+				<classpath refid="runtime.classpath" />				
+				<classpath refid="classpath.scala" />
+			</java>
+		</target>
+	
+	<target name="setup_tests" depends="package">
+			<java classname="org.jruby.Main" >	         
+				<classpath refid="classpath" />
+				<classpath refid="runtime.classpath" />
+				<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
+				<arg value="${basedir}/ruby/rspec/create_mock_tests.rb" />
+				<arg value="--require" />
+				<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
+			</java>
+	</target>
+	
+	<!-- Zip the development code base -->
+	<target name="zip.codebase" depends="clean,prepare">
+		<fail unless="appname.war">APPNAME.WAR must be set, see the build.properties file</fail>
+		<zip destfile="${basedir}/build/${appname.war}.zip" basedir="${basedir}" />
+	</target>
+
+	<!-- Main Clean -->
+	<target name="clean">
+		<delete dir="${build.dir}" />			
+	</target>
+	<!-- End of Main Clean -->
+
+</project>
+<!-- End of the File -->
