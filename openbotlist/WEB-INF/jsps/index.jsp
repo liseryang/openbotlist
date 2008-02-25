@@ -2,7 +2,7 @@
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
 <html>
 <head>
- 	<title>Botlist - Interesting Things Online</title>
+ 	<title>Botlist - Interesting Things Online (beta built with Scala, JRuby, Spring, Liftweb, Haskell technology)</title>
  
   	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
  	<META NAME="keywords" CONTENT="articles, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
@@ -32,7 +32,7 @@
 			
 			<div style="margin: 8px;">
 				<h3 class="bot_headerinfo">				
-				All your favorite links in one place.  Bookmark things for yourself and friends.  Check out what other people are bookmarking.								
+				All your favorite links in one place.  Bookmark popular items for you and friends.  Check out what other people are interested in.								
 				</h3>
 			</div>			
 			<!-- Section with City Listing -->
@@ -54,7 +54,7 @@
 						<tr>
 							<td>
 								<span style="background-color: #e8e8e8; padding: 4px;">
-								&nbsp;most recent updates:
+								&nbsp;most recent updates</span>:
 								</span>
 								&nbsp;/ <a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
 									/ <a href="<c:url value="/spring/botverse/botverse_submit.html" />" class="linklist_botnav">submit</a>									
@@ -75,74 +75,20 @@
 							</td>
 						</tr>
 						<tr>
-							<td>
-							<%-- == Next Row, Iterate through updates == --%>
-							<table cellspacing="0" cellpadding="0">
-							<c:forEach items="${linklistings}"
-										var="listing" varStatus="status">
-								<%-- ********************** --%>
-								<%-- Begin row production for botverse links --%>
-								<%-- ********************** --%>
-								<tr>					
-									<td colspan="3">
-											<a class="linklist_objlinks" href="<c:url value="${listing.mainUrl}" />" >
-												<c:out value='${botlistutil:getMaxWord(listing.urlTitle, 48)}' />
-											</a>
-											(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)
-											<%-- Next line, hostname information --%>
-											<div style="font-size: 8px: color: #777; margin-left: 6px;">
-											 source: <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
-											</div>
-									</td>
-								</tr>
-								<c:if test="${not empty listing.urlDescription}">
-									<%-- ======================== --%>
-									<%-- == Updated: 2/2/2008; Add URL description text --%>
-									<%-- ======================== --%>
-									<tr>
-										<td>
-											<div style="margin-left: 6px; font-size: 10px; color: #888;">
-												<b>about:</b> <c:out value="${listing.urlDescription}" />
-											</div>
-										</td>
-									</tr>
-								</c:if>					
-								<tr>
-								<td>
-									<!-- Inner table for data/status information -->
-									<table>
-									<tr>					
-									<td>
-										<div class="linklist_comments_txt">						 	
-										 <span class="linklist_comments_date">						
-											<botlistutil:timePast dateValue="${listing.createdOn.time}" />							
-										 </span>
-										</div>
-									</td>
-									<td>
-									  <span style="margin-left: 0px; font-size: 10px">
-											<span class="linklist_comments_date"><strong>by
-												<c:out value="${listing.fullName}" /></strong>
-											</span>
-									  </span>
-									</td>
-									</tr>
-									</table>
-									<!-- End of inner table (loop) -->				
-								</td>
-								</tr>
-								<%-- ********************** --%>
-								<%-- End row production for botverse links --%>
-								<%-- ********************** --%>
-												
-							</c:forEach>							
-							</table>
-							<%-- End of table for botverse links --%>
-							<div style="margin-top: 6px; background-color: #f3f3f3; padding: 6px; width: 30%">
-								<a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
-							</div>
-							
+							<td valign="top">
+									<%-- ================= --%>
+									<%-- == 2/2/2008; Two column system, first set of links on left == --%>
+									<%-- == TODO: figure out cleaner approach with jsp/struts includes  --%>
+									<%-- ================= --%>
+									<div id="two_col_left_links">
+										<%@include file="/WEB-INF/jsps/general/botverse_incl/botverse_index_sect.jsp" %>	
+									</div>
+									<div id="two_col_right_links">
+										<%@include file="/WEB-INF/jsps/general/botverse_incl/botverse_index_sect_right.jsp" %>	
+									</div>
+									<%-- (end) ================= --%>
 							</td>
+							
 						</tr>						
 						<%-- ==== Print Map Reduce Top Terms ====  --%>
 						<%-- 
@@ -157,8 +103,7 @@
 						<%-- ==== End of Top Terms ==== ---%>						
 						</table>
 					</div>
-					<%-- ==== End Next Set of Data, Recent Links ==== --%>
-					
+					<%-- ==== End Next Set of Data, Recent Links ==== --%>					
 				</td>
 				<td valign="top" align="right">										
 					<!-- table just for search -->
@@ -175,7 +120,7 @@
 								<table>
 								<tr>
 								<td>
-									<input name="query" size="26" />
+									<input name="query" size="18" />
 								</td>
 								<td>
 									<input type="submit" value=" Search " />
@@ -201,29 +146,8 @@
 					<tr>
 						<td width="100%" rowspan="2" valign="top">
 							<%-- ============================== --%>
-							<%-- Hot Topic Section --%>
-							<%-- ============================== --%>
-							<table cellspacing="0" cellpadding="0" width="100%">
-							<tr>
-								<td style="background-color: #e8e8e8; padding: 4px; width: 100%;">
-									<span >
-									<b>hot search topics</b>
-									</span>
-								</td>						
-							</tr>
-							<tr>
-								<td align="left">
-								   <c:forEach items="${hotTopics}" var="curTopic" varStatus="status">
-									  <div><a href="<c:url value="/spring/search/search.html?querymode=enabled&query=${curTopic.searchTermEncoded}" />"  class="linklist_small">
-									  	* <c:out value="${curTopic.searchTermShorten}" />
-									  </a></div>
-									</c:forEach>									
-								</td>
-							</tr>
-							</table>
-							<%-- ============================== --%>
-							<%-- End Hot topic section --%>
-							<%-- ============================== --%>
+							<%-- Hot Topic Section (deprecated) --%>
+							<%-- ============================== --%>							
 						</td>
 					    <td align="right">
 					    	<%-- == Botlist Logo Image == --%>
