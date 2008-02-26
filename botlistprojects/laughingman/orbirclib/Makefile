@@ -80,3 +80,8 @@ release:
 
 ebin/%.beam: src/%.erl 
 	$(ERLC) $(OPT) -I $(INC) -o ebin $<
+
+ebin/test/%.beam: src/tests/%.erl 
+	$(ERLC) $(OPT) -I $(INC) -o ebin $<
+
+# End of the file 
