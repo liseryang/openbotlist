@@ -4,26 +4,28 @@
 # Based on orbitz
 #**********************************************************
 
-OPT   = -W
-INC   = ./inc
-ERLC  = erlc
-ERL   = erl
-SED   = $(shell which sed)
+TOPDIR := $(shell pwd)
+DATE   = $(shell date +%Y%m%d)
+
+APPLICATION = laughingman
+VERSION     = 0.0.1
 
 ESRC  = ./src
 EBIN  = ./ebin
 
-DESTDIR=.
-RAW_INSTALL_DIR = .
-ERLANG_INSTALL_DIR = $(DESTDIR)/$(RAW_INSTALL_DIR)/lib
+IRC_LIB     = ./orbirclib
+IRC_LIB_SRC = $(IRC_LIB)/src
 
-# (formerly orbitz)
-APPLICATION = orb
-VERSION     = 0.0.1
+TEST_DIR     = ./test/erlang
+TEST_DIR_SRC = $(TEST_DIR)/src
 
-BINDIR      = $(DESTDIR)/usr/bin
-CONFDIR     = $(DESTDIR)/etc/${APPLICATION}
-LOGFILE     = $(DESTDIR)/var/log/${APPLICATION}.log
+ERLC  = erlc
+ERL   = erl
+
+OPT   = -W
+INC   = $(IRC_LIB)/inc
+
+SED   = $(shell which sed)
 
 TMP         = $(wildcard *~) $(wildcard src/*~) $(wildcard inc/*~)
 INC_FILES   = $(wildcard $(INC)/*.hrl)
@@ -32,56 +34,43 @@ CONFFILES   = conf/config.xml $(wildcard conf/*fortune)
 
 TARGET      = $(addsuffix .beam, $(basename \
                  $(addprefix $(EBIN)/, $(notdir $(SRC)))))
-EMAKE       = $(addsuffix \'., $(addprefix \'../, $(SRC)))
 
-SRC_APPFILES   = $(ESRC)/$(APPLICATION).app.src $(ESRC)/$(APPLICATION).rel.src
-TGT_APPFILES_E = $(EBIN)/$(APPLICATION).app
-TGT_APPFILES_P = priv/$(APPLICATION)*
+LIB_TARGET_OBJS = $(EBIN)/bot_app.beam \
+	 $(EBIN)/bot_manager.beam           \
+	 $(EBIN)/bot_supervisor.beam        \
+	 $(EBIN)/dcc.beam                   \
+	 $(EBIN)/dict_proc.beam             \
+	 $(EBIN)/factoid_file_gen.beam      \
+	 $(EBIN)/irc_bot.beam               \
+	 $(EBIN)/irc_lib.beam               \
+	 $(EBIN)/irc_lookup.beam            \
+	 $(EBIN)/msg_dispatch.beam          \
+	 $(EBIN)/p1_db.beam                 \
+	 $(EBIN)/plugin_manager.beam        \
+	 $(EBIN)/rec_convert.beam
 
-SCRIPT   = $(BINDIR)/${APPLICATION}
-BUILD_OPTIONS =	'[{systools, [{variables,[{"ROOT","$(RAW_INSTALL_DIR)"}]}]}, \
-	{sh_script, none}, {report, verbose}, {app_vsn, "$(VERSION)"}, \
-        {make_app, true }, {make_rel, true}].'
-BUILD_OPTIONS_FILE = ./BUILD_OPTIONS 
+TEST_OBJS = $(EBIN)/eunit_examples.beam \
 
-.PHONY: doc
-
-${APPLICATION}: $(TARGET)
+${APPLICATION}: $(TARGET) $(LIB_TARGET_OBJS) $(TEST_OBJS)
 
 all: clean ${APPLICATION}
 
 clean:
-	-rm -f $(TARGET) $(TMP) $(BUILD_OPTIONS_FILE)
-	-rm -f $(TGT_APPFILES)
+	-rm -f $(TARGET) $(TMP)
 	-rm -f ebin/*.beam
 
-build: ${APPLICATION} builder.beam $(SRC_APPFILES)
-# Use builder to make boot file
-	mkdir -p temp
-	ln -sf `pwd` temp/$(APPLICATION)-$(VERSION)
-	(cd temp/$(APPLICATION)-$(VERSION) \
-	 && echo $(BUILD_OPTIONS) > $(BUILD_OPTIONS_FILE) \
-	 && erl -s builder go -s init stop \
-	)
-	rm -rf temp
-
-release:
-	rm -fr $(APPLICATION)-$(VERSION)
-	mkdir -p $(APPLICATION)-$(VERSION)
-	tar zcf tmp.tgz $(SRC) $(SRC_APPFILES) $(INC_FILES) \
-		doc/*.lyx doc/Makefile doc/*.hva doc/*sgml \
-		LICENSE README TODO $(CONFFILES) Makefile \
-		priv/builder.erl ${APPLICATION}.sh.in bofh.fortune
-	tar -C $(APPLICATION)-$(VERSION) -zxf tmp.tgz
-	mkdir $(APPLICATION)-$(VERSION)/ebin
-	tar zvcf  $(APPLICATION)-$(VERSION).tar.gz $(APPLICATION)-$(VERSION)
-	rm -fr $(APPLICATION)-$(VERSION)
-	rm -fr tmp.tgz
-
-ebin/%.beam: src/%.erl 
+ebin/%.beam: $(IRC_LIB_SRC)/%.erl
 	$(ERLC) $(OPT) -I $(INC) -o ebin $<
 
-ebin/test/%.beam: src/tests/%.erl 
+ebin/%.beam: $(TEST_DIR_SRC)/%.erl
 	$(ERLC) $(OPT) -I $(INC) -o ebin $<
+
+ebin/%.beam: $(ESRC)/%.erl
+	$(ERLC) $(OPT) -I $(INC) -o ebin $<
+
+# Start the erl emulator process with the social stats module
+# Also -s erlang halt
+tests: $(APPLICATION)
+	$(ERL) -noshell -pa $(TOPDIR)/ebin -s laughingman test -s erlang halt
 
 # End of the file 

@@ -1,5 +1,5 @@
 -module(eunit_examples).
--export([fib/1]).
+-export([fib/1, fib_test_/0]).
 -include_lib("eunit/include/eunit.hrl").
 
 fib(0) -> 1;
