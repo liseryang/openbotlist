@@ -1,104 +1,180 @@
-%%
-%% File:   laughingman.erl
-%% Date:   2/26/2008
-%%
-%%
 -module(laughingman).
-
--export([start/3, stop/1, init/1]).
--export([message/2]).
--export([test/0]).
 
 -include("irc.hrl").
 
--record(self, {handler, type, mode, args, sock}).
+-export([test/0, test/1, start/1, stop/2, proceed/1]).
+-export([say/3]).
 
-start(Type, Mode, Args) ->
-    % Type is the atom chat or file
-    % Mode is the atom client or server
-    % Args are extra arguments depending on these
-    spawn_link(?MODULE, init, [#self{handler=self(),
-                                    type=Type,
-                                    mode=Mode,
-                                    args=Args}]).
+-record(self, {client, nick, configuration, handler, dict, info}).
 
+start(Client) ->
+    spawn_link(?MODULE, proceed, [Client]).
 
-init(#self{type=chat, mode=client, args=[Host, Port]} = Self) ->
-    {ok, Sock} = gen_tcp:connect(Host, Port, [list, {active, once}]),
-    loop(Self#self{sock=Sock}).
+proceed(Client) ->
+	CurHandler = self(),
+	io:format("Current handler=~p~n", [CurHandler]),
+	Info = #irc_client_info{realname=Client#irc_bot.realname,
+							nick=Client#irc_bot.nick,
+							handler=self(),
+							servers=Client#irc_bot.servers },
+	
+	Configuration = dict_proc:start(dict:from_list([{join_on_connect, 
+													 Client#irc_bot.channels}])),
+	io:format("trace: start_link ~p~n", [Configuration]),
+    case irc_lib:start_link(Info) of
+		{ ok, Client } -> 
+			io:format("Ok Client~n"), 
+			Client;
+		{ _, Sock } -> Sock
+	end,
+	timer:sleep(25000),
+	io:format("trace: set handler~n"),
+    Handler = Client#irc_bot.handler,
+	io:format("invoking proceed~n"),
+	proceed(#self{ client=Client, 
+				   nick=Client#irc_bot.nick,
+				   dict=Client#irc_bot.channels,
+				   configuration=Configuration,
+				   info=Info,
+				   handler=Handler}, connecting).
 
-loop(#self{sock=Sock} = Self) ->
-    inet:setopts(Sock, [{active, once}]),
+proceed(Self, connecting) ->
+	Tmp = Self#self.client, 
+    Client  = Self#self.client,
+    Handler = Self#self.handler,
+	Nick    = Self#self.nick,
+	Info    = Self#self.info,
+	io:format("trace: at proceed() ~p~n", [Info]),
+	io:format("ClientInfo: ~p [handler:~p] ~n", [Client, Handler]),
+	%%join_channels(Client, dict_proc:fetch(join_on_connect, 
+	%%									  Self#self.dict)),	
+	%%irc_lib:join(Client, "#ai-nocrackpots"),
+	%%io:format("join ok!~n"),
     receive
-        {tcp, Sock, Data} ->
-            Self#self.handler ! {dcc_chat, self(), Data},
-            loop(Self);
-        {tcp_closed, Sock} ->
-            Self#self.handler ! {dcc_closed, self()};
-        {tcp_error, Sock, Reason} ->
-            Self#self.handler ! {dcc_error, self(), Reason};
+        { irc_connect, Client, Nick} ->
+			io:format("trace: irc_connect~n"),
+            % Do connect stuff
+            join_channels(Client, dict_proc:fetch(join_on_connect, 
+												  Self#self.configuration)),
+            proceed(Self#self{nick=Nick}, idle);
+        % Only the handler can stop it
+        { stop, Handler, _ } ->
+            Handler ! {stop, self()};
+        Error ->
+			io:format("trace: [!] error: ~p~n", [Error]),
+            exit({'EXIT', Error})
+    end;
+proceed(Self, pong) ->
+    Client=Self#self.client,
+    receive
+        {irc_message, Client, {_, "PONG", _}} ->
+            proceed(Self, idle)
+    after pong_timeout() ->
+            irc_lib:disconnect(Client),
+            irc_lib:connect(Client),
+            proceed(Self, connecting)
+    end;
+proceed(Self, idle) ->
+    Client  = Self#self.client,
+    Nick    = Self#self.nick,
+    Handler = Self#self.handler,
+	io:format("trace: proceed(idle)"),
+    receive
+        { irc_closed, Client } ->
+            irc_lib:connect(Client),
+            proceed(Self, connecting);
+        % Various messages we'll try to handle
+        % Respond to a ping
+        { irc_message, Client, { _,    "PING",    [Server             ]} } ->
+            irc_lib:pong(Client, Server),
+            proceed(Self, idle);
+        % Handle kicks
+        { irc_message, Client, { _,    "KICK",    [Channel, Nick,    _]} } ->
+            irc_lib:join(Client, Channel),
+            proceed(Self, idle);
+        { irc_message, Client, { _,    "KICK",    [Channel, Nick      ]} } ->
+            irc_lib:join(Client, Channel),
+            proceed(Self, idle);
+        % Make sure to relay various messages
+        { irc_message, Client, { From, "PRIVMSG", [To,      Message   ]} } ->
+            irc_relay:relay(From, To, Message),
+            proceed(Self, idle);
 
-        {dcc_message, Message} ->
-            ok = gen_tcp:send(Self#self.sock, Message),
-            loop(Self);
-        {stop, Pid} ->
-            Pid ! stop
+        % Catch all IRC messages
+        { irc_message, Client, _ } ->
+            proceed(Self, idle);
+
+        % Stuff from the client
+        { say, Where, What} ->
+            irc_lib:say(Client, Where, What),
+            proceed(Self, idle);
+        { stop, Handler, Message} ->
+            irc_lib:quit(Client, Message),
+            irc_lib:stop(Client),
+            Handler ! {stop, self()}
+    
+    after connection_timeout() ->
+            irc_lib:ping(Client),
+            proceed(Self, pong)
     end.
 
+join_channels(Bot, [Channel | Rest]) ->
+    irc_lib:join(Bot, Channel),
+    join_channels(Bot, Rest);
+join_channels(_, []) ->
+    ok.
 
-message(Client, Message) ->
-    Client ! {dcc_message, Message}.
+connection_timeout() ->
+    % 10 minutes
+    600000.
 
-stop(Client) ->
-    Client ! {stop, self()},
+pong_timeout() ->
+    % 10 Seconds
+    10000.
+
+% -------------------------------------------------------------
+% Functions used to interact with the bot
+say(Bot, Where, What) ->
+	io:format("trace: say()~n"),
+    Bot ! {say, Where, What}.
+
+stop(Bot, Message) ->
+    Bot ! {stop, self(), Message},
     receive
-        stop ->
-            stop
+        {stop, Bot} -> ok
     end.
 
-% Parse out the data from the dcc string
-parse_dcc([1 | Rest]) ->
-    parse_dcc(string:tokens(Rest, " "));
-parse_dcc(["DCC", "CHAT", "CHAT", Host, Port]) ->
-    {ok, chat, convert_from_numeric_ip(Host), element(1, string:to_integer(strip_terminater(Port)))}.
-
-strip_terminater([1 | Val]) ->
-    lists:reverse(Val);
-strip_terminater(Val) ->
-    strip_terminater(lists:reverse(Val)).
-
-convert_from_numeric_ip(Host) ->
-    list_to_tuple(binary_to_list(<<(element(1, string:to_integer(Host))):32>>)).
-
-test_old() ->
-    P = irc_lib:start_link(#irc_client_info{realname="foo", 
-											nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
-    get_privmsg(P),
-    [_, Dccdata] = get_privmsg(P),
-    {ok, chat, Host, Port} = parse_dcc(Dccdata),
-    test_dcc(start(chat, client, [Host, Port])),
-    irc_lib:quit(P, "zonks"),
-    irc_lib:stop(P).
-
+% -------------------------------------------------------------
+% Unit tests
 test() ->
-    P = irc_lib:start_link(#irc_client_info{realname="foo", 
-											nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
-	irc_lib:join(P, "erlang"),
-    irc_lib:quit(P, "zonks"),
-    irc_lib:stop(P).
+    irc_lookup:start(),
+    P = start(#irc_bot{nick="ort_test", 
+					   realname="foo",
+					   handler=self(),
+					   servers=[{"irc.freenode.net", 6667}], 
+					   channels=["#ai-nocrackpots"]}),
+    timer:sleep(25000),
+    say(P, "#ai-nocrackpots", "This is test"),
+    stop(P, "zoinks"),
+    irc_lookup:shutdown().
 
-get_privmsg(Client) ->
-    receive
-        {irc_message, Client, {_, "PRIVMSG", Args}} ->
-            io:format("~w~n", [Args]),
-            Args
-    end.
+test(idling) ->
+    P = start(#irc_bot{nick="ort_test", 
+					   realname="foo", 
+					   servers=[{"irc.freenode.net", 6667}], 
+					   channels=["#ai-nocrackpots"]}),
+    wait_for_messages(P),
+    say(P, "#ai-nocrackpots", "ok, exiting"),
+    stop(P, ""),
+    irc_lookup:shutdown().
 
-test_dcc(P) ->
+wait_for_messages(Client) ->
     receive
         Anything ->
-            io:format("~w~n", [Anything]),
-            test_dcc(P)
-    after 20000 ->
-            ok
+            io:format("Anything: ~w~n", [Anything]),
+            wait_for_messages(Client)
+    after connection_timeout() + 10000 ->
+            io:format("Timed out")
     end.
+
+%% End of File
