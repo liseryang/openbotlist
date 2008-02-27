@@ -9,7 +9,7 @@
 -export([message/2]).
 -export([test/0]).
 
--include("orbirclib/irc.hrl").
+-include("irc.hrl").
 
 -record(self, {handler, type, mode, args, sock}).
 
@@ -70,8 +70,9 @@ strip_terminater(Val) ->
 convert_from_numeric_ip(Host) ->
     list_to_tuple(binary_to_list(<<(element(1, string:to_integer(Host))):32>>)).
 
-test() ->
-    P = irc_lib:start(#irc_client_info{realname="foo", nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
+test_old() ->
+    P = irc_lib:start_link(#irc_client_info{realname="foo", 
+											nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
     get_privmsg(P),
     [_, Dccdata] = get_privmsg(P),
     {ok, chat, Host, Port} = parse_dcc(Dccdata),
@@ -79,6 +80,12 @@ test() ->
     irc_lib:quit(P, "zonks"),
     irc_lib:stop(P).
 
+test() ->
+    P = irc_lib:start_link(#irc_client_info{realname="foo", 
+											nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
+	irc_lib:join(P, "erlang"),
+    irc_lib:quit(P, "zonks"),
+    irc_lib:stop(P).
 
 get_privmsg(Client) ->
     receive
