@@ -74,6 +74,7 @@ handle_call(get_nick, _From, #state{nick=Nick} = State) ->
 handle_call(get_irclib, _From, #state{irclib=Irclib} = State) ->
     {reply, {ok, Irclib}, State};
 handle_call({say, Where, What}, _From, #state{irclib=Irclib} = State) ->
+	io:format("trace: irc_bot:say()~n"),
     irc_lib:say(Irclib, Where, What),
     {reply, ok, State};
 handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
@@ -89,6 +90,7 @@ handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
 %%--------------------------------------------------------------------
 handle_cast({irc_connect, Nick}, #state{state=connecting, dict=Dict, irclib=Irclib} = State) ->
     % Do connect stuff
+	io:format("no dice"),
     join_channels(Irclib, dict_proc:fetch(join_on_connect, Dict)),
     {noreply, State#state{nick=Nick, state=idle}};
 handle_cast({stop, _}, #state{state=connecting} = State) ->
@@ -173,6 +175,7 @@ code_change(_OldVsn, State, _Extra) ->
 %%--------------------------------------------------------------------
 
 join_channels(Bot, [Channel | Rest]) ->
+	io:format("trace: irc_bot:join_channels()"),
     irc_lib:join(Bot, Channel),
     join_channels(Bot, Rest);
 join_channels(_, []) ->

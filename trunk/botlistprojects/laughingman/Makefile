@@ -50,6 +50,7 @@ LIB_TARGET_OBJS = $(EBIN)/bot_app.beam \
 	 $(EBIN)/rec_convert.beam
 
 TEST_OBJS = $(EBIN)/eunit_examples.beam \
+	$(EBIN)/simple_irc_lib.beam
 
 ${APPLICATION}: $(TARGET) $(LIB_TARGET_OBJS) $(TEST_OBJS)
 

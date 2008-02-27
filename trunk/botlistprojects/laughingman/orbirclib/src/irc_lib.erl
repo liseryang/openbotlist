@@ -99,9 +99,9 @@ handle_cast({irc_send_command, {"NICK", [Nick]}}, #state{sock=Sock, client=Clien
     dict_proc:store(nick, Nick, Client),
     {noreply, State};
 handle_cast({irc_send_command, Command}, #state{sock=Sock} = State) ->
+	io:format("trace: handle_cast"),
     send_command(Sock, Command),
     {noreply, State}.
-
 
 %%--------------------------------------------------------------------
 %% Function: handle_info(Info, State) -> {noreply, State} |
@@ -273,12 +273,12 @@ connect_to_next_server(Dict) ->
 %% Public interface
 %% ---------------------------------
 send_client_command(Irclib, Command, Args) ->
+	io:format("trace: irc_lib.invoke cast(1) {{ ~p ~p }}~n", [Command, Args]), 
     gen_server:cast(Irclib, {irc_send_command, {Command, Args}}).
 
 send_client_command(Irclib, Command) ->
+	io:format("trace: irc_lib.invoke cast(2)"), 
     gen_server:cast(Irclib, {irc_send_command, {Command}}).
-
-
 
 % Functions used to send various command sto the client
 pong(Irclib, Server) ->
@@ -291,9 +291,12 @@ whois(Irclib, Who) ->
     send_client_command(Irclib, "WHOIS", [Who]).
 
 join(Irclib, {Channel, Pass}) ->
+	io:format("trace: join(a)@~p~n", [Channel]),
     send_client_command(Irclib, "JOIN", [Channel, Pass]);
 join(Irclib, Channel) when list(Channel) ->
-    send_client_command(Irclib, "JOIN", [Channel]).
+	io:format("trace: join@~p~n", [Channel]),
+	%% TODO: remove test code
+    send_client_command(Irclib, "JOIN").
 
 quit(Irclib) ->
     send_client_command(Irclib, "QUIT").
