@@ -99,7 +99,7 @@ handle_cast({irc_send_command, {"NICK", [Nick]}}, #state{sock=Sock, client=Clien
     dict_proc:store(nick, Nick, Client),
     {noreply, State};
 handle_cast({irc_send_command, Command}, #state{sock=Sock} = State) ->
-	io:format("trace: handle_cast"),
+	io:format("trace: handle_cast~n"),
     send_command(Sock, Command),
     {noreply, State}.
 
@@ -197,8 +197,6 @@ handle_data(#state{handler=Handler}, Message) ->
     gen_server:cast(Handler, {irc_message, Message}),
     idle.
 
-
-
 % Parsing functions
 split_once(String, Char) ->
     case string:chr(String, Char) of
@@ -277,7 +275,7 @@ send_client_command(Irclib, Command, Args) ->
     gen_server:cast(Irclib, {irc_send_command, {Command, Args}}).
 
 send_client_command(Irclib, Command) ->
-	io:format("trace: irc_lib.invoke cast(2)"), 
+	io:format("trace: irc_lib.invoke cast(2)~p~n", [Irclib]),
     gen_server:cast(Irclib, {irc_send_command, {Command}}).
 
 % Functions used to send various command sto the client
@@ -295,8 +293,7 @@ join(Irclib, {Channel, Pass}) ->
     send_client_command(Irclib, "JOIN", [Channel, Pass]);
 join(Irclib, Channel) when list(Channel) ->
 	io:format("trace: join@~p~n", [Channel]),
-	%% TODO: remove test code
-    send_client_command(Irclib, "JOIN").
+    send_client_command(Irclib, "JOIN", [Channel]).
 
 quit(Irclib) ->
     send_client_command(Irclib, "QUIT").
@@ -320,6 +317,7 @@ say(Irclib, Where, What) ->
     send_client_command(Irclib, "PRIVMSG", [Where, ":" ++ What]).
 
 connect(Irclib) ->
+	io:format("trace: connecting..."),
     gen_server:cast(Irclib, irc_connect).
 %%     Irclib ! {irc_connect, self()}.
 
