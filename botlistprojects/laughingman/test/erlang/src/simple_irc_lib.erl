@@ -85,11 +85,17 @@ test() ->
 											nick="ort_test", 
 											handler=self(), 
 											servers=[{"irc.freenode.org", 6667}]}),
-	io:format("irc_lib:start_link ->~p ~n", [P]),
-	timer:sleep(25000),
-	irc_lib:join(P, "erlang"),
-    irc_lib:quit(P, "zonks"),
-    irc_lib:stop(P).
+	case P of
+		{ ok, Irclib } ->
+			io:format("irc_lib:start_link ->~p ~n", [P]),
+			timer:sleep(18000),
+			irc_lib:join(Irclib, "#erlang"),
+			timer:sleep(10000),
+			irc_lib:quit(Irclib, "zonks"),
+			irc_lib:stop(Irclib);
+		{ error, _ } -> 
+			io:format ("ERROR~n")	
+	end.
 
 get_privmsg(Client) ->
     receive

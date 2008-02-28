@@ -57,8 +57,9 @@ ${APPLICATION}: $(TARGET) $(LIB_TARGET_OBJS) $(TEST_OBJS)
 all: clean ${APPLICATION}
 
 clean:
-	-rm -f $(TARGET) $(TMP)
-	-rm -f ebin/*.beam
+	-rm -vf $(TARGET) $(TMP)
+	-rm -vf erl_crash.dump
+	-rm -vf ebin/*.beam
 
 ebin/%.beam: $(IRC_LIB_SRC)/%.erl
 	$(ERLC) $(OPT) -I $(INC) -o ebin $<
@@ -72,6 +73,6 @@ ebin/%.beam: $(ESRC)/%.erl
 # Start the erl emulator process with the social stats module
 # Also -s erlang halt
 tests: $(APPLICATION)
-	$(ERL) -noshell -pa $(TOPDIR)/ebin -s laughingman test -s erlang halt
+	$(ERL) -noshell -pa $(TOPDIR)/ebin -s simple_irc_lib test -s erlang halt
 
 # End of the file 
