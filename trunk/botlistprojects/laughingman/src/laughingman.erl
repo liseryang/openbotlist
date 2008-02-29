@@ -21,10 +21,15 @@ proceed(Client) ->
 	Configuration = dict_proc:start(dict:from_list([{join_on_connect, 
 													 Client#irc_bot.channels}])),
 	io:format("trace: start_link ~p~n", [Configuration]),
-    case irc_lib:start_link(Info) of
+	P = irc_lib:start_link(Info),
+    case P of
 		{ ok, Client } -> 
 			io:format("Ok Client~n"), 
 			Client;
+		{ ignore } ->
+			io:format("ignore~n");
+		{ error, Error} ->
+			io:format("ignore~n");
 		{ _, Sock } -> Sock
 	end,
 	timer:sleep(25000),
@@ -152,19 +157,25 @@ test() ->
 					   realname="foo",
 					   handler=self(),
 					   servers=[{"irc.freenode.net", 6667}], 
-					   channels=["#ai-nocrackpots"]}),
-    timer:sleep(25000),
-    say(P, "#ai-nocrackpots", "This is test"),
-    stop(P, "zoinks"),
+					   channels=["#botlist"]}),
+	io:format("irc_lib:start_link ->~p ~n", [P]),
+	case P of
+		{ ok, Irclib } ->
+			timer:sleep(19000),
+			say(P, "#botlist", "This is test"),
+			stop(P, "bye");
+		{ error, _ } -> 
+			io:format ("ERROR~n")
+	end,
     irc_lookup:shutdown().
 
 test(idling) ->
-    P = start(#irc_bot{nick="ort_test", 
-					   realname="foo", 
+    P = start(#irc_bot{nick="laughingman", 
+					   realname="laughingman", 
 					   servers=[{"irc.freenode.net", 6667}], 
-					   channels=["#ai-nocrackpots"]}),
+					   channels=["#botlist"]}),
     wait_for_messages(P),
-    say(P, "#ai-nocrackpots", "ok, exiting"),
+    say(P, "#botlist", "ok, exiting"),
     stop(P, ""),
     irc_lookup:shutdown().
 

@@ -70,16 +70,6 @@ strip_terminater(Val) ->
 convert_from_numeric_ip(Host) ->
     list_to_tuple(binary_to_list(<<(element(1, string:to_integer(Host))):32>>)).
 
-test_old() ->
-    P = irc_lib:start_link(#irc_client_info{realname="foo", 
-											nick="ort_test", handler=self(), servers=[{"irc.freenode.org", 6667}]}),
-    get_privmsg(P),
-    [_, Dccdata] = get_privmsg(P),
-    {ok, chat, Host, Port} = parse_dcc(Dccdata),
-    test_dcc(start(chat, client, [Host, Port])),
-    irc_lib:quit(P, "zonks"),
-    irc_lib:stop(P).
-
 test() ->
     P = irc_lib:start_link(#irc_client_info{realname="foo", 
 											nick="ort_test", 
@@ -89,7 +79,7 @@ test() ->
 		{ ok, Irclib } ->
 			io:format("irc_lib:start_link ->~p ~n", [P]),
 			timer:sleep(18000),
-			irc_lib:join(Irclib, "#erlang"),
+			irc_lib:join(Irclib, "#botlist"),
 			timer:sleep(10000),
 			irc_lib:quit(Irclib, "zonks"),
 			irc_lib:stop(Irclib);
@@ -102,13 +92,4 @@ get_privmsg(Client) ->
         {irc_message, Client, {_, "PRIVMSG", Args}} ->
             io:format("~w~n", [Args]),
             Args
-    end.
-
-test_dcc(P) ->
-    receive
-        Anything ->
-            io:format("~w~n", [Anything]),
-            test_dcc(P)
-    after 20000 ->
-            ok
     end.
