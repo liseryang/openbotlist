@@ -175,7 +175,7 @@ code_change(_OldVsn, State, _Extra) ->
 %%--------------------------------------------------------------------
 
 join_channels(Bot, [Channel | Rest]) ->
-	io:format("trace: irc_bot:join_channels()"),
+	io:format("trace: irc_bot:join_channels()"),  
     irc_lib:join(Bot, Channel),
     join_channels(Bot, Rest);
 join_channels(_, []) ->
