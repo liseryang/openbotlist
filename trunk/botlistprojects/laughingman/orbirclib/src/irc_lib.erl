@@ -4,6 +4,12 @@
 %%% Description : 
 %%%
 %%% Created :  9 Mar 2006 by ortitz <orbitz@blong.orbitz>
+%%%
+%%% Revision History:
+%%%
+%%% + 2/28/2008 - Berlin Brown:
+%%% The handler in handle_class must be an irc_bot gen_server
+%%% Handler = handle_cast:irc_message, irc_closed
 %%%-------------------------------------------------------------------
 -module(irc_lib).
 -include("irc.hrl").
@@ -60,6 +66,8 @@ init([Client]) ->
     {ok, #state{sock=Sock, handler=dict_proc:fetch(handler, Dict), client=Dict, state=connecting}}.
 
 %%--------------------------------------------------------------------
+%% From = is a tuple {Pid, Tag} where Pid is the 
+%%        pid of the client and Tag is a unique tag. 
 %% Function: %% handle_call(Request, From, State) -> {reply, Reply, State} |
 %%                                      {reply, Reply, State, Timeout} |
 %%                                      {noreply, State} |
@@ -72,6 +80,7 @@ handle_call(irc_stop, _From, #state{state=stop} = State) ->
     {stop, success, irc_stop, State};
 handle_call(irc_connect, _From, #state{client=Client, state=disconn} = State) ->
     % Need to fix this so it connects and adjusts state accordingly
+	io:format("trace: handle_call:irc_connect~n"),
     {ok, Sock} = connect_to_next_server(Client),
     {reply, ok, State#state{sock=Sock, state=connecting}};
 handle_call(irc_stop, _From, #state{state=disconn} = State) ->
@@ -80,15 +89,14 @@ handle_call(irc_disconnect, _From, #state{sock=Sock} = State) ->
     ok = gen_tcp:close(Sock),
     {reply, ok, State#state{sock=nil, state=disconn}}.
 
-
-
 %%--------------------------------------------------------------------
 %% Function: handle_cast(Msg, State) -> {noreply, State} |
 %%                                      {noreply, State, Timeout} |
 %%                                      {stop, Reason, State}
 %% Description: Handling cast messages
 %%--------------------------------------------------------------------
-handle_cast(irc_connect, #state{client=Client, state=disconn} = State) ->
+handle_cast({irc_connect}, #state{client=Client, state=disconn} = State) ->
+	io:format("trace: handle_cast:irc_connect~n"),
     {ok, Sock} = connect_to_next_server(Client),
     {noreply, State#state{sock=Sock, state=connecting}};
 handle_cast({irc_send_command, {"PING"}}, #state{sock=Sock, client=Client} = State) ->
@@ -99,8 +107,9 @@ handle_cast({irc_send_command, {"NICK", [Nick]}}, #state{sock=Sock, client=Clien
     dict_proc:store(nick, Nick, Client),
     {noreply, State};
 handle_cast({irc_send_command, Command}, #state{sock=Sock} = State) ->
-	io:format("trace: handle_cast~n"),
-    send_command(Sock, Command),
+	io:format("trace: handle_cast [sock: ~p]~n", [Sock]),
+    send_command(Sock, Command),	
+	io:format("trace: irc_lib:irc_send_command:handle_cast <end>~n"),
     {noreply, State}.
 
 %%--------------------------------------------------------------------
@@ -144,7 +153,7 @@ code_change(_OldVsn, State, _Extra) ->
     {ok, State}.
 
 %%--------------------------------------------------------------------
-%%% Internal functions
+%% Internal functions
 %%--------------------------------------------------------------------
 
 % This function sends commands off to the handler, if required it will also build up certina message (just a tupple or list)
@@ -167,7 +176,6 @@ handle_data(#state{state={whois, Info}}, {_, "RPL_WHOISOPERATOR", Args}) ->
 handle_data(#state{handler=Handler, state={whois, Info}}, {_, "RPL_ENDOFWHOIS", _}) ->
     gen_server:cast(Handler, {irc_message, whois, Info}),
     idle;
-
 % Send login data when we connect
 handle_data(#state{state=connecting, client=Client, sock=Sock}, _) ->
     case dict_proc:fetch(password, Client) of
@@ -178,7 +186,6 @@ handle_data(#state{state=connecting, client=Client, sock=Sock}, _) ->
     end,
     send_command(Sock, [{"NICK", [dict_proc:fetch(nick, Client)]}, {"USER", ["1", "2", "3", ":" ++ dict_proc:fetch(realname, Client)]}]),
     nick_verify;
-
 % Make sure the nick is good and if so tell the client they are connected
 handle_data(#state{state=nick_verify, sock=Sock, client=Client}, {_, "ERR_NICKCOLLISION", _}) ->
     dict_proc:store(nick, dict_proc:fetch(nick, Client) ++ "_", Client),
@@ -186,16 +193,24 @@ handle_data(#state{state=nick_verify, sock=Sock, client=Client}, {_, "ERR_NICKCO
     nick_verify;
 handle_data(#state{state=nick_verify} = State, {_, "ERR_NICKNAMEINUSE", _}) ->
     handle_data(State, {'_', "ERR_NICKCOLLISION", '_'});
-handle_data(#state{state=nick_verify, handler=Handler, client=Client}, {_, "RPL_WELCOME", _}) ->
-    gen_server:cast(Handler, {irc_connect, dict_proc:fetch(nick, Client)}),
+handle_data(#state{state=nick_verify, handler=Handler, client=Client}, {_, "RPL_WELCOME", _ }) ->
+	io:format("trace: handle_data rpl_welcome:[~p][~p][~p]~n", [Handler, Client, nick_verify]),
+	gen_server:cast(Client, { irc_connect, dict_proc:fetch(nick, Client) }),
+	io:format("...~n"),
     idle;
 handle_data(#state{state=nick_verify}, _) ->
     nick_verify;
-
 % Anything else should get sent to the handler
-handle_data(#state{handler=Handler}, Message) ->
-    gen_server:cast(Handler, {irc_message, Message}),
+handle_data(#state{handler=Handler, client=Client}, Message) ->
+	io:format("trace: handle_data<else>: message:[~p]~nclient:[~p]~nhandler:[~p] [END]~n", [Message, Client, Handler]),
+	io:format("~p||| ", [Message]),
+    gen_server:cast(Client, {irc_message, Message}),
+	%io:format("...~n"),
     idle.
+
+%%--------------------------------------------------------------------
+%% END OF HANDLE DATA
+%%--------------------------------------------------------------------
 
 % Parsing functions
 split_once(String, Char) ->
@@ -235,7 +250,6 @@ scan_string(Data) ->
     [Command | Args] = parse_args(strip_lineend(Data)),
     {"", Command, Args}.
    
-
 send_command(Sock, {Command, Params})  ->
     ok = gen_tcp:send(Sock, lists:foldl(
                               fun(Elm, Acc) ->
@@ -262,6 +276,7 @@ connect(Server, Port) ->
     gen_tcp:connect(Server, Port, [list, {active, once}, {packet, line}]).
 
 connect_to_next_server(Dict) ->
+	io:format("trace: connect_to_next_server ~p~n", [Dict]),
     {Serverlist, Server, Port} = get_next_server(dict_proc:fetch(servers, Dict)),
     dict_proc:store(servers, Serverlist, Dict),
     % This is horribly broken and should be done in handle_info or handle_call whatever
@@ -271,7 +286,7 @@ connect_to_next_server(Dict) ->
 %% Public interface
 %% ---------------------------------
 send_client_command(Irclib, Command, Args) ->
-	io:format("trace: irc_lib.invoke cast(1) {{ ~p ~p }}~n", [Command, Args]), 
+	io:format("trace: irc_lib.invoke cast(1) {{ ~p|~p ~p }}~n", [Irclib, Command, Args]),
     gen_server:cast(Irclib, {irc_send_command, {Command, Args}}).
 
 send_client_command(Irclib, Command) ->
@@ -289,10 +304,10 @@ whois(Irclib, Who) ->
     send_client_command(Irclib, "WHOIS", [Who]).
 
 join(Irclib, {Channel, Pass}) ->
-	io:format("trace: join(a)@~p~n", [Channel]),
+	io:format("trace: join<a>@~p~n", [Channel]),
     send_client_command(Irclib, "JOIN", [Channel, Pass]);
 join(Irclib, Channel) when list(Channel) ->
-	io:format("trace: join@~p~n", [Channel]),
+	io:format("trace: join<b>@~p~n", [Channel]),
     send_client_command(Irclib, "JOIN", [Channel]).
 
 quit(Irclib) ->
@@ -346,3 +361,5 @@ decode_mask(host, [C | Rest], {Nick, Ident, Host}) ->
     decode_mask(host, Rest, {Nick, Ident, [C | Host]});
 decode_mask(host, [], {Nick, Ident, Host}) ->
     {ok, lists:reverse(Nick), lists:reverse(Ident), lists:reverse(Host)}.
+
+%% End of File
