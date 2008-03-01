@@ -71,8 +71,8 @@ convert_from_numeric_ip(Host) ->
     list_to_tuple(binary_to_list(<<(element(1, string:to_integer(Host))):32>>)).
 
 test() ->
-    P = irc_lib:start_link(#irc_client_info{realname="foo", 
-											nick="ort_test", 
+    P = irc_lib:start_link(#irc_client_info{realname="laughingman24", 
+											nick="laughingman24", 
 											handler=self(), 
 											servers=[{"irc.freenode.org", 6667}]}),
 	case P of
@@ -80,7 +80,9 @@ test() ->
 			io:format("irc_lib:start_link ->~p ~n", [P]),
 			timer:sleep(18000),
 			irc_lib:join(Irclib, "#botlist"),
-			timer:sleep(10000),
+			timer:sleep(4000),
+			irc_lib:say(Irclib, "#botlist", "Hello"),
+			timer:sleep(6000),
 			irc_lib:quit(Irclib, "zonks"),
 			irc_lib:stop(Irclib);
 		{ error, _ } -> 
@@ -93,3 +95,5 @@ get_privmsg(Client) ->
             io:format("~w~n", [Args]),
             Args
     end.
+
+%% End of File

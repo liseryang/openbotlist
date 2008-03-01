@@ -73,6 +73,7 @@ ebin/%.beam: $(ESRC)/%.erl
 # Start the erl emulator process with the social stats module
 # Also -s erlang halt
 tests: $(APPLICATION)
-	$(ERL) -noshell -pa $(TOPDIR)/ebin -s laughingman test -s erlang halt
+	$(ERL) -noshell -pa $(TOPDIR)/ebin -s laughingman start_laughingman -s erlang halt
+#	$(ERL) -noshell -pa $(TOPDIR)/ebin -s simple_irc_lib test -s erlang halt
 
 # End of the file 

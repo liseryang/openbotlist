@@ -1,4 +1,0 @@
-{release, {"Manderlbot", "&manderlbot_vsn&"}, 
- {erts, "&erts_vsn&"},
- [{kernel,"&kernel_vsn&"},
-  {stdlib,"&stdlib_vsn&"}]}.
