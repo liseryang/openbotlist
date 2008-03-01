@@ -107,7 +107,7 @@ handle_cast({irc_send_command, {"NICK", [Nick]}}, #state{sock=Sock, client=Clien
     dict_proc:store(nick, Nick, Client),
     {noreply, State};
 handle_cast({irc_send_command, Command}, #state{sock=Sock} = State) ->
-	io:format("trace: handle_cast [sock: ~p]~n", [Sock]),
+	io:format("trace: handle_cast [sock: ~p, cmd:~p]~n", [Sock, Command]),
     send_command(Sock, Command),	
 	io:format("trace: irc_lib:irc_send_command:handle_cast <end>~n"),
     {noreply, State}.
@@ -123,6 +123,7 @@ handle_info({tcp, Sock, Data}, State) ->
     {Prefix, Command, Args} = scan_string(Data),
     {noreply, State#state{state=handle_data(State, {Prefix, irc_lookup:translate_command(Command), Args})}};
 handle_info({tcp_closed, Sock}, #state{handler=Handler} = State) ->
+	io:format("trace: irc_lib:tcp_closed.handle_info [~p]~n", [Handler]),
     inet:setopts(Sock, [{active, once}]),
     gen_server:cast(Handler, irc_closed),
     {noreply, State#state{state=disconn}};
@@ -195,17 +196,15 @@ handle_data(#state{state=nick_verify} = State, {_, "ERR_NICKNAMEINUSE", _}) ->
     handle_data(State, {'_', "ERR_NICKCOLLISION", '_'});
 handle_data(#state{state=nick_verify, handler=Handler, client=Client}, {_, "RPL_WELCOME", _ }) ->
 	io:format("trace: handle_data rpl_welcome:[~p][~p][~p]~n", [Handler, Client, nick_verify]),
-	gen_server:cast(Client, { irc_connect, dict_proc:fetch(nick, Client) }),
-	io:format("...~n"),
+	gen_server:cast(Handler, { irc_connect, dict_proc:fetch(nick, Client) }),
     idle;
 handle_data(#state{state=nick_verify}, _) ->
     nick_verify;
 % Anything else should get sent to the handler
 handle_data(#state{handler=Handler, client=Client}, Message) ->
-	io:format("trace: handle_data<else>: message:[~p]~nclient:[~p]~nhandler:[~p] [END]~n", [Message, Client, Handler]),
-	io:format("~p||| ", [Message]),
-    gen_server:cast(Client, {irc_message, Message}),
-	%io:format("...~n"),
+	io:format("|||trace: handle_data<else>: message:[~p]~nclient:[~p]~nhandler:[~p] [END]~n", [Message, Client, Handler]),
+	%io:format("~p||| ", [Message]),
+    gen_server:cast(Handler, {irc_message, Message}),
     idle.
 
 %%--------------------------------------------------------------------
@@ -332,8 +331,8 @@ say(Irclib, Where, What) ->
     send_client_command(Irclib, "PRIVMSG", [Where, ":" ++ What]).
 
 connect(Irclib) ->
-	io:format("trace: connecting..."),
-    gen_server:cast(Irclib, irc_connect).
+	io:format("trace: connecting...~n").
+    %gen_server:cast(Irclib, irc_connect).
 %%     Irclib ! {irc_connect, self()}.
 
 disconnect(Irclib) ->

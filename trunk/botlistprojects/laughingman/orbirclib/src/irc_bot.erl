@@ -1,7 +1,7 @@
 %%%-------------------------------------------------------------------
 %%% File    : irc_bot2.erl
 %%% Author  : ortitz <orbitz@blong.orbitz>
-%%% Description : Irc bot gen server
+%%% Description : Irc bot gen_server
 %%%
 %%% Created : 23 Mar 2006 by ortitz <orbitz@blong.orbitz>
 %%%-------------------------------------------------------------------
@@ -47,14 +47,16 @@ start_link(Client) ->
 %% Description: Initiates the server
 %%--------------------------------------------------------------------
 init([Client]) ->
+	io:format("irc_bot:init~n"),
     {ok, Ref} = timer:send_interval(connection_timeout(), timed_ping),
-    ok = bot_manager:store(Client#irc_bot.botname, self()),
+    %ok = bot_manager:store(Client#irc_bot.botname, self()),
     {ok, Pid} = irc_lib:start_link(
                   #irc_client_info{nick=Client#irc_bot.nick,
                                    realname=Client#irc_bot.realname,
                                    servers=Client#irc_bot.servers,
                                    handler=self(),
                                    password=Client#irc_bot.password}),
+	io:format("irc_bot:init start_link.pid: ~p~n", [Pid]),
     {ok, #state{irclib=Pid,
                 dict=dict_proc:start(dict:from_list([{join_on_connect, Client#irc_bot.channels}])),
                 connection_timeout=Ref,
@@ -62,7 +64,7 @@ init([Client]) ->
 
 %%--------------------------------------------------------------------
 %% Function: %% handle_call(Request, From, State) -> {reply, Reply, State} |
-%%                                      {reply, Reply, State, Timeout} |
+%%                                      {reply, Reply, State, Timeout} 
 %%                                      {noreply, State} |
 %%                                      {noreply, State, Timeout} |
 %%                                      {stop, Reason, Reply, State} |
@@ -74,7 +76,7 @@ handle_call(get_nick, _From, #state{nick=Nick} = State) ->
 handle_call(get_irclib, _From, #state{irclib=Irclib} = State) ->
     {reply, {ok, Irclib}, State};
 handle_call({say, Where, What}, _From, #state{irclib=Irclib} = State) ->
-	io:format("trace: irc_bot:say()~n"),
+	io:format("trace: irc_bot:handle_call:say()~n"),
     irc_lib:say(Irclib, Where, What),
     {reply, ok, State};
 handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
@@ -88,9 +90,10 @@ handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
 %%                                      {stop, Reason, State}
 %% Description: Handling cast messages
 %%--------------------------------------------------------------------
-handle_cast({irc_connect, Nick}, #state{state=connecting, dict=Dict, irclib=Irclib} = State) ->
+handle_cast({irc_connect, Nick}, #state{state=connecting, dict=Dict, 
+										irclib=Irclib} = State) ->
     % Do connect stuff
-	io:format("no dice"),
+	io:format("trace: irc_bot:irc_connect~n"),
     join_channels(Irclib, dict_proc:fetch(join_on_connect, Dict)),
     {noreply, State#state{nick=Nick, state=idle}};
 handle_cast({stop, _}, #state{state=connecting} = State) ->
@@ -99,6 +102,7 @@ handle_cast({irc_message, {_, "PONG", _}}, #state{state=pong, pong_timeout=Ref} 
     {ok, cancel} = timer:cancel(Ref),
     {noreply, State#state{state=idle, pong_timeout=undefined}};
 handle_cast(irc_closed, #state{irclib=Irclib} = State) ->
+	io:format("trace: irc_bot:irc_closed~n"),
     irc_lib:connect(Irclib),
     {noreply, State#state{state=connecting}};
 handle_cast({irc_message, {_, "PING", [Server]}}, #state{irclib=Irclib} = State) ->
@@ -133,7 +137,6 @@ handle_cast({say, Where, What}, #state{irclib=Irclib} = State) ->
 handle_cast({irc_message, _}, State) ->
     {noreply, State}.
 
-
 %%--------------------------------------------------------------------
 %% Function: handle_info(Info, State) -> {noreply, State} |
 %%                                       {noreply, State, Timeout} |
@@ -160,7 +163,7 @@ handle_info(timed_ping, #state{irclib=Irclib} = State) ->
 terminate(_Reason, #state{connection_timeout=Ref, dict=Dict}) ->
     timer:cancel(Ref),
     dict_proc:stop(Dict),
-    bot_manager:erase(self()),
+    %bot_manager:erase(self()),
     ok.
 
 %%--------------------------------------------------------------------
@@ -189,10 +192,10 @@ pong_timeout() ->
     % 10 Seconds
     10000.
 
-
 % -------------------------------------------------------------
 % Functions used to interact with the bot
 say(Bot, Where, What) ->
+	io:format("trace: irc_bot:say<attempt cast>~n"),
     gen_server:cast(Bot, {say, Where, What}).
 
 stop(Bot, Message) ->
