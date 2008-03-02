@@ -21,7 +21,7 @@
 
 %% API exports
 -export([add_bot/1, say/3, stop/2]).
--export([get_irclib/1, get_nick/1]).
+-export([get_irclib/1, get_nick/1, get_cur_state/1]).
 
 -record(state, {nick, dict, state, irclib, pong_timeout=undefined, connection_timeout}).
 
@@ -44,7 +44,10 @@ start_link(Client) ->
 %%                         {ok, State, Timeout} |
 %%                         ignore               |
 %%                         {stop, Reason}
+%%
 %% Description: Initiates the server
+%% Whenever a gen_server is started using gen_server:start/3,4 
+%% or gen_server:start_link/3,4, this function is called by the new process to initialize. 
 %%--------------------------------------------------------------------
 init([Client]) ->
 	io:format("irc_bot:init~n"),
@@ -79,10 +82,15 @@ handle_call({say, Where, What}, _From, #state{irclib=Irclib} = State) ->
 	io:format("trace: irc_bot:handle_call:say()~n"),
     irc_lib:say(Irclib, Where, What),
     {reply, ok, State};
+handle_call(get_cur_state, _From, #state{} = State) ->
+	% Generic method to get the current state.
+	io:format("trace: irc_bot:handle_call:get_cur_state~n"),
+	{reply, {ok, State}, State};
 handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
     irc_lib:quit(Irclib, Message),
     irc_lib:stop(Irclib),
     {stop, stop, State}.
+
 
 %%--------------------------------------------------------------------
 %% Function: handle_cast(Msg, State) -> {noreply, State} |
@@ -209,8 +217,14 @@ get_nick(Bot) when is_pid(Bot) ->
     {ok, Nick} = gen_server:call(Bot, get_nick),
     Nick.
 
+get_cur_state(Bot) ->
+	{ok, State} = gen_server:call(Bot, get_cur_state),
+	io:format("trace: irc_bot:get_cur_state: [~p]~n", [State]),
+	{ok, State}.
+
 % -------------------------------------------------------------
 % Functions for manipulating the bot database
 add_bot({Botname, Nick, Realname, Servers, Channels, Password}) ->
     p1_db:insert_row(#irc_bot_db{botname=Botname, nick=Nick, realname=Realname, servers=Servers, channels=Channels, password=Password}).
 
+%% End of the file

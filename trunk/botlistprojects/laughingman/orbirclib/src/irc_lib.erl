@@ -10,6 +10,9 @@
 %%% + 2/28/2008 - Berlin Brown:
 %%% The handler in handle_class must be an irc_bot gen_server
 %%% Handler = handle_cast:irc_message, irc_closed
+%%%
+%%% References:
+%%% http://erlang.org/doc/man/gen_server.html
 %%%-------------------------------------------------------------------
 -module(irc_lib).
 -include("irc.hrl").
@@ -24,7 +27,7 @@
          terminate/2, code_change/3]).
 
 %% API Functions
--export([whois/2, join/2, stop/1, quit/1, quit/2, say/3, pong/2, connect/1, disconnect/1, ping/1]).
+-export([whois/2, join/2, stop/1, quit/1, quit/2, say/3, msg/3, pong/2, connect/1, disconnect/1, ping/1]).
 -export([decode_mask/1]).
 
 %% Random useful function
@@ -77,14 +80,16 @@ init([Client]) ->
 %% Description: Handling call messages
 %%--------------------------------------------------------------------
 handle_call(irc_stop, _From, #state{state=stop} = State) ->
-    {stop, success, irc_stop, State};
+	io:format("trace: handle_call:stop~n"),
+    {stop, success, irc_stop, State#state{state=stop}};
+handle_call(irc_stop, _From, #state{state=disconn} = State) ->
+	io:format("trace: handle_call:stop~n"),
+    {stop, success, irc_stop, State#state{state=stop}};
 handle_call(irc_connect, _From, #state{client=Client, state=disconn} = State) ->
     % Need to fix this so it connects and adjusts state accordingly
 	io:format("trace: handle_call:irc_connect~n"),
     {ok, Sock} = connect_to_next_server(Client),
     {reply, ok, State#state{sock=Sock, state=connecting}};
-handle_call(irc_stop, _From, #state{state=disconn} = State) ->
-    {stop, success, irc_top, State#state{state=stop}};
 handle_call(irc_disconnect, _From, #state{sock=Sock} = State) ->
     ok = gen_tcp:close(Sock),
     {reply, ok, State#state{sock=nil, state=disconn}}.
@@ -99,6 +104,9 @@ handle_cast({irc_connect}, #state{client=Client, state=disconn} = State) ->
 	io:format("trace: handle_cast:irc_connect~n"),
     {ok, Sock} = connect_to_next_server(Client),
     {noreply, State#state{sock=Sock, state=connecting}};
+handle_cast({irc_stop}, #state{client=Client, state=disconn} = State) ->
+	io:format("trace: handle_cast:irc_stop~n"),
+    {noreply, State#state{state=stop}};
 handle_cast({irc_send_command, {"PING"}}, #state{sock=Sock, client=Client} = State) ->
     send_command(Sock, {"PING", [dict_proc:fetch(nick, Client)]}),
     {noreply, State};
@@ -106,10 +114,10 @@ handle_cast({irc_send_command, {"NICK", [Nick]}}, #state{sock=Sock, client=Clien
     send_command(Sock, {"NICK", [Nick]}),
     dict_proc:store(nick, Nick, Client),
     {noreply, State};
-handle_cast({irc_send_command, Command}, #state{sock=Sock} = State) ->
+handle_cast({irc_send_command, Command}, #state{sock=Sock, handler=Handler} = State) ->
 	io:format("trace: handle_cast [sock: ~p, cmd:~p]~n", [Sock, Command]),
     send_command(Sock, Command),	
-	io:format("trace: irc_lib:irc_send_command:handle_cast <end>~n"),
+	io:format("trace: irc_lib:irc_send_command:handle_cast <end> state:[~p] handler:[~p]~n----~n", [State, Handler]),
     {noreply, State}.
 
 %%--------------------------------------------------------------------
@@ -123,9 +131,9 @@ handle_info({tcp, Sock, Data}, State) ->
     {Prefix, Command, Args} = scan_string(Data),
     {noreply, State#state{state=handle_data(State, {Prefix, irc_lookup:translate_command(Command), Args})}};
 handle_info({tcp_closed, Sock}, #state{handler=Handler} = State) ->
-	io:format("trace: irc_lib:tcp_closed.handle_info [~p]~n", [Handler]),
-    inet:setopts(Sock, [{active, once}]),
-    gen_server:cast(Handler, irc_closed),
+	io:format("trace: irc_lib:tcp_closed.handle_info [~p] [~p]~n", [Handler, State]),
+    %inet:setopts(Sock, [{active, once}]),
+    %gen_server:cast(Handler, irc_closed),
     {noreply, State#state{state=disconn}};
 handle_info({tcp_error, Sock, Reason}, #state{handler=Handler} = State) ->
     inet:setopts(Sock, [{active, once}]),
@@ -194,8 +202,9 @@ handle_data(#state{state=nick_verify, sock=Sock, client=Client}, {_, "ERR_NICKCO
     nick_verify;
 handle_data(#state{state=nick_verify} = State, {_, "ERR_NICKNAMEINUSE", _}) ->
     handle_data(State, {'_', "ERR_NICKCOLLISION", '_'});
-handle_data(#state{state=nick_verify, handler=Handler, client=Client}, {_, "RPL_WELCOME", _ }) ->
+handle_data(#state{state=nick_verify, handler=Handler, client=Client} = State, {_, "RPL_WELCOME", _ }) ->
 	io:format("trace: handle_data rpl_welcome:[~p][~p][~p]~n", [Handler, Client, nick_verify]),
+	io:format("-----~ntrace: rpl_welcome state:[~p]~n", [State]),
 	gen_server:cast(Handler, { irc_connect, dict_proc:fetch(nick, Client) }),
     idle;
 handle_data(#state{state=nick_verify}, _) ->
@@ -262,7 +271,6 @@ send_command(Sock, [Command | Rest]) ->
 send_command(_, []) ->
     ok.
 
-
 % This extracts the current server/port out of the client and appends it to the list and returns
 % The new client and the server and port
 get_next_server(Servers) ->
@@ -320,7 +328,9 @@ quit(Irclib, Message) ->
 %%     end.
 
 stop(Irclib) ->
-    gen_server:cast(Irclib, irc_stop).
+	io:format("trace: irc_lib:stop: [~p]~n", [Irclib]),
+	PidTag = {ok, Irclib},
+	gen_server:call(Irclib, irc_stop).
 %%     Irclib ! {irc_stop, self()},
 %%     receive
 %%         {irc_stop, Irclib} ->
@@ -328,11 +338,16 @@ stop(Irclib) ->
 %%     end.
 
 say(Irclib, Where, What) ->
+	io:format("trace: irc_lib.say~n"),
+    send_client_command(Irclib, "PRIVMSG", [Where, ":" ++ What]).
+
+msg(Irclib, Where, What) ->
+	io:format("trace: irc_lib.msg~n"),
     send_client_command(Irclib, "PRIVMSG", [Where, ":" ++ What]).
 
 connect(Irclib) ->
-	io:format("trace: connecting...~n").
-    %gen_server:cast(Irclib, irc_connect).
+	io:format("trace: <attempt:call>connecting...~n"),
+    gen_server:call(Irclib, irc_connect).
 %%     Irclib ! {irc_connect, self()}.
 
 disconnect(Irclib) ->
