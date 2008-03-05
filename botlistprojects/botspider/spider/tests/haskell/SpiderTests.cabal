@@ -28,7 +28,7 @@ Library
                          Tests.Unit.TestExample
                          Tests.Unit.TestStopWords
 
-Executable test1
+Executable functional_tests
   Hs-Source-Dirs:     ../../lib/haskell/src src/Tests src
   Main-is:            Main.hs
 
