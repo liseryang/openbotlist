@@ -1,0 +1,12 @@
+*************************************************
+ README test server scripts
+*************************************************
+ 
+ Botlist Frontend - Database creation:
+
+ To delete and recreate the database and key botlist frontend tables:
+ 
+ $ perl prepare_test_db.pl
+ 
+ # Also build botlist:
+ $ perl create_test_objects.pl
