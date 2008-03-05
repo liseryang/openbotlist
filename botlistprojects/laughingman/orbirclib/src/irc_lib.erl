@@ -211,7 +211,14 @@ handle_data(#state{state=nick_verify}, _) ->
     nick_verify;
 % Anything else should get sent to the handler
 handle_data(#state{handler=Handler, client=Client}, Message) ->
-	io:format("|||trace: handle_data<else>: message:[~p]~nclient:[~p]~nhandler:[~p] [END]~n", [Message, Client, Handler]),
+	%%********************************************
+	%% Example messages at this point include (E.g. a message from a user)
+	%% handle_data<else>: message:[{"blbrown!n=Berlin@ip",
+    %%                                   "PRIVMSG",
+    %%                                   ["#botlist",
+    %%                                    "would you like some cake"]}]
+	%%********************************************
+	%io:format("|||trace: handle_data<else>: message:[~p]~nclient:[~p]~nhandler:[~p] [END]~n", [Message, Client, Handler]),
 	%io:format("~p||| ", [Message]),
     gen_server:cast(Handler, {irc_message, Message}),
     idle.
