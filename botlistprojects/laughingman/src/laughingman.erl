@@ -178,6 +178,7 @@ start_laughingman() ->
 	timer:sleep(4000),
 	say(P, "#botlist", "This is test(1)"),
 	timer:sleep(4000),
+	timer:sleep(9999000),
  	stop(P, "bye"),
 	io:format("trace app:done.laughingman~n"),
 	irc_lookup:shutdown().
