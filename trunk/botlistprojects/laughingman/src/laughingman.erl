@@ -1,6 +1,7 @@
 %%
 %% The laughingman appeared in public on February 3, 2024.
-%%
+%% Author: Berlin Brown
+%% Date:   2/26/2008
 -module(laughingman).
 
 -include("irc.hrl").
@@ -9,7 +10,9 @@
 -export([say/3]).
 
 -record(self, {client, nick, configuration, handler, dict, info, irclib}).
--record(state, {nick, dict, state, irclib, pong_timeout=undefined, connection_timeout}).
+%% For the 'state', see irc_bot
+-record(state, {nick, dict, state, irclib, pong_timeout=undefined, 
+				connection_timeout, app_handler=undefined}).
 
 -define(BOT_NICK, "laughingman24").
 
@@ -20,18 +23,18 @@ start(Client) ->
 proceed(Client) ->
 	Configuration = dict_proc:start(dict:from_list([{join_on_connect, 
 													 Client#irc_bot.channels}])),
-	io:format("trace: start_link~n"),
 	StartLinkRes = irc_bot:start_link(Client),
 	case StartLinkRes of 
 		{ ok, Ircbot } ->
 			io:format("trace: after:start_link=[~p] bothandler:[~p]~n", [StartLinkRes, Ircbot]),
  			IrcbotState = irc_bot:get_cur_state(Ircbot),
-			io:format("trace: --[~p]~n", [IrcbotState]),
+			io:format("trace: app:proceed.botstate:[~p]~n", [IrcbotState]),
  			case IrcbotState of
  				{ ok, State } ->
  					Irclib = State#state.irclib,
   					io:format("Ok: proc: irclib: [~p]~n", [Irclib]),
-  				 	timer:sleep(12000),
+  				 	timer:sleep(10000),
+					% Note: Handler, irc_bot.handler = self(), current pid.
  					Handler = Client#irc_bot.handler,
    					io:format("invoking proceed<for idle>...~n"),
    					proceed(#self{ client=Ircbot,
@@ -52,8 +55,7 @@ proceed(Self, connecting) ->
     Handler = Self#self.handler,
 	Nick    = Self#self.nick,
 	Info    = Self#self.info,
-	io:format("trace: at proceed() clientinfo:[~p]~n", [Info]),
-	io:format("IrcbotInfo: [~p] [handler:~p] ~n", [Ircbot, Handler]),
+	io:format("trace: proceed: IrcbotInfo: [~p] [handler:~p] ~n", [Ircbot, Handler]),
 	io:format("---- IrcbotInfo END ----~n"),
     receive
         { irc_connect, Ircbot, Nick} ->
@@ -88,7 +90,7 @@ proceed(Self, idle) ->
 	Nick    = Self#self.nick,
 	Info    = Self#self.info,
 	Irclib  = Self#self.irclib,
-	io:format("trace: at proceed.idle [~p][~p]~n", [Handler, Ircbot]),
+	io:format("trace: [!] at proceed.idle [~p][~p]~n", [Handler, Ircbot]),
     receive
         { irc_closed, Ircbot } ->
 			io:format("trace: app:proceed.idle - irc_closed~n"),
@@ -97,24 +99,36 @@ proceed(Self, idle) ->
 		% Various messages we'll try to handle
         % Respond to a ping
         { irc_message, Ircbot, { _, "PING", [Server]} } ->
-			io:format("trace app:proceed.idle - message/ping~n"),
+			io:format("trace: app:proceed.idle - message/ping~n"),
             irc_lib:pong(Ircbot, Server),
             proceed(Self, idle);
-        % Catch all IRC messages
+		{ irc_message, Ircbot, {From, "PRIVMSG", [To, Message]}} ->
+			%***************************
+			% Msssage handler, for PRIVMSG
+			%***************************
+			io:format("Message: ~p [~p]~n", [Message, To]),
+			case (To == "#botlist") of
+				true ->
+					irc_lib:msg(Irclib, To, Message);
+				false ->
+					nothing
+			end,
+            proceed(Self, idle);
+        % Catch all other IRC messages
         { irc_message, Ircbot, _ } ->
-			io:format("trace app:proceed.idle - message~n"),
+			io:format("trace: app:proceed.idle - message~n"),
             proceed(Self, idle);
         % Stuff from the client
         { say, Where, What} ->
-			io:format("trace app:proceed.idle - say handler:[~p] ~n", [Handler]),
+			io:format("trace: app:proceed.idle - say handler:[~p] ~n", [Handler]),
             irc_lib:say(Irclib, Where, What),
             proceed(Self, idle);
         { msg, Where, What} ->
-			io:format("trace app:proceed.idle - msg handler:[~p] ~n", [Handler]),
+			io:format("trace: app:proceed.idle - msg handler:[~p] ~n", [Handler]),
             irc_lib:msg(Irclib, Where, What),
             proceed(Self, idle);
         { stop, Handler, Message} ->
-			io:format("trace app:proceed.idle - stop [~p]~n", [Handler]),
+			io:format("trace: app:proceed.idle - stop [~p]~n", [Handler]),
             irc_lib:quit(Irclib, Message),
             irc_lib:stop(Irclib),
 			io:format("[.]~n"),
@@ -145,11 +159,9 @@ pong_timeout() ->
 %% Functions used to interact with the bot
 %% -------------------------------------------------------------
 say(Bot, Where, What) ->
-	io:format("trace: app:say() bot:~p where:~p~n", [Bot, Where]),
     Bot ! {say, Where, What}.
 
 msg(Bot, Where, What) ->
-	io:format("trace: app:msg() bot:~p where:~p~n", [Bot, Where]),
     Bot ! {msg, Where, What}.
 
 stop(Bot, Message) ->
@@ -166,6 +178,8 @@ stop(Bot, Message) ->
 %% -------------------------------------------------------------
 start_laughingman() ->
 	irc_lookup:start(),
+	% self() at this level is associated with the launching process
+	% E.g. <0.1.0> 
 	Client = #irc_bot{nick=?BOT_NICK, 
 					  realname=?BOT_NICK,
 					  handler=self(),
@@ -174,13 +188,23 @@ start_laughingman() ->
 	P = start(Client),
  	io:format("trace: <after start> start_laughingman ->~p ~n", [P]),
  	timer:sleep(15000), 
- 	msg(P, "#botlist", "This is test"),
-	timer:sleep(4000),
-	say(P, "#botlist", "This is test(1)"),
-	timer:sleep(4000),
-	timer:sleep(9999000),
+ 	msg(P, "#botlist", "Hello, I am the laughingman; would you like to have some fun."),
+	timer:sleep(2000),
+	wait_for_messages(P),
  	stop(P, "bye"),
 	io:format("trace app:done.laughingman~n"),
 	irc_lookup:shutdown().
+
+wait_for_messages(Client) ->
+    receive
+        Anything ->
+            io:format("trace: app: wait_messages<incoming>~n"),
+			% Redirect the message to the client handler.
+			% @see proceed
+			Client ! Anything,
+            wait_for_messages(Client)
+    after connection_timeout() + 10000 ->
+            io:format("INFO: Timed out")
+    end.
 
 %% End of File

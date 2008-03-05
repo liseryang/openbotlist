@@ -23,7 +23,8 @@
 -export([add_bot/1, say/3, stop/2]).
 -export([get_irclib/1, get_nick/1, get_cur_state/1]).
 
--record(state, {nick, dict, state, irclib, pong_timeout=undefined, connection_timeout}).
+-record(state, {nick, dict, state, irclib, pong_timeout=undefined, 
+				connection_timeout, app_handler=undefined}).
 
 %%====================================================================
 %% API
@@ -59,10 +60,12 @@ init([Client]) ->
                                    servers=Client#irc_bot.servers,
                                    handler=self(),
                                    password=Client#irc_bot.password}),
+	AppHandler = Client#irc_bot.handler,
 	io:format("irc_bot:init start_link.pid: ~p~n", [Pid]),
     {ok, #state{irclib=Pid,
+				app_handler=AppHandler,
                 dict=dict_proc:start(dict:from_list([{join_on_connect, Client#irc_bot.channels}])),
-                connection_timeout=Ref,
+                connection_timeout=Ref,				
                 state=connecting}}.
 
 %%--------------------------------------------------------------------
@@ -90,7 +93,6 @@ handle_call({stop, Message}, _From, #state{irclib=Irclib} = State) ->
     irc_lib:quit(Irclib, Message),
     irc_lib:stop(Irclib),
     {stop, stop, State}.
-
 
 %%--------------------------------------------------------------------
 %% Function: handle_cast(Msg, State) -> {noreply, State} |
@@ -125,18 +127,18 @@ handle_cast({irc_message, {_, "KICK", [Channel, Nick]}}, #state{irclib=Irclib, n
 handle_cast({irc_message, {_Who, "JOIN", [_Where]}}, State) ->
 %%    flood_policy:handle({Who, Where, self()}, join, self()),
     {noreply, State};
-handle_cast({irc_message, {From, "PRIVMSG", [To, Message]}}, State) ->
+handle_cast({irc_message, {From, "PRIVMSG", [To, Message]}}, 
+			#state{ irclib=Irclib, app_handler=AppHandler } = State) ->
+	%***********************************
     % Let's dispatch the message:
     % For message dispatching we always send the pid of the bot it originated from
-    % in the message.  I havn't decided what othe rinformation will be helpful for this.
-    % From the bot pid, they can determine teh name of the bot using bot_manager
+    % in the message.  I havn't decided what other information will be helpful for this.
+    % From the bot pid, they can determine the name of the bot using bot_manager
+	%***********************************
+	io:format("INFO: incoming PRIVMSG: from:[~p] channel:[~p]~n", 
+			  [From, To]),
+	AppHandler ! {irc_message, self(), {From, "PRIVMSG", [To, Message]}},
     msg_dispatch:dispatch("PRIVMSG", [From, To, Message], [self()]),
-%%     case hd(To) of
-%%         $# ->
-%%             flood_policy:handle({From, To, self()}, undefined, self());
-%%         _ ->
-%%             ok
-%%     end,
     {noreply, State};
 handle_cast({say, Where, What}, #state{irclib=Irclib} = State) ->
     irc_lib:say(Irclib, Where, What),
