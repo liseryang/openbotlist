@@ -11,6 +11,7 @@
 TOPDIR := $(shell pwd)
 DATE   = $(shell date +%Y%m%d)
 
+
 APPLICATION = laughingman
 VERSION     = 0.0.1
 
