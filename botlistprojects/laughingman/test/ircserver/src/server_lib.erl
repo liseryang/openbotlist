@@ -18,7 +18,7 @@
 
 -behaviour(gen_server).
 
--export([start_link/1, get_cur_state/1, server_listen/1]).
+-export([start_link/1, get_cur_state/1, server_listen/1, server_accept_call/1]).
 
 %% gen_server callbacks
 -export([init/1, handle_call/3, handle_info/2, code_change/3,
@@ -48,7 +48,7 @@ start_link(Client) ->
 init([Client]) ->
 	io:format("trace: server_lib:init~n"),
 	{ok, Ref} = timer:send_interval(connection_timeout(), server_timeout),
-	AppHandler = undefined,
+	AppHandler = Client#irc_server_info.app_handler,
 	{ok, #server_state{app_handler=AppHandler,
 					   connection_timeout=Ref,
 					   client=Client,
@@ -68,9 +68,16 @@ init([Client]) ->
 handle_call(irc_server_bind, _From,
 			#server_state{client=Client } = State) ->
 	Port = Client#irc_server_info.port,
-	io:format("trace: lib:call:bind Port:<~p>~n", [Port]),
+	io:format("trace: lib:handle_call:bind Port:<~p>~n", [Port]),
     {ok, ServSock} = server_bind(Port),
     {reply, ok, State#server_state{serv_sock=ServSock, state=connecting}};
+handle_call(irc_accept_clients, _From,
+			#server_state{serv_sock=ServSock, app_handler=AppHandler } = State) ->	
+	io:format("trace: lib:handle_call accept_clients. [~p]~n", [AppHandler]),
+	ClientSock = server_accept(ServSock),
+	% Invoke gen_server:cast to handle the socket
+	io:format("trace: lib:handle_call client-socket: [~p]~n", [ClientSock]),
+	{reply, ok, State};
 handle_call(get_cur_state, _From, #server_state{} = State) ->
 	% Generic method to get the current state.
 	io:format("trace: lib:handle_call:get_cur_state~n"),
@@ -98,7 +105,8 @@ terminate(shutdown, #server_state{client=Client}) ->
 %%--------------------------------------------------------------------
 handle_info(server_timeout, #server_state{client=Client} = State) ->
 	io:format("trace: lib:handle_info.server_timeout"),
-    {noreply, State#server_state{state=timeout, connection_timeout=undefined}}.
+    %{noreply, State#server_state{state=timeout, connection_timeout=undefined}}.
+	{noreply, State}.
 
 %%--------------------------------------------------------------------
 %% Func: code_change(OldVsn, State, Extra) -> {ok, NewState}
@@ -111,13 +119,15 @@ code_change(_OldVsn, State, _Extra) ->
 %% Use the gen_server call to get ready to listen on port.
 %% Parm:Client - irc_server_info
 %%--------------------------------------------------------------------
-server_listen(Servlib) ->  
-	io:format("trace: server listen [~p]~n", [Servlib]),
+server_listen(ServLib) ->  
+	io:format("trace: lib:server listen [~p]~n", [ServLib]),
 	% Synchronous gen_server call
-	gen_server:call(Servlib, irc_server_bind).
+	gen_server:call(ServLib, irc_server_bind).
 
-server_accept(Servlib) ->
-	
+%% Accept call and then cast to handle new client
+server_accept_call(ServLib) ->
+	io:format("trace: lib:server accept new client~n"),
+	gen_server:call(ServLib, irc_accept_clients).
 
 get_cur_state(ServLib) ->
 	io:format("trace: lib:get_cur_state: pid:[~p] ~n", [ServLib]),
@@ -130,6 +140,16 @@ server_bind(Port) ->
 	io:format("trace: attempting to bind server... [~p]~n", [Port]),
 	gen_tcp:listen(Port, [binary, {packet, 0}, 
 						  {active, false}]).
+
+%%--------------------------------------------------------------------
+%% Function: server_accept(ServSock) -> ClientSock
+%% Description: Handling all non call/cast messages
+%%--------------------------------------------------------------------
+server_accept(ServSock) ->	
+	{ ok, ClientSock } = gen_tcp:accept(ServSock),
+	inet:setopts(ClientSock, [{packet, 0}, binary, 
+							  {nodelay, true},{active, true}]),
+	ClientSock.
 
 connection_timeout() ->
     % Time out delay of 1 minute
