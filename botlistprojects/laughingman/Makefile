@@ -62,6 +62,7 @@ TEST_OBJS = $(EBIN)/eunit_examples.beam \
 
 TEST_SERVER_OBJS = $(EBIN)/server_lib.beam \
 	$(EBIN)/functional_test_server.beam \
+	$(EBIN)/client_handler.beam
 
 ${APPLICATION}: $(TARGET) $(LIB_TARGET_OBJS) $(TEST_OBJS) $(TEST_SERVER_OBJS)
 
@@ -92,7 +93,7 @@ run: $(APPLICATION)
 # Run the test suite.
 # Start the test IRC server, delay for 5 seconds and start the client.
 tests: $(APPLICATION)
-	$(ERL) -noshell -pa $(TOPDIR)/ebin -s functional_test_server functional_test -s erlang halt
+	$(ERL) -noshell -pa $(TOPDIR)/ebin -s functional_test_server start_test_serv -s erlang halt
 	-sleep 5
 
 # End of the file 
