@@ -6,10 +6,6 @@
 %%
 %% Additional Resources:
 %% http://www.erlang.org/doc/man/gen_tcp.html
-%% gen_tcp:listen:
-%%   Received Packet is delivered as a binary.
-%%       {ok, LSock} = gen_tcp:listen(5678, [binary, {packet, 0}, 
-%%                                        {active, false}]),
 %%----------------------------------------------------------
 
 -module(client_handler).
@@ -18,11 +14,7 @@
 
 -behaviour(gen_server).
 
--export([start_link/1, get_cur_state/1, server_listen/1]).
-
-%% gen_server callbacks
--export([init/1, handle_call/3, handle_info/2, code_change/3,
-         terminate/2]).
+-export([start_link/1, get_cur_state/1]).
 
 %%--------------------------------------------------------------------
 %% Function: start_link() -> {ok,Pid} | ignore | {error,Error}
@@ -47,10 +39,9 @@ start_link(Client) ->
 %%--------------------------------------------------------------------
 init([Client]) ->
 	io:format("trace: client_handler:init~n"),
-	{ok, Ref} = timer:send_interval(connection_timeout(), server_timeout),
 	AppHandler = undefined,
 	{ok, #server_state{app_handler=AppHandler,
-					   connection_timeout=Ref,
+					   connection_timeout=undefined,
 					   client=Client,
 					   state=starting}}.
 
@@ -65,12 +56,6 @@ init([Client]) ->
 %%                                      {stop, Reason, State}
 %% Description: Handling call messages
 %%--------------------------------------------------------------------
-handle_call(irc_server_bind, _From,
-			#server_state{client=Client } = State) ->
-	Port = Client#irc_server_info.port,
-	io:format("trace: lib:call:bind Port:<~p>~n", [Port]),
-    {ok, ServSock} = server_bind(Port),
-    {reply, ok, State#server_state{serv_sock=ServSock, state=connecting}};
 handle_call(get_cur_state, _From, #server_state{} = State) ->
 	% Generic method to get the current state.
 	io:format("trace: lib:handle_call:get_cur_state~n"),
@@ -84,10 +69,10 @@ handle_call(get_cur_state, _From, #server_state{} = State) ->
 %% The return value is ignored.
 %%--------------------------------------------------------------------
 terminate(_Reason, #server_state{client=Client}) ->
-    io:format("trace: handler:terminate reason:[~p]~n", [_Reason]),
+    io:format("trace: client:handler:terminate reason:[~p]~n", [_Reason]),
     ok;
 terminate(shutdown, #server_state{client=Client}) ->
-    io:format("trace: handler:terminate.shutdown~n"),
+    io:format("trace: client:handler:terminate.shutdown~n"),
     ok.
 
 %%--------------------------------------------------------------------
@@ -96,9 +81,17 @@ terminate(shutdown, #server_state{client=Client}) ->
 %%                                       {stop, Reason, State}
 %% Description: Handling all non call/cast messages
 %%--------------------------------------------------------------------
-handle_info(server_timeout, #server_state{client=Client} = State) ->
-	io:format("trace: lib:handle_info.server_timeout"),
-    {noreply, State#server_state{state=timeout, connection_timeout=undefined}}.
+handle_info({tcp, Sock, Data}, State) ->	
+    inet:setopts(Sock, [{active, once}]),
+	io:format("trace: lib:info.tcp data [~p]~n", [Data]),
+    {noreply, State};
+handle_info({tcp_closed, Sock}, State) ->
+	io:format("trace: lib:info.tcp_closed~n"),
+    {noreply, State#server_state{state=disconn}};
+handle_info({tcp_error, Sock, Reason}, State) ->
+	io:format("trace: lib:info.tcp_error~n"),
+    inet:setopts(Sock, [{active, once}]),
+    {noreply, State#server_state{state=disconn}}.
 
 %%--------------------------------------------------------------------
 %% Func: code_change(OldVsn, State, Extra) -> {ok, NewState}
@@ -107,22 +100,9 @@ handle_info(server_timeout, #server_state{client=Client} = State) ->
 code_change(_OldVsn, State, _Extra) ->
     {ok, State}.
 
-%%--------------------------------------------------------------------
-%% Use the gen_server call to get ready to listen on port.
-%% Parm:Client - irc_server_info
-%%--------------------------------------------------------------------
-server_listen(Servlib) ->  
-	io:format("trace: server listen [~p]~n", [Servlib]),
-	% Synchronous gen_server call
-	gen_server:call(Servlib, irc_server_bind).
-
 get_cur_state(ServLib) ->
 	io:format("trace: lib:get_cur_state: pid:[~p] ~n", [ServLib]),
 	% Return: {ok, State}
 	gen_server:call(ServLib, get_cur_state).
-
-connection_timeout() ->
-    % Time out delay of 1 minute
-    60000.
 
 %% End of File

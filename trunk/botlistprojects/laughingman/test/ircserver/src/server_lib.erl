@@ -47,10 +47,10 @@ start_link(Client) ->
 %%--------------------------------------------------------------------
 init([Client]) ->
 	io:format("trace: server_lib:init~n"),
-	{ok, Ref} = timer:send_interval(connection_timeout(), server_timeout),
+	%{ok, Ref} = timer:send_interval(connection_timeout(), server_timeout),
 	AppHandler = Client#irc_server_info.app_handler,
 	{ok, #server_state{app_handler=AppHandler,
-					   connection_timeout=Ref,
+					   connection_timeout=undefined,
 					   client=Client,
 					   state=starting}}.
 
@@ -75,8 +75,16 @@ handle_call(irc_accept_clients, _From,
 			#server_state{serv_sock=ServSock, app_handler=AppHandler } = State) ->	
 	io:format("trace: lib:handle_call accept_clients. [~p]~n", [AppHandler]),
 	ClientSock = server_accept(ServSock),
-	% Invoke gen_server:cast to handle the socket
-	io:format("trace: lib:handle_call client-socket: [~p]~n", [ClientSock]),
+	%***************
+	% Start the handler process
+	%***************
+	io:format("trace: [!!] lib:handle_call client-socket: [~p]~n", [ClientSock]),
+	{ ok, ClientServ } = client_handler:start_link(),
+	% Assign a new controlling process.
+	gen_tcp:controlling_process(ClientSock, ClientServ),
+	inet:setopts(ClientSock, [{packet, 0}, binary, 
+							  {nodelay, true},{active, false}]),	
+	% Invoke gen_server:cast to handle the socket	
 	{reply, ok, State};
 handle_call(get_cur_state, _From, #server_state{} = State) ->
 	% Generic method to get the current state.
@@ -147,12 +155,10 @@ server_bind(Port) ->
 %%--------------------------------------------------------------------
 server_accept(ServSock) ->	
 	{ ok, ClientSock } = gen_tcp:accept(ServSock),
-	inet:setopts(ClientSock, [{packet, 0}, binary, 
-							  {nodelay, true},{active, true}]),
 	ClientSock.
 
 connection_timeout() ->
     % Time out delay of 1 minute
-    60000.
+    600000.
 
 %% End of File
