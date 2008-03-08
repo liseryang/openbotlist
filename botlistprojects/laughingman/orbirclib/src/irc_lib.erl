@@ -30,8 +30,6 @@
 -export([whois/2, join/2, stop/1, quit/1, quit/2, say/3, msg/3, pong/2, connect/1, disconnect/1, ping/1]).
 -export([decode_mask/1]).
 
-%% Random useful function
-%% These should be moved into another lib really
 -export([split_once/2]).
 
 -record(state, {sock, handler, client, state=idle}).
@@ -132,8 +130,8 @@ handle_info({tcp, Sock, Data}, State) ->
     {noreply, State#state{state=handle_data(State, {Prefix, irc_lookup:translate_command(Command), Args})}};
 handle_info({tcp_closed, Sock}, #state{handler=Handler} = State) ->
 	io:format("trace: irc_lib:tcp_closed.handle_info [~p] [~p]~n", [Handler, State]),
-    %inet:setopts(Sock, [{active, once}]),
-    %gen_server:cast(Handler, irc_closed),
+    inet:setopts(Sock, [{active, once}]),
+    gen_server:cast(Handler, irc_closed),
     {noreply, State#state{state=disconn}};
 handle_info({tcp_error, Sock, Reason}, #state{handler=Handler} = State) ->
     inet:setopts(Sock, [{active, once}]),
