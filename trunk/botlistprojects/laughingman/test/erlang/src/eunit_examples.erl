@@ -1,5 +1,9 @@
+%%
+%% Example eunit test case.
+%% http://svn.process-one.net/contribs/trunk/eunit/doc/overview-summary.html
+%%
 -module(eunit_examples).
--export([fib/1, fib_test_/0]).
+-export([fib/1, fib_test_/0, run_tests/0]).
 -include_lib("eunit/include/eunit.hrl").
 
 fib(0) -> 1;
@@ -16,4 +20,7 @@ fib_test_() ->
 	 ?_assertException(error, function_clause, fib(-1)),
 	 ?_assert(fib(31) == 2178309)
 	].
+
+run_tests() ->
+	eunit:test(eunit_examples).
 %% End of file
