@@ -3,6 +3,7 @@
 %% Descr:  IRC Server library gen_server
 %% Author: Berlin Brown
 %% Date:   3/2/2008
+%% <Currently deprecated>
 %%----------------------------------------------------------
 
 -module(functional_test_server).
@@ -51,7 +52,9 @@ server_handler(ServClient, idle) ->
 			io:format("!!!-->~p~n", [AcceptCall]),
 			case AcceptCall of
 				{ ok, State } ->
-					io:format("poo~n")
+					io:format("Test~n");
+				Else ->
+					io:format("trace: server_handler.accept<else> [~p]~n", [Else])			
 			end,
 			server_handler(ServClient, idle);
 		Error ->
