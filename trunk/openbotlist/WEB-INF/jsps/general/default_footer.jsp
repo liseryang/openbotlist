@@ -31,7 +31,7 @@
 				<a href="<c:url value="/spring/help/contact.html" />" class="footer">Contact</a> |
 				<a href="<c:url value="/spring/help/help.html" />" class="footer">Help</a>
 				<br>
-				Copyright &copy; Newspiritcompany.com 2006. All rights reserved.
+				Copyright &copy; Botnode.com 2006. All rights reserved.
 				<br>				
 				<!-- Print the Bot List Version -->
 				<div style="font-size: 8pt;">

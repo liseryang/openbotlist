@@ -10,14 +10,16 @@
 											<%-- ********************** --%>
 											<tr>					
 												<td colspan="3">
+													<div class="home_for_url_group">
 														<a class="linklist_objlinks" href="<c:url value="${listing.mainUrl}" />" >
 															<c:out value='${botlistutil:getMaxWord(listing.urlTitle, 48)}' />
 														</a>
 														(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)
 														<%-- Next line, hostname information --%>
-														<div style="font-size: 8px: color: #777; margin-left: 6px;">
-														 source: <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
+														<div style="font-size: 10px: color: #777; margin-left: 6px;">
+														 <span class="home_source_label">source:</span> <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
 														</div>
+													</div>
 												</td>
 											</tr>
 											<c:if test="${not empty listing.urlDescription}">
@@ -26,7 +28,7 @@
 												<%-- ======================== --%>
 												<tr>
 													<td>
-														<div style="margin-left: 6px; font-size: 10px; color: #555;">
+														<div class="home_descr_left">
 															<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${listing.urlDescription}" />
 														</div>
 													</td>

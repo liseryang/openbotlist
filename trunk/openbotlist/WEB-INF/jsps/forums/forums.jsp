@@ -1,7 +1,6 @@
 <%@ page contentType="text/html" %>
-
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html>
 <head>
  	<title>Botlist - Forums</title>
