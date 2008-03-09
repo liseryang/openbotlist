@@ -7,7 +7,7 @@
  
   	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
  	<META NAME="keywords" CONTENT="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
-    <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" />
+    <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" >
    
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
 	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
@@ -22,7 +22,7 @@
 <body>
 		<div id="body_content_center">
 			<div style="border-bottom: 1px solid #816943;">
-				<img src="<c:url value="/company/images/building_orange_roof.jpg" />" >
+				<img src="<c:url value="/company/images/building_orange_roof.jpg" />" alt="Botlist header logo">
  			</div>
 			<h1 class="bot_titlelogo">
 				[ Botlist Home ]
@@ -55,7 +55,7 @@
 						<tr>
 							<td>
 								<span style="background-color: #e8e8e8; padding: 4px;">
-								&nbsp;most recent updates</span>:
+								 &nbsp;most recent updates</span>:
 								</span>
 								&nbsp;/ <a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
 									/ <a href="<c:url value="/spring/botverse/botverse_submit.html" />" class="linklist_botnav">submit</a>									
@@ -132,9 +132,9 @@
 									<input type="hidden" name="querymode" value="enabled" />
 								</form>
 								<!-- End of Form -->
-								<p align="right">
+								<p style="text-align: right">
 								<a href="<c:url value="/spring/rss/listings_rss.html" />" class="index_img">
-									<img border="0" src="<c:url value="/company/images/rss.gif" />" />
+									<img style="border: 0px solid #FFF;" src="<c:url value="/company/images/rss.gif" />" >
 								</a>
 								</p>
 						</td>
@@ -147,7 +147,7 @@
 					<%-- ============================== --%>
 					<table border="0">
 					<tr>
-						<td width="100%" rowspan="2" valign="top">
+						<td style="width: 100%" rowspan="2" valign="top">
 							<%-- ============================== --%>
 							<%-- Hot Topic Section (deprecated) --%>
 							<%-- ============================== --%>							
@@ -155,7 +155,7 @@
 					    <td align="right">
 					    	<%-- == Botlist Logo Image == --%>
 							<a href="<c:url value="/spring/botverse/botverse.html" />" class="index_img">
-						 		<img src="<c:url value="/company/images/BoxLogoVertical3.jpg" />" border="0">
+						 		<img src="<c:url value="/company/images/BoxLogoVertical3.jpg" />" border="0" alt="Logo Vertical">
 							</a>
 						</td>
 					</tr>						
@@ -227,12 +227,12 @@
 		</div>  
 
 <div>		
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
 <script type="text/javascript">
 _uacct = "UA-286501-2";
 urchinTracker();
 </script>
+
 </div>
 		
 </body>
