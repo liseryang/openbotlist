@@ -25,7 +25,7 @@
 	</div>
 	<!-- (Footer) Footer Section -->
 	<div id="bot_footer_group">
-			<div align="center">
+			<div style="text-align: center">
 				<a href="<c:url value="/company/terms_of_use.htm" />" class="footer">Terms of Use</a> |
 				<a href="<c:url value="/spring/help/about.html" />" class="footer">About</a> |
 				<a href="<c:url value="/spring/help/contact.html" />" class="footer">Contact</a> |
