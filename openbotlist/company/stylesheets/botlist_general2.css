@@ -6,6 +6,58 @@
  **********************************************************/
 
 /** =============================================== */
+/** == home about description style  == */
+/** =============================================== */
+
+/** 
+ * The for url style is associated with the clickable entity link URL.
+ */
+.home_for_url_group {
+	margin-top: 4px;
+}
+
+.home_descr_left {
+	font-family: Georgia,'Times New Roman',Times,Serif;
+	margin-left: 6px; 
+	margin-top: 6px; 
+	margin-right: 6px; 
+	font-size: 12px; 
+	color: #333;
+}
+
+.home_descr_right {
+	font-family: Georgia,'Times New Roman',Times,Serif;
+	margin-left: 6px; 
+	margin-top: 6px; 
+	margin-right: 2px; 
+	font-size: 12px; 
+	color: #333;	
+}
+
+/** For the single link page, descrption */
+.single_link_descr {
+	font-family: Georgia,'Times New Roman',Times,Serif;
+	margin-left: 6px; 
+	margin-top: 4px; 
+	margin-right: 2px; 
+	font-size: 12px; 
+	color: #333;
+	width: 80%;
+}
+
+.home_source_label {
+	color: #2f8f15;
+	font-weight: bold;
+}
+
+.home_search_wrapper {
+	background-color: #effdac;
+}
+.botverse_search_wrapper {
+	background-color: #effdac;
+}
+
+/** =============================================== */
 /** == Small Link for user profiles  == */
 /** =============================================== */
 a.link_userprof:link {

@@ -43,7 +43,7 @@
 	<p>		
 	 <div style="color: #555;">
 			Botlist is a product by 
-			<a href="http://www.newspiritcompany.com">newspiritcompany.com</a>			
+			<a href="http://www.botnode.com">botnode.com</a>			
 			
 			<div style="margin-top: 20px;">
 				<%-- *** Image Table *** --%>

@@ -69,7 +69,7 @@ public class BotListIndexController extends SimpleFormController {
 	
 	public static final String ERROR_RESULT_VIEW = "search/invalidsearch";
 	
-	public static final int MAX_HOME_LINKS = 16;
+	public static final int MAX_HOME_LINKS = 12;
 	
 	/**
 	 * City Listing.

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html>
 <head>
 <title>Botverse - Interesting things online</title>
@@ -7,13 +8,11 @@
 <META NAME="DESCRIPTION" CONTENT="Botverse - Popular links all in the same place.  Discover new links and articles on the web.  Like Reddit or Digg but for adults.">
 <META NAME="keywords" CONTENT="botverse, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, atlanta technology, read it, dig it, reddit, digg, stumbleupon">
 <link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" 
-			href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" ></link>
-
-<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
-<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
-<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
-<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
-
+			href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" >
+<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
+<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" >
+<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" >
+<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" >
 <style type="text/css">
  <%@include file="/WEB-INF/jsps/general/botverse_link_css.jsp" %>	
 </style>
@@ -80,8 +79,7 @@
 			resp_status = $(this).text();
     	}); // End of find call    	
     	setBotVoteMessage(message_text, resp_status);
-    }
-	
+    }	
 </script>
 </head>
 <body>
@@ -103,7 +101,7 @@
 	<%@include file="/WEB-INF/jsps/general/botverse_profile_nav.jsp" %>
 	<%-- End of Welcome Header --%>
 
-<div style="border: 1px solid #DDD; padding: 10px; margin-right: 10px;">
+<div id="link_content_group_botverse" class="link_content_group_botverse">
 <!-- Display the error message -->
 <div class="bot_profile_sect_add_link">
 
@@ -127,20 +125,21 @@
 	</td>
 	<td align="right" valign="top">
 		<!-- Begin Search Form -->
-		<div align="right">
-		<form method="get" action="<c:url value="/spring/search/search.html" />" name="newsearch">
-		<table>
-		<tr>
-		<td> 
-			<input name="query" size="26" />
-		</td>
-		<td>
-			<input type="submit" value=" Search " />
-		</td>
-		</tr>
-		</table>
-		<input type="hidden" name="querymode" value="enabled" />
-		</form>
+		<div align="right">		  
+			<form method="get" action="<c:url value="/spring/search/search.html" />" name="newsearch">
+			<table class="botverse_search_wrapper">
+			<tr>
+			<td> 
+				<input name="query" size="26" />
+			</td>
+			<td>
+				<input type="submit" value=" Search " />
+			</td>
+			</tr>
+			</table>
+			<input type="hidden" name="querymode" value="enabled" />
+			</form>
+		  </div>
 		</div>
 		<!-- End of Form -->		
 	</td>
@@ -217,7 +216,7 @@
 							<%-- Add custom tag here, find hostname --%>
 							<span class="linklist_comments_host">
 								<%-- &nbsp;(<botlistutil:hostname value="${listing.mainUrl}" />) --%>
-								&nbsp;(<c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>)
+								&nbsp;(<span class="home_source_label">source:</span> <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>)
 							</span>
 					</td>
 				</tr>
@@ -227,7 +226,7 @@
 									<%-- ======================== --%>
 									<tr>
 										<td>
-											<div style="margin-left: 6px; font-size: 10px; color: #555;">
+											<div class="home_descr_left">
 												<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${listing.urlDescription}" />
 											</div>
 										</td>
@@ -276,7 +275,7 @@
 					</td>
 					<td>
 					  <span class="linklist_comments">
-					     <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">*comments (<c:out value="${fn:length(listing.listings)}" />)</a>
+					     <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">[!] comments (<c:out value="${fn:length(listing.listings)}" />)</a>
 					  </span>						
 					  | <span class="linklist_comments"><a class="linklist_comments" href="<c:url value="/spring/botverse/linkaddcomment.html?viewid=${listing.id}" />">add comment</a></span>
 					  <%-- Print the UserName --%>

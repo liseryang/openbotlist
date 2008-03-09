@@ -2,6 +2,7 @@
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
 <%@ taglib prefix="dt" uri="http://jakarta.apache.org/taglibs/datetime-1.0" %>
 <%@ taglib prefix="req" uri="http://jakarta.apache.org/taglibs/request-1.0" %>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html>
 <head>
  	<title><c:out value="${command.link.urlTitle}" /> - (Botlist)</title>
@@ -9,9 +10,10 @@
   	<META NAME="DESCRIPTION" CONTENT="Botverse - View Comments">
  	<META NAME="keywords" CONTENT="comments, postings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising">
   
-	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
-  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
-  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
+	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
+  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" > 
+  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" >
+  	<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" > 
   	
 <style type="text/css">
  <%@include file="/WEB-INF/jsps/general/botverse_link_css.jsp" %>	
@@ -46,7 +48,7 @@
 						</a>
 						<%-- Add custom tag here, find hostname --%>
 						<span class="linklist_comments_host">
-							&nbsp;(<botlistutil:hostname value="${command.link.mainUrl}" />)
+							&nbsp;(<span class="home_source_label">source:</span> <botlistutil:hostname value="${command.link.mainUrl}" />)
 						</span>
 					</div>
 					<div class="linklist_comments_txt">
@@ -63,15 +65,13 @@
 							 </span>
 							</span>
 							
-							<c:if test="${not empty command.link.urlDescription}">
-								<div>								
+							<c:if test="${not empty command.link.urlDescription}">															
 									<%-- ======================== --%>
 									<%-- == Updated: 2/2/2008; Add URL description text --%>
 									<%-- ======================== --%>
-									<div style="margin-left: 26px; font-size: 10px; color: #555;">
+									<div class="single_link_descr">
 										<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${command.link.urlDescription}" />
-									</div>
-								</div>
+									</div>								
 							</c:if>
 							
 							<%-- *************************** --%>
@@ -82,7 +82,7 @@
 									 <span style="background-color: #000; color: #FFF; padding: 2px 8px 8px 2px; margin-right: 2px;">
 								 	  <b>page metadata (dna):</b>
 								 	 </span>
-								 	 <div style="margin-top: 4px; border-top: 1px solid #000; border-right: 4px solid #000;">
+								 	 <div style="margin-top: 4px; border-top: 1px solid #000;">
 								 	 linktype:(<c:out value="${command.link.linkType}" />)
 									 views:<c:out value="${command.link.views}" />
 									 links:<c:out value="${command.link.linksCt}" />

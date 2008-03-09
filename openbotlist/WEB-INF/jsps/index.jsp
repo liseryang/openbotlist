@@ -1,18 +1,19 @@
 <%@ page contentType="text/html" %>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html>
 <head>
- 	<title>Botlist - Interesting Things Online (beta built with Scala, JRuby, Spring, Liftweb, Haskell technology)</title>
+ 	<title>Botlist - Interesting Things Online, way better than wikileaks (beta built with Scala, JRuby, Spring, Liftweb, Haskell technology)</title>
  
   	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
- 	<META NAME="keywords" CONTENT="articles, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
+ 	<META NAME="keywords" CONTENT="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
     <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" />
    
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
-	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
-  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
-  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
-  	<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
+	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
+  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" > 
+  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" > 
+  	<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" > 
   	
   	<style type="text/css">
 	 <%@include file="/WEB-INF/jsps/general/botverse_link_stat.jsp" %>	
@@ -42,7 +43,7 @@
 				<%@include file="/WEB-INF/jsps/general/default_profile_nav.jsp" %>
 				<%-- End of Welcome Header --%>
 				
-				<div style="border: 1px solid #DDD;">
+				<div id="link_content_group" class="link_content_group">
 				
 				<!-- Table of Data Grid and Image (rowspan on the left = City Listings ) -->
 				<table width="100%" >
@@ -107,38 +108,40 @@
 				</td>
 				<td valign="top" align="right">										
 					<!-- table just for search -->
-					<table class="sample">
-					<tr>
-						<th>
-							&nbsp;Search
-						</th>						
-					</tr>
-					<tr>
-					<td>
-							<!-- Begin Search Form -->
-							<form method="get" action="<c:url value="/spring/search/search.html" />">
-								<table>
-								<tr>
-								<td>
-									<input name="query" size="18" />
-								</td>
-								<td>
-									<input type="submit" value=" Search " />
-								</td>
-								</tr>
-								</table>
-								<input type="hidden" name="querymode" value="enabled" />
-							</form>
-							<!-- End of Form -->
-							<p align="right">
-							<a href="<c:url value="/spring/rss/listings_rss.html" />" class="index_img">
-								<img border="0" src="<c:url value="/company/images/rss.gif" />" />
-							</a>
-							</p>
-					</td>
-					</tr>
-					</table>
-					<!-- End of Table -->					
+					<div class="home_search_wrapper">
+						<table class="sample" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>
+								&nbsp;Search
+							</th>						
+						</tr>
+						<tr>
+						<td>
+								<!-- Begin Search Form -->
+								<form method="get" action="<c:url value="/spring/search/search.html" />">
+									<table>
+									<tr>
+									<td>
+										<input name="query" size="18" />
+									</td>
+									<td>
+										<input type="submit" value=" Search " />
+									</td>
+									</tr>
+									</table>
+									<input type="hidden" name="querymode" value="enabled" />
+								</form>
+								<!-- End of Form -->
+								<p align="right">
+								<a href="<c:url value="/spring/rss/listings_rss.html" />" class="index_img">
+									<img border="0" src="<c:url value="/company/images/rss.gif" />" />
+								</a>
+								</p>
+						</td>
+						</tr>
+						</table>
+					</div>
+					<!-- End of Table for search -->					
 					<%-- ============================== --%>
 					<%-- New table for botverse image / media feeds / hot topics --%>
 					<%-- ============================== --%>
@@ -157,7 +160,7 @@
 						</td>
 					</tr>						
 					<tr>
-						<td valign="top">					
+						<td valign="top">
 						<%-- ============================== --%>
 						<%-- Display Media Table if enabled --%>
 						<%-- ============================== --%>
