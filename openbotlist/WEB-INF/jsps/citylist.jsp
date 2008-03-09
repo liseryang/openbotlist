@@ -120,7 +120,7 @@
 								<input type="hidden" name="querymode" value="enabled" />
 							</form>
 							<!-- End of Form -->
-							<p align="right">
+							<p style="text-align: right">
 							<a href="<c:url value="/spring/rss/listings_rss.html" />" >
 								<img border="0" src="<c:url value="/company/images/rss.gif" />" />
 							</a>
