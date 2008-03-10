@@ -15,6 +15,7 @@
 				connection_timeout, app_handler=undefined}).
 
 -define(BOT_NICK, "laughingman24").
+-define(DEFAULT_CHAN, "#botlist").
 
 start(Client) ->
 	% Ref: spawn_link(Module, Function, ArgList)
@@ -107,9 +108,9 @@ proceed(Self, idle) ->
 			% Msssage handler, for PRIVMSG
 			%***************************
 			io:format("Message: ~p [~p]~n", [Message, To]),
-			case (To == "#botlist") of
+			case (To == ?DEFAULT_CHAN) of
 				true ->
-					irc_lib:msg(Irclib, To, Message);
+					agent_lib:process_msg(Irclib, To, Message);
 				false ->
 					nothing
 			end,
@@ -184,11 +185,11 @@ start_laughingman() ->
 					  realname=?BOT_NICK,
 					  handler=self(),
 					  servers=[{"irc.freenode.net", 6667}],
-					  channels=["#botlist"]},
+					  channels=[?DEFAULT_CHAN]},
 	P = start(Client),
  	io:format("trace: <after start> start_laughingman ->~p ~n", [P]),
  	timer:sleep(15000), 
- 	msg(P, "#botlist", "Hello, I am the laughingman; would you like to have some fun."),
+ 	msg(P, ?DEFAULT_CHAN, "Hello, I am the laughingman; would you like to have some fun."),
 	timer:sleep(2000),
 	wait_for_messages(P),
  	stop(P, "bye"),
@@ -203,8 +204,8 @@ wait_for_messages(Client) ->
 			% @see proceed
 			Client ! Anything,
             wait_for_messages(Client)
-    after connection_timeout() + 10000 ->
-            io:format("INFO: Timed out")
+    after connection_timeout() + 100000 ->
+            io:format("INFO: Timed out~n")
     end.
 
 %% End of File
