@@ -101,7 +101,7 @@
 	<%@include file="/WEB-INF/jsps/general/botverse_profile_nav.jsp" %>
 	<%-- End of Welcome Header --%>
 
-<div id="link_content_group_botverse" class="link_content_group_botverse">
+<div id="link_content_group_botverse">
 <!-- Display the error message -->
 <div class="bot_profile_sect_add_link">
 
@@ -191,11 +191,9 @@
 					<%-- End of Display Media table --%>
 					<%-- ============================== --%>
 		</td>
-	</tr>
-	
+	</tr>	
 	</table>
-	<%-- End of Table search/banner --%>
-	
+	<%-- End of Table search/banner --%>	
 	<form:form method="post" name="botverse_form">
 	<form:errors path="*" cssClass="general_field_error" />
 	<%-- === Ajax vote message === --%>
