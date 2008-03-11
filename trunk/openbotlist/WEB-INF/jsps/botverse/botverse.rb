@@ -22,7 +22,6 @@
 ### botverse.rb
 ### botverse - view link listings
 
-
 include_class 'org.spirit.form.BotListPostListingForm' unless defined? BotListPostListingForm
 include_class 'org.spirit.form.BotListGenericPagingForm' unless defined? BotListGenericPagingForm
 include_class 'org.spirit.bean.impl.BotListPostListing' unless defined? BotListPostListing
