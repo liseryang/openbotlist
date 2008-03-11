@@ -33,7 +33,7 @@ public class BotListEntityLinksDAOImpl
 	
 	public static final int MAX_DAO_RESULTS = 400; 
 	public static final int MAX_MAX_RESULTS = 2000;
-	public static final int MAX_RESULTS_DAY = 12;
+	public static final int MAX_RESULTS_DAY = 8;
 		
 	private BotListCoreUsersDAO userDao;
 	
