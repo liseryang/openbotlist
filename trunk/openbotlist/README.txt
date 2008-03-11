@@ -47,7 +47,16 @@ http://openbotlist.googlecode.com/svn/
  * Container:
  
  Tested with Tomcat
-
+ 
+ --------------------------------------
+  Third-party libraries (major libraries and versions)
+  Updated: 3/6/2008
+ --------------------------------------
+	- Spring 2.5.2 (http://www.springframework.org/)
+	- Hibernate 3.2.6 (http://www.hibernate.org)
+	- ANTLR 2.7.6 (http://www.antlr.org)
+	- JRuby 1.0.3 (http://jruby.codehaus.org/)
+ 
 ===================
  URGENT!!! Major Security Issues
 =================== 

@@ -5,6 +5,8 @@
 <!-- writes classes to this particular directory -->
 <!-- Description: Testing ruby with with spring web application -->
 <!-- Date: 11/1/2006 -->
+<!-- Updates: -->
+<!-- + 3/10/2008 - updated core libraries to most recent versions, spring, etc --> 
 <!-- ****************************************************** -->
 <project name="OpenBotlist Main Build File" default="package" basedir=".">
 
@@ -21,31 +23,35 @@
     <property name="default.tomcat.webapps" value="${tomcat.home}/webapps" />
 
     <!-- Define the library files -->
-    <property name="acegi.jar"        value="${lib.dir}/acegi-security-1.0.3.jar" />
-    <property name="hibernate.jar"    value="${lib.dir}/hibernate3.jar" />
-    <property name="junit.jar"        value="${lib.dir}/junit-3.8.1.jar" />
-    <property name="log4j.jar"        value="${lib.dir}/log4j-1.2.14.jar" />
-    <property name="dom4j.jar"        value="${lib.dir}/dom4j-1.6.1.jar" />
-    <property name="logging.jar"      value="${lib.dir}/commons-logging-1.0.4.jar" />
-    <property name="collections.jar"    value="${lib.dir}/commons-collections-2.1.1.jar" />
+    <property name="acegi.jar"          value="${lib.dir}/acegi-security-1.0.3.jar" />
+    <property name="hibernate.jar"      value="${lib.dir}/hibernate3.jar" />
+    <property name="junit.jar"          value="${lib.dir}/junit-3.8.1.jar" />
+    <property name="log4j.jar"          value="${lib.dir}/log4j-1.2.14.jar" />
+    <property name="dom4j.jar"          value="${lib.dir}/dom4j-1.6.1.jar" />
+    <property name="logging.jar"        value="${lib.dir}/commons-logging.jar" />
+    <property name="collections.jar"    value="${lib.dir}/commons-collections.jar" />
     <property name="cglib.jar"          value="${lib.dir}/cglib-2.1.3.jar" />
     <property name="jta.jar"            value="${lib.dir}/jta.jar" />
-    <property name="mysql.jar"          value="${lib.dir}/mysql-connector-java-3.1.12-bin.jar" />
-    <property name="antlr.jar"          value="${lib.dir}/antlr-2.7.6rc1.jar" />
-    <property name="validator.jar"      value="${lib.dir}/commons-validator-1.3.1.jar" />
+    <property name="mysql.jar"          value="${lib.dir}/mysql-connector-java-5.0.8-bin.jar" />
+    <property name="antlr.jar"          value="${lib.dir}/antlr-2.7.6.jar" />
+    <property name="validator.jar"      value="${lib.dir}/commons-validator.jar" />
     <property name="commons-upload.jar" value="${lib.dir}/commons-fileupload.jar" />
     <property name="standard.jar"       value="${lib.dir}/standard.jar" />
     
     <property name="servlet.jar"        value="${basedir}/servlet-lib/servlet-api.jar" />    
     <property name="jsp-api.jar"        value="${basedir}/servlet-lib/jsp-api.jar" />    
     
-    <property name="spring.jar"        value="${lib.dir}/spring.jar" />
-    <property name="jruby.jar"         value="${lib.dir}/jruby.jar" />
-    <property name="bsf.jar"           value="${lib.dir}/bsf.jar" />
-    <property name="lucene.jar"        value="${lib.dir}/lucene-core-2.1.0.jar" />
+    <property name="spring.jar"         value="${lib.dir}/spring.jar" />
+    <property name="spring-core.jar"    value="${lib.dir}/spring-core.jar" />
+	<property name="spring-web.jar"     value="${lib.dir}/spring-web.jar" />
+	<property name="spring-webmvc.jar"  value="${lib.dir}/spring-webmvc.jar" />
+	
+    <property name="jruby.jar"          value="${lib.dir}/jruby.jar" />
+    <property name="bsf.jar"            value="${lib.dir}/bsf.jar" />
+    <property name="lucene.jar"         value="${lib.dir}/lucene-core-2.1.0.jar" />
     
-    <property name="antlr.jar"         value="${lib.dir}/antlr-3.0.1.jar" />
-    <property name="antlr-runtime.jar" value="${lib.dir}/antlr-runtime-3.0.1.jar" />
+    <property name="antlr.jar"          value="${lib.dir}/antlr-3.0.1.jar" />
+    <property name="antlr-runtime.jar"  value="${lib.dir}/antlr-runtime-3.0.1.jar" />
     
 	<!-- **************************************** -->
 	<!-- Scala Jar Imports -->
@@ -73,6 +79,9 @@
         <pathelement location="${jta.jar}" />
         <pathelement location="${antlr.jar}" />
         <pathelement location="${spring.jar}" />
+    	<pathelement location="${spring-core.jar}" />
+        <pathelement location="${spring-web.jar}" />
+        <pathelement location="${spring-webmvc.jar}" />
         <pathelement location="${servlet.jar}" />
         <pathelement location="${jruby.jar}" />
         <pathelement location="${bsf.jar}" />

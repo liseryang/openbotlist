@@ -1,7 +1,24 @@
-##
-## Berlin Brown - CHANGELOG.txt
-##
+#################################################
+# CHANGELOG
+# Author: Berlin Brown
+#################################################
+
+  + 3/4/2008 
+ ----------------------------
+  
+  Updated major libraries to most recent releases.
+  
+  Spring 2.5.2
+  JRuby 1.0.3
+  Hibernate 3.2.6
+  
+  Resources:
+  http://static.springframework.org/spring/docs/2.5.x/changelog.txt
+  http://repository.codehaus.org/org/jruby/jruby-complete/1.0.3/
+  
+  
   + 10/5/2007:
+ ----------------------------  
   
   Added for profiling.  
   "-Dcom.sun.management.jmxremote" to java command line or $JAVA_OPTS environment
