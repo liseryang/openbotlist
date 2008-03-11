@@ -6,7 +6,7 @@
 ##
 
 class PipeControllerText
-  MAX_PIPE_LINKS = 3
+  MAX_PIPE_LINKS = 50
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.entityLinksDao

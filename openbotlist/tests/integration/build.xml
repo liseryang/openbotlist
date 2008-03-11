@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2006 - Berlin Brown -->
 <!-- Date: 11/1/2006 -->
-<project name="BotList Test Framework (Integration Tests)" default="init" basedir=".">
+<project name="Botlist Test Framework (Integration Tests)" default="init" basedir=".">
 	
 	<property file="build.properties" />	
 	

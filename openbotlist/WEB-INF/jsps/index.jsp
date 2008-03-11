@@ -43,7 +43,7 @@
 				<%@include file="/WEB-INF/jsps/general/default_profile_nav.jsp" %>
 				<%-- End of Welcome Header --%>
 				
-				<div id="link_content_group" class="link_content_group">
+				<div id="link_content_group">
 				
 				<!-- Table of Data Grid and Image (rowspan on the left = City Listings ) -->
 				<table width="100%" >
@@ -122,7 +122,7 @@
 									<table>
 									<tr>
 									<td>
-										<input name="query" size="18" />
+										<input name="query" size="16" />
 									</td>
 									<td>
 										<input type="submit" value=" Search " />
@@ -132,11 +132,11 @@
 									<input type="hidden" name="querymode" value="enabled" />
 								</form>
 								<!-- End of Form -->
-								<p style="text-align: right">
-								<a href="<c:url value="/spring/rss/listings_rss.html" />" class="index_img">
-									<img style="border: 0px solid #FFF;" src="<c:url value="/company/images/rss.gif" />" >
-								</a>
-								</p>
+								<div style="text-align: right; margin-top: 4px;">								
+									<a href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" class="index_img">
+										<img style="border: 0px solid #FFF;" src="<c:url value="/company/images/rss.gif" />" >
+									</a>
+								</div>
 						</td>
 						</tr>
 						</table>
@@ -166,9 +166,9 @@
 						<%-- ============================== --%>
 						<c:if test="${mediaListEnabled}">
 						 <div style="margin-top: 8px;">
-							<table cellspacing="0" cellpadding="0">
+							<table cellspacing="0" cellpadding="0" border="5">
 							<tr>
-								<td style="background-color: #e8e8e8; padding: 4px; width: 100%;">
+								<td style="background-color: #e8e8e8; padding: 4px; width: 100%;" valign="top">
 									<span style="background-color: #e8e8e8; padding: 4px; width: 100%;">
 									<b>related media feeds</b>
 									</span>
@@ -176,7 +176,7 @@
 							</tr>
 							<c:forEach items="${mediaList}" var="curmedia" varStatus="status">
 								<tr>
-									<td>
+									<td valign="top">
 										<%-- Media Section is made up table (image, title) --%>
 										<table cellspacing="0" cellpadding="12" width="100%">
 											<tr><td style="background-color: #e7f0f1;">

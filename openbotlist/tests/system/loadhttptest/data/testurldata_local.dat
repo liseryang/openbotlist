@@ -1,7 +1,7 @@
-#
+#################################################
 # Also use the following to load scripts:
 # script://./data/scripts/sequence_add_comment_bug.dat
-#
+#################################################
 http://localhost:8080/botlist/
 http://localhost:8080/botlist/spring/stats.html
 http://localhost:8080/botlist/spring/botverse/botverse.html
@@ -26,6 +26,12 @@ http://localhost:8080/botlist/spring/pipes/global_pipes.html?querymode=enabled&q
 
 http://localhost:8080/botlist/spring/rss/listings_rss.html
 http://localhost:8080/botlist/spring/botverse/rss/botverse_rss.html
+
+#################################################
+# New scala oriented pipes system 
+#################################################
+http://localhost:8080/botlist/lift/pipes/types/remote_agent_req
+http://localhost:8080/botlist/lift/pipes/types/remote_agent_send
 
 script://./data/scripts/sequence_add_comment_bug.dat
 script://./data/scripts/sequence_botverse_addcom.dat

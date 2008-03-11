@@ -10,7 +10,7 @@
 #body_content_center {
 	border-bottom: 1px solid #816943;
 	padding: 0px 0px 0px 0px;	
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-right: 30px;
 	margin-top: 6px;
 }
@@ -20,12 +20,15 @@
  * of links; this is a main group secondary to the content center
  */
 #link_content_group {
-	border-bottom: 1px solid #DDD;
+	border-bottom: 2px solid #DDD;
+	padding-bottom: 4px;
 }
 #link_content_group_botverse {
-	border-bottom: 1px solid #DDD; 
-	padding: 10px;
-	margin-right: 10px;
+	border-bottom: 2px solid #DDD; 
+	padding-right: 4px;	
+	padding-bottom: 4px;
+	padding-left: 10px;
+	margin-right: 8px;	
 }
 
 /**

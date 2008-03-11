@@ -25,10 +25,54 @@ class ViewListingController
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.entityLinksDao
-  end      
+  end    
+
+  # get page offset
+  def getPageOffset(request)
+    page = request.getParameter("offsetpage")
+    if page != nil
+      return page.to_i()
+    end
+  end
+  
   # Generate the view
-  def getModel(request)  
-    return {}
+  def getModel(request)
+    
+    mostrecent_mode = false
+    filterset = request.getParameter("filterset")
+    nextPage = getPageOffset(request)
+    if not nextPage
+      nextPage = 0
+    end
+    
+    if filterset == "mostrecent"
+      mostrecent_mode = true
+    end
+
+    # Audit the request
+    @controller.auditLogPage(request, "botverse_calendar.html")
+
+    # For the calendar view, get stats for the last 7 days
+    i = -6
+    statMap = {}
+    statMapDates = {}
+    while i <= 0
+      curCal = JCalendar::getInstance()
+      curCal.add(JCalendar::DATE, i)      
+      linksOnDate = @daohelper.readListingOnDate(curCal)      
+      strId = "stats#{i + 6}"
+      statMap[strId] = linksOnDate
+      statMapDates[strId] = curCal
+      i += 1
+    end
+    
+    userInfo = BotListContractManager::getUserInfo(request)
+    return {
+      'userInfo' => userInfo,
+      'linksOnDates' => statMap,
+      'linksDates' => statMapDates,
+      'filterset' => filterset
+    }
   end
   
   #
