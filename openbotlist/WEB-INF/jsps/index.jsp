@@ -4,10 +4,11 @@
 <html>
 <head>
  	<title>Botlist - Interesting Things Online, way better than wikileaks (beta built with Scala, JRuby, Spring, Liftweb, Haskell technology)</title>
- 
+ 	
+	<meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" >
+ 	
   	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
  	<META NAME="keywords" CONTENT="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
-    <meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" >
    
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
 	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
@@ -48,13 +49,13 @@
 				<!-- Table of Data Grid and Image (rowspan on the left = City Listings ) -->
 				<table width="100%" >
 				<tr>
-				<td valign="top" align="right">
+				<td valign="top" align="left">
 					<%-- ==== Next Set of Data, Recent Links ==== --%>
 					<div style="margin-left: 4px;">
 						<table width="100%">
 						<tr>
 							<td>
-								<span style="background-color: #e8e8e8; padding: 4px;">
+								<span style="background-color: #e8e8e8; padding: 4px; text-align: left;">
 								 &nbsp;most recent updates</span>:
 								</span>
 								&nbsp;/ <a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
