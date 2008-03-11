@@ -166,7 +166,7 @@
 						<%-- ============================== --%>
 						<c:if test="${mediaListEnabled}">
 						 <div style="margin-top: 8px;">
-							<table cellspacing="0" cellpadding="0" border="5">
+							<table cellspacing="0" cellpadding="0">
 							<tr>
 								<td style="background-color: #e8e8e8; padding: 4px; width: 100%;" valign="top">
 									<span style="background-color: #e8e8e8; padding: 4px; width: 100%;">
