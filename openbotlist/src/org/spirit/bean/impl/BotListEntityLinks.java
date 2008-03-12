@@ -20,12 +20,11 @@
 
 package org.spirit.bean.impl;
 
-import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.spirit.bean.impl.base.BotListBeanBase;
+import org.spirit.bean.impl.base.BotListEntity;
 import org.spirit.servlet.bean.BotListConcatValue;
 import org.spirit.util.text.TextUtils;
 
@@ -35,21 +34,16 @@ import org.spirit.util.text.TextUtils;
  * @author Berlin Brown
  * 
  */
-public class BotListEntityLinks extends BotListBeanBase 
-		implements Serializable {          
+public class BotListEntityLinks extends BotListEntity {       
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -2504255702163561930L;
 	public static final int MAX_LEN_HOSTNAME = 40;
-	
-	private String mainUrl;
-
-	private Calendar createdOn;
+		
 	private Date createdOnDate;
-	private String keywords;
-	private String urlDescription;
-	private String urlTitle;
+	
 	private List listings;
 	private Long commentsCount;
 	private Long linkCount;	
@@ -66,8 +60,7 @@ public class BotListEntityLinks extends BotListBeanBase
 	private String linkType;
 	private BotListCatLinkGroups linkCategory;
 	
-	private String generatedUniqueId;
-		
+	private String generatedUniqueId;		
 	private Long linksCt;
 	private Long imageCt;
 	private Long metaDescrLen;
@@ -75,7 +68,7 @@ public class BotListEntityLinks extends BotListBeanBase
 	private Long paraTagCt;
 	private Long documentSize;
 	private Long requestTime;
-
+	
 	/**
 	 * @return the views
 	 */
@@ -130,70 +123,7 @@ public class BotListEntityLinks extends BotListBeanBase
 	public void setListings(List listings) {
 		this.listings = listings;
 	}
-	/**
-	 * @return the createdOn
-	 */
-	public Calendar getCreatedOn() {
-		if (createdOn == null) {
-			createdOn = Calendar.getInstance();
-		}
-		return createdOn;
-	}
-	/**
-	 * @param createdOn the createdOn to set
-	 */
-	public void setCreatedOn(Calendar createdOn) {
-		this.createdOn = createdOn;
-	}
-
-	/**
-	 * @return the keywords
-	 */
-	public String getKeywords() {
-		return keywords;
-	}
-	/**
-	 * @param keywords the keywords to set
-	 */
-	public void setKeywords(String keywords) {
-		this.keywords = keywords;
-	}
-	/**
-	 * @return the mainUrl
-	 */
-	public String getMainUrl() {
-		return mainUrl;
-	}
-	/**
-	 * @param mainUrl the mainUrl to set
-	 */
-	public void setMainUrl(String mainUrl) {
-		this.mainUrl = mainUrl;
-	}
-	/**
-	 * @return the urlDescription
-	 */
-	public String getUrlDescription() {
-		return urlDescription;
-	}
-	/**
-	 * @param urlDescription the urlDescription to set
-	 */
-	public void setUrlDescription(String urlDescription) {
-		this.urlDescription = urlDescription;
-	}
-	/**
-	 * @return the urlTitle
-	 */
-	public String getUrlTitle() {
-		return urlTitle;
-	}
-	/**
-	 * @param urlTitle the urlTitle to set
-	 */
-	public void setUrlTitle(String urlTitle) {
-		this.urlTitle = urlTitle;
-	}
+	
 	/**
 	 * @return the rating
 	 */
