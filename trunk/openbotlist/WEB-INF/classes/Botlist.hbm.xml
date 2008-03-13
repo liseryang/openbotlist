@@ -161,6 +161,27 @@
 		
 	</class>
 	
+	<!-- ***************************************************** -->
+	<!-- FOAF Entity : added 3/10/2008 -->
+	<!-- ***************************************************** -->
+	<class name="org.spirit.bean.impl.BotListEntityTypeFoaf" table="entity_type_foaf" dynamic-update="true">
+
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+		<property name="foafInterestDescr" column="foaf_interest_descr" not-null="false" />
+		<property name="rating" column="rating" not-null="false" />
+		<property name="fullName" column="full_name" not-null="false" />
+		<property name="foafMbox" column="foaf_mbox" not-null="false" />
+		<property name="dateOfBirth" column="date_of_birth" not-null="false" />
+		<property name="friendSetUid" column="friend_set_uid" not-null="false" />
+		<property name="foafPageDocUrl" column="foaf_page_doc_url" not-null="false" />
+		<property name="foafImg" column="foaf_img" not-null="false" />
+		<property name="processCount" column="process_count" not-null="false" />
+		<property name="nickname" column="nickname" not-null="false" />
+
+	</class>
+	
 	<class name="org.spirit.bean.impl.BotListUserComments" 
 			table="user_comments" dynamic-update="true">
         <cache usage="read-write"/>
