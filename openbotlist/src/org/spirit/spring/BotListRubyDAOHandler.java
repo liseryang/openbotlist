@@ -33,6 +33,7 @@ import org.spirit.dao.BotListCoreSettings;
 import org.spirit.dao.BotListCoreUsersDAO;
 import org.spirit.dao.BotListDeveloperUsersDAO;
 import org.spirit.dao.BotListEntityLinksDAO;
+import org.spirit.dao.BotListEntityTypeFoafDAO;
 import org.spirit.dao.BotListForumGroupDAO;
 import org.spirit.dao.BotListGroupControlDAO;
 import org.spirit.dao.BotListGroupLinksDAO;
@@ -48,7 +49,6 @@ import org.spirit.dao.BotListUserCommentsDAO;
 import org.spirit.dao.BotListUserLinkDAO;
 import org.spirit.dao.BotListUserLinksDAO;
 import org.spirit.dao.BotListUserVisitLogDAO;
-import org.springframework.web.servlet.mvc.AbstractFormController;
 
 /**
  * Spring Controller that interfaces between spring and jruby; reads the ruby script and invokes the
@@ -122,6 +122,8 @@ public abstract class BotListRubyDAOHandler
 	private BotListCatLinkGroupsDAO catLinkGroupsDao = null;
 	
 	private BotListCatGroupTermsDAO catGroupTermsDao = null;
+	
+	private BotListEntityTypeFoafDAO entityTypeFoafDao = null;
 	
 	/******************************************************
 	 * 
