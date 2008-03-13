@@ -3,7 +3,7 @@
 ## used throughout this application
 ##
 ## Run with python(cpython)
-## 
+##
 
 '''
  Example:
@@ -26,7 +26,6 @@ from pyparsing.pyparsing import \
      printables, ParseException, restOfLine
 
 from beangen import BeanGen
-
 
 
 inibnf = None

@@ -1,5 +1,6 @@
-##
-## Html templates
+########################################
+# Html template
+########################################
 
 JAVA_HEADER_COPYRIGHT="""/**
  * Berlin Brown
@@ -30,3 +31,5 @@ HBM_ID_FIELD = """
             <generator class="native"/>
         </id>
 """
+
+

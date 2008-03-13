@@ -5,8 +5,13 @@
 # To run, use:
 # python beangen_client.py -f generate.ini
 #
+# Updates:
+# ------------------
+# 3/10/2008 - creating rspec test cases
+#
 
 import java_template as java
+import rspec_test_template as rspec
 
 #
 # BeanGen Class
@@ -29,7 +34,6 @@ class BeanGen:
         for node in self.fields.keys():
             f.write("\t\tprivate %s %s;\n" % (self.fields[node],
                                               self.mangleName(node)))
-            
         f.write("\n")
 
     def writeDaoHandlerConfig(self, f):
@@ -94,8 +98,9 @@ class BeanGen:
 
         f.write('\nspring-servlet.xml (radController):\n')
         f.write('\n\t<property name="%sDao">\n' % mangle_name)
-	f.write('		<ref bean="%sDaoBean"/>\n' % mangle_name)
-	f.write('\t</property>\n')
+		
+        f.write('		<ref bean="%sDaoBean"/>\n' % mangle_name)
+        f.write('\t</property>\n')
 
         # Write the hibernate config
         self.writeHbmConfig(f)
@@ -121,9 +126,16 @@ class BeanGen:
             s.append("%s%s" % (n[0].upper(), n[1:]))
             
         return "".join(s)
-
+	
+    def generateRSpecTestCase(self):
+        clean_bean_name = self.bean_class_name.lower()
+        filename = "./output/%s_spec.rb" % (clean_bean_name)
+        f = open(filename, 'w')
+        f.write(rspec.RSPEC_HEADER)
+        f.close()
+	
     def generateClassFiles(self):
-
+        ''' Write the code generated files '''		
         filename = "./output/%s.java" % self.bean_class_name
         f = open(filename, "w")
         self.writeBeanClass(f, self.bean_class_name)
@@ -150,7 +162,12 @@ class BeanGen:
         f.write("\n}\n")
         f.close()
 
+        # Rspec test cases
+        self.generateRSpecTestCase()
+		
+		#*********************
         # Write the configurations
+		#*********************
         filename = "./output/%sConfig.txt" % self.bean_class_name
         f = open(filename, "w")
         self.writeConfigFile(f)
