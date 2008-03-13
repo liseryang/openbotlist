@@ -1,4 +1,8 @@
-# create mock tests
+########################################
+# Rspec tests
+# Author: Berlin Brown
+# Date: 3/10/2008
+########################################
 
 include_class 'org.spirit.bean.impl.BotListCoreUsers' unless defined? BotListCoreUsers
 include_class 'org.spirit.util.BotListUniqueId' unless defined? BotListUniqueId
@@ -195,3 +199,4 @@ describe "Creating simple mock objects=" do
   end
 
 end
+
