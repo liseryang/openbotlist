@@ -277,8 +277,13 @@
         <property name="sessionFactory">
 			<ref local="sessionFactory" />
 		</property>
-	</bean>	
+	</bean>
 	
+	<bean id="entityTypeFoafDaoBean" class="org.spirit.dao.impl.BotListEntityTypeFoafDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>	
 	
 	<!-- ******************************** -->
 	<!-- Spring Controller and View Beans -->
@@ -351,6 +356,9 @@
 		</property>
 		<property name="profileSettingsDao">
 			<ref bean="profileSettingsDaoBean"/>
+		</property>
+		<property name="entityTypeFoafDao">
+			<ref bean="entityTypeFoafDaoBean"/>
 		</property>
 		<!-- End User Level DAO Beans -->
 		<!-- Admin Tools -->
