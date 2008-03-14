@@ -4,14 +4,14 @@
 # Date: 3/10/2008
 ########################################
 
+include_class 'java.text.SimpleDateFormat' unless defined? SimpleDateFormat
+include_class "java.util.Calendar" unless defined? Calendar
+
 include_class 'org.spirit.bean.impl.BotListCoreUsers' unless defined? BotListCoreUsers
 include_class 'org.spirit.util.BotListUniqueId' unless defined? BotListUniqueId
 include_class 'org.acegisecurity.providers.encoding.Md5PasswordEncoder' unless defined? Md5PasswordEncoder
 include_class 'org.spirit.bean.impl.BotListProfileSettings' unless defined? BotListProfileSettings
 include_class 'org.spirit.contract.BotListContractManager' unless defined? BotListContractManager
-
-include_class 'java.text.SimpleDateFormat' unless defined? SimpleDateFormat
-include_class "java.util.Calendar" unless defined? Calendar
 
 include_class "org.spirit.contract.BotListCoreUsersContract"
 include_class "org.spirit.bean.impl.BotListEntityLinks"
@@ -28,6 +28,7 @@ include_class "org.spirit.bean.impl.BotListProfileSettings"
 include_class "org.spirit.bean.impl.BotListMediaFeeds"
 include_class "org.spirit.bean.impl.BotListActiveMediaFeeds"
 include_class "org.spirit.bean.impl.BotListUserLinks"
+include_class "org.spirit.bean.impl.BotListEntityTypeFoaf" unless defined? BotListEntityTypeFoaf
 
 describe "Creating simple mock objects=" do
   
@@ -157,6 +158,21 @@ describe "Creating simple mock objects=" do
     end   
   end
 
+  it "Should create the entity_type_foaf" do 
+    dao = @rad_controller.entityLinksDao
+    mock_obj = BotListEntityTypeFoaf.new
+    mock_obj.foafInterestDescr = ""
+    mock_obj.rating = ""
+    mock_obj.fullName = ""
+    mock_obj.foafMbox = ""
+    mock_obj.dateOfBirth = ""
+    mock_obj.friendSetUid = ""
+    mock_obj.foafPageDocUrl = ""
+    mock_obj.foafImg = ""
+    mock_obj.processCount = ""
+    mock_obj.nickname = ""
+  end
+  
   it "Should create the city listing" do
     dao = @rad_controller.cityListingDao
   end
@@ -189,7 +205,6 @@ describe "Creating simple mock objects=" do
     dao = @rad_controller.activeMediaFeedsDao
   end
   
-
   it "Should create the user links" do
     dao = @rad_controller.userLinksDao
   end
