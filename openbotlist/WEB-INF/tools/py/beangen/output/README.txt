@@ -1,1 +1,1 @@
-##
+# Output directory for bean generation
