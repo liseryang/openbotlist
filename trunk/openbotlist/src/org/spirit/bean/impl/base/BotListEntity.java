@@ -15,6 +15,11 @@ import java.util.Calendar;
 public abstract class BotListEntity extends BotListBeanBase 
 		implements Serializable { 
 		
+    /**
+     * <property name="generatedUniqueId" column="generated_obj_id" not-null="false" />
+     */    
+    private String generatedUniqueId;
+    
 	private Calendar createdOn;
 	private Calendar updatedOn;
 	private Long id;	
@@ -22,6 +27,13 @@ public abstract class BotListEntity extends BotListBeanBase
 	private String keywords;
 	private String urlDescription;
 	private String urlTitle;	
+	
+	public String getGeneratedUniqueId() {
+		return generatedUniqueId;
+	}
+	public void setGeneratedUniqueId(String generatedUniqueId) {
+		this.generatedUniqueId = generatedUniqueId;
+	}
 	
 	public Calendar getUpdatedOn() {
 		return updatedOn;
