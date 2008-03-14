@@ -13,6 +13,9 @@
 import java_template as java
 import rspec_test_template as rspec
 
+from rspec_codegen import BeanGenRSpec
+from ruby_biz_codegen import BeanGenRubyLogic
+
 #
 # BeanGen Class
 class BeanGen:
@@ -28,6 +31,14 @@ class BeanGen:
         self.bean_class_name = None
         self.dao_interface_name = None
         self.dao_class_name = None
+        
+        #***********
+        # Create helper beangen classes
+        #***********
+        self.rspec_bean = BeanGenRSpec(self)
+        self.ruby_biz = BeanGenRubyLogic(self)
+        
+        # End of Constructor
 
     def writeBeanFieldMembers(self, f):
         f.write("\n")
@@ -127,13 +138,6 @@ class BeanGen:
             
         return "".join(s)
 	
-    def generateRSpecTestCase(self):
-        clean_bean_name = self.bean_class_name.lower()
-        filename = "./output/%s_spec.rb" % (clean_bean_name)
-        f = open(filename, 'w')
-        f.write(rspec.RSPEC_HEADER)
-        f.close()
-	
     def generateClassFiles(self):
         ''' Write the code generated files '''		
         filename = "./output/%s.java" % self.bean_class_name
@@ -163,17 +167,19 @@ class BeanGen:
         f.close()
 
         # Rspec test cases
-        self.generateRSpecTestCase()
-		
-		#*********************
+        self.rspec_bean.generateRSpecTestCase()
+        
+        # Write the ruby business logic
+        self.ruby_biz.generateRubyLogic()
+
+        #*********************
         # Write the configurations
-		#*********************
+        #*********************
         filename = "./output/%sConfig.txt" % self.bean_class_name
         f = open(filename, "w")
         self.writeConfigFile(f)
         f.close()
-        
-    
+         
     def generateClassNames(self):
         ''' Generate the Java Class Names,
         including: BeanImpl, DaoInterface, DaoImpl'''
