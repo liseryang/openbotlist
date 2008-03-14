@@ -59,8 +59,7 @@ public class BotListEntityLinks extends BotListEntity {
 	private String coreUsername;	
 	private String linkType;
 	private BotListCatLinkGroups linkCategory;
-	
-	private String generatedUniqueId;		
+			
 	private Long linksCt;
 	private Long imageCt;
 	private Long metaDescrLen;
@@ -236,12 +235,6 @@ public class BotListEntityLinks extends BotListEntity {
 	}
 	public void setLinkType(String linkType) {
 		this.linkType = linkType;
-	}
-	public String getGeneratedUniqueId() {
-		return generatedUniqueId;
-	}
-	public void setGeneratedUniqueId(String generatedUniqueId) {
-		this.generatedUniqueId = generatedUniqueId;
 	}
 	public Long getImageCt() {
 		return imageCt;
