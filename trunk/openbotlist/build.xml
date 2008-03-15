@@ -7,66 +7,28 @@
 <!-- Date: 11/1/2006 -->
 <!-- Updates: -->
 <!-- + 3/10/2008 - updated core libraries to most recent versions, spring, etc --> 
+<!-- + 3/14/2008 - Moved classpath to property file -->
 <!-- ****************************************************** -->
 <project name="OpenBotlist Main Build File" default="package" basedir=".">
 
-    <property file="build.properties" />
-    
+	<property file="build.properties" />        
     <property name="build.dir"            value="${basedir}/build"/>
     <property name="build.classes.dir"    value="${basedir}/build/classes"/>
     <property name="src.dir"              value="${basedir}/src"/>
-	<property name="scala.src.dir"        value="${basedir}/apps_src/scala"/>
+	<property name="scala.src.dir"        value="${basedir}/apps_src/scala"/>	
     <property name="lib.dir"              value="${basedir}/WEB-INF/lib"/>
 	<property name="lib.runtime.dir"      value="${basedir}/runtime-lib"/>
-
+	<property name="lib.servlet.dir"      value="${basedir}/servlet-lib"/>	
+	<property file="build_classpath.properties" />		
+	
     <!-- Web Apps Directory -->
     <property name="default.tomcat.webapps" value="${tomcat.home}/webapps" />
-
-    <!-- Define the library files -->
-    <property name="acegi.jar"          value="${lib.dir}/acegi-security-1.0.3.jar" />
-    <property name="hibernate.jar"      value="${lib.dir}/hibernate3.jar" />
-    <property name="junit.jar"          value="${lib.dir}/junit-3.8.1.jar" />
-    <property name="log4j.jar"          value="${lib.dir}/log4j-1.2.14.jar" />
-    <property name="dom4j.jar"          value="${lib.dir}/dom4j-1.6.1.jar" />
-    <property name="logging.jar"        value="${lib.dir}/commons-logging.jar" />
-    <property name="collections.jar"    value="${lib.dir}/commons-collections.jar" />
-    <property name="cglib.jar"          value="${lib.dir}/cglib-2.1.3.jar" />
-    <property name="jta.jar"            value="${lib.dir}/jta.jar" />
-    <property name="mysql.jar"          value="${lib.dir}/mysql-connector-java-5.0.8-bin.jar" />
-    <property name="antlr.jar"          value="${lib.dir}/antlr-2.7.6.jar" />
-    <property name="validator.jar"      value="${lib.dir}/commons-validator.jar" />
-    <property name="commons-upload.jar" value="${lib.dir}/commons-fileupload.jar" />
-    <property name="standard.jar"       value="${lib.dir}/standard.jar" />
-    
-    <property name="servlet.jar"        value="${basedir}/servlet-lib/servlet-api.jar" />    
-    <property name="jsp-api.jar"        value="${basedir}/servlet-lib/jsp-api.jar" />    
-    
-    <property name="spring.jar"         value="${lib.dir}/spring.jar" />
-    <property name="spring-core.jar"    value="${lib.dir}/spring-core.jar" />
-	<property name="spring-web.jar"     value="${lib.dir}/spring-web.jar" />
-	<property name="spring-webmvc.jar"  value="${lib.dir}/spring-webmvc.jar" />
-	
-    <property name="jruby.jar"          value="${lib.dir}/jruby.jar" />
-    <property name="bsf.jar"            value="${lib.dir}/bsf.jar" />
-    <property name="lucene.jar"         value="${lib.dir}/lucene-core-2.1.0.jar" />
-    
-    <property name="antlr.jar"          value="${lib.dir}/antlr-3.0.1.jar" />
-    <property name="antlr-runtime.jar"  value="${lib.dir}/antlr-runtime-3.0.1.jar" />
-    
-	<!-- **************************************** -->
-	<!-- Scala Jar Imports -->
-	<!-- **************************************** -->
-    <property name="scala.jar"             value="${lib.dir}/scala-library-2.6.1.jar" />
-	<property name="scala-compiler.jar"    value="${lib.runtime.dir}/scala-compiler-2.6.1.jar" />
-	<property name="lift.jar"              value="${lib.dir}/lift-core-0.5-SNAPSHOT.jar" />
-	
-    <target name="init" description="Initialization">
-        <tstamp/>
-        <echo message="Running with Tomcat Home=${tomcat.home}" />
-    </target>
-
+	    
     <!-- Target: CLASSPATH -->
     <path id="classpath">
+    	<pathelement location="${standard.jar}" />
+		<pathelement location="${servlet.jar}" />
+    	<pathelement location="${jsp-api.jar}" />
         <pathelement location="${acegi.jar}"/>
         <pathelement location="${hibernate.jar}"/>
         <pathelement location="${junit.jar}"/>
@@ -81,21 +43,17 @@
         <pathelement location="${spring.jar}" />
     	<pathelement location="${spring-core.jar}" />
         <pathelement location="${spring-web.jar}" />
-        <pathelement location="${spring-webmvc.jar}" />
-        <pathelement location="${servlet.jar}" />
+        <pathelement location="${spring-webmvc.jar}" />    	
         <pathelement location="${jruby.jar}" />
         <pathelement location="${bsf.jar}" />
         <pathelement location="${validator.jar}" />
-        <pathelement location="${commons-upload.jar}" />
-        <pathelement location="${jsp-api.jar}" />
-        <pathelement location="${standard.jar}" />
+        <pathelement location="${commons-upload.jar}" />               
         <pathelement location="${lucene.jar}" />
         <pathelement location="${antlr.jar}" />
         <pathelement location="${antlr-runtime.jar}" />    	
         <pathelement location="${scala.jar}" />
     	<pathelement location="${scala-compiler.jar}" />
-        <pathelement location="${lift.jar}" />
-        
+        <pathelement location="${lift.jar}" />        
         <!-- Include the CLASSES directory -->
         <pathelement location="${build.classes.dir}" />
     </path>
@@ -111,9 +69,16 @@
 		<pathelement location="${servlet.jar}" />
         <pathelement location="${jsp-api.jar}" />
 	</path>
-
+	
+	<target name="init" description="Initialization">
+	        <tstamp/>
+	        <echo message="Running with Tomcat Home=${tomcat.home}" />	
+			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
+	    	<fail unless="classpath.include">Error loading build_classpath.property file.  Make sure it exists.</fail>
+	</target>	
+	
     <!-- Target: Prepare -->
-    <target name="prepare">
+    <target name="prepare" depends="init">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${build.classes.dir}"/>
     </target>
