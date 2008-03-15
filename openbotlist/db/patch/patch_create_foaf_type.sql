@@ -31,7 +31,10 @@ CREATE TABLE entity_type_foaf (
 	foaf_page_doc_url      varchar(255) NOT NULL,
 	foaf_img               varchar(255),
     friend_set_uid         varchar(60),	
-		
+
+	request_time           SMALLINT,
+	http_status_code       varchar(10),
+
 	date_of_birth          DATE NOT NULL DEFAULT '0000-00-00',	
 	PRIMARY KEY (id)
 );
