@@ -279,7 +279,7 @@
 		</property>
 	</bean>
 	
-	<bean id="entityTypeFoafDaoBean" class="org.spirit.dao.impl.BotListEntityTypeFoafDAOImpl">
+	<bean id="entityTypeFoafDaoBean" class="org.spirit.apps.foaf.BotListEntityTypeFoafDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
 		</property>
