@@ -73,6 +73,13 @@ http://openbotlist.googlecode.com/svn/
  (All of these issues will be resolved in future source releases)
 
 ===================
+ * For Developers:
+===================
+
+ For developers that want to build the botlist project, visit the 'docs/QuickStart' directory and
+ also see the other documents in the 'docs' directory.
+
+===================
  Contact:
 ===================
  
