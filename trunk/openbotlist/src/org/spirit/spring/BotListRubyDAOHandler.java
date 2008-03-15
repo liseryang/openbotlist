@@ -21,6 +21,7 @@ package org.spirit.spring;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.spirit.apps.foaf.BotListEntityTypeFoafDAO;
 import org.spirit.bean.impl.BotListUserVisitLog;
 import org.spirit.dao.BotListAclControlDAO;
 import org.spirit.dao.BotListAclManagerDAO;
@@ -33,7 +34,6 @@ import org.spirit.dao.BotListCoreSettings;
 import org.spirit.dao.BotListCoreUsersDAO;
 import org.spirit.dao.BotListDeveloperUsersDAO;
 import org.spirit.dao.BotListEntityLinksDAO;
-import org.spirit.dao.BotListEntityTypeFoafDAO;
 import org.spirit.dao.BotListForumGroupDAO;
 import org.spirit.dao.BotListGroupControlDAO;
 import org.spirit.dao.BotListGroupLinksDAO;
@@ -49,6 +49,7 @@ import org.spirit.dao.BotListUserCommentsDAO;
 import org.spirit.dao.BotListUserLinkDAO;
 import org.spirit.dao.BotListUserLinksDAO;
 import org.spirit.dao.BotListUserVisitLogDAO;
+import org.springframework.web.servlet.mvc.AbstractFormController;
 
 /**
  * Spring Controller that interfaces between spring and jruby; reads the ruby script and invokes the
@@ -451,6 +452,14 @@ public abstract class BotListRubyDAOHandler
 
 	public void setCatLinkGroupsDao(BotListCatLinkGroupsDAO catLinkGroupsDao) {
 		this.catLinkGroupsDao = catLinkGroupsDao;
+	}
+
+	public BotListEntityTypeFoafDAO getEntityTypeFoafDao() {
+		return entityTypeFoafDao;
+	}
+
+	public void setEntityTypeFoafDao(BotListEntityTypeFoafDAO entityTypeFoafDao) {
+		this.entityTypeFoafDao = entityTypeFoafDao;
 	}
 
 }
