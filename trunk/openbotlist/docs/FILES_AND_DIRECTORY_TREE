@@ -48,7 +48,7 @@
 |   |   |       `-- index.jsp
 |   |   |-- bots
 |   |   |-- botverse
-|   |   |   |-- botverse.jsp - Main botverse view jsp link page, see http://botspiritcompany.com/botlist/spring/botverse/botverse.html?filterset=mostrecent 
+|   |   |   |-- botverse.jsp - Main botverse view jsp link page, see /botlist/spring/botverse/botverse.html 
 |   |   |   |-- botverse.rb - Controller and business logic for the botvere view page
 |   |   |   |-- botverse_confirm.jsp
 |   |   |   |-- botverse_submit.jsp - Allow users to submit user links 
