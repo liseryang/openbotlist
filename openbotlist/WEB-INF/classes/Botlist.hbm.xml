@@ -168,11 +168,11 @@
         
         <!-- ***************************************************** -->
         <!-- FOAF Entity : added 3/10/2008 -->
-        <!-- The goal of storing FOAF information is for analyzing the semantic web 
-        <!-- information.  How many people are interested in programming? Here are the kind of links that they
+        <!-- The goal of storing FOAF information is for analyzing the semantic web -->
+        <!-- information.  How many people are interested in programming? Here are the kind of links that they -->
         <!-- might be interested in.  Etc, etc. 	-->
         <!-- ***************************************************** -->
-        <class name="org.spirit.bean.impl.BotListEntityTypeFoaf" table="entity_type_foaf" dynamic-update="true">
+        <class name="org.spirit.apps.foaf.BotListEntityTypeFoaf" table="entity_type_foaf" dynamic-update="true">
 
         	<id name="id" column="id">
             	<generator class="native"/>
@@ -199,6 +199,9 @@
             <property name="processCount" column="process_count" not-null="false" />
             <property name="nickname" column="nickname" not-null="false" />
             <property name="foafName" column="foaf_name" not-null="false" />
+            
+            <property name="requestTime" column="request_time" not-null="false" />
+            <property name="httpStatusCode" column="http_status_code" not-null="false" />
         </class>
         
         <class name="org.spirit.bean.impl.BotListUserComments" 
