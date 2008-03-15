@@ -67,7 +67,9 @@ object AgentUtil {
 									 new java.lang.Long(chatForumGroupId), null)
 	val forum = forum_obj.asInstanceOf[ForumGroup]
     comment.setForumId(new java.lang.Long(chatForumGroupId))
-    forum.getTopics().add(comment)
+    val topics = forum.getTopics()
+	// TODO: with release 2.7, this code does not work.
+	//topics.add(comment)
     tx.commit
     hbm_session.close
   }

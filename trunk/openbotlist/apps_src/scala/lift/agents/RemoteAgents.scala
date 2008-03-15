@@ -26,7 +26,8 @@ import org.spirit.lift.agents.model._
  * Example request:
  * http://localhost:8080/botlist/lift/pipes/agents/remote_agent
  */
-class RemoteAgents (val request: RequestState, val httpRequest: HttpServletRequest) extends SimpleController {
+class RemoteAgents (val request: RequestState) extends SimpleController {
+  def httpRequest = request.request
 
   def remote_agent_req : XmlResponse = {
 	// Cast to the user visit log bean (defined in the spring configuration)
