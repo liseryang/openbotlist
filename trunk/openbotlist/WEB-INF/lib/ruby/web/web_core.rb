@@ -12,6 +12,8 @@ include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSes
 include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
 include_class 'org.spirit.util.BotListCookieManager' unless defined? BotListCookieManager
 
+include_class 'org.spirit.bean.impl.BotListCalculatorVerification' unless defined? BotListCalculatorVerification
+
 module BotListWebCore
   
   # Bot IDENTIFY
@@ -26,6 +28,10 @@ module BotListWebCore
   # Cookie manager values
   COOKIE_USERNAME = "botlist_username"
   COOKIE_EMAIL = "botlist_email"
+  
+  # Spam verification numbers
+  MAX_RAND_FIRST = 30
+  MAX_RAND_SECOND = 10
   
   # Session remote sync keys
   SESSION_REMOTE_SYNC_KEY = "session.remote_sync.key"
@@ -51,6 +57,15 @@ module BotListWebCore
     return false
   end
   
+  # Generate the calculator verification, input and solution
+  def BotListWebCore.generateCalcVerification()
+    calc = BotListCalculatorVerification.new
+    calc.firstInput = rand MAX_RAND_FIRST
+    calc.secondInput = rand MAX_RAND_SECOND
+    calc.solution = calc.firstInput + calc.secondInput
+    return calc
+  end
+
   # Check for empty value from form members
   def BotListWebCore.valueEmpty?(member_value)
     res = (not (!member_value.nil? and !member_value.empty?))
