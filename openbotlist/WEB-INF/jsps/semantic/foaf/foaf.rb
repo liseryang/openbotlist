@@ -43,7 +43,7 @@ class BotverseController
 		
   def initialize(controller)
     @controller = controller
-    @daohelper = @controller.entityLinksDao
+    @daohelper = @controller.entityTypeFoafDao
     @dao_banner = @controller.adminMainBannerDao
     @dao_settings = @controller.coreSettings
     @dao_active_feeds = @controller.activeMediaFeedsDao
@@ -54,7 +54,14 @@ class BotverseController
 
     # Audit the request
     @controller.auditLogPage(request, "foaf.html")
-        
+    
+    # Safe session create, botverse is a core apxplication,
+    # Create the session if not available
+    BotListSessionManager.safeCreateSession(request)
+    
+    nextPage = 0
+    links = @daohelper.pageEntityLinks(nextPage, BotListConsts::MAX_RESULTS_PAGE)
+    
     # Extract the banner headline to display
     banner = @dao_banner.readBanner('botverse')
     
@@ -65,6 +72,7 @@ class BotverseController
     map = BotListMapEntityLink.new    
     map['headline'] = banner.headline if !banner.nil?
     map['userInfo'] = userInfo
+    map['listings'] = links
     return map
   end    
   def onSubmit(request, response, form, errors)

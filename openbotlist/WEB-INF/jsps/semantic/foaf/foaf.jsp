@@ -26,9 +26,18 @@
  </div>
 <h1 class="bot_titlelogo">Botverse - find interesting things online</h1>
 			
-			<%-- Navigation Header --%>
-			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			
-			<%-- End of Navigation Header --%>
+<%-- Navigation Header --%>
+<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			
+<%-- End of Navigation Header --%>
+
+<div style="margin: 4px;">
+	<h3 class="bot_headerinfo">
+			The Friend of a Friend project is a web of machine-readable pages describing people, 
+			links between them and the things they create and do. 
+				<a href="http://www.foaf-project.org/">(foaf)</a>
+	</h3>
+</div>
+
 
 <div style="margin: 10px;">
 
@@ -43,7 +52,7 @@
 	<%-- Build the table for entering the new department information --%>
 	<%@include file="/WEB-INF/jsps/general/foaf_quick_navigation.jsp" %>	
 	<%-- End of Table for Botverse Navigation Links --%>
-		
+				
 	<%-- Table Section including banner and search  --%>	
 	<table width="100%" cellspacing="0" cellpadding="0">
 	<tr>
@@ -80,8 +89,26 @@
 	</td>
 	</tr>
 	</table>
-	<%-- End of Table search/banner --%>	
-			
+	<%-- End of Table search/banner --%>
+	<table class="linklist_data" cellspacing="2" cellpadding="0">
+		<c:forEach items="${command.listings}"  var="listing" varStatus="status">
+				<%-- Begin row production for botverse links --%>
+				<tr>					
+					<td colspan="3">							
+							<a class="linklist_objlinks" href="<c:url value="${listing.mainUrl}" />" >
+								<c:out value="${listing.urlTitle}" />
+							</a>
+							<%-- Add custom tag here, find hostname --%>
+							<span class="linklist_comments_host">
+								<%-- &nbsp;(<botlistutil:hostname value="${listing.mainUrl}" />) --%>
+								&nbsp;(<span class="home_source_label">source:</span> <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>)
+							</span>
+					</td>
+				</tr>
+			<%-- End row production for botverse links --%>
+		</c:forEach>
+	</table>
+	
 <%-- End DIV (bot_profile_sect_add_link) --%>
 </div>
 
