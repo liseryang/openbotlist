@@ -26,6 +26,8 @@ public class BotListEntityTypeFoafDAOImpl
 	public static final int MAX_DAO_RESULTS = 400; 
 	public static final int MAX_MAX_RESULTS = 2000;
 	
+	public static final String DEFAULT_QUERY = "from org.spirit.apps.foaf.BotListEntityTypeFoaf as links order by links.id desc";
+	
 	/**
 	 * @see org.spirit.dao.BotListUserLinkDAO#createLink(org.spirit.bean.impl.BotListUserLink)
 	 */
@@ -66,6 +68,9 @@ public class BotListEntityTypeFoafDAOImpl
 						return data;
 					}
 				});		
+	}
+	public List pageEntityLinks(final int page, final int pageSize) {
+		return pageEntityLinks(DEFAULT_QUERY, page, pageSize);
 	}
 	
 }
