@@ -39,8 +39,7 @@ public class BotListEntityLinks extends BotListEntity {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2504255702163561930L;
-	public static final int MAX_LEN_HOSTNAME = 40;
+	private static final long serialVersionUID = -2504255702163561930L;	
 		
 	private Date createdOnDate;
 	
@@ -50,10 +49,7 @@ public class BotListEntityLinks extends BotListEntity {
 	private Long views;
 	private Long rating;	
 	private String fullName;
-	private Long userId;
-	private String hostname;
-	private String hostnameDisplay;
-	private String hostnameDisplayUrl;
+	private Long userId;	
 
 	private String searchScore;	
 	private String coreUsername;	
@@ -170,41 +166,6 @@ public class BotListEntityLinks extends BotListEntity {
 	 */
 	public void setSearchScore(String searchScore) {
 		this.searchScore = searchScore;
-	}
-	public String getHostname() {
-		return hostname;
-	}
-	public void setHostname(String hostname) {
-		this.hostname = hostname;
-	}
-	/**
-	 * Print the hostname, use the hostname field or create the hostname display
-	 * from the main URL field.
-	 * 
-	 * @see org.spirit.test.java.bean.EntityLinkTest
-	 * 
-	 * @return
-	 */
-	public String getHostnameDisplay() {
-		this.hostnameDisplay = "";
-		String urlHostname = this.getHostname();
-		if ((urlHostname != null) && (urlHostname.length() > 0)) {
-			this.hostnameDisplay = urlHostname;
-		} else {
-			this.hostnameDisplay = TextUtils.getHTTPHostname(this.getMainUrl()); 
-		}
-		this.hostnameDisplay = BotListConcatValue.getMaxWord(this.hostnameDisplay, new Integer(MAX_LEN_HOSTNAME));
-		return this.hostnameDisplay;
-	}
-	public String getHostnameDisplayUrl() {
-		this.hostnameDisplayUrl = "";
-		String urlHostname = this.getHostname();
-		if ((urlHostname != null) && (urlHostname.length() > 0)) {
-			this.hostnameDisplayUrl = urlHostname;
-		} else {
-			this.hostnameDisplayUrl = TextUtils.getHTTPHostname(this.getMainUrl()); 
-		}		
-		return this.hostnameDisplayUrl;
 	}
 	public Date getCreatedOnDate() {
 		return createdOnDate;

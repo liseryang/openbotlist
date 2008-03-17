@@ -52,6 +52,12 @@ public class BotListEntityTypeFoaf extends BotListEntity implements Serializable
 	private Long requestTime;
 	private String httpStatusCode;
 	
+	public String toString() {
+		StringBuffer buf = new StringBuffer();
+		buf.append("#BotListEntityTypeFoaf: mainUrl=" + this.getMainUrl() + " nickname=" + this.getNickname() + " title=" + this.getUrlTitle());
+		return buf.toString();
+	}
+	
 	public String getFoafInterestDescr() {
 		return foafInterestDescr;
 	}

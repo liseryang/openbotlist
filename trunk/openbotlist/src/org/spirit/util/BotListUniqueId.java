@@ -15,6 +15,8 @@ import org.apache.commons.logging.LogFactory;
 
 /**
  * This is class is used by botverse.
+ * 
+ * Usage: BotListUniqueId.getUniqueId())
  * @author Berlin Brown
  *
  */

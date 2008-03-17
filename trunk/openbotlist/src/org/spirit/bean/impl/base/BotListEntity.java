@@ -7,6 +7,10 @@ package org.spirit.bean.impl.base;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import org.spirit.servlet.bean.BotListConcatValue;
+import org.spirit.util.BotListUniqueId;
+import org.spirit.util.text.TextUtils;
+
 /**
  * This is class is used by botverse.
  * @author Berlin Brown
@@ -14,7 +18,9 @@ import java.util.Calendar;
  */
 public abstract class BotListEntity extends BotListBeanBase 
 		implements Serializable { 
-		
+	
+	public static final int MAX_LEN_HOSTNAME = 40;
+	
     /**
      * <property name="generatedUniqueId" column="generated_obj_id" not-null="false" />
      */    
@@ -28,11 +34,59 @@ public abstract class BotListEntity extends BotListBeanBase
 	private String urlDescription;
 	private String urlTitle;	
 	
+	private String hostname;
+	private String hostnameDisplay;
+	private String hostnameDisplayUrl;
+		
 	public String getGeneratedUniqueId() {
 		return generatedUniqueId;
 	}
+	/**
+	 * Automatically generate the unique id.
+	 * @return
+	 */
+	public String getGeneratedUniqueIdAuto() {
+		this.generatedUniqueId = BotListUniqueId.getUniqueId();
+		return this.generatedUniqueId;
+	}
 	public void setGeneratedUniqueId(String generatedUniqueId) {
 		this.generatedUniqueId = generatedUniqueId;
+	}
+	
+	public String getHostname() {
+		return hostname;
+	}
+	public void setHostname(String hostname) {
+		this.hostname = hostname;
+	}
+	/**
+	 * Print the hostname, use the hostname field or create the hostname display
+	 * from the main URL field.
+	 * 
+	 * @see org.spirit.test.java.bean.EntityLinkTest
+	 * 
+	 * @return
+	 */
+	public String getHostnameDisplay() {
+		this.hostnameDisplay = "";
+		String urlHostname = this.getHostname();
+		if ((urlHostname != null) && (urlHostname.length() > 0)) {
+			this.hostnameDisplay = urlHostname;
+		} else {
+			this.hostnameDisplay = TextUtils.getHTTPHostname(this.getMainUrl()); 
+		}
+		this.hostnameDisplay = BotListConcatValue.getMaxWord(this.hostnameDisplay, new Integer(MAX_LEN_HOSTNAME));
+		return this.hostnameDisplay;
+	}
+	public String getHostnameDisplayUrl() {
+		this.hostnameDisplayUrl = "";
+		String urlHostname = this.getHostname();
+		if ((urlHostname != null) && (urlHostname.length() > 0)) {
+			this.hostnameDisplayUrl = urlHostname;
+		} else {
+			this.hostnameDisplayUrl = TextUtils.getHTTPHostname(this.getMainUrl()); 
+		}		
+		return this.hostnameDisplayUrl;
 	}
 	
 	public Calendar getUpdatedOn() {

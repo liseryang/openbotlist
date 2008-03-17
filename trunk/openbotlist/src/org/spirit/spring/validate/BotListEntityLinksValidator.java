@@ -32,9 +32,9 @@ public class BotListEntityLinksValidator implements Validator {
 	/**
 	 * Check for a valid url entry.
 	 */
-	private boolean isValidUrl(String url) {
+	public static boolean isValidUrl(String url) {
 		String[] schemes = { "http","https" };
-		UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.NO_FRAGMENTS);		    
+		UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.NO_FRAGMENTS);
 		return urlValidator.isValid(url);
 	}
 	
