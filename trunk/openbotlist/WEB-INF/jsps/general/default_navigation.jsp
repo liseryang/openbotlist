@@ -9,11 +9,10 @@
 				<li><a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />">Botverse (popular links)</a></li>
 				<li><a href="<c:url value="/spring/citylist.html" />">Botlist (community listings)</a></li>
 				<li><a href="<c:url value="/spring/search/search.html?querymode=enabled&query=" />">Search</a></li>
+				<li><a href="<c:url value="/spring/semantic/foaf/foaf.html" />">FOAF</a></li>
 				<li><a href="<c:url value="/spring/forums/comments/topics.html" />">Comments</a></li>
 				<li><a href="<c:url value="/spring/forums/forums.html" />">Forums</a></li>
-				<li><a href="<c:url value="/spring/help/about.html" />">About</a></li>
 				<li><a href="<c:url value="/spring/help/help.html" />">Help</a></li>				
-			</ul>			
+			</ul>
 			</div>
 			<%-- End of Navigation Header --%>
-			

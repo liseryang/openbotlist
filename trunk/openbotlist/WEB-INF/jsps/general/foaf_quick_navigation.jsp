@@ -4,7 +4,7 @@
 		<td>
 			<a href="<c:url value="/spring/botverse/botverse.html" />" class="linklist_botnav" >Botverse.Home</a>
 			| <a href="<c:url value="/spring/semantic/foaf/foaf.html" />" class="linklist_botnav">&lt;FOAF&gt;</a>
-			| <a href="<c:url value="/spring/botverse/botverse_submit.html" />" class="linklist_botnav">Submit FOAF Profile</a>
+			| <a href="<c:url value="/spring/semantic/foaf/foaf_submit.html" />" class="linklist_botnav">Submit FOAF Profile</a>
 			| <a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">Most Recent Profiles</a>
 		</td>
 		<td align="right">
