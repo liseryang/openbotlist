@@ -65,5 +65,8 @@ DROP TABLE if exists user_entity_links;
 DROP TABLE if exists user_visit_audit;
 DROP TABLE if exists user_visit_log;            
 DROP TABLE if exists users;
+--
+-- New additions 3/14/2008
+DROP TABLE if exists entity_type_foaf;
 
 -- End of file

@@ -4,6 +4,9 @@
 
 drop table entity_type_foaf;
 
+--
+-- Entity Type Foaf
+-- Date: 3/14/2008
 CREATE TABLE entity_type_foaf (
 	-- **********************
 	-- Default Entity Type Fields
