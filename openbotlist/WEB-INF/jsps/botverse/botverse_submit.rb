@@ -35,12 +35,11 @@ class LinkListingController
     cookieManager.getCreateUsername(linkListing, nil)
 
     # Calculator Verification
-    calc = generateCalcVerification()
-    calc.solution = calc.firstInput + calc.secondInput
+    calc = BotListWebCore::generateCalcVerification()
     linkListing.firstInput = calc.firstInput
     linkListing.secondInput = calc.secondInput
     linkListing.solution = calc.solution
-
+	
     cur_session = request.getSession(false)
     if cur_session.nil?
         linkListing.viewName = "errorInvalidView"
@@ -52,7 +51,7 @@ class LinkListingController
     prev_calc = cur_session.getAttribute(BotListSessionManager::CALC_VERIFY_OBJECT)
     if !prev_calc.nil?
       linkListing.prevSolution = prev_calc.solution
-    end    
+    end
     cur_session.setAttribute(BotListSessionManager::CALC_VERIFY_OBJECT, calc)
     
     # Also set the validator
@@ -93,15 +92,6 @@ class LinkListingController
         return userLink
     end
     return nil
-  end
-  
-  # Generate the calculator verification, input and solution
-  def generateCalcVerification()
-    calc = BotListCalculatorVerification.new
-    calc.firstInput = rand 30
-    calc.secondInput = rand 10
-    calc.solution = calc.firstInput + calc.secondInput
-    return calc
   end
       
   # Processed when the form is submitted, 
@@ -150,8 +140,7 @@ class LinkListingController
         tx = hbm_session.beginTransaction()
         hbm_session.save(userLink)
         tx.commit()
-      end
-      
+      end      
     rescue Exception => e
       @log.error(e)
       tx.rollback
