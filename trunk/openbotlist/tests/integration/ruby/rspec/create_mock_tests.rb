@@ -173,6 +173,18 @@ describe "Creating simple mock objects=" do
     mock_obj.nickname = ""
   end
   
+  it "Should test simple unit" do
+    dao = @rad_controller.entityTypeFoafDao
+    foaf = BotListFoaf::FoafHandler.new(dao, @log, "http://danbri.org/foaf.rdf")
+    res = foaf.createFoaf
+    sleep(1)
+    # Launch another thread
+    foaf_berlin = BotListFoaf::FoafHandler.new(dao, @log, "http://berlinbrown.livejournal.com/data/foaf")
+    foaf_berlin.createFoaf
+    # Delay so that the main thread does not exit
+    sleep(7)
+  end
+  
   it "Should create the city listing" do
     dao = @rad_controller.cityListingDao
   end
