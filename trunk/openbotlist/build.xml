@@ -19,7 +19,7 @@
     <property name="lib.dir"              value="${basedir}/WEB-INF/lib"/>
 	<property name="lib.runtime.dir"      value="${basedir}/runtime-lib"/>
 	<property name="lib.servlet.dir"      value="${basedir}/servlet-lib"/>	
-	<property file="build_classpath.properties" />		
+	<property file="build_classpath.properties" />	
 	
     <!-- Web Apps Directory -->
     <property name="default.tomcat.webapps" value="${tomcat.home}/webapps" />
