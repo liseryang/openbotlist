@@ -1,0 +1,50 @@
+#!/bin/sh
+# 
+#################################################
+# git-daemon-init     This shell script takes care of starting and stopping
+#  
+# On ubuntu:
+# To acknowledge this RC.d script:
+# sudo update-rc.d git-daemon-init  defaults
+#
+# Tested with ubuntu 7.10
+# Date: 3/28/2008
+#################################################
+
+. /lib/lsb/init-functions
+
+BASE_PATH=/var/www/projects/git
+GIT_REPO_PATH=${BASE_PATH}/ghostnet.git
+DAEMON="/usr/local/bin/git-daemon -- --reuseaddr --detach --verbose --base-path=${BASE_PATH} --export-all ${GIT_REPO_PATH}"
+PIDFILE=/var/run/git-daemon-init.pid
+NAME=git-daemon-init
+
+case "$1" in
+  start)
+        # Start daemon.
+        log_daemon_msg "Starting git daemon: " "$NAME"
+	start-stop-daemon --start --quiet --pidfile "$PIDFILE" --name "$NAME" --exec $DAEMON
+	log_end_msg $?
+        ;;
+  stop)
+        # Stop daemon.
+        log_daemon_msg "Stopping git daemon: " "$NAME"
+	start-stop-daemon --stop --quiet --pidfile "$PIDFILE" --name "$NAME"
+	log_end_msg $?
+        ;;
+  restart)
+        # Restarting daemon.
+        log_daemon_msg "Restarting git daemon: " "$NAME"
+	start-stop-daemon --stop --retry 5 --quiet --pidfile "$PIDFILE" --name "$NAME"
+	start-stop-daemon --start --quiet --pidfile "$PIDFILE" --name "$NAME" --exec $DAEMON
+	log_end_msg $?
+	;;
+  *)
+	log_action_msg "Usage: /etc/init.d/git-daemon-init {start|stop|restart}"
+	exit 2
+        ;;
+esac
+
+exit $RETVAL
+
+# End of script 
