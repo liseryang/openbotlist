@@ -21,15 +21,23 @@ FILES = botlist-net_langs_032008.tex \
 		testdriven.tex \
 		factor.tex   \
 		future.tex   \
-		bib.tex  \
 		ref.bib  \
+
+$(MAIN).aux: ref.bib $(MAIN).tex
+	latex $(MAIN)
+	bibtex $(MAIN)
+	latex $(MAIN)
+	latex $(MAIN)
+
 
 $(MAIN).dvi: $(MAIN).tex $(FILES)
 # Run latex on the main and then bibtex and then latex again.
 	latex $*.tex; 
-	bibtex $*.bib;
+	bibtex $*;
 	latex $*.tex;
-	latex $*.tex;
+	while grep -s 'Rerun' $*.log 2> /dev/null; do  \
+		latex $*.tex;  \
+	done
 
 clean:
 	rm -vf *.aux *.dvi *.log *.toc
