@@ -1,6 +1,23 @@
 #######################################
 # Java Language Notes
+# Created: 3/31/2008
 #######################################
+
+------------------------
+Eclipse, I use eclipse.
+------------------------
+
+------------------------
+Spring - J2EE framework
+------------------------
+Mehmet Bilgi
+Spring is not normally known for the view piece but for simplifying
+the architecture.  The basic Spring MVC view library was used.
+
+Use of entity beans.
+
+The data access may be implemenated via a single or multiple database
+accesses.  Hibernate used to access a single data source
 
 ------------------------
 Java Language:
