@@ -89,6 +89,10 @@
 	        <tstamp/>	       
 			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
 	    	<fail unless="classpath.include">Error loading build_classpath.property file.  Make sure it exists.</fail>
+<echo>
+ Valid test tasks:
+ tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
+</echo>
 	</target>
 	
 	<!-- Target: Prepare -->
@@ -170,6 +174,15 @@
 			<arg value="${basedir}/ruby/rspec/simple_test_single.rb" />
 			<arg value="--require" />
 			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
+		</java>
+	</target>
+	
+	<target name="tests.ruby.rspec.single.nohelp" depends="package">
+		<java classname="org.jruby.Main" >	         
+			<classpath refid="classpath" />
+			<classpath refid="runtime.classpath" />
+			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
+			<arg value="${basedir}/ruby/rspec/simple_test_single_nh.rb" />			
 		</java>
 	</target>
 		
