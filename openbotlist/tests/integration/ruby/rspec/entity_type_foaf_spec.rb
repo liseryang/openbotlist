@@ -124,7 +124,7 @@ describe "For manipulating objects=" do
 
     <knows>
       <Person>
-
+        <foaf:nick>djgrw</foaf:nick>
         <mbox rdf:resource="mailto:libby.miller@bristol.ac.uk"/>
         <mbox rdf:resource="mailto:libby@asemantics.com"/>
       </Person>
