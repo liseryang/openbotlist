@@ -137,24 +137,13 @@
 			    <include name="**/*.scala"/>
 			</scalac>
 	</target>		
-	<target name="tests.ruby.rspec" depends="package">
-		<java classname="org.jruby.Main" >	         
-			<classpath refid="classpath" />
-			<classpath refid="runtime.classpath" />
-			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
-			<arg value="${basedir}/ruby/rspec" />
-			<arg value="--require" />
-			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
-		</java>
-	</target>	
 	<target name="tests.scala.suite" depends="scala.compile.tests">
 			<java classname="org.spirit.check.testsuite.CheckTestSuite" >	         
 				<classpath refid="classpath" />
 				<classpath refid="runtime.classpath" />				
 				<classpath refid="classpath.scala" />
 			</java>
-	</target>
-	
+	</target>	
 	<target name="setup_tests" depends="package">
 			<java classname="org.jruby.Main" >	         
 				<classpath refid="classpath" />
@@ -165,7 +154,19 @@
 				<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
 			</java>
 	</target>
-	
+	<!-- ******************************* -->
+	<!-- ** JRuby Tests (helpers and no helper) -->
+	<!-- ******************************* -->
+	<target name="tests.ruby.rspec" depends="package">
+		<java classname="org.jruby.Main" >	         
+			<classpath refid="classpath" />
+			<classpath refid="runtime.classpath" />
+			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
+			<arg value="${basedir}/ruby/rspec" />
+			<arg value="--require" />
+			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
+		</java>
+	</target>
 	<target name="tests.ruby.rspec.single" depends="package">
 		<java classname="org.jruby.Main" >	         
 			<classpath refid="classpath" />
@@ -175,8 +176,7 @@
 			<arg value="--require" />
 			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
 		</java>
-	</target>
-	
+	</target>	
 	<target name="tests.ruby.rspec.single.nohelp" depends="package">
 		<java classname="org.jruby.Main" >	         
 			<classpath refid="classpath" />
@@ -185,7 +185,8 @@
 			<arg value="${basedir}/ruby/rspec/simple_test_single_nh.rb" />			
 		</java>
 	</target>
-		
+	<!-- # End JRuby Tests -->
+
 	<!-- Zip the development code base -->
 	<target name="zip.codebase" depends="clean,prepare">
 		<fail unless="appname.war">APPNAME.WAR must be set, see the build.properties file</fail>
