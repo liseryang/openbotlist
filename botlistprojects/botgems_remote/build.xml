@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************* -->
 <!-- Copyright (c) 2006 - Berlin Brown -->
 <!-- Date: 4/1/2007 -->
-<project name="BotList Bot Gems" default="zip.codebase" basedir=".">
-	
-	<property file="build.properties" />
-	<property name="build.dir"	value="${basedir}/build" />
-	<property name="build.dir.classes"	value="${basedir}/build/classes" />
-	<property name="scala.src.dir"	value="${basedir}/scala" />
-	<property name="src.dir"  	value="${basedir}/src"/>
-	<property name="lib.dir"	value="${basedir}/lib" />
-	
-	<target name="init" description="Initialization">
-		<tstamp/>		
-	</target>
+<!-- Revisions  -->
+<!-- + 4/2/2008 : Adding support for respec test cases -->
+<!-- ********************************************* -->
+<project name="Botlist Bot Gems (Remoting and Web Analysis Agents)" default="zip.codebase" basedir=".">
+    
+    <property file="build.properties" />    
+    <property name="home.base.dir"      value="${basedir}/../.." />
+    <property name="build.dir"          value="${basedir}/build"/>
+    <property name="build.classes.dir"  value="${basedir}/build/classes"/>
+    <property name="home.build.classes.dir" value="${home.base.dir}/build/classes"/>        
+    <property name="scala.src.dir"      value="${home.base.dir}/apps_src/scala"/>
+    <property name="scala.test_src.dir" value="${basedir}/scala"/>
+    <property name="lib.dir"            value="${home.base.dir}/WEB-INF/lib" />
+    <property name="lib.runtime.dir"    value="${home.base.dir}/runtime-lib" />
+    <property name="lib.servlet.dir"    value="${home.base.dir}/servlet-lib"/>  
+    <property file="${home.base.dir}/build_classpath.properties" />
+    
+    <target name="init" description="Initialization">
+        <tstamp/>
+    </target>
 
-	<!-- Target: Prepare -->
-	<target name="prepare">
-		<mkdir dir="${build.dir}"/>
-		<mkdir dir="${build.dir.classes}"/>
-	</target>
-		
-	<!-- Zip the development code base -->
-	<!-- Added modification to exclude *.jar files (scala not needed) -->
-	<target name="zip.codebase" depends="clean, prepare">
-		<fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
-		<zip destfile="${basedir}/build/${appname.jar}.zip"
-				basedir="${basedir}" />
-	</target>	
-	<!-- Zip the PYTHON development code base -->
-	<target name="zip.python">
-		<fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
-		<zip destfile="${basedir}/build/${appname.jar}_python.zip"
-				excludes="**/*.jar" >
-			<zipfileset dir="${basedir}/lib/python" prefix="python" />
-		</zip>
-	</target>	
-	<target name="clean.python">
-			<delete>
-				<fileset dir="${basedir}/lib/python">
-					<include name="**/*.pyc"/>
-				</fileset>
-			</delete>
-	</target>
-	
-	<!-- Main Clean -->
-	<target name="clean">
-		<delete dir="${build.dir}" />		
-	</target>
-	<!-- End of Main Clean -->
-	
+    <!-- Target: Prepare -->
+    <target name="prepare">
+        <mkdir dir="${build.dir}"/>
+    </target>
+        
+    <!-- Zip the development code base -->
+    <!-- Added modification to exclude *.jar files (scala not needed) -->
+    <target name="zip.codebase" depends="clean, prepare">
+        <fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
+        <zip destfile="${basedir}/build/${appname.jar}.zip"
+                basedir="${basedir}" />
+    </target>   
+    <!-- Zip the PYTHON development code base -->
+    <target name="zip.python">
+        <fail unless="appname.jar">APPNAME.JAR must be set, see the build.properties file</fail>
+        <zip destfile="${basedir}/build/${appname.jar}_python.zip"
+                excludes="**/*.jar" >
+            <zipfileset dir="${basedir}/lib/python" prefix="python" />
+        </zip>
+    </target>   
+    <target name="clean.python">
+            <delete>
+                <fileset dir="${basedir}/lib/python">
+                    <include name="**/*.pyc"/>
+                </fileset>
+            </delete>
+    </target>   
+    <!-- Main Clean -->
+    <target name="clean">
+        <delete dir="${build.dir}" />       
+    </target>
+    <!-- End of Main Clean -->    
 </project>
 <!-- End of the File -->
