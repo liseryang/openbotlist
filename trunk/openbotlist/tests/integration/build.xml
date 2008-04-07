@@ -83,8 +83,7 @@
         <pathelement location="${jsp-api.jar}" />
 		<pathelement location="${build.classes.dir}" />
 		<pathelement location="${home.build.classes.dir}" />
-	</path>
-	
+	</path>	
 	<target name="init" description="Initialization">
 	        <tstamp/>	       
 			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
@@ -116,34 +115,13 @@
 	<taskdef resource="scala/tools/ant/antlib.xml">
 	      <classpath refid="classpath.scala" />
 	</taskdef>
-		
-	<!-- Target: Compile Scala Source -->
-	<target name="scala.compile" depends="prepare">
-			<!-- Build the actual botlist scala source -->
-			<!-- and then the test suite -->
-			<scalac srcdir="${scala.src.dir}" 
-					destdir="${build.classes.dir}" 
-			  		classpathref="classpath.scala" force="never">
-			    <include name="**/*.scala"/>
-			</scalac>
-	</target>	
-	<!-- Target: Compile Scala Test Suite -->
-	<target name="scala.compile.tests" depends="scala.compile">
-			<!-- Build the actual botlist scala source -->
-			<!-- and then the test suite -->
-			<scalac srcdir="${scala.test_src.dir}" 
-					destdir="${build.classes.dir}" 
-			  		classpathref="classpath.scala" force="never">
-			    <include name="**/*.scala"/>
-			</scalac>
-	</target>		
-	<target name="tests.scala.suite" depends="scala.compile.tests">
-			<java classname="org.spirit.check.testsuite.CheckTestSuite" >	         
-				<classpath refid="classpath" />
-				<classpath refid="runtime.classpath" />				
-				<classpath refid="classpath.scala" />
-			</java>
-	</target>	
+
+	<!-- Import the jruby test case target partial build file -->
+	<import file="${basedir}/build_jruby_tests.xml" />
+	
+	<!-- Import the jruby test case target partial build file -->
+	<import file="${basedir}/build_scala_tests.xml" />
+
 	<target name="setup_tests" depends="package">
 			<java classname="org.jruby.Main" >	         
 				<classpath refid="classpath" />
@@ -154,38 +132,6 @@
 				<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
 			</java>
 	</target>
-	<!-- ******************************* -->
-	<!-- ** JRuby Tests (helpers and no helper) -->
-	<!-- ******************************* -->
-	<target name="tests.ruby.rspec" depends="package">
-		<java classname="org.jruby.Main" >	         
-			<classpath refid="classpath" />
-			<classpath refid="runtime.classpath" />
-			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
-			<arg value="${basedir}/ruby/rspec" />
-			<arg value="--require" />
-			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
-		</java>
-	</target>
-	<target name="tests.ruby.rspec.single" depends="package">
-		<java classname="org.jruby.Main" >	         
-			<classpath refid="classpath" />
-			<classpath refid="runtime.classpath" />
-			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
-			<arg value="${basedir}/ruby/rspec/simple_test_single.rb" />
-			<arg value="--require" />
-			<arg value="${basedir}/ruby/rspec/spec_helper.rb" />
-		</java>
-	</target>	
-	<target name="tests.ruby.rspec.single.nohelp" depends="package">
-		<java classname="org.jruby.Main" >	         
-			<classpath refid="classpath" />
-			<classpath refid="runtime.classpath" />
-			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
-			<arg value="${basedir}/ruby/rspec/simple_test_single_nh.rb" />			
-		</java>
-	</target>
-	<!-- # End JRuby Tests -->
 
 	<!-- Zip the development code base -->
 	<target name="zip.codebase" depends="clean,prepare">
