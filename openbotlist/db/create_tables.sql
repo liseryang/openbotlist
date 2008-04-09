@@ -506,6 +506,7 @@ CREATE TABLE system_feed_items (
   process_count    int(11) NOT NULL default '0',
   created_on       datetime NOT NULL default '1901-01-01 00:00:00',
   hostname         varchar(128) default NULL,
+  enum_proc_type   varchar(30),
   PRIMARY KEY  (id),
   UNIQUE KEY main_url (main_url)
 );
