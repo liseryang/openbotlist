@@ -5,7 +5,6 @@
  8/15/2007
 """
 import unittest
-
 import util.text_utils as text_utils
 
 class TextUtilsTestCase(unittest.TestCase):
@@ -28,6 +27,6 @@ class TextUtilsTestCase(unittest.TestCase):
         
         self.assertEqual(res1, "0123")
         self.assertEqual(res2, "012hmm")        
-        self.failIf(res3)        
+        self.failIf(res3)
         
 # End of script
