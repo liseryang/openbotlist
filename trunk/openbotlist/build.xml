@@ -24,51 +24,8 @@
     <!-- Web Apps Directory -->
     <property name="default.tomcat.webapps" value="${tomcat.home}/webapps" />
 	    
-    <!-- Target: CLASSPATH -->
-    <path id="classpath">
-    	<pathelement location="${standard.jar}" />
-		<pathelement location="${servlet.jar}" />
-    	<pathelement location="${jsp-api.jar}" />
-        <pathelement location="${acegi.jar}"/>
-        <pathelement location="${hibernate.jar}"/>
-        <pathelement location="${junit.jar}"/>
-        <pathelement location="${log4j.jar}"/>
-        <pathelement location="${dom4j.jar}"/> 
-        <pathelement location="${logging.jar}"/>
-        <pathelement location="${collections.jar}"/>
-        <pathelement location="${mysql.jar}" />
-        <pathelement location="${cglib.jar}" />
-        <pathelement location="${jta.jar}" />
-        <pathelement location="${antlr.jar}" />
-        <pathelement location="${spring.jar}" />
-    	<pathelement location="${spring-core.jar}" />
-        <pathelement location="${spring-web.jar}" />
-        <pathelement location="${spring-webmvc.jar}" />    	
-        <pathelement location="${jruby.jar}" />
-        <pathelement location="${bsf.jar}" />
-        <pathelement location="${validator.jar}" />
-        <pathelement location="${commons-upload.jar}" />               
-        <pathelement location="${lucene.jar}" />
-        <pathelement location="${antlr.jar}" />
-        <pathelement location="${antlr-runtime.jar}" />    	
-        <pathelement location="${scala.jar}" />
-    	<pathelement location="${scala-compiler.jar}" />
-        <pathelement location="${lift.jar}" />        
-        <!-- Include the CLASSES directory -->
-        <pathelement location="${build.classes.dir}" />
-    </path>
-	
-	<path id="classpath.scala">
-		<pathelement location="${hibernate.jar}"/>
-		<pathelement location="${jta.jar}" />
-		<pathelement location="${spring.jar}" />
-		<pathelement location="${logging.jar}" />
-        <pathelement location="${scala.jar}" />
-    	<pathelement location="${scala-compiler.jar}" />
-        <pathelement location="${lift.jar}" />
-		<pathelement location="${servlet.jar}" />
-        <pathelement location="${jsp-api.jar}" />
-	</path>
+	<!-- Import the classpath usage and variable names -->
+	<import file="${basedir}/build_classpath_paths.xml" />
 	
 	<target name="init" description="Initialization">
 	        <tstamp/>
