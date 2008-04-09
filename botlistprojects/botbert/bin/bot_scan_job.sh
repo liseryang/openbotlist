@@ -48,7 +48,7 @@ APP_MAIN=${BOTBERT_HOME}/lib/python/botlist_scan_feeds.py
 echo "running in directory=${BOTBERT_HOME}"
 echo "-----------------------"
 
-python $APP_MAIN -f $DIR_PROPERTIES $@ &
+python $APP_MAIN -f $DIR_PROPERTIES -c ${DIR_PROPERTIES}/conf/remote_config.ini $@ &
 
 # Write the process id
 echo $! > $BOTBERT_HOME/bin/botbert.pid
