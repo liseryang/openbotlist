@@ -1,0 +1,70 @@
+INFO: Creating mock objects -> 
+Running at /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration 
+Buildfile: build.xml
+
+init:
+     [echo] Classpth properties, lib.dir=/home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/../../WEB-INF/lib
+     [echo] 
+     [echo]  Valid test tasks:
+     [echo]  tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
+
+prepare:
+
+package:
+
+tests.ruby.rspec:
+     [java] .
+     [java] .
+     [java] .
+     [java] .
+     [java] F
+     [java] danbri
+     [java] #BotListEntityTypeFoaf: mainUrl=http://danbri.org/foaf.rdf nickname=danbri title=danbri at http://danbri.org/foaf.rdf
+     [java] .
+     [java] F
+     [java] 
+     [java] 
+     [java] 1)
+     [java] TypeError in 'For manipulating objects= Should manipulate the entity_type_foaf'
+     [java] expected [java.lang.Long]; got: [java.lang.String]; error: argument type mismatch
+     [java] 
+     [java] 
+     [java] 2)
+     [java] NoMethodError in 'For manipulating objects= Should test simple unit'
+     [java] undefined method `info' for nil:NilClass
+     [java] /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/ruby/rspec/entity_type_foaf_spec.rb:158:
+     [java] 
+     [java] Finished in 0.878 seconds
+     [java] 
+     [java] 7 examples, 2 failures
+
+BUILD SUCCESSFUL
+Total time: 14 seconds
+Buildfile: build.xml
+
+init:
+     [echo] Classpth properties, lib.dir=/home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/../../WEB-INF/lib
+     [echo] 
+     [echo]  Valid test tasks:
+     [echo]  tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
+
+prepare:
+
+scala.compile:
+   [scalac] Compiling 5 source files to /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/build/classes
+   [scalac] Element '/home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/${scalacheck.jar}' does not exist.
+
+scala.compile.tests:
+   [scalac] Compiling 3 source files to /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/build/classes
+   [scalac] Element '/home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/${scalacheck.jar}' does not exist.
+   [scalac] /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/scala/spirit/tests/CheckTestExamples.scala:9: error: value scalacheck is not a member of package org
+   [scalac] import org.scalacheck._
+   [scalac]            ^
+   [scalac] /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/scala/spirit/tests/CheckTestLiftMisc.scala:9: error: value scalacheck is not a member of package org
+   [scalac] import org.scalacheck._
+   [scalac]            ^
+   [scalac] /home/bbrown/maintools/tomcat55/webapps/botlist/tests/integration/scala/spirit/tests/CheckTestSuite.scala:8: error: value scalacheck is not a member of package org
+   [scalac] import org.scalacheck._
+   [scalac]            ^
+   [scalac] three errors found
+INFO: Done
