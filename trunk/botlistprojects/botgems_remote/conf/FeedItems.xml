@@ -22,13 +22,19 @@
     <result property="hostname" column="hostname" />
   </resultMap>
 
-  <!-- Select with no parameters using the result map for Account class. -->
+  <!-- Select with no parameters using the result map. -->
   <select id="selectAllFeedItems" resultMap="FeedItemResult">
     select id, main_url, url_title, url_description, url_source, hostname 
-    	from system_feed_items where process_count = 0 order by RAND()
+    	from system_feed_items where process_count = 0 and enum_proc_type != 'action_achive_remote' order by RAND()
     	LIMIT 0, 120
   </select>
-  
+    
+  <!-- Select with no parameters using the result map. -->
+  <select id="selectFeedItems" resultMap="FeedItemResult">
+    select id, main_url, url_title, url_description, url_source, hostname
+    	from system_feed_items where process_count = #id# and enum_proc_type != 'action_achive_remote'
+    	LIMIT 0, #limit#
+  </select>  
   <!-- Update feed items Feed parameter class -->
   <update id="updateFeedItem" parameterClass="FeedItem">
   	update system_feed_items 
