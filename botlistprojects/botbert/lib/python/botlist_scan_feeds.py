@@ -16,6 +16,10 @@
   * Process a set number of item from feed_items and increase the process_count
  Stage Five:
    * Store in entity_links
+
+ Revisions
+ -----------------------------
+ + 4/2/2008 - adding support configuration file and fixing argument parsing.
 """
 
 import sys
@@ -31,6 +35,8 @@ from xml.dom.minidom import parse, parseString
 import util.text_utils as text_utils
 
 from business.scan_feed_bom import ScanFeedHandler
+import util.config_util as conf
+
 __author__ = "Berlin Brown"
 __version__ = "0.1"
 
@@ -50,15 +56,15 @@ DEFAULT_REQUEST_TIMEOUT = 20
 class ItemBean:
         def __init__(self):
                 self.title = None
-                self.descr = None		
+                self.descr = None       
                 self.link = None
                 self.source = None
                 self.channelURL = None
         def verify(self):
                 """ Because we are inserting these values into the database,
                 ensure that a zero length value is returned as opposed to null"""
-                self.title = self.title and self.title or ''		
-                self.descr = self.descr and self.descr or ''		
+                self.title = self.title and self.title or ''        
+                self.descr = self.descr and self.descr or ''        
                 self.link = self.link and self.link or ''
                 self.channelURL =  self.channelURL and self.channelURL or ''
                 
@@ -104,9 +110,9 @@ class BotListScanFeeds:
                 descr = node.getElementsByTagName("description")[0]
                 link = node.getElementsByTagName("link")[0]
                 item = ItemBean()                
-                # Transform this data into an object		
+                # Transform this data into an object        
                 item.title = self.nodeValue(title)
-                item.descr = self.nodeValue(descr)		
+                item.descr = self.nodeValue(descr)      
                 item.link = self.nodeValue(link)
                 item.source = source
                 if channelURL:
@@ -227,7 +233,7 @@ class BotListScanFeeds:
                         print "feeds ... / [%s/%s] (%s docs:%s passed)" % (idx, len(data),self.feed_item_ctr, self.feed_passed)
                         try:
                                 baseURL = feed.mainUrl
-                                self.processData(baseURL)	
+                                self.processData(baseURL)   
                                 self.createFeedItems()
                         except Exception, ex:
                                 print("ERR: failed to process data and create feed item=%s" % ex)
@@ -251,12 +257,24 @@ def cleanup(home_dir):
         else:
                 print "WARN: invalid home directory, remove pid file failed"
 
-def main():        
+def main():
+        # TODO: fix argument parsing.        
         args = sys.argv        
         start = time.time()
+
+        # System check, if the configuration file is missing, invalid
+        # arguments are passed to this system.
+        # TODO: bad argument system, use index to get this values.
+        arg_conf_flag = args[3]
+        arg_conf_filename = args[4]
+        if arg_conf_flag != '-c' or arg_conf_flag is None:
+                err_msg = "main(): Invalid configuration arguments %s" % args
+                raise Exception(err_msg)
+        else:
+                conf.set_conf_filename(arg_conf_filename)
+        
         # Set the default timeout.        
         socket.setdefaulttimeout(DEFAULT_REQUEST_TIMEOUT)
-        
         feeds = BotListScanFeeds()
         
         # Check for args that might contain -s=scan feed list and -e=create entity links
@@ -286,20 +304,20 @@ def main():
                                                 print "INFO: Setting max feed items=%s" % feeds.maxFeedItems
                                                 break
                                         else:
-                                                ctr = ctr + 1                                
+                                                ctr = ctr + 1
                         except Exception, ne:
                                 print "WARN: invalid max feed setting"
                                 pass
                         
                         print "INFO: create entity links flag enabled"
-                        feeds.createEntityLinks()        
+                        feeds.createEntityLinks()
                         
         feeds.closeConn()
         end = time.time()
         diff = end - start
         print "processed in=%s s" % diff
         
-        # Perform any cleanups        
+        # Perform any cleanups 
         if len(args) >= 4:
                 cleanup(args[2])
 
@@ -310,6 +328,8 @@ if __name__ == '__main__':
         print " -s =  perform scan on system feeds"
         print " -e =  perform entity link create"
         print " -n <max count> =  number of entity links to create"
+        print
+        print " usage: botlist_scan_feeds.py -f dir_name -c remote config <args>"
         print "--------------------------------------------"
         print "version (py %s)" % __version__
         main()
