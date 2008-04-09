@@ -133,6 +133,10 @@
     <target name="clean">
         <delete dir="${build.dir}" />
         <delete>
+        	<fileset dir="${basedir}/WEB-INF/tools">
+        		<!-- Delete compiled python files, make sure not to remove your *.py files -->
+        		<include name="**/*.pyc" />
+    		</fileset>
             <fileset dir="${basedir}/WEB-INF/classes">
                 <include name="**/*.class" />
                 <exclude name="**/*.properties" />
