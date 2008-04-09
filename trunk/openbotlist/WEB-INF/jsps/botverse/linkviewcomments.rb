@@ -1,4 +1,4 @@
-##
+########################################
 ## Berlin Brown
 ## 11/4/2006
 ##
@@ -13,6 +13,7 @@
 ## LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 ## NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 ## SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+########################################
 
 include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
 include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
@@ -21,13 +22,11 @@ include_class 'org.spirit.spring.validate.BotListGenericValidator' unless define
 include_class 'org.apache.commons.logging.Log' unless defined? Log
 include_class 'org.apache.commons.logging.LogFactory' unless defined? LogFactory
 
-class ViewCommentsController
-		
+class ViewCommentsController	
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.userCommentsDao
-    @daohelperlink = @controller.entityLinksDao
-    
+    @daohelperlink = @controller.entityLinksDao    
     @log = LogFactory::getLog("org.jruby")
   end    
      
@@ -38,7 +37,6 @@ class ViewCommentsController
       newviewid = KeywordProcessor.filterAlphaNumeric(viewid)
     end
     return nil if newviewid.nil?
-
     link = @daohelperlink.readLinkListing(newviewid.to_i())
     cur_session = request.getSession(false)
     cur_session = BotListSessionManager::safeCreateSession(request) if cur_session.nil?
@@ -57,15 +55,12 @@ class ViewCommentsController
       link.views = link.views + 1
     else
 	  link.views = 0
-    end
-    
+    end    
     hbm_session.saveOrUpdate(link)
-    tx.commit()
-    hbm_session.close()
+    tx.commit
+    hbm_session.close
   end
-
-  def getModel(request)
-    
+  def getModel(request)    
     link = getViewLink(request)
     linkId = link.get_id
     query = "from org.spirit.bean.impl.BotListUserComments as comments where comments.linkId = '#{linkId}' order by comments.id"
@@ -76,21 +71,18 @@ class ViewCommentsController
     updateLinkViews(link)
     
     # Audit the request
-    @controller.auditLogPage(request, "linkviewcomments.html?viewid=#{linkId}")
-    
+    @controller.auditLogPage(request, "linkviewcomments.html?viewid=#{linkId}")    
     return {
       'listings' => comments,
       'link' => link
     }
-  end
-   
+  end   
   def onSubmit(request, response, form, errors)
     @log.error("invalid request through submit form=linkviewcomments")
     @controller.setValidator(BotListGenericValidator.new)    
     return form
   end
 end
-
 ViewCommentsController.new($controller)
 
 ## End of Script ##

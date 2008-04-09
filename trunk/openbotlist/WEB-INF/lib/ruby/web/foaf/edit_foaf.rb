@@ -35,6 +35,30 @@ module BotListFoaf
   # Set the user agent and make sure to include user and contact information
   USER_AGENT = "Botlist/20080316_0.0 (Ruby en-US), http://www.botnode.com, berlin.brown at gmail.com"
   
+  # Check for empty value from form members
+  # @see BotListWebCore.valueEmpty?(member_value)
+  def BotListFoaf.valueEmpty?(member_value)
+    res = (not (!member_value.nil? and !member_value.empty?))
+    return res
+  end
+  
+  # Return a java Date object based on a foaf input string.
+  def BotListFoaf.parseDate(str)
+    pattr = "yyyy-MM-DD"
+    def_date = "0000-00-00"
+    format = SimpleDateFormat.new(pattr)
+    res = nil
+    begin
+      res = format.parse(str)
+    ensure
+      if valueEmpty?("#{res}")
+        res = format.parse(def_date)
+      end
+    end
+    return res
+    # end of method
+  end
+  
   #*************************************
   # BotListEntityTypeFoaf:
   #
@@ -75,18 +99,22 @@ module BotListFoaf
           foaf.foafPageDocUrl = foaf_page_doc_url
         }
         doc.elements.each("//foaf:nick") { |nick|
+          puts nick.text
           foaf.nickname = nick.text
           foaf.urlTitle = "#{foaf.nickname} at #{foaf.mainUrl}"
           foaf.urlDescription = foaf.urlTitle
           foaf.fullName = "botrover"
+          break
         }
         doc.elements.each("//foaf:name") { |name|
           foaf.foafName = name.text
+          break
         }
         doc.elements.each("//foaf:img") { |img|
           foaf.foafImg = img.text
+          break
         }
-        doc.elements.each("//foaf:dateOfBirth") { |date_of_birth|          
+        doc.elements.each("//foaf:dateOfBirth") { |date_of_birth|
         }
       rescue Exception => e
         # Raise error, you can't recover from an invalid URL

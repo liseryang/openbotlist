@@ -28,7 +28,8 @@
 	</target>		
 	<target name="tests.scala.suite" depends="scala.compile.tests">
 			<java classname="org.spirit.check.testsuite.CheckTestSuite" >	         
-				<classpath refid="classpath" />
+				<classpath refid="classpath.tests" />
+				<classpath refid="classpath" />				
 				<classpath refid="runtime.classpath" />				
 				<classpath refid="classpath.scala" />
 			</java>

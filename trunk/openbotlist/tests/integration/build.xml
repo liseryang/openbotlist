@@ -18,32 +18,10 @@
 	<!-- **************************************** -->
 	<!-- Target: CLASSPATH -->
 	<!-- **************************************** -->
-	<path id="classpath">
-		<pathelement location="${acegi.jar}"/>
-		<pathelement location="${hibernate.jar}"/>
-		<pathelement location="${junit.jar}"/>
-		<pathelement location="${log4j.jar}"/>
-		<pathelement location="${dom4j.jar}"/>
-		<pathelement location="${logging.jar}"/>
-		<pathelement location="${collections.jar}"/>
-		<pathelement location="${mysql.jar}" />
-		<pathelement location="${cglib.jar}" />
-		<pathelement location="${jta.jar}" />
-		<pathelement location="${antlr.jar}" />
-        <pathelement location="${spring.jar}" />
-    	<pathelement location="${spring-core.jar}" />
-        <pathelement location="${spring-web.jar}" />
-        <pathelement location="${spring-webmvc.jar}" />
-		<pathelement location="${servlet.jar}" />
-		<pathelement location="${jruby.jar}" />
-		<pathelement location="${bsf.jar}" />
-		<pathelement location="${validator.jar}" />
-		<pathelement location="${junit.jar}" />
-		<pathelement location="${httpunit.jar}" />
+	<!-- Import the classpath usage and variable names -->
+	<import file="${home.base.dir}/build_classpath_paths.xml" />
 	
-		<pathelement location="${jfreechart.jar}" />
-		<pathelement location="${jcommon.jar}" />
-		
+	<path id="classpath.tests">		
 		<!-- Include the CLASSES directory -->
 		<pathelement location="${build.classes.dir}" />
 		<pathelement location="${home.build.classes.dir}" />
@@ -123,8 +101,9 @@
 	<import file="${basedir}/build_scala_tests.xml" />
 
 	<target name="setup_tests" depends="package">
-			<java classname="org.jruby.Main" >	         
+			<java classname="org.jruby.Main" >
 				<classpath refid="classpath" />
+				<classpath refid="classpath.tests" />
 				<classpath refid="runtime.classpath" />
 				<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
 				<arg value="${basedir}/ruby/rspec/create_mock_tests.rb" />
