@@ -6,8 +6,9 @@
 	<!-- ** JRuby Tests (helpers and no helper) -->
 	<!-- ******************************* -->
 	<target name="tests.ruby.rspec" depends="package">
-		<java classname="org.jruby.Main" >	         
+		<java classname="org.jruby.Main" >     
 			<classpath refid="classpath" />
+			<classpath refid="classpath.tests" />			
 			<classpath refid="runtime.classpath" />
 			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
 			<arg value="${basedir}/ruby/rspec" />
@@ -18,6 +19,7 @@
 	<target name="tests.ruby.rspec.single" depends="package">
 		<java classname="org.jruby.Main" >	         
 			<classpath refid="classpath" />
+			<classpath refid="classpath.tests" />
 			<classpath refid="runtime.classpath" />
 			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
 			<arg value="${basedir}/ruby/rspec/simple_test_single.rb" />
@@ -28,6 +30,7 @@
 	<target name="tests.ruby.rspec.single.nohelp" depends="package">
 		<java classname="org.jruby.Main" >	         
 			<classpath refid="classpath" />
+			<classpath refid="classpath.tests" />
 			<classpath refid="runtime.classpath" />
 			<arg value="${lib.dir}/ruby/rspec/bin/spec" />			
 			<arg value="${basedir}/ruby/rspec/simple_test_single_nh.rb" />			
