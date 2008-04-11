@@ -69,6 +69,7 @@
 <echo>
  Valid test tasks:
  tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
+ tests.ruby.rspec.single  - Run a single staging rspec test with no helper (spring connect, etc).
 </echo>
 	</target>
 	

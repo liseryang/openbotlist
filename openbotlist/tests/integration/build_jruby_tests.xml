@@ -4,6 +4,11 @@
 <project name="Botlist Test Framework (Integration Tests)|JRuby" default="init" basedir=".">	
 	<!-- ******************************* -->
 	<!-- ** JRuby Tests (helpers and no helper) -->
+	<!-- ** PROJECT SHARING:  this build script can be shared assuming the following variables are defined -->
+	<!-- ** @see botgems_remote for an example -->
+	<!--  + package' target = ensure there is a package target -->
+	<!--  + lib.dir = for example, WEB-INF/lib -->
+	<!--  + base.dir = with ruby/rspec/* and ruby/rspec/spec_helper.rb -->	
 	<!-- ******************************* -->
 	<target name="tests.ruby.rspec" depends="package">
 		<java classname="org.jruby.Main" >     
