@@ -1,21 +1,17 @@
 <%@ page contentType="text/html"%>
-
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botlist - Admin Tools</title>
-
 <META NAME="DESCRIPTION" CONTENT="BotList - Pipes Api">
 <META NAME="keywords" CONTENT="pipes, search, index, listing, bot, botlist, botlisting, bot's list, list, ads, advertising">
 
 <link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
 <link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" />
 <link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" />
-
 </head>
 <body>
-
 <div id="body_content_center">
 
  <div style="border-bottom: 1px solid #816943;">

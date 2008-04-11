@@ -1,6 +1,7 @@
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Remote Sync</title>
 </head>

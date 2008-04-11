@@ -3,7 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="dt" uri="http://jakarta.apache.org/taglibs/datetime-1.0" %>
 <%@ taglib prefix="req" uri="http://jakarta.apache.org/taglibs/request-1.0" %>
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  	<title>Botlist - Ad Listings</title>
  

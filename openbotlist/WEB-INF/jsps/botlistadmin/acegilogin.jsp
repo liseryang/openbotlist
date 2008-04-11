@@ -2,7 +2,8 @@
 <%@ page import="org.acegisecurity.ui.AbstractProcessingFilter" %>
 <%@ page import="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter" %>
 <%@ page import="org.acegisecurity.AuthenticationException" %>
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  	<title>Botlist - Ad Listings</title>
  
