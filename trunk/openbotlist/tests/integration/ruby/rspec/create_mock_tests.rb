@@ -4,31 +4,32 @@
 # Date: 3/10/2008
 ########################################
 
-include_class 'java.text.SimpleDateFormat' unless defined? SimpleDateFormat
-include_class "java.util.Calendar" unless defined? Calendar
+import Java
 
-include_class 'org.spirit.bean.impl.BotListCoreUsers' unless defined? BotListCoreUsers
-include_class 'org.spirit.util.BotListUniqueId' unless defined? BotListUniqueId
-include_class 'org.acegisecurity.providers.encoding.Md5PasswordEncoder' unless defined? Md5PasswordEncoder
-include_class 'org.spirit.bean.impl.BotListProfileSettings' unless defined? BotListProfileSettings
-include_class 'org.spirit.contract.BotListContractManager' unless defined? BotListContractManager
+import java.text.SimpleDateFormat
+import java.util.Calendar
 
-include_class "org.spirit.contract.BotListCoreUsersContract"
-include_class "org.spirit.bean.impl.BotListEntityLinks"
-include_class "org.spirit.bean.impl.BotListUserLink"
-include_class "org.spirit.bean.impl.BotListPostListing"
-include_class "org.spirit.bean.impl.BotListCityListing"
-include_class "org.spirit.bean.impl.BotListUserVisitLog"
-include_class "org.spirit.bean.impl.BotListUserComments"
-include_class "org.spirit.bean.impl.BotListForumGroup"
-include_class "org.spirit.bean.impl.BotListCoreUsers"
-include_class "org.spirit.bean.impl.BotListCatGroupTerms"
-include_class "org.spirit.bean.impl.BotListCatLinkGroups"
-include_class "org.spirit.bean.impl.BotListProfileSettings"
-include_class "org.spirit.bean.impl.BotListMediaFeeds"
-include_class "org.spirit.bean.impl.BotListActiveMediaFeeds"
-include_class "org.spirit.bean.impl.BotListUserLinks"
-include_class "org.spirit.bean.impl.BotListEntityTypeFoaf" unless defined? BotListEntityTypeFoaf
+import org.spirit.bean.impl.BotListCoreUsers
+import org.spirit.util.BotListUniqueId
+import org.acegisecurity.providers.encoding.Md5PasswordEncoder
+import org.spirit.bean.impl.BotListProfileSettings
+import org.spirit.contract.BotListContractManager
+
+import org.spirit.contract.BotListCoreUsersContract
+import org.spirit.bean.impl.BotListEntityLinks
+import org.spirit.bean.impl.BotListUserLink
+import org.spirit.bean.impl.BotListPostListing
+import org.spirit.bean.impl.BotListCityListing
+import org.spirit.bean.impl.BotListUserVisitLog
+import org.spirit.bean.impl.BotListUserComments
+import org.spirit.bean.impl.BotListForumGroup
+import org.spirit.bean.impl.BotListCoreUsers
+import org.spirit.bean.impl.BotListCatGroupTerms
+import org.spirit.bean.impl.BotListCatLinkGroups
+import org.spirit.bean.impl.BotListProfileSettings
+import org.spirit.bean.impl.BotListMediaFeeds
+import org.spirit.bean.impl.BotListActiveMediaFeeds
+import org.spirit.bean.impl.BotListUserLinks
 
 describe "Creating simple mock objects=" do
   
