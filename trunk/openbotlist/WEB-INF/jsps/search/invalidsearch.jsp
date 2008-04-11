@@ -1,13 +1,12 @@
 <%@ page contentType="text/html" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  	<title>Botlist - Invalid Search</title>
- 
   	<META NAME="DESCRIPTION" CONTENT="BotList - Promote yourself or something else interesting">
- 	<META NAME="keywords" CONTENT="listing, bot, botlist, botlisting, bot's list, list, ads, advertising">
-  
+ 	<META NAME="keywords" CONTENT="listing, bot, botlist, botlisting, bot's list, list, ads, advertising"> 
 	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
   	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" /> 
   	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" /> 

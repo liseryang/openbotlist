@@ -1,9 +1,9 @@
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botlist - Ad Listings</title>
-
 <META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting">
 <META NAME="keywords" CONTENT="listing, bot, botlist, botlisting, bot's list, list, ads, advertising">
 

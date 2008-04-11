@@ -1,7 +1,7 @@
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-
-<html>
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botlist - Search Text View</title>
 
@@ -14,7 +14,6 @@
 <link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" />
 </head>
 <body>
-
 <a href="<c:url value="/" />" >Home</a>
 <div style="margin-top: 40px; margin-left: 60px; border-top: 1px solid #ccc;">	
 
@@ -29,6 +28,5 @@
 			<br>
 		</c:forEach>	
 </div>
-	
 </body>
 </html>
