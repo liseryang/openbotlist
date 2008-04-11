@@ -20,6 +20,8 @@
     <result property="urlDescription" column="url_description" />
     <result property="urlSource" column="url_source" />
     <result property="hostname" column="hostname" />
+    <result property="views" column="views" />
+    <result property="rating" column="rating" />
   </resultMap>
 
   <!-- Select with no parameters using the result map. -->
@@ -32,8 +34,8 @@
   <!-- Select with no parameters using the result map. -->
   <select id="selectFeedItems" resultMap="FeedItemResult">
     select id, main_url, url_title, url_description, url_source, hostname
-    	from system_feed_items where process_count = #id# and enum_proc_type != 'action_achive_remote'
-    	LIMIT 0, #limit#
+    	from system_feed_items where process_count = #rating# and enum_proc_type != 'action_achive_remote'
+    	LIMIT 0, #views#
   </select>  
   <!-- Update feed items Feed parameter class -->
   <update id="updateFeedItem" parameterClass="FeedItem">
