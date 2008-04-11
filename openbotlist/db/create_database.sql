@@ -1,6 +1,6 @@
 --
 -- Create the database (openbotlist_)
---
+-- The openbotlist_test database is used with the testing server
 create database openbotlist_development;
 create database openbotlist_test;
 create database openbotlist_production;
