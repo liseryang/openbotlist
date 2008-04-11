@@ -65,6 +65,7 @@
 	<target name="init" description="Initialization">
 	        <tstamp/>	       
 			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
+            <echo message="Home build classpath=${home.build.classes.dir}" />
 	    	<fail unless="classpath.include">Error loading build_classpath.property file.  Make sure it exists.</fail>
 <echo>
  Valid test tasks:
