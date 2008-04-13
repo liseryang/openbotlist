@@ -19,23 +19,21 @@
     <result property="urlTitle" column="url_title" />
     <result property="urlDescription" column="url_description" />
     <result property="urlSource" column="url_source" />
-    <result property="hostname" column="hostname" />
-    <result property="views" column="views" />
-    <result property="rating" column="rating" />
+    <result property="hostname" column="hostname" />    
   </resultMap>
 
   <!-- Select with no parameters using the result map. -->
   <select id="selectAllFeedItems" resultMap="FeedItemResult">
     select id, main_url, url_title, url_description, url_source, hostname 
-    	from system_feed_items where process_count = 0 and enum_proc_type != 'action_achive_remote' order by RAND()
+    	from system_feed_items where process_count = 0 and ((enum_proc_type is NULL) or (enum_proc_type != 'action_archive_remote')) order by RAND()
     	LIMIT 0, 120
   </select>
     
   <!-- Select with no parameters using the result map. -->
   <select id="selectFeedItems" resultMap="FeedItemResult">
     select id, main_url, url_title, url_description, url_source, hostname
-    	from system_feed_items where process_count = #rating# and enum_proc_type != 'action_achive_remote'
-    	LIMIT 0, #views#
+    	from system_feed_items where process_count = 0 and ((enum_proc_type is NULL) or (enum_proc_type != 'action_archive_remote'))
+    	LIMIT 0, 1000
   </select>  
   <!-- Update feed items Feed parameter class -->
   <update id="updateFeedItem" parameterClass="FeedItem">
