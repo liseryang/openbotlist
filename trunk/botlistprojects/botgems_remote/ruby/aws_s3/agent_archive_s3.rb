@@ -25,10 +25,31 @@ import com.amazon.s3.S3Object
 import java.util.Map
 import java.util.TreeMap
 
-module AwsS3
+require File.join(File.dirname(__FILE__), '../', 'agent_utils')
 
-  class ArchiveAwsS3
+module AwsS3
     
+  def self.get_rss_payload_bin(sqlMapper)
+    remoteSync = Aggregate::AgentBotlistRSS.new
+    remoteSync.sqlMapper = sqlMapper
+    remoteSync.load_payload_doc
+    remoteSync.addMsgXMLHeader
+    remoteSync.scanFeeds
+    bin_data = AgentUtils::string_to_bytes(remoteSync.payload_doc)
+    return bin_data
+  end
+
+  def self.put_public_object(conn, bin_data, key_name, mime_type)
+    s3obj = S3Object.new(bin_data, nil)
+    headers = TreeMap.new
+    headers.put("x-amz-acl", [ "public-read" ])
+    headers.put("Content-Type", [ mime_type ])
+    res_conn = conn.put(bucket_name, "key_name", s3obj, headers)
+    res = res_conn.connection.getResponseMessage
+    return res
+  end
+
+  class ArchiveAwsS3    
     def initialize()
       @aws_access_key = "<INSERT KEY HERE>"
       @aws_secret_key = "<INSERT KEY HERE>"
@@ -57,19 +78,19 @@ module AwsS3
     end
     
     # Archive the SQL object and XML document to S3
-    def archive_objs_s3(filename)
+    # @bin_data - binary data (bytes associated with the s3 upload)
+    # @mime_type - request mime-type for s3 (default = "application/octet-stream")
+    def archive_objs_s3(bin_data, mime_type)
       # Attempt to put object
       metadata = TreeMap.new
       metadata.put("my-meta", [ "none" ])
-      s3obj = S3Object.new(str.getBytes, metadata)
-      
+      s3obj = S3Object.new(str.getBytes, metadata)      
       headers = TreeMap.new
       headers.put("x-amz-acl", [ "public-read" ])
-      #headers.put("Content-Type", [ "text/plain" ])
       #headers.put("Content-Type", [ "text/xml" ])
-      headers.put("Content-Type", [ "application/octet-stream" ])
+      headers.put("Content-Type", [ mime_type ])
       c = conn.put(bucket_name, "#{key_name}-pub", s3obj, headers)
-      puts c.connection.getResponseMessage   
+      return c.connection.getResponseMessage
     end  
   end
 end # End of Module
