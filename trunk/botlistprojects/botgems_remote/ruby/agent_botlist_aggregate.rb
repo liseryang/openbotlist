@@ -4,41 +4,33 @@
 # Aggregate a collection of RSS links
 #
 # Updated 2/10/2008 for new RDF remote process
+#
+# "In computer science, an intelligent agent (IA) is a software agent 
+# that assists users and will act on their behalf, 
+# in performing non-repetitive computer-related task, 
+# in the sense of a "representative agent", 
+# like an insurance agent or travel agent." -- wikipedia article [1]
+#
+# [1] http://en.wikipedia.org/wiki/Intelligent_agent#Intelligent_agents_in_computer_science
+#
 ########################################
 
 require 'java'
+include Java
 require 'rexml/document'
 include REXML
 
-include_class 'java.net.HttpURLConnection' unless defined? HttpURLConnection
-include_class 'com.ibatis.sqlmap.client.SqlMapClient' unless defined? SqlMapClient
-include_class 'com.ibatis.sqlmap.client.SqlMapClientBuilder' unless defined? SqlMapClientBuilder
-include_class 'com.ibatis.common.resources.Resources' unless defined? Resources
+require File.join(File.dirname(__FILE__), 'agent_utils')
 
-include_class 'org.spirit.loadtest.LoadTestManager' unless defined? LoadTestManager
-include_class 'org.spirit.bean.impl.BotListSystemAuditLog' unless defined? BotListSystemAuditLog
+import java.net.HttpURLConnection unless defined? HttpURLConnection
+import com.ibatis.sqlmap.client.SqlMapClient unless defined? SqlMapClient
+import com.ibatis.sqlmap.client.SqlMapClientBuilder unless defined? SqlMapClientBuilder
+import com.ibatis.common.resources.Resources unless defined? Resources
 
-# Botrover99 is a capable agent
-BOT_AGENT_NAME = "botrover99"
-MAX_LEN_FIELD = 120
-DEFAULT_RDF_MSG = <<EOF
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-</rdf:RDF>
-EOF
+import org.spirit.loadtest.LoadTestManager unless defined? LoadTestManager
+import org.spirit.bean.impl.BotListSystemAuditLog unless defined? BotListSystemAuditLog
 
 module Aggregate
-  
-  CANNED_BOT_MSGS = [
-                     "I enjoyed the cake.  It was good.",
-                     "The cake was a little dry, but I ate it anyway.",
-                     "I wish there was more cake around.",
-                     "My life as a bot is difficult.",
-                     "Do you know Chomsky?",
-                     "Do you speak any japanese?",
-                     "Work is fun, but baking a cake is even more fun. Mmm.",
-                     "Cake and bot work go together.",
-                     "I ate too much cake.  Do you have a toothbrush?"
-                    ]
 
   class AgentBotlistRSS
     
@@ -54,45 +46,20 @@ module Aggregate
       
       # Init the payload message XML document
       @payload_doc = nil
-      @payload_content = DEFAULT_RDF_MSG     
+      @payload_content = AgentUtils::DEFAULT_RDF_MSG     
     end
     
     def load_payload_doc()
       @payload_doc = Document.new(@payload_content)
-    end
-    def shortenField(str_val)
-      str = str_val[0, MAX_LEN_FIELD] if str_val.length > MAX_LEN_FIELD
-      return str if !str.nil?
-      return str_val
-    end    
-    def urlItemCleanup(item)
-      return if item.nil?		
-      # Cleanup url
-      if !item.urlTitle.nil?
-        item.urlTitle.gsub!("\,", "")
-        item.urlTitle.gsub!(/\r\n?/, "")			
-        item.urlTitle.strip!
-        item.urlTitle = shortenField(item.urlTitle)
-      end
-      # Cleanup URL with encoded value
-      item.mainUrl.gsub!("\,", "%2C") if !item.mainUrl.nil?
-    end
-    def verifyItem(item)
-      return false if item.nil?		
-      return false if item.urlTitle.nil? or item.urlTitle.strip.empty?
-      return false if item.mainUrl.nil? or item.mainUrl.strip.empty?		
-      # Valid item, allow
-      return true
     end
     
     def addMsgXMLHeader()
       # Add the initial header
       bot_id_e = Element.new("botid")
       msg_e = Element.new("message")
-      status_e = Element.new("status")
-      
-      bot_id_e.text = BOT_AGENT_NAME
-      msg_e.text = @canned_bot_msgs[rand(@canned_bot_msgs.size)]
+      status_e = Element.new("status")      
+      bot_id_e.text = AgentUtils::BOT_AGENT_NAME
+      msg_e.text = AgentUtils::CANNED_BOT_MSGS[rand(AgentUtils::CANNED_BOT_MSGS.size)]
       status_e.text = "200"
       
       agent_msg = Element.new("agentmsg")
@@ -129,13 +96,13 @@ module Aggregate
     end
 
     def scanFeeds()
-      # Scan the feed items and buil
+      # Scan the feed items and build the remote payload
       feedItems = @sqlMapper.queryForList("selectAllFeedItems")
       buf = ""
       payload_elem = Element.new("typespayload")
       feedItems.each { |item|			
-        urlItemCleanup(item)
-        if verifyItem(item)
+        AgentUtils::urlItemCleanup(item)
+        if AgentUtils::verifyItem(item)
           elem = createMsgTypeElem(item)
           formatted_data = "#{item.mainUrl},#{item.urlTitle},#{item.urlTitle}"
           buf << formatted_data << "\n"
