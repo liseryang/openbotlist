@@ -1,7 +1,9 @@
-#
+########################################
 # Berlin Brown
 # jruby - bot_remote_sync
-# (deprecated approach for remoting)
+#
+# (DEPRECATED approach for remoting)
+########################################
 
 require 'java'
 include_class 'java.net.HttpURLConnection' unless defined? HttpURLConnection
