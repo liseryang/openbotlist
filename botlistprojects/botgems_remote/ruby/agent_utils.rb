@@ -5,6 +5,9 @@
 require 'java'
 include Java
 
+import java.lang.String unless defined? String
+import com.amazon.s3.Utils unless defined? Utils
+
 module AgentUtils
   
   # Botrover99 is a capable agent
@@ -27,12 +30,12 @@ EOF
                      "I ate too much cake.  Do you have a toothbrush?"
                     ]
 
-  def AgentUtils.shortenField(str_val)
+  def self.shortenField(str_val)
     str = str_val[0, MAX_LEN_FIELD] if str_val.length > MAX_LEN_FIELD
     return str if !str.nil?
     return str_val
   end
-  def AgentUtils.urlItemCleanup(item)
+  def self.urlItemCleanup(item)
     return if item.nil?		
     # Cleanup url
     if !item.urlTitle.nil?
@@ -44,12 +47,23 @@ EOF
     # Cleanup URL with encoded value
     item.mainUrl.gsub!("\,", "%2C") if !item.mainUrl.nil?
   end
-  def AgentUtils.verifyItem(item)
+  def self.verifyItem(item)
     return false if item.nil?		
     return false if item.urlTitle.nil? or item.urlTitle.strip.empty?
     return false if item.mainUrl.nil? or item.mainUrl.strip.empty?		
     # Valid item, allow
     return true
+  end
+  # Convert a ruby string to java lang string to bytes
+  def self.string_to_bytes(str)
+    str = "#{str}"
+    jstr = java.lang.String.new(str)
+    return jstr.getBytes
+  end
+  
+  def self.load_file_bytes(filename)
+    contents = Utils.readBinaryFileBytes(filename)
+    return contents
   end
   
 end # End of Module
