@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ****************************************************** -->
+<!-- Copyright (c) 2006 - Berlin Brown -->
+<!-- ****************************************************** -->
+<project name="OpenBotlist Botlist Projects (Amazon S3)" default="package" basedir=".">
+
+	<property file="build.properties" />
+	<property name="projects.base.dir"    value="${basedir}/.." />
+    <property name="build.dir"            value="${basedir}/build"/>
+    <property name="build.classes.dir"    value="${basedir}/build/classes"/>	
+    <property name="src.dir"              value="${basedir}/src"/>
+	    		    
+	<target name="init" description="Initialization">
+	        <tstamp/>	        
+	</target>	
+	
+    <path id="classpath"> 
+    	<pathelement location="${projects.base.dir}/java/lib/xercesImpl.jar" />
+        <!-- Include the CLASSES directory -->    	
+        <pathelement location="${build.classes.dir}" />
+    </path>
+	
+    <!-- Target: Prepare -->
+    <target name="prepare" depends="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes.dir}"/>
+    </target>
+
+    <!-- Target: Compile -->
+    <target name="compile" depends="prepare">
+        <javac deprecation="true"
+                target="1.5"
+                srcdir="${src.dir}"
+                destdir="${build.classes.dir}"
+                includes="**/*.java">
+            <classpath refid="classpath"/>
+            <compilerarg value="-Xlint" />
+        </javac>
+    </target>
+	    
+    <!-- Target: Build -->
+    <target name="package" depends="compile">
+    </target>
+          
+    <!-- Build beans jar -->
+    <target name="jar.amazon.s3" depends="compile">
+        <jar jarfile="${build.dir}/${appname.jar}.jar">
+            <fileset dir="${basedir}/build/classes" >
+                <include name="**/*.class"/>
+            </fileset>
+        </jar>
+    </target>
+	
+    <target name="test.s3" depends="compile">
+    	 <java classname="S3Test">
+			<classpath refid="classpath" />
+			<classpath>
+				<pathelement location="${basedir}" />
+			</classpath>
+		</java>
+    </target>
+	
+    <!-- Main Clean -->
+    <target name="clean">
+        <delete dir="${build.dir}" />        
+    </target>
+    <!-- End of Main Clean -->
+    
+</project>
+<!-- End of the File -->
