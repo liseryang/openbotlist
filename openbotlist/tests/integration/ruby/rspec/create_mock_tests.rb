@@ -1,10 +1,14 @@
 ########################################
 # Rspec tests
+# Create the mock test objects. Fill test data
+# into the database using rspec.
+#
 # Author: Berlin Brown
 # Date: 3/10/2008
 ########################################
 
-import Java
+require 'java'
+include Java
 
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -30,12 +34,15 @@ import org.spirit.bean.impl.BotListProfileSettings
 import org.spirit.bean.impl.BotListMediaFeeds
 import org.spirit.bean.impl.BotListActiveMediaFeeds
 import org.spirit.bean.impl.BotListUserLinks
+import org.spirit.apps.foaf.BotListEntityTypeFoaf
+import org.spirit.apps.system.SystemFeedItemsType
 
 describe "Creating simple mock objects=" do
   
   before(:each) do
     @ac = $context
     @rad_controller = @ac.getBean("radController")
+    @jdbc_dao_bean = @ac.getBean("genericRuntimeJDBCDao")
     @cur_sess_id = rand(1000000)
   end
 
@@ -64,7 +71,6 @@ describe "Creating simple mock objects=" do
   end
   
   it "Should create the user links" do
-
     df = SimpleDateFormat.new("mm/dd/yyyy")
     cal = Calendar.getInstance()
     cal.time = df.parse("1/1/1971")
@@ -185,10 +191,34 @@ describe "Creating simple mock objects=" do
     # Delay so that the main thread does not exit
     sleep(7)
   end
-  
+ 
+  it "Should create return system feed items" do
+    
+    # Attempt to create 20 items
+    for i in 0..20
+      begin
+        item = SystemFeedItemsType.new
+        item.main_url = "http://www.google#{@cur_sess_id}.com"
+        item.url_title = "Title: !! http://www.google#{@cur_sess_id}.com"
+        item.url_description = "Descr: !! http://www.google#{@cur_sess_id}.com"
+        item.url_source  = "Source: !! http://www.google#{@cur_sess_id}.com"
+        item.hostname = "http://www.google#{@cur_sess_id}.com"
+        # Insert a mock object
+        res = @jdbc_dao_bean.jdbcInsertFeedItems(item.defaultQuerySQL, item) 
+      rescue
+        puts "Err: creating item"
+      end
+    end  # End of for
+    data = @jdbc_dao_bean.jdbcQuerySystemFeedItems "select id, main_url from system_feed_items"
+    data.each { |item| 
+      puts item.mainUrl
+    }
+  end # End of test
+
   it "Should create the city listing" do
     dao = @rad_controller.cityListingDao
   end
+ 
 
   it "Should create the user visit log" do
     dao = @rad_controller.userVisitLogDao

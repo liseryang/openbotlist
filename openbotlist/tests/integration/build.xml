@@ -69,6 +69,8 @@
 	    	<fail unless="classpath.include">Error loading build_classpath.property file.  Make sure it exists.</fail>
 <echo>
  Valid test tasks:
+ setup_tests - Setup test routines used to create and commit mock objects to the database.
+ tests.ruby.rspec - Run all rspec tests in the rspec directory.
  tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
  tests.ruby.rspec.single  - Run a single staging rspec test with no helper (spring connect, etc).
 </echo>
