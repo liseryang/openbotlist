@@ -29,6 +29,12 @@ import org.xml.sax.SAXException;
 
 import com.amazon.thirdparty.Base64;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 public class Utils {
     static final String METADATA_PREFIX = "x-amz-meta-";
     static final String AMAZON_HEADER_PREFIX = "x-amz-";
@@ -37,8 +43,42 @@ public class Utils {
     
     public static final int SECURE_PORT = 443;
     public static final int INSECURE_PORT = 80;
-
-
+    
+    /**
+     * Buffered approach for reading a file and outputting to a array of bytes.
+     */
+    public static byte [] readBinaryFileBytes(final String filename) throws java.io.IOException {
+    	final int BUFFER_SIZE = 2048;
+    	InputStream is = new BufferedInputStream(new FileInputStream(filename));    	
+    	ByteArrayOutputStream os = new ByteArrayOutputStream(BUFFER_SIZE);    	    	
+    	try {    		    		
+    		byte [] buffer = new byte[BUFFER_SIZE];
+    		int bytesRead = is.read(buffer, 0, BUFFER_SIZE);
+    		while (bytesRead > 0) {
+    			os.write(buffer, 0, bytesRead);
+    			bytesRead = is.read(buffer, 0, BUFFER_SIZE);
+    		}
+    		return os.toByteArray();
+    	} catch(java.io.IOException e) {
+    		throw new RuntimeException(e);
+    	} finally {
+    		try {	
+    			if (is != null) {
+    				try {
+    					is.close();
+    				} catch(Exception _e) {}
+    			}
+    		} finally {
+    			if (os != null) {
+    				try { 
+    					os.close();
+    				} catch(Exception _e) {}
+    			}
+    		} // End of Finally
+    	} // End of Try Catch 
+    }
+    
+    
     /**
      * HMAC/SHA1 Algorithm per RFC 2104.
      */
