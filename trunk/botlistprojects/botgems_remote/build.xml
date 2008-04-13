@@ -31,6 +31,7 @@
 	<property name="sqlite.jar"       value="${lib.dir}/sqlitejdbc-v043-nested.jar" />
 	<property name="botlistbeans.jar" value="${basedir}/lib/botlistbeans.jar" />
 	<property name="ibatis.jar"       value="${basedir}/lib/ibatis-2.3.0.677.jar" />
+	<property name="botlistloadtest.jar" value="${basedir}/lib/botlistloadtest.jar" />
 	<property name="amazons3.jar"     value="${projects.lib.dir}/botlist_amazons3.jar" />
 	
 	<path id="classpath.tests">
@@ -65,6 +66,7 @@
 		<pathelement location="${ibatis.jar}" />
 		<pathelement location="${botlistbeans.jar}" />
 		<pathelement location="${amazons3.jar}" />
+		<pathelement location="${botlistloadtest.jar}" />
 	</path>
 	
 	<!-- ************************ -->
@@ -77,6 +79,7 @@
     	<echo message="${projects.lib.dir}" />
  <echo>
  Valid test tasks:
+ tests.ruby.rspec - Run all rspec tests in the rspec directory.
  tests.ruby.rspec.single.nohelp - Run a single staging rspec test with no helper.
  tests.ruby.rspec.single  - Run a single staging rspec test with no helper (spring connect, etc).
 </echo>    	
