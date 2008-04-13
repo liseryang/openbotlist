@@ -80,13 +80,23 @@
 		</property>
 	</bean>
 
-
+	
 	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
 		</property>
 	</bean>
+	
+	<!-- ********************* -->
+	<!-- ** JDBC DAO -->
+	<!-- ** JDBC DAO can be used with generic runtime operations that don't need a POJO bean -->
+	<!-- ** An example use of this bean could be for spring backed runtime client applications (e.g. for test cases) -->
+	<!-- ** Note: This is a dangerous, volatile DAO, use with caution (outside of the J2EE space) -->
+	<!-- ********************* -->
+	<bean id="genericRuntimeJDBCDao" class="org.spirit.apps.jdbc.GenericRuntimeJDBCDao">
+		<property name="dataSource" ref="dataSource"/>
+    </bean>	
 	
 	<!-- Note: use of implementation -->
 	<bean id="userLinkDaoBean" class="org.spirit.dao.impl.BotListUserLinkDAOImpl">
