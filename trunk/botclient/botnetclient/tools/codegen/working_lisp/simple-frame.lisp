@@ -23,7 +23,7 @@
 
 ;; Call the method setVisible against the frame instance
 (setf set-visible 
-	  (jmethod frame "setVisible" "boolean"))
+	  (jmethod jframe "setVisible" "boolean"))
 
 (defun thread-test ()
   (jcall (jmethod "java.lang.Runnable" "run")
