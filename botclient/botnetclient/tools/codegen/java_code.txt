@@ -42,12 +42,14 @@ public class SimpleSwing extends JFrame {
 		
 		pathField = new JTextField(DEFAULT_PATH, 40);
 		final JPanel topPanel = new JPanel();
+		
 		topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
 		topPanel.add(pathField);
 		
 		// Set the button panel
-		final JPanel buttonPanel = new JPanel();
+		final JPanel buttonPanel = new JPanel();		
 		this.readRequestsButton = new JButton("Run Action");
+		
 		buttonPanel.add(this.readRequestsButton);
 		topPanel.add(buttonPanel);
 		
