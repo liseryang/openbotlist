@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/lib/jvm/java-6-sun-1.6.0.03/jre/bin/java -Xss4M -Xmx256M -Xrs -Djava.library.path=/home/bbrown/src/abcl/j/src/org/armedbear/lisp/ -cp /home/bbrown/src/abcl/j/src:/home/bbrown/src/abcl/j/abcl.jar org.armedbear.lisp.Main "$@"

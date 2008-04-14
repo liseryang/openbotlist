@@ -1,0 +1,8 @@
+#!/bin/sh
+cd src
+jar cmf manifest-abcl ../abcl.jar org/armedbear/lisp/*.class
+jar uf ../abcl.jar org/armedbear/lisp/java/awt/*.class
+jar uf ../abcl.jar org/armedbear/lisp/LICENSE
+jar uf ../abcl.jar org/armedbear/lisp/*.lisp
+jar uf ../abcl.jar org/armedbear/lisp/*.abcl
+find . -name '*.cls' | xargs jar uf ../abcl.jar
