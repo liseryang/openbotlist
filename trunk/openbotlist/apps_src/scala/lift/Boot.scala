@@ -3,11 +3,10 @@
  */
 package bootstrap.liftweb
 
-import net.liftweb.http._
 import net.liftweb.util.{Helpers, Can, Full, Empty, Failure, Log}
-import javax.servlet.http.{HttpServlet, HttpServletRequest , HttpServletResponse, HttpSession}
-import scala.collection.immutable.TreeMap
+import net.liftweb.http._
 import Helpers._
+import javax.servlet.http.{HttpServlet, HttpServletRequest , HttpServletResponse, HttpSession}
 
 import org.spirit.lift.agents._
  
@@ -17,15 +16,15 @@ import org.spirit.lift.agents._
   */
 class Boot {
   def boot {
-	LiftServlet.addToPackages("org.spirit.lift.agents")
-	val dispatcher: LiftServlet.DispatchPf = {         
+	LiftRules.addToPackages("org.spirit.lift.agents")
+	val dispatcher: LiftRules.DispatchPf = {         
 	  // In our pseudo REST architecture, 'types' is associated with
 	  // the payload dumps and their types.  
 	  // In layman terms, a type is a article link and attributes.
 	  case RequestMatcher(r, ParsePath("lift" :: "pipes" :: "types" :: c :: _, _,_),_, _) => 
 		invokeAgents(r, c)
     }
-	LiftServlet.addDispatchBefore(dispatcher)
+	LiftRules.addDispatchBefore(dispatcher)
   }
   private def invokeAgents(request: RequestState, methodName: String)(req: RequestState): Can[ResponseIt] =
 	createInvoker(methodName, new RemoteAgents(request)).flatMap(_() match {

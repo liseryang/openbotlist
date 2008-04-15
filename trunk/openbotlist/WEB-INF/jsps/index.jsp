@@ -3,7 +3,7 @@
 <%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- 	<title>Botlist - Interesting Things Online, way better than wikileaks (beta built with Scala, JRuby, Spring, Liftweb, Haskell technology)</title>
+ 	<title><spring:message code="system.html.title"/></title>
  	
 	<meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" >
  	

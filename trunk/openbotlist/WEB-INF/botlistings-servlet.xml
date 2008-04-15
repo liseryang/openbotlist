@@ -490,7 +490,10 @@
 		</property>
 	</bean>
 	
-	<!-- Message Configuration -->
+	<!-- ****************************************-->	
+	<!-- *** Message Configuration -->
+	<!-- *** Default Message Properties: use to define custom text labels and values in your view pages -->
+	<!-- ****************************************-->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 		<list>
@@ -498,5 +501,6 @@
 		 <value>messages</value>
 		</list>
 	 	</property>
-	 </bean>	
-</beans>
+	 </bean>
+	 
+</beans> <!-- End of Script -->

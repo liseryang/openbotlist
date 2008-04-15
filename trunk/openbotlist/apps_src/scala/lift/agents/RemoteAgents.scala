@@ -7,12 +7,9 @@ package org.spirit.lift.agents
 
 import scala.Console.{println}
 import java.util.Random
-import org.springframework.context.{ApplicationContext => AC}
-import org.spirit.dao.impl.{BotListUserVisitLogDAOImpl => LogDAO}
-import org.spirit.dao.impl.{BotListSessionRequestLogDAOImpl => SessDAO}
-import org.spirit.bean.impl.{BotListUserVisitLog => Log}
-import org.spirit.bean.impl.{BotListSessionRequestLog => Sess}
+
 import net.liftweb.http._
+import S._
 import net.liftweb.http.S._
 import net.liftweb.http.S
 import scala.xml.{XML, NodeSeq, Text, Group}
@@ -22,11 +19,17 @@ import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse,
 import org.spirit.lift.agents._
 import org.spirit.lift.agents.model._
 
+import org.springframework.context.{ApplicationContext => AC}
+import org.spirit.dao.impl.{BotListUserVisitLogDAOImpl => LogDAO}
+import org.spirit.dao.impl.{BotListSessionRequestLogDAOImpl => SessDAO}
+import org.spirit.bean.impl.{BotListUserVisitLog => Log}
+import org.spirit.bean.impl.{BotListSessionRequestLog => Sess}
+
 /**
  * Example request:
  * http://localhost:8080/botlist/lift/pipes/agents/remote_agent
  */
-class RemoteAgents (val request: RequestState) extends SimpleController {
+class RemoteAgents (val request: RequestState) {
   def httpRequest = request.request
 
   def remote_agent_req : XmlResponse = {
