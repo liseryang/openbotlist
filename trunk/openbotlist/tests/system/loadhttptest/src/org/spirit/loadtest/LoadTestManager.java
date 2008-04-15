@@ -72,6 +72,8 @@ public class LoadTestManager {
 
 	public static String PROPERTY_FILE = "testclient.properties";
 
+	public static final int MAX_LOG_RESULT_TUPLE = 4;
+	
 	public static final String SYSTEM_DIRS[] = { "data", "data/html", "data/logs", "cookies", "output" };
 
 	public static final int MAX_LINE_MESSAGES = 40;
@@ -128,6 +130,8 @@ public class LoadTestManager {
 	private String proxyHost = "theproxy";
 
 	private String proxyPort = "8080";
+	
+	private boolean validateXHTMLEnabled = false;
 
 	private LoadTestHtmlOutput htmlOutput = new LoadTestHtmlOutput().setEnabled(true);
 
@@ -198,7 +202,13 @@ public class LoadTestManager {
 				String enable_proxy = properties.getProperty("enable.proxy") != null ? properties.getProperty(
 						"proxy.port").trim() : "false";
 				boolean hasProxy = Boolean.valueOf(enable_proxy).booleanValue();
-
+				
+				String enable_xhtml_validate = properties.getProperty("enable.xhtml.validate") != null 
+								? properties.getProperty("enable.xhtml.validate").trim() : "false";						
+				//*******************************
+				// Set the client properties
+				//*******************************
+				client.setValidateXHTMLEnabled(Boolean.valueOf(enable_xhtml_validate).booleanValue());
 				client.setTestURL(url).setDefaultUserAgent(userAgent).setLinesWrite(iLines);
 				client.setThreadSleepTime(iSleep).setUseSynchronized(sync).setNumberThreads(iThreads);
 
@@ -251,10 +261,21 @@ public class LoadTestManager {
 		String errmsg = responseTuple[2].length() < MAX_LINE_MESSAGES ? responseTuple[2] : "";
 		// Create Tab Delimited File (url, no, response-time, status-code,
 		// message, errmsg)
-		String logLine = "url=" + url + "\tno=" + getTestClient().getNumberOfRequests() + "\trtime=" + diff + "\tcode="
-				+ responseTuple[0] + "\tmessage=[" + smsg + "]" + "\terrmsg=[" + errmsg + "]";		
-		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName(), url, (int) diff, responseTuple[0]);
+		final StringBuffer logLine = new StringBuffer();
+		logLine.append("url=").append(url).append("\tno=");
+		logLine.append((getTestClient().getNumberOfRequests()) + "\trtime=" + diff + "\tcode=");		
+		logLine.append(responseTuple[0]).append("\tmessage=[" + smsg + "]").append("\terrmsg=[" + errmsg + "]");
+		
+		String additional_msg = "";
+		if (responseTuple.length >= LoadTestManager.MAX_LOG_RESULT_TUPLE) {
+			additional_msg = responseTuple[3];			
+		}
+		
+		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName() + additional_msg, url, (int) diff, responseTuple[0]);		
 		try {
+			//*************************
+			// Also, add additional message to log output
+			//*************************
 			getTestClient().writeLogFile(logLine + "\r\n");
 		} catch (IOException e) {
 			System.out.println("ERR: error writing to logfile - " + getTestClient().getLogFile());
@@ -677,6 +698,15 @@ public class LoadTestManager {
 		}
 	}
 
+	public boolean isValidateXHTMLEnabled() {
+		return validateXHTMLEnabled;
+	}
+
+	public LoadTestManager setValidateXHTMLEnabled(boolean validateXHTMLEnabled) {
+		this.validateXHTMLEnabled = validateXHTMLEnabled;
+		return this;
+	}
+	
 	/**
 	 * @return
 	 */

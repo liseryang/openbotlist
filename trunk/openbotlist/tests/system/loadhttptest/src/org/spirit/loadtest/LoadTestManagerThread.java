@@ -20,18 +20,45 @@ public class LoadTestManagerThread implements Runnable {
     public LoadTestManager getTestClient() {
         return this.client;
     }
-    
+
+    /**
+     * Add additional message content to result tuple.
+     * Length = 4
+     * 4/18/2008
+     */
+    private String [] additionalHeadersResTuple(final String [] responseTuple, final String additional_msg) {
+    	final String [] new_copy = new String [LoadTestManager.MAX_LOG_RESULT_TUPLE];
+    	final Object obj_src = responseTuple;
+    	final Object obj_dest = new_copy;
+    	// Only copy 3 elements
+    	System.arraycopy(obj_src, 0, obj_dest, 0, 3);
+    	new_copy[3] = additional_msg;
+    	return new_copy;
+    }
     private void loadSingleURL(String url) {
         try {
-            long allStart = System.currentTimeMillis();
+            final long allStart = System.currentTimeMillis();
             for (int i = 0; i < getTestClient().getLinesWrite(); i++) {
-                long tStart = System.currentTimeMillis();
+                final long tStart = System.currentTimeMillis();
                 System.out.println("attempting request to=" + url);
-                String [] responseTuple = LoadTestManager.connectURL(url, false);
+                String [] responseTuple = LoadTestManager.connectURL(url, false);                
+                final String http_data = responseTuple[1];
+                String additional_msg = "";
+                if (this.getTestClient().isValidateXHTMLEnabled()) {
+                	 final Object [] validate_res = LoadTestXMLValidate.validateXML(url, http_data);
+                	 boolean is_valid = ((Boolean) validate_res[0]).booleanValue();
+                	 if (!is_valid) {
+                		 // Append the XML validate text to the response tuple, for printing to the HTML document.
+                		 additional_msg = LoadTestHtmlOutput.HTML_STR_PRE + validate_res[1] + LoadTestHtmlOutput.HTML_END_PRE; 
+                	 }
+                }
+                responseTuple = additionalHeadersResTuple(responseTuple, additional_msg);
                 long tEnd = System.currentTimeMillis();
                 long diff = tEnd - tStart;
-                System.out.println("single request time="
-                    + diff + " ms -- from " + Thread.currentThread().getName());
+                System.out.println("single request time=" + diff + " ms -- from " + Thread.currentThread().getName());
+                //*********************
+                // Log the file to the simple text document, also save for HTML output
+                //*********************
                 LoadTestManager.log(diff, responseTuple, url);
                 // Move to next iteration.
                 this.getTestClient().incNumberOfRequests();
@@ -39,8 +66,8 @@ public class LoadTestManagerThread implements Runnable {
                 Thread.sleep(getTestClient().getThreadSleepTime());
             }
                         
-            long allEnd = System.currentTimeMillis();
-            long perThreadDiff = allEnd - allStart;
+            final long allEnd = System.currentTimeMillis();
+            final long perThreadDiff = allEnd - allStart;
             System.out.println("All requests time=" + perThreadDiff + " ms");
             
             // The following code buildRequestSection, clearRequest are needed after writing the HTML content

@@ -31,6 +31,9 @@ public class LoadTestHtmlOutput {
 	
 	public static final String HTML_NEWLINE = "\n";
 	
+	public static final String HTML_STR_PRE = "<div style='width: 300px;'>";
+	public static final String HTML_END_PRE = "</div>\n";
+	
 	private boolean enabled = false;
 	private String outputFile = "data/logs/loadtest_local";
 	private List dataList = new ArrayList();
@@ -263,7 +266,7 @@ public class LoadTestHtmlOutput {
 	// Example Test Driver
 	//
 	//=====================================================
-	public static void main(String [] args)  {
+	private static void main(String [] args)  {
 		System.out.println("Running test driver application");
 		LoadTestHtmlOutput htmlOutput = new LoadTestHtmlOutput();
 		htmlOutput.addRequest("Thread-1", "http://127.0.0.1", 130, "" + 200);
