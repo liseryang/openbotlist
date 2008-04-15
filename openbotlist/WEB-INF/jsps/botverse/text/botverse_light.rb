@@ -1,12 +1,15 @@
-##
+########################################
 ## Berlin Brown
 ## 11/4/2006
+## Updated: 4/15/2008
 ##
 ## create_listing.rb
-##
+########################################
 
-class ViewLightController
-		
+require 'java'
+include Java
+
+class ViewLightController		
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.entityLinksDao
@@ -34,4 +37,3 @@ end
 ViewLightController.new($controller)
 
 ## End of Script ##
-

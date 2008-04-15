@@ -52,6 +52,7 @@
         <pathelement location="${scala.jar}" />
     	<pathelement location="${scala-compiler.jar}" />
         <pathelement location="${lift.jar}" />
+		<pathelement location="${lift_webkit.jar}" />
 		<pathelement location="${servlet.jar}" />
         <pathelement location="${jsp-api.jar}" />
 	</path>

@@ -161,7 +161,7 @@
 				fork="true">
 			<classpath refid="classpath" />
 			<classpath refid="runtime.classpath" />			
-			<sysproperty key="python.home" value="C:\Jython2.2a" />
+			<sysproperty key="python.home" value="/tmp" />
 			<arg value="py/all_tests.py" />
 			<arg value="-f" />
 			<arg value="${home.base.dir}/WEB-INF/botlistings-servlet.xml"/>
@@ -175,40 +175,13 @@
 				fork="true">
 			<classpath refid="classpath" />
 			<classpath refid="runtime.classpath" />			
-			<sysproperty key="python.home" value="C:\Jython2.2a" />
+			<sysproperty key="python.home" value="/tmp" />
 			<arg value="py/all_tests_prod.py" />
 			<arg value="-f" />
 			<arg value="${home.base.dir}/WEB-INF/botlistings-servlet.xml"/>			
 		</java>
-	</target>	
-	<!-- Grinder Tests for system tests -->
-	<target name="run.system.tests" depends="package">
-		<!-- Fork == true must be enabled  -->
-		<java classname="net.grinder.Grinder"
-						fork="true" dir="${basedir}/../system/grinder">
-				<classpath refid="grinder.classpath" />			
-				<sysproperty key="GRINDERPATH" value="${basedir}/../system/grinder" />
-				<sysproperty key="GRINDERPROPERTIES" value="${basedir}/../system/grinder/grinder.properties" />
-				<arg value="${basedir}/../system/grinder/grinder.properties" />
-		</java>
 	</target>
-	
-	<!-- Default run tests -->
-	<target name="run.single.test" depends="package">	
-		<!-- Fork == true must be enabled for jython -->
-		<java classname="org.python.util.jython"
-				fork="true">
-			<classpath refid="classpath" />
-			<classpath refid="runtime.classpath" />			
-			<sysproperty key="python.home" value="C:\Jython2.2a" />
-			<arg value="py/all_single_test.py" />
-			<arg value="-f" />
-			<arg value="${home.base.dir}/WEB-INF/botlistings-servlet.xml"/>
-			<arg value="${home.base.dir}/WEB-INF/spring-botlist-util.xml"/>			
-			<arg value="${single.test}" />
-		</java>
-	</target>	
-	
+		
 	<target name="run.tests.ruby" depends="package">
 		<java classname="org.spirit.test.MainTestSuite">	         
 			<classpath refid="classpath" />
