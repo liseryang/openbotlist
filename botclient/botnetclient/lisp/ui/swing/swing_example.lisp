@@ -1,6 +1,10 @@
 ;;################################################
 #|
- For use with ABCL (known as Armed Bear Common Lisp, source created specifically for reddit)
+ swing_example.lisp  
+ Usage:
+ ABCL-PROMPT>>> (load "swing_example.lisp")
+
+ Use with ABCL (known as Armed Bear Common Lisp)
  Author: Berlin Brown <berlin dot brown at gmail.com>
  Date: 4/15/2008
  
@@ -21,27 +25,24 @@
  menu-item/button action handlers and a text-area to view and/or parse the incoming
  text that would have normally been piped to standard output.
 
- I ended up choosing common-lisp as opposed to python or ruby because the syntax is just as light, 
- powerful generaly-purpose language; it is perfectly suited for my task.  I commonly use emacs, 
- so I am already equipped with an editor.  I decided to use Swing and ABCL for the 
+ I ended up choosing common-lisp as opposed to python or ruby because the lisp syntax is 
+ just as light, and powerful a general purpose language; it is perfectly suited for my task.  
+ I commonly use emacs, so I am already equipped with an editor.  I decided to use Swing and ABCL for the 
  UI toolkit, and for no real particular reason.  If I can create this UI using swing running on the JVM, 
  it will be 100 times easier using another toolkit.  Plus, swing and the jvm is reliatively
  portable.  In the future, I hope to convert this to a more portable MVC architecture.
  This Swing widget creation code could operate as the view for a larger system and then I could
  easily switch with another lisp gui toolkit library.
 
- This procedural oriented example could just as easily be converted to other 
- popular dynamic JVM languages Jython, JRuby, Clojure and (the static/strong-typed Scala).
-
  *Setup and Environment*
  -----------------------
  ABCL runs like any other java application.  Once, you compile the single jar and resource
- bundled  *.cls lisp binary files, a script is available that you can run the ABCL main class:
+ bundled  *.cls lisp binary files, a script is available that you use to launch the ABCL main class:
  
  org.armedbear.lisp.Main
 
- You will need a working java runtime and JDK (preferablly Sun's jre/jdk 1.5 or greater), 
- a common lisp implementation (e.g. CMUCL, SBCL, or CLISP).
+ You need a working java runtime and JDK (preferablly Sun's jre/jdk 1.5 or greater), 
+ a common lisp implementation (e.g. CMUCL, SBCL, or CLISP) and the ABCL package.
  Download the latest ABCL from sourceforge [1] http://armedbear.org/abcl.html 
  Any of the common lisp implemenations will work.  In the past, I have compiled 
  ABCL on win32 cygwin with clisp and Ubuntu Linux with SBCL.  I didn't 
@@ -65,11 +66,116 @@
 
     (build-abcl:build-abcl :clean t :full t)
 
+ Launch the ABCL startup script:
+ $$$ abcl.bat
+ 
+c:\projects\tools\home\projects\projects_ecl\botclient\botnetclient\lisp\ui\swin
+g>org.armedbear.lisp.Main
+Armed Bear Common Lisp 0.0.10 (built Tue Apr 8 2008 12:43:18 -0500)
+Java 1.5.0_11 Sun Microsystems Inc.
+Java HotSpot(TM) Client VM
+Low-level initialization completed in 0.656 seconds.
+Startup completed in 2.171 seconds.
+Type ":help" for a list of available commands.
+
+CL-USER(1): (load "swing_example.lisp")
+
+ *Source Code*
+ ----------------------- 
+ This code can be a little hard to follow.  There is a lot of typing needed
+ to setup and instantiate the java classes or access the java fields.
+ So, I suggest you use lisp syntactic sugar to beautify and cleanup the example
+ and remember to send me your patches.
+
+ *Useful tests from the ABCL java test suite*
+ -----------------------
+ [a] Example to create an instance of a java object with the String constructor
+ -------------------
+ (deftest jnew.1
+  (let ((constructor (jconstructor "java.lang.String" "java.lang.String")))
+    (jclass-of (jnew constructor "foo")))
+  "java.lang.String"
+  "java.lang.String")
+
+ [b] Accessing the 'int' java primitive
+ -------------------
+ (deftest jclass-name.8
+  (jclass-name (jclass "int"))
+  "int")
+
+ [c] Invoking a java method.
+ -------------------
+ (deftest jclass.4
+  (let ((class1 (jcall (jmethod "java.lang.Object" "getClass") "foo"))
+        (class2 (jclass "java.lang.String")))
+    (jcall (jmethod "java.lang.Object" "equals" "java.lang.Object")
+           class1 class2))
+  t)
+
+ [d] 
+ -------------------
+ (deftest jclass.3
+  (equal (jclass '|java.lang.String|) (jclass "java.lang.String"))
+  t)
+
+ Example static method call "System.getenv('KEY')
+ (jstatic "getenv" (jclass "java.lang.System") "KEY")
+
+ Java Static Fields:
+ (jfield-raw "java.lang.Boolean" "TRUE")
+
+ *Synonymous java code (see the lisp function initTextAreaLayout)*:
+ ---------------------------------
+ I created a 100% java skeleton version to see how to transform that code to lisp.  Here is
+ some of the java source.
+
+ import java.awt.BorderLayout;
+ import java.awt.event.ActionEvent;
+ import javax.swing.AbstractAction;
+ import javax.swing.BoxLayout;
+ import javax.swing.JButton;
+ import javax.swing.JFrame;
+ import javax.swing.JMenu;
+ import javax.swing.JMenuBar;
+ import javax.swing.JMenuItem;
+ import javax.swing.JPanel;
+ import javax.swing.JScrollPane;
+ import javax.swing.JTextArea;
+ import javax.swing.JTextField;
+ import javax.swing.ScrollPaneConstants;
+ import javax.swing.UIManager;
+
+ 	private void initTextAreaLayout() {		
+		pathField = new JTextField(DEFAULT_PATH, 40);
+		final JPanel topPanel = new JPanel();		
+		topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+		topPanel.add(pathField);
+			
+		final JPanel buttonPanel = new JPanel();		
+		this.readRequestsButton = new JButton("Run Action");
+		
+		buttonPanel.add(this.readRequestsButton);
+		topPanel.add(buttonPanel);
+			
+		contentArea = new JTextArea(25, 60);
+		JScrollPane scrollPane = new JScrollPane(contentArea,
+						ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+						ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		
+		getContentPane().setLayout(new BorderLayout());
+		getContentPane().add(topPanel, BorderLayout.NORTH);
+		getContentPane().add(scrollPane, BorderLayout.CENTER);
+	}
+
  *Tested with JDK/JRE version*:
  ---------------------------------
  Java version "1.5.0_11"
  Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_11-b03)
  Java HotSpot(TM) Client VM (build 1.5.0_11-b03, mixed mode)
+
+ *Thanks*
+ ---------------------------------
+ [2] Peter Graves - creator of ABCL
 
 --------------------------------------
  ** ABCL Lisp Helpers **
@@ -95,6 +201,13 @@
 
  Debugger invoked on condition of type JAVA-EXCEPTION:
  #<JAVA-EXCEPTION {4654F6}>
+
+ [5] I defined some constants and parameters at the top of the code to reduce
+ some redundant code. 
+
+ (defconstant j-string "java.lang.String")
+ 
+ (defparameter *new-jmenu-item* (jconstructor j-jmenuitem j-string))
 
 |#
 ;;################################################
@@ -197,6 +310,9 @@
 		*default-path* 40))
 	
 (defun initTextAreaLayout (content-pane)
+  "Attach the content text area widget and other components
+  @content-pane (java.awt.Container) - Container we are adding widgets
+  @see java.awt.Container"
   (let* ((text-field (path-textfield))
 		 (contentArea (jnew *new-textarea* 25 60 ))
 		 (topPanel (jnew (jconstructor j-jpanel)))
@@ -229,9 +345,9 @@
   "Main entry point, create the jframe and attach the widget components then
  start the jframe thread"
   (format t "INFO: creating panel objects~%")
-  #+abcl
   (createReaderFrame))
 
+#+abcl
 (lisp-main)
 
 ;;################################################
