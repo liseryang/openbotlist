@@ -44,6 +44,30 @@
         <pathelement location="${build.classes.dir}" />
     </path>
 	
+	<!-- **************************************** -->
+	<!-- Runtime property defines, use with client/command-line/test applications -->
+	<!-- **************************************** --> 
+	<path id="default.runtime.classpath">		
+		<pathelement location="${xerces.jar}" />		
+		<pathelement location="${commons-dbcp.jar}" />
+		<pathelement location="${commons-pool.jar}" />
+		<pathelement location="${commons-codec.jar}" />
+		<pathelement location="${ehcache.jar}" />
+		<pathelement location="${cglib.jar}" />
+		<pathelement location="${mysql.jar}" />
+		<pathelement location="${asm.jar}" />
+		<pathelement location="${asm-attrs.jar}" />
+		<pathelement location="${jta.jar}" />
+		<pathelement location="${c3p0.jar}" />
+		
+		<pathelement location="${hibernate.jar}"/>
+		<pathelement location="${spring.jar}" />
+		<pathelement location="${logging.jar}" />
+		
+		<pathelement location="${servlet.jar}" />
+		 <pathelement location="${jsp-api.jar}" />
+	</path>	
+	
 	<path id="classpath.scala">
 		<pathelement location="${hibernate.jar}"/>
 		<pathelement location="${jta.jar}" />
