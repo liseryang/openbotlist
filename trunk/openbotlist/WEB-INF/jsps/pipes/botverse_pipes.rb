@@ -5,6 +5,10 @@
 ## create_listing.rb
 ##
 
+require 'java'
+include Java
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
 class PipeControllerText
   MAX_PIPE_LINKS = 50
   def initialize(controller)
@@ -19,9 +23,8 @@ class PipeControllerText
         
     query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     postListings = @daohelper.pageEntityLinks(query, 0, MAX_PIPE_LINKS)
-    return {
-      'listings' => postListings
-    }
+    map = BotListMapEntityLink.new
+    map['listings'] = postListings    
 
   end
     

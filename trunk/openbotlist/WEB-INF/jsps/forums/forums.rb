@@ -3,8 +3,14 @@
 ## 11/4/2006
 ##
 
-include_class 'org.spirit.util.BotListSessionManager'
-include_class 'org.spirit.contract.BotListContractManager'
+require 'java'
+include Java
+
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
+
+BotListSessionManager = org.spirit.util.BotListSessionManager
+BotListContractManager = org.spirit.contract.BotListContractManager
 
 class ListingsController
 		
@@ -17,8 +23,7 @@ class ListingsController
   def getModel(request)
            
     query = "from org.spirit.bean.impl.BotListForumGroup as forums"
-    forumListings = @daohelper.listForums(query)
-    
+    forumListings = @daohelper.listForums(query)    
     forumCountMap = {}
     forumListings.each do |n|
       commentsCount = @dao_entitylinks.getLinkCommentCountByForum(n.get_id)
@@ -29,11 +34,11 @@ class ListingsController
     # Audit the request
     @controller.auditLogPage(request, "forums.html")   
     userInfo = BotListContractManager::getUserInfo(request)
-    return {
-      'listings' => forumListings,
-      'userInfo' => userInfo,
-      'forumCountMap' => forumCountMap
-    }
+    map = BotListMapEntityLink.new
+    map['listings'] = forumListings
+    map['userInfo'] = userInfo
+    map['forumCountMap'] = forumCountMap
+    return map
   end
   
   def onSubmit(request, response, form, errors)

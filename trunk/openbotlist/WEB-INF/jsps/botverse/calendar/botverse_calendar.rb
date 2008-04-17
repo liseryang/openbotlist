@@ -5,20 +5,24 @@
 ## create_listing.rb
 ##
 
-include_class 'org.spirit.form.BotListPostListingForm' unless defined? BotListPostListingForm
-include_class 'org.spirit.form.BotListGenericPagingForm' unless defined? BotListGenericPagingForm
-include_class 'org.spirit.bean.impl.BotListPostListing' unless defined? BotListPostListing
-include_class 'org.spirit.bean.impl.BotListCityListing' unless defined? BotListCityListing
+require 'java'
+include Java
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
 
-include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
-include_class 'org.spirit.util.BotListCookieManager' unless defined? BotListCookieManager
-include_class 'org.spirit.util.BotListConsts' unless defined? BotListConsts
-include_class 'org.spirit.contract.BotListContractManager' unless defined? BotListContractManager
+import org.spirit.form.BotListPostListingForm unless defined? BotListPostListingForm
+import org.spirit.form.BotListGenericPagingForm unless defined? BotListGenericPagingForm
+import org.spirit.bean.impl.BotListPostListing unless defined? BotListPostListing
+import org.spirit.bean.impl.BotListCityListing unless defined? BotListCityListing
+
+import org.spirit.util.BotListSessionManager unless defined? BotListSessionManager
+import org.spirit.util.BotListCookieManager unless defined? BotListCookieManager
+import org.spirit.util.BotListConsts unless defined? BotListConsts
+import org.spirit.contract.BotListContractManager unless defined? BotListContractManager
  
-include_class 'org.apache.commons.logging.Log' unless defined? Log
-include_class 'org.apache.commons.logging.LogFactory' unless defined? LogFactory
+import org.apache.commons.logging.Log unless defined? Log
+import org.apache.commons.logging.LogFactory unless defined? LogFactory
 
-include_class('java.util.Calendar') { 'JCalendar' } unless defined? JCalendar
+JCalendar = java.util.Calendar unless defined? JCalendar
 
 class ViewListingController
 		
@@ -64,18 +68,16 @@ class ViewListingController
       statMap[strId] = linksOnDate
       statMapDates[strId] = curCal
       i += 1
-    end
-    
+    end    
     userInfo = BotListContractManager::getUserInfo(request)
-    return {
-      'userInfo' => userInfo,
-      'linksOnDates' => statMap,
-      'linksDates' => statMapDates,
-      'filterset' => filterset
-    }
+    map = BotListMapEntityLink.new
+    map['userInfo'] = userInfo
+    map['linksOnDates'] = statMap
+    map['linksDates'] = statMapDates
+    map['filterset'] = filterset
+    return map
   end
-  
-  #
+ 
   # Processed when the form is submitted, 
   # see the controller 'processFormSubmission()' method
   def onSubmit(request, response, form, errors)      
