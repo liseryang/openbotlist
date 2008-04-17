@@ -8,6 +8,7 @@ import org.scalacheck.Prop._
 
 object CheckUnitTestSuite extends Application {
   println("INFO: Unit Test Suite: running")
-  ExampleTests.runTests
+  //ExampleTests.runTests
+  TestHtmlEncode.runTests
   println("INFO: TestSuite: done")
 }
