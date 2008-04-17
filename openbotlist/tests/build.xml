@@ -19,9 +19,12 @@
     <!-- Main Clean -->
     <target name="clean">
         <delete dir="${build.dir}" />
+    	<delete dir="${basedir}/system/loadhttptest/data/html" />
+    	<delete dir="${basedir}/system/loadhttptest/data/logs" />
         <delete>
             <fileset dir="${basedir}/WEB-INF/classes">
                 <include name="**/*.class" />
+            	<include name="${basedir}/system/loadhttptest/cookies/*.dat" />
                 <exclude name="**/*.properties" />
                 <exclude name="**/*.xml" />
             </fileset>

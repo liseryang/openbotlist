@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2006 - Berlin Brown -->
-<project name="Botlist Test Framework (Unit Tests)" default="init" basedir=".">
+<project name="Botlist Test Framework (Unit Tests)" default="scala.compile.tests" basedir=".">
 	
 	<property file="build.properties" />	
 	<property name="home.base.dir" value="${basedir}/../.." />
@@ -12,7 +12,10 @@
 	<property name="build.classes.dir"	value="${basedir}/build/classes"/>
 	<property name="home.build.classes.dir"	value="${home.base.dir}/build/classes"/>	
 	<property name="scala.test_src.dir" value="${basedir}/scalacheck" />	
-		
+	
+	<property name="loadtest.dir"		value="${home.base.dir}/tests/system/loadhttptest" />
+	<property name="loadtest.src.dir"	value="${loadtest.dir}/src" />
+	
 	<!-- **************************************** -->
 	<!-- Include the classpath property settings (jar path locations) from the main project HOME top directory -->
 	<!-- **************************************** -->
@@ -77,6 +80,14 @@
 	<target name="compile" depends="prepare">
 		<ant antfile="${home.base.dir}/build.xml" target="compile" 
 				inheritAll="false" dir="${home.base.dir}" />
+		<javac deprecation="false"		
+				debug="true"
+				srcdir="${loadtest.src.dir}"
+				destdir="${build.classes.dir}"
+				target="1.5"
+				includes="**/*.java">
+			<classpath refid="classpath"/>
+		</javac>
 	</target>
 	
 	<!-- **************************************** -->
