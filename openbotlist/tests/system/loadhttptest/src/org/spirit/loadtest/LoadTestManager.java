@@ -259,8 +259,10 @@ public class LoadTestManager {
 	public static void log(long diff, String[] responseTuple, String url) {
 		String smsg = responseTuple[1].length() < MAX_LINE_MESSAGES ? responseTuple[1] : "";
 		String errmsg = responseTuple[2].length() < MAX_LINE_MESSAGES ? responseTuple[2] : "";
+		//*******************
 		// Create Tab Delimited File (url, no, response-time, status-code,
 		// message, errmsg)
+		//*******************
 		final StringBuffer logLine = new StringBuffer();
 		logLine.append("url=").append(url).append("\tno=");
 		logLine.append((getTestClient().getNumberOfRequests()) + "\trtime=" + diff + "\tcode=");		
@@ -270,13 +272,15 @@ public class LoadTestManager {
 		if (responseTuple.length >= LoadTestManager.MAX_LOG_RESULT_TUPLE) {
 			additional_msg = responseTuple[3];			
 		}
-		
-		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName() + additional_msg, url, (int) diff, responseTuple[0]);		
+		//*************************
+		// Add the information about this request for later use.
+		//*************************
+		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName(), url, (int) diff, responseTuple[0], additional_msg);		
 		try {
 			//*************************
 			// Also, add additional message to log output
 			//*************************
-			getTestClient().writeLogFile(logLine + "\r\n");
+			getTestClient().writeLogFile(logLine + "\n");
 		} catch (IOException e) {
 			System.out.println("ERR: error writing to logfile - " + getTestClient().getLogFile());
 			e.printStackTrace();
@@ -371,7 +375,6 @@ public class LoadTestManager {
 				try {
 					if (conn != null) {
 						String errContent = readInputStream(new BufferedReader(
-
 						new InputStreamReader(((HttpURLConnection) conn).getErrorStream())));
 						tuple[2] = errContent;
 					}

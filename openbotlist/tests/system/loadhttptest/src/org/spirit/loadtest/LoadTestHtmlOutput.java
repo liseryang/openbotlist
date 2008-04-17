@@ -8,6 +8,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -20,20 +22,14 @@ import java.util.Random;
  */
 public class LoadTestHtmlOutput {
 
-	public static final String HTML_STR_P = "<p>";
-	public static final String HTML_END_P = "</p>";
+	public static final String XML_STR_INFO = "<summ_info>";
+	public static final String XML_END_INFO = "</summ_info>";
 	
-	public static final String HTML_STR_DIV = "<div>";
-	public static final String HTML_END_DIV = "</div>";
-	
-	public static final String HTML_STR_TD = "<td>";
-	public static final String HTML_END_TD = "</td>";
-	
+	public static final String XML_STR_SECT = "<request_report>";
+	public static final String XML_END_SECT = "</request_report>";
+		
 	public static final String HTML_NEWLINE = "\n";
-	
-	public static final String HTML_STR_PRE = "<div style='width: 300px;'>";
-	public static final String HTML_END_PRE = "</div>\n";
-	
+			
 	private boolean enabled = false;
 	private String outputFile = "data/logs/loadtest_local";
 	private List dataList = new ArrayList();
@@ -59,13 +55,17 @@ public class LoadTestHtmlOutput {
 		outputFile = string;
 	}
 	
-	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode) {						
+	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode, final String additional_msg) {						
 		LoadTestRequest request = new LoadTestRequest();		
 		request.setRequestThreadName(threadName);
 		request.setRequestTime(requestTime);
 		request.setResponseCode(responseCode);
+		request.setAdditionalMsg(additional_msg);
 		request.setUrl(url);		
 		dataList.add(request);
+	}
+	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode) {						
+		this.addRequest(threadName, url, requestTime, responseCode, null); 				
 	}
 	public void clearRequest() {
 		if (this.dataList != null) {
@@ -73,38 +73,44 @@ public class LoadTestHtmlOutput {
 		}
 	}
 	
+	/**
+	 * Transform the collection of request objects and convert into the XML document.
+	 * @param sectionRequestTime
+	 */
 	public void buildRequestSection(final String sectionRequestTime) {		
-		StringBuffer sectBuf = new StringBuffer();
-		sectBuf.append(HTML_STR_DIV);
-		sectBuf.append("<table class='content'>").append("<tr>");		
-		sectBuf.append("<th>").append("Request URL").append("</th>");
-		sectBuf.append("<th>").append("thread").append("</th>");
-		sectBuf.append("<th>").append("time (ms)").append("</th>");
-		sectBuf.append("<th>").append("status").append("</th>");
-		sectBuf.append("</tr>");
+		StringBuffer sectBuf = new StringBuffer();	
+		sectBuf.append(XML_STR_SECT);
 		for (Iterator it = this.dataList.iterator(); it.hasNext(); ) {
 			LoadTestRequest request = (LoadTestRequest) it.next();
-			sectBuf.append("<tr>");
-			sectBuf.append("<td class='content'>" + request.getUrl() + HTML_END_TD);
-			sectBuf.append("<td class='content'>" + request.getRequestThreadName() + HTML_END_TD);
-			sectBuf.append("<td class='content'>" + request.getRequestTime() + HTML_END_TD);
+			sectBuf.append("<request_info>");
+			String enc_url = "";
+			/*
+			try {
+				enc_url = URLEncoder.encode(request.getUrl(), "UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				System.out.println("WARN: unable to encode URL: " + e.getMessage());
+			}*/
+			enc_url =  TidyUtilHtmlEncode.encode(request.getUrl(), "UTF-8");
+			sectBuf.append("<url class='content'>" + enc_url + "</url>");
+			sectBuf.append("<request_name class='content'>" + request.getRequestThreadName() + "</request_name>");
+			sectBuf.append("<request_time class='content'>" + request.getRequestTime() + "</request_time>");
 			String status_css = "content_good";
-			if (request.getResponseCode().equalsIgnoreCase("200"))
+			if (request.getResponseCode().equalsIgnoreCase("200")) {
 				status_css = "content_good";
-			else
+			} else {
 				status_css = "content_bad";
+			} // End of if - else
 			
-				sectBuf.append("<td class='" + status_css + "'>" + request.getResponseCode() + HTML_END_TD);
-			
-			sectBuf.append("</tr>" + HTML_NEWLINE);
-		}
-		sectBuf.append("</table>");
-		sectBuf.append(HTML_END_DIV + HTML_NEWLINE);
-		
-		sectBuf.append(HTML_STR_P);
-		sectBuf.append("<b>Section completed: " + sectionRequestTime + "</b>");
-		sectBuf.append(HTML_END_P);
-		
+			if ((request.getAdditionalMsg() != null) && (request.getAdditionalMsg().length() != 0)) {
+				sectBuf.append("<request_msg><![CDATA[" + TidyUtilHtmlEncode.encode(request.getAdditionalMsg()) + "]]></request_msg>");
+			}
+			sectBuf.append("<resp_code class='" + status_css + "'>" + request.getResponseCode() + "</resp_code>");			
+			sectBuf.append("</request_info>\n");
+		}				
+		sectBuf.append(XML_STR_INFO);
+		sectBuf.append("Section completed: " + sectionRequestTime);
+		sectBuf.append(XML_END_INFO);
+		sectBuf.append(XML_END_SECT);
 		sectionList.add(new LoadTestSection().setData(sectBuf.toString()));
 	}
 	
@@ -114,9 +120,9 @@ public class LoadTestHtmlOutput {
 		}
 		Collections.sort(this.sectionList, new DataSectionComp());
 		//String outfilename = this.getOutputFile() + "_" + (new Date()).getTime() + ".html";
-		String outfilename = this.getOutputFile() + ".html";
+		String outfilename = this.getOutputFile() + ".xml";
 		BufferedWriter out = null;
-		System.out.println("* writing HTML test report filename=" + outfilename);
+		System.out.println("INFO: writing HTML test report filename=" + outfilename);
 		
 		// Load the header and footer.
 		StringBuffer templateBufHeader = new StringBuffer();
@@ -132,13 +138,11 @@ public class LoadTestHtmlOutput {
 			out = new BufferedWriter(new FileWriter(outfilename, false));
 			// Write header
 			out.write(templateBufHeader.toString());
-			out.flush();
-			
+			out.flush();			
 			for (Iterator i = sectionList.iterator(); i.hasNext();) {            
 				LoadTestSection entry = (LoadTestSection) i.next();
 				out.write(entry.getData());
-			}
-			
+			}			
 			out.write(templateBufFooter.toString());
 			out.flush();
 
@@ -206,6 +210,7 @@ public class LoadTestHtmlOutput {
 		private String responseCode;
 		private String url;
 		private long createdOn;
+		private String additionalMsg = null;
 		
 		public LoadTestRequest() {
 			createdOn = System.currentTimeMillis();
@@ -252,15 +257,21 @@ public class LoadTestHtmlOutput {
 			return logLine;
 		}
 
+		public String getAdditionalMsg() {
+			return additionalMsg;
+		}
+
+		public void setAdditionalMsg(String additionalMsg) {
+			this.additionalMsg = additionalMsg;
+		}
+
 	}
-		
 	private class DataSectionComp implements Comparator {
 		public int compare (Object o1, Object o2) {
 			long diff = ((LoadTestSection)o1).getCreatedOn() - ((LoadTestSection)o2).getCreatedOn();
 		    return (int) diff;
 		}
-	}
-	
+	}	
 	//=====================================================
 	//
 	// Example Test Driver

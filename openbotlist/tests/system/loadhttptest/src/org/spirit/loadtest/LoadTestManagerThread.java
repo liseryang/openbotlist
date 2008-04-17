@@ -49,7 +49,7 @@ public class LoadTestManagerThread implements Runnable {
                 	 boolean is_valid = ((Boolean) validate_res[0]).booleanValue();
                 	 if (!is_valid) {
                 		 // Append the XML validate text to the response tuple, for printing to the HTML document.
-                		 additional_msg = LoadTestHtmlOutput.HTML_STR_PRE + validate_res[1] + LoadTestHtmlOutput.HTML_END_PRE; 
+                		 additional_msg = (String) validate_res[1]; 
                 	 }
                 }
                 responseTuple = additionalHeadersResTuple(responseTuple, additional_msg);
@@ -90,7 +90,7 @@ public class LoadTestManagerThread implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }    
+    }
     
     public void run() {
         if (this.getTestClient().isUseDataFile()) {
