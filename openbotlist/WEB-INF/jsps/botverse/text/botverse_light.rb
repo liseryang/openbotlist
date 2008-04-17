@@ -9,6 +9,8 @@
 require 'java'
 include Java
 
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
 class ViewLightController		
   def initialize(controller)
     @controller = controller
@@ -21,10 +23,9 @@ class ViewLightController
     @controller.auditLogPage(request, "botverse_light.html")        
     query = "from org.spirit.bean.impl.BotListEntityLinks as links order by links.id desc"
     links = @daohelper.pageEntityLinks(query, 0, 40)
-    return {
-      'listings' => links
-    }
-
+    map = BotListMapEntityLink.new
+    map['listings'] = links
+    return map
   end
    
   # Processed when the form is submitted, 
