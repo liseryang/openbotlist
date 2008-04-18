@@ -7,25 +7,32 @@ http://localhost:8080/botlist/spring/stats.html
 http://localhost:8080/botlist/spring/botverse/botverse.html
 http://localhost:8080/botlist/spring/botverse/botverse_submit.html
 http://localhost:8080/botlist/spring/botverse/calendar/botverse_calendar.html
-http://localhost:8080/botlist/spring/botverse/group/grouplinks.html?groupgenid=aaf9dfb546f650d5fa614156000info
-http://localhost:8080/botlist/spring/botverse/group/grouplinks.html?groupgenid=65ebdbd0e6a0a67c029000nsfw
 http://localhost:8080/botlist/spring/botverse/text/botverse_light.html
 http://localhost:8080/botlist/spring/botverse/text/botverse_text.html
+
+http://localhost:8080/botlist/spring/citylist.htm
 http://localhost:8080/botlist/spring/sections.html?city=1
-http://localhost:8080/botlist/spring/listings.html?viewid=1fb6674f66ff9e617ec1313978513096
 http://localhost:8080/botlist/spring/profile/login.html
 http://localhost:8080/botlist/spring/profile/register.html
 http://localhost:8080/botlist/spring/forums/forums.html
 http://localhost:8080/botlist/spring/botverse/botverse.html?filterset=mostrecent
-http://localhost:8080/botlist/spring/botverse/rover/botverse_rover.html
+http://localhost:8080/botlist/spring/forums/comments/topics.html
 http://localhost:8080/botlist/spring/stats.html
 
+http://localhost:8080/botlist/spring/search/search.html?querymode=enabled&query=
+http://localhost:8080/botlist/spring/pipes/pipes.html
 http://localhost:8080/botlist/spring/pipes/botverse_pipes.html
 http://localhost:8080/botlist/spring/pipes/search_pipes.html?querymode=enabled&query=bush
-http://localhost:8080/botlist/spring/pipes/global_pipes.html?querymode=enabled&query=python
 
 http://localhost:8080/botlist/spring/rss/listings_rss.html
 http://localhost:8080/botlist/spring/botverse/rss/botverse_rss.html
+
+http://localhost:8080/botlist/spring/help/source.html
+http://localhost:8080/botlist/spring/search/global.html
+http://localhost:8080/botlist/spring/help/help.html
+
+http://localhost:8080/botlist/spring/semantic/foaf/foaf.html
+http://localhost:8080/botlist/spring/semantic/foaf/foaf_submit.html
 
 #################################################
 # New scala oriented pipes system 
@@ -33,11 +40,11 @@ http://localhost:8080/botlist/spring/botverse/rss/botverse_rss.html
 http://localhost:8080/botlist/lift/pipes/types/remote_agent_req
 http://localhost:8080/botlist/lift/pipes/types/remote_agent_send
 
-script://./data/scripts/sequence_add_comment_bug.dat
-script://./data/scripts/sequence_botverse_addcom.dat
-script://./data/scripts/sequence_botverse_linkview.dat
-script://./data/scripts/sequence_botverse_submit.dat
-script://./data/scripts/sequence_forums_view.dat
+#script://./data/scripts/sequence_add_comment_bug.dat
+#script://./data/scripts/sequence_botverse_addcom.dat
+#script://./data/scripts/sequence_botverse_linkview.dat
+#script://./data/scripts/sequence_botverse_submit.dat
+#script://./data/scripts/sequence_forums_view.dat
 
 script://./data/scripts/loc_sequence_register_login.dat
 

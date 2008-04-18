@@ -123,6 +123,20 @@
 	</taglib>
 	
 	<!-- *************************************** -->
+	<!--  Handle error codes with the following page -->
+	<!-- *************************************** -->
+	<!-- 
+	<error-page> 
+		<error-code>404</error-code>
+		<location>/defaulterror.jsp</location>
+	</error-page>
+	<error-page> 
+		<error-code>500</error-code>
+		<location>/defaulterror.jsp</location>
+	</error-page>
+	 -->
+	
+	<!-- *************************************** -->
 	<!--  End of Web.xml  -->
 	<!-- *************************************** -->
 </web-app>

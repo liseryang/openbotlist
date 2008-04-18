@@ -90,7 +90,7 @@ public class LoadTestHtmlOutput {
 			} catch (UnsupportedEncodingException e) {
 				System.out.println("WARN: unable to encode URL: " + e.getMessage());
 			}*/
-			enc_url =  TidyUtilHtmlEncode.encode(request.getUrl(), "UTF-8");
+			enc_url =  TidyUtilHtmlEncode.encode(request.getUrl());
 			sectBuf.append("<url class='content'>" + enc_url + "</url>");
 			sectBuf.append("<request_name class='content'>" + request.getRequestThreadName() + "</request_name>");
 			sectBuf.append("<request_time class='content'>" + request.getRequestTime() + "</request_time>");

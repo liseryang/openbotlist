@@ -62,7 +62,14 @@
 	<property name="jsp-api.jar"			value="${home.base.dir}/servlet-lib/jsp-api.jar" />    
 	
 	<target name="init" description="Initialization">
-		<tstamp/>		
+		<tstamp/>
+		<echo>
+ Load Testing and Additional(Optional) Tests:
+ Key Targets:
+ ------------
+ 
+ run.loadtests.local - Run load test suite against the local server. 
+</echo>
 	</target>
 
 	<!-- Target: CLASSPATH -->
@@ -121,7 +128,7 @@
 	</path>
 
 	<!-- Target: Prepare -->
-	<target name="prepare">
+	<target name="prepare" depends="init">
 		<mkdir dir="${build.dir}"/>
 		<mkdir dir="${build.classes.dir}"/>
 	</target>

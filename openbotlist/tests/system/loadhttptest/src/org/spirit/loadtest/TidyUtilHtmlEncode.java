@@ -71,7 +71,8 @@ public class TidyUtilHtmlEncode {
 			"'", "&#039;",
 			"\\", "&#092;", 
 			"\u00a9", "&copy;", 
-			"\u00ae", "&reg;" 
+			"\u00ae", "&reg;"
+			
 	};
 
 	private static Hashtable entityTableEncode = null;
@@ -89,13 +90,13 @@ public class TidyUtilHtmlEncode {
 	 * Converts a String to HTML by converting all special characters to HTML-entities.
 	 */
 	public final static String encode(String s) {
-		return encode(s, "");
+		return encode(s, "", true);
 	}
 
 	/**
 	 * Converts a String to HTML by converting all special characters to HTML-entities.
 	 */
-	public final static String encode(String s, String cr) {
+	public final static String encode(final String s, final String cr, final boolean ignore_unicode) {
 		if (entityTableEncode == null) {
 			buildEntityTables();
 		}
@@ -115,10 +116,14 @@ public class TidyUtilHtmlEncode {
 				if (chEnc != null) {
 					sb.append(chEnc);
 				} else {
-					// Not 7 Bit use the unicode system
-					sb.append("&#");
-					sb.append(new Integer(ch).toString());
-					sb.append(';');
+					if (!ignore_unicode) {
+						// 	Not 7 Bit use the unicode system
+						sb.append("&#");
+						sb.append(new Integer(ch).toString());
+						sb.append(';');
+					} else {
+						sb.append(ch);
+					} // End of the if - else
 				}
 			}
 		}
