@@ -5,21 +5,23 @@
 ## create_listing.rb
 ##
 
-include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
-include_class 'org.spirit.util.BotListCookieManager' unless defined? BotListCookieManager
-include_class 'org.spirit.contract.BotListContractManager' unless defined? BotListContractManager
-include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
+require 'java'
+include Java
 
-class SectionController
-		
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
+BotListSessionManager = org.spirit.util.BotListSessionManager unless defined? BotListSessionManager
+BotListCookieManager = org.spirit.util.BotListCookieManager unless defined? BotListCookieManager
+BotListContractManager = org.spirit.contract.BotListContractManager unless defined? BotListContractManager
+KeywordProcessor = org.spirit.util.text.KeywordProcessor unless defined? KeywordProcessor
+
+class SectionController		
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.cityListingDao
     @daohelpersects = @controller.postSectionsDao
-  end    
-  
-  def getModel(request)
-  
+  end  
+  def getModel(request)  
     viewid = request.getParameter("city")
     if !viewid.nil? 
       newviewid = KeywordProcessor.filterAlphaNumeric(viewid)
@@ -43,11 +45,11 @@ class SectionController
     sections = @daohelpersects.listSections("from org.spirit.bean.impl.BotListPostSections", citybean)
 
     userInfo = BotListContractManager::getUserInfo(request)
-    return {
-      'city' => citybean,
-      'sections' => sections,
-      'userInfo' => userInfo
-    }
+    map = BotListMapEntityLink.new
+    map['city'] = citybean
+    map['sections'] = sections
+    map['userInfo'] = userInfo
+    return map
   end
    
   def onSubmit(request, response, form, errors)
