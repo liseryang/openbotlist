@@ -15,7 +15,16 @@ import org.xml.sax.InputSource;
  */
 public class LoadTestXMLValidate {
 	
-	/**	
+	/**
+	 * Hopefully, we can use a non-validating parser:	
+	 * "Will try to retrieve all entities defined in the DTD, but will cease processing the 
+	 * DTD content at the first entity it can't find, But this is not an error -- 
+	 * the parser simply makes available the XML data (and the names of any unresolved entities) to the application."
+	 * 
+	 * Also see:
+	 * 
+	 * http://www.ibm.com/developerworks/library/x-tipent.html
+	 * 
 	 * @param   url
 	 * @param   http_data
 	 * @return  Tuple:(err_flag:Boolean, String Data) 
@@ -24,13 +33,14 @@ public class LoadTestXMLValidate {
 		try {
 			if ((http_data == null) || (http_data.length() == 0)) {
 				throw new RuntimeException("Invalid HTTP data argument");
-			}
-			
+			}			
 			final DOMParser parser = new DOMParser();
-			parser.setFeature("http://xml.org/sax/features/validation", true);
+			parser.setEntityResolver(new EmptyExternalResolver());
+			// Enable or disable validate
+			parser.setFeature("http://xml.org/sax/features/validation", false);
 			parser.setProperty("http://apache.org/xml/properties/schema/external-noNamespaceSchemaLocation",
 							"memory.xsd");
-			LoadTestXMLDefaultHandler errors = new LoadTestXMLDefaultHandler();
+			LoadTestXMLDefaultHandler errors = new LoadTestXMLDefaultHandler(); 
 			parser.setErrorHandler(errors);
 			parser.parse(new InputSource(new StringReader(http_data)));
 			Object tuple [] =  { new Boolean(true), "" };

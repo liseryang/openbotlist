@@ -272,6 +272,7 @@ public class LoadTestManager {
 		if (responseTuple.length >= LoadTestManager.MAX_LOG_RESULT_TUPLE) {
 			additional_msg = responseTuple[3];			
 		}
+		
 		//*************************
 		// Add the information about this request for later use.
 		//*************************

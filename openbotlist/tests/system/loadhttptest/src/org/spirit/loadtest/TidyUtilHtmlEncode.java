@@ -90,7 +90,7 @@ public class TidyUtilHtmlEncode {
 	 * Converts a String to HTML by converting all special characters to HTML-entities.
 	 */
 	public final static String encode(String s) {
-		return encode(s, "", true);
+		return encode(s, "\n", true);
 	}
 
 	/**
@@ -110,6 +110,7 @@ public class TidyUtilHtmlEncode {
 			if ((ch >= 63 && ch <= 90) || (ch >= 97 && ch <= 122) || (ch == ' ')) {
 				sb.append(ch);
 			} else if (ch == '\n') {
+				// How to handle carriage returns
 				sb.append(cr);
 			} else {
 				String chEnc = encodeSingleChar(String.valueOf(ch));
