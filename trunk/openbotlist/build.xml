@@ -31,6 +31,16 @@
 	        <tstamp/>
 	        <echo message="Running with Tomcat Home=${tomcat.home}" />	
 			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
+			<echo>
+ Additional Targets and Usage:
+ -----------------
+ scala.compile - to compile the scala source, use this target.  
+                 To build the  complete release package, 
+                 you must compile this manually.
+ full.deploy -   Compile the source, including scala source.
+                 Deploy to the application server.
+
+</echo>
 	    	<fail unless="classpath.include">Error loading build_classpath.property file.  Make sure it exists.</fail>
 	</target>	
 	
@@ -51,6 +61,7 @@
             <compilerarg value="-Xlint" />
         </javac>
     </target>
+
 	
     <!-- **************************************** -->
     <!-- Add support for scala compiles, used with liftweb apps -->
@@ -61,7 +72,7 @@
     </taskdef>
 	
 	<!-- Target: Compile Scala Source -->
-	<target name="scala.compile" depends="prepare">
+	<target name="scala.compile" depends="compile">
 		<scalac srcdir="${scala.src.dir}" 
 				destdir="${build.classes.dir}" 
 		  		classpathref="classpath.scala" force="never">
@@ -70,7 +81,7 @@
 	</target>
 	
     <!-- Target: Build -->
-    <target name="package" depends="compile">
+    <target name="package" depends="prepare">
     </target>
       
     <!-- Target: Tomcat.deploy -->
@@ -85,6 +96,9 @@
         </copy>
         <!-- End of Target Tomcat Deploy -->
     </target>
+	
+	<target name="full.deploy" depends="package, compile, scala.compile">
+	</target>
 
     <!-- Jar/War the Web Archive File -->
     <!-- Note: using jar task because we are working out of a web-application -->
@@ -139,8 +153,14 @@
     		</fileset>
             <fileset dir="${basedir}/WEB-INF/classes">
                 <include name="**/*.class" />
+				<include name="**/*.log" />
                 <exclude name="**/*.properties" />
                 <exclude name="**/*.xml" />
+            </fileset>
+			<!-- Clean files against entire project.  NOTE: this can be a dangerous task -->
+			<fileset dir="${basedir}">
+				<include name="**/*.log" />
+                <include name="**/Thumbs.db" />
             </fileset>
         </delete>
     </target>

@@ -5,16 +5,16 @@
 <head>
  	<title><spring:message code="system.html.title"/></title>
  	
-	<meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" >
+	<meta name="verify-v1" content="5vYTM0GqfzX+H+qkXwFSztV8Y7vHygc6kxtGldxcc+8=" ></meta>
  	
-  	<META NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)">
- 	<META NAME="keywords" CONTENT="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb">
+  	<meta NAME="DESCRIPTION" CONTENT="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)"></meta>
+ 	<meta NAME="keywords" CONTENT="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb"></meta>
    
-  	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />">
-	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
-  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" > 
-  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" > 
-  	<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" > 
+  	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/rss/listings_rss.html" />"></link>
+	<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" ></link> 
   	
   	<style type="text/css">
 	 <%@include file="/WEB-INF/jsps/general/botverse_link_stat.jsp" %>	
@@ -23,7 +23,7 @@
 <body>
 		<div id="body_content_center">
 			<div style="border-bottom: 1px solid #816943;">
-				<img src="<c:url value="/company/images/building_orange_roof.jpg" />" alt="Botlist header logo">
+				<img src="<c:url value="/company/images/building_orange_roof.jpg" />" alt="Botlist header logo" />
  			</div>
 			<h1 class="bot_titlelogo">
 				[ Botlist Home ]
@@ -123,7 +123,7 @@
 									<table>
 									<tr>
 									<td>
-										<input name="query" size="16" />
+										<input name="query" size="16" value="" />
 									</td>
 									<td>
 										<input type="submit" value=" Search " />
@@ -135,7 +135,7 @@
 								<!-- End of Form -->
 								<div style="text-align: right; margin-top: 4px;">								
 									<a href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" class="index_img">
-										<img style="border: 0px solid #FFF;" src="<c:url value="/company/images/rss.gif" />" >
+										<img style="border: 0px solid #FFF;" src="<c:url value="/company/images/rss.gif" />" />
 									</a>
 								</div>
 						</td>
@@ -156,7 +156,7 @@
 					    <td align="right">
 					    	<%-- == Botlist Logo Image == --%>
 							<a href="<c:url value="/spring/botverse/botverse.html" />" class="index_img">
-						 		<img src="<c:url value="/company/images/BoxLogoVertical3.jpg" />" border="0" alt="Logo Vertical">
+						 		<img src="<c:url value="/company/images/BoxLogoVertical3.jpg" />" border="0" alt="Logo Vertical" />
 							</a>
 						</td>
 					</tr>						

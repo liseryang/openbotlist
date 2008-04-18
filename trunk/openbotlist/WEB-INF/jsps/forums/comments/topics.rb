@@ -3,15 +3,19 @@
 ## 11/4/2006
 ##
 
-include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
-include_class 'org.spirit.contract.BotListContractManager' unless defined? BotListContractManager
-include_class 'org.spirit.spring.validate.BotListGenericValidator' unless defined? BotListGenericValidator
+require 'java'
+include Java
 
-include_class 'org.apache.commons.logging.Log' unless defined? Log
-include_class 'org.apache.commons.logging.LogFactory' unless defined? LogFactory
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
 
-class ViewCommentsController
-		
+BotListSessionManager = org.spirit.util.BotListSessionManager unless defined? BotListSessionManager
+BotListContractManager = org.spirit.contract.BotListContractManager unless defined? BotListContractManager
+BotListGenericValidator = org.spirit.spring.validate.BotListGenericValidator unless defined? BotListGenericValidator
+
+Log = org.apache.commons.logging.Log unless defined? Log
+LogFactory = org.apache.commons.logging.LogFactory unless defined? LogFactory
+
+class ViewCommentsController		
   def initialize(controller)
     @controller = controller
     @daohelper = @controller.userCommentsDao
@@ -30,8 +34,7 @@ class ViewCommentsController
         err_str = "Invalid non lazy load of comment entity links"
         puts err_str
         @log.error(err_str)  
-      end
-      
+      end      
       # End of the for
     end
   end
@@ -44,10 +47,10 @@ class ViewCommentsController
     
     # Audit the request
     @controller.auditLogPage(request, "comments/topics.html")      
-    return {
-      'listings' => comments,
-      'userInfo' => userInfo
-    }
+    map = BotListMapEntityLink.new
+    map['listings'] = comments
+    map['userInfo'] = userInfo
+    return map
   end
    
   def onSubmit(request, response, form, errors)

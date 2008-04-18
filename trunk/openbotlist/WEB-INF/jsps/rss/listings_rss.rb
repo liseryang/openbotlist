@@ -3,6 +3,10 @@
 ## 11/4/2006
 ##
 
+require 'java'
+include Java
+import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
 class ListingsController
 		
   def initialize(controller)
@@ -18,12 +22,10 @@ class ListingsController
     
     # Audit the request
     @controller.auditLogPage(request, "listings.html")
-    return {
-      'listings' => postListings
-    }
-  end
- 
-  
+    map = BotListMapEntityLink.new
+    map['listings'] = postListings
+    return map
+  end   
   def onSubmit(request, response, form, errors)
     return form
   end

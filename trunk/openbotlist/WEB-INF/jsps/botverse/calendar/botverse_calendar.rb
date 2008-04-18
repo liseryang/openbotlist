@@ -7,6 +7,7 @@
 
 require 'java'
 include Java
+
 import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
 
 import org.spirit.form.BotListPostListingForm unless defined? BotListPostListingForm
@@ -40,15 +41,13 @@ class ViewListingController
   end
   
   # Generate the view
-  def getModel(request)
-    
+  def getModel(request)    
     mostrecent_mode = false
     filterset = request.getParameter("filterset")
     nextPage = getPageOffset(request)
     if not nextPage
       nextPage = 0
-    end
-    
+    end    
     if filterset == "mostrecent"
       mostrecent_mode = true
     end
@@ -58,8 +57,8 @@ class ViewListingController
 
     # For the calendar view, get stats for the last 7 days
     i = -6
-    statMap = {}
-    statMapDates = {}
+    statMap = BotListMapEntityLink.new
+    statMapDates = BotListMapEntityLink.new
     while i <= 0
       curCal = JCalendar::getInstance()
       curCal.add(JCalendar::DATE, i)      

@@ -25,7 +25,7 @@ class PipeControllerText
     postListings = @daohelper.pageEntityLinks(query, 0, MAX_PIPE_LINKS)
     map = BotListMapEntityLink.new
     map['listings'] = postListings    
-
+    return map
   end
     
   # Processed when the form is submitted, 
