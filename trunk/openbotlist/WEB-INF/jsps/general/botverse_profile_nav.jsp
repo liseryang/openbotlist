@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 	<%-- Add Welcome user message and login content (above content border line) --%>
 	<%-- Input includes userForm --%>
 	<div style="color: #888; width: 100%;">

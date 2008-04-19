@@ -1,17 +1,18 @@
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botverse - Interesting things online</title>
 
-<META NAME="DESCRIPTION" CONTENT="Botverse - Popular links all in the same place.  Discover new links and articles on the web.  Like Reddit or Digg but for adults.">
-<META NAME="keywords" CONTENT="botverse, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, atlanta technology, read it, dig it, reddit, digg, stumbleupon">
-<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" >
-<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" >
-<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" >
-<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" >
-<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" >
+<meta name="DESCRIPTION" content="Botverse - Popular links all in the same place.  Discover new links and articles on the web.  Like Reddit or Digg but for adults."></meta>
+<meta name="keywords" content="botverse, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, atlanta technology, read it, dig it, reddit, digg, stumbleupon"></meta>
+
+<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" ></link>
+<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/botlist_general2.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
 <style type="text/css">
  <%@include file="/WEB-INF/jsps/general/botverse_link_css.jsp" %>	
 </style>
@@ -86,7 +87,7 @@
 <div id="body_content_center">
 
  <div style="border-bottom: 1px solid #816943;">
-	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
+	<img src="<c:url value="/company/images/building_orange_roof.jpg" />" width="720" height="51" alt="Roof Logo" />
  </div>
 <h1 class="bot_titlelogo">Botverse - find interesting things online</h1>
 			
@@ -126,21 +127,19 @@
 		<!-- Begin Search Form -->
 		<div align="right">		  
 			<form method="get" action="<c:url value="/spring/search/search.html" />" name="newsearch">
-			<table class="botverse_search_wrapper">
-			<tr>
-			<td> 
-				<input name="query" size="26" />
-			</td>
-			<td>
-				<input type="submit" value=" Search " />
-			</td>
-			</tr>
-			</table>
-			<input type="hidden" name="querymode" value="enabled" />
-			</form>
-		  </div>
-		</div>
-		<!-- End of Form -->		
+				<table class="botverse_search_wrapper">
+				<tr>
+				<td> 
+					<input name="query" size="26" />
+				</td>
+				<td>
+					<input type="submit" value=" Search " />
+				</td>
+				</tr>
+				</table>
+				<input type="hidden" name="querymode" value="enabled" />
+			</form>		  
+		</div><!-- End of Form -->		
 	</td>
 	</tr>	
 	<tr>
@@ -159,9 +158,9 @@
 							</td>
 						</tr>
 						<tr>
-						<td>
+						<td >
 						 <%-- Additional Row to Hold Table Horizontal Media Section --%>
-						 <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+						 <table style="width: 100%; height: 100%;" cellspacing="0" cellpadding="0" border="0"><tr><td>
 							<c:forEach items="${command.mediaList}" var="curmedia" varStatus="status">							
 									<td>
 										<%-- Media Section is made up table (image, title) --%>
@@ -272,7 +271,7 @@
 					</td>
 					<td>
 					  <span class="linklist_comments">
-					     <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&commentsct=${fn:length(listing.listings)}" />">[!] comments (<c:out value="${fn:length(listing.listings)}" />)</a>
+					     <a class="linklist_comments" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}&amp;commentsct=${fn:length(listing.listings)}" />">[!] comments (<c:out value="${fn:length(listing.listings)}" />)</a>
 					  </span>						
 					  | <span class="linklist_comments"><a class="linklist_comments" href="<c:url value="/spring/botverse/linkaddcomment.html?viewid=${listing.id}" />">add comment</a></span>
 					  <%-- Print the UserName --%>
@@ -339,7 +338,6 @@
 </div>
 
 </div>
-
 </div>
 
 <%@include file="/WEB-INF/jsps/general/default_footer.jsp"%>

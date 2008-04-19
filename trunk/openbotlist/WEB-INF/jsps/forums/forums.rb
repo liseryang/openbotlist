@@ -6,7 +6,7 @@
 require 'java'
 include Java
 
-import org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+BotListMapEntityLink = org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
 
 
 BotListSessionManager = org.spirit.util.BotListSessionManager

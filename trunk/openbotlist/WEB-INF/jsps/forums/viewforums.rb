@@ -3,8 +3,11 @@
 ## 11/4/2006
 ##
 
-include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
-include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
+require 'java'
+include Java
+
+KeywordProcessor = org.spirit.util.text.KeywordProcessor unless defined? KeywordProcessor
+BotListSessionManager = org.spirit.util.BotListSessionManager unless defined? BotListSessionManager
 
 class ViewForumsController
   
@@ -54,10 +57,10 @@ class ViewForumsController
     
     # View forums audit
     @controller.auditLogPage(request, "viewforums.html")
-    return {
-      'listings' => comments,
-      'headline' => headline
-    }
+    map = BotListMapEntityLink.new
+    map['listings'] = comments
+    map['headline'] = headline
+    return map
   end
   
   def onSubmit(request, response, form, errors)

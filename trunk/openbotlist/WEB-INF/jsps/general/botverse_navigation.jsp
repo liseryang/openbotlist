@@ -12,7 +12,7 @@
 		</td>
 		<td align="right">
 			<a href="<c:url value="/spring/botverse/rss/botverse_rss.html" />" class="index_img" >
-				<img border="0" src="<c:url value="/company/images/rss.gif" />" />
+				<img border="0" src="<c:url value="/company/images/rss.gif" />" width="36" height="14" alt="rss logo" />
 			</a>
 		</td>
 	</tr>

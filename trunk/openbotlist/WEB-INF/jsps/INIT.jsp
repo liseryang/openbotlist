@@ -2,7 +2,7 @@
 <html>
 	<div class="padd">
 		<h1>RAD reinitialized</h1>
-		Global ruby variables have been reinitialized.
+		Global ruby variables have been reinitialized. (file is deprecated)
 	</div>
 </html>
 
