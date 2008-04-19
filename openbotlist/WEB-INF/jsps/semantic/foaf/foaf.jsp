@@ -1,6 +1,6 @@
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botlist - Friends of a Friend - find friends online</title>
@@ -22,7 +22,7 @@
 <div id="body_content_center">
 
  <div style="border-bottom: 1px solid #816943;">
-	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
+	<img src="<c:url value="/company/images/building_orange_roof.jpg" />" width="720" height="51" alt="Roof Logo" />
  </div>
 <h1 class="bot_titlelogo">Botverse - find interesting things online</h1>
 			

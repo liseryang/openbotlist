@@ -15,12 +15,17 @@
 ## SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ########################################
 
-include_class 'org.spirit.util.BotListSessionManager' unless defined? BotListSessionManager
-include_class 'org.spirit.util.text.KeywordProcessor' unless defined? KeywordProcessor
-include_class 'org.spirit.spring.validate.BotListGenericValidator' unless defined? BotListGenericValidator
+require 'java'
+include Java
 
-include_class 'org.apache.commons.logging.Log' unless defined? Log
-include_class 'org.apache.commons.logging.LogFactory' unless defined? LogFactory
+BotListMapEntityLink org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
+BotListSessionManager = org.spirit.util.BotListSessionManager unless defined? BotListSessionManager
+KeywordProcessor = org.spirit.util.text.KeywordProcessor unless defined? KeywordProcessor
+BotListGenericValidator = org.spirit.spring.validate.BotListGenericValidator unless defined? BotListGenericValidator
+
+Log = org.apache.commons.logging.Log unless defined? Log
+LogFactory = org.apache.commons.logging.LogFactory unless defined? LogFactory
 
 class ViewCommentsController	
   def initialize(controller)
@@ -45,7 +50,6 @@ class ViewCommentsController
     end    
     return link
   end
-
   def updateLinkViews(link)
     # Get the bean from the DB as opposed to off the session table
     sessionFactory = @daohelperlink.getSessionFactory()
@@ -72,10 +76,10 @@ class ViewCommentsController
     
     # Audit the request
     @controller.auditLogPage(request, "linkviewcomments.html?viewid=#{linkId}")    
-    return {
-      'listings' => comments,
-      'link' => link
-    }
+    map = BotListMapEntityLink.new  
+    map['listings'] = comments
+    map['link'] = link
+    return map
   end   
   def onSubmit(request, response, form, errors)
     @log.error("invalid request through submit form=linkviewcomments")

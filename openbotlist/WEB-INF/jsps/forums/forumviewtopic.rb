@@ -3,8 +3,13 @@
 ## 11/4/2006
 ##
 
-include_class 'org.spirit.util.BotListSessionManager'
-include_class 'org.spirit.contract.BotListContractManager'
+require 'java'
+include Java
+
+BotListMapEntityLink = org.spirit.form.ext.BotListMapEntityLink unless defined? BotListMapEntityLink
+
+BotListSessionManager = org.spirit.util.BotListSessionManager
+BotListContractManager = org.spirit.contract.BotListContractManager
 
 class ViewCommentsController
 		
@@ -28,10 +33,11 @@ class ViewCommentsController
     commentId = getViewLink(request)
     comment = @daohelper.readComment(commentId)
     userInfo = BotListContractManager::getUserInfo(request)
-    return {
-      'listing' => comment,
-      'userInfo' => userInfo
-    }
+
+    map = BotListMapEntityLink.new
+    map['listing'] = comment
+    map['userInfo'] = userInfo
+    return map
   end
    
   def onSubmit(request, response, form, errors)

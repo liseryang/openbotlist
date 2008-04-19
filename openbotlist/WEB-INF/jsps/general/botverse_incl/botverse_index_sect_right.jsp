@@ -59,7 +59,6 @@
 											<%-- ********************** --%>
 											<%-- End row production for botverse links --%>
 											<%-- ********************** --%>
-															
 										</c:forEach>							
 										</table>
 										<%-- ================= --%>
@@ -67,4 +66,4 @@
 										<%-- ================= --%>
 										<div style="margin-top: 6px; background-color: #f3f3f3; padding: 6px; width: 30%">
 											<a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
-										</div>									
+										</div>

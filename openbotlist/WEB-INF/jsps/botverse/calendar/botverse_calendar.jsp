@@ -1,19 +1,19 @@
+<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <%@ page contentType="text/html"%>
 <%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Botverse - Calendar View</title>
-<META NAME="DESCRIPTION" CONTENT="Botverse - Calendar View, popular links by date">
-<META NAME="keywords" CONTENT="date view, listing, bot, botlist, botlisting, bot's list, list, ads, advertising">
+<meta name="DESCRIPTION" content="Botverse - Calendar View, popular links by date"></meta>
+<meta name="keywords" content="date view, listing, bot, botlist, botlisting, bot's list, list, ads, advertising"></meta>
 
-<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
-<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" />
-<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" />
-<link href="<c:url value="/company/stylesheets/botlist_calendar.css" />" media="screen" rel="Stylesheet" type="text/css" />
+<link href="<c:url value="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
+<link href="<c:url value="/company/stylesheets/botlist_calendar.css" />" media="screen" rel="Stylesheet" type="text/css" ></link>
 
 <style type="text/css">
- <%@include file="/WEB-INF/jsps/general/botverse_link_css.jsp" %>	
+ <%@include file="/WEB-INF/jsps/general/botverse_link_css.jsp" %>
 </style>
 
 </head>
@@ -22,12 +22,11 @@
 <div id="body_content_center">
 
  <div style="border-bottom: 1px solid #816943;">
-	<img src="<c:url value="/company/images/building_orange_roof.jpg" />">
+	<img src="<c:url value="/company/images/building_orange_roof.jpg" />" width="720" height="51" alt="Roof Logo" />
  </div>
-<h1 class="bot_titlelogo">Botverse - Calendar View</h1>
-			
+<h1 class="bot_titlelogo">Botverse - Calendar View</h1>			
 			<%-- Navigation Header --%>
-			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>			
+			<%@include file="/WEB-INF/jsps/general/default_navigation.jsp" %>
 			<%-- End of Navigation Header --%>
 <div style="margin: 10px;">
 

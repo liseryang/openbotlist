@@ -1,4 +1,5 @@
 class RadApp
+  # File is deprecated
   def initializeApplication
     reinitApplication()
   end
