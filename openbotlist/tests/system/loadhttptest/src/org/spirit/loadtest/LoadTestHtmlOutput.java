@@ -32,6 +32,8 @@ public class LoadTestHtmlOutput {
 	private boolean enabled = false;
 	private int reportPass = 0;
 	private int reportFail = 0;
+	private int passValidXhtml = 0;
+	private int failValidXhtml = 0;
 	private String outputFile = "data/logs/loadtest_local";
 	
 	private final List dataList = new ArrayList();
@@ -55,27 +57,30 @@ public class LoadTestHtmlOutput {
 
 	public void setOutputFile(String string) {
 		outputFile = string;
-	}
-	
-	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode, final String additional_msg) {						
+	}	
+	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode, final String additional_msg, final boolean valid_xhtml) {						
 		LoadTestRequest request = new LoadTestRequest();		
 		request.setRequestThreadName(threadName);
 		request.setRequestTime(requestTime);
 		request.setResponseCode(responseCode);
 		request.setAdditionalMsg(additional_msg);
-		request.setUrl(url);
-		
+		request.setValidXhtml(valid_xhtml);
+		request.setUrl(url);		
 		// For later reporting set the report pass/fail statistics
 		if ("200".equals(responseCode)) {
 			this.inc_pass();
 		} else if ("500".equals(responseCode)) {
 			this.inc_fail();
 		}
-		
+		if (request.isValidXhtml()) {
+			this.inc_valid_xhtml();
+		} else {
+			this.inc_valid_xhtml_fail();
+		}
 		dataList.add(request);
 	}
 	public void addRequest(final String threadName, final String url, final int requestTime, final String responseCode) {						
-		this.addRequest(threadName, url, requestTime, responseCode, null); 				
+		this.addRequest(threadName, url, requestTime, responseCode, null, true); 				
 	}
 	public void clearRequest() {
 		if (this.dataList != null) {
@@ -86,12 +91,21 @@ public class LoadTestHtmlOutput {
 	private void resetReportPassFail() {
 		this.reportPass = 0;
 		this.reportFail = 0;
+		
+		this.passValidXhtml = 0;
+		this.failValidXhtml = 0;
 	}
 	public void inc_pass() {
 		this.reportPass++;
 	}
 	public void inc_fail() {
 		this.reportFail++;
+	}
+	public void inc_valid_xhtml() {
+		this.passValidXhtml++;
+	}
+	public void inc_valid_xhtml_fail() {
+		this.failValidXhtml++;
 	}
 	/**
 	 * Transform the collection of request objects and convert into the XML document.
@@ -125,6 +139,7 @@ public class LoadTestHtmlOutput {
 				sectBuf.append("<request_msg><![CDATA[" + TidyUtilHtmlEncode.encode(request.getAdditionalMsg()) + "]]></request_msg>");
 			}
 			sectBuf.append("<resp_code class='" + status_css + "'>" + request.getResponseCode() + "</resp_code>");			
+			sectBuf.append("<resp_valid_xml>" + request.isValidXhtml() + "</resp_valid_xml>");
 			sectBuf.append("</request_info>\n");
 		}				
 		sectBuf.append(XML_STR_INFO);
@@ -137,6 +152,7 @@ public class LoadTestHtmlOutput {
 	public String printPassFailSummary(final boolean verbose) {
 		final StringBuffer buf = new StringBuffer();
 		buf.append("INFO: [Test Statistics] tests passed: " + this.reportPass + " failed: " + this.reportFail);
+		buf.append("\nINFO: [Test Statistics] valid xhtml: " + this.passValidXhtml + " invalid xhtml: " + this.failValidXhtml);
 		if (verbose) {			
 			System.out.println(buf.toString());
 		}
@@ -241,6 +257,7 @@ public class LoadTestHtmlOutput {
 		private String url;
 		private long createdOn;
 		private String additionalMsg = null;
+		private boolean validXhtml = false;
 		
 		public LoadTestRequest() {
 			createdOn = System.currentTimeMillis();
@@ -294,6 +311,14 @@ public class LoadTestHtmlOutput {
 		public void setAdditionalMsg(String additionalMsg) {
 			this.additionalMsg = additionalMsg;
 		}
+
+		public boolean isValidXhtml() {
+			return validXhtml;
+		}
+
+		public void setValidXhtml(boolean validXhtml) {
+			this.validXhtml = validXhtml;
+		}		
 
 	}
 	private class DataSectionComp implements Comparator {

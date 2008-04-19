@@ -72,7 +72,7 @@ public class LoadTestManager {
 
 	public static String PROPERTY_FILE = "testclient.properties";
 
-	public static final int MAX_LOG_RESULT_TUPLE = 4;
+	public static final int MAX_LOG_RESULT_TUPLE = 5;
 	
 	public static final String SYSTEM_DIRS[] = { "data", "data/html", "data/logs", "cookies", "output" };
 
@@ -140,6 +140,13 @@ public class LoadTestManager {
 	 */
 	private static LoadTestManager client;
 
+	public static final boolean safeStringToBoolean(final String bstr) {
+		if ((bstr == null) || (bstr.length() == 0)) {
+			return false;
+		} else {
+			return Boolean.valueOf(bstr).booleanValue();
+		} // End of the If
+	}		
 	public static LoadTestManager getTestClient() {
 		if (client == null) {
 			client = new LoadTestManager();
@@ -269,14 +276,19 @@ public class LoadTestManager {
 		logLine.append(responseTuple[0]).append("\tmessage=[" + smsg + "]").append("\terrmsg=[" + errmsg + "]");
 		
 		String additional_msg = "";
+		boolean valid_xhtml = false;
+		//*****************************
+		// TODO: fix me
+		// Add additional response tuple values
+		//*****************************
 		if (responseTuple.length >= LoadTestManager.MAX_LOG_RESULT_TUPLE) {
-			additional_msg = responseTuple[3];			
-		}
-		
+			additional_msg = responseTuple[3];
+			valid_xhtml = LoadTestManager.safeStringToBoolean(responseTuple[4]);
+		}		
 		//*************************
 		// Add the information about this request for later use.
 		//*************************
-		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName(), url, (int) diff, responseTuple[0], additional_msg);		
+		getTestClient().getHtmlOutput().addRequest(Thread.currentThread().getName(), url, (int) diff, responseTuple[0], additional_msg, valid_xhtml);		
 		try {
 			//*************************
 			// Also, add additional message to log output
@@ -388,11 +400,9 @@ public class LoadTestManager {
 		}
 		return tuple;
 	}
-
 	// ===============================================================
 	// SSL Utilities
 	// ===============================================================
-
 	public static URL getSSLURL(final String urlString) throws IOException {
 		URL url = null;
 		try {
@@ -659,7 +669,6 @@ public class LoadTestManager {
 		System.out.println(" * Total Requests=" + getTestClient().getNumberOfRequests());
 		System.out.println(" * Total Time=" + getTestClient().getTotalTime());
 		System.out.println("-------------------------------");
-
 		log();
 		getTestClient().closeLogFile();
 		getTestClient().getHtmlOutput().writeOutput();
@@ -1120,7 +1129,6 @@ public class LoadTestManager {
 			launchThreads();
 		}
 		shutdown();
-	}
-	
+	}	
 }
 // End of File

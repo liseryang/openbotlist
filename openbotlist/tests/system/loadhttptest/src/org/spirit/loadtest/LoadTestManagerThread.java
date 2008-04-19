@@ -26,13 +26,14 @@ public class LoadTestManagerThread implements Runnable {
      * Length = 4
      * 4/18/2008
      */
-    private String [] additionalHeadersResTuple(final String [] responseTuple, final String additional_msg) {
+    private String [] additionalHeadersResTuple(final String [] responseTuple, final String additional_msg, final boolean valid_xhtml) {
     	final String [] new_copy = new String [LoadTestManager.MAX_LOG_RESULT_TUPLE];
     	final Object obj_src = responseTuple;
     	final Object obj_dest = new_copy;
     	// Only copy 3 elements
     	System.arraycopy(obj_src, 0, obj_dest, 0, 3);
-    	new_copy[3] = additional_msg;
+    	new_copy[3] = additional_msg;    	
+    	new_copy[4] = "" + valid_xhtml;
     	return new_copy;
     }
     private void loadSingleURL(String url) {
@@ -44,15 +45,16 @@ public class LoadTestManagerThread implements Runnable {
                 String [] responseTuple = LoadTestManager.connectURL(url, false);                
                 final String http_data = responseTuple[1];
                 String additional_msg = "";
+                boolean is_valid = false;
                 if (this.getTestClient().isValidateXHTMLEnabled()) {
                 	 final Object [] validate_res = LoadTestXMLValidate.validateXML(url, http_data);
-                	 boolean is_valid = ((Boolean) validate_res[0]).booleanValue();
+                	 is_valid = ((Boolean) validate_res[0]).booleanValue();
                 	 if (!is_valid) {
                 		 // Append the XML validate text to the response tuple, for printing to the HTML document.
                 		 additional_msg = (String) validate_res[1]; 
                 	 }
                 }
-                responseTuple = additionalHeadersResTuple(responseTuple, additional_msg);
+                responseTuple = additionalHeadersResTuple(responseTuple, additional_msg, is_valid);
                 long tEnd = System.currentTimeMillis();
                 long diff = tEnd - tStart;
                 System.out.println("single request time=" + diff + " ms -- from " + Thread.currentThread().getName());
