@@ -18,7 +18,6 @@ case $0 in
 		ABS_CONF=`dirname $ABS_APP_PATH`
 		;; 
 esac
-
 if [ -z "$JAVA_HOME"  ] ; then
  JAVA_HOME=/usr
 fi
@@ -26,25 +25,17 @@ fi
 JAVA=$JAVA_HOME/bin/java
 
 BOTBERT_HOME=$ABS_CONF
+# The botlist projects directory contains the system library (jruby)
+PROJECTS_HOME=`dirname $BOTBERT_HOME`
 TOPDIR=$BOTBERT_HOME
-DIR_PROPERTIES=$BOTBERT_HOME
 
-LIB1=$BOTBERT_HOME/lib/botlistloadtest.jar
-LIB2=$BOTBERT_HOME/lib/jruby.jar
-LIB3=$BOTBERT_HOME/lib/ibatis-2.3.0.677.jar
-LIB4=$BOTBERT_HOME/lib/botlistbeans.jar
-LIB5=$BOTBERT_HOME/lib/mysql-connector-java-5.0.3-bin.jar
+# Use the top project directory to include the correct CP config functions
+. ${TOPDIR}/bin/conf_remote_funcs.sh
 
-if [ $(uname -s | grep -c CYGWIN) -gt 0 ]; then
-	echo "WARN: running in CYGWIN environment"
-	DIR_PROPERTIES=`cygpath -wp $BOTBERT_HOME`
-fi
-
-LIN_CPBOTBERT=".:$LIB1:$LIB2:$LIB3:$LIB4:$LIB5"
 
 cd $BOTBERT_HOME
 
-APP_MAIN=org.jruby.Main
+echo "-----------------------"
 echo "running in directory=${BOTBERT_HOME}"
 echo $LIN_CPBOTBERT
 echo "-----------------------"
