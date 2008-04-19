@@ -99,10 +99,15 @@ table.sample th {
 	text-align: left; 
     padding: 2px; 
 }
-table.sample a {
+
+div#forum_listing_sect {
+	border: 1px solid #DDD; 
+	padding: 10px;
+}
+div#forum_listing_sect a {
 	color: green;
 	font-size: 9pt;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
 /** End of style for default table */
