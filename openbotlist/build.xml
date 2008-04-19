@@ -27,7 +27,7 @@
 	<!-- Import the classpath usage and variable names -->
 	<import file="${basedir}/build_classpath_paths.xml" />
 	
-	<target name="init" description="Initialization">
+	<target name="help" description="Initialization">
 	        <tstamp/>
 	        <echo message="Running with Tomcat Home=${tomcat.home}" />	
 			<echo message="Classpth properties, lib.dir=${classpath.lib.dir}" />
@@ -45,7 +45,7 @@
 	</target>	
 	
     <!-- Target: Prepare -->
-    <target name="prepare" depends="init">
+    <target name="prepare" depends="help">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${build.classes.dir}"/>
     </target>
@@ -97,7 +97,7 @@
         <!-- End of Target Tomcat Deploy -->
     </target>
 	
-	<target name="full.deploy" depends="package, compile, scala.compile">
+	<target name="full.deploy" depends="package, compile, scala.compile, tomcat.deploy">
 	</target>
 
     <!-- Jar/War the Web Archive File -->
