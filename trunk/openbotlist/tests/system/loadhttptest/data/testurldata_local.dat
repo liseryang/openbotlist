@@ -22,7 +22,6 @@ http://localhost:8080/botlist/spring/stats.html
 http://localhost:8080/botlist/spring/search/search.html?querymode=enabled&query=
 http://localhost:8080/botlist/spring/pipes/pipes.html
 http://localhost:8080/botlist/spring/pipes/botverse_pipes.html
-http://localhost:8080/botlist/spring/pipes/search_pipes.html?querymode=enabled&query=bush
 
 http://localhost:8080/botlist/spring/rss/listings_rss.html
 http://localhost:8080/botlist/spring/botverse/rss/botverse_rss.html
