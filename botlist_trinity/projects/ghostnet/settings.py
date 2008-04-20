@@ -5,7 +5,8 @@
 
 import os
 
-DEBUG = True
+# Editable: disable DEBUG for production
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 APPEND_SLASH = False
@@ -24,7 +25,7 @@ USE_I18N = True
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/company/'
 
 # You really should fill this in for your application!
 # see http://www.djangoproject.com/documentation/settings/#secret-key
