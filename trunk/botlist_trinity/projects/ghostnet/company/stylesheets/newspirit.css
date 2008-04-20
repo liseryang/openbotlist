@@ -53,7 +53,7 @@ h1.bot_titlelogo {
 	border-bottom: 2px solid #816943;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	background-image: url(/botlist/company/images/grey_gradient_small.jpeg);
+	background-image: url(/company/images/grey_gradient_small.jpeg);
 	background-repeat: repeat-x;
 }
 
@@ -102,7 +102,7 @@ A.console:hover {
 	border-top: 1px solid #816943;
 	color: #666;
 	font-size: 9pt;
-	background-image: url(/botlist/company/images/grey_gradient_more.jpeg);
+	background-image: url(/company/images/grey_gradient_more.jpeg);
 	background-repeat: repeat-x; 
 }
 
