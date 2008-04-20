@@ -1,23 +1,127 @@
-<html>
-  <head>
-    <title>Guest book</title>
-  </head>
-  <body>
-    {% if posts %}
-      {% for post in posts %}
-        {% if post.author %}
-          <em>{{ post.author.nickname }}</em> wrote:<br/>
-        {% else %}
-          <em>An anonymous person</em> wrote:<br/>
-        {% endif %}
-        {{ post.message }}<br/><br/>
-      {% endfor %}
-    {% endif %}
-    <form action="/sign" method="post">
-      <table>
-        {{ form.as_table }}
-      </table>
-      <div><input type="submit" value="Sign Guestbook"></div>
-    </form>
-  </body>
-</html>
+{% extends "ghostnet/index_base_elems.html" %}
+
+{% block full_body_content %}
+<!-- Table of Data Grid and Image -->
+				<table width="100%" >				
+				<tr>
+				<td valign="top" align="left">
+					{# ==== Next Set of Data, Recent Links ==== #}
+					<div style="margin-left: 4px;">
+						<table width="100%">
+						<tr>
+							<td>
+								<span style="background-color: #e8e8e8; padding: 4px; text-align: left;">&nbsp;most recent updates:</span>							
+								&nbsp;/ <a href="/spring/botverse/botverse.html?filterset=mostrecent" class="linklist_botnav">view more</a> 
+									/ <a href="/spring/botverse/botverse_submit.html" class="linklist_botnav">submit</a>
+								&nbsp;&nbsp;<span style="color: #555;"><i>(${linkCount} entries)</i></span>								
+								{# Banner Section #}
+								<c:choose>
+									<c:when test="${headline != null}" >
+									  <div style="width: 80%;">
+										<div style="color: #444; font-size: 14pt; background-color: #e7f0f1; padding: 6px;">
+										  ${headline}
+										</div>
+									 </div>
+									</c:when>
+								</c:choose>
+								{# End of Banner Section #}																		
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+									{# ================= #}
+									{# == 2/2/2008; Two column system, first set of links on left == #}
+									{# == TODO: figure out cleaner approach with jsp/struts includes  #}
+									{# ================= #}
+									<div id="two_col_left_links">
+										<%@include file="/WEB-INF/jsps/general/botverse_incl/botverse_index_sect.jsp" %>	
+									</div>
+									<div id="two_col_right_links">
+										<%@include file="/WEB-INF/jsps/general/botverse_incl/botverse_index_sect_right.jsp" %>	
+									</div>
+									{# (end) ================= #}
+							</td>							
+						</tr>
+						</table>
+					</div>
+					{# ==== End Next Set of Data, Recent Links ==== #}					
+				</td>
+				<td valign="top" align="right">										
+					<!-- table just for search -->
+					<div class="home_search_wrapper">
+						<table class="sample" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>
+								&nbsp;Search
+							</th>						
+						</tr>
+						<tr>
+						<td>
+								<!-- Begin Search Form -->
+								<form method="get" action="/spring/search/search.html">
+									<table>
+									<tbody>
+										<tr>
+										<td>
+											<input name="query" size="16" value="" />
+										</td>
+										<td>
+											<input type="submit" value=" Search " />
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<input type="hidden" name="querymode" value="enabled" />
+								</form>
+								<!-- End of Form -->
+								<div style="text-align: right; margin-top: 4px;">								
+									<a href="/spring/botverse/rss/botverse_rss.html" class="index_img">
+										<img style="border: 0px solid #FFF;" src="/company/images/rss.gif" width="36" height="15" alt="rss" />
+									</a>
+								</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					<!-- End of Table for search -->					
+					{# ============================== #}
+					{# New table for botverse image / media feeds / hot topics #}
+					{# ============================== #}
+					<table border="0">
+					<tr>
+						<td style="width: 100%" rowspan="2" valign="top">
+							{# ============================== #}
+							{# Hot Topic Section (deprecated) #}
+							{# ============================== #}							
+						</td>
+					    <td align="right">
+					    	{# == Botlist Logo Image == #}
+							<a href="/spring/botverse/botverse.html" class="index_img">
+						 		<img src="/company/images/BoxLogoVertical3.jpg" border="0" alt="Logo Vertical" width="130" height="104" />
+							</a>
+						</td>
+					</tr>						
+					<tr>
+						<td valign="top">
+						{# ============================== #}
+						{# End of Display Media table #}
+						{# ============================== #}					
+						</td>
+						</tr>
+						{# Table containg media feeds / botlist image #}
+					</table>			
+					{# Right Section for media feeds / rss link, etc #}					
+				</td>
+				</tr>				
+				{# Header Content #}	
+				<tr>
+					<td colspan="2" align="right">
+						<div style="text-align: right">
+						<h2 class="bot_splashinfo">
+							Botlist contains fresh, user driven content.
+						</h2>
+						</div>										
+					</td>
+				</tr> 				
+				</table> {# End of Header Content #}
+{% endblock %}
