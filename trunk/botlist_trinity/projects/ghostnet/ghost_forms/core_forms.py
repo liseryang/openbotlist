@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#
+# Copyright 2008 Berlin Brown - botnode.com.
 
 entity_links
 
