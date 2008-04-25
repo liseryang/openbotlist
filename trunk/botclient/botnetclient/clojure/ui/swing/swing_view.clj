@@ -21,24 +21,14 @@
 (def *default-path* "file://./latin_text.txt")
 (def *win-look-feel* "com.sun.java.swing.plaf.windows.WindowsLookAndFeel")
 
-(import '(java.awt Component))
-(import '(java.awt Container))
-(import '(java.awt LayoutManager))
-(import '(java.awt BorderLayout))
-(import '(java.awt.event ActionEvent))
-(import '(javax.swing AbstractAction))
-(import '(javax.swing BoxLayout))
-(import '(javax.swing JButton))
-(import '(javax.swing JFrame))
-(import '(javax.swing JMenu))
-(import '(javax.swing JMenuBar))
-(import '(javax.swing JMenuItem))
-(import '(javax.swing JPanel))
-(import '(javax.swing JScrollPane))
-(import '(javax.swing JTextArea))
-(import '(javax.swing JTextField))
-(import '(javax.swing ScrollPaneConstants))
-(import '(javax.swing UIManager))
+(import '(java.awt Component
+				   Container LayoutManager BorderLayout))
+(import '(java.awt.event ActionEvent ActionListener))
+(import '(javax.swing
+		  AbstractAction BoxLayout JButton JFrame JMenu
+		  JMenuBar JMenuItem JPanel
+		  JScrollPane JTextArea JTextField 
+		  ScrollPaneConstants UIManager))
 
 ;;----------------------------
 ;; Function implementations
@@ -82,20 +72,20 @@
 	(. fileMenu (add openMenuItem))
 	(. fileMenu (add exitMenuItem))
 	(. bar (add fileMenu))
-	(. jframe (setJMenuBar bar))))
+	(. jframe (setJMenuBar bar))
 	;;---------------------
 	;; Attach the listeners
 	;;---------------------
-	;;(. exitMenuItem
-	 ;;  (addActionListener
-		;;(implement [ActionListener]
-		  ;;(actionPerformed [evt]
-			;;			   (println "INFO: Exiting")
-				;;		   (exit)))))))
+	(. exitMenuItem
+	   (addActionListener
+		(proxy [ActionListener] []
+			   (actionPerformed [evt]
+								(println "INFO: Exiting")
+								(exit)))))))
 
 (defn init-swing [jframe]
   ;; Define the frame properties. Add the button panel and menu"
-  (setNativeLookUI)
+  ;;(setNativeLookUI)
   (initTextAreaLayout (. jframe getContentPane))
   (initMenus jframe))
 
