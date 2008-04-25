@@ -21,33 +21,48 @@
  *Full Overview*
  ---------------
  I always have trouble finding the right tool to create simple, throw-away
- UIs.  I created this code to launch a set of perl test scripts.  I needed basic
- menu-item/button action handlers and a text-area to view and/or parse the incoming
- text that would have normally been piped to standard output.
+ UIs.  I created this code to launch a set of perl test scripts.  
+ I needed basic menu-item/button action handlers and a text-area 
+ to view and/or parse the incoming text that would have normally 
+ been piped to standard output.
 
- I ended up choosing common-lisp as opposed to python or ruby because the lisp syntax is 
- just as light, and powerful a general purpose language; it is perfectly suited for my task.  
- I commonly use emacs, so I am already equipped with an editor.  I decided to use Swing and ABCL for the 
- UI toolkit, and for no real particular reason.  If I can create this UI using swing running on the JVM, 
- it will be 100 times easier using another toolkit.  Plus, swing and the jvm is reliatively
- portable.  In the future, I hope to convert this to a more portable MVC architecture.
- This Swing widget creation code could operate as the view for a larger system and then I could
+ I ended up choosing common-lisp as opposed to python or
+ ruby because the lisp syntax is 
+ just as light, and powerful a general purpose language; 
+ it is perfectly suited for my task.  
+ I commonly use emacs, so I am already equipped with an editor.  
+ I decided to use Swing and ABCL for the 
+ UI toolkit, and for no real particular reason.  If I can 
+ create this UI using swing running on the JVM, 
+ it will be 100 times easier using another toolkit.  Plus, 
+ swing and the jvm is reliatively
+ portable.  In the future, I hope to convert this to a more 
+ portable MVC architecture.
+ This Swing widget creation code could operate as the view 
+ for a larger system and then I could
  easily switch with another lisp gui toolkit library.
 
  *Setup and Environment*
  -----------------------
- ABCL runs like any other java application.  Once, you compile the single jar and resource
- bundled  *.cls lisp binary files, a script is available that you use to launch the ABCL main class:
+ ABCL runs like any other java application.  Once, you compile 
+ the single jar and resource
+ bundled  *.cls lisp binary files, a script is available 
+ that you use to launch the ABCL main class:
  
  org.armedbear.lisp.Main
 
- You need a working java runtime and JDK (preferablly Sun's jre/jdk 1.5 or greater), 
- a common lisp implementation (e.g. CMUCL, SBCL, or CLISP) and the ABCL package.
+ You need a working java runtime and JDK 
+ (preferablly Sun's jre/jdk 1.5 or greater), 
+ a common lisp implementation (e.g. CMUCL, SBCL, or CLISP) 
+ and the ABCL package.
  Download the latest ABCL from sourceforge [1] http://armedbear.org/abcl.html 
- Any of the common lisp implemenations will work.  In the past, I have compiled 
- ABCL on win32 cygwin with clisp and Ubuntu Linux with SBCL.  I didn't 
- experience any issues.  You may have some trouble configuring the customization
- file to point to your JDK.  I had to modify the script and just removed the operating
+ Any of the common lisp implemenations will work.  
+ In the past, I have compiled 
+ ABCL on win32 cygwin with clisp and Ubuntu Linux with SBCL.  
+ I didn't experience any issues.  You may have some 
+ trouble configuring the customization
+ file to point to your JDK.  I had to modify the script 
+ and just removed the operating
  system detect code.
 
  I added this to the buttom of the ABCL customizations.lisp file 
@@ -69,7 +84,7 @@
  Launch the ABCL startup script:
  $$$ abcl.bat
  
-c:\projects\tools\home\projects\projects_ecl\botclient\botnetclient\lisp\ui\swin
+c:\botclient\botnetclient\lisp\ui\swin
 g>org.armedbear.lisp.Main
 Armed Bear Common Lisp 0.0.10 (built Tue Apr 8 2008 12:43:18 -0500)
 Java 1.5.0_11 Sun Microsystems Inc.
@@ -84,12 +99,14 @@ CL-USER(1): (load "swing_example.lisp")
  ----------------------- 
  This code can be a little hard to follow.  There is a lot of typing needed
  to setup and instantiate the java classes or access the java fields.
- So, I suggest you use lisp syntactic sugar to beautify and cleanup the example
+ So, I suggest you use lisp syntactic sugar to 
+ beautify and cleanup the example
  and remember to send me your patches.
 
  *Useful tests from the ABCL java test suite*
  -----------------------
- [a] Example to create an instance of a java object with the String constructor
+ [a] Example to create an instance of a java object 
+ with the String constructor
  -------------------
  (deftest jnew.1
   (let ((constructor (jconstructor "java.lang.String" "java.lang.String")))
@@ -126,7 +143,8 @@ CL-USER(1): (load "swing_example.lisp")
 
  *Synonymous java code (see the lisp function initTextAreaLayout)*:
  ---------------------------------
- I created a 100% java skeleton version to see how to transform that code to lisp.  Here is
+ I created a 100% java skeleton version to see how to 
+ transform that code to lisp.  Here is
  some of the java source.
 
  import java.awt.BorderLayout;
@@ -193,11 +211,14 @@ CL-USER(1): (load "swing_example.lisp")
 
  JTextField() / JTextField(String text, int columns)
  JPanel()
- JScrollPane() / JScrollPane(Component view) / JScrollPane(Component view, int vsbPolicy, int hsbPolicy)
+ JScrollPane() 
+  / JScrollPane(Component view) / 
+    JScrollPane(Component view, int vsbPolicy, int hsbPolicy)
 
  *Notes*
  [4] ABCL is not forgiving with passing the wrong type to a java method.  Make
- sure the right type is passed to the right argument.  ABCL returns generic errors:
+ sure the right type is passed to the right argument.  
+ ABCL returns generic errors:
 
  Debugger invoked on condition of type JAVA-EXCEPTION:
  #<JAVA-EXCEPTION {4654F6}>
@@ -322,7 +343,8 @@ CL-USER(1): (load "swing_example.lisp")
 	(format t "INFO: content-pane obj:= [ ~a | ~a ]~%" content-pane topPanel)
 	(jcall *method-set-layout* topPanel
 		   (new-box-layout topPanel *box-y-axis*))
-	;; Add TO the top panel; in java this will look like: topPanel.add(pathField)
+	;; Add TO the top panel; in java this will look 
+    ;; like: topPanel.add(pathField)
 	(jcall *method-jpanel-add* topPanel text-field)
 	(jcall *method-set-layout* content-pane (new-borderlayout))
 	(jcall *method-container-add-2* content-pane topPanel *bl-north*)
