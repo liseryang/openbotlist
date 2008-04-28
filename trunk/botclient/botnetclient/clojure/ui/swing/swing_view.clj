@@ -15,15 +15,14 @@
 (in-ns 'swing-view)
 (clojure/refer 'clojure)
 
-;;----------------------------
-;; ** Java Class String Constant Definitions **
-;;----------------------------
-(def *default-path* "file://./latin_text.txt")
-(def *win-look-feel* "com.sun.java.swing.plaf.windows.WindowsLookAndFeel")
 
-(import '(java.awt Component
+(import '(java.io IOException PrintStream
+				  OutputStream))
+(import '(java.awt Component Color Font
 				   Container LayoutManager BorderLayout))
-(import '(java.awt.event ActionEvent ActionListener))
+(import '(java.awt.event ActionEvent 
+						 KeyAdapter
+						 ActionListener))
 (import '(javax.swing
 		  AbstractAction BoxLayout JButton JFrame JMenu
 		  JMenuBar JMenuItem JPanel
@@ -31,17 +30,63 @@
 		  ScrollPaneConstants UIManager))
 
 ;;----------------------------
+;; ** Java Class String Constant Definitions **
+;;----------------------------
+
+(def *cmd-prompt* ">>>")
+
+(def *default-path* "file://./latin_text.txt")
+(def *win-look-feel* "com.sun.java.swing.plaf.windows.WindowsLookAndFeel")
+
+(def *command-buffer* (new StringBuffer))
+(def contentArea (new JTextArea 25 60))
+
+;;----------------------------
+;; Class implementations
+;;----------------------------
+(defn textarea-stream-class [textarea]
+  (proxy [OutputStream] []
+		 (write [data]
+				(. textarea (append "!!!")))))
+
+(defn init-textarea-stream [textarea]
+  (let [out (new PrintStream (textarea-stream-class textarea))]	
+	;; Redirect standard output stream to the TextAreaOutputStream
+	(. System (setOut out))
+	;; Redirect standard error stream to the TextAreaOutputStream
+	(. System (setErr out))))
+
+;;----------------------------
 ;; Function implementations
 ;;----------------------------
 (defn exit []
   (. System (exit 0)))
 
+;;(defn j-println [str]
+;;  (let [sys-out (. System out)]
+;;	(. sys-out (println str))))
+
 (defn path-textfield []
   (new JTextField *default-path* 40))
-   
+
+(defn textarea-font [textarea]
+  (let [font (new Font "Courier New" 
+				  (. Font PLAIN) 14)]
+	(. textarea (setFont font))))
+
+(defn prompt-key-listener []
+  (proxy [KeyAdapter] []
+		 (keyTyped [evt]
+				   (let [c (. evt getKeyChar)]
+					 (. *command-buffer* (append c))
+					 (when (= c \newline)
+					   (. contentArea 
+						  (append (. *command-buffer* (toString)))))
+					   (println "sdF"))					 
+					 )))
+
 (defn initTextAreaLayout [content-pane]
   (let [text-field (path-textfield)
-				   contentArea (new JTextArea 25 60)
 				   topPanel (new JPanel)
 				   buttonPanel (new JPanel)
 				   scrollPane (new JScrollPane contentArea 
@@ -49,7 +94,10 @@
 								   (. ScrollPaneConstants HORIZONTAL_SCROLLBAR_ALWAYS))]
 	(println "INFO: content-pane obj:= " content-pane " |" topPanel)
 	(println "INFO: text-field:=" text-field)
-	(println "-----------------------------")
+	;; Associate the content area with the output stream
+	(textarea-font contentArea)
+	(. contentArea (addKeyListener (prompt-key-listener)))
+	(. contentArea (append *cmd-prompt*))
 	(. topPanel (setLayout 
 				 (new BoxLayout topPanel (. BoxLayout Y_AXIS))))
 	;; Add TO the top panel; in java this will look like: topPanel.add(pathField)
@@ -92,9 +140,12 @@
 (defn createReaderFrame []
   ;; Create the simple reader frame
   (let [simpleFrame (new JFrame "Swing View Client")]
-		  (init-swing simpleFrame)
-		  (. simpleFrame (pack))
-		  (. simpleFrame (setVisible true))))
+	(. simpleFrame 
+	   (setDefaultCloseOperation (. JFrame EXIT_ON_CLOSE)))
+	(init-swing simpleFrame)
+	(. simpleFrame (setLocation 100 100))
+	(. simpleFrame (pack))
+	(. simpleFrame (setVisible true))))
 
 (defn lisp-main []
   ;; Main entry point, create the jframe and attach the widget components then
@@ -103,8 +154,8 @@
   (createReaderFrame))
 
 (lisp-main)
-(. Thread (sleep 20000))
-(println "INFO: exiting.")
+;; Lock the thread on this file, to wait until the frame is closed.
+(let [o (new Object)] (locking o (. o (wait))))
 
 ;;################################################
 ;; End of Script
