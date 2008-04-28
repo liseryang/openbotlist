@@ -17,6 +17,6 @@ SED   = $(shell which sed)
 all: clean
 
 clean:
-	-rm -Rvf *.pyc
+	find . -name '*.pyc' -exec rm -vf {} \;
 
 # End of the file 
