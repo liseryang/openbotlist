@@ -5,123 +5,99 @@
 from google.appengine.ext import db
 
 class EntityLinks(db.Model):
-  author = db.UserProperty()
-  message = db.StringProperty(multiline=True, required=True)
-  date = db.DateTimeProperty(auto_now_add=True)
-
-  id = db.IntegerProperty()
-  main_url = db.StringProperty(required=True)
-  url_title = db.StringProperty(required=True)
-  url_description = db.StringProperty(required=True)
+  mainUrl = db.StringProperty(required=True)
+  urlTitle = db.StringProperty(required=True)
+  urlDescription = db.StringProperty(required=True)
   keywords = db.StringProperty(required=True)
-  views int(11) = db.IntegerProperty(required=True)
-  created_on datetime    NOT NULL default '0000-00-00 00:00:00',
-  rating int(11)         NOT NULL default '0',
-  user_id int(11) = db.IntegerProperty(required=True)
-  full_name = db.UserProperty()
+  # This is useful for storing a "created" date and time for a model instance.
+  createdOn = db.DateTimeProperty(auto_now_add=True)
+  # This is useful for tracking a "last modified" date and time for a model instance.
+  updatedOn = db.DateTimeProperty(auto_now=True)
+  fullName = db.UserProperty()
   hostname = db.StringProperty(required=True)
-  process_count = db.IntegerProperty(required=True)
-  updated_on             datetime default '0000-00-00 00:00:00',
-  link_type = db.StringProperty(required=True)
-  bot_rating             decimal(5,2) default '0.00',
-  generated_obj_id = db.StringProperty(required=True)
-  user_up_votes = db.IntegerProperty(required=True)
-  user_down_votes= db.IntegerProperty(required=True)
-  links_ct= db.IntegerProperty(required=True)
-  inbound_link_ct= db.IntegerProperty(required=True)
-  outbound_links_ct= db.IntegerProperty(required=True)
-  image_ct= db.IntegerProperty(required=True)
-  meta_descr_len = db.IntegerProperty(required=True)
-  meta_keywords_len = db.IntegerProperty(required=True)
-  meta_descr_wct = db.IntegerProperty(required=True)
-  meta_keywords_wct= db.IntegerProperty(required=True)
-  geo_locations_ct = db.IntegerProperty(required=True)
-  geo_locations_found = db.StringProperty(required=True)
-  document_size = db.StringProperty(required=True)
-  request_time  = db.StringProperty(required=True)
-  object_id_status  = db.StringProperty(required=True)
-  para_tag_ct = db.StringProperty(required=True)
-    
-class ActiveMediaFeeds(db.Model):
- message = db.StringProperty(multiline=True, required=True)
-date = db.DateTimeProperty(auto_now_add=True)
-  id           int(11) NOT NULL auto_increment,
-  display_type char(1) NOT NULL default 'N',
-  created_on   datetime NOT NULL default '0000-00-00 00:00:00',
-
-
-class MediaFees(db.Model):
-  id int(11)       NOT NULL auto_increment,
-  image_filename   varchar(255) NOT NULL,
-  media_url        varchar(255) NOT NULL,
-  image_thumbnail  varchar(255) NOT NULL,
-  media_title      varchar(255) NOT NULL,
-  media_descr      text NOT NULL,
-  media_type       char(1) NOT NULL default 'N',
-  author           varchar(80) NOT NULL,
-  rating           decimal(11,5) default NULL,
-  rating_count     int(11) default '0',
-  views            int(11) default '0',
-  keywords         varchar(128) NOT NULL,
-  orginal_imgurl   varchar(255) NOT NULL,
-  process_count    int(11) default '0',
-  system_id        int(11) default NULL,
-  validity         int(11) default NULL,
-  created_on       datetime NOT NULL default '0000-00-00 00:00:00',
-  PRIMARY KEY  (id),
-  UNIQUE KEY media_url (media_url),
-  KEY media_feeds_created_on_ndx (created_on)
-);
-
-CREATE TABLE admin_main_banner (
-  id           int(11) NOT NULL auto_increment,
-  headline     varchar(128) NOT NULL,
-  enabled      char(1) NOT NULL default 'N',
-  app_section  varchar(40) default NULL,
-  created_on   datetime NOT NULL default '0000-00-00 00:00:00',
+  processCount = db.IntegerProperty(required=True)
+  linkType = db.StringProperty()
+  generatedObjId = db.StringProperty(required=True)
+  rating = db.IntegerProperty()
+  views = db.IntegerProperty()
+  botRating = db.FloatProperty()
+  userUpVotes = db.IntegerProperty()
+  userDownVotes= db.IntegerProperty()
+  linksCt= db.IntegerProperty()
+  inboundLinkCt= db.IntegerProperty()
+  outboundLinksCt= db.IntegerProperty()
+  imageCt = db.IntegerProperty()
+  metaDescrLen = db.IntegerProperty()
+  metaKeywordsLen = db.IntegerProperty()
+  metaDescrWct = db.IntegerProperty()
+  metaKeywordsWct= db.IntegerProperty()
+  geoLocationsCt = db.IntegerProperty()
+  geoLocationsFound = db.StringProperty()
+  documentSize = db.StringProperty()
+  requestTime  = db.StringProperty()
+  objectIdStatus  = db.StringProperty()
+  paraTagCt = db.StringProperty()
   
+class ActiveMediaFeeds(db.Model):
+  message = db.TextProperty(required=True)
+  date = db.DateTimeProperty(auto_now_add=True)
+  display_type = db.StringProperty()
+  created_on = db.DateTimeProperty(auto_now_add=True)
+  
+class MediaFeeds(db.Model):
+  image_filename   = db.StringProperty()
+  media_url        = db.StringProperty()
+  image_thumbnail  = db.StringProperty()
+  media_title      = db.StringProperty()
+  media_descr      = db.StringProperty()
+  media_type       = db.StringProperty()
+  author           = db.StringProperty()
+  rating           = db.FloatProperty(required=False)
+  rating_count     = db.IntegerProperty()
+  views            = db.IntegerProperty()
+  keywords         = db.StringProperty()
+  orginal_imgurl   = db.StringProperty()
+  process_count    = db.IntegerProperty()
+  system_id        = db.IntegerProperty()
+  validity         = db.IntegerProperty()
+  created_on       = db.DateTimeProperty(auto_now_add=True)
 
 class AdminMainBanner(db.Model):
-    id           int(11) NOT NULL auto_increment,
-  headline     varchar(128) NOT NULL,
-  enabled      char(1) NOT NULL default 'N',
-  app_section  varchar(40) default NULL,
-  created_on   datetime NOT NULL default '0000-00-00 00:00:00',
+  headline     = db.StringProperty()
+  enabled      = db.StringProperty()
+  app_section  = db.StringProperty()
+  created_on   = db.DateTimeProperty(auto_now_add=True)
 
 class SearchQueryFilters(db.Model):
-   id            int(11) NOT NULL auto_increment,
-  search_term   varchar(60) NOT NULL,
-  description   varchar(128) NOT NULL,
-  rating        int(11) NOT NULL,
-  views         int(11) NOT NULL,
-  user_name     varchar(50) NOT NULL,
-  user_id       int(11) NOT NULL,
-  created_on    datetime NOT NULL default '0000-00-00 00:00:00',
+  search_term   = db.StringProperty()
+  description   = db.StringProperty()
+  rating        = db.IntegerProperty()
+  views         = db.IntegerProperty()
+  user_name     = db.StringProperty()
+  user_id       = db.IntegerProperty()
+  created_on    = db.DateTimeProperty(auto_now_add=True)
 
 class CatGroupTerms(db.Model):
-  id             int(11) NOT NULL auto_increment,
-  category_name  varchar(20) NOT NULL,
-  category_term  varchar(40) NOT NULL,
-  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  category_name  = db.StringProperty()
+  category_term  = db.StringProperty()
+  created_on     = db.DateTimeProperty(auto_now_add=True)
 
 class CatLinkGroups(db.Model):
-   category_name    varchar(20) NOT NULL,
-  category_descr   varchar(80) NOT NULL,
-  category_color   varchar(10) NOT NULL,
-  created_on       datetime NOT NULL default '0000-00-00 00:00:00',
+  category_name    = db.StringProperty()
+  category_descr   = db.StringProperty()
+  category_color   = db.StringProperty()
+  created_on       = db.DateTimeProperty(auto_now_add=True)
 
 class ChildListLinks(db.Model):
-	id 				int(11) NOT NULL auto_increment,
-	link_id			int(11),   
-  	main_url		varchar(255) NOT NULL unique,
-  	url_title		varchar(128) NOT NULL,  
-  	keywords		varchar(255),  
-  	created_on		DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  link_id = db.IntegerProperty()
+  main_url = db.StringProperty()
+  url_title = db.StringProperty()
+  keywords = db.StringProperty()
+  created_on = db.DateTimeProperty(auto_now_add=True)
 
 class UserEntityLinks(db.Model):
-  id             int(11) NOT NULL auto_increment,
-  user_id        int(11) NOT NULL,
-  link_id        int(11) NOT NULL,
-  created_on     datetime NOT NULL default '0000-00-00 00:00:00',
+  user_id        = db.IntegerProperty()
+  link_id        = db.IntegerProperty()
+  created_on     = db.DateTimeProperty(auto_now_add=True)
 
 # End of Script
