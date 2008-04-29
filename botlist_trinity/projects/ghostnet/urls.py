@@ -6,6 +6,7 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 
 from ghost_views.ghostnet.link_views import index
+from ghost_views.ghostnet.rpc_views import remote_agent_send,remote_agent_req
 
 '''
  Current Directory Layout
@@ -53,7 +54,9 @@ from ghost_views.ghostnet.link_views import index
 urlpatterns = patterns(
 	'',
 	(r'^$', 'ghost_views.ghostnet.link_views.index'),
-	(r'^ghostnet/botverse$', 'ghost_views.ghostnet.link_views.botverse'),
+	
+	(r'^rpc/types/remote_agent_req$', 'ghost_views.ghostnet.rpc_views.remote_agent_req'),
+	
 	(r'^ghostnet/botverse_submit$', 'ghost_views.ghostnet.link_views.botverse_submit_view'),
 	(r'^ghostnet/botverse_submit_post$', 'ghost_views.ghostnet.link_views.botverse_submit'),
     (r'^ghostnet/botverse_calendar$', 'ghost_views.ghostnet.link_views.default_error'),
