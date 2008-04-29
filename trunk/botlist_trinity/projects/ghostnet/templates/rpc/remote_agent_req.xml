@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	<agentmsg>
+ 		<botid>serverbot</botid>
+ 		<message>Hello my name is serverbot.  Would you like some cake?</message>
+ 		<status>200</status>
+ 		<requestid>{ Text(uniq_id) }</requestid>
+ 		<majorvers>0</majorvers>
+ 		<minorvers>0</minorvers>
+ 	</agentmsg>
+</rdf:RDF>
