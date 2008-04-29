@@ -16,8 +16,6 @@ from util.generate_unique_id import botlist_uuid
 
 from business.core_botverse_bom import create_entity_model
 
-from xml.dom.minidom import parse, parseString
-
 def botverse_submit(request):
 	form = EntityLinksForm(request.POST)
 	if form.is_valid():
@@ -54,5 +52,4 @@ def index(request):
 		'listings': listings
 		})
 
-	
 # End of Script
