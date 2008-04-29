@@ -58,15 +58,36 @@ apiproxy_stub_map.apiproxy.RegisterStub('datastore_v3',
 apiproxy_stub_map.apiproxy.RegisterStub('mail',
 										mail_stub.MailServiceStub())
 
+# ----------------------
+# Django Setups
+# ----------------------
+
+# A workaround to fix the partial initialization of Django before we are ready
+from django.conf import settings
+settings._target = None
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+
+# Import various parts of Django.
+import django.core.handlers.wsgi
+import django.core.signals
+import django.dispatch.dispatcher
+import django.db
+
+# --------------
 # Tests includes
 # --------------
 from tests.create_models import suite as suite_create
 from tests.read_models import suite as suite_read
+from tests.agent_rpc_test import suite as suite_rpc
+from tests.client.client_rpc_test import suite as suite_client_rpc
 
 def run_test_suite():
 	suite = unittest.TestSuite()
 	suite.addTest(suite_create())
 	suite.addTest(suite_read())
+	suite.addTest(suite_rpc())
+	suite.addTest(suite_client_rpc())
 	runner = unittest.TextTestRunner()
 	runner.run(suite)
 

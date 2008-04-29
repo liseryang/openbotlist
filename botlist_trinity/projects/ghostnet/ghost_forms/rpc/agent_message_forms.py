@@ -4,9 +4,9 @@
 
 from django import newforms as forms
 
-class EntityLinksForm(forms.Form):
-  main_url = forms.CharField(label='main_url',
-							 widget=forms.Textarea())
+class AgentMessageForm(forms.Form):
+  types_payload = forms.CharField(label='types_payload',
+                                  widget=forms.Textarea())
   
 # end of script
 
