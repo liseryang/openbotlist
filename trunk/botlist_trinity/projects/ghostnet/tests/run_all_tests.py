@@ -18,6 +18,8 @@ import unittest
 DIR_PATH = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 PROJECT_HOME = os.path.join(DIR_PATH, '..', '..', '..')
 
+print("INFO: project_home=%s" % PROJECT_HOME)
+
 EXTRA_PATHS = [
   DIR_PATH,
   os.path.join(PROJECT_HOME, 'projects', 'ghostnet'),
