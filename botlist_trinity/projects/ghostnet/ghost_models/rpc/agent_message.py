@@ -3,7 +3,7 @@
 
  see http://www.djangoproject.com/documentation/testing/
 
- ghost_models.rpc.agent_message.*
+ ghost_models.rpc.agent_message.
 '''
 __author__ = "Berlin Brown"
 __version__ = "0.1"
