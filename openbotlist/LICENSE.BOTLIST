@@ -1,3 +1,8 @@
+Botlist contains an open source suite of software applications for 
+social bookmarking and collecting online news content for use on the web.  
+Multiple web front-ends exist for Django, Rails, and J2EE.  
+Users and remote agents are allowed to submit interesting articles.
+
 Copyright (c) 2007, Botnode.com (Berlin Brown)
 http://www.opensource.org/licenses/bsd-license.php
 
