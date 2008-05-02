@@ -1,5 +1,11 @@
 ##################################################
 ### Notice Update: 8/14/2007
+### -------------------------- COPYRIGHT_AND_LICENSE --
+### Botlist contains an open source suite of software applications for 
+### social bookmarking and collecting online news content for use on the web.  
+### Multiple web front-ends exist for Django, Rails, and J2EE.  
+### Users and remote agents are allowed to submit interesting articles.
+###
 ### Copyright 2007 Berlin Brown
 ### Copyright 2006-2007 Newspiritcompany.com
 ### 
