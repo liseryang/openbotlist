@@ -44,11 +44,46 @@
 
 __author__ = "Berlin Brown"
 __version__ = "0.1"
+__copyright__ = "Copyright (c) 2008 Berlin Brown"
+__license__ = "NEW BSD"
+
+from business.errors.botlist_errors import BotlistParseError
 
 from xml.dom.minidom import parse, parseString
+from xml.parsers.expat import ExpatError
 
-def remote_agent_proc(data):
-	doc = parseString(data)
-	return None
+from ghost_models.rpc.agent_message import LinkType
+
+def remote_agent_proc(payload_data):
+	payload_doc = None
+	try:
+		payload_doc = parseString(payload_data)
+	except ExpatError, e:
+		raise BotlistParseError("remote_agent_proc() - Could not parse type payload: %s" % e)
+		
+	if payload_doc is None:
+		raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
+	
+	# Get the typespayload data
+	payload_node = payload_doc.getElementsByTagName("typespayload")[0]
+	if payload_doc is None:
+		raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
+
+	# Transform the data into a collection of link types
+	types = payload_doc.getElementsByTagName("type")
+	link_types = []
+	for link_type in types:
+		try:
+			new_type = LinkType()
+			new_type.urlTitle = link_type.getElementsByTagName("title")[0].firstChild.nodeValue
+			new_type.mainUrl = link_type.getElementsByTagName("url")[0].firstChild.nodeValue
+			new_type.keywords = link_type.getElementsByTagName("keywords")[0].firstChild.nodeValue
+			new_type.urlDescription = link_type.getElementsByTagName("descr")[0].firstChild.nodeValue
+			link_types.append(new_type)
+		except Exception, e:
+			print e
+			pass
+		
+	return link_types
 	
 # End of Script

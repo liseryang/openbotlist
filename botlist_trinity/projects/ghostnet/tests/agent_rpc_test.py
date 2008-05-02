@@ -4,6 +4,11 @@
  see http://www.djangoproject.com/documentation/testing/
 '''
 
+__author__ = "Berlin Brown"
+__version__ = "0.1"
+__copyright__ = "Copyright (c) 2008 Berlin Brown"
+__license__ = "NEW BSD"
+
 import os
 import sys
 
@@ -15,19 +20,22 @@ from google.appengine.ext import db
 
 import random
 from business.rpc.remote_agents import remote_agent_proc
+from business.errors.botlist_errors import BotlistParseError
 
+from xml.parsers.expat import ExpatError
 from xml.dom.minidom import parse, parseString
 
 class AgentRpcTest(unittest.TestCase):
 
-	def test_parse_form_data(self):
+	def test_parse_raise_error(self):
 		bad_data = "<?xml version='1.0' encoding='UTF-8' ?><data></d"
-		doc = None
-		try:
-			remote_agent_proc(bad_data)
-		except Exception, e:
-			print e
-		assert (doc is None)
+		f = lambda: parseString(bad_data)
+		self.assertRaises(ExpatError, f)
+		
+	def test_parse_rpc_raise_error(self):
+		bad_data = "<?xml version='1.0' encoding='UTF-8' ?><data></d"
+		f = lambda: remote_agent_proc(bad_data)
+		self.assertRaises(BotlistParseError, f)
 
 	def test_parse_example_payload(self):
 		'''Test parsing an example payload message'''
@@ -63,7 +71,11 @@ class AgentRpcTest(unittest.TestCase):
 		types = payload_doc.getElementsByTagName("type")
 		self.assertEquals(2, len(types))
 		url1 = types[0].getElementsByTagName("url")[0].firstChild.nodeValue
-		print url1
+
+		# Test the rpc parser
+		data_arr = remote_agent_proc(types_payload)
+		assert (data_arr is not None)
+		self.assertEquals(2, len(data_arr))
 	
 	def test_simple_xml_parse(self):
 		good_data = "<?xml version='1.0' encoding='UTF-8' ?><data></data>"
