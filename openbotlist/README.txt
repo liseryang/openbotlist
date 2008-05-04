@@ -12,7 +12,7 @@
 Overview
 ===================
 
-Botlist is a social bookmarking web application that contains a news aggregating/news/article submission site. There is also an ads listing section so that users can post personal/ad profiles. The application itself is created with the following libraries; JRuby and J2EE's Spring framework as a middleware piece, Hibernate for object relational mapping (ORM). It is designed to run with Tomcat but should work with other J2EE servers. Search functionality uses the Lucene API.
+Botlist is an open source social bookmarking web application that contains a news aggregating/news/article submission site. There is also an ads listing section so that users can post personal/ad profiles. The application itself is created with the following libraries; JRuby and J2EE's Spring framework as a middleware piece, Hibernate for object relational mapping (ORM). It is designed to run with Tomcat but should work with other J2EE servers. Search functionality uses the Lucene API.
 Other Features
 
 News aggregation (some links will be included); over hundred and fifty thousands links thus far.
