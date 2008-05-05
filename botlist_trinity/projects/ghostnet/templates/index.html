@@ -46,7 +46,7 @@
 														<a class="linklist_objlinks" href="{{ listing.mainUrl }}" >
 															{{ listing.urlTitle }}
 														</a>
-														(<a class="linklist_comments_host" href="<c:url value="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)														
+														(<a class="linklist_comments_host" href="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)														
 														<div style="font-size: 10px: color: #777; margin-left: 6px;">
 														 <span class="home_source_label">source:</span> <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
 														</div>
@@ -91,7 +91,7 @@
 										</table>										
 										{# End of table for botverse links #}										
 										<div style="margin-top: 6px; background-color: #f3f3f3; padding: 6px; width: 30%">
-											<a href="<c:url value="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
+											<a href="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
 										</div> 					
 									</div> {# LEFT ================= #}
 									<div id="two_col_right_links">
