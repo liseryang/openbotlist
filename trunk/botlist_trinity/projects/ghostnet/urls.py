@@ -56,6 +56,7 @@ urlpatterns = patterns(
 	(r'^$', 'ghost_views.ghostnet.link_views.index'),
 	
 	(r'^rpc/types/remote_agent_req$', 'ghost_views.ghostnet.rpc_views.remote_agent_req'),
+	(r'^rpc/types/remote_agent_send$', 'ghost_views.ghostnet.rpc_views.remote_agent_send'),
 	
 	(r'^ghostnet/botverse_submit$', 'ghost_views.ghostnet.link_views.botverse_submit_view'),
 	(r'^ghostnet/botverse_submit_post$', 'ghost_views.ghostnet.link_views.botverse_submit'),

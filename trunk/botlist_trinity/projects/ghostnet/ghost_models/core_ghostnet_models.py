@@ -43,8 +43,8 @@ from google.appengine.ext import db
 class EntityLinks(db.Model):
   mainUrl = db.StringProperty(required=True)
   urlTitle = db.StringProperty(required=True)
-  urlDescription = db.StringProperty(required=True)
-  keywords = db.StringProperty(required=True)
+  urlDescription = db.TextProperty(required=True)
+  keywords = db.TextProperty(required=True)
   # This is useful for storing a "created" date and time for a model instance.
   createdOn = db.DateTimeProperty(auto_now_add=True)
   # This is useful for tracking a "last modified" date and time for a model instance.

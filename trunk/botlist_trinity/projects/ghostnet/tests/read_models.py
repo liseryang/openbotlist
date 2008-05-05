@@ -62,7 +62,7 @@ class ReadModelsTest(unittest.TestCase):
 		link = links[0]
 		assert (link is not None)
 		assert (link.mainUrl is not None)
-   
+		
 	def read_all_models(self):
 		read_entity_model()
 
