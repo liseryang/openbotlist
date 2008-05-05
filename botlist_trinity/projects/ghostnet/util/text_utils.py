@@ -35,41 +35,6 @@ def formatHtmlEntities(content):
 	return BeautifulStoneSoup(content,
 							  convertEntities=BeautifulStoneSoup.HTML_ENTITIES).contents[0]
 
-
-def filterOnlyTextSoup(soup):
-	"""Use beautiful soup to remove all TAG text"""
-	try:
-		v = soup.string
-		if v == None:
-			c = soup.contents
-			resulttext = ''
-			for txt_obj in c:
-				subtext = filterOnlyTextSoup(txt_obj)
-				resulttext += subtext + ' '				
-			return resulttext
-		else:
-			return v.strip()
-		
-	except Exception, e:
-		print e
-		return ""	
-
-def formatDescrWithSoup(content):
-	"""Format the html descriptions with beautiful soup"""
-	soup = BeautifulSoup(content)
-	res = filterOnlyTextSoup(soup)
-	if (res == None) or (len(res) == 0):
-		# On error or other issues, return empty
-		# TODO: should we return content?
-		return ""
-	else:
-		try:
-			res = formatHtmlEntities(res)
-			return res.strip()
-		except Exception, e:
-			print e
-			return ""
-
 def shorten(str, max_len):
     """Shorten a given string to a smaller number of characters"""
     if str:

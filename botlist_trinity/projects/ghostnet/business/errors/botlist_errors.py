@@ -51,4 +51,11 @@ class BotlistParseError(Exception):
 	def __str__(self):
 		return repr(self.value)
 
+class BotlistInvalidTypeError(Exception):
+	def __init__(self, value):
+		self.value = ("ERR: |%s| invalid-type-error: %s" % \
+					  (self.__class__.__name__, value))
+	def __str__(self):
+		return repr(self.value)
+
 # End of Script

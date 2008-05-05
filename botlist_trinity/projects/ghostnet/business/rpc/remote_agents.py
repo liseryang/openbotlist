@@ -83,19 +83,26 @@ __version__ = "0.1"
 __copyright__ = "Copyright (c) 2008 Berlin Brown"
 __license__ = "NEW BSD"
 
-from business.errors.botlist_errors import BotlistParseError
+import logging
+from google.appengine.ext import db
+
+from business.errors.botlist_errors import \
+	 BotlistParseError, BotlistInvalidTypeError
 
 from xml.dom.minidom import parse, parseString
 from xml.parsers.expat import ExpatError
 
 from ghost_models.rpc.agent_message import LinkType
 
+from ghost_forms.core_forms import EntityLinksForm
+from ghost_models.core_ghostnet_models import EntityLinks
+from util.generate_unique_id import botlist_uuid
+
 def remote_agent_proc(payload_data):
-	payload_doc = None
 	try:
 		payload_doc = parseString(payload_data)
 	except ExpatError, e:
-		raise BotlistParseError("remote_agent_proc() - Could not parse type payload: %s" % e)
+		raise BotlistParseError(("remote_agent_proc() - Could not parse type payload: %s" % e))
 		
 	if payload_doc is None:
 		raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
@@ -111,15 +118,40 @@ def remote_agent_proc(payload_data):
 	for link_type in types:
 		try:
 			new_type = LinkType()
-			new_type.urlTitle = link_type.getElementsByTagName("title")[0].firstChild.nodeValue
+			new_type.urlTitle = link_type.getElementsByTagName("title")[0].firstChild.nodeValue 
 			new_type.mainUrl = link_type.getElementsByTagName("url")[0].firstChild.nodeValue
-			new_type.keywords = link_type.getElementsByTagName("keywords")[0].firstChild.nodeValue
-			new_type.urlDescription = link_type.getElementsByTagName("descr")[0].firstChild.nodeValue
+			
+			if link_type.getElementsByTagName("keywords") is not None: \
+			   new_type.keywords = link_type.getElementsByTagName("keywords")[0].firstChild.nodeValue
+			# Note: descr contains a CDATA element.
+			#if link_type.getElementsByTagName("descr") is not None: \
+			#   new_type.urlDescription = link_type.getElementsByTagName("descr")[0].firstChild.nodeValue
+			new_type.urlDescription = "none"
 			link_types.append(new_type)
 		except Exception, e:
-			print e
+			logging.error(e)
 			pass
 		
 	return link_types
-	
+
+def remote_agent_create(link_types):
+	''' With the collection of LinkTypes, extract the data and
+	create a django/db record'''
+	if link_types is None:
+		raise BotlistInvalidTypeError("remote_agent_create()")
+
+	for link_type in link_types:
+		link = EntityLinks(
+			mainUrl = link_type.mainUrl,
+			urlTitle = link_type.urlTitle,
+			urlDescription = link_type.urlDescription,
+			keywords = link_type.keywords,
+			hostname = "http://www.google.com",
+			generatedObjId = botlist_uuid("objid:%s" % link_type.mainUrl),
+			processCount = 0)
+		try:			
+			db.put(link)
+		except BadValueError, val_err:
+			logging.error("remote_agent_create() - " % val_err)
+		
 # End of Script

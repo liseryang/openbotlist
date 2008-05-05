@@ -52,6 +52,9 @@ import random
 from ghost_models.core_ghostnet_models import EntityLinks
 from util.generate_unique_id import botlist_uuid
 
+from business.rpc.remote_agents import \
+	 remote_agent_proc, remote_agent_create
+
 def create_entity_model():
 	r = long( random.random() * 100000000000000000L )
 	url = "http://www.google%s.com" % r
@@ -68,9 +71,42 @@ def create_entity_model():
 	return link
 	
 class CreateModelsTest(unittest.TestCase):
-	def test_create_modes(self):
+
+	def setUp(self):
+		self.types_payload = '''<?xml version="1.0" encoding="UTF-8" ?>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	   <agentmsg>
+		 <botid>botbert</botid>
+ 		 <message>We processed some cake</message>
+ 		 <status>200</status>
+		 <typespayload>
+		   <type>
+		     <title>The Title</title>
+			 <url>http://www.google4_rpc.com</url>
+			 <keywords>go google</keywords>
+			 <descr>the google dot com</descr>
+		   </type>
+		   <type>
+		     <title>The Title 2</title>
+			 <url>http://www.google5_rpc.com</url>
+			 <keywords>go google two</keywords>
+			 <descr>the google dot com two</descr>
+		   </type>
+		 </typespayload>
+	   </agentmsg>
+ </rdf:RDF>'''
+	
+	def test_create_models(self):
 		l = create_entity_model()
 		assert l is not None
+
+	def test_create_links_rpc(self):
+		# Test the rpc parser and create
+		data_arr = remote_agent_proc(self.types_payload)
+		assert (data_arr is not None)
+		self.assertEquals(2, len(data_arr))
+		# Create a record
+		remote_agent_create(data_arr)	
    
 def suite():
 	suite = unittest.TestSuite()
