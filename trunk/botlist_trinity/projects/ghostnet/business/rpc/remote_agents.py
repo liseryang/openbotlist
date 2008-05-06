@@ -4,14 +4,14 @@
  Example Server Request Setup - Initial Response (remote_agent_req):
  -----------------------------
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-	<agentmsg>
- 		<botid>serverbot</botid>
- 		<message>Hello my name is serverbot.  Would you like some cake?</message>
- 		<status>200</status>
- 		<requestid>{ Text(uniq_id) }</requestid>
- 		<majorvers>0</majorvers>
- 		<minorvers>0</minorvers>
- 	</agentmsg>
+        <agentmsg>
+                <botid>serverbot</botid>
+                <message>Hello my name is serverbot.  Would you like some cake?</message>
+                <status>200</status>
+                <requestid>{ Text(uniq_id) }</requestid>
+                <majorvers>0</majorvers>
+                <minorvers>0</minorvers>
+        </agentmsg>
 </rdf:RDF>
 
  -----------------------------
@@ -20,25 +20,25 @@
  -----------------------------
  <?xml version="1.0" encoding="UTF-8" ?>
  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-	   <agentmsg>
-		 <botid>botbert</botid>
- 		 <message>We processed some cake</message>
- 		 <status>200</status>
-		 <typespayload>
-		   <type>
-		     <title>The Title</title>
-			 <url>http://www.google1.com</url>
-			 <keywords>go google</keywords>
-			 <descr>the google dot com</descr>
-		   </type>
-		 </typespayload>
-	   </agentmsg>
+           <agentmsg>
+                 <botid>botbert</botid>
+                 <message>We processed some cake</message>
+                 <status>200</status>
+                 <typespayload>
+                   <type>
+                     <title>The Title</title>
+                         <url>http://www.google1.com</url>
+                         <keywords>go google</keywords>
+                         <descr>the google dot com</descr>
+                   </type>
+                 </typespayload>
+           </agentmsg>
  </rdf:RDF>
 
  Example Server Response to Request (confirmation):
  -----------------------------
  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-	  <message>Enjoy your cake</message>
+          <message>Enjoy your cake</message>
 </rdf:RDF>
 
  -------------------------- COPYRIGHT_AND_LICENSE --
@@ -55,15 +55,15 @@
  Redistribution and use in source and binary forms, with or without modification, 
  are permitted provided that the following conditions are met:
 
-	    * Redistributions of source code must retain the above copyright notice, 
-	    this list of conditions and the following disclaimer.
-	    * Redistributions in binary form must reproduce the above copyright notice, 
-	    this list of conditions and the following disclaimer in the documentation 
-	    and/or other materials provided with the distribution.
-	    * Neither the name of the Botnode.com (Berlin Brown) nor 
-	    the names of its contributors may be used to endorse or promote 
-	    products derived from this software without specific prior written permission.
-	
+            * Redistributions of source code must retain the above copyright notice, 
+            this list of conditions and the following disclaimer.
+            * Redistributions in binary form must reproduce the above copyright notice, 
+            this list of conditions and the following disclaimer in the documentation 
+            and/or other materials provided with the distribution.
+            * Neither the name of the Botnode.com (Berlin Brown) nor 
+            the names of its contributors may be used to endorse or promote 
+            products derived from this software without specific prior written permission.
+        
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -87,7 +87,7 @@ import logging
 from google.appengine.ext import db
 
 from business.errors.botlist_errors import \
-	 BotlistParseError, BotlistInvalidTypeError
+         BotlistParseError, BotlistInvalidTypeError
 
 from xml.dom.minidom import parse, parseString
 from xml.parsers.expat import ExpatError
@@ -99,59 +99,59 @@ from ghost_models.core_ghostnet_models import EntityLinks
 from util.generate_unique_id import botlist_uuid
 
 def remote_agent_proc(payload_data):
-	try:
-		payload_doc = parseString(payload_data)
-	except ExpatError, e:
-		raise BotlistParseError(("remote_agent_proc() - Could not parse type payload: %s" % e))
-		
-	if payload_doc is None:
-		raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
-	
-	# Get the typespayload data
-	payload_node = payload_doc.getElementsByTagName("typespayload")[0]
-	if payload_doc is None:
-		raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
+        try:
+                payload_doc = parseString(payload_data)
+        except ExpatError, e:
+                raise BotlistParseError(("remote_agent_proc() - Could not parse type payload: %s" % e))
+                
+        if payload_doc is None:
+                raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
+        
+        # Get the typespayload data
+        payload_node = payload_doc.getElementsByTagName("typespayload")[0]
+        if payload_doc is None:
+                raise BotlistParseError("remote_agent_proc() - Could not parse type payload")
 
-	# Transform the data into a collection of link types
-	types = payload_doc.getElementsByTagName("type")
-	link_types = []
-	for link_type in types:
-		try:
-			new_type = LinkType()
-			new_type.urlTitle = link_type.getElementsByTagName("title")[0].firstChild.nodeValue 
-			new_type.mainUrl = link_type.getElementsByTagName("url")[0].firstChild.nodeValue
-			
-			if link_type.getElementsByTagName("keywords") is not None: \
-			   new_type.keywords = link_type.getElementsByTagName("keywords")[0].firstChild.nodeValue
-			# Note: descr contains a CDATA element.
-			#if link_type.getElementsByTagName("descr") is not None: \
-			#   new_type.urlDescription = link_type.getElementsByTagName("descr")[0].firstChild.nodeValue
-			new_type.urlDescription = "none"
-			link_types.append(new_type)
-		except Exception, e:
-			logging.error(e)
-			pass
-		
-	return link_types
+        # Transform the data into a collection of link types
+        types = payload_doc.getElementsByTagName("type")
+        link_types = []
+        for link_type in types:
+                try:
+                        new_type = LinkType()
+                        new_type.urlTitle = link_type.getElementsByTagName("title")[0].firstChild.nodeValue 
+                        new_type.mainUrl = link_type.getElementsByTagName("url")[0].firstChild.nodeValue
+                        
+                        if link_type.getElementsByTagName("keywords") is not None: \
+                           new_type.keywords = link_type.getElementsByTagName("keywords")[0].firstChild.nodeValue
+                        # Note: descr contains a CDATA element.
+                        # A link type may not have a descr element
+                        if link_type.getElementsByTagName("descr") is not None: \
+                                    new_type.urlDescription = link_type.getElementsByTagName("descr")[0].firstChild.nodeValue
+                        link_types.append(new_type)
+                except Exception, e:
+                        logging.error(e)
+                        pass
+                
+        return link_types
 
 def remote_agent_create(link_types):
-	''' With the collection of LinkTypes, extract the data and
-	create a django/db record'''
-	if link_types is None:
-		raise BotlistInvalidTypeError("remote_agent_create()")
+        ''' With the collection of LinkTypes, extract the data and
+        create a django/db record'''
+        if link_types is None:
+                raise BotlistInvalidTypeError("remote_agent_create()")
 
-	for link_type in link_types:
-		link = EntityLinks(
-			mainUrl = link_type.mainUrl,
-			urlTitle = link_type.urlTitle,
-			urlDescription = link_type.urlDescription,
-			keywords = link_type.keywords,
-			hostname = "http://www.google.com",
-			generatedObjId = botlist_uuid("objid:%s" % link_type.mainUrl),
-			processCount = 0)
-		try:			
-			db.put(link)
-		except BadValueError, val_err:
-			logging.error("remote_agent_create() - " % val_err)
-		
+        for link_type in link_types:
+                link = EntityLinks(
+                        mainUrl = link_type.mainUrl,
+                        urlTitle = link_type.urlTitle,
+                        urlDescription = link_type.urlDescription,
+                        keywords = link_type.keywords,
+                        hostname = "http://www.google.com",
+                        generatedObjId = botlist_uuid("objid:%s" % link_type.mainUrl),
+                        processCount = 0)
+                try:                    
+                        db.put(link)
+                except BadValueError, val_err:
+                        logging.error("remote_agent_create() - " % val_err)
+                
 # End of Script

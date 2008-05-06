@@ -68,6 +68,9 @@ def botverse_submit_view(request):
 		'form': form
 		})
 
+def botverse_light(request):
+        return render_to_response('botverse.html', {})
+
 def botverse_confirm(request):
 	''' Index Page'''
 	return render_to_response('ghostnet/botverse_confirm.html')
