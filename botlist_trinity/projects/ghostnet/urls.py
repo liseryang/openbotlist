@@ -52,56 +52,55 @@ from ghost_views.ghostnet.rpc_views import remote_agent_send,remote_agent_req
 '''
 
 urlpatterns = patterns(
-	'',
-	(r'^$', 'ghost_views.ghostnet.link_views.index'),
-	
-	(r'^rpc/types/remote_agent_req$', 'ghost_views.ghostnet.rpc_views.remote_agent_req'),
-	(r'^rpc/types/remote_agent_send$', 'ghost_views.ghostnet.rpc_views.remote_agent_send'),
-	
-	(r'^ghostnet/botverse_submit$', 'ghost_views.ghostnet.link_views.botverse_submit_view'),
-	(r'^ghostnet/botverse_submit_post$', 'ghost_views.ghostnet.link_views.botverse_submit'),
-    (r'^ghostnet/botverse_calendar$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^ghostnet/botverse_confirm$', 'ghost_views.ghostnet.link_views.default_error'),    
-    (r'^ghostnet/index_base$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^ghostnet/index_base_elems$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^ghostnet/linkaddcomment$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^ghostnet/linkaddcomment_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^ghostnet/linkviewcomments$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^ghostnet/rss/botverse_rss$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^ghostnet/text/botverse_light$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^ghostnet/text/botverse_text$', 'ghost_views.ghostnet.link_views.default_error'),
-	
-    (r'^foaf/foaf$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^foaf/foaf_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^foaf/foaf_submit$', 'ghost_views.ghostnet.link_views.default_error'),
-	
-    (r'^forums/addtopic$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^forums/forumaddtopic_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^forums/forums$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^forums/forumviewtopic$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^forums/topics$', 'ghost_views.ghostnet.link_views.default_error'),
-    (r'^forums/viewforums$', 'ghost_views.ghostnet.link_views.default_error'),
-	
-	(r'^listings/citylist$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/contactemail$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/contactlisting$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/create_listing$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/createconfirm$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/listings$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/sections$', 'ghost_views.ghostnet.link_views.default_error'),
-	(r'^listings/viewlisting$', 'ghost_views.ghostnet.link_views.default_error'),
-	
-	(r'^pipes/pipes$', 'ghost_views.ghostnet.link_views.default_error')
+        '',
+        (r'^$', 'ghost_views.ghostnet.link_views.index'),
+        
+        (r'^rpc/types/remote_agent_req$', 'ghost_views.ghostnet.rpc_views.remote_agent_req'),
+        (r'^rpc/types/remote_agent_send$', 'ghost_views.ghostnet.rpc_views.remote_agent_send'),
+        
+        (r'^ghostnet/botverse_submit$', 'ghost_views.ghostnet.link_views.botverse_submit_view'),
+        (r'^ghostnet/botverse_submit_post$', 'ghost_views.ghostnet.link_views.botverse_submit'),
+        (r'^ghostnet/botverse_calendar$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/botverse_confirm$', 'ghost_views.ghostnet.link_views.default_error'),    
+        (r'^ghostnet/index_base$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/index_base_elems$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/linkaddcomment$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/linkaddcomment_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/linkviewcomments$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/rss/botverse_rss$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/text/botverse_light$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/text/botverse_text$', 'ghost_views.ghostnet.link_views.default_error'),
+        
+        (r'^foaf/foaf$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^foaf/foaf_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^foaf/foaf_submit$', 'ghost_views.ghostnet.link_views.default_error'),
+        
+        (r'^forums/addtopic$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^forums/forumaddtopic_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^forums/forums$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^forums/forumviewtopic$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^forums/topics$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^forums/viewforums$', 'ghost_views.ghostnet.link_views.default_error'),
+        
+        (r'^listings/citylist$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/contactemail$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/contactlisting$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/create_listing$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/createconfirm$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/listings$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/sections$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^listings/viewlisting$', 'ghost_views.ghostnet.link_views.default_error'),
+        
+        (r'^pipes/pipes$', 'ghost_views.ghostnet.link_views.default_error')
 )
 
 # For local development, if debug is enabled, use the
 # django static view server
 if settings.DEBUG:
-	urlpatterns += patterns('',
-							(r'^company/(?P<path>.*)$',
-							 'django.views.static.serve',
-							 {'document_root': 'company'}),
+        urlpatterns += patterns('',
+                                (r'^company/(?P<path>.*)$',
+                                 'django.views.static.serve',
+                                 {'document_root': 'company'}),
     )
-
 
 # End of Script

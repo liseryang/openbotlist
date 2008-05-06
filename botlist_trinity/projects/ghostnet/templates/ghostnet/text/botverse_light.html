@@ -1,16 +1,24 @@
-<%@ page contentType="text/html"%>
-<%@include file="/WEB-INF/jsps/general/default_includes.jsp" %>
-<%@include file="/WEB-INF/jsps/general/default_doc_type.jsp" %>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Botverse - Light View</title>
-
-<META NAME="DESCRIPTION" CONTENT="BotList - Promote yourself or something else interesting, Light View">
-<META NAME="keywords" CONTENT="listing, bot, botlist, botlisting, bot's list, list, ads, advertising, light view">
-
-<link href="/company/stylesheets/scaffold.css" />" media="screen" rel="Stylesheet" type="text/css" />
-<link href="/company/stylesheets/newspirit.css" />" media="screen" rel="Stylesheet" type="text/css" />
-<link href="/company/stylesheets/botlist.css" />" media="screen" rel="Stylesheet" type="text/css" />
+	{# Author: Berlin Brown #}
+	{# File: botverse_base.html #}
+	{# Date: 4/20/2008 #}
+	{% comment %}
+	Also see:  http://www.djangoproject.com/documentation/templates/
+	{% endcomment %}
+ 	<title>Ghost Network</title>
+ 	
+	{% block meta_information %}
+  	<meta name="DESCRIPTION" content="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)"></meta>
+ 	<meta name="keywords" content="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb"></meta>   
+  	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="/spring/rss/listings_rss.html"></link>
+	<link href="/company/stylesheets/scaffold.css" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="/company/stylesheets/newspirit.css" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="/company/stylesheets/botlist.css" media="screen" rel="Stylesheet" type="text/css" ></link>
+  	<link href="/company/stylesheets/botlist_general2.css" media="screen" rel="Stylesheet" type="text/css" ></link> 
+  	{% endblock %}
 </head>
 <body>
 <div style="margin-top: 40px; margin-left: 60px; border-top: 1px solid #ccc;">
@@ -63,12 +71,11 @@
 					</td>					
 					</tr>
 					</table>
-					<!-- End of inner table -->				
+					<!-- End of inner table -->
 				</td>
 				</tr>
 		</c:forEach>
 	</table>
 </div>
-	
 </body>
 </html>

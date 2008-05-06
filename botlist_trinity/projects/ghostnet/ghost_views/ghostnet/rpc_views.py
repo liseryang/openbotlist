@@ -42,7 +42,7 @@ def remote_agent_send(request):
 		# Set the context variables
 		c = Context({})
 		response.write(tmpl.render(c))
-		
+		return response
 	else:
 		response = HttpResponse(mimetype='text/xml')		
 		tmpl = loader.get_template('rpc/remote_agent_req.xml')

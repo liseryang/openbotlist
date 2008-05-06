@@ -40,13 +40,14 @@ class AgentRpcTest(unittest.TestCase):
 		     <title>The Title</title>
 			 <url>http://www.google4.com</url>
 			 <keywords>go google</keywords>
-			 <descr>the google dot com</descr>
+			 <descr><![CDATA[ the google dot com]]></descr>
 		   </type>
 		   <type>
 		     <title>The Title 2</title>
 			 <url>http://www.google5.com</url>
 			 <keywords>go google two</keywords>
 			 <descr>the google dot com two</descr>
+			 <descr><![CDATA[ the google dot com (TWO)]]></descr>
 		   </type>
 		 </typespayload>
 	   </agentmsg>
@@ -82,6 +83,9 @@ class AgentRpcTest(unittest.TestCase):
 		types = payload_doc.getElementsByTagName("type")
 		self.assertEquals(2, len(types))
 		url1 = types[0].getElementsByTagName("url")[0].firstChild.nodeValue
+		
+		# Test cdata extraction
+		descr = types[0].getElementsByTagName("descr")[0].firstChild.nodeValue
 
 		# Test the rpc parser
 		data_arr = remote_agent_proc(self.types_payload)

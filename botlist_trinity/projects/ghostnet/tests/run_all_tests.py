@@ -16,15 +16,15 @@
  Redistribution and use in source and binary forms, with or without modification, 
  are permitted provided that the following conditions are met:
 
-	    * Redistributions of source code must retain the above copyright notice, 
-	    this list of conditions and the following disclaimer.
-	    * Redistributions in binary form must reproduce the above copyright notice, 
-	    this list of conditions and the following disclaimer in the documentation 
-	    and/or other materials provided with the distribution.
-	    * Neither the name of the Botnode.com (Berlin Brown) nor 
-	    the names of its contributors may be used to endorse or promote 
-	    products derived from this software without specific prior written permission.
-	
+            * Redistributions of source code must retain the above copyright notice, 
+            this list of conditions and the following disclaimer.
+            * Redistributions in binary form must reproduce the above copyright notice, 
+            this list of conditions and the following disclaimer in the documentation 
+            and/or other materials provided with the distribution.
+            * Neither the name of the Botnode.com (Berlin Brown) nor 
+            the names of its contributors may be used to endorse or promote 
+            products derived from this software without specific prior written permission.
+        
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -59,6 +59,7 @@ EXTRA_PATHS = [
   DIR_PATH,
   os.path.join(PROJECT_HOME, 'projects', 'ghostnet'),
   os.path.join(PROJECT_HOME, 'google_appengine'),
+  os.path.join(PROJECT_HOME, 'google_appengine', 'lib', 'django'),
   os.path.join(PROJECT_HOME, 'google_appengine', 'lib', 'webob'),
   os.path.join(PROJECT_HOME, 'google_appengine', 'lib', 'yaml', 'lib')
 ]
@@ -80,20 +81,23 @@ APP_ID = 'ghostnet_tests'
 DS_PATH = '/tmp/dev_ds_tests.db'
 HIST_PATH = '/tmp/dev_ds_tests.hist'
 
-apiproxy_stub_map.apiproxy.RegisterStub('user',
-										user_service_stub.UserServiceStub())
+apiproxy_stub_map.apiproxy.RegisterStub(
+        'user',
+        user_service_stub.UserServiceStub())
 
 # From the dev_appserver source:
 # ----------------------
 #  datastore = datastore_file_stub.DatastoreFileStub(
 #      app_id, datastore_path, history_path, require_indexes=require_indexes)
 # ----------------------
-apiproxy_stub_map.apiproxy.RegisterStub('datastore_v3',
-										datastore_file_stub.DatastoreFileStub('ghostnet',
-																			  DS_PATH,
-																			  HIST_PATH))
-apiproxy_stub_map.apiproxy.RegisterStub('mail',
-										mail_stub.MailServiceStub())
+apiproxy_stub_map.apiproxy.RegisterStub(
+        'datastore_v3',
+        datastore_file_stub.DatastoreFileStub('ghostnet',
+                                              DS_PATH,
+                                              HIST_PATH))
+apiproxy_stub_map.apiproxy.RegisterStub(
+        'mail',
+        mail_stub.MailServiceStub())
 
 # ----------------------
 # Django Setups
@@ -120,19 +124,19 @@ from tests.agent_rpc_test import suite as suite_rpc
 from tests.client.client_rpc_test import suite as suite_client_rpc
 
 def run_test_suite():
-	suite = unittest.TestSuite()
-	suite.addTest(suite_create())
-	suite.addTest(suite_read())
-	suite.addTest(suite_rpc())
-	suite.addTest(suite_client_rpc())
-	runner = unittest.TextTestRunner()
-	runner.run(suite)
+        suite = unittest.TestSuite()
+        suite.addTest(suite_create())
+        suite.addTest(suite_read())
+        suite.addTest(suite_rpc())
+        suite.addTest(suite_client_rpc())
+        runner = unittest.TextTestRunner()
+        runner.run(suite)
 
 # End of appengine setups for command-line test apps
-	
+        
 if __name__ == '__main__':
-	print "Running model create"	
-	run_test_suite()
-	print "Done"
+        print "Running model create"    
+        run_test_suite()
+        print "Done"
 
 # End of Script
