@@ -1,4 +1,3 @@
-;;; -*- Mode: LISP; Syntax: ANSI-Common-Lisp; Base: 10 -*-
 ;;; ********************************************************
 ;;; FILE IDENTIFICATION
 ;;;
