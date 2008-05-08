@@ -1,0 +1,19 @@
+#################################################
+# README
+#################################################
+
+ To Install Hunchentoot (on Ubuntu 8.04 Heron with SBCL):
+
+ sudo apt-get install libssl-dev
+
+  sudo sbcl
+
+   (require :asdf-install)
+
+
+ 	(asdf-install:install :hunchentoot)
+
+ To Run:
+ (asdf:oos 'asdf:load-op :hunchentoot-test)
+
+ (hunchentoot:start-server :port 4242
