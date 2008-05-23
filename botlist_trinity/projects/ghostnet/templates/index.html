@@ -2,7 +2,7 @@
 
 {% block full_body_content %}
 <!-- Table of Data Grid and Image -->
-				<table width="100%" >				
+				<table width="100%" >
 				<tr>
 				<td valign="top" align="left">
 					{# ==== Next Set of Data, Recent Links ==== #}
@@ -10,10 +10,11 @@
 						<table width="100%">
 						<tr>
 							<td>
-								<span style="background-color: #e8e8e8; padding: 4px; text-align: left;">&nbsp;most recent updates:</span>							
-								&nbsp;/ <a href="/ghostnet/botverse?filterset=mostrecent" class="linklist_botnav">view more</a> 
+								<span style="background-color: #e8e8e8; padding: 4px; text-align: left;">&nbsp;most recent updates:</span>
+								&nbsp;/ <a href="/ghostnet/botverse?filterset=mostrecent" class="linklist_botnav">view more</a>
+								&nbsp;/ <a href="ghostnet/text/botverse_light" class="linklist_botnav">text version</a>
 									/ <a href="/ghostnet/botverse_submit" class="linklist_botnav">submit</a>
-								&nbsp;&nbsp;<span style="color: #555;"><i>(${linkCount} entries)</i></span>								
+								&nbsp;&nbsp;<span style="color: #555;"><i>(${linkCount} entries)</i></span>
 								{# Banner Section #}
 								<c:choose>
 									<c:when test="${headline != null}" >
@@ -24,40 +25,38 @@
 									 </div>
 									</c:when>
 								</c:choose>
-								{# End of Banner Section #}																		
+								{# End of Banner Section #}
 							</td>
 						</tr>
 						<tr>
 							<td valign="top">
 								{% if listings %}
-								  {% for listing in listings %}
 									{# ============================== #}
 									{# == 2/2/2008; Two column system, first set of links on left == #}
 									{# == TODO: figure out cleaner approach with jsp/struts includes  #}
 									{# ============================== #}
 									<div id="two_col_left_links">
 										<table cellspacing="0" cellpadding="0">
-										<c:forEach items="${linklistings}"
-													var="listing" varStatus="status">																							
-											{# Begin row production for botverse links #}											
-											<tr>					
+											{% for listing in listings %}
+											{# Begin row production for botverse links #}
+											<tr>
 												<td colspan="3">
 													<div class="home_for_url_group">
 														<a class="linklist_objlinks" href="{{ listing.mainUrl }}" >
 															{{ listing.urlTitle }}
 														</a>
-														(<a class="linklist_comments_host" href="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)														
+														(<a class="linklist_comments_host" href="/spring/botverse/linkviewcomments.html?viewid=${listing.id}" />">#</a>)
 														<div style="font-size: 10px: color: #777; margin-left: 6px;">
 														 <span class="home_source_label">source:</span> <c:out value="${listing.hostnameDisplay}" /> <a href="<c:out value="${listing.hostnameDisplayUrl}" />" class="linklist_comments_host">+</a>
 														</div>
 													</div>
 												</td>
 											</tr>
-											<c:if test="${not empty listing.urlDescription}">																							
+											<c:if test="${not empty listing.urlDescription}">
 												<tr>
 													<td>
 														<div class="home_descr_left">
-															<span style="background-color: #ffcc66"><b>about:</b></span> <c:out value="${listing.urlDescription}" />
+															<span style="background-color: #ffcc66"><b>about:</b></span> {{ listing.urlDescription }}
 														</div>
 													</td>
 												</tr>
@@ -66,58 +65,57 @@
 											<td>
 												<!-- Inner table for data/status information -->
 												<table>
-												<tr>					
+												<tr>
 												<td>
-													<div class="linklist_comments_txt">						 	
-													 <span class="linklist_comments_date">						
-														<botlistutil:timePast dateValue="${listing.createdOn.time}" />							
+													<div class="linklist_comments_txt">
+													 <span class="linklist_comments_date">
+														<botlistutil:timePast dateValue="${listing.createdOn.time}" />
 													 </span>
 													</div>
 												</td>
 												<td>
 												  <span style="margin-left: 0px; font-size: 10px">
 														<span class="linklist_comments_date"><strong>by
-															<c:out value="${listing.fullName}" /></strong>
+															{{ listing.fullName }}</strong>
 														</span>
 												  </span>
 												</td>
 												</tr>
 												</table>
-												<!-- End of inner table (loop) -->				
+												<!-- End of inner table (loop) -->
 											</td>
-											</tr>											
+											</tr>
 											{# End row production for botverse links #}
-										</c:forEach>							
-										</table>										
-										{# End of table for botverse links #}										
+											{% endfor %}
+										</table>
+										{# End of table for botverse links #}
 										<div style="margin-top: 6px; background-color: #f3f3f3; padding: 6px; width: 30%">
-											<a href="/spring/botverse/botverse.html?filterset=mostrecent" />" class="linklist_botnav">view more</a> 
-										</div> 					
+											<a href="/spring/botverse/botverse?filterset=mostrecent" class="linklist_botnav">view more</a>
+										</div>
 									</div> {# LEFT ================= #}
 									<div id="two_col_right_links">
 											{# TODO: add the right section #}
 									</div>
 									{# (end) ================= #}
-								  {% endfor %}
 								{% else %}
 										<span style="color: red; font-weight: bold;">
-											No records found.																
+											No records found.
 										</span>
 								{% endif %}
-							</td>							
+							</td>
 						</tr>
 						</table>
 					</div>
-					{# ==== End Next Set of Data, Recent Links ==== #}					
+					{# ==== End Next Set of Data, Recent Links ==== #}
 				</td>
-				<td valign="top" align="right">										
+				<td valign="top" align="right">
 					<!-- table just for search -->
 					<div class="home_search_wrapper">
 						<table class="sample" cellspacing="0" cellpadding="0">
 						<tr>
 							<th>
 								&nbsp;Search
-							</th>						
+							</th>
 						</tr>
 						<tr>
 						<td>
@@ -138,7 +136,7 @@
 									<input type="hidden" name="querymode" value="enabled" />
 								</form>
 								<!-- End of Form -->
-								<div style="text-align: right; margin-top: 4px;">								
+								<div style="text-align: right; margin-top: 4px;">
 									<a href="/ghostnet/rss/botverse_rss" class="index_img">
 										<img style="border: 0px solid #FFF;" src="/company/images/rss.gif" width="36" height="15" alt="rss" />
 									</a>
@@ -147,7 +145,7 @@
 						</tr>
 						</table>
 					</div>
-					<!-- End of Table for search -->					
+					<!-- End of Table for search -->
 					{# ============================== #}
 					{# New table for botverse image / media feeds / hot topics #}
 					{# ============================== #}
@@ -156,7 +154,7 @@
 						<td style="width: 100%" rowspan="2" valign="top">
 							{# ============================== #}
 							{# Hot Topic Section (deprecated) #}
-							{# ============================== #}							
+							{# ============================== #}
 						</td>
 					    <td align="right">
 					    	{# == Botlist Logo Image == #}
@@ -164,29 +162,29 @@
 						 		<img src="/company/images/BoxLogoVertical3.jpg" border="0" alt="Logo Vertical" width="130" height="104" />
 							</a>
 						</td>
-					</tr>						
+					</tr>
 					<tr>
 						<td valign="top">
 						{# ============================== #}
 						{# End of Display Media table #}
-						{# ============================== #}					
+						{# ============================== #}
 						</td>
 						</tr>
 						{# Table containg media feeds / botlist image #}
-					</table>			
-					{# Right Section for media feeds / rss link, etc #}					
+					</table>
+					{# Right Section for media feeds / rss link, etc #}
 				</td>
 				</tr>
-								
-				{# Header Content #}	
+
+				{# Header Content #}
 				<tr>
 					<td colspan="2" align="right">
 						<div style="text-align: right">
 						<h2 class="bot_splashinfo">
 							Botlist contains fresh, user driven content.
 						</h2>
-						</div>										
+						</div>
 					</td>
-				</tr> 				
+				</tr>
 				</table> {# End of Header Content #}
 {% endblock %}

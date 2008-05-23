@@ -57,7 +57,8 @@ urlpatterns = patterns(
         
         (r'^rpc/types/remote_agent_req$', 'ghost_views.ghostnet.rpc_views.remote_agent_req'),
         (r'^rpc/types/remote_agent_send$', 'ghost_views.ghostnet.rpc_views.remote_agent_send'),
-        
+
+        (r'^ghostnet/botverse$', 'ghost_views.ghostnet.link_views.botverse'),
         (r'^ghostnet/botverse_submit$', 'ghost_views.ghostnet.link_views.botverse_submit_view'),
         (r'^ghostnet/botverse_submit_post$', 'ghost_views.ghostnet.link_views.botverse_submit'),
         (r'^ghostnet/botverse_calendar$', 'ghost_views.ghostnet.link_views.default_error'),
@@ -68,7 +69,7 @@ urlpatterns = patterns(
         (r'^ghostnet/linkaddcomment_confirm$', 'ghost_views.ghostnet.link_views.default_error'),
         (r'^ghostnet/linkviewcomments$', 'ghost_views.ghostnet.link_views.default_error'),
         (r'^ghostnet/rss/botverse_rss$', 'ghost_views.ghostnet.link_views.default_error'),
-        (r'^ghostnet/text/botverse_light$', 'ghost_views.ghostnet.link_views.default_error'),
+        (r'^ghostnet/text/botverse_light$', 'ghost_views.ghostnet.link_views.botverse_light'),
         (r'^ghostnet/text/botverse_text$', 'ghost_views.ghostnet.link_views.default_error'),
         
         (r'^foaf/foaf$', 'ghost_views.ghostnet.link_views.default_error'),
