@@ -9,15 +9,15 @@
 	Also see:  http://www.djangoproject.com/documentation/templates/
 	{% endcomment %}
  	<title>Ghost Network</title>
- 	
+
 	{% block meta_information %}
   	<meta name="DESCRIPTION" content="Botlist - Promote yourself or something else interesting. Like Reddit or Digg but for adults.  New and exciting article web submissions with user ratings. (built with Scala, JRuby, Spring, Liftweb, Haskell technology)"></meta>
- 	<meta name="keywords" content="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb"></meta>   
+ 	<meta name="keywords" content="articles, wikileaks, secret information, dune, obama 2008, ron paul 2008, article, submissions, web submit, user ratings, listing, bot, botlist, botlisting, bot's list, list, ads, advertising, social bookmarking, networking, social networking, reddit, digg, scala, jruby, liftweb"></meta>
   	<link type="application/rss+xml" rel="alternate" title="Botverse - Link Listings" href="/spring/rss/listings_rss.html"></link>
 	<link href="/company/stylesheets/scaffold.css" media="screen" rel="Stylesheet" type="text/css" ></link>
   	<link href="/company/stylesheets/newspirit.css" media="screen" rel="Stylesheet" type="text/css" ></link>
   	<link href="/company/stylesheets/botlist.css" media="screen" rel="Stylesheet" type="text/css" ></link>
-  	<link href="/company/stylesheets/botlist_general2.css" media="screen" rel="Stylesheet" type="text/css" ></link> 
+  	<link href="/company/stylesheets/botlist_general2.css" media="screen" rel="Stylesheet" type="text/css" ></link>
   	{% endblock %}
 </head>
 <body>
@@ -25,26 +25,26 @@
 	<a href="/spring/botverse/botverse.html" />" >Botverse.Home</a><br />
 	Light View - Use the light view in order to view, highlight, or copy the most recent links
 	<table class="linklist_data">
-		<c:forEach items="${command.listings}"  var="listing" varStatus="status">
-				<tr>					
+		{% for listing in listings %}
+				<tr>
 					<td colspan="3">
 							<span class="linklist_comments_date">_</span>
-							<a href="${listing.mainUrl}" />" >
-									<c:out value="${listing.urlTitle}" />
-							</a>							
+							<a href="{{ listing.mailUrl }}" />" >
+									{{ listing.urlTitle }}
+							</a>
 					</td>
 				</tr>
-				<tr>					
-					<td colspan="3">							
-							<a href="${listing.mainUrl}" />" >
-									<c:out value="${listing.mainUrl}" />
-							</a>							
+				<tr>
+					<td colspan="3">
+							<a href="{{ listing.mailUrl }}" />" >
+									{{ listing.mailUrl }}
+							</a>
 					</td>
 				</tr>
-				<tr>					
+				<tr>
 					<td colspan="3">
 					<div style="font-size: 10px;">
-						keywords: <c:out value="${listing.keywords}" />
+						keywords: {{ listing.keywords }}
 					</div>
 					</td>
 				</tr>
@@ -62,19 +62,19 @@
 					</td>
 					<td>
 						<div class="linklist_comments_txt">
-						 <span class="linklist_comments_date">							
+						 <span class="linklist_comments_date">
 							<botlistutil:timePast dateValue="${listing.createdOn.time}" />
 							on <fmt:formatDate pattern="EE MMM, dd hh:mm" value="${listing.createdOn.time}" />
-							by <c:out value="${listing.fullName}" />					
+							by [{{ listing.fullName }}]
 						 </span>
 						</div>
-					</td>					
+					</td>
 					</tr>
 					</table>
 					<!-- End of inner table -->
 				</td>
 				</tr>
-		</c:forEach>
+		{% endfor %}
 	</table>
 </div>
 </body>

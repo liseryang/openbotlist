@@ -69,7 +69,11 @@ def botverse_submit_view(request):
 		})
 
 def botverse_light(request):
-        return render_to_response('botverse.html', {})
+	query = db.GqlQuery("SELECT * FROM EntityLinks")
+	listings = query.fetch(20)
+	return render_to_response('ghostnet/text/botverse_light.html', {
+		'listings': listings
+		})
 
 def botverse_confirm(request):
 	''' Index Page'''
@@ -77,7 +81,11 @@ def botverse_confirm(request):
 
 def botverse(request):
 	''' Index Page'''
-	return render_to_response('botverse.html', {})
+	query = db.GqlQuery("SELECT * FROM EntityLinks")
+	listings = query.fetch(20)
+	return render_to_response('ghostnet/botverse.html', {
+		'listings': listings
+		})
 
 def default_error(request):
 	''' Generic Error Page '''

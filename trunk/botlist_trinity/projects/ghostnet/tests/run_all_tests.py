@@ -1,7 +1,19 @@
 #!/usr/bin/env python
 
 '''
- Berlin Brown
+ Author: Berlin Brown
+ Filename: run_all_tests.py 
+ Application: test case for botlist django front-end (ghostnet)
+ Environment: Python 2.5.2
+ -------------------------- Description --
+
+ With the following code, you can run google-appengine
+ stand-alone database driven test cases.
+
+ * Run batch python unit test scripts
+ * The script ensures that the google libraries are imported and
+   added to the python sys path.
+ 
  -------------------------- COPYRIGHT_AND_LICENSE --
  Botlist contains an open source suite of software applications for 
  social bookmarking and collecting online news content for use on the web.  
@@ -92,7 +104,7 @@ apiproxy_stub_map.apiproxy.RegisterStub(
 # ----------------------
 apiproxy_stub_map.apiproxy.RegisterStub(
         'datastore_v3',
-        datastore_file_stub.DatastoreFileStub('ghostnet',
+        datastore_file_stub.DatastoreFileStub('ghostnet_tests',
                                               DS_PATH,
                                               HIST_PATH))
 apiproxy_stub_map.apiproxy.RegisterStub(
