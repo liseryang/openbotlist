@@ -1,30 +1,41 @@
-;;;
-;;; trinity.lisp
-;;; 
+;;
+;; trinity.lisp
+;; 
 
 (in-package :botlist-trinity)
 
 (require :cl-who)
 (require :hunchentoot)
+(require :html-template)
 
-(defvar *this-file* (load-time-value
-                     (or #.*compile-file-pathname* *load-pathname*)))
+(defun generate-index-page ()
+  "Generate the index page showing all the blog posts."
+  (with-output-to-string (stream)
+    (html-template:fill-and-print-template 
+     #P"index.html" '() :stream stream)))
 
-(defmacro with-html (&body body)
-  `(cl-who:with-html-output-to-string (*standard-output* nil :prologue t)
-     ,@body))
+;;------------------------------------------------
+;; Hunchentoot server settings
+;;------------------------------------------------
 
-(defun simple-test ()
-  (with-html
-   (:html
-	(:body
-	 (:h2 "Test")))))
+;; Set the web server dispatch table
+(setq hunchentoot:*dispatch-table*
+      (list (hunchentoot:create-regex-dispatcher 
+			 "^/$" 'generate-index-page)
+            (hunchentoot:create-regex-dispatcher 
+			 "^/trinity/$" 'generate-index-page)))
+		  
+;; Make sure html-template looks for files in the right directory
+(setq html-template:*default-template-pathname* 
+	  #P"/home/bbrown/workspace_omega/botlist_trinity/misc/lisp/trinity")
 
-(setq *dispatch-table*
-      (nconc
-	   (mapcar (lambda (args)
-                 (apply #'create-prefix-dispatcher args))
-               '(("/trinity/test/test.html" simple-test)))
-       (list #'default-dispatcher)))
+;; Start the web server utilities
+(defvar *ht-server* nil)
+(defun start-app ()
+  "Start the web server"
+  (defvar *ht-server* (hunchentoot:start-server :port 9980)))
 
-;;; End of the File
+(defun stop-app ()
+  (hunchentoot:stop-server *ht-server*))
+
+;; End of the File
