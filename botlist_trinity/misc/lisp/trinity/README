@@ -2,22 +2,32 @@
 # README
 #################################################
 
+ --------------------------------------
  To Install Hunchentoot (on Ubuntu 8.04 Heron with SBCL):
---------------------------------------
+ --------------------------------------
  sudo apt-get install libssl-dev
 
   sudo sbcl
 
-   (require :asdf-install)
+	(require :asdf-install)
 
 
- 	(asdf-install:install :hunchentoot)
+	(asdf-install:install :hunchentoot)
 
+ --------------------------------------
+ Compile the web application (botlist trinity on hunchentoot)
+ --------------------------------------
+
+ (asdf:operate 'asdf:load-op 'botlist-trinity)
+
+ --------------------------------------
  To Run:
  --------------------------------------
+
+ View the hunchentoot test example
  (asdf:oos 'asdf:load-op :hunchentoot-test)
 
  (hunchentoot:start-server :port 4242
 
- --------------------------------------
- (asdf:operate 'asdf:load-op 'botlist-trinity)
+ With your browser, navigate to the URL below
+ http://localhost:9980/trinity/test/test.html

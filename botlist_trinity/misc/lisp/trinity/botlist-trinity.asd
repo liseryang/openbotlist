@@ -23,9 +23,7 @@
 				
 				:depends-on (:hunchentoot
 							 :cl-who
-							 :html-template)
-							 
+							 :html-template)							 
 				:components ((:file "packages")
 							 (:file "trinity")))
-
 ;;; End of File
