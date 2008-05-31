@@ -18,6 +18,8 @@
 ;; Hunchentoot server settings
 ;;------------------------------------------------
 
+(setq hunchentoot:*catch-errors-p* nil)
+
 ;; Set the web server dispatch table
 (setq hunchentoot:*dispatch-table*
       (list (hunchentoot:create-regex-dispatcher 
@@ -27,7 +29,7 @@
 		  
 ;; Make sure html-template looks for files in the right directory
 (setq html-template:*default-template-pathname* 
-	  #P"/home/bbrown/workspace_omega/botlist_trinity/misc/lisp/trinity")
+	  #P"/home/bbrown/workspace_omega/botlist_trinity/misc/lisp/trinity/")
 
 ;; Start the web server utilities
 (defvar *ht-server* nil)
