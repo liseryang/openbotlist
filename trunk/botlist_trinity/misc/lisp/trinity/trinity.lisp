@@ -1,3 +1,4 @@
+
 ;;
 ;; trinity.lisp
 ;; 
@@ -7,6 +8,12 @@
 (require :cl-who)
 (require :hunchentoot)
 (require :html-template)
+
+(require :clsql)
+(require :clsql-mysql)
+
+(clsql:locally-enable-sql-reader-syntax)
+(setf clsql:*default-caching* nil)
 
 (defun generate-index-page ()
   "Generate the index page showing all the blog posts."
@@ -39,5 +46,22 @@
 
 (defun stop-app ()
   (hunchentoot:stop-server *ht-server*))
+
+;;------------------------------------------------
+;; DB Connectivity Tests
+;;------------------------------------------------
+
+(defmacro with-db ((database &body body)
+				   `(clsql:with-database 
+						(,database '("localhost" "" 
+									 "user" "pwd")
+								   :pool t :if-exists :old)
+					  ,@body)))
+
+(defun main ()
+  (format t "Running - ~%")
+  (format t "Done - ~%"))
+
+(main)
 
 ;; End of the File
