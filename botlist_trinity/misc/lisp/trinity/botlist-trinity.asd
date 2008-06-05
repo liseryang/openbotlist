@@ -19,11 +19,12 @@
 				:maintainer "Berlin Brown <berlin.brown@gmail.com>"
 				:licence "BSD"
 				:description "Botlist Trinity Web Front End" 
-				:long-description "Botlist Trinity Web Front End" 
-				
+				:long-description "Botlist Trinity Web Front End" 				
 				:depends-on (:hunchentoot
 							 :cl-who
-							 :html-template)							 
+							 :html-template
+							 :clsql
+							 :clsql-mysql)
 				:components ((:file "packages")
 							 (:file "trinity")))
 ;;; End of File
