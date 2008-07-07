@@ -36,7 +36,7 @@
   `(clsql:with-database
 	   ;; Supply database connect str
 	   ;; For mysql => URL DATABASE USER PASSWORD
-	   (,database '("localhost" "botlist_development" "spirituser" "ramza97")
+	   (,database '("localhost" "botlist_development" "USER" "PASSWORD")
 				  :database-type :mysql
 				  :pool t 
 				  :if-exists nil)

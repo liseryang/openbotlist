@@ -1,7 +1,7 @@
-
 ;;
 ;; trinity.lisp
-;; 
+;; References:
+;; [1] http://clsql.b9.com/manual/with-database.html
 
 (in-package :botlist-trinity)
 
@@ -51,15 +51,26 @@
 ;; DB Connectivity Tests
 ;;------------------------------------------------
 
-(defmacro with-db ((database &body body)
-				   `(clsql:with-database 
-						(,database '("localhost" "" 
-									 "user" "pwd")
-								   :pool t :if-exists :old)
-					  ,@body)))
+(defmacro with-db ((database) &body body)
+  `(clsql:with-database
+	   ;; Supply database connect str
+	   ;; For mysql => URL DATABASE USER PASSWORD
+	   (,database '("localhost" "botlist_development" "spirituser" "ramza97")
+				  :database-type :mysql
+				  :pool t 
+				  :if-exists :new)
+	 ,@body))
+
+(defun test-db ()
+  (with-db (db)
+	(clsql:status t)
+	(clsql:query "select max(id) from entity_links"))
+  (format t "After with-db~%")
+  (clsql:status t))
 
 (defun main ()
   (format t "Running - ~%")
+  (test-db)
   (format t "Done - ~%"))
 
 (main)
