@@ -64,4 +64,21 @@ There is an issue with the amount of space we can use on google code.  Here is a
   *435K Jul 23 18:09 antlr-2.7.7.jar   
   *434K Jul 23 18:09 antlr-2.7.6.jar  
   *5.7K Jul 23 18:09 ant-antlr.jar   
-  *532K Jul 23 18:09 acegi-security-1.0.6.jar   
+  *532K Jul 23 18:09 acegi-security-1.0.6.jar  
+
+= Critical Files Unavailable =
+  *sqlitejdbc-v043-nested.jar
+  *lucene-core-2.1.0.jar
+  *mysql-connector-java-5.0.8-bin.jar
+  *log4j-1.2.14.jar
+  *junit.jar
+  *c3p0-0.9.1.2.jar
+
+= Additional Files Unavailable =
+  *lift-webkit-0.8-SNAPSHOT.jar
+  *lift-core-0.8-SNAPSHOT.jar
+  *scala-library-2.7.0.jar **
+  *jfreechart-1.0.5.jar ***
+
+
+ 
