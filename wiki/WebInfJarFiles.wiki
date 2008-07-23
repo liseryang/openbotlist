@@ -4,7 +4,7 @@
 
 There is an issue with the amount of space we can use on google code.  Here is a list of the files included in the downloads on the main page.  Copy these files to the botlist[Project Home]/WEB-INF/lib directory.  There are also a number of files there were removed:
 
-= Included Files =
+= Full-Set Required Third Party Files =
 
   * 47K Jul 23 18:09 taglibs-string.jar   
   * 20K Jul 23 18:09 taglibs-datetime.jar   
@@ -65,5 +65,3 @@ There is an issue with the amount of space we can use on google code.  Here is a
   *434K Jul 23 18:09 antlr-2.7.6.jar  
   *5.7K Jul 23 18:09 ant-antlr.jar   
   *532K Jul 23 18:09 acegi-security-1.0.6.jar   
-
-
