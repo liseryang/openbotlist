@@ -20,7 +20,9 @@ The java build tool Ant is also required for building the project.
   * Operating systems: WinXP and Ubuntu Linux 7.10   
   * All other libraries are provided in the subversion source or download  
 
-=Check out source from subversion=
+=Download from Google Code=
+
+=Check out source from Subversion=
 
 *As of 2/2/2008*
 
