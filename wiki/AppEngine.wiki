@@ -1,13 +1,9 @@
-#summary One-sentence summary of this page.
+#summary Google App Engine is a web service to host applications on Google.
 
 = Introduction =
 
-Add your content here.
+From the wikipedia description, "Google App Engine is a platform for building and hosting web applications on Google servers.  At its launch date, the only supported programming language was Python. A limited version of the Django web framework is available, as well as a custom Google-written webapp framework similar to JSP or ASP.NET."
 
+= Resources =
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * http://en.wikipedia.org/wiki/Google_App_Engine
