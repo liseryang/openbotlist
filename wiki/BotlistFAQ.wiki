@@ -11,15 +11,15 @@ http://openbotlist.googlecode.com/svn/trunk/openbotlist/docs/media/blist_backend
 
 = Frequently Asked Questions =
 
-===What is Botlist?===
+===Q. What is Botlist?===
 
 _See the Overview section of this wiki entry?_
 
-===Botlist seems overly ambitious, how far along is the project?==
+===Q. Botlist seems overly ambitious, how far along is the project?==
 
 Unfortunately?  Botlist is only at the alpha release stage.  Essentially, many critical bugs exist and many features are missing.  But, you can download the application and run it under a J2EE application/Servlet  container like Tomcat.  See the QuickStart Wiki guides for more information.  At present, Botlist works more as a proof of concept for your future project.
 
-===Tell more about the "Back-End", what about the bot/agent crawlers?==
+===Q. Tell more about the "Back-End", what about the bot/agent crawlers?==
 
 Conceptually, Botlist consists of two sub-systems;  The web front-ends (Django, J2EE, Lisp based) and the back-end that processes online web content like RSS feeds and then transmit the data to the web front-end to display for the users.
 
@@ -33,7 +33,7 @@ http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botbert/
 
 http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botspider/
 
-===What are some keywords that you would associate with Botlist?==
+===Q. What are some keywords that you would associate with Botlist?==
 
   * Reddit.com/Digg.com/News.google.com/Del.icio.us
   * Web/RSS Crawler
@@ -44,8 +44,16 @@ http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botspider/
   * Technologies (J2EE Front-End): JRuby, Spring, Hibernate, Python, Scala
   * Technologies (Back-End): Python, Scala, Haskell 
 
-===Now that the source is released for Reddit?  Doesn't that make Botlist really "not" as useful?===
+===Q. Now that the source is released for Reddit?  Doesn't that make Botlist really "not" as useful?===
 
 Reddit is an interesting piece of software and influenced Botlist.  But, there are many differences (Botlist uses JRuby and the front-end is built with J2EE).  Basically, Botlist is different; maybe others could find the source code or application useful.  Also, some of the Botlist tools could leverage Reddit's source code.
 
 http://code.reddit.com/
+
+===Q. How was JRuby used with the Botlist project?===
+
+"JRuby is a Java implementation of the Ruby interpreter, being developed by the JRuby team.", From Wikipedia.
+
+JRuby was used to build a lot of the business logic for the J2EE web code.  JRuby made it easy to create a light-weight web framework on top of Spring and Hibernate.  For example, the code below is used to build the main URL listing page.
+
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/WEB-INF/jsps/botverse/botverse.rb
