@@ -7,5 +7,10 @@ Google recently released news that Google's index contains one trillion URLs.  T
 
 Botlist contains an open source suite of software applications for social bookmarking and collecting online news content for use on the web. Multiple web front-ends exist based on Django (through Google AppEngine), Rails, and J2EE. Users and remote agents are allowed to submit interesting articles. There are additional remote agent libraries for back-end text mining operations. The system is broken up by the back-end specification and front-end specification.
 
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/docs/media/blist_backend_process.png 
 
 = Frequently Asked Questions =
+
+===What is Botlist?===
+
+_See the Overview section of this wiki entry?_
