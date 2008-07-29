@@ -19,6 +19,20 @@ _See the Overview section of this wiki entry?_
 
 Unfortunately?  Botlist is only at the alpha release stage.  Essentially, many critical bugs exist and many features are missing.  But, you can download the application and run it under a J2EE application/Servlet  container like Tomcat.  See the QuickStart Wiki guides for more information.  At present, Botlist works more as a proof of concept for your future project.
 
+===Tell more about the "Back-End", what about the bot/agent crawlers?==
+
+Conceptually, Botlist consists of two sub-systems;  The web front-ends (Django, J2EE, Lisp based) and the back-end that processes online web content like RSS feeds and then transmit the data to the web front-end to display for the users.
+
+Currently, there is a working python based back-end agent for crawling RSS feeds and submitting the information to a web front-end.
+
+*Subversion Source for Python based RSS crawler*   
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botbert/
+
+*Subversion Source for Haskell based Web crawler*   
+
+http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botspider/
+
 ===What are some keywords that you would associate with Botlist?==
 
   * Reddit.com/Digg.com/News.google.com/Del.icio.us
