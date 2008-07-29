@@ -22,6 +22,18 @@ The java build tool Ant is also required for building the project.
 
 =Download from Google Code=
 
+*As of 7/2008; the following downloads are required*:
+(Note: you can also download the libraries from Subversion)
+http://openbotlist.googlecode.com/files/botlist_web_072008.tar.gz
+http://openbotlist.googlecode.com/files/botlist_webinf_lib_072008.tar.gz
+http://openbotlist.googlecode.com/files/botlist_webinf_lib_set2.tar.gz
+
+http://openbotlist.googlecode.com/files/webcrawler_agent.tar.gz
+http://openbotlist.googlecode.com/files/pushsync_agent.tar.gz
+
+*Subversion WEB-INF/lib directory*
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/WEB-INF/lib/
+
 =Check out source from Subversion=
 
 *As of 2/2/2008*
