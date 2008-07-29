@@ -1,5 +1,4 @@
 #summary Quick start setup guide for setting up the J2EE botlist web application.
-#labels Featured
 
 =Quick start setup=
 
@@ -130,5 +129,3 @@ http://openbotlist.googlecode.com/svn/wiki/imgs/botlist_snapshot_setup1.png
 
   * http://tomcat.apache.org/tomcat-5.5-doc/index.html
   * http://www.mysql.com/
-
-
