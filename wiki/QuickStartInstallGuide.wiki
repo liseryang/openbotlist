@@ -20,10 +20,22 @@ The java build tool Ant is also required for building the project.
   * Operating systems: WinXP and Ubuntu Linux 7.10   
   * All other libraries are provided in the subversion source or download  
 
-=Download from Google Code=
+=Download from Google Code (Botlist J2EE front-end)=
+
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/docs/media/screenshot_google_download.png
+
+There is an issue with hosting botlist on google-code.  Botlist includes 50+MB of libraries and other modules.  This is over google's upload limit and borders on the project limit.  This means that the libraries needed to run botlist are broken into various download modules.  (Especially the libraries needed for the botlist J2EE WEB-INF/lib directory).  To remedy this problem, you need to download all the libraries and manually place them in the BOTLIST_WEBAPP_HOME/WEB-INF/lib.  If any of the jar file libraries are missing then botlist may not function properly.
+
+   # Download botlist_web_072008.tar.gz - this download contains all of the Java source and JRuby source for the botlist web front-end.
+   # Download botlist_webinf_lib_072008.tar.gz - this download includes the first set of jar libraries needed to run botlist.  Unzip the archive file and place all of the jar files in the BOTLIST_WEBAPP_HOME/WEB-INF/lib directory.
+   # Download botlist_webinf_lib_set2.tar.gz - this download includes the second set of jar libraries needed to run botlist.  Unzip the archive file and place all of the jar files in the BOTLIST_WEBAPP_HOME/WEB-INF/lib directory.
+
+If you receive any errors while running botlist, first check if you downloaded all the libraries needed to run the web application.
 
 *As of 7/2008; the following downloads are required*:    
 (Note: you can also download the libraries from Subversion)   
+
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/docs/media/screenshot_web_inf.png
 
   * D1. http://openbotlist.googlecode.com/files/botlist_web_072008.tar.gz     
   * D2. http://openbotlist.googlecode.com/files/botlist_webinf_lib_072008.tar.gz     
