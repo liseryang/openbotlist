@@ -17,7 +17,7 @@ _See the Overview section of this wiki entry?_
 
 ===Botlist seems overly ambitious, how far along is the project?==
 
-Unfortunately?  Botlist is only at the alpha release stage.  Essentially, many critical bugs exist and many features are missing.  But, you can download the application and run it under a J2EE application/Servlet  container like Tomcat.  See the QuickStart Wiki guides for more information.
+Unfortunately?  Botlist is only at the alpha release stage.  Essentially, many critical bugs exist and many features are missing.  But, you can download the application and run it under a J2EE application/Servlet  container like Tomcat.  See the QuickStart Wiki guides for more information.  At present, Botlist works more as a proof of concept for your future project.
 
 ===What are some keywords that you would associate with Botlist?==
 
