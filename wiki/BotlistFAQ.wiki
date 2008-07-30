@@ -41,6 +41,8 @@ http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botspider/
   * News Aggregation
   * Alpha Release
   * Text Mining
+  * Discussion Forum
+  * Craigslist / Ad Listings
   * Technologies (J2EE Front-End): JRuby, Spring, Hibernate, Python, Scala
   * Technologies (Back-End): Python, Scala, Haskell 
 
