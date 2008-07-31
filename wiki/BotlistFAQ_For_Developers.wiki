@@ -1,0 +1,16 @@
+#summary Botlist Frequently Asked Questions.
+#labels Featured
+
+= Overview =
+
+===Q. How was JRuby used with the Botlist project? ===
+
+"JRuby is a Java implementation of the Ruby interpreter, being developed by the JRuby team.", From Wikipedia.
+
+JRuby was used to build a lot of the business logic for the J2EE web code.  JRuby made it easy to create a light-weight web framework on top of Spring and Hibernate.  For example, the code below is used to build the main URL listing page.
+
+http://openbotlist.googlecode.com/svn/trunk/openbotlist/WEB-INF/jsps/botverse/botverse.rb
+
+===Q. How was Lift-Web and Scala used with the Botlist project? (for developers)===
+
+Botlist does not totally leverage the Java programming "language".  Other JVM languages like Scala, JRuby and Jython were used with this project.  The Lift-Web framework was used to build a piece of the Botlist web framework
