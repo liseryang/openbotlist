@@ -36,12 +36,14 @@ http://openbotlist.googlecode.com/svn/trunk/botlistprojects/botspider/
 ===Q. What are some keywords that you would associate with Botlist?==
 
   * Reddit.com/Digg.com/News.google.com/Del.icio.us
+  * News.YCombinator
   * Web/RSS Crawler
   * Social Bookmarking
   * News Aggregation
   * Alpha Release
   * Text Mining
   * Discussion Forum
+  * Simple Bug Tracker
   * Craigslist / Ad Listings
   * Technologies (J2EE Front-End): JRuby, Spring, Hibernate, Python, Scala
   * Technologies (Back-End): Python, Scala, Haskell 
