@@ -45,11 +45,11 @@ http://openbotlist.googlecode.com/svn/trunk/openbotlist/docs/media/screenshot_we
 
 ===Description of Downloads (as of 7/25/2008) ===
 
-  * D1. botlist_web_072008.tar.gz - Botlist web front end.  This includes the majority of the web application.  It includes J2EE JSP web application (JSPs, Java source, etc).
-  * D2. botlist_webinf_lib_072008.tar.gz - Jar files for the WEB-INF/lib directory used to run the web application.
-  * D3. botlist_webinf_lib_set2.tar.gz - Jar files second set for the WEB-INF/lib directory used to run the web application.
-  * Opt1. webcrawler_agent.tar.gz - Optional application, offline RSS web crawler.  Can run this python based application on a remote machine.  Crawls RSS feeds and then stores
-  * Opt2. pushsync_agent.tar.gz - Optional application, offline tool for PUSHING/Transmitting data that has been crawled to the web application.
+  * D1. *botlist_web_072008.tar.gz* - Botlist web front end.  This includes the majority of the web application.  It includes J2EE JSP web application (JSPs, Java source, etc).
+  * D2. *botlist_webinf_lib_072008.tar.gz* - Jar files for the WEB-INF/lib directory used to run the web application.
+  * D3. *botlist_webinf_lib_set2.tar.gz* - Jar files second set for the WEB-INF/lib directory used to run the web application.
+  * Opt1. *webcrawler_agent.tar.gz* - Optional application, offline RSS web crawler.  Can run this python based application on a remote machine.  Crawls RSS feeds and then stores
+  * Opt2. *pushsync_agent.tar.gz* - Optional application, offline tool for PUSHING/Transmitting data that has been crawled to the web application.
 
 *Subversion WEB-INF/lib directory*      
 
