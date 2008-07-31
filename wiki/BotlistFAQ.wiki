@@ -54,7 +54,7 @@ Reddit is an interesting piece of software and influenced Botlist.  But, there a
 
 http://code.reddit.com/
 
-===Q. How was JRuby used with the Botlist project?===
+===Q. How was JRuby used with the Botlist project? (for developers)===
 
 "JRuby is a Java implementation of the Ruby interpreter, being developed by the JRuby team.", From Wikipedia.
 
