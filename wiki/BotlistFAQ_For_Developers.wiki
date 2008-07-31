@@ -20,3 +20,5 @@ http://openbotlist.googlecode.com/svn/trunk/openbotlist/apps_src/scala/lift/agen
 
 You may also notice that we invoked some pre-existing Spring/Hibernate code from Scala.  The Scala code invokes the Spring based data access objects to persist data received from the remote crawling agent.
 
+http://liftweb.net/index.php/Main_Page
+http://www.scala-lang.org/
