@@ -61,3 +61,22 @@ http://code.reddit.com/
 JRuby was used to build a lot of the business logic for the J2EE web code.  JRuby made it easy to create a light-weight web framework on top of Spring and Hibernate.  For example, the code below is used to build the main URL listing page.
 
 http://openbotlist.googlecode.com/svn/trunk/openbotlist/WEB-INF/jsps/botverse/botverse.rb
+
+===Q. What are some other uses for Botlist? (for developers)===
+
+*Botlist contains the following applications:*    
+
+  * User submission site and news aggregation.
+  * Discussion Forum
+  * Ad Listing Site (unfinished, but meant to resemble Craigslist)
+  * Storing of FOAF (Friend of a Friend) profiles  
+  * Simple Bug Tracking (light functionality)
+  * Search system using data stored on Botlist
+  * RSS/Web crawler
+
+If you are developer, the code could be modified for some of these applications.  
+*Can also be used for the following:*   
+   * Improved bug tracker and possible wiki
+   * Improved web crawler and text mining
+   * Web analytics
+   * 
