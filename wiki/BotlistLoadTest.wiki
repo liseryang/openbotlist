@@ -1,5 +1,5 @@
 #summary Using the Botlist Load Test Framework.
-#labels Featured,testing,http,jruby
+#labels testing,http,jruby
 
  * License : BSD
  * Version : 0.3 (10/4/2007)
