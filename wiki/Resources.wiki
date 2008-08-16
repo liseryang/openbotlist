@@ -1,5 +1,4 @@
 #summary Online resources for projects related to the botlist application.
-#labels Featured
 
 = Online Resources =
 
