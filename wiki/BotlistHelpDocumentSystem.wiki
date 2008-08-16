@@ -1,5 +1,4 @@
 #summary Botlist help document system
-#labels Featured
 
 = Introduction =
 
