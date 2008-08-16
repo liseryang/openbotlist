@@ -1,5 +1,5 @@
 #summary Testing with JRuby/Spring and Hibernate
-#labels jruby,testing,hibernate,Featured
+#labels jruby,testing,hibernate
 =Behavior testing with JRuby/Spring and Hibernate=
 
 = Introduction =
